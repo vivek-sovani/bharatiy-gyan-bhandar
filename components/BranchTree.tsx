@@ -4,12 +4,18 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { CornerOrn, Glyph } from './Ornaments';
-import { TREE, type TreeNode } from '@/lib/data';
+import { TREE as TREE_EN, type TreeNode } from '@/lib/data';
+import { TREE as TREE_MR } from '@/lib/data_mr';
 import { treeNodePath } from '@/lib/routes';
+import { useLanguage } from '@/lib/LanguageContext';
 
 // One radial diagram per primary stream (Śruti / Smṛti / Itara).
 export default function BranchTree({ branchId }: { branchId: string }) {
   const router = useRouter();
+  const { lang, t } = useLanguage();
+
+  const TREE = lang === 'mr' ? TREE_MR : TREE_EN;
+
   const primary = TREE.primary.find((p) => p.id === branchId)!;
   const children = TREE.children[branchId];
   const [active, setActive] = useState<TreeNode | null>(null);
@@ -77,7 +83,7 @@ export default function BranchTree({ branchId }: { branchId: string }) {
           </span>
         </div>
         <div className="branch-meta">
-          <div className="eyebrow"><Glyph /> Branch · {n} streams</div>
+          <div className="eyebrow"><Glyph /> {t('tree.branch')} · {n} {t('tree.streams')}</div>
           <h3>
             <span className="deva-only" style={{ fontFamily: 'var(--font-deva)', color: 'var(--maroon)', marginRight: '0.6em' }}>{primary.deva}</span>
             {primary.label}
@@ -125,7 +131,7 @@ export default function BranchTree({ branchId }: { branchId: string }) {
               </div>
               <p>{active.gloss}</p>
               {treeNodePath(active.id) && (
-                <Link className="open" href={treeNodePath(active.id)!}>Open page →</Link>
+                <Link className="open" href={treeNodePath(active.id)!}>{t('tree.open_page')}</Link>
               )}
             </>
           )}
@@ -144,7 +150,7 @@ export default function BranchTree({ branchId }: { branchId: string }) {
                   <span className="de deva-only">{c.deva}</span>
                   <span className="en">{c.label}</span>
                   <p>{c.gloss}</p>
-                  <span className="cta">Open page →</span>
+                  <span className="cta">{t('tree.open_page')}</span>
                 </Link>
               ) : (
                 <div className="branch-card">

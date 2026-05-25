@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { Glyph } from './Ornaments';
-import { DINACHARYA } from '@/lib/data';
+import { DINACHARYA as DINACHARYA_EN } from '@/lib/data';
+import { DINACHARYA as DINACHARYA_MR } from '@/lib/data_mr';
+import { useLanguage } from '@/lib/LanguageContext';
 
 // Six tri-doṣic windows; the marker highlights the current segment.
 const BOUNDS: [number, number][] = [
@@ -17,6 +19,9 @@ const BOUNDS: [number, number][] = [
 export default function Dinacharya() {
   // Compute after mount so static export and client agree (no hydration mismatch).
   const [activeIdx, setActiveIdx] = useState<number>(-1);
+  const { lang, t } = useLanguage();
+
+  const DINACHARYA = lang === 'mr' ? DINACHARYA_MR : DINACHARYA_EN;
 
   useEffect(() => {
     const now = new Date();
@@ -29,10 +34,10 @@ export default function Dinacharya() {
       <div className="shell">
         <div className="frame-hd">
           <div className="title-block">
-            <div className="eyebrow"><Glyph /> Lifestyle</div>
-            <h2>Dinacaryā — the structure of the day</h2>
+            <div className="eyebrow"><Glyph /> {t('dina.eyebrow')}</div>
+            <h2>{t('dina.title')}</h2>
           </div>
-          <div className="meta">Six segments · classical Āyurveda</div>
+          <div className="meta">{t('dina.meta')}</div>
         </div>
 
         <div className="dinacharya">

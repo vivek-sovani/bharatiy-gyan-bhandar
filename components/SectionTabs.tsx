@@ -2,11 +2,15 @@
 
 import { useState } from 'react';
 import type { SectionItem } from '@/lib/section-data';
+import { transliterate } from '@/lib/transliterate';
+import { useLanguage } from '@/lib/LanguageContext';
 
-const KV_LABELS = ['Recension', 'Authors', 'Range', 'Scope'];
+const KV_KEYS = ['detail.recension', 'detail.authors', 'detail.range', 'detail.scope'];
 
 export default function SectionTabs({ items }: { items: SectionItem[] }) {
   const [active, setActive] = useState(items[0].id);
+  const { t } = useLanguage();
+
   const item = items.find((i) => i.id === active)!;
   const idx = items.findIndex((i) => i.id === active);
 
@@ -44,7 +48,7 @@ export default function SectionTabs({ items }: { items: SectionItem[] }) {
           <dl className="sec-kv">
             {item.meta.map((m, i) => (
               <div key={i} className="sec-kv-row">
-                <dt>{KV_LABELS[i] || 'Note'}</dt>
+                <dt>{t(KV_KEYS[i]) || 'Note'}</dt>
                 <dd>{m}</dd>
               </div>
             ))}
@@ -61,10 +65,15 @@ export default function SectionTabs({ items }: { items: SectionItem[] }) {
         <aside className="sec-aside">
           {item.opening ? (
             <>
-              <div className="eyebrow" style={{ color: 'var(--gold-deep)' }}>The opening</div>
+              <div className="eyebrow" style={{ color: 'var(--gold-deep)' }}>{t('detail.the_opening')}</div>
               <div className="sec-shloka">
                 <div className="deva-line deva-only">
                   {item.opening.deva.split('\n').map((l, i) => (
+                    <div key={i}>{l}</div>
+                  ))}
+                </div>
+                <div className="translit-line">
+                  {transliterate(item.opening.deva).split('\n').map((l, i) => (
                     <div key={i}>{l}</div>
                   ))}
                 </div>
@@ -74,9 +83,9 @@ export default function SectionTabs({ items }: { items: SectionItem[] }) {
             </>
           ) : (
             <div className="sec-shloka">
-              <div className="eyebrow" style={{ color: 'var(--gold-deep)' }}>At a glance</div>
+              <div className="eyebrow" style={{ color: 'var(--gold-deep)' }}>{t('detail.at_a_glance')}</div>
               <p style={{ marginTop: '1rem', color: 'var(--ink-soft)', fontStyle: 'italic' }}>
-                Practice-focused stream. See the full reading-list in the references panel.
+                {t('detail.practice_focused')}
               </p>
             </div>
           )}

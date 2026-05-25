@@ -2,19 +2,27 @@
 
 import { useState } from 'react';
 import { CornerOrn, Glyph } from './Ornaments';
-import { HERO_SHLOKA, FEATURE } from '@/lib/data';
+import { HERO_SHLOKA as HERO_SHLOKA_EN, FEATURE as FEATURE_EN } from '@/lib/data';
+import { HERO_SHLOKA as HERO_SHLOKA_MR, FEATURE as FEATURE_MR } from '@/lib/data_mr';
+import { transliterate } from '@/lib/transliterate';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Hero() {
   const [showTrans, setShowTrans] = useState(false);
+  const { lang, t } = useLanguage();
+
+  const HERO_SHLOKA = lang === 'mr' ? HERO_SHLOKA_MR : HERO_SHLOKA_EN;
+  const FEATURE = lang === 'mr' ? FEATURE_MR : FEATURE_EN;
+
   return (
     <section className="hero">
       <div className="shell hero-edit">
         <div className="hero-shloka">
           <div className="eyebrow">
-            <span className="dot" /> Daily wisdom · 24 Vaiśākha · Saumya saṃvatsara
+            <span className="dot" /> {t('hero.eyebrow')}
           </div>
           <h1>
-            A digital library of the texts, sciences and ways of living rooted in the Indic knowledge systems.
+            {t('hero.title')}
           </h1>
           <div className={`shloka ${showTrans ? 'show-trans' : ''}`}>
             <div className="deva-line deva-only">
@@ -22,11 +30,16 @@ export default function Hero() {
                 <div key={i}>{l}</div>
               ))}
             </div>
+            <div className="translit-line">
+              {transliterate(HERO_SHLOKA.deva).split('\n').map((l, i) => (
+                <div key={i}>{l}</div>
+              ))}
+            </div>
             <div className="trans">{HERO_SHLOKA.trans}</div>
             <div className="source">
               <span>{HERO_SHLOKA.source}</span>
               <button className="trans-btn" onClick={() => setShowTrans((v) => !v)}>
-                {showTrans ? 'Hide translation' : 'Show translation'}
+                {showTrans ? t('hero.hide_trans') : t('hero.show_trans')}
               </button>
             </div>
           </div>
@@ -60,11 +73,11 @@ export default function Hero() {
             <h2>{FEATURE.title}</h2>
             <p>{FEATURE.dek}</p>
             <div className="byline">
-              <span>By {FEATURE.author}</span>
+              <span>{lang === 'mr' ? `लेखक: ${FEATURE.author}` : `By ${FEATURE.author}`}</span>
               <span>·</span>
               <span>{FEATURE.reading}</span>
               <span style={{ flex: 1 }} />
-              <a className="read" href="#" style={{ borderBottom: 0 }}>Read essay →</a>
+              <a className="read" href="#" style={{ borderBottom: 0 }}>{t('hero.read_essay')}</a>
             </div>
           </div>
         </article>

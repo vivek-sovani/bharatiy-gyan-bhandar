@@ -3,13 +3,19 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { CornerOrn, Glyph } from './Ornaments';
-import { SECTIONS, FILTERS, type FilterOption } from '@/lib/data';
+import { SECTIONS as SECTIONS_EN, FILTERS as FILTERS_EN, type FilterOption } from '@/lib/data';
+import { SECTIONS as SECTIONS_MR, FILTERS as FILTERS_MR } from '@/lib/data_mr';
 import { sectionPath } from '@/lib/routes';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function SectionsGrid() {
   const [era, setEra] = useState('all');
   const [type, setType] = useState('all');
   const [topic, setTopic] = useState('all');
+  const { lang, t } = useLanguage();
+
+  const SECTIONS = lang === 'mr' ? SECTIONS_MR : SECTIONS_EN;
+  const FILTERS = lang === 'mr' ? FILTERS_MR : FILTERS_EN;
 
   const filtered = SECTIONS.filter(
     (s) =>
@@ -52,22 +58,24 @@ export default function SectionsGrid() {
       <div className="shell">
         <div className="frame-hd">
           <div className="title-block">
-            <div className="eyebrow"><Glyph /> The library</div>
-            <h2>Browse the corpus</h2>
+            <div className="eyebrow"><Glyph /> {t('grid.eyebrow')}</div>
+            <h2>{t('grid.title')}</h2>
           </div>
           <div className="meta">
-            Showing {filtered.length} of {SECTIONS.length} streams
+            {t('grid.showing')
+              .replace('{count}', filtered.length.toString())
+              .replace('{total}', SECTIONS.length.toString())}
           </div>
         </div>
 
         <div className="filter-stack">
           <div className="filter-row">
-            <ChipGroup label="Era" value={era} options={FILTERS.era} onChange={setEra} />
+            <ChipGroup label={t('grid.tag_era')} value={era} options={FILTERS.era} onChange={setEra} />
             <span style={{ flex: 1 }} />
-            <ChipGroup label="Canon" value={type} options={FILTERS.type} onChange={setType} />
+            <ChipGroup label={t('grid.tag_canon')} value={type} options={FILTERS.type} onChange={setType} />
           </div>
           <div className="filter-row">
-            <ChipGroup label="Topic" value={topic} options={FILTERS.topic} onChange={setTopic} />
+            <ChipGroup label={t('grid.tag_topic')} value={topic} options={FILTERS.topic} onChange={setTopic} />
           </div>
         </div>
 

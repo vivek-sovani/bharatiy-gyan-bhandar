@@ -1,3 +1,5 @@
+'use client';
+
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import BranchTree from '@/components/BranchTree';
@@ -5,8 +7,11 @@ import SectionsGrid from '@/components/SectionsGrid';
 import Dinacharya from '@/components/Dinacharya';
 import { DailyStrip, Essays, Sanskrit, Footer } from '@/components/Frames';
 import { Glyph } from '@/components/Ornaments';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Header />
@@ -16,10 +21,10 @@ export default function Home() {
         <div className="shell">
           <div className="frame-hd">
             <div className="title-block">
-              <div className="eyebrow"><Glyph /> Map of the corpus</div>
-              <h2>The three streams</h2>
+              <div className="eyebrow"><Glyph /> {t('tree.eyebrow')}</div>
+              <h2>{t('tree.title')}</h2>
             </div>
-            <div className="meta">Hover any leaf · click to open</div>
+            <div className="meta">{t('tree.hover_prompt')}</div>
           </div>
           <div className="branches">
             <BranchTree branchId="shruti" />

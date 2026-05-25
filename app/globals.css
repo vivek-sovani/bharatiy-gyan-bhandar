@@ -155,9 +155,30 @@ a:hover { color: var(--gold-deep); }
   flex-wrap: wrap;
 }
 .bi .deva { color: var(--maroon); font-size: 0.92em; }
-[data-deva="off"] .bi .deva,
-[data-deva="off"] .deva-only { display: none; }
-[data-deva="off"] .deva-block { display: none; }
+
+.translit-line {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.hero-shloka .shloka .translit-line {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  margin-top: 0.6rem;
+}
+.sec-shloka .translit-line,
+.veda-shloka .translit-line {
+  font-size: 1.08rem;
+  margin-top: 0.5rem;
+}
+.strip .quote .translit-line {
+  display: block;
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.9em;
+  margin-bottom: 0.45em;
+}
 
 /* ----------------------------------------------------------
    Header
@@ -222,6 +243,7 @@ a:hover { color: var(--gold-deep); }
   .hdr-nav { display: none; }
   .search-pill { width: auto; }
   .search-pill input { display: none; }
+  .search-pill kbd { display: none; }
 }
 
 /* ----------------------------------------------------------
@@ -1602,8 +1624,15 @@ body::after {
   font-family: var(--font-deva); color: var(--maroon);
 }
 @media (max-width: 700px) {
-  .primer-table .row { grid-template-columns: 1fr; }
-  .primer-table .row > div { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .primer-table {
+    overflow-x: auto;
+    display: block;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .primer-table .row {
+    grid-template-columns: 120px 140px 140px;
+    width: max-content;
+  }
 }
 
 /* ---- Cross-section "see also" footer ---- */
@@ -1776,28 +1805,68 @@ body::after {
 
   /* Vedas tab navigation */
   .veda-tab-nav {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .veda-tab-nav::-webkit-scrollbar {
+    display: none;
   }
   .veda-tab {
-    border-right: 0;
-    border-bottom: 1px solid var(--rule);
+    flex: 0 0 160px;
+    scroll-snap-align: start;
+    border-right: 1px solid var(--rule);
+    border-bottom: 0 !important;
     padding: 1rem;
   }
   .veda-tab:last-child {
-    border-bottom: 0;
+    border-right: 0;
   }
 
   /* Section tab navigation */
   .sec-tabs-nav {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .sec-tabs-nav::-webkit-scrollbar {
+    display: none;
   }
   .sec-tab {
-    border-right: 0;
-    border-bottom: 1px solid var(--rule);
+    flex: 0 0 150px;
+    scroll-snap-align: start;
+    border-right: 1px solid var(--rule);
+    border-bottom: 0 !important;
     padding: 1rem;
   }
   .sec-tab:last-child {
-    border-bottom: 0;
+    border-right: 0;
+  }
+
+  /* Header mobile responsiveness overrides */
+  .hdr-inner {
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+  }
+  .hdr-mark .name-de {
+    display: none;
+  }
+  .hdr-mark .name-en {
+    font-size: 0.95rem;
+  }
+  .hdr-tools {
+    gap: 0.5rem;
+  }
+  .search-pill {
+    padding: 0.35rem 0.5rem;
   }
 
   /* Key-value meta rows (Recension, Officiant, etc.) */
@@ -1842,5 +1911,20 @@ body::after {
   .ftr-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hdr-mark .name-en {
+    font-size: 0.85rem;
+  }
+  .prefs .pref-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 8.5px;
+  }
+  .hdr-mark .seal {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
   }
 }

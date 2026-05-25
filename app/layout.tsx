@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { LanguageProvider } from '@/lib/LanguageContext';
 
 export const metadata: Metadata = {
   title: {
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
     'An open digital library of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
 };
 
-// Applies the saved theme + Devanāgarī preference before first paint (no flash).
-const themeInit = `(function(){try{var r=document.documentElement;var t=localStorage.getItem('bgb-theme');if(t)r.setAttribute('data-theme',t);var d=localStorage.getItem('bgb-deva');if(d)r.setAttribute('data-deva',d);}catch(e){}})();`;
+// Applies the saved theme before first paint (no flash).
+const themeInit = `(function(){try{var r=document.documentElement;var t=localStorage.getItem('bgb-theme');if(t)r.setAttribute('data-theme',t);}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,7 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
