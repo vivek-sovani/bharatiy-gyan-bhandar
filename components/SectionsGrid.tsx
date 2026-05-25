@@ -77,23 +77,11 @@ export default function SectionsGrid() {
 
             return (
               <Link key={s.id} className="card" href={sectionPath(s)}>
-                <div className="card-thumb" style={{
-                  height: '140px',
-                  overflow: 'hidden',
-                  margin: '-1.6rem -1.5rem 1.2rem -1.5rem',
-                  position: 'relative',
-                  borderBottom: '1px solid var(--rule-strong)'
-                }}>
+                <div className="card-thumb">
                   <img
                     src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${imgPath}`}
                     alt={s.title}
                     loading="lazy"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block'
-                    }}
                   />
                 </div>
                 <CornerOrn className="tl" />

@@ -53,7 +53,7 @@ export function Essays() {
 export function Sanskrit() {
   return (
     <section id="sanskrit" className="frame tight">
-      <div className="shell" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
+      <div className="shell sanskrit-inner">
         <div>
           <div className="eyebrow"><Glyph /> Field guide</div>
           <h2 style={{ marginTop: '0.6rem', fontStyle: 'italic', fontWeight: 500 }}>Śruti & Smṛti — what tradition means by canon</h2>

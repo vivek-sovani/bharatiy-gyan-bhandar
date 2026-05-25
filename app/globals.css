@@ -593,7 +593,7 @@ a:hover { color: var(--gold-deep); }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 1.5rem;
 }
 
@@ -657,6 +657,20 @@ a:hover { color: var(--gold-deep); }
 }
 .card .facet + .facet::before { content: "·"; margin-right: 0.4rem; }
 
+.card-thumb {
+  height: 140px;
+  overflow: hidden;
+  margin: -1.6rem -1.5rem 1.2rem -1.5rem;
+  position: relative;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Card style — manuscript (deckle, no border) */
 [data-card="manuscript"] .card {
   background:
@@ -675,6 +689,9 @@ a:hover { color: var(--gold-deep); }
 }
 [data-card="manuscript"] .card .corner-orn { display: none; }
 [data-card="manuscript"] .card:hover { border-left-color: var(--maroon); }
+[data-card="manuscript"] .card-thumb {
+  margin: -1.6rem -1.5rem 1.2rem -1.7rem;
+}
 
 /* Card style — minimal (rules only) */
 [data-card="minimal"] .card {
@@ -686,6 +703,9 @@ a:hover { color: var(--gold-deep); }
 }
 [data-card="minimal"] .card .corner-orn { display: none; }
 [data-card="minimal"] .cards { gap: 0; }
+[data-card="minimal"] .card-thumb {
+  display: none;
+}
 
 /* ----------------------------------------------------------
    Daily wisdom strip (between major sections)
@@ -1008,6 +1028,17 @@ body::after {
   -webkit-mask: url('./svg/mandala-watermark.svg') center / contain no-repeat;
           mask: url('./svg/mandala-watermark.svg') center / contain no-repeat;
   opacity: 0.055;
+}
+.sanskrit-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .sanskrit-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 /* Essays frame — yantra top-right */
@@ -1416,7 +1447,7 @@ body::after {
 
 .sec-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 0;
   border-top: 1px solid var(--rule-strong);
   border-left: 1px solid var(--rule-strong);
@@ -1589,7 +1620,7 @@ body::after {
 }
 .see-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 0;
   border-top: 1px solid var(--rule);
 }
@@ -1756,10 +1787,14 @@ body::after {
   }
 
   /* Key-value meta rows (Recension, Officiant, etc.) */
-  .kv-row {
+  .kv-row, .sec-kv-row {
     grid-template-columns: 1fr;
     gap: 0.35rem;
     padding: 0.65rem 0;
+  }
+
+  .veda-panel-r {
+    position: static;
   }
 
   /* Vedas Strata grid (Samhita, Brahmana, etc.) */
