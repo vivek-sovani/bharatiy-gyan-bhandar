@@ -23,14 +23,42 @@ function Crumb({ items }: { items: string[] }) {
   );
 }
 
-function SecHero({ data }: { data: SectionDetail }) {
+function SecHero({ data, id }: { data: SectionDetail; id: string }) {
+  const palmLeaf = ['vedas', 'upavedas', 'vedangas', 'sciences'];
+  const birchBark = ['upanishads', 'darshanas', 'nastika-darshanas', 'parallel', 'modern'];
+  const wisdomStrip = ['gita', 'subhashita', 'kavya', 'bhakti', 'lifestyle'];
+  const imgPath = palmLeaf.includes(id)
+    ? '/palm-leaf.png'
+    : birchBark.includes(id)
+    ? '/birch-bark.png'
+    : wisdomStrip.includes(id)
+    ? '/wisdom-strip.png'
+    : '/library-stack.png';
+
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <section className="sec-hero">
-      <div className="shell">
-        <Crumb items={data.crumb} />
-        <span className="deva-only">{data.deva}</span>
-        <h1>{data.title}</h1>
-        <p className="lede">{data.lede}</p>
+      <div className="shell sec-hero-inner">
+        <div className="sec-hero-copy">
+          <Crumb items={data.crumb} />
+          <span className="deva-only">{data.deva}</span>
+          <h1>{data.title}</h1>
+          <p className="lede">{data.lede}</p>
+        </div>
+        <div className="sec-hero-img-wrap">
+          <img
+            src={`${basePath}${imgPath}`}
+            alt={data.title}
+            fetchPriority="high"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+        </div>
       </div>
     </section>
   );
@@ -131,7 +159,7 @@ function SeeAlso({ currentId }: { currentId: string }) {
 export default function SectionDetailView({ id, data }: { id: string; data: SectionDetail }) {
   return (
     <>
-      <SecHero data={data} />
+      <SecHero data={data} id={id} />
 
       <section className="frame">
         <div className="shell">

@@ -2,8 +2,14 @@ import { Mandala, Glyph } from './Ornaments';
 import { DAILY, ESSAYS } from '@/lib/data';
 
 export function DailyStrip() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
-    <section className="strip">
+    <section
+      className="strip"
+      style={{
+        '--strip-bg': `url(${basePath}/wisdom-strip.png)`,
+      } as React.CSSProperties}
+    >
       <div className="shell strip-inner">
         <Mandala className="mandala" />
         <div className="quote">

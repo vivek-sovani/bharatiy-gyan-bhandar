@@ -143,24 +143,38 @@ function VedaTabs() {
 }
 
 export default function VedasView() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
-      <section className="hero" style={{ paddingTop: '3rem', paddingBottom: '2.5rem' }}>
-        <div className="shell">
-          <div className="crumbs" style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--ink-faint)' }}>
-            <a href="/" style={{ color: 'inherit', borderBottom: 0 }}>Library</a>
-            <span style={{ margin: '0 0.5rem' }}>→</span>
-            <span>Śruti</span>
-            <span style={{ margin: '0 0.5rem' }}>→</span>
-            <span style={{ color: 'var(--ink)' }}>The Four Vedas</span>
+      <section className="sec-hero">
+        <div className="shell sec-hero-inner">
+          <div className="sec-hero-copy">
+            <div className="sec-crumb">
+              <a href="/" style={{ color: 'inherit', borderBottom: 0 }}>Library</a>
+              <span className="sep">→</span>
+              <span>Śruti</span>
+              <span className="sep">→</span>
+              <span className="cur">The Four Vedas</span>
+            </div>
+            <span className="deva-only">चत्वारि वेदाः</span>
+            <h1>The Four Vedas</h1>
+            <p className="lede">
+              Ṛg, Yajur, Sāma, Atharva — four collections, three liturgical roles, one continuously transmitted body of knowledge. Each is a complete arc that moves from outer rite to inner question, in four strata: <em>saṃhitā, brāhmaṇa, āraṇyaka, upaniṣad.</em>
+            </p>
           </div>
-          <h1 style={{ marginTop: '1.2rem', fontStyle: 'italic', fontWeight: 500 }}>
-            <span className="deva-only" style={{ fontFamily: 'var(--font-deva)', color: 'var(--maroon)', display: 'block', fontSize: '0.7em', marginBottom: '0.3em' }}>चत्वारि वेदाः</span>
-            The Four Vedas
-          </h1>
-          <p style={{ maxWidth: '60ch', fontSize: '1.1rem', color: 'var(--ink-soft)', marginTop: '1rem' }}>
-            Ṛg, Yajur, Sāma, Atharva — four collections, three liturgical roles, one continuously transmitted body of knowledge. Each is a complete arc that moves from outer rite to inner question, in four strata: <em>saṃhitā, brāhmaṇa, āraṇyaka, upaniṣad.</em>
-          </p>
+          <div className="sec-hero-img-wrap">
+            <img
+              src={`${basePath}/palm-leaf.png`}
+              alt="The Four Vedas"
+              fetchPriority="high"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block'
+              }}
+            />
+          </div>
         </div>
       </section>
 

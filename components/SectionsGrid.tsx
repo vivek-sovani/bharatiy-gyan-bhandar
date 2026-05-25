@@ -72,26 +72,58 @@ export default function SectionsGrid() {
         </div>
 
         <div className="cards">
-          {filtered.map((s) => (
-            <Link key={s.id} className="card" href={sectionPath(s)}>
-              <CornerOrn className="tl" />
-              <CornerOrn className="tr" />
-              <CornerOrn className="bl" />
-              <CornerOrn className="br" />
-              <div className="num">
-                <span>№ {s.n}</span>
-                <span className="tag">{s.tag}</span>
-              </div>
-              <h3>{s.title}</h3>
-              <div className="deva-name deva-only">{s.deva}</div>
-              <p>{s.blurb}</p>
-              <div className="facets">
-                {s.facets.map((f) => (
-                  <span key={f} className="facet">{f}</span>
-                ))}
-              </div>
-            </Link>
-          ))}
+          {filtered.map((s) => {
+            const palmLeaf = ['vedas', 'upavedas', 'vedangas', 'sciences'];
+            const birchBark = ['upanishads', 'darshanas', 'nastika-darshanas', 'parallel', 'modern'];
+            const wisdomStrip = ['gita', 'subhashita', 'kavya', 'bhakti', 'lifestyle'];
+            const imgPath = palmLeaf.includes(s.id)
+              ? '/palm-leaf.png'
+              : birchBark.includes(s.id)
+              ? '/birch-bark.png'
+              : wisdomStrip.includes(s.id)
+              ? '/wisdom-strip.png'
+              : '/library-stack.png';
+
+            return (
+              <Link key={s.id} className="card" href={sectionPath(s)}>
+                <div className="card-thumb" style={{
+                  height: '140px',
+                  overflow: 'hidden',
+                  margin: '-1.6rem -1.5rem 1.2rem -1.5rem',
+                  position: 'relative',
+                  borderBottom: '1px solid var(--rule-strong)'
+                }}>
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${imgPath}`}
+                    alt={s.title}
+                    loading="lazy"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block'
+                    }}
+                  />
+                </div>
+                <CornerOrn className="tl" />
+                <CornerOrn className="tr" />
+                <CornerOrn className="bl" />
+                <CornerOrn className="br" />
+                <div className="num">
+                  <span>№ {s.n}</span>
+                  <span className="tag">{s.tag}</span>
+                </div>
+                <h3>{s.title}</h3>
+                <div className="deva-name deva-only">{s.deva}</div>
+                <p>{s.blurb}</p>
+                <div className="facets">
+                  {s.facets.map((f) => (
+                    <span key={f} className="facet">{f}</span>
+                  ))}
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
