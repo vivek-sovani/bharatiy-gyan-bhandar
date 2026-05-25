@@ -1760,6 +1760,20 @@ body::after {
 }
 
 @media (max-width: 600px) {
+  /* Spacing and section padding reductions */
+  .frame {
+    padding: 2.5rem 0 2rem;
+  }
+  .frame.tight {
+    padding: 1.5rem 0;
+  }
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+  .sec-hero {
+    padding: 2rem 0 1.5rem;
+  }
+
   /* Vedas tab navigation */
   .veda-tab-nav {
     grid-template-columns: 1fr !important;
@@ -1808,5 +1822,25 @@ body::after {
   }
   .stratum:last-child {
     border-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Dinacharya vertical stack on small screens */
+  .dinacharya {
+    grid-template-columns: 1fr;
+  }
+  .dinacharya .seg {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .dinacharya .seg:last-child {
+    border-bottom: 0;
+  }
+
+  /* Footer layout on small screens */
+  .ftr-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
