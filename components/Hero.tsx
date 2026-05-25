@@ -34,6 +34,20 @@ export default function Hero() {
         <div className="v-rule" aria-hidden="true" />
         <article className="hero-feature">
           <div className="feature-img">
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-manuscript.png`}
+              alt="Krishna playing the flute under a kadamba tree, 18th-century North Indian Pahari miniature painting folio"
+              fetchPriority="high"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                zIndex: 0,
+              }}
+            />
             <CornerOrn className="tl" />
             <CornerOrn className="tr" />
             <CornerOrn className="bl" />
