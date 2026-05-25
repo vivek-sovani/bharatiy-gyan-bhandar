@@ -1727,3 +1727,51 @@ body::after {
   .strata-grid { grid-template-columns: 1fr 1fr; }
   .stratum { border-bottom: 1px solid var(--rule); }
 }
+
+@media (max-width: 600px) {
+  /* Vedas tab navigation */
+  .veda-tab-nav {
+    grid-template-columns: 1fr !important;
+  }
+  .veda-tab {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem;
+  }
+  .veda-tab:last-child {
+    border-bottom: 0;
+  }
+
+  /* Section tab navigation */
+  .sec-tabs-nav {
+    grid-template-columns: 1fr !important;
+  }
+  .sec-tab {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem;
+  }
+  .sec-tab:last-child {
+    border-bottom: 0;
+  }
+
+  /* Key-value meta rows (Recension, Officiant, etc.) */
+  .kv-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding: 0.65rem 0;
+  }
+
+  /* Vedas Strata grid (Samhita, Brahmana, etc.) */
+  .strata-grid {
+    grid-template-columns: 1fr;
+  }
+  .stratum {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 1.25rem 1rem;
+  }
+  .stratum:last-child {
+    border-bottom: 0;
+  }
+}
