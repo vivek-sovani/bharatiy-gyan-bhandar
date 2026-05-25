@@ -1,0 +1,417 @@
+// Content for Bhāratīya Jñāna Bhaṇḍāra
+// All copy is original synthesis intended for an educational platform.
+
+export type Section = {
+  id: string;
+  title: string;
+  deva: string;
+  n: string;
+  tag: string;
+  era: string;
+  type: string;
+  topic: string;
+  count: string;
+  blurb: string;
+  facets: string[];
+  href: string;
+};
+
+export const SECTIONS: Section[] = [
+  {
+    id: 'vedas',
+    title: 'The Four Vedas',
+    deva: 'चत्वारि वेदाः',
+    n: '01',
+    tag: 'Śruti',
+    era: 'vedic',
+    type: 'shruti',
+    topic: 'foundational',
+    count: '4 saṃhitās',
+    blurb: 'Ṛg, Yajur, Sāma and Atharva — the oldest surviving stratum of Indic thought, preserved as living sound long before they were written.',
+    facets: ['c. 1500–600 BCE', 'Saṃhitā · Brāhmaṇa · Āraṇyaka', 'Oral transmission'],
+    href: 'vedas.html',
+  },
+  {
+    id: 'upavedas',
+    title: 'The Upavedas',
+    deva: 'उपवेदाः',
+    n: '02',
+    tag: 'Applied',
+    era: 'vedic',
+    type: 'smriti',
+    topic: 'applied',
+    count: '4 sciences',
+    blurb: 'Ayurveda (life), Dhanurveda (arms), Gāndharvaveda (music), Sthāpatyaveda (architecture) — applied counterparts to each principal Veda.',
+    facets: ['Vedic period', 'Practical sciences', 'Living disciplines'],
+    href: 'upavedas.html',
+  },
+  {
+    id: 'vedangas',
+    title: 'The Six Vedāṅgas',
+    deva: 'षड्वेदाङ्गानि',
+    n: '03',
+    tag: 'Auxiliary',
+    era: 'vedic',
+    type: 'auxiliary',
+    topic: 'language',
+    count: '6 limbs',
+    blurb: 'The auxiliary disciplines that make the Veda intelligible — phonetics, ritual, grammar, etymology, prosody, astronomy.',
+    facets: ['Śikṣā · Kalpa · Vyākaraṇa', 'Nirukta · Chandas · Jyotiṣa', 'Limbs of the Veda'],
+    href: 'vedangas.html',
+  },
+  {
+    id: 'upanishads',
+    title: 'Upaniṣads',
+    deva: 'उपनिषदः',
+    n: '04',
+    tag: 'Śruti',
+    era: 'classical',
+    type: 'shruti',
+    topic: 'philosophy',
+    count: '108 (10 principal)',
+    blurb: 'The “sitting-down-near” — dialogues at the close of each Veda that turn from ritual to the question of the self.',
+    facets: ['Vedānta', 'Ātman · Brahman', '10 principal mukhya'],
+    href: 'upanishads.html',
+  },
+  {
+    id: 'darshanas',
+    title: 'The Āstika Darśanas',
+    deva: 'षड्दर्शनानि',
+    n: '05',
+    tag: 'Āstika',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'philosophy',
+    count: '6 schools',
+    blurb: 'Nyāya, Vaiśeṣika, Sāṅkhya, Yoga, Mīmāṃsā, Vedānta — the six orthodox schools that accept the authority of the Veda.',
+    facets: ['Āstika schools', 'Sūtra literature', 'Paired in three pairs'],
+    href: 'darshanas.html',
+  },
+  {
+    id: 'nastika-darshanas',
+    title: 'Nāstika Darśanas',
+    deva: 'नास्तिक दर्शनानि',
+    n: '06',
+    tag: 'Nāstika',
+    era: 'classical',
+    type: 'heterodox',
+    topic: 'philosophy',
+    count: '3 schools',
+    blurb: 'Cārvāka, Bauddha, Jaina — the heterodox schools that decline the authority of the Veda. Indic philosophy as argued by its sharpest opponents.',
+    facets: ['Cārvāka · materialism', 'Bauddha · no-self', 'Jaina · many-sidedness'],
+    href: 'nastika-darshanas.html',
+  },
+  {
+    id: 'shruti-smriti',
+    title: 'Śruti & Smṛti',
+    deva: 'श्रुति · स्मृति',
+    n: '07',
+    tag: 'Primer',
+    era: 'all',
+    type: 'primer',
+    topic: 'philosophy',
+    count: 'Field guide',
+    blurb: '“That which is heard” versus “that which is remembered.” How tradition distinguishes revealed scripture from human composition.',
+    facets: ['Field guide', 'Canonical hierarchy', 'How tradition cites itself'],
+    href: 'shruti-smriti.html',
+  },
+  {
+    id: 'agamas',
+    title: 'Āgamas & Tantra',
+    deva: 'आगमाः · तन्त्रम्',
+    n: '08',
+    tag: 'Practice',
+    era: 'classical',
+    type: 'tantra',
+    topic: 'practice',
+    count: 'Śaiva · Vaiṣṇava · Śākta',
+    blurb: 'Temple liturgy, mantra and the maps of inner physiology — texts that handed Indic ritual life its working manuals.',
+    facets: ['Temple · Mantra · Yantra', 'Three principal streams', 'Initiation-based'],
+    href: 'agamas.html',
+  },
+  {
+    id: 'itihasa',
+    title: 'Itihāsa',
+    deva: 'इतिहासः',
+    n: '09',
+    tag: 'Epic',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'literature',
+    count: '2 epics',
+    blurb: 'The Rāmāyaṇa and the Mahābhārata — “thus it was” — narrative encyclopaedias of ethics, polity and the householder’s dilemmas.',
+    facets: ['Vālmīki · Vyāsa', '1,00,000+ verses', 'Bhagavad-gītā within'],
+    href: 'itihasa.html',
+  },
+  {
+    id: 'puranas',
+    title: 'Purāṇas',
+    deva: 'पुराणानि',
+    n: '10',
+    tag: 'Smṛti',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'literature',
+    count: '18 Mahā-purāṇas',
+    blurb: 'Eighteen great Purāṇas, sorted by guṇa into Vaiṣṇava, Brāhma and Śaiva groups — cosmogony, dynastic record and devotional theology in narrative form.',
+    facets: ['18 Mahā · 18 Upa', 'Pañca-lakṣaṇa', 'Sattva · Rajas · Tamas'],
+    href: 'puranas.html',
+  },
+  {
+    id: 'lifestyle',
+    title: 'Dinacaryā & Living',
+    deva: 'दिनचर्या',
+    n: '11',
+    tag: 'Lifestyle',
+    era: 'all',
+    type: 'practice',
+    topic: 'practice',
+    count: 'Daily practice',
+    blurb: 'How the day is structured — from brāhma-muhūrta to nidrā — when the science of life is taken seriously at the scale of a single morning.',
+    facets: ['Dinacaryā · Ṛtucaryā', 'Yoga · Ayurveda', 'Householder rhythm'],
+    href: 'lifestyle.html',
+  },
+  {
+    id: 'gita',
+    title: 'Bhagavad Gītā',
+    deva: 'भगवद्गीता',
+    n: '12',
+    tag: 'Smṛti',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'philosophy',
+    count: '700 verses · 18 chapters',
+    blurb: 'The seven-hundred-verse dialogue between Kṛṣṇa and Arjuna on the battlefield of Kurukṣetra — eighteen chapters embedded in the Mahābhārata, the most-commented Indic text outside the Upaniṣads.',
+    facets: ['18 chapters', 'Karma · Bhakti · Jñāna', 'Most-commented'],
+    href: 'gita.html',
+  },
+  {
+    id: 'dharmashastra',
+    title: 'Dharma-śāstra',
+    deva: 'धर्मशास्त्र',
+    n: '13',
+    tag: 'Smṛti',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'applied',
+    count: 'Manu · Yājñavalkya · Nārada',
+    blurb: 'The codes — Manusmṛti, Yājñavalkya-smṛti, Nārada-smṛti, Bṛhaspati-smṛti. Texts that translate dharma into a working civil law for the householder, the king and the court.',
+    facets: ['Civil law', 'Manu · Yājñavalkya', 'Smṛti-canon'],
+    href: 'dharmashastra.html',
+  },
+  {
+    id: 'arthashastra',
+    title: 'Artha-śāstra',
+    deva: 'अर्थशास्त्र',
+    n: '14',
+    tag: 'Śāstra',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'applied',
+    count: '15 books · 6,000 sūtras',
+    blurb: 'Kauṭilya’s manual on polity, intelligence, taxation and war — written for the Mauryan court, seventeen centuries before Machiavelli wrote his. The Indic theory of the state.',
+    facets: ['Kauṭilya', 'Polity & economics', '4th c. BCE'],
+    href: 'arthashastra.html',
+  },
+  {
+    id: 'kavya',
+    title: 'Kāvya & Nāṭya',
+    deva: 'काव्य · नाट्य',
+    n: '15',
+    tag: 'Literature',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'literature',
+    count: 'Poetry & drama',
+    blurb: 'Classical Sanskrit literature — Kālidāsa’s Śakuntalā and Meghadūta, Bhāsa’s plays, Bhāravi, Māgha, Śrīharṣa, the Pañcatantra and Hitopadeśa. Where Indic literary art reaches its self-aware peak.',
+    facets: ['Kālidāsa', 'Mahākāvya', 'Pañcatantra'],
+    href: 'kavya.html',
+  },
+  {
+    id: 'bhakti',
+    title: 'Bhakti Traditions',
+    deva: 'भक्ति-परम्परा',
+    n: '16',
+    tag: 'Devotional',
+    era: 'medieval',
+    type: 'smriti',
+    topic: 'practice',
+    count: 'Pan-Indian, 6th c. on',
+    blurb: 'The devotional turn — Ālvārs and Nāyanārs in Tamil, the Vārkarīs of Maharashtra, Caitanya in Bengal, the Sants of the north. A poetry of personal devotion that re-made Indic religious life from ~600 CE onward.',
+    facets: ['Ālvārs · Nāyanārs', 'Sant tradition', 'Vernacular'],
+    href: 'bhakti.html',
+  },
+  {
+    id: 'sciences',
+    title: 'Indic Sciences & Mathematics',
+    deva: 'गणित · ज्योतिषम्',
+    n: '17',
+    tag: 'Applied',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'applied',
+    count: 'Śulba → Kerala school',
+    blurb: 'The Śulba-sūtras (geometry), the decimal positional system with zero, Āryabhaṭa, Brahmagupta, Bhāskara, and the Kerala school’s infinite series — the history of Indic mathematics and astronomy is older, and longer, than the credit it usually receives.',
+    facets: ['Decimal · zero', 'Trigonometry', 'Kerala school'],
+    href: 'sciences.html',
+  },
+  {
+    id: 'subhashita',
+    title: 'Subhāṣita & Nīti',
+    deva: 'सुभाषित · नीति',
+    n: '18',
+    tag: 'Wisdom',
+    era: 'classical',
+    type: 'smriti',
+    topic: 'literature',
+    count: 'Aphoristic literature',
+    blurb: 'The aphoristic tradition — Bhartṛhari’s three śatakas, the niti-collections, the wit-literature that distils the rest of the canon into single verses you can quote across a table.',
+    facets: ['Bhartṛhari', 'Śataka-form', 'Nīti-śāstra'],
+    href: 'subhashita.html',
+  },
+  {
+    id: 'parallel',
+    title: 'Parallel Canons',
+    deva: 'इतर परम्पराः',
+    n: '19',
+    tag: 'Parallel',
+    era: 'all',
+    type: 'parallel',
+    topic: 'literature',
+    count: 'Jain · Buddhist · Sikh',
+    blurb: 'The Jain Āgamas in Prakrit, the Buddhist Tripiṭaka in Pali, the Gurū Granth Sāhib of the Sikhs — three vast bodies of text that share Indic ground while standing outside the Vedic line.',
+    facets: ['Jain Āgamas', 'Pali Tipiṭaka', 'Gurū Granth Sāhib'],
+    href: 'parallel.html',
+  },
+  {
+    id: 'modern',
+    title: 'Modern Indic Thought',
+    deva: 'आधुनिक भारतीय चिन्तनम्',
+    n: '20',
+    tag: 'Modern',
+    era: 'modern',
+    type: 'smriti',
+    topic: 'philosophy',
+    count: '19th–20th centuries',
+    blurb: 'Rammohan Roy, Vivekananda, Tagore, Aurobindo, Gandhi, Ambedkar, Krishnamurti — how the Indic corpus was reread, contested and remade in the long nineteenth and twentieth centuries.',
+    facets: ['Vivekananda · Aurobindo', 'Gandhi · Ambedkar', 'Reform & re-reading'],
+    href: 'modern.html',
+  },
+];
+
+export type FilterOption = { id: string; label: string };
+
+export const FILTERS: Record<'era' | 'type' | 'topic', FilterOption[]> = {
+  era: [
+    { id: 'all', label: 'All eras' },
+    { id: 'vedic', label: 'Vedic' },
+    { id: 'classical', label: 'Classical' },
+    { id: 'medieval', label: 'Medieval' },
+    { id: 'modern', label: 'Modern' },
+  ],
+  type: [
+    { id: 'all', label: 'All canon' },
+    { id: 'shruti', label: 'Śruti' },
+    { id: 'smriti', label: 'Smṛti' },
+    { id: 'tantra', label: 'Āgama / Tantra' },
+    { id: 'heterodox', label: 'Nāstika' },
+    { id: 'parallel', label: 'Parallel' },
+    { id: 'auxiliary', label: 'Auxiliary' },
+  ],
+  topic: [
+    { id: 'all', label: 'All topics' },
+    { id: 'foundational', label: 'Foundational' },
+    { id: 'philosophy', label: 'Philosophy' },
+    { id: 'applied', label: 'Applied science' },
+    { id: 'language', label: 'Language' },
+    { id: 'literature', label: 'Literature' },
+    { id: 'practice', label: 'Practice' },
+  ],
+};
+
+// The hero shloka — Īśa Upaniṣad, opening invocation.
+export const HERO_SHLOKA = {
+  deva: 'ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते ।\nपूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते ॥',
+  trans: 'That is whole. This is whole. From the whole the whole proceeds. Take the whole from the whole — the whole alone remains.',
+  source: 'Īśa Upaniṣad · Śānti-mantra',
+};
+
+// Featured editorial — written as a real magazine teaser, not slop filler.
+export const FEATURE = {
+  eyebrow: 'Long read · Issue No. 7',
+  title: 'On the cusp of the monsoon: why the Atharvaveda preserves the oldest sciences of healing',
+  dek: 'Long held to be the “fourth” and least canonical of the Vedas, the Atharvaveda is in fact the ancestor of every later Indic medical tradition — including the one we now call Āyurveda. A reading by season.',
+  author: 'Rohini Acharya',
+  reading: '12 min read',
+};
+
+// Daily wisdom — a short, central verse for the strip.
+export const DAILY = {
+  deva: 'सत्यमेव जयते नानृतम्',
+  trans: 'Truth alone triumphs — never the false.',
+  source: 'Muṇḍaka Upaniṣad · 3.1.6',
+};
+
+// Dinacharya ribbon
+export type DinacharyaSegment = { hr: string; ph: string; de: string; act: string };
+export const DINACHARYA: DinacharyaSegment[] = [
+  { hr: '04:30 – 06:00', ph: 'Brāhma muhūrta', de: 'ब्राह्म मुहूर्त', act: 'Wake, bathe, sit. The mind takes the colour of the hour before sunrise.' },
+  { hr: '06:00 – 10:00', ph: 'Kapha kāla', de: 'कफ काल', act: 'Asana, study, the day’s heavy work — when the body is built for effort.' },
+  { hr: '10:00 – 14:00', ph: 'Pitta kāla', de: 'पित्त काल', act: 'The principal meal, taken at noon when digestive fire is at its strongest.' },
+  { hr: '14:00 – 18:00', ph: 'Vāta kāla', de: 'वात काल', act: 'Speech, conversation, communication — the hours when the mind moves quickest.' },
+  { hr: '18:00 – 22:00', ph: 'Kapha kāla', de: 'कफ काल', act: 'Light supper before dusk, family, slow withdrawal of the senses.' },
+  { hr: '22:00 – 04:30', ph: 'Nidrā · Pitta', de: 'निद्रा', act: 'Sleep — under which the body undertakes the cellular work of repair.' },
+];
+
+// Essays index
+export type Essay = { no: string; title: string; dek: string; meta: string };
+export const ESSAYS: Essay[] = [
+  { no: 'I', title: 'What the Ṛgveda does not say about the gods', dek: 'A close reading of the “henotheism” problem — and why the Vedic poets refused to choose a chief among the devas.', meta: 'Philology · 18 min' },
+  { no: 'II', title: 'Pāṇini’s machine: the Aṣṭādhyāyī as the first formal grammar', dek: 'Twenty-five centuries before Chomsky, a generative grammar of Sanskrit, written in fewer than 4,000 sūtras.', meta: 'Vyākaraṇa · 14 min' },
+  { no: 'III', title: 'Why the Sāṅkhya counts twenty-five', dek: 'Puruṣa, prakṛti and twenty-three tattvas — the architecture every later school argued with, including the Yoga-sūtras.', meta: 'Darśana · 11 min' },
+  { no: 'IV', title: 'The cooked, the raw and the offered: ritual as a theory of food', dek: 'On Jaimini, the Mīmāṃsakas, and the surprisingly rigorous semantics of yajña.', meta: 'Mīmāṃsā · 16 min' },
+];
+
+// Knowledge tree nodes — three-fold. Śruti and Smṛti carry the Vedic line;
+// Itara holds the streams that share Indic ground while standing outside it.
+export type TreeNode = { id: string; label: string; deva: string; gloss: string };
+export const TREE: {
+  root: TreeNode;
+  primary: TreeNode[];
+  children: Record<string, TreeNode[]>;
+} = {
+  root: { id: 'sanatana', label: 'Sanātana', deva: 'सनातन', gloss: 'The eternal — the body of knowledge taken as a whole, transmitted across centuries by śruti and smṛti, and shared with the parallel streams that stand alongside.' },
+  primary: [
+    { id: 'shruti', label: 'Śruti', deva: 'श्रुति', gloss: 'That which was heard. Knowledge held to be apauruṣeya — not authored by any human person. Comprises the four Vedas and the Upaniṣads.' },
+    { id: 'smriti', label: 'Smṛti', deva: 'स्मृति', gloss: 'That which is remembered. Authored compositions that depend on, extend or apply śruti — Vedāṅgas, Upavedas, Itihāsa, Purāṇas, Darśanas and the full śāstra-corpus.' },
+    { id: 'itara', label: 'Itara', deva: 'इतर परम्पराः', gloss: 'The “other” streams — schools and bodies of text that share Indic ground while standing outside the Vedic line. The nāstika darśanas, the parallel canons of Jainism, Buddhism and Sikhism, and modern Indic thought.' },
+  ],
+  children: {
+    shruti: [
+      { id: 'rig', label: 'Ṛgveda', deva: 'ऋग्वेद', gloss: 'The oldest, a collection of 1,028 hymns in ten maṇḍalas to the devas — Agni, Indra, Soma, Uṣas.' },
+      { id: 'yajur', label: 'Yajurveda', deva: 'यजुर्वेद', gloss: 'The ritual handbook — mantras arranged for the priests who carry out the yajña.' },
+      { id: 'sama', label: 'Sāmaveda', deva: 'सामवेद', gloss: 'The earliest surviving notation of melody — hymns from the Ṛg set to chant.' },
+      { id: 'atharva', label: 'Atharva', deva: 'अथर्ववेद', gloss: 'Domestic, medical and apotropaic verse — the ancestor of every later Indic medical tradition.' },
+      { id: 'upani', label: 'Upaniṣads', deva: 'उपनिषदः', gloss: 'The end-of-Veda dialogues that turn from ritual toward the question of the self.' },
+    ],
+    smriti: [
+      { id: 'vedang', label: 'Vedāṅgas', deva: 'वेदाङ्गानि', gloss: 'The six limbs — phonetics, ritual, grammar, etymology, prosody, astronomy — the disciplines that make the Veda intelligible.' },
+      { id: 'upaved', label: 'Upavedas', deva: 'उपवेदाः', gloss: 'The four applied sciences — Āyurveda, Dhanurveda, Gāndharvaveda, Sthāpatyaveda.' },
+      { id: 'darsh', label: 'Darśanas', deva: 'दर्शनानि', gloss: 'The six āstika schools of philosophy — Nyāya, Vaiśeṣika, Sāṅkhya, Yoga, Mīmāṃsā, Vedānta.' },
+      { id: 'itih', label: 'Itihāsa', deva: 'इतिहासः', gloss: 'The two great epics — Rāmāyaṇa and Mahābhārata — narrative encyclopaedias of dharma. The Bhagavad-gītā sits inside the Mahābhārata.' },
+      { id: 'puran', label: 'Purāṇas', deva: 'पुराणानि', gloss: 'Eighteen mahā-purāṇas grouped by guṇa — Vaiṣṇava, Brāhma, Śaiva — cosmogony, dynastic record, devotional theology.' },
+      { id: 'agam', label: 'Āgamas', deva: 'आगमाः', gloss: 'Tantric ritual literature — Śaiva, Vaiṣṇava and Śākta — that organises temple liturgy and esoteric practice.' },
+      { id: 'dharma', label: 'Dharma-śāstra', deva: 'धर्मशास्त्र', gloss: 'The codes — Manu, Yājñavalkya, Nārada, Bṛhaspati — that translated dharma into a working civil law.' },
+      { id: 'artha', label: 'Artha-śāstra', deva: 'अर्थशास्त्र', gloss: 'Kauṭilya’s manual on polity, statecraft, economics and war — the Indic theory of the state.' },
+      { id: 'kavya', label: 'Kāvya', deva: 'काव्य', gloss: 'Classical Sanskrit literature — Kālidāsa, Bhāravi, Māgha, Bhāsa, the Pañcatantra. Kāvya, nāṭya, khaṇḍa-kāvya and the prose tale.' },
+      { id: 'subhash', label: 'Subhāṣita', deva: 'सुभाषितम्', gloss: 'The aphoristic tradition — Bhartṛhari, Cāṇakya, Vidura, Pañcatantra — wit-literature distilled to single verses.' },
+      { id: 'science', label: 'Gaṇita', deva: 'गणितम्', gloss: 'Indic mathematics and astronomy — Śulba-sūtras, Āryabhaṭa, Brahmagupta, Bhāskara, the Kerala school.' },
+      { id: 'bhakti', label: 'Bhakti', deva: 'भक्ति', gloss: 'The devotional traditions from ~6th c. CE on — Ālvārs, Nāyanārs, Vārkarī, the northern Sants, Caitanya.' },
+    ],
+    itara: [
+      { id: 'nastika', label: 'Nāstika', deva: 'नास्तिक', gloss: 'The three schools that decline the authority of the Veda — Cārvāka (materialism), Bauddha (Buddhism), Jaina (Jainism).' },
+      { id: 'parallel', label: 'Parallel', deva: 'इतर-परम्परा', gloss: 'Three vast bodies of text that share Indic ground — the Jain Āgamas in Prakrit, the Buddhist Tripiṭaka in Pali, the Gurū Granth Sāhib of the Sikhs.' },
+      { id: 'modern', label: 'Ādhunika', deva: 'आधुनिक', gloss: 'Modern Indic thought — Rammohan Roy, Vivekananda, Tagore, Aurobindo, Gandhi, Ambedkar, Krishnamurti — the long re-reading of the corpus under colonial rule and after.' },
+    ],
+  },
+};

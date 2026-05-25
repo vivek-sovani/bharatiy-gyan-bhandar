@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.8">
+  <g transform="translate(100 100)">
+    <rect x="-94" y="-94" width="188" height="188"></rect>
+    <rect x="-80" y="-80" width="160" height="160"></rect>
+    <circle r="74"></circle>
+    <circle r="56"></circle>
+    <g>
+      <path d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(45)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(90)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(135)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(180)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(225)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(270)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+      <path transform="rotate(315)" d="M0 -70 C 12 -45 12 -30 0 -16 C -12 -30 -12 -45 0 -70 Z"></path>
+    </g>
+    <polygon points="0,-44 38,22 -38,22"></polygon>
+    <polygon points="0,44 38,-22 -38,-22"></polygon>
+    <polygon points="0,-30 26,15 -26,15"></polygon>
+    <polygon points="0,30 26,-15 -26,-15"></polygon>
+    <circle r="4" fill="currentColor"></circle>
+  </g>
+</svg>
