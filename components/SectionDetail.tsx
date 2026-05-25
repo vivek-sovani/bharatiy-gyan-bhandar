@@ -24,17 +24,7 @@ function Crumb({ items }: { items: string[] }) {
 }
 
 function SecHero({ data, id }: { data: SectionDetail; id: string }) {
-  const palmLeaf = ['vedas', 'upavedas', 'vedangas', 'sciences'];
-  const birchBark = ['upanishads', 'darshanas', 'nastika-darshanas', 'parallel', 'modern'];
-  const wisdomStrip = ['gita', 'subhashita', 'kavya', 'bhakti', 'lifestyle'];
-  const imgPath = palmLeaf.includes(id)
-    ? '/palm-leaf.png'
-    : birchBark.includes(id)
-    ? '/birch-bark.png'
-    : wisdomStrip.includes(id)
-    ? '/wisdom-strip.png'
-    : '/library-stack.png';
-
+  const imgPath = `/corpus-${id}.png`;
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (

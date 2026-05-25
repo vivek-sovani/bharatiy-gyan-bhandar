@@ -164,7 +164,7 @@ export default function VedasView() {
           </div>
           <div className="sec-hero-img-wrap">
             <img
-              src={`${basePath}/palm-leaf.png`}
+              src={`${basePath}/corpus-vedas.png`}
               alt="The Four Vedas"
               fetchPriority="high"
               style={{

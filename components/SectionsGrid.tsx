@@ -73,16 +73,7 @@ export default function SectionsGrid() {
 
         <div className="cards">
           {filtered.map((s) => {
-            const palmLeaf = ['vedas', 'upavedas', 'vedangas', 'sciences'];
-            const birchBark = ['upanishads', 'darshanas', 'nastika-darshanas', 'parallel', 'modern'];
-            const wisdomStrip = ['gita', 'subhashita', 'kavya', 'bhakti', 'lifestyle'];
-            const imgPath = palmLeaf.includes(s.id)
-              ? '/palm-leaf.png'
-              : birchBark.includes(s.id)
-              ? '/birch-bark.png'
-              : wisdomStrip.includes(s.id)
-              ? '/wisdom-strip.png'
-              : '/library-stack.png';
+            const imgPath = `/corpus-${s.id}.png`;
 
             return (
               <Link key={s.id} className="card" href={sectionPath(s)}>
