@@ -958,6 +958,444 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
   ]
 };
 
+const BRAHMANAS_DATA: Record<string, Shakha[]> = {
+  rig: [
+    {
+      name: 'Aitareya Brāhmaṇa',
+      deva: 'ऐतरेय ब्राह्मण',
+      category: 'Śākala recension',
+      categoryDeva: 'शाकल शाखा',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '40 adhyāyas in 8 pañcikās',
+      structureDeva: '८ पञ्चिका, ४० अध्याय',
+      region: 'Pan-Indian; principal Rigvedic Brāhmaṇa',
+      regionDeva: 'संपूर्ण भारतात; ऋग्वेदाचा मुख्य ब्राह्मण ग्रंथ',
+      desc: 'Attributed to sage Mahidāsa Aitareya. The principal Brāhmaṇa of the Rigveda. Treats the Soma sacrifice in detail, the royal consecration (Rājasūya), the Mahāvrata winter rite, and contains the famous Śunaḥśepa narrative — one of the earliest extended stories in Indic literature.',
+      descDeva: 'महिदास ऐतरेय ऋषींची रचना. ऋग्वेदाचा मुख्य ब्राह्मण ग्रंथ. सोमयाग, राजसूय अभिषेक, महाव्रत हिवाळी विधी आणि भारतीय साहित्यातील सर्वात प्राचीन विस्तृत कथांपैकी एक मानली जाणारी शुनःशेप कथा यात आहे.'
+    },
+    {
+      name: 'Kauṣītaki / Śāṅkhāyana Brāhmaṇa',
+      deva: 'कौषीतकि / शाङ्खायन ब्राह्मण',
+      category: 'Bāṣkala / Śāṅkhāyana recension',
+      categoryDeva: 'बाष्कल / शाङ्खायन शाखा',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '30 adhyāyas',
+      structureDeva: '३० अध्याय',
+      region: 'Historically Gujarat & Rajasthan; surviving in manuscripts',
+      regionDeva: 'ऐतिहासिकदृष्ट्या गुजरात व राजस्थान',
+      desc: 'The second surviving Rigvedic Brāhmaṇa. More systematic than the Aitareya — opens with the consecration of the priest and proceeds through the Agnihotra, the new- and full-moon rites, the four-monthly rites, and the soma sacrifices. The accompanying Kauṣītaki Āraṇyaka and Upaniṣad form one of the most important Rigvedic intellectual lineages.',
+      descDeva: 'दुसरा उपलब्ध ऋग्वेदीय ब्राह्मण. ऐतरेयापेक्षा अधिक सुव्यवस्थित — पुरोहित दीक्षा, अग्निहोत्र, दर्श-पूर्णमास, चातुर्मास्य व सोमयाग या क्रमाने. यासोबत येणारे कौषीतकि आरण्यक व उपनिषद ऋग्वेदीय बौद्धिक परंपरेचे महत्त्वाचे अंग आहेत.'
+    },
+    {
+      name: 'Paiṅgi Brāhmaṇa',
+      deva: 'पैङ्गि ब्राह्मण',
+      category: 'Lost Rigvedic recension',
+      categoryDeva: 'लुप्त ऋग्वेद शाखा',
+      status: 'Lost',
+      statusDeva: 'लुप्त',
+      structure: 'No surviving text; cited by later commentators',
+      structureDeva: 'मूळ ग्रंथ अनुपलब्ध; भाष्यांत संदर्भ',
+      region: 'Historically Northern India',
+      regionDeva: 'ऐतिहासिकदृष्ट्या उत्तर भारत',
+      desc: 'A Brāhmaṇa belonging to a now-lost Rigvedic shakha (probably Paiṅgi). Quoted by Sāyaṇa and other mediaeval commentators on the Veda, but the independent text has not survived.',
+      descDeva: 'पैङ्गि नावाच्या आता लुप्त झालेल्या ऋग्वेद शाखेचा ब्राह्मण. सायणाचार्य व इतर मध्ययुगीन भाष्यकारांनी याचे अवतरण दिले आहे, परंतु स्वतंत्र ग्रंथ शिल्लक नाही.'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Śatapatha Brāhmaṇa — Mādhyandina',
+      deva: 'शतपथ ब्राह्मण — माध्यन्दिन',
+      category: 'Śukla Yajurveda',
+      categoryDeva: 'शुक्ल यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '14 kāṇḍas, 100 adhyāyas, 7,624 brāhmaṇas',
+      structureDeva: '१४ कांडे, १०० अध्याय, ७,६२४ ब्राह्मण',
+      region: 'North & Central India',
+      regionDeva: 'उत्तर व मध्य भारत',
+      desc: 'The "Brāhmaṇa of a Hundred Paths" — the longest single text of the Vedic prose canon. Attributed in part to Yājñavalkya. Treats every major Vedic rite, contains the earliest Indic flood narrative (Manu and the fish), the Pravargya, the Aśvamedha, the Agnicayana fire-altar construction, and embeds the Bṛhadāraṇyaka Upaniṣad as its final book.',
+      descDeva: '"शंभर मार्गांचा ब्राह्मण" — वैदिक गद्य परंपरेचा सर्वात मोठा ग्रंथ. याज्ञवल्क्य ऋषींना श्रेय. सर्व प्रमुख वैदिक विधी, मनू व मत्स्याचा प्राचीनतम जलप्रलय वृत्तांत, प्रवर्ग्य, अश्वमेध, अग्निचयन आणि शेवटी बृहदारण्यक उपनिषद यांचा समावेश.'
+    },
+    {
+      name: 'Śatapatha Brāhmaṇa — Kāṇva',
+      deva: 'शतपथ ब्राह्मण — काण्व',
+      category: 'Śukla Yajurveda',
+      categoryDeva: 'शुक्ल यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '17 kāṇḍas, 104 adhyāyas',
+      structureDeva: '१७ कांडे, १०४ अध्याय',
+      region: 'South India, Maharashtra, Odisha',
+      regionDeva: 'दक्षिण भारत, महाराष्ट्र, ओडिशा',
+      desc: 'The Kāṇva recension of the Śatapatha — textually close to the Mādhyandina but differently divided, shorter in some passages and longer in others. Both recensions are accepted and chanted.',
+      descDeva: 'शतपथ ब्राह्मणाची काण्व शाखा — माध्यन्दिनासारखीच पण विभागणी वेगळी; काही ठिकाणी लहान, इतर ठिकाणी मोठी. दोन्ही शाखा मान्य आहेत व पठण केल्या जातात.'
+    },
+    {
+      name: 'Taittirīya Brāhmaṇa',
+      deva: 'तैत्तिरीय ब्राह्मण',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 kāṇḍas, 28 prapāṭhakas',
+      structureDeva: '३ कांडे, २८ प्रपाठक',
+      region: 'South India',
+      regionDeva: 'दक्षिण भारत',
+      desc: 'A continuation of the Taittirīya Saṃhitā in the same Black-Yajurveda manner — interleaving mantra and prose explanation. Treats the Nakṣatra-iṣṭi, the Aśvamedha, the Puruṣamedha, and contains the seed of the Pañcāgni-vidyā that the Upaniṣads later expand.',
+      descDeva: 'तैत्तिरीय संहितेचाच विस्तार — कृष्ण यजुर्वेदी पद्धतीने मंत्र व गद्य विधी एकत्र. नक्षत्रेष्टि, अश्वमेध, पुरुषमेध, आणि उपनिषदांमध्ये पुढे विस्तारित होणाऱ्या पञ्चाग्निविद्येचे बीज यात आहे.'
+    },
+    {
+      name: 'Maitrāyaṇī Brāhmaṇa',
+      deva: 'मैत्रायणी ब्राह्मण',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: 'No separate Brāhmaṇa text; exposition embedded in the Saṃhitā',
+      structureDeva: 'स्वतंत्र ब्राह्मण ग्रंथ नाही; विवेचन संहितेतच गुंफलेले',
+      region: 'Western Maharashtra, Gujarat',
+      regionDeva: 'पश्चिम महाराष्ट्र, गुजरात',
+      desc: 'In the Maitrāyaṇī school the Brāhmaṇa-style material is not a separate book — it is woven into the prose passages of the Maitrāyaṇī Saṃhitā itself. This is the defining feature of all Kṛṣṇa-Yajurveda schools, but most pronounced here. The Maitrāyaṇī Upaniṣad continues this line.',
+      descDeva: 'मैत्रायणी शाखेत ब्राह्मण-स्वरूपाचे विवेचन स्वतंत्र ग्रंथ म्हणून नाही — ते मैत्रायणी संहितेच्याच गद्य भागांत गुंफलेले आहे. कृष्ण यजुर्वेदाच्या सर्व शाखांचे हे वैशिष्ट्य, पण येथे सर्वाधिक स्पष्ट. मैत्रायणी उपनिषद् हीच परंपरा पुढे नेते.'
+    },
+    {
+      name: 'Kāṭhaka Brāhmaṇa',
+      deva: 'काठक ब्राह्मण',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: 'Fragments only; main Brāhmaṇa lost',
+      structureDeva: 'केवळ खंडित भाग उपलब्ध',
+      region: 'Historically Kashmir',
+      regionDeva: 'ऐतिहासिकदृष्ट्या काश्मीर',
+      desc: 'The Brāhmaṇa of the Kaṭha school. The main text is lost; what survives is the Kāṭhaka-saṅkalana (a compilation of citations) and small fragments preserved in Kashmiri birch-bark manuscripts. The famous Kaṭha Upaniṣad descends from this lineage.',
+      descDeva: 'कठ शाखेचा ब्राह्मण. मुख्य ग्रंथ लुप्त; काठक-संकलन (अवतरण-संग्रह) व काश्मिरी भूर्जपत्र हस्तलिखितांतील छोटे तुकडे शिल्लक. प्रसिद्ध कठ उपनिषद् याच परंपरेतून आले आहे.'
+    }
+  ],
+  sama: [
+    {
+      name: 'Pañcaviṃśa (Tāṇḍya-mahā) Brāhmaṇa',
+      deva: 'पञ्चविंश (ताण्ड्यमहा) ब्राह्मण',
+      category: 'Kauthuma / Rāṇāyanīya',
+      categoryDeva: 'कौथुम / राणायनीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '25 adhyāyas (hence "Pañcaviṃśa" — twenty-five)',
+      structureDeva: '२५ अध्याय (म्हणून "पञ्चविंश")',
+      region: 'Gujarat, Maharashtra, Tamil Nadu',
+      regionDeva: 'गुजरात, महाराष्ट्र, तमिळनाडू',
+      desc: 'Also known as the Tāṇḍya-mahā-brāhmaṇa. The principal Sāmavedic Brāhmaṇa — gives the choral-rite procedure, the Stomas, the Vrātyastoma (re-admission of outsiders), and the long sacrificial sessions (sattras). The widest catalogue of Sāmavedic chants in any single text.',
+      descDeva: 'ताण्ड्य-महा-ब्राह्मण म्हणूनही ओळखला जातो. सामवेदाचा मुख्य ब्राह्मण ग्रंथ — गायन विधी, स्तोम, व्रात्यस्तोम (बाहेरील लोकांना पुन्हा परंपरेत आणणारा विधी) आणि दीर्घ सत्र विधी. एका ग्रंथात सामगानाचा सर्वात विस्तृत संग्रह.'
+    },
+    {
+      name: 'Ṣaḍviṃśa Brāhmaṇa',
+      deva: 'षड्विंश ब्राह्मण',
+      category: 'Kauthuma',
+      categoryDeva: 'कौथुम',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '6 adhyāyas — the "twenty-sixth" appendix to the Pañcaviṃśa',
+      structureDeva: '६ अध्याय — पञ्चविंशास "सव्विसावे" परिशिष्ट',
+      region: 'Gujarat, Maharashtra, Karnataka',
+      regionDeva: 'गुजरात, महाराष्ट्र, कर्नाटक',
+      desc: 'Literally "the twenty-sixth" — a six-chapter appendix to the Pañcaviṃśa. Treats expiation rites for unfavourable omens and atharvanic remedies; its final chapter is the Adbhuta-brāhmaṇa on prodigies and portents.',
+      descDeva: 'शब्दशः "सव्विसावा" — पञ्चविंशास जोडलेला सहा अध्यायांचा परिशिष्ट. अशुभ शकुनांच्या प्रायश्चित्तविधी व अथर्ववेदीय शान्ती; शेवटचा अध्याय अद्भुत-ब्राह्मण असून तो उल्कापात व विलक्षण घटनांचा.'
+    },
+    {
+      name: 'Sāmavidhāna Brāhmaṇa',
+      deva: 'सामविधान ब्राह्मण',
+      category: 'Kauthuma',
+      categoryDeva: 'कौथुम',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 prapāṭhakas',
+      structureDeva: '३ प्रपाठक',
+      region: 'Pan-Sāmavedic',
+      regionDeva: 'सर्व सामवेदी परंपरांत',
+      desc: 'On the ritual application (vidhāna) of sāman chants — which chant cures which ailment, which secures rain, which secures progeny. The closest the Sāmavedic Brāhmaṇa literature comes to the medical-apotropaic register of the Atharvaveda.',
+      descDeva: 'सामगायनांच्या विधानाविषयी (कोणते साम कोणत्या रोगाचे, पावसाचे, प्रजेचे) — सामवेदी ब्राह्मण साहित्यातील अथर्ववेदीय वैद्यक-शांती शैलीच्या जवळ जाणारा ग्रंथ.'
+    },
+    {
+      name: 'Ārṣeya Brāhmaṇa',
+      deva: 'आर्षेय ब्राह्मण',
+      category: 'Kauthuma',
+      categoryDeva: 'कौथुम',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 prapāṭhakas — an index of ṛṣis',
+      structureDeva: '३ प्रपाठक — ऋषींची सूची',
+      region: 'Pan-Sāmavedic',
+      regionDeva: 'सर्व सामवेदी परंपरांत',
+      desc: 'A short technical work giving the ṛṣi (sage) traditionally associated with each chant — Sāmaveda’s answer to a "table of authors". The Jaiminīya school has its own parallel Ārṣeya.',
+      descDeva: 'प्रत्येक सामगानाशी निगडित ऋषीचा निर्देश करणारा छोटा ग्रंथ — सामवेदाची "रचयिता-सूची". जैमिनीय शाखेचा स्वतंत्र समांतर आर्षेय ग्रंथ आहे.'
+    },
+    {
+      name: 'Devatādhyāya Brāhmaṇa',
+      deva: 'देवताध्याय ब्राह्मण',
+      category: 'Kauthuma',
+      categoryDeva: 'कौथुम',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '1 chapter',
+      structureDeva: '१ अध्याय',
+      region: 'Pan-Sāmavedic',
+      regionDeva: 'सर्व सामवेदी परंपरांत',
+      desc: 'A single short chapter on the deities to whom the various chants are addressed — and on the symbolism of the seven svaras as gods, sages and metres.',
+      descDeva: 'सामगानांच्या देवतांविषयीचा एक छोटा अध्याय — सात स्वरांचे देव, ऋषि व छंद यांच्याशी असलेल्या प्रतीकात्मक संबंधाचे विवेचन.'
+    },
+    {
+      name: 'Saṃhitopaniṣad Brāhmaṇa',
+      deva: 'संहितोपनिषद् ब्राह्मण',
+      category: 'Kauthuma',
+      categoryDeva: 'कौथुम',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '5 khaṇḍas',
+      structureDeva: '५ खंड',
+      region: 'Pan-Sāmavedic',
+      regionDeva: 'सर्व सामवेदी परंपरांत',
+      desc: 'A brief, esoteric work on the mystical correspondences between sāman chants and inner physiology — bridge between Brāhmaṇa and Upaniṣad in the Sāmavedic line.',
+      descDeva: 'सामगान व अंतःस्थ शरीर यांच्या गूढ अनुरूपतांविषयीचा एक छोटा, गुह्य ग्रंथ — सामवेदी परंपरेत ब्राह्मण व उपनिषद यांच्यातील पूल.'
+    },
+    {
+      name: 'Vaṃśa Brāhmaṇa',
+      deva: 'वंश ब्राह्मण',
+      category: 'Kauthuma',
+      categoryDeva: 'कौथुम',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '1 short chapter — a teacher-lineage',
+      structureDeva: '१ छोटा अध्याय — गुरुपरंपरा',
+      region: 'Pan-Sāmavedic',
+      regionDeva: 'सर्व सामवेदी परंपरांत',
+      desc: 'The "lineage" Brāhmaṇa — a single chapter listing the unbroken chain of teachers through whom the Sāmavedic chants were transmitted. The closest the Vedic corpus comes to a list of its own pre-classical scholars.',
+      descDeva: '"वंश" — सामवेदी गायन संक्रमित करणाऱ्या अखंड गुरुपरंपरेची सूची असलेला एकच अध्याय. वैदिक साहित्यात आपल्याच पूर्वशास्त्रीय आचार्यांची सूची देणारा सर्वात जवळचा ग्रंथ.'
+    },
+    {
+      name: 'Jaiminīya Brāhmaṇa',
+      deva: 'जैमिनीय ब्राह्मण',
+      category: 'Jaiminīya / Talavakāra',
+      categoryDeva: 'जैमिनीय / तलवकार',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 kāṇḍas, ~1,348 khaṇḍas',
+      structureDeva: '३ कांडे, सुमारे १,३४८ खंड',
+      region: 'Preserved in Kerala and Tamil Nadu',
+      regionDeva: 'केरळ व तमिळनाडूत जतन',
+      desc: 'The Brāhmaṇa of the Jaiminīya school — the longest and most narrative of all Sāmavedic Brāhmaṇas, with the largest single collection of Vedic legends (the tales of Cyavana and Sukanyā, Bhṛgu’s vision of the world to come, the dialogue of Yama and the dog Sārameya).',
+      descDeva: 'जैमिनीय शाखेचा ब्राह्मण — सर्व सामवेदी ब्राह्मणांत सर्वात मोठा व कथात्मक. च्यवन-सुकन्या, भृगूचा परलोक-दर्शन, यम व सारमेय कुत्र्याचा संवाद यांसारख्या वैदिक कथांचा सर्वात मोठा एकल संग्रह.'
+    }
+  ],
+  atharva: [
+    {
+      name: 'Gopatha Brāhmaṇa',
+      deva: 'गोपथ ब्राह्मण',
+      category: 'Śaunakīya & Paippalāda',
+      categoryDeva: 'शौनकीय व पैप्पलाद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: 'Two parts — Pūrva (5 prapāṭhakas) and Uttara (6 prapāṭhakas)',
+      structureDeva: 'दोन भाग — पूर्व (५ प्रपाठक), उत्तर (६ प्रपाठक)',
+      region: 'Atharvavedic communities across India',
+      regionDeva: 'भारतातील अथर्ववेदी परंपरांत',
+      desc: 'The only surviving Brāhmaṇa of the Atharvaveda. The Pūrva-bhāga lays out the supremacy of the Atharvan and the Brahman priest (who oversees the whole sacrifice); the Uttara-bhāga gives the technical procedure of the Soma rite from the Atharvan standpoint. Quotes the other three Vedas extensively and is one of the latest of the Brāhmaṇas.',
+      descDeva: 'अथर्ववेदाचा एकमेव उपलब्ध ब्राह्मण. पूर्व-भाग अथर्वन व ब्रह्मा पुरोहित (संपूर्ण यज्ञाचा निरीक्षक) यांचे श्रेष्ठत्व प्रतिपादन करतो; उत्तर-भाग अथर्वनी दृष्टीने सोमयागाची तांत्रिक प्रक्रिया देतो. इतर तीन वेदांतून विपुल अवतरण; सर्वात उत्तरकालीन ब्राह्मणांपैकी एक.'
+    }
+  ]
+};
+
+const PASSAGES_DATA: Record<string, KeySukta[]> = {
+  rig: [
+    {
+      name: 'Opening — Agni the lowest, Viṣṇu the highest',
+      nameDeva: 'मंगलाचरण — अग्नि व विष्णु',
+      citation: 'AB 1.1.1',
+      citationDeva: 'ऐतरेय ब्राह्मण १.१.१',
+      summary: 'The first sentence of the Aitareya Brāhmaṇa. Places Agni at the threshold (the fire on the household altar) and Viṣṇu at the limit (the sun, the wide-stepper) — and locates every other deity between them. The Brāhmaṇa’s entire cosmology in one line.',
+      summaryDeva: 'ऐतरेय ब्राह्मणाचे पहिले वाक्य. अग्नीला उंबरठ्यावर (कुटुंबाच्या वेदीवरील अग्नि) आणि विष्णूला सीमेवर (सूर्य, उरुक्रम) ठेवते — आणि बाकीच्या सर्व देवता या दोघांमध्ये स्थापन करते. एका ओळीत ब्राह्मणाची संपूर्ण विश्वरचना.',
+      verse: {
+        deva: 'अग्निर्वै देवानामवमो विष्णुः परमस्तदन्तरेण सर्वा अन्या देवताः ॥',
+        trans: 'agnir vai devānām avamo viṣṇuḥ paramas tad antareṇa sarvā anyā devatāḥ ||',
+        cite: 'AB 1.1.1'
+      }
+    },
+    {
+      name: 'The Śunaḥśepa narrative',
+      nameDeva: 'शुनःशेपाख्यान',
+      citation: 'AB 7.13–18',
+      citationDeva: 'ऐतरेय ब्राह्मण ७.१३–१८',
+      summary: 'King Hariścandra promises Varuṇa his son in sacrifice in exchange for a son of his own. When the moment comes, the boy is replaced by Śunaḥśepa — a brahmin’s son sold by his father for a hundred cows. Bound to the stake, Śunaḥśepa prays his way through verses of the Ṛgveda; each verse loosens a binding. Recited at every Rājasūya consecration, and one of the earliest extended narratives in any Indic source.',
+      summaryDeva: 'राजा हरिश्चंद्र पुत्र मिळवण्याच्या बदल्यात वरुणाला आपला पुत्र अर्पण करण्याचे वचन देतो. प्रत्यक्ष यज्ञ-वेळी, मुलाच्या ऐवजी शुनःशेप — ज्याला त्याच्या वडिलांनी शंभर गायींच्या बदल्यात विकले होते — स्तंभाला बांधले जाते. शुनःशेप ऋग्वेदातील ऋचांच्या आधारे प्रार्थना करतो आणि प्रत्येक ऋचेसरशी एक बंधन सुटते. राजसूय अभिषेकात प्रत्येक वेळी पठण होणारी ही कथा भारतीय परंपरेतील सर्वात प्राचीन विस्तृत कथांपैकी एक.'
+    },
+    {
+      name: 'The Mahāvrata winter rite',
+      nameDeva: 'महाव्रत — हिवाळी विधी',
+      citation: 'AB 5.13–34',
+      citationDeva: 'ऐतरेय ब्राह्मण ५.१३–३४',
+      summary: 'The "Great Vow" — a year-long sattra closing at the winter solstice. The Aitareya gives the most detailed surviving account: the chariot race, the riddle-contest between hotṛ and udgātṛ, the symbolic intercourse on the seat. The pre-classical ancestor of every later Indian solstice festival.',
+      summaryDeva: '"महाव्रत" — हिवाळ्याच्या संक्रांतीला संपणारा वर्षभर चालणारा सत्र. ऐतरेय यात सर्वात विस्तृत वर्णन देते: रथशर्यत, होता व उद्गाता यांच्यातील पहेली-स्पर्धा, आसनावरचा प्रतीकात्मक संग. नंतरच्या प्रत्येक भारतीय संक्रांती उत्सवाचा पूर्व-शास्त्रीय पूर्वज.'
+    },
+    {
+      name: 'The Rājasūya consecration',
+      nameDeva: 'राजसूय अभिषेक',
+      citation: 'AB 7.13 ff · 8.5–28',
+      citationDeva: 'ऐतरेय ब्राह्मण ७.१३ ff · ८.५–२८',
+      summary: 'The longest single treatment of royal consecration in the Vedic prose corpus. The eighth book gives the formula spoken over the king as he is sprinkled with the consecrating waters from the rivers of his realm — a passage that re-appears, almost word for word, in mediaeval coronations a thousand years later.',
+      summaryDeva: 'वैदिक गद्यात राजाभिषेकाचे सर्वात विस्तृत वर्णन. आठव्या कांडात राज्याच्या नद्यांच्या जलाने राजाला अभिषेक करताना उच्चारली जाणारी सूत्ररचना — हजार वर्षांनंतरच्या मध्ययुगीन राज्याभिषेकांत जवळजवळ शब्दशः याच ओळी पुन्हा येतात.'
+    },
+    {
+      name: 'The Agnihotra exposition',
+      nameDeva: 'अग्निहोत्र विवेचन',
+      citation: 'KB 2',
+      citationDeva: 'कौषीतकि ब्राह्मण २',
+      summary: 'The Kauṣītaki’s second chapter is the locus classicus on the daily fire-offering. Treats the rite from waking to first light: the kindling, the libation, the placement of fuel-sticks, and the meditation on the sun rising as Agni reborn each morning.',
+      summaryDeva: 'कौषीतकि ब्राह्मणाचा दुसरा अध्याय दैनिक अग्निहोत्राचा मूळ संदर्भ. जागृतीपासून पहाटेपर्यंतचा विधी — समिधाधान, आहुति, इंधनाची मांडणी, आणि उदयोन्मुख सूर्य म्हणजे रोज पुनर्जन्म घेणारा अग्नि — हे चिंतन.'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Manu and the fish — the Indic flood',
+      nameDeva: 'मनू व मत्स्य — जलप्रलय',
+      citation: 'ŚB 1.8.1.1–10',
+      citationDeva: 'शतपथ ब्राह्मण १.८.१.१–१०',
+      summary: 'The earliest surviving Indic flood narrative. A small fish in Manu’s washing-water asks for protection, grows enormous, warns him of the coming deluge, and tows his boat to a northern mountain through the rising waters. Centuries earlier than the Mahābhārata and Purāṇic versions, and the source they all rework.',
+      summaryDeva: 'भारतातील सर्वात प्राचीन उपलब्ध जलप्रलय कथा. मनूच्या प्रक्षालन-जलात एक छोटा मासा रक्षणाची याचना करतो, अति विशाल होतो, येणाऱ्या प्रलयाचा इशारा देतो आणि वाढत्या जलाशयातून मनूची नौका उत्तरेच्या पर्वतापर्यंत ओढून नेतो. महाभारत व पुराणांच्या आवृत्त्यांपेक्षा शतकानुशतके प्राचीन — त्या सर्वांचा मूळ स्रोत.',
+      verse: {
+        deva: 'मनवे ह वै प्रातरवनेग्यमुदकमाजहुर्यथेदं पाणिभ्यामवनेजनायाहरन्त्येवम् ।\nतस्यावनेनिजानस्य मत्स्यः पाणी आपेदे ॥',
+        trans: 'manave ha vai prātar avanegyam udakam ājahur yathedaṃ pāṇibhyām avanejanāyāharanty evam |\ntasyāvanenijānasya matsyaḥ pāṇī āpede ||',
+        cite: 'ŚB 1.8.1.1'
+      }
+    },
+    {
+      name: 'The Aśvamedha — horse sacrifice',
+      nameDeva: 'अश्वमेध',
+      citation: 'ŚB 13.1–5',
+      citationDeva: 'शतपथ ब्राह्मण १३.१–५',
+      summary: 'The Śatapatha’s thirteenth kāṇḍa is the most complete account of the year-long royal horse sacrifice. A consecrated stallion is set loose to roam; wherever it goes, the land becomes the king’s. The Brāhmaṇa specifies the daily rites kept up around it, the closing ceremony, and the queen’s symbolic union with the slain horse — a passage debated by every later commentator.',
+      summaryDeva: 'शतपथाचा तेरावा कांड वर्षभर चालणाऱ्या राजेशाही अश्वमेधाचे सर्वात संपूर्ण वर्णन देतो. अभिषिक्त अश्व मुक्त सोडला जातो; तो जिथे जातो ती भूमी राजाची होते. ब्राह्मणात त्याभोवती चाललेले दैनंदिन विधी, समापन आणि राणीचा हतमेधाशी प्रतीकात्मक संगम — हे विवरण नंतरच्या प्रत्येक भाष्यकाराने वादप्रसंगी विचारले आहे.'
+    },
+    {
+      name: 'The Pravargya rite — the gharma pot',
+      nameDeva: 'प्रवर्ग्य — घर्मपात्र',
+      citation: 'ŚB 14.1–3',
+      citationDeva: 'शतपथ ब्राह्मण १४.१–३',
+      summary: 'The fire-offering of hot milk in a red-hot clay pot. The Śatapatha treats the rite at length and reads it cosmologically — the pot is the sun, the milk is light, the priest who looks into the pot looks into the eye of the year. Still performed in some Nampūtiri lineages of Kerala.',
+      summaryDeva: 'तापलेल्या लाल मातीच्या पात्रात गरम दुधाचा अग्निहोम. शतपथ हा विधी विस्ताराने मांडतो आणि वैश्विकदृष्ट्या वाचतो — पात्र म्हणजे सूर्य, दूध म्हणजे प्रकाश, पात्रात पाहणारा पुरोहित म्हणजे वर्षाच्या डोळ्यात पाहणारा. केरळातील काही नंबुदिरी परंपरांत आजही केला जातो.'
+    },
+    {
+      name: 'Prajāpati creates the worlds',
+      nameDeva: 'प्रजापति व विश्वसृष्टि',
+      citation: 'ŚB 11.1.6',
+      citationDeva: 'शतपथ ब्राह्मण ११.१.६',
+      summary: 'In the beginning there was only Prajāpati; he desired to be many. He performed tapas, and from the heat came the three worlds — earth, mid-air, sky. The Brāhmaṇa’s most-cited cosmogony, and the proximate source of the creation narratives in the Bṛhadāraṇyaka and the Manusmṛti.',
+      summaryDeva: 'प्रारंभी केवळ प्रजापति होता; त्याला अनेक होण्याची इच्छा झाली. त्याने तप केले, आणि त्या तपातून तीन लोक उत्पन्न झाले — पृथ्वी, अंतरिक्ष, द्यौ. ब्राह्मणातील सर्वाधिक उद्धृत सृष्टिकथा आणि बृहदारण्यक व मनुस्मृतीतील सृष्टिकथांचा निकटतम स्रोत.'
+    },
+    {
+      name: 'The Agnicayana fire-altar',
+      nameDeva: 'अग्निचयन — वेदी-रचना',
+      citation: 'ŚB 6–10',
+      citationDeva: 'शतपथ ब्राह्मण ६–१०',
+      summary: 'Five entire books on the construction of the great bird-shaped fire-altar from 10,800 baked bricks. Every brick is consecrated with a mantra and a numerical correspondence — to a day of the year, to a part of the body, to a metre. The most elaborate single procedure in the Brāhmaṇa corpus.',
+      summaryDeva: '१०,८०० भाजलेल्या विटांपासून पक्ष्याच्या आकाराची महान अग्निवेदी रचण्यावरचे संपूर्ण पाच कांडे. प्रत्येक विटेला मंत्र व अंक-अनुरूपता — वर्षाच्या एका दिवसाशी, शरीराच्या एका अवयवाशी, एका छंदाशी. ब्राह्मण साहित्यातील सर्वात विस्तृत एकल प्रक्रिया.'
+    },
+    {
+      name: 'Yājñavalkya on the self',
+      nameDeva: 'याज्ञवल्क्य व आत्मन्',
+      citation: 'ŚB 14.7 (= BĀU 4)',
+      citationDeva: 'शतपथ ब्राह्मण १४.७ (= बृहदारण्यक ४)',
+      summary: 'The closing book of the Śatapatha is the Bṛhadāraṇyaka Upaniṣad — the moment the Brāhmaṇa literature turns into Vedānta. Yājñavalkya in the court of Janaka, the dialogue with Maitreyī, the "neti, neti" — Brāhmaṇa prose at the edge of its own dissolution into Upaniṣadic philosophy.',
+      summaryDeva: 'शतपथाचा शेवटचा कांड म्हणजे बृहदारण्यक उपनिषद् — ब्राह्मण साहित्य वेदान्तात रूपांतरित होण्याचा क्षण. जनकाच्या राजसभेत याज्ञवल्क्य, मैत्रेयीशी संवाद, "नेति, नेति" — स्वतःच्या उपनिषदीय तत्त्वज्ञानात विलीन होणारे ब्राह्मण गद्य.'
+    }
+  ],
+  sama: [
+    {
+      name: 'The Vrātyastoma — readmission of outsiders',
+      nameDeva: 'व्रात्यस्तोम — पुन्हा-समावेश',
+      citation: 'PB 17.1–4',
+      citationDeva: 'पञ्चविंश ब्राह्मण १७.१–४',
+      summary: 'The Pañcaviṃśa’s seventeenth book gives the rite by which a Vrātya — an outsider, an "uninitiated" wanderer outside the brahmanical fold — is reincorporated into orthodox society. A reminder that the boundary of "inside" the tradition was always more porous than later orthodoxy admits.',
+      summaryDeva: 'पञ्चविंशाच्या सतराव्या कांडात व्रात्य — ब्राह्मणी परिघाबाहेरचा "अदीक्षित" भटका — पुन्हा शास्त्रसंमत समाजात समाविष्ट करण्याचा विधी. परंपरेच्या "आत"ची सीमा नंतरच्या शास्त्रचुस्तपणापेक्षा नेहमीच अधिक भेद्य होती, याची आठवण.'
+    },
+    {
+      name: 'Cyavana and Sukanyā',
+      nameDeva: 'च्यवन व सुकन्या',
+      citation: 'JB 3.120–129',
+      citationDeva: 'जैमिनीय ब्राह्मण ३.१२०–१२९',
+      summary: 'The Jaiminīya’s most famous story. The sage Cyavana, grown old and motionless in his āśrama, is mistaken for an ant-hill by the young princess Sukanyā, who pierces his eyes with a thorn. To right the wrong she is given to him in marriage; the Aśvins later restore his youth. The narrative reappears in the Mahābhārata and dozens of Purāṇas.',
+      summaryDeva: 'जैमिनीय ब्राह्मणातील सर्वाधिक प्रसिद्ध कथा. आश्रमात वृद्ध व निश्चल होऊन बसलेल्या च्यवन ऋषीला वारुळ समजून तरुण राजकन्या सुकन्या काट्याने त्यांचे डोळे फोडते. प्रायश्चित्त म्हणून तिचे त्यांच्याशी लग्न लावले जाते; नंतर अश्विनीकुमार त्यांना तारुण्य देतात. महाभारत व डझनभर पुराणांत याच कथेचा पुनरुच्चार.'
+    },
+    {
+      name: 'Bhṛgu’s vision of the world to come',
+      nameDeva: 'भृगूचा परलोक-दर्शन',
+      citation: 'JB 1.42–44',
+      citationDeva: 'जैमिनीय ब्राह्मण १.४२–४४',
+      summary: 'The young Bhṛgu, sent by his father Varuṇa, walks through the worlds and sees men eating men, men eating animals, women being eaten by their hair — and in each case is told this is the next-world consequence of an act done in this one. The earliest karma narrative in the Indic record, centuries before the Upaniṣads systematise it.',
+      summaryDeva: 'पित्या वरुणाने पाठवलेला तरुण भृगू लोकांतून फिरतो आणि माणसे माणसे खाताना, माणसे प्राणी खाताना, स्त्रिया त्यांच्याच केसांनी खाल्ल्या जाताना पाहतो — आणि प्रत्येक प्रसंगात त्याला सांगितले जाते की ही या जगातील एका कृत्याची पुढच्या जगातील फलश्रुती आहे. उपनिषदांनी कर्मसिद्धांत व्यवस्थित मांडण्याच्या शतकानुशतके आधीची भारतीय परंपरेतील पहिली कर्म-कथा.'
+    },
+    {
+      name: 'The long sacrificial sessions (sattras)',
+      nameDeva: 'सत्र — दीर्घ यज्ञ',
+      citation: 'PB 4–5',
+      citationDeva: 'पञ्चविंश ब्राह्मण ४–५',
+      summary: 'Twelve-day, year-long, and thousand-year sattras — multi-priest, multi-family long sessions in which the patron is the rite itself rather than any single person. The Pañcaviṃśa gives the day-by-day schedule. The institutional ancestor of every long Indic vrata.',
+      summaryDeva: 'बारा दिवस, वर्षभर व हजार-वर्षांचे सत्र — एकाहून अधिक पुरोहित व एकाहून अधिक कुटुंबे; ज्यात यजमान कोणी विशिष्ट व्यक्ती नसून यज्ञ स्वतःच असतो. पञ्चविंशात त्याचे दिवसा-दिवशीचे कार्यक्रम. प्रत्येक दीर्घ भारतीय व्रताचा संस्थागत पूर्वज.'
+    },
+    {
+      name: 'The Stomas and their architecture',
+      nameDeva: 'स्तोम व त्यांची रचना',
+      citation: 'PB 2',
+      citationDeva: 'पञ्चविंश ब्राह्मण २',
+      summary: 'A technical treatise on the Stoma — the numbered patterns (15, 17, 21, 24…) in which choral verses are arranged and repeated. The Brāhmaṇa’s contribution to what is, in effect, mathematical music theory: the first known systematic study of cyclic patterns in chant.',
+      summaryDeva: 'स्तोम — समूहगायनाच्या ऋचा ज्या निर्धारित अंक-नमुन्यांत (१५, १७, २१, २४…) मांडल्या व पुनरावृत्त केल्या जातात — त्यांचे तांत्रिक विवरण. प्रत्यक्षात गणितीय संगीतशास्त्राला ब्राह्मणाचे योगदान: गायनातील चक्रीय नमुन्यांचा पहिला ज्ञात व्यवस्थित अभ्यास.'
+    }
+  ],
+  atharva: [
+    {
+      name: 'Supremacy of the Brahman priest',
+      nameDeva: 'ब्रह्मा पुरोहिताचे श्रेष्ठत्व',
+      citation: 'GB Pūrva 3',
+      citationDeva: 'गोपथ ब्राह्मण पूर्व ३',
+      summary: 'The Gopatha’s argument for why the Atharvaveda matters. Among the four priestly officiants, the Brahman — the silent overseer who corrects mistakes in any of the other three’s recitations — must know all four Vedas, not three. Therefore the Atharvaveda is not the "fourth" Veda but the principal one. A scholarly argument disguised as a ritual exposition.',
+      summaryDeva: 'अथर्ववेद का महत्त्वाचा हे गोपथाचे प्रमेय. चार ऋत्विजांपैकी ब्रह्मा — मौनी निरीक्षक जो इतर तिघांच्या पठणातील चुका सुधारतो — त्याला तीन नव्हे तर चारही वेद ज्ञात असावे लागतात. म्हणून अथर्ववेद हा "चौथा" वेद नसून मुख्य वेद आहे. विधी-निरूपणाच्या वेषात मांडलेला अभ्यासकीय युक्तिवाद.'
+    },
+    {
+      name: 'On the syllable Aum',
+      nameDeva: 'ओम्-कारावरील विवेचन',
+      citation: 'GB Pūrva 1.16–24',
+      citationDeva: 'गोपथ ब्राह्मण पूर्व १.१६–२४',
+      summary: 'A long exposition on the syllable Aum — broken into its three sounds (a, u, m), identified with the three Vedas, the three worlds, the three guṇas, and the three breaths. The most elaborate Brāhmaṇa-level treatment of Aum we have; the Māṇḍūkya Upaniṣad later compresses this into twelve verses.',
+      summaryDeva: 'ओम्-कारावरील दीर्घ विवेचन — त्याच्या तीन ध्वनींत (अ, उ, म) विभागून ते तीन वेद, तीन लोक, तीन गुण आणि तीन प्राणांशी समीकृत. ब्राह्मण पातळीवरचे ओम्-कारावरील सर्वात विस्तृत विवेचन; नंतर माण्डूक्य उपनिषद याला बारा श्लोकांत संकोचवते.'
+    },
+    {
+      name: 'The Gāyatrī as cosmic frame',
+      nameDeva: 'गायत्री — वैश्विक छंद',
+      citation: 'GB Pūrva 1.32–37',
+      citationDeva: 'गोपथ ब्राह्मण पूर्व १.३२–३७',
+      summary: 'A meditation on the Gāyatrī mantra — not as a hymn to Savitṛ but as a cosmic frame. Twenty-four syllables, twenty-four half-months in the year, twenty-four ṛṣis, twenty-four metres. The kind of numerical correspondence that organises the entire Brāhmaṇa imagination.',
+      summaryDeva: 'गायत्री मंत्रावर ध्यान — सवित्राला उद्देशून केलेले स्तोत्र म्हणून नव्हे तर वैश्विक छंद म्हणून. चोवीस अक्षरे, वर्षातील चोवीस अर्धमास, चोवीस ऋषि, चोवीस छंद. संपूर्ण ब्राह्मण कल्पनेला आकार देणारी अंक-अनुरूपता.'
+    },
+    {
+      name: 'The Soma rite from the Atharvan angle',
+      nameDeva: 'अथर्वनी दृष्टीने सोमयाग',
+      citation: 'GB Uttara 1–6',
+      citationDeva: 'गोपथ ब्राह्मण उत्तर १–६',
+      summary: 'The Uttara-bhāga takes the standard Vedic Soma sacrifice and re-reads every step from the Atharvan standpoint. The Brahman priest’s duties are foregrounded; the apotropaic and protective dimension of every offering is brought out; the role of Atharva-mantras in correcting ritual mistakes is laid out in detail.',
+      summaryDeva: 'उत्तर-भाग प्रचलित वैदिक सोमयागाचे प्रत्येक पाऊल अथर्वनी दृष्टीने पुन्हा वाचतो. ब्रह्मा पुरोहिताची कर्तव्ये अग्रभागी आणली जातात; प्रत्येक आहुतीचे रक्षणात्मक व अरिष्टनिवारक स्वरूप स्पष्ट केले जाते; विधीतील चुका सुधारण्यात अथर्व-मंत्रांची भूमिका विस्ताराने मांडली जाते.'
+    },
+    {
+      name: 'Quotations from the other three Vedas',
+      nameDeva: 'इतर वेदांतील अवतरणे',
+      citation: 'GB Pūrva 2 · Uttara 5',
+      citationDeva: 'गोपथ ब्राह्मण पूर्व २ · उत्तर ५',
+      summary: 'Among Brāhmaṇas, the Gopatha is the most citation-heavy — quoting and commenting on verses from the Ṛg, Yajur and Sāma in long stretches. A late text that already treats the other three Vedas as a closed canon and positions the Atharvaveda as their unifier. Its date is the latest of any major Brāhmaṇa.',
+      summaryDeva: 'सर्व ब्राह्मणांत गोपथ सर्वाधिक अवतरण-समृद्ध — ऋग्, यजुर्, साम वेदांतील ऋचा दीर्घ खंडांत उद्धृत व व्याख्यायित करणारा. इतर तीन वेद आधीच बंद-कोश म्हणून घेणारा आणि अथर्ववेदाला त्यांचा एकीकरणकर्ता म्हणून मांडणारा उत्तरकालीन ग्रंथ. कोणत्याही मुख्य ब्राह्मणापेक्षा याची रचना उशिराची.'
+    }
+  ]
+};
+
 function ShakhaCard({ shakha, lang }: { shakha: Shakha; lang: string }) {
   const [expanded, setExpanded] = useState(false);
   const statusLabel = lang === 'mr' ? 'स्थिती' : 'Status';
@@ -1139,6 +1577,75 @@ function SamhitaSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
   );
 }
 
+function BrahmanaSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
+  const [subTab, setSubTab] = useState<'brahmanas' | 'passages'>('brahmanas');
+
+  const brahmanas = BRAHMANAS_DATA[vedaId] || [];
+  const passages = PASSAGES_DATA[vedaId] || [];
+
+  const intros: Record<string, { en: string; mr: string }> = {
+    rig: {
+      en: 'Of the Rigveda’s Brāhmaṇa literature, two complete texts survive: the Aitareya, on the great Soma sacrifices and the Rājasūya consecration, and the Kauṣītaki, on domestic and seasonal rites. A third — the Paiṅgi — is lost but quoted in mediaeval commentaries.',
+      mr: 'ऋग्वेदाच्या ब्राह्मण साहित्यापैकी दोन ग्रंथ संपूर्णपणे टिकले आहेत: सोमयाग व राजसूय अभिषेकावरचे ऐतरेय, आणि गृहस्थ व ऋतु-विधींवरचे कौषीतकि. तिसरे — पैङ्गि — लुप्त आहे पण मध्ययुगीन भाष्यांत उद्धृत.'
+    },
+    yajur: {
+      en: 'The Yajurveda’s Brāhmaṇa tradition is dominated by the colossal Śatapatha — the longest text of the Vedic prose canon — preserved in two recensions, Mādhyandina and Kāṇva. Alongside it stands the Taittirīya Brāhmaṇa of the Black-Yajurveda south. Two other Kṛṣṇa-Yajurveda Brāhmaṇas (Maitrāyaṇī and Kāṭhaka) are partly embedded in their Saṃhitās or survive only in fragments.',
+      mr: 'यजुर्वेदाच्या ब्राह्मण परंपरेचे मुख्य प्रतिनिधी म्हणजे प्रचंड शतपथ — वैदिक गद्य परंपरेचा सर्वात मोठा ग्रंथ — जो माध्यन्दिन व काण्व या दोन शाखांत जतन केला आहे. त्याशेजारी कृष्ण यजुर्वेदी दक्षिणेकडचा तैत्तिरीय ब्राह्मण उभा आहे. इतर दोन कृष्ण यजुर्वेदी ब्राह्मण (मैत्रायणी व काठक) अंशतः त्यांच्या संहितेत गुंफलेले किंवा खंडित स्वरूपात उपलब्ध आहेत.'
+    },
+    sama: {
+      en: 'The Sāmaveda preserves the largest number of Brāhmaṇas of any Veda — eight in the Kauthuma line alone — most of them short, technical, and concerned with the mathematical-musical architecture of the chant. The Jaiminīya Brāhmaṇa stands apart as the longest and most narrative of the eight, with the largest single collection of Vedic legends.',
+      mr: 'सामवेदात कोणत्याही वेदापेक्षा अधिक ब्राह्मण ग्रंथ जतन केले आहेत — एकट्या कौथुम परंपरेत आठ — त्यांपैकी बहुतेक छोटे, तांत्रिक, गायनाच्या गणित-संगीत रचनेविषयीचे. जैमिनीय ब्राह्मण आठांत सर्वात मोठा व कथात्मक — वैदिक कथांचा सर्वात मोठा एकल संग्रह.'
+    },
+    atharva: {
+      en: 'The Atharvaveda has only one surviving Brāhmaṇa — the Gopatha — but a remarkable one: late, learned, citation-heavy, and unique in being explicitly an argument for the supremacy of its own Veda. Reads as much like a treatise as a ritual manual.',
+      mr: 'अथर्ववेदाचा एकमेव टिकलेला ब्राह्मण म्हणजे गोपथ — पण एक उल्लेखनीय ग्रंथ: उत्तरकालीन, विद्वत्तापूर्ण, अवतरण-समृद्ध, आणि स्वतःच्याच वेदाच्या श्रेष्ठत्वासाठी खुलेपणाने वाद घालणारा. विधी-पुस्तकाइतकाच शास्त्रीय निबंधासारखा वाटतो.'
+    }
+  };
+
+  const intro = intros[vedaId]?.[lang as 'en' | 'mr'] || '';
+
+  return (
+    <div className="samhita-sub-panel">
+      <p className="samhita-intro">{intro}</p>
+
+      <nav className="samhita-tabs-nav" role="tablist">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'brahmanas'}
+          className={`samhita-tab-btn ${subTab === 'brahmanas' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('brahmanas')}
+        >
+          {lang === 'mr' ? 'ब्राह्मण ग्रंथ' : 'Brāhmaṇa texts'}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'passages'}
+          className={`samhita-tab-btn ${subTab === 'passages' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('passages')}
+        >
+          {lang === 'mr' ? 'महत्त्वाची आख्याने व विधी' : 'Key Passages & Rites'}
+        </button>
+      </nav>
+
+      {subTab === 'brahmanas' ? (
+        <div className="shakha-grid">
+          {brahmanas.map((b, i) => (
+            <ShakhaCard key={i} shakha={b} lang={lang} />
+          ))}
+        </div>
+      ) : (
+        <div className="sukta-list">
+          {passages.map((p, i) => (
+            <KeySuktaCard key={i} sukta={p} lang={lang} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 const STRATA_EN = [
   { id: 'samhita', name: 'Saṃhitā', deva: 'संहिता', gloss: 'The mantra-collection itself. Hymns, formulae, chants — the body of the text as the priest performs it.' },
   { id: 'brahmana', name: 'Brāhmaṇa', deva: 'ब्राह्मण', gloss: 'Prose treatises that gloss the rite — its meaning, the legend behind each act, the cosmic correspondence each gesture intends.' },
@@ -1272,6 +1779,8 @@ function VedaTabs() {
           </div>
           {activeStratum === 'samhita' ? (
             <SamhitaSubPanel vedaId={active} lang={lang} />
+          ) : activeStratum === 'brahmana' ? (
+            <BrahmanaSubPanel vedaId={active} lang={lang} />
           ) : (
             <ul className="details-list">
               {veda.strataDetails[activeStratum].details.map((detail, idx) => (
