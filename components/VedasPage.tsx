@@ -672,7 +672,7 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       summaryDeva: 'विश्वाच्या उत्पत्तीचा सखोल शोध घेणारे प्रसिद्ध सूक्त, ज्यामध्ये अतिशय गंभीर आणि तात्त्विक प्रश्न विचारले गेले आहेत: "सृष्टी नक्की कुठून आली हे कोणाला ठाऊक आहे?"',
       verse: {
         deva: 'नासदासीन्नो सदासीत्तदानीं नासीद्रजो नो व्योमा परो यत् ।\nकिमावरीवः कुह कस्य शर्मन्नम्भः किमासीद्गहनं गभीरम् ॥',
-        trans: 'nāsadāsīnno sadāsīttadānīm\u0304 nāsīdrajo no vyomā paro yat |\nkimāvarīvaḥ kuha kasya śarmannambhaḥ kimāsīdgahanaṃ gabhīram ||',
+        trans: 'nāsadāsīnno sadāsīttadānīm nāsīdrajo no vyomā paro yat |\nkimāvarīvaḥ kuha kasya śarmannambhaḥ kimāsīdgahanaṃ gabhīram ||',
         cite: 'RV 10.129.1'
       }
     },
@@ -701,6 +701,32 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
         trans: 'tat savitur vareṇyaṃ bhargo devasya dhīmahi |\ndhiyo yo naḥ pracodayāt ||',
         cite: 'RV 3.62.10'
       }
+    },
+    {
+      name: 'Vāk Sūkta / Devī Sūkta',
+      nameDeva: 'वाक् सूक्त / देवी सूक्त',
+      citation: 'RV 10.125',
+      citationDeva: 'ऋग्वेद १०.१२५',
+      summary: 'A profound hymn where the goddess Vāk (Speech/Cosmic Power) speaks in the first person, declaring herself as the sustaining energy of the entire universe.',
+      summaryDeva: 'वाग्देवतेने स्वतःच्या मुखातून वदलेले सूक्त, ज्यामध्ये ती स्वतःला विश्वाची चेतना व शक्ती म्हणून घोषित करते. शाक्त तत्त्वज्ञानाचा हा मुख्य आधार आहे.',
+      verse: {
+        deva: 'अहमेव वात इव प्रवाम्य आरभमाणा भुवनानि विश्वा ।\nपरो दिवा पर एना पृथिव्यैतावती महिना संबभूव ॥',
+        trans: 'ahameva vāta iva pravāmyārabhamāṇā bhuvanāni viśvā |\nparo divā para enā pṛthivyaitāvatī mahinā saṃbabhūva ||',
+        cite: 'RV 10.125.8'
+      }
+    },
+    {
+      name: 'Hiraṇyagarbha Sūkta',
+      nameDeva: 'हिरण्यगर्भ सूक्त',
+      citation: 'RV 10.121',
+      citationDeva: 'ऋग्वेद १०.१२१',
+      summary: 'Hymn to the "Golden Womb/Child", celebrating the source of all light, life, and creation, asking rhetorically: "To which deity should we offer our worship?"',
+      summaryDeva: '\'हिरण्यगर्भ\' म्हणजेच सुवर्ण गर्भाचे (विश्वाच्या उगमस्थानी असणाऱ्या प्रकाशाचे) सूक्त, जे संपूर्ण सृष्टीच्या उत्पत्तीचा ध्यास घेते.',
+      verse: {
+        deva: 'हिरण्यगर्भः समवर्तताग्रे भूतस्य जातः पतिरेक आसीत् ।\nस दाधार पृथिवीं द्यामुतेमां कस्मै देवाय हविषा विधेम ॥',
+        trans: 'hiraṇyagarbhaḥ samavartatāgre bhūtasya jātaḥ patireka āsīt |\nsa dādhāra pṛthivīṃ dyāmutemāṃ kasmai devāya haviṣā vidhema ||',
+        cite: 'RV 10.121.1'
+      }
     }
   ],
   yajur: [
@@ -718,6 +744,19 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       }
     },
     {
+      name: 'Camakam',
+      nameDeva: 'चमकम्',
+      citation: 'TS 4.7',
+      citationDeva: 'तैत्तिरीय ४.७',
+      summary: 'A companion hymn to Sri Rudram, praying for daily physical, mental, agricultural, and spiritual blessings using the repeating refrain "ca me" (and to me).',
+      summaryDeva: 'श्रीरुद्र सूक्ताचा जोडभाग, ज्यामध्ये \'च मे\' (आणि मला लाभो) या शब्दांच्या पुनरावृत्तीने अन्न, आरोग्य, बुद्धी व आध्यात्मिक प्रगतीची याचना केली आहे.',
+      verse: {
+        deva: 'शं च मे मयश्च मे प्रियं च मेऽनुकामश्च मे ।\nकामश्च मे सौमनसश्च मे भद्रं च मे श्रेयश्च मे ॥',
+        trans: 'śaṃ ca me mayaśca me priyaṃ ca me\'nukāmaśca me |\nkāmaśca me saumanasaśca me bhadraṃ ca me śreyaśca me ||',
+        cite: 'TS 4.7.1'
+      }
+    },
+    {
       name: 'Śivasaiṅkalpa Sūkta',
       nameDeva: 'शिवसङ्कल्प सूक्त',
       citation: 'VS 34.1-6',
@@ -731,6 +770,19 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       }
     },
     {
+      name: 'Īśāvāsya Mantras (Īśa Upaniṣad)',
+      nameDeva: 'ईशावास्य मन्त्र (ईशोपनिषद्)',
+      citation: 'VS 40',
+      citationDeva: 'वाजसनेयी ४०',
+      summary: 'The entire 40th and final chapter of the Shukla Yajurveda Samhita, which forms the famous Ishavasya Upanishad, exploring self-realization and action without attachment.',
+      summaryDeva: 'शुक्ल यजुर्वेद संहितेचा शेवटचा (४० वा) अध्याय, जो प्रसिद्ध \'ईशोपनिषद\' आहे. यात निष्काम कर्म आणि आत्मज्ञानाचा सुंदर समन्वय सांगितला आहे.',
+      verse: {
+        deva: 'ईशा वास्यमिदं सर्वं यत्किञ्च जगत्यां जगत् ।\nतेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम् ॥',
+        trans: 'iśā vāsyamidaṃ sarvaṃ yatkiñca jagatyāṃ jagat |\ntena tyaktena bhuñjīthā mā gṛdhaḥ kasyasviddhanam ||',
+        cite: 'VS 40.1'
+      }
+    },
+    {
       name: 'Mahāmṛtyuñjaya Mantra',
       nameDeva: 'महामृत्युञ्जय मन्त्र',
       citation: 'VS 3.60 / TS 1.8.6',
@@ -741,6 +793,19 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
         deva: 'त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय मामृतात् ॥',
         trans: 'tryambakaṃ yajāmahe sugandhiṃ puṣṭi-vardhanam |\nurvārukam iva bandhanān mṛtyor mukṣīya mā\'mṛtāt ||',
         cite: 'VS 3.60'
+      }
+    },
+    {
+      name: 'Śānti Mantra',
+      nameDeva: 'शान्ति मन्त्र',
+      citation: 'VS 36.17',
+      citationDeva: 'वाजसनेयी ३६.१७',
+      summary: 'A grand invocation of peace for the entire cosmos, praying for tranquility in the sky, earth, waters, plants, trees, and the ultimate Brahman.',
+      summaryDeva: 'वैश्विक शांततेची प्रार्थना, ज्यामध्ये अंतरिक्ष, पृथ्वी, जल, वनस्पती आणि परमेश्वरासह संपूर्ण ब्रह्मांडासाठी शांतीची याचना केली आहे.',
+      verse: {
+        deva: 'द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः ।\nवनस्पतयः शान्तिर्विश्वेदेवाः शान्तिर्ब्रह्म शान्तिः सर्वं शान्तिः शान्तिरेव शान्तिः सा मा शान्तिरेधि ॥',
+        trans: 'dyauḥ śāntirantarikṣaṃ śāntiḥ pṛthivī śāntirāpaḥ śāntiroṣadhayaḥ śāntih |\nvanaspatayaḥ śāntirviśvedevāḥ śāntirbrahma śāntiḥ sarvaṃ śāntih śāntireva śāntih sā mā śāntiredhi ||',
+        cite: 'VS 36.17'
       }
     }
   ],
@@ -761,14 +826,53 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
     {
       name: 'Rathantara Sāma',
       nameDeva: 'रथन्तर साम',
-      citation: 'SV Ritual Chants',
-      citationDeva: 'सामवेद विधी गान',
+      citation: 'SV 1.1.1',
+      citationDeva: 'सामवेद १.१.१',
       summary: 'One of the oldest and most sacred melodies of the Sāmaveda, traditionally associated with the cosmic order (Ṛta) and the movement of the sun.',
       summaryDeva: 'सामवेदातील सर्वात जुन्या आणि पवित्र स्वरांपैकी एक, जे वैश्विक नियम (ऋत) आणि सूर्याच्या प्रवासाशी संबंधित मानले जाते.',
       verse: {
         deva: 'अग्न आ याहि वीतये गृणानो हव्यदातये ।\nनि होता सत्सि बर्हिषि ॥',
         trans: 'agna ā yāhi vītaye gṛṇāno havyadātaye |\nni hotā satsi barhiṣi ||',
         cite: 'SV 1.1.1'
+      }
+    },
+    {
+      name: 'Vāmadevya Sāma',
+      nameDeva: 'वामदेव्य साम',
+      citation: 'SV 1.169',
+      citationDeva: 'सामवेद १.१६९',
+      summary: 'A beautiful melody chanted to invoke absolute harmony, natural growth, and peace, symbolizing the vital breath (Prana) and cosmic integration.',
+      summaryDeva: 'कौठुंबिक आणि सामाजिक ऐक्य व शांती प्रस्थापित करण्यासाठी गायले जाणारे सामवेदाचे अत्यंत लोकप्रिय संगीत, जे प्राण आणि विश्वाचे नाते स्पष्ट करते.',
+      verse: {
+        deva: 'कया नश्चित्र आ भुवदूती सदावृधः सखा ।\nकया शचिष्ठया वृता ॥',
+        trans: 'kayā naścitra ā bhuvadūtī sadāvṛdhaḥ sakhā |\nkayā śaciṣṭhayā vṛtā ||',
+        cite: 'SV 1.169'
+      }
+    },
+    {
+      name: 'Pavamāna Soma Chants',
+      nameDeva: 'पवमान सोम गान',
+      citation: 'SV 2.1.1.1',
+      citationDeva: 'सामवेद २.१.१.१',
+      summary: 'Hymns sung during the pressing and purification of the Soma juice, invoking spiritual ecstasy, inner purification, and light.',
+      summaryDeva: 'सोमररस शुद्ध करताना गायले जाणारे मंत्र, जे मनाची शुद्धी, आध्यात्मिक आनंद आणि अंतःकरणातील प्रकाशाचे आवाहन करतात.',
+      verse: {
+        deva: 'उच्चा ते जातम् अंधसो दिवि सद्भूम्य आ ददे ।\nउग्रं शर्म mahi श्रवः ॥',
+        trans: 'uccā te jātam andhaso divi sadbhūmya ā dade |\nugraṃ śarma mahi śravaḥ ||',
+        cite: 'SV 2.1.1.1'
+      }
+    },
+    {
+      name: 'Jyeṣṭha Sāma',
+      nameDeva: 'ज्येष्ठ साम',
+      citation: 'SV 1.467',
+      citationDeva: 'सामवेद १.४६७',
+      summary: 'The "Elder Chants", highly sacred melodies used during major sacrifices to cleanse sins and align the consciousness with the cosmic head.',
+      summaryDeva: 'ज्येष्ठ साम म्हणजे पापांचे क्षालन करणारे आणि मानवी चेतनेला वैश्विक विराट स्वरूपाशी जोडणारे सामवेदाचे प्रमुख आणि पवित्र मंत्र.',
+      verse: {
+        deva: 'मूर्धानं दिवो अरतिं पृथिव्या वैश्वानरमृत आ जातमग्निम् ।\nकविं सम्राजमतिथिं जनानामासन्ना पात्रं जनयन्त देवाः ॥',
+        trans: 'mūrdhānaṃ divo aratiṃ pṛthivyā vaiśvānarāmṛta ā jātamagnim |\nkaviṃ samrājamatitiṃ janānāmāsannā pātraṃ janayenta devāḥ ||',
+        cite: 'SV 1.467'
       }
     }
   ],
@@ -781,7 +885,7 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       summary: 'A magnificent 63-verse hymn to Mother Earth, celebrated as the world\'s earliest anthem of ecological consciousness and harmony between humans and nature.',
       summaryDeva: 'पृथ्वीमातेची स्तुती करणारे ६३ श्लोकांचे भव्य सूक्त. पर्यावरण चेतना आणि मनुष्य व निसर्ग यांच्यातील संबंध स्पष्ट करणारे जगातील पहिले निसर्गगीत मानले जाते.',
       verse: {
-        deva: 'शिला भूमिरश्मा पांसुः सा भूमिः संधृता मयू ।\nतस्यै हिरण्यवक्षसे पृथिव्या अकरं नमः ॥\nमाता भूमिः पुत्रो अहं पृथिव्याः ॥',
+        deva: 'शिला भूमिरश्मा पांसुः सा भूमिः संधृता मयू ।\nतस्यै  हिरण्यवक्षसे पृथिव्या अकरं नमः ॥\nमाता भूमिः पुत्रो अहं पृथिव्याः ॥',
         trans: 'śilā bhūmi raśmā pāṃsuḥ sā bhūmiḥ saṃdhṛtā mayū |\ntasyai hiraṇyavakṣase pṛthivyā akaraṃ namaḥ ||\nmātā bhūmiḥ putro ahaṃ pṛthivyāḥ ||',
         cite: 'AV 12.1.26 / 12.1.12'
       }
@@ -795,8 +899,60 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       summaryDeva: 'प्राणाला (प्राणवायू/जीवनशक्ती) विश्वाचा अधिपती मानून त्याची स्तुती करणारे सूक्त, जे सजीव सृष्टीला चैतन्य प्रदान करते.',
       verse: {
         deva: 'प्राणाय नमो यस्य सर्वमिदं वशे ।\nयो भूतः सर्वस्येश्वरो यस्मिन् सर्वं प्रतिष्ठितम् ॥',
-        trans: 'prāṇāya namo yasya sarvamida\u0304m\u0304 vaśe |\nyo bhūtaḥ sarvasyeśvaro yasmin sarvaṃ pratiṣṭhitam ||',
+        trans: 'prāṇāya namo yasya sarvamidaṃ vaśe |\nyo bhūtaḥ sarvasyeśvaro yasmin sarvaṃ pratiṣṭhitam ||',
         cite: 'AV 11.4.1'
+      }
+    },
+    {
+      name: 'Kāla Sūkta',
+      nameDeva: 'काल सूक्त',
+      citation: 'AV 19.53-54',
+      citationDeva: 'अथर्ववेद १९.५३-५४',
+      summary: 'A profound philosophical hymn that personifies Time (Kāla) as the primordial horse, the generator of heaven and earth, and the supreme ruler of all.',
+      summaryDeva: 'काळ (वेळ) या वैश्विक तत्त्वाची स्तुती करणारे सूक्त, ज्यामध्ये काळाला सर्व सृष्टीचा निर्माता, नियंत्रक आणि सर्वोच्च सत्ता मानले गेले आहे.',
+      verse: {
+        deva: 'कालो अश्वो वहति सप्तरश्मिः सहस्राक्षो अजरो भूरिरेताः ।\nतमारोहन्ति कवयो विपश्चितस्तस्य चक्रा भुवनानि विश्वा ॥',
+        trans: 'kālo aśvo vahati saptaraśmiḥ sahasrākṣo ajaro bhūriretāḥ |\ntamārohanti kavayo vipaścitastasya cakrā bhuvanāni viśvā ||',
+        cite: 'AV 19.53.1'
+      }
+    },
+    {
+      name: 'Brahma-Cārī Sūkta',
+      nameDeva: 'ब्रह्मचारिसूक्त',
+      citation: 'AV 11.5',
+      citationDeva: 'अथर्ववेद ११.५',
+      summary: 'Glorifies the spiritual student (Brahmachari) who, through self-discipline and austerity (Tapas), becomes a cosmic force that sustains the gods and the universe.',
+      summaryDeva: 'ब्रह्मचाऱ्याचे (विद्यार्थी/साधक) महात्म्य सांगणारे सूक्त. तपश्चर्या आणि संयमाद्वारे साधक स्वतः कसा वैश्विक शक्तीचा भाग बनतो याचे यात सुंदर वर्णन आहे.',
+      verse: {
+        deva: 'ब्रह्मचारीष्णंश्चरति रोदसी उभे तस्मिन्देवाः संमनसो भवन्ति ।\nस दाधार पृथिवीं दिवं च स आचार्यं तपसा पिपर्ति ॥',
+        trans: 'brahmacārīṣṇaṃścarati rodasī ubhe tasmindevāḥ saṃmanaso bhavanti |\nsa dādhāra pṛthivīṃ divaṃ ca sa ācāryaṃ tapasā piparti ||',
+        cite: 'AV 11.5.1'
+      }
+    },
+    {
+      name: 'Bhaiṣajya Sūkta',
+      nameDeva: 'भेषज्य सूक्त',
+      citation: 'AV 1.2',
+      citationDeva: 'अथर्ववेद १.२',
+      summary: 'Healing hymns dedicated to curing physical diseases, utilizing natural elements like water, wind, and herbs, forming the basis of Ayurveda.',
+      summaryDeva: 'शारीरिक व्याधींचे निवारण करण्यासाठी रचलेले रोगनिवारक सूक्त, ज्यामध्ये जल, वायू व औषधी वनस्पतींच्या साह्याने आरोग्य प्राप्तीची प्रार्थना केली आहे.',
+      verse: {
+        deva: 'विद्मा शरस्य पितरं पर्जन्यं भूरिधायसम् ।\nविद्मो ष्वस्य मातरं पृथिवीं भूरिवर्पसम् ॥',
+        trans: 'vidmā śarasya pitaraṃ parjanyaṃ bhūridhāyasam |\nvidmo ṣvasya mātaraṃ pṛthivīṃ bhūrivarpasam ||',
+        cite: 'AV 1.2.1'
+      }
+    },
+    {
+      name: 'Kāmada Sūkta',
+      nameDeva: 'कामद सूक्त',
+      citation: 'AV 19.52',
+      citationDeva: 'अथर्ववेद १९.५२',
+      summary: 'Hymn to Kama (desire), celebrated as the primordial seed of mind and the creative impulse of the cosmos, which precedes all creation.',
+      summaryDeva: 'काम (इच्छा किंवा सृजनशीलता) या शक्तीची स्तुती, जे सृष्टीच्या आरंभी मनाचे पहिले बीज व उत्पत्तीची पहिली प्रेरणा म्हणून अस्तित्वात होते.',
+      verse: {
+        deva: 'कामस्तदग्रे समवर्तत मनसो रेतः प्रथमं यदासीत् ।\nस काम कामेन बृहता सयोनी रायस्पोषं यजमानाय धेहि ॥',
+        trans: 'kāmastadgre samavartata manaso retaḥ prathamaṃ yadāsīt |\nsa kāma kāmena bṛhatā sayonī rāyaspoṣaṃ yajamānāya dhēhi ||',
+        cite: 'AV 19.52.1'
       }
     }
   ]
