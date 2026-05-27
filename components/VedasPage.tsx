@@ -1396,6 +1396,276 @@ const PASSAGES_DATA: Record<string, KeySukta[]> = {
   ]
 };
 
+const ARANYAKAS_DATA: Record<string, Shakha[]> = {
+  rig: [
+    {
+      name: 'Aitareya Āraṇyaka',
+      deva: 'ऐतरेय आरण्यक',
+      category: 'Śākala recension',
+      categoryDeva: 'शाकल शाखा',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '5 āraṇyakas (books), 18 chapters in total',
+      structureDeva: '५ आरण्यके, एकूण १८ अध्याय',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The principal Rigvedic Āraṇyaka. Opens with the inner meaning of the Mahāvrata rite — the great vow that closes the year — and moves through meditations on speech (vāc) and breath (prāṇa). Contains the Aitareya Upaniṣad in its middle books, embedded inside the Āraṇyaka rather than at its end.',
+      descDeva: 'ऋग्वेदाचा मुख्य आरण्यक. महाव्रत विधीच्या अंतःस्थ अर्थाने सुरुवात — वर्षाची सांगता करणारे महान व्रत — आणि वाक् व प्राण यांच्यावरील ध्यानाकडे जातो. ऐतरेय उपनिषद याच्या मधल्या आरण्यकांत आहे; उपनिषद् येथे आरण्यकाच्या मध्यभागी आहे, शेवटी नाही.'
+    },
+    {
+      name: 'Kauṣītaki / Śāṅkhāyana Āraṇyaka',
+      deva: 'कौषीतकि / शाङ्खायन आरण्यक',
+      category: 'Bāṣkala / Śāṅkhāyana recension',
+      categoryDeva: 'बाष्कल / शाङ्खायन शाखा',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '15 adhyāyas (chapters 3–6 form the Kauṣītaki Upaniṣad)',
+      structureDeva: '१५ अध्याय (अध्याय ३–६ मिळून कौषीतकि उपनिषद)',
+      region: 'Surviving in manuscripts and limited recitation',
+      regionDeva: 'हस्तलिखित व मर्यादित पठण परंपरेत',
+      desc: 'Fifteen chapters, of which the third through sixth form the Kauṣītaki Upaniṣad. An early form of the Saṃvarga-vidyā — the doctrine of "the swallower" (vāyu in the cosmos, breath in the body) — appears in its second chapter. One of the densest pieces of pre-Upaniṣadic philosophy in the Veda.',
+      descDeva: 'पंधरा अध्याय, ज्यांपैकी तिसरा ते सहावा अध्याय मिळून प्रसिद्ध कौषीतकि उपनिषद बनतात. दुसऱ्या अध्यायात संवर्ग-विद्येचे आरंभीचे रूप — "गिळणारा" तत्त्व (विश्वात वायु, शरीरात प्राण) — आढळते. वेदातील पूर्व-उपनिषदीय तत्त्वज्ञानाचा अत्यंत घन भाग.'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Bṛhad-āraṇyaka',
+      deva: 'बृहदारण्यक',
+      category: 'Śukla Yajurveda',
+      categoryDeva: 'शुक्ल यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '6 chapters — the final kāṇḍa of the Śatapatha (= Bṛhad-āraṇyaka Upaniṣad)',
+      structureDeva: '६ अध्याय — शतपथाचा शेवटचा कांड (= बृहदारण्यक उपनिषद)',
+      region: 'North & Central India (Mādhyandina), South & East (Kāṇva)',
+      regionDeva: 'उत्तर व मध्य भारत (माध्यन्दिन), दक्षिण व पूर्व (काण्व)',
+      desc: 'In the Śukla Yajurveda the Āraṇyaka and the Upaniṣad are the same text — the last six chapters of the Śatapatha Brāhmaṇa form the Bṛhad-āraṇyaka, which in turn is the Bṛhad-āraṇyaka Upaniṣad. Yājñavalkya in the court of Janaka, the dialogue with Maitreyī, the formula "neti, neti".',
+      descDeva: 'शुक्ल यजुर्वेदात आरण्यक व उपनिषद हे एकच ग्रंथ — शतपथ ब्राह्मणाचे शेवटचे सहा अध्याय मिळून बृहदारण्यक बनतात, जे स्वतःच बृहदारण्यक उपनिषद आहे. जनकाच्या राजसभेत याज्ञवल्क्य, मैत्रेयीशी संवाद, "नेति, नेति" हे सूत्र.'
+    },
+    {
+      name: 'Taittirīya Āraṇyaka',
+      deva: 'तैत्तिरीय आरण्यक',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '10 prapāṭhakas',
+      structureDeva: '१० प्रपाठक',
+      region: 'South India',
+      regionDeva: 'दक्षिण भारत',
+      desc: 'The largest Āraṇyaka of the Kṛṣṇa Yajurveda. Its seventh, eighth and ninth prapāṭhakas are the Taittirīya Upaniṣad; its tenth, the Mahānārāyaṇa Upaniṣad — the source of many of the most-recited Vedic invocations (Tryambaka, Medhā-sūkta, Nārāyaṇa-anuvāka). The first six are still classed Āraṇyaka proper.',
+      descDeva: 'कृष्ण यजुर्वेदाचा सर्वात मोठा आरण्यक. सातवा, आठवा व नववा प्रपाठक मिळून तैत्तिरीय उपनिषद; दहावा म्हणजे महानारायण उपनिषद — त्र्यंबक, मेधासूक्त, नारायण-अनुवाक यांसारख्या प्रसिद्ध वैदिक आवाहनांचा स्रोत. पहिले सहा प्रपाठक आरण्यक स्वरूपातच गणले जातात.'
+    },
+    {
+      name: 'Maitrāyaṇī Āraṇyaka',
+      deva: 'मैत्रायणी आरण्यक',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: 'No separate Āraṇyaka text; Maitrāyaṇī Upaniṣad descends from this lineage',
+      structureDeva: 'स्वतंत्र आरण्यक ग्रंथ नाही; मैत्रायणी उपनिषद याच परंपरेतून',
+      region: 'Western Maharashtra, Gujarat',
+      regionDeva: 'पश्चिम महाराष्ट्र, गुजरात',
+      desc: 'As with its Brāhmaṇa, the Maitrāyaṇī school does not preserve a separate Āraṇyaka text. The Maitrāyaṇī (Maitrī) Upaniṣad — a late Upaniṣad in seven prapāṭhakas, mixing Vedic and proto-classical idioms — descends from this lineage.',
+      descDeva: 'त्याच्या ब्राह्मणाप्रमाणेच मैत्रायणी शाखेत स्वतंत्र आरण्यक ग्रंथ जतन नाही. मैत्रायणी (मैत्री) उपनिषद — सात प्रपाठकांचे एक उत्तरकालीन उपनिषद, ज्यात वैदिक व पूर्व-शास्त्रीय भाषा मिसळलेली आहे — याच परंपरेतून आले आहे.'
+    },
+    {
+      name: 'Kāṭhaka Āraṇyaka',
+      deva: 'काठक आरण्यक',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: 'Fragments only',
+      structureDeva: 'केवळ खंडित भाग',
+      region: 'Historically Kashmir',
+      regionDeva: 'ऐतिहासिकदृष्ट्या काश्मीर',
+      desc: 'A small set of birch-bark fragments from Kashmir, plus citations in mediaeval commentaries, are all that survives. The Kaṭha Upaniṣad — Naciketas and Yama — is the great Upaniṣadic monument of this otherwise depleted Āraṇyaka tradition.',
+      descDeva: 'काश्मीरमधील भूर्जपत्र हस्तलिखितांचे थोडे तुकडे आणि मध्ययुगीन भाष्यांतील अवतरणे — एवढेच शिल्लक. नचिकेत व यम यांचा संवाद असलेले कठ उपनिषद् हाच या अन्यथा क्षीण झालेल्या आरण्यक परंपरेचा महान उपनिषदीय स्तंभ.'
+    }
+  ],
+  sama: [
+    {
+      name: 'Talavakāra Āraṇyaka (Jaiminīya Upaniṣad Brāhmaṇa)',
+      deva: 'तलवकार आरण्यक (जैमिनीय उपनिषद् ब्राह्मण)',
+      category: 'Jaiminīya / Talavakāra',
+      categoryDeva: 'जैमिनीय / तलवकार',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '4 adhyāyas (the fourth is the Kena Upaniṣad)',
+      structureDeva: '४ अध्याय (चौथा अध्याय म्हणजे केन उपनिषद)',
+      region: 'Preserved in Kerala and Tamil Nadu',
+      regionDeva: 'केरळ व तमिळनाडूत जतन',
+      desc: 'The Sāmaveda’s only clearly preserved Āraṇyaka. Its fourth chapter is the Kena Upaniṣad — the short, sharp dialogue on the ground behind the senses. The earlier chapters give Sāmavedic vidyās: the meditation on Aum as Udgītha, the cosmic correspondences of breath and chant, the doctrine of the inner self as the singer.',
+      descDeva: 'सामवेदाचा एकमेव स्पष्टपणे जतन झालेला आरण्यक. त्याचा चौथा अध्याय म्हणजे केन उपनिषद — इंद्रियांच्या मागे असणाऱ्या आधाराविषयीचा लहान पण तीक्ष्ण संवाद. पूर्वीचे अध्याय सामवेदीय विद्या देतात: ओम् व उद्गीथ यांवरील ध्यान, प्राण व साम यांच्या वैश्विक अनुरूपता, अंतःकरणातील आत्मा हाच गायक — हा सिद्धांत.'
+    },
+    {
+      name: 'Chāndogya Āraṇyaka',
+      deva: 'छान्दोग्य आरण्यक',
+      category: 'Kauthuma / Rāṇāyanīya',
+      categoryDeva: 'कौथुम / राणायनीय',
+      status: 'Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: 'Not preserved as a separate text; first chapters of the Chāndogya Brāhmaṇa serve the function',
+      structureDeva: 'स्वतंत्र ग्रंथ म्हणून जतन नाही; छान्दोग्य ब्राह्मणाचे पहिले अध्याय हीच भूमिका निभावतात',
+      region: 'Pan-Sāmavedic (Kauthuma line)',
+      regionDeva: 'सर्व कौथुम सामवेदी परंपरांत',
+      desc: 'In the Kauthuma–Rāṇāyanīya line the Āraṇyaka layer is not preserved as an independent book. Its function is performed partly by the first two prapāṭhakas of the Chāndogya Brāhmaṇa (the Mantra-brāhmaṇa, mainly for domestic rites) and partly by the opening of the Chāndogya Upaniṣad itself — which treats the inner significance of Aum and the udgītha at the very threshold between Āraṇyaka and Upaniṣad.',
+      descDeva: 'कौथुम–राणायनीय परंपरेत आरण्यक स्तर स्वतंत्र ग्रंथ म्हणून जतन झालेला नाही. त्याचे कार्य अंशतः छान्दोग्य ब्राह्मणाचे पहिले दोन प्रपाठक (मंत्र-ब्राह्मण, मुख्यतः गृह्य विधींसाठी) करतात, आणि अंशतः स्वतः छान्दोग्य उपनिषदाची सुरुवात — जी आरण्यक व उपनिषद यांच्या अगदी सीमेवर ओम् व उद्गीथ यांच्या अंतःस्थ अर्थाचे विवेचन करते.'
+    }
+  ],
+  atharva: [
+    {
+      name: 'No surviving Āraṇyaka',
+      deva: 'आरण्यक उपलब्ध नाही',
+      category: 'All Atharvavedic recensions',
+      categoryDeva: 'सर्व अथर्ववेदी शाखा',
+      status: 'Lost',
+      statusDeva: 'लुप्त / अनुपलब्ध',
+      structure: 'No independent Āraṇyaka in any surviving Atharvavedic line',
+      structureDeva: 'कोणत्याही उपलब्ध अथर्ववेदी शाखेत स्वतंत्र आरण्यक नाही',
+      region: '—',
+      regionDeva: '—',
+      desc: 'Uniquely among the four, the Atharvaveda has no surviving independent Āraṇyaka. Its forest-contemplative material is folded back into the Gopatha Brāhmaṇa and forward into the three classical Atharvan Upaniṣads (Muṇḍaka, Māṇḍūkya, Praśna), which take the philosophical burden directly without an intermediate āraṇyaka layer.',
+      descDeva: 'चार वेदांत केवळ अथर्ववेदाला स्वतंत्र आरण्यक नाही. त्याचे वन-चिंतनात्मक साहित्य मागे गोपथ ब्राह्मणात आणि पुढे तीन शास्त्रीय अथर्वनी उपनिषदांत (मुण्डक, माण्डूक्य, प्रश्न) सामावले गेले आहे — मधल्या आरण्यक स्तराशिवाय हेच उपनिषद थेट तत्त्वज्ञानाचा भार उचलतात.'
+    }
+  ]
+};
+
+const ARANYAKA_PASSAGES_DATA: Record<string, KeySukta[]> = {
+  rig: [
+    {
+      name: 'The Mahāvrata in the forest',
+      nameDeva: 'अरण्यातील महाव्रत',
+      citation: 'AĀ 1.1–5',
+      citationDeva: 'ऐतरेय आरण्यक १.१–५',
+      summary: 'The Mahāvrata — the great winter-solstice rite the Brāhmaṇa treats publicly — is here read again, esoterically, for the forest-dweller. Every external act is mapped onto an inner correspondence: the chariot race becomes the race of the breaths, the dance becomes the dance of the senses on their objects. The opening move of the entire Āraṇyaka register.',
+      summaryDeva: 'ब्राह्मणात उघडपणे मांडलेले महाव्रत — हिवाळी संक्रांतीचे प्रसिद्ध विधी — येथे वनवासी साधकासाठी पुन्हा गूढ अर्थाने वाचले आहे. प्रत्येक बाह्य कृतीला अंतःस्थ अनुरूपता दिली आहे: रथशर्यत म्हणजे प्राणांची शर्यत, नृत्य म्हणजे विषयांवरील इंद्रियांचे नृत्य. संपूर्ण आरण्यक धाटणीची सुरुवात.'
+    },
+    {
+      name: 'Vāc — speech as the whole',
+      nameDeva: 'वाक् — वाणी हीच सर्वस्व',
+      citation: 'AĀ 2.4',
+      citationDeva: 'ऐतरेय आरण्यक २.४',
+      summary: 'A long meditation on speech as the carrier of every world. The metres are forms of speech; the gods come into being because they are named; the very fire on the altar is kindled by the recited mantra and not the other way around. A position the Mīmāṃsakas later inherit wholesale.',
+      summaryDeva: 'प्रत्येक लोकाला वाहून नेणारी वाक् — यावर दीर्घ ध्यान. छंद म्हणजे वाणीचे रूप; देव अस्तित्वात येतात कारण त्यांना नावे दिली जातात; वेदीवरील अग्नी सुद्धा पठण केलेल्या मंत्रामुळे प्रज्वलित होतो — उलट क्रमाने नाही. मीमांसक हीच भूमिका पुढे संपूर्णपणे स्वीकारतात.'
+    },
+    {
+      name: 'Prāṇa-vidyā — breath as the supreme',
+      nameDeva: 'प्राण-विद्या',
+      citation: 'AĀ 2.1–3',
+      citationDeva: 'ऐतरेय आरण्यक २.१–३',
+      summary: 'The contest of the breaths: the gods (eye, ear, mind, speech, prāṇa) try to determine which of them is supreme by withdrawing in turn. The body survives without each — until prāṇa attempts to leave, at which point all the others reach for it in panic. The earliest version of an argument the Upaniṣads will repeat for a thousand years.',
+      summaryDeva: 'प्राणांचा वाद: डोळा, कान, मन, वाणी आणि प्राण हे देव एक-एक करून शरीरातून निघून जाण्याचा प्रयत्न करून आपापले श्रेष्ठत्व ठरवायला निघतात. प्रत्येकाशिवाय शरीर चालू राहते — पण प्राण निघू लागताच इतर सर्व त्याला घट्ट धरून ठेवण्यासाठी धावतात. हजार वर्षे उपनिषदे पुनरुच्चारित करतील त्या युक्तिवादाची सर्वात आरंभीची आवृत्ती.'
+    },
+    {
+      name: 'The hidden meaning of the Saṃhitā',
+      nameDeva: 'संहितेचा गुह्यार्थ',
+      citation: 'AĀ 3',
+      citationDeva: 'ऐतरेय आरण्यक ३',
+      summary: 'A short, dense book — almost entirely lost on a first reading — on what the Saṃhitā is "really" doing. Treats the joining of words (saṃ-hitā) as itself a cosmic act: each junction between two words holds the universe together at one point. A piece of pre-classical philosophy of language that pre-dates Pāṇini and Bhartṛhari by centuries.',
+      summaryDeva: 'एक लहान, घन पुस्तक — पहिल्या वाचनात जवळजवळ संपूर्णपणे गूढ — संहिता "खरोखर" काय करते यावर. शब्दांच्या जोडणीला (सम् + हिता) स्वतः एक वैश्विक कृती मानते: दोन शब्दांमधील प्रत्येक संधी म्हणजे विश्वाला एका बिंदूत बांधून ठेवणारी गाठ. पाणिनि व भर्तृहरि यांच्या शतकानुशतके आधीचे पूर्व-शास्त्रीय भाषाशास्त्र.'
+    },
+    {
+      name: 'The Saṃvarga-vidyā',
+      nameDeva: 'संवर्ग-विद्या',
+      citation: 'Kauṣ. Ā 2',
+      citationDeva: 'कौषीतकि आरण्यक २',
+      summary: 'The doctrine of "the swallower". In the cosmos it is Vāyu, the wind — into which fire, sun and moon all set when they go out. In the body it is Prāṇa, the breath — into which speech, sight, hearing all set when they sleep. One macrocosmic-microcosmic pairing, two names for the same principle. The earliest extended statement of an idea the Chāndogya later expands.',
+      summaryDeva: '"गिळणारा" तत्त्वाचा सिद्धांत. विश्वात तो वायु — ज्यात अग्नी, सूर्य व चंद्र अस्त होताना सामावतात. शरीरात तो प्राण — ज्यात वाणी, दृष्टी, श्रवण सर्व झोपताना सामावतात. एक स्थूल-सूक्ष्म जोडी, एकाच तत्त्वाची दोन नावे. नंतर छान्दोग्य उपनिषदात विस्तारित होणाऱ्या या विचाराचे सर्वात आरंभीचे विस्तृत प्रतिपादन.'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Mahānārāyaṇa — the long invocation',
+      nameDeva: 'महानारायण — दीर्घ आवाहन',
+      citation: 'TĀ 10',
+      citationDeva: 'तैत्तिरीय आरण्यक १०',
+      summary: 'The tenth and final prapāṭhaka of the Taittirīya Āraṇyaka is itself the Mahānārāyaṇa Upaniṣad. Reads as a long, beautiful liturgical anthology — the Nārāyaṇa-anuvāka, the Medhā-sūkta (prayer for memory), the Tryambaka and the Mṛtyuñjaya — most of the invocations heard at any south-Indian temple’s daily worship come from this single chapter.',
+      summaryDeva: 'तैत्तिरीय आरण्यकाचा दहावा व अखेरचा प्रपाठक म्हणजेच महानारायण उपनिषद. एक दीर्घ, सुंदर पठण-संग्रह — नारायण-अनुवाक, मेधा-सूक्त (बुद्धीसाठी प्रार्थना), त्र्यंबक, मृत्युंजय — दक्षिण भारतीय कोणत्याही मंदिरात दैनिक उपासनेत म्हटली जाणारी बहुतेक आवाहने याच एका अध्यायातून येतात.',
+      verse: {
+        deva: 'अम्भस्यपारे भुवनस्य मध्ये नाकस्य पृष्ठे महतो महीयान् ।\nशुक्रेण ज्योतीꣳषि समनुप्रविष्टः प्रजापतिश्चरति गर्भे अन्तः ॥',
+        trans: 'ambhasy apāre bhuvanasya madhye nākasya pṛṣṭhe mahato mahīyān |\nśukreṇa jyotīṃṣi samanupraviṣṭaḥ prajāpatiś carati garbhe antaḥ ||',
+        cite: 'TĀ 10.1.1'
+      }
+    },
+    {
+      name: 'The Aruṇa-ketuka altar',
+      nameDeva: 'अरुणकेतुक विधी',
+      citation: 'TĀ 1',
+      citationDeva: 'तैत्तिरीय आरण्यक १',
+      summary: 'A long, technical first chapter on the Aruṇa-ketuka — the dawn-red fire-altar that the kṛṣṇa-yajurvedin builds at the start of any extended sattra. Treats every brick, every measurement, every accompanying mantra; in the older south Indian tradition still recited (though no longer constructed).',
+      summaryDeva: 'अरुणकेतुक यावरील दीर्घ, तांत्रिक पहिला अध्याय — कोणत्याही दीर्घ सत्राच्या आरंभी कृष्ण यजुर्वेदी जो उषःकालीन ताम्र-रक्त अग्निवेदी रचतो तो. प्रत्येक वीट, प्रत्येक माप, प्रत्येक सोबतचा मंत्र यांचे विवरण; जुन्या दक्षिण भारतीय परंपरेत आजही पठण होते (जरी बांधणी आता होत नाही).'
+    },
+    {
+      name: 'The Cāturhotra — the four-priest contemplation',
+      nameDeva: 'चातुर्होत्र',
+      citation: 'TĀ 3',
+      citationDeva: 'तैत्तिरीय आरण्यक ३',
+      summary: 'The four hotṛ priests of the great sacrifice are read not as four men but as four cosmic functions — the inward, the outward, the digestive, and the connective. The Vedic ritual scaled down into a meditation any householder can perform without lighting a single fire. A direct ancestor of the antaryāga (inner ritual) literature.',
+      summaryDeva: 'महायज्ञातील चार होता म्हणजे चार पुरुष नव्हे, तर चार वैश्विक कार्ये — अंतर्मुख, बहिर्मुख, पाचक आणि संयोजक. वैदिक विधी अशा प्रमाणावर लघु केला आहे की कोणताही गृहस्थ एकही अग्नी न पेटवता हा विधी ध्यानरूपात करू शकतो. अंतर्याग साहित्याचा थेट पूर्वज.'
+    },
+    {
+      name: 'Pravargya — the inner exposition',
+      nameDeva: 'प्रवर्ग्य — आंतरिक विवरण',
+      citation: 'TĀ 4–5',
+      citationDeva: 'तैत्तिरीय आरण्यक ४–५',
+      summary: 'Where the Śatapatha treats the Pravargya rite externally — the hot milk in the red-hot pot, the priest who looks into it — the Taittirīya Āraṇyaka treats it internally. The pot is the head; the milk is the mind’s light; the priest looking in is the self looking at itself. The Vedic ritual at the threshold of becoming yoga.',
+      summaryDeva: 'शतपथ प्रवर्ग्य विधी बाह्यपणे मांडतो — तापलेल्या पात्रात गरम दूध, पात्रात पाहणारा पुरोहित — तर तैत्तिरीय आरण्यक तोच विधी अंतर्मुख करून मांडतो. पात्र म्हणजे शिर; दूध म्हणजे मनाचा प्रकाश; पात्रात पाहणारा पुरोहित म्हणजे स्वतःकडे पाहणारा आत्मा. योग होण्याच्या उंबरठ्यावर असलेला वैदिक विधी.'
+    },
+    {
+      name: 'The cosmic horse',
+      nameDeva: 'वैश्विक अश्व',
+      citation: 'Bṛh. Ā 1.1 (= ŚB 14.1)',
+      citationDeva: 'बृहदारण्यक १.१ (= शतपथ १४.१)',
+      summary: 'The opening of the Bṛhad-āraṇyaka. The horse of the Aśvamedha is read as the universe itself: its head the dawn, its eye the sun, its breath the wind, its back the heavens, its belly the air, its hooves the earth. The largest ritual the Brāhmaṇa describes is here rewritten as a single cosmic body — and from that move, the Upaniṣadic register takes over.',
+      summaryDeva: 'बृहदारण्यकाची सुरुवात. अश्वमेधाचा अश्व म्हणजे स्वतः विश्व: त्याचे शिर म्हणजे उषा, डोळा सूर्य, श्वास वारा, पाठ स्वर्ग, पोट अंतरिक्ष, खूर पृथ्वी. ब्राह्मणाने वर्णन केलेला सर्वात मोठा विधी येथे एका वैश्विक शरीरात पुनर्लेखन केला आहे — आणि त्या एका हालचालीतून उपनिषदीय धाटणी सुरू होते.',
+      verse: {
+        deva: 'ॐ उषा वा अश्वस्य मेध्यस्य शिरः । सूर्यश्चक्षुर्वातः प्राणो व्यात्तमग्निर्वैश्वानरः ॥',
+        trans: 'oṃ uṣā vā aśvasya medhyasya śiraḥ | sūryaś cakṣur vātaḥ prāṇo vyāttam agnir vaiśvānaraḥ ||',
+        cite: 'Bṛh. Ā 1.1.1'
+      }
+    }
+  ],
+  sama: [
+    {
+      name: 'Aum as Udgītha',
+      nameDeva: 'उद्गीथरूप ओम्',
+      citation: 'JUB 1.1',
+      citationDeva: 'जैमिनीय उपनिषद् ब्राह्मण १.१',
+      summary: 'The Talavakāra opens with a long meditation on the syllable Aum understood not as a sound but as the Udgītha — the "loud chant" that holds every chant together. Every cosmic doublet (sun and moon, breath and speech, day and night) is read as Aum’s two sides; every singer is read as Aum singing itself. The Chāndogya later picks up exactly here.',
+      summaryDeva: 'तलवकार आरण्यकाची सुरुवात ओम् या अक्षराच्या दीर्घ ध्यानाने होते — ध्वनी म्हणून नव्हे तर उद्गीथ म्हणून, अर्थात "उच्चस्वर गायन" जे प्रत्येक गायनाला एकत्र बांधते. प्रत्येक वैश्विक जोडी (सूर्य व चंद्र, श्वास व वाणी, दिवस व रात्र) ओम्-च्या दोन बाजू म्हणून वाचली जाते; प्रत्येक गायक स्वतः ओम् गाणाराच आहे. छान्दोग्य उपनिषद नेमके येथूनच पुढे जाते.'
+    },
+    {
+      name: 'The inner singer',
+      nameDeva: 'अंतःकरणातील गायक',
+      citation: 'JUB 1.45–60',
+      citationDeva: 'जैमिनीय उपनिषद् ब्राह्मण १.४५–६०',
+      summary: 'A sequence of meditations identifying the self with the singer of the Sāmaveda. The outer udgātṛ — the priest who chants at the rite — is read as the visible form of an inner udgātṛ that sings, soundlessly, inside every breathing being. To know the inner singer is to know that the chant has never required a voice.',
+      summaryDeva: 'सामवेदाच्या गायकाशी आत्म्याचे तादात्म्य सांगणारी ध्यानांची मालिका. बाह्य उद्गाता — विधीच्या वेळी गायन करणारा पुरोहित — हा प्रत्येक श्वासयुक्त प्राण्याच्या आत निःशब्दपणे गाणाऱ्या एका अंतर्गत उद्गात्याचे दृश्य रूप आहे. अंतर्गत गायकाला ओळखणे म्हणजे साम-गायनाला आवाजाची मुळातच गरज नव्हती हे ओळखणे.'
+    },
+    {
+      name: 'Kena — "by whom is the mind sent?"',
+      nameDeva: 'केन — "कोणाच्या प्रेरणेने?"',
+      citation: 'JUB 4 (= Kena Upaniṣad)',
+      citationDeva: 'जैमिनीय उपनिषद् ब्राह्मण ४ (= केन उपनिषद)',
+      summary: 'The fourth and final chapter of the Talavakāra Āraṇyaka is the Kena Upaniṣad — opening with the unanswerable question "by whom is the mind sent forth on its way?" and answering not with a thing but with the impossibility of grasping the answerer. The Sāmaveda’s contribution to the canon of philosophical Upaniṣads.',
+      summaryDeva: 'तलवकार आरण्यकाचा चौथा व अखेरचा अध्याय म्हणजे केन उपनिषद — "मन कोणाच्या प्रेरणेने प्रवृत्त होते?" या उत्तरहीन प्रश्नाने सुरू होणारे, आणि उत्तर देणाऱ्याला पकडता न येण्याच्या अशक्यतेने त्याचे उत्तर देणारे. तत्त्वज्ञ-उपनिषदांच्या परंपरेला सामवेदाचे योगदान.'
+    }
+  ],
+  atharva: [
+    {
+      name: 'A canon without an Āraṇyaka',
+      nameDeva: 'आरण्यकाशिवायचा कोश',
+      citation: '—',
+      citationDeva: '—',
+      summary: 'The Atharvaveda is the only one of the four for which no Āraṇyaka has come down to us. The transition from Brāhmaṇa to Upaniṣad happens directly: the Gopatha Brāhmaṇa on one side, the three classical Atharvan Upaniṣads — Muṇḍaka, Māṇḍūkya, Praśna — on the other, with no intermediate forest-layer in between. Most scholars treat this as an original feature of the school rather than evidence of loss.',
+      summaryDeva: 'चार वेदांपैकी अथर्ववेद हाच एकमेव वेद आहे ज्याचा आरण्यक आपल्यापर्यंत पोहोचलेला नाही. ब्राह्मणाकडून उपनिषदाकडे संक्रमण थेट होते: एका बाजूला गोपथ ब्राह्मण, दुसऱ्या बाजूला तीन शास्त्रीय अथर्वनी उपनिषदे — मुण्डक, माण्डूक्य, प्रश्न — आणि मध्ये कोणताही वन-स्तर नाही. बहुतेक अभ्यासक हे शाखेचे मूळ वैशिष्ट्य मानतात, लुप्त झाल्याचा पुरावा नाही.'
+    }
+  ]
+};
+
 function ShakhaCard({ shakha, lang }: { shakha: Shakha; lang: string }) {
   const [expanded, setExpanded] = useState(false);
   const statusLabel = lang === 'mr' ? 'स्थिती' : 'Status';
@@ -1646,6 +1916,75 @@ function BrahmanaSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
   );
 }
 
+function AranyakaSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
+  const [subTab, setSubTab] = useState<'aranyakas' | 'passages'>('aranyakas');
+
+  const aranyakas = ARANYAKAS_DATA[vedaId] || [];
+  const passages = ARANYAKA_PASSAGES_DATA[vedaId] || [];
+
+  const intros: Record<string, { en: string; mr: string }> = {
+    rig: {
+      en: 'The Rigveda preserves two Āraṇyakas in full: the Aitareya, in five books — the third and fourth of which contain the Aitareya Upaniṣad — and the Kauṣītaki, in fifteen chapters with the Kauṣītaki Upaniṣad embedded inside. The boundary between Āraṇyaka and Upaniṣad is, here, a matter of where one stops reading.',
+      mr: 'ऋग्वेदाचे दोन आरण्यक पूर्णपणे टिकले आहेत: पाच आरण्यकांचे ऐतरेय — ज्याच्या तिसऱ्या व चौथ्या आरण्यकांत ऐतरेय उपनिषद आहे — आणि पंधरा अध्यायांचे कौषीतकि, ज्याच्या आत कौषीतकि उपनिषद आहे. आरण्यक व उपनिषद यांच्यातील सीमा येथे फक्त "कुठे वाचणे थांबवायचे" इतकीच आहे.'
+    },
+    yajur: {
+      en: 'In the Yajurveda the Āraṇyaka layer is most fully developed. The Śukla line has the Bṛhad-āraṇyaka — which is at once the closing book of the Śatapatha Brāhmaṇa and the Bṛhad-āraṇyaka Upaniṣad. The Kṛṣṇa line has the great Taittirīya Āraṇyaka in ten prapāṭhakas (containing both the Taittirīya and the Mahānārāyaṇa Upaniṣads), alongside the partly-preserved Maitrāyaṇī and the fragmentary Kāṭhaka.',
+      mr: 'यजुर्वेदात आरण्यक स्तर सर्वाधिक विकसित आहे. शुक्ल परंपरेत बृहदारण्यक — जो एकाच वेळी शतपथ ब्राह्मणाचा शेवटचा कांड व बृहदारण्यक उपनिषद आहे. कृष्ण परंपरेत दहा प्रपाठकांचे महान तैत्तिरीय आरण्यक (ज्यात तैत्तिरीय व महानारायण ही दोन्ही उपनिषदे आहेत), त्यासोबत अंशतः जतन झालेले मैत्रायणी व खंडित काठक.'
+    },
+    sama: {
+      en: 'The Sāmaveda has only one clearly preserved Āraṇyaka — the Talavakāra (the Jaiminīya Upaniṣad Brāhmaṇa), whose fourth chapter is the Kena Upaniṣad. In the much larger Kauthuma–Rāṇāyanīya line the Āraṇyaka layer is not preserved as a separate book; its function is taken up by the early chapters of the Chāndogya Brāhmaṇa and the opening of the Chāndogya Upaniṣad itself.',
+      mr: 'सामवेदाचा एकमेव स्पष्टपणे जतन झालेला आरण्यक म्हणजे तलवकार (जैमिनीय उपनिषद् ब्राह्मण), ज्याचा चौथा अध्याय केन उपनिषद आहे. खूप मोठ्या कौथुम–राणायनीय परंपरेत आरण्यक स्तर स्वतंत्र ग्रंथ म्हणून जतन झालेला नाही; त्याचे कार्य छान्दोग्य ब्राह्मणाच्या प्रारंभिक अध्यायांनी व स्वतः छान्दोग्य उपनिषदाच्या सुरुवातीनेच पार पाडले आहे.'
+    },
+    atharva: {
+      en: 'Alone among the four, the Atharvaveda has no surviving Āraṇyaka layer. Its line goes directly from the Gopatha Brāhmaṇa to the three classical Atharvan Upaniṣads — Muṇḍaka, Māṇḍūkya, Praśna — without an intervening forest-book. Whether this is an original feature of the school or evidence of loss is the longest-running open question in Atharvavedic scholarship.',
+      mr: 'चार वेदांत केवळ अथर्ववेदाला उपलब्ध आरण्यक स्तर नाही. त्याची परंपरा थेट गोपथ ब्राह्मणाकडून तीन शास्त्रीय अथर्वनी उपनिषदांकडे — मुण्डक, माण्डूक्य, प्रश्न — कोणत्याही मधल्या वन-ग्रंथाशिवाय जाते. हे शाखेचे मूळ वैशिष्ट्य आहे की लुप्ततेचा पुरावा, हा अथर्ववेदी अभ्यासातील सर्वात दीर्घकाळ टिकलेला खुला प्रश्न आहे.'
+    }
+  };
+
+  const intro = intros[vedaId]?.[lang as 'en' | 'mr'] || '';
+
+  return (
+    <div className="samhita-sub-panel">
+      <p className="samhita-intro">{intro}</p>
+
+      <nav className="samhita-tabs-nav" role="tablist">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'aranyakas'}
+          className={`samhita-tab-btn ${subTab === 'aranyakas' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('aranyakas')}
+        >
+          {lang === 'mr' ? 'आरण्यक ग्रंथ' : 'Āraṇyaka texts'}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'passages'}
+          className={`samhita-tab-btn ${subTab === 'passages' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('passages')}
+        >
+          {lang === 'mr' ? 'महत्त्वाची विद्या व आख्याने' : 'Key Vidyās & Passages'}
+        </button>
+      </nav>
+
+      {subTab === 'aranyakas' ? (
+        <div className="shakha-grid">
+          {aranyakas.map((a, i) => (
+            <ShakhaCard key={i} shakha={a} lang={lang} />
+          ))}
+        </div>
+      ) : (
+        <div className="sukta-list">
+          {passages.map((p, i) => (
+            <KeySuktaCard key={i} sukta={p} lang={lang} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 const STRATA_EN = [
   { id: 'samhita', name: 'Saṃhitā', deva: 'संहिता', gloss: 'The mantra-collection itself. Hymns, formulae, chants — the body of the text as the priest performs it.' },
   { id: 'brahmana', name: 'Brāhmaṇa', deva: 'ब्राह्मण', gloss: 'Prose treatises that gloss the rite — its meaning, the legend behind each act, the cosmic correspondence each gesture intends.' },
@@ -1781,6 +2120,8 @@ function VedaTabs() {
             <SamhitaSubPanel vedaId={active} lang={lang} />
           ) : activeStratum === 'brahmana' ? (
             <BrahmanaSubPanel vedaId={active} lang={lang} />
+          ) : activeStratum === 'aranyaka' ? (
+            <AranyakaSubPanel vedaId={active} lang={lang} />
           ) : (
             <ul className="details-list">
               {veda.strataDetails[activeStratum].details.map((detail, idx) => (
