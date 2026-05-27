@@ -30,12 +30,12 @@ const VEDAS_EN: Veda[] = [
     priests: 'Hotṛ (the recitant)',
     strataDetails: {
       samhita: {
-        title: 'Ṛgveda Saṃhitā',
-        deva: 'ऋग्वेद संहिता',
+        title: 'Ṛgveda Saṃhitā Recensions (Shakhas)',
+        deva: 'ऋग्वेद संहिता - शाखाः',
         details: [
-          'Structure — Organized into 10 Maṇḍalas (books), containing 1,028 Sūktas (hymns) and 10,552 ṛcas (verses).',
-          'Aura & Language — Written in archaic Vedic Sanskrit, representing the oldest surviving layer of Indo-European literature.',
-          'Themes — Metrical hymns addressed to cosmic powers (devas) such as Agni (fire), Indra (strength), Soma (essence), and Uṣas (dawn).'
+          'Śākala Saṃhitā — The only fully surviving recension of the Ṛgveda, containing 1,028 hymns organized into 10 Maṇḍalas. It is the global standard for Vedic study.',
+          'Bāṣkala Saṃhitā — A partially surviving recension. It includes additional hymns known as the Valakhilya and Khilani (supplementary scriptures).',
+          'Other Historical Shakhas — Historically, branches like Āśvalāyana, Śāṅkhāyana, and Māṇḍukāyana existed. Their independent Saṃhitās are lost, but their auxiliary ritual texts survive.'
         ]
       },
       brahmana: {
@@ -75,11 +75,15 @@ const VEDAS_EN: Veda[] = [
     priests: 'Adhvaryu (the officiant)',
     strataDetails: {
       samhita: {
-        title: 'Yajurveda Saṃhitās',
-        deva: 'यजुर्वेद संहिताः',
+        title: 'Yajurveda Saṃhitā Recensions (Shakhas)',
+        deva: 'यजुर्वेद संहिता - शाखाः',
         details: [
-          'White (Śukla) — Vājasaneyi Saṃhitā (Mādhyandina & Kāṇva recensions), containing pure liturgical mantras.',
-          'Black (Kṛṣṇa) — Taittirīya Saṃhitā, where the sacrificial mantras are directly interleaved with prose commentary.'
+          'Vājasaneyi Mādhyandina Saṃhitā (Śukla) — The most popular recension of White Yajurveda in Northern and Central India, consisting of 40 chapters (Adhyayas) of clean ritual mantras.',
+          'Vājasaneyi Kāṇva Saṃhitā (Śukla) — Widely practiced in Southern India, featuring minor textual variations and order changes compared to the Madhyandina recension.',
+          'Taittirīya Saṃhitā (Kṛṣṇa) — The most prominent recension of Black Yajurveda, widely chanted in South India. It contains both the sacrificial mantras and the prose ritual instructions interleaved together.',
+          'Maitrāyaṇī Saṃhitā (Kṛṣṇa) — Consists of 4 books, preserved primarily in parts of Gujarat and Maharashtra.',
+          'Kāṭhaka / Kaṭha Saṃhitā (Kṛṣṇa) — Originally from Kashmir, containing detailed sacrificial prose and verse.',
+          'Kapiṣṭhala-Kaṭha Saṃhitā (Kṛṣṇa) — A rare and fragmented recension closely related to the Katha branch.'
         ]
       },
       brahmana: {
@@ -121,11 +125,12 @@ const VEDAS_EN: Veda[] = [
     priests: 'Udgātṛ (the chanter)',
     strataDetails: {
       samhita: {
-        title: 'Sāmaveda Saṃhitā',
-        deva: 'सामवेद संहिता',
+        title: 'Sāmaveda Saṃhitā Recensions (Shakhas)',
+        deva: 'सामवेद संहिता - शाखाः',
         details: [
-          'Musical Form — Consists of verses primarily taken from the Ṛgveda, rearranged and set to musical scales (Gānas).',
-          'Chant Tradition — Sung by Udgātṛ priests using seven musical notes, forming the basis of Indian classical music.'
+          'Kauthuma Saṃhitā — The most popular and widely studied recension of the Sāmaveda, prevalent in Gujarat, Maharashtra, and parts of Southern India. It divides chants into Purvarcika and Uttararcika.',
+          'Rāṇāyanīya Saṃhitā — Prevalent in Karnataka, Maharashtra, and Odisha. It is textually very close to the Kauthuma branch but differs slightly in chanting style and pronunciation.',
+          'Jaiminīya / Talavakāra Saṃhitā — An ancient and highly distinct recension, preserved primarily in Kerala and Tamil Nadu. Its musical notation and chanting system are older and differ significantly from the Kauthuma branch.'
         ]
       },
       brahmana: {
@@ -166,11 +171,11 @@ const VEDAS_EN: Veda[] = [
     priests: 'Brahman (the overseer)',
     strataDetails: {
       samhita: {
-        title: 'Atharvaveda Saṃhitā',
-        deva: 'अथर्ववेद संहिता',
+        title: 'Atharvaveda Saṃhitā Recensions (Shakhas)',
+        deva: 'अथर्ववेद संहिता - शाखाः',
         details: [
-          'Recensions — Preserved in the Śaunakīya and Paippalāda branches, containing 20 books (kāṇḍas) of domestic and apotropaic verses.',
-          'Nature — Focuses on healing charms, protection spells, herbs, and prayers for daily life, forming the ancestor of Ayurvedic sciences.'
+          'Śaunakīya Saṃhitā — The standard, most popular, and fully preserved recension of the Atharvaveda, comprising 20 books (kāṇḍas) containing 730 hymns.',
+          'Paippalāda Saṃhitā — An older recension containing different arrangements and additional hymns. It was rediscovered in Kashmir and is actively preserved in Odisha.'
         ]
       },
       brahmana: {
@@ -212,12 +217,12 @@ const VEDAS_MR: Veda[] = [
     priests: 'होता (मंत्र पठण करणारा)',
     strataDetails: {
       samhita: {
-        title: 'ऋग्वेद संहिता',
-        deva: 'ऋग्वेद संहिता',
+        title: 'ऋग्वेद संहिता - शाखा (recensions)',
+        deva: 'ऋग्वेद संहिता - शाखाः',
         details: [
-          'रचना — १० मंडळे, १,०२८ सूक्ते आणि १०,५५२ ऋचा (मंत्र) यांनी बनलेला छंदोबद्ध संग्रह.',
-          'भाषा आणि स्वरूप — अतिप्राचीन वैदिक संस्कृत भाषेत रचलेला, जो मानवी इतिहासातील सर्वात जुना मौखिक ग्रंथ मानला जातो.',
-          'विषय — अग्नी, इंद्र, सोम, उषा इत्यादी वैश्विक शक्तींच्या (देवतांच्या) स्तुतीपर मंत्र.'
+          'शाकल संहिता — ऋग्वेदाची एकमेव पूर्णपणे उपलब्ध असलेली शाखा. यात १० मंडळांमध्ये १,०२८ सूक्ते आहेत. हा वेदांच्या अभ्यासाचा मुख्य वैश्विक स्रोत आहे.',
+          'बाष्कल संहिता — अंशतः उपलब्ध असलेली शाखा. यात मुख्य संहितेव्यतिरिक्त \'खिलानि\' (पूरक सूक्ते) नावाचे अतिरिक्त मंत्र समाविष्ट आहेत.',
+          'इतर ऐतिहासिक शाखा — पूर्वी आश्वलायन, शाङ्खायन, आणि माण्डूकायन या शाखा अस्तित्वात होत्या. सध्या त्यांच्या संहितेचे मूळ स्वरूप उपलब्ध नाही, परंतु पूरक विधी ग्रंथ शिल्लक आहेत.'
         ]
       },
       brahmana: {
@@ -257,11 +262,15 @@ const VEDAS_MR: Veda[] = [
     priests: 'अध्वर्यू (विधी करणारा पुरोहित)',
     strataDetails: {
       samhita: {
-        title: 'यजुर्वेद संहिता',
-        deva: 'यजुर्वेद संहिताः',
+        title: 'यजुर्वेद संहिता - शाखा (recensions)',
+        deva: 'यजुर्वेद संहिता - शाखाः',
         details: [
-          'शुक्ल यजुर्वेद — वाजसनेयी संहिता (माध्यन्दिन आणि काण्व शाखा), ज्यात केवळ शुद्ध मंत्र समाविष्ट आहेत.',
-          'कृष्ण यजुर्वेद — तैत्तिरीय संहिता, ज्यात मंत्र आणि विधींच्या अंमलबजावणीचे गद्य भाष्य एकत्र दिले आहे.'
+          'वाजसनेयी माध्यन्दिन संहिता (शुक्ल) — उत्तर आणि मध्य भारतात सर्वाधिक प्रचलित असलेली शुक्ल यजुर्वेदाची शाखा, ज्यामध्ये ४० अध्याय आहेत.',
+          'वाजसनेयी काण्व संहिता (शुक्ल) — प्रामुख्याने दक्षिण भारतात (कर्नाटक, तमिळनाडू, आंध्र) गायली जाणारी शाखा.',
+          'तैत्तिरीय संहिता (कृष्ण) — कृष्ण यजुर्वेदाची सर्वात मोठी आणि लोकप्रिय शाखा, जी दक्षिण भारतात मोठ्या प्रमाणावर अभ्यासली जाते. यात मंत्र आणि गद्य विधी एकत्र आहेत.',
+          'मैत्रायणी संहिता (कृष्ण) — ४ प्रमुख भागांमध्ये विभागलेली, प्रामुख्याने गुजरात आणि महाराष्ट्रातील काही भागात जतन केलेली शाखा.',
+          'काठक / कठ संहिता (कृष्ण) — काश्मीरमध्ये उगम पावलेली, यज्ञ विधी आणि मंत्रांची वैशिष्ट्यपूर्ण मांडणी असणारी शाखा.',
+          'कपिष्ठल-कठ संहिता (कृष्ण) — अत्यंत दुर्मिळ आणि केवळ काही खंडांमध्ये उपलब्ध असलेली कृष्ण यजुर्वेदाची शाखा.'
         ]
       },
       brahmana: {
@@ -284,7 +293,7 @@ const VEDAS_MR: Veda[] = [
         title: 'यजुर्वेदातील उपनिषदे',
         deva: 'यजुर्वेद उपनिषदः',
         details: [
-          'बृहदारण्यक उपनिषद् — उपनिषदांमधील सर्वात मोठे उपनिषद, ज्यात याज्ञवल्क्य ऋषींचे महान तत्त्वज्ञान संवाद आहेत.',
+          'बृहदारण्यक उपनिषद् — उपनिषदांमधील सर्वात मोठे उपनिषद, यात याज्ञवल्क्य ऋषींचे महान तत्त्वज्ञान संवाद आहेत.',
           'ईश उपनिषद् — थेट यजुर्वेद संहितेचा शेवटचा (४० वा) अध्याय; निष्काम कर्म आणि आत्मज्ञानाचा मेळ.',
           'तैत्तिरीय उपनिषद् — मानवी शरीराचे ५ स्तर (पंचकोष सिद्धांत) आणि दीक्षान्त उपदेश.',
           'कठ उपनिषद् — नचिकेत आणि यमराज यांच्यातील प्रसिद्ध संवाद, ज्यामध्ये मृत्यूचे रहस्य उलगडले आहे.'
@@ -303,11 +312,12 @@ const VEDAS_MR: Veda[] = [
     priests: 'उद्गाता (गायन करणारा पुरोहित)',
     strataDetails: {
       samhita: {
-        title: 'सामवेद संहिता',
-        deva: 'सामवेद संहिता',
+        title: 'सामवेद संहिता - शाखा (recensions)',
+        deva: 'सामवेद संहिता - शाखाः',
         details: [
-          'स्वरूप — मुख्यतः ऋग्वेदातील मंत्रांची गायनासाठी केलेली पुनर्रचना आणि स्वरचिन्हे (गायन ग्रंथ).',
-          'गायन पद्धत — उद्गाता पुरोहितांद्वारे सात स्वरांच्या आधारे म्हटले जाणारे मंत्र, जे भारतीय अभिजात संगीताचा पाया आहेत.'
+          'कौथुम संहिता — सामवेदाची सर्वाधिक प्रचलित शाखा, जी गुजरात, महाराष्ट्र आणि दक्षिण भारतात गायली जाते. यात पूर्वार्चिक आणि उत्तरार्चिक अशी दोन मुख्य विभाजने आहेत.',
+          'राणायनीय संहिता — कर्नाटक, महाराष्ट्र आणि ओडिशामध्ये आढळणारी शाखा. ही कौथुम शाखेशी मिळतीजुळती आहे, परंतु गायन पद्धतीत आणि स्वरांच्या उच्चारात किंचित फरक आहे.',
+          'जैमिनीय / तलवकार संहिता — सामवेदाची अत्यंत प्राचीन आणि वैशिष्ट्यपूर्ण शाखा, जी प्रामुख्याने वनांमध्ये आणि ऋषींच्या पारंपरिक आश्रमांमध्ये संगीत स्वरांच्या आधारे केरळ व तमिळनाडूत जतन केली गेली आहे.'
         ]
       },
       brahmana: {
@@ -331,7 +341,7 @@ const VEDAS_MR: Veda[] = [
         title: 'सामवेदातील उपनिषदे',
         deva: 'सामवेद उपनिषदः',
         details: [
-          'छान्दोग्य उपनिषद् — सर्वात प्राचीन उपनिषदांपैकी एक, ज्यात "तत्त्वमसि" (ते तूच आहेस) या महावाक्याचा उगम आहे.',
+          'छान्दोग्य उपनिषद् — सर्वात प्राचीन उपनिषदांपैकी एक, यात "तत्त्वमसि" (ते तूच आहेस) या महावाक्याचा उगम आहे.',
           'केनोपनिषद् — बुद्धी आणि इंद्रियांच्या मागे असणाऱ्या सुप्त दिव्य शक्तीचा शोध.'
         ]
       }
@@ -348,11 +358,11 @@ const VEDAS_MR: Veda[] = [
     priests: 'ब्रह्मा (यज्ञाचा मुख्य रक्षक)',
     strataDetails: {
       samhita: {
-        title: 'अथर्ववेद संहिता',
-        deva: 'अथर्ववेद संहिता',
+        title: 'अथर्ववेद संहिता - शाखा (recensions)',
+        deva: 'अथर्ववेद संहिता - शाखाः',
         details: [
-          'शाखा आणि स्वरूप — शौनकीय आणि पैप्पलाद शाखा. यात गृहस्थ धर्म, औषधोपचार आणि संरक्षणाचे २० विभाग (कांडे) आहेत.',
-          'महत्त्व — यात औषधी वनस्पती आणि रोगांचे निवारण करणारे मंत्र आहेत, जे आयुर्वेदाचे मूळ मानले जातात.'
+          'शौनकीय संहिता — अथर्ववेदाची मानक आणि सर्वाधिक लोकप्रिय शाखा. यामध्ये २० कांडे आणि ७३० सूक्ते असून ती संपूर्ण भारतात अभ्यासली जाते.',
+          'पैप्पलाद संहिता — शौनकीय शाखेपेक्षा अधिक प्राचीन मानली जाणारी शाखा. हिचा शोध काश्मीरमध्ये लागला आणि सध्या ओडिशामधील काही वेदपाठशाळांमध्ये ती जतन केली गेली आहे.'
         ]
       },
       brahmana: {
@@ -366,7 +376,7 @@ const VEDAS_MR: Veda[] = [
         title: 'अथर्ववेदातील आरण्यक ग्रंथ',
         deva: 'अथर्ववेद आरण्यकम्',
         details: [
-          'काहीही नाही — अथर्ववेदाचा कोणताही स्वतंत्र आरण्यक ग्रंथ उपलब्ध नाही. गोपथ ब्राह्मणातून थेट उपनिषदात तत्त्वज्ञान संक्रमित होते.'
+          'काहीही नाही — अथर्ववेदाचा कोणताही आरण्यक ग्रंथ उपलब्ध नाही. गोपथ ब्राह्मणातून थेट उपनिषदात तत्त्वज्ञान संक्रमित होते.'
         ]
       },
       upanishad: {
@@ -374,13 +384,604 @@ const VEDAS_MR: Veda[] = [
         deva: 'अथर्ववेद उपनिषदः',
         details: [
           'मुण्डक उपनिषद् — विद्या आणि अविद्या यातील फरक आणि देशाचे बोधवाक्य "सत्यमेव जयते" (सत्याचाच विजय होतो) चा उगम.',
-          'माण्डूक्य उपनिषद् — अवघ्या १२ श्लोकांचे उपनिषद्, ज्यात मानवी चेतनेच्या ४ अवस्था (जागृती, स्वप्न, सुषुप्ती, तुरीय) स्पष्ट केल्या आहेत.',
+          'माण्डूक्य उपनिषद् — अवघ्या १२ श्लोकांचे उपनिषद्, यात मानवी चेतनेच्या ४ अवस्था (जागृती, स्वप्न, सुषुप्ती, तुरीय) स्पष्ट केल्या आहेत.',
           'प्रश्न उपनिषद् — सृष्टी, प्राण आणि आत्म्याबद्दल सहा जिज्ञासूंनी पिप्पलाद ऋषींना विचारलेले सहा प्रश्न.'
         ]
       }
     }
   },
 ];
+
+interface Shakha {
+  name: string;
+  deva: string;
+  category?: string;
+  categoryDeva?: string;
+  status: string;
+  statusDeva: string;
+  structure: string;
+  structureDeva: string;
+  region: string;
+  regionDeva: string;
+  desc: string;
+  descDeva: string;
+}
+
+interface KeySukta {
+  name: string;
+  nameDeva: string;
+  citation: string;
+  citationDeva: string;
+  summary: string;
+  summaryDeva: string;
+  verse?: {
+    deva: string;
+    trans: string;
+    cite: string;
+  };
+}
+
+const SHAKHAS_DATA: Record<string, Shakha[]> = {
+  rig: [
+    {
+      name: 'Śākala Saṃhitā',
+      deva: 'शाकल संहिता',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '10 Maṇḍalas, 1,028 Sūktas, 10,552 verses',
+      structureDeva: '१० मंडळे, १,०२८ सूक्ते, १०,५५२ ऋचा',
+      region: 'Prevalent throughout India',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The standard, widely chanted recension of the Rigveda. Features the unique oral preservation with exact pitch accents (Udātta, Anudātta, Svarita).',
+      descDeva: 'ऋग्वेदाची सर्वात लोकप्रिय व सध्या उपलब्ध असणारी एकमेव संपूर्ण शाखा. स्वरचिन्हांसह (उदात्त, अनुदात्त, स्वरित) पठणाची अचूक मौखिक परंपरा यात जतन केली आहे.'
+    },
+    {
+      name: 'Bāṣkala Saṃhitā',
+      deva: 'बाष्कल संहिता',
+      status: 'Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: '10 Maṇḍalas, 1,025 Sūktas, includes Khilani/Valakhilya',
+      structureDeva: '१० मंडळे, १,०२५ सूक्ते, खिलसूक्ते समाविष्ट',
+      region: 'Historically North & West India',
+      regionDeva: 'ऐतिहासिकदृष्ट्या उत्तर व पश्चिम भारत',
+      desc: 'Preserves 8 additional hymns (Vālakhilya) and other supplementary texts. Closely related to the Shakala tradition but with small textual differences.',
+      descDeva: 'शाकल शाखेसारखीच पण यात अतिरिक्त \'खिलानि\' (पूरक सूक्ते) व ८ अतिरिक्त वालखिल्य सूक्ते आढळतात. काही हस्तलिखितांमध्ये ही शाखा अंशतः टिकून राहिली आहे.'
+    },
+    {
+      name: 'Āśvalāyana Saṃhitā',
+      deva: 'आश्वलायन संहिता',
+      status: 'Lost Saṃhitā (Ritual texts extant)',
+      statusDeva: 'संहिता लुप्त (विधी ग्रंथ उपलब्ध)',
+      structure: 'Auxiliary ritual works (Shrauta & Grihya Sutras) survive',
+      structureDeva: 'विधी सूत्रे आणि श्रौत सूत्रे उपलब्ध',
+      region: 'Historically popular in Maharashtra & South India',
+      regionDeva: 'ऐतिहासिकदृष्ट्या महाराष्ट्र व दक्षिण भारत',
+      desc: 'The independent Samhita is lost, but the ritual manuals (Sutras) written by sage Ashvalayana (disciple of Shaunaka) are the primary authority for Rigvedic rites in many parts of India.',
+      descDeva: 'मूळ संहिता लुप्त झाली आहे, परंतु शौनकांचे शिष्य आश्वलायन ऋषींनी लिहिलेले आश्वलायन श्रौत व गृह्य सूत्र ग्रंथ उपलब्ध आहेत. महाराष्ट्रात ऋग्वेदी ब्राह्मणांचे बहुतांश विधी याच शाखेनुसार होतात.'
+    },
+    {
+      name: 'Śāṅkhāyana / Kauṣītaki',
+      deva: 'शाङ्खायन / कौषीतकी',
+      status: 'Lost Saṃhitā (Brahmana & Upanishad extant)',
+      statusDeva: 'संहिता लुप्त (ब्राह्मण व उपनिषद उपलब्ध)',
+      structure: 'Shrauta/Grihya Sutras, Brahmana, Aranyaka, and Upanishad survive',
+      structureDeva: 'ब्राह्मण, आरण्यक, उपनिषद आणि सूत्रे उपलब्ध',
+      region: 'Historically Gujarat & Rajasthan',
+      regionDeva: 'ऐतिहासिकदृष्ट्या गुजरात व राजस्थान',
+      desc: 'While the main mantra collection is lost, its Brahmana, Aranyaka, and Upanishad are fully preserved and form an important intellectual lineage of Rigvedic ritualism.',
+      descDeva: 'मूळ मंत्रसंग्रह अनुपलब्ध असला तरी या शाखेचे कौषीतकी ब्राह्मण, आरण्यक, उपनिषद आणि शाङ्खायन विधीसूत्रे पूर्णपणे सुरक्षित आहेत. ही शाखा आंतरिक साधनेवर भर देते.'
+    },
+    {
+      name: 'Māṇḍukāyana',
+      deva: 'माण्डूकायन',
+      status: 'Lost',
+      statusDeva: 'पूर्णपणे लुप्त',
+      structure: 'None surviving',
+      structureDeva: 'सध्या कोणताही ग्रंथ उपलब्ध नाही',
+      region: 'Historically Northern India',
+      regionDeva: 'ऐतिहासिकदृष्ट्या उत्तर भारत',
+      desc: 'Mentioned by ancient grammarians and lexicographers like Shaunaka in the Rigveda Pratisakhya, but no text or oral tradition survives today.',
+      descDeva: 'शौनकांच्या ऋग्वेद प्रातिशाख्यात आणि इतर प्राचीन ग्रंथांमध्ये या शाखेचा उल्लेख आढळतो, परंतु आज याचा कोणताही ग्रंथ किंवा मौखिक परंपरा शिल्लक नाही.'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Vājasaneyi Mādhyandina',
+      deva: 'वाजसनेयी माध्यन्दिन',
+      category: 'Śukla Yajurveda',
+      categoryDeva: 'शुक्ल यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '40 Adhyāyas (chapters), 1,975 Kandikās (verses)',
+      structureDeva: '४० अध्याय, १,९७५ कण्डिका/मंत्र',
+      region: 'Dominant in North and Central India',
+      regionDeva: 'उत्तर व मध्य भारत',
+      desc: 'Named after sage Yajnavalkya (Vajasaneya) and the midday sun. It is the most popular Shukla Yajurveda recension, recited with a distinctive pronunciation where \'ya\' becomes \'ja\' and \'va\' becomes \'ba\' in specific contexts.',
+      descDeva: 'याज्ञवल्क्य ऋषींनी आदित्य भगवंताकडून प्राप्त केलेली मुख्य शाखा. उत्तर व मध्य भारतात अत्यंत लोकप्रिय आहे. यात \'य\' चा उच्चार \'ज\' आणि \'ष\' चा उच्चार \'ख\' करण्याची विशिष्ट स्वर पद्धती आहे.'
+    },
+    {
+      name: 'Vājasaneyi Kāṇva',
+      deva: 'वाजसनेयी काण्व',
+      category: 'Śukla Yajurveda',
+      categoryDeva: 'शुक्ल यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '40 Adhyāyas, 328 Anuvākas, 2,086 verses',
+      structureDeva: '४० अध्याय, ३२८ अनुवाक, २,०८६ मंत्र',
+      region: 'Popular in South India, Maharashtra, and Odisha',
+      regionDeva: 'दक्षिण भारत, महाराष्ट्र व ओडिशा',
+      desc: 'Prevalent in South India. It is textually very close to Madhyandina but features minor word order variations and contains 111 additional verses. It serves as the basis for the Kanva Shatapatha Brahmana.',
+      descDeva: 'कण्व ऋषींच्या परंपरेतील ही शाखा दक्षिण भारतात (विशेषतः तमिळनाडू, कर्नाटक, आंध्र व महाराष्ट्र) जास्त प्रचलित आहे. यात माध्यन्दिन शाखेपेक्षा १११ मंत्र जास्त आहेत.'
+    },
+    {
+      name: 'Taittirīya Saṃhitā',
+      deva: 'तैत्तिरीय संहिता',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '7 Kāṇḍas, 44 Prapāṭhakas, 651 Anuvākas',
+      structureDeva: '७ कांडे, ४४ प्रपाठक, ६५१ अनुवाक',
+      region: 'Dominant across South India',
+      regionDeva: 'संपूर्ण दक्षिण भारत',
+      desc: 'Named after sage Tittiri. The most widely chanted and preserved Black Yajurveda school, containing both mantras and prose commentary integrated together. Famous for its beautiful, resonant chanting flow.',
+      descDeva: 'तित्तिरी ऋषींच्या परंपरेतील कृष्ण यजुर्वेदाची ही सर्वात महत्त्वाची व लोकप्रिय शाखा आहे. दक्षिण भारतात (तमिळनाडू, कर्नाटक, केरळ) या शाखेची मौखिक परंपरा अतिशय जिवंत आहे. यात मंत्र आणि गद्य विधी एकत्र गुंफलेले आहेत.'
+    },
+    {
+      name: 'Maitrāyaṇī Saṃhitā',
+      deva: 'मैत्रायणी संहिता',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '4 Kāṇḍas, 54 Prapāṭhakas, 3,144 mantras',
+      structureDeva: '४ कांडे, ५४ प्रपाठक, ३,१४४ मंत्र',
+      region: 'Preserved in Western Maharashtra and Gujarat',
+      regionDeva: 'पश्चिम महाराष्ट्र व गुजरात',
+      desc: 'Named after sage Maitri. It preserves archaic linguistic features and unique ritual details. Today, a small community of priests in Nashik and Nandurbar (Maharashtra) maintains its oral chanting.',
+      descDeva: 'मैत्रि ऋषींनी प्रवचन केलेली कृष्ण यजुर्वेदाची ही प्राचीन शाखा आहे. गुजरात आणि महाराष्ट्रातील (विशेषतः नाशिक व नंदुरबार परिसर) काही मोजक्या घराण्यांनी ही मौखिक परंपरा अजूनही टिकवून ठेवली आहे.'
+    },
+    {
+      name: 'Kāṭhaka / Kaṭha Saṃhitā',
+      deva: 'काठक / कठ संहिता',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Fully Extant / Reconstructed',
+      statusDeva: 'पूर्णपणे उपलब्ध / पुनर्रचित',
+      structure: '5 Granthas (divisions), detailed sacrificial rules',
+      structureDeva: '५ मुख्य विभाग/ग्रंथ',
+      region: 'Historically Kashmir and Himachal Pradesh',
+      regionDeva: 'ऐतिहासिकदृष्ट्या काश्मीर व हिमाचल प्रदेश',
+      desc: 'Attributed to sage Kaṭha (disciple of Vaisampayana). Contains rich prose and poetry on sacrificial architecture. Mostly reconstructed from Kashmiri birch-bark manuscripts.',
+      descDeva: 'वैशंपायनांचे शिष्य कठ ऋषींनी स्थापन केलेली शाखा. पूर्वी काश्मीरमध्ये याचे मोठ्या प्रमाणावर पठण होत असे. यज्ञ विधींच्या आणि रचनेच्या बाबतीत यात अत्यंत सविस्तर गद्य आणि पद्य माहिती आहे.'
+    },
+    {
+      name: 'Kapiṣṭhala-Kaṭha Saṃhitā',
+      deva: 'कपिष्ठल-कठ संहिता',
+      category: 'Kṛṣṇa Yajurveda',
+      categoryDeva: 'कृष्ण यजुर्वेद',
+      status: 'Fragmentary / Partially Extant',
+      statusDeva: 'अंशतः उपलब्ध',
+      structure: '8 fragments of chapters',
+      structureDeva: 'कपिष्ठल-कठ संहिता',
+      region: 'Historically Punjab and Northwest India',
+      regionDeva: 'ऐतिहासिकदृष्ट्या पंजाब व वायव्य भारत',
+      desc: 'Named after sage Kapisthala. Closely related to the Katha recension, it survives only in fragmented manuscripts containing partial chapters of the Samhita.',
+      descDeva: 'कपिष्ठल ऋषींनी जतन केलेली ही शाखा कठ शाखेशी अत्यंत साम्य राखणारी आहे. सध्या ही संहिता केवळ काही हस्तलिखितांमध्ये व तुकड्यांमध्येच उपलब्ध असून तिचे मौखिक पठण लुप्त झाले आहे.'
+    }
+  ],
+  sama: [
+    {
+      name: 'Kauthuma Saṃhitā',
+      deva: 'कौथुम संहिता',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '1,875 verses divided into Purvarcika & Uttararcika',
+      structureDeva: '१,८७५ मंत्र, पूर्वार्चिक व उत्तरार्चिक विभाग',
+      region: 'Prevalent in Gujarat, Maharashtra, and Tamil Nadu',
+      regionDeva: 'गुजरात, महाराष्ट्र व तमिळनाडू',
+      desc: 'The standard and most popular recension of Samaveda. It divides the chants into two parts (preliminary and main sections) and forms the basis of most modern Samavedic studies and performances.',
+      descDeva: 'सामवेदाची सर्वात प्रसिद्ध आणि मोठ्या प्रमाणावर गायली जाणारी शाखा. यात गीतांच्या चाली स्पष्ट करण्यासाठी विशिष्ट अंक आणि स्वरांचे खुणेचे नियम आहेत.'
+    },
+    {
+      name: 'Rāṇāyanīya Saṃhitā',
+      deva: 'राणायनीय संहिता',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '1,875 verses, textually identical to Kauthuma',
+      structureDeva: '१,८७५ मंत्र, कौथुम शाखेशी समान मजकूर',
+      region: 'Karnataka, Gokarna, and Odisha',
+      regionDeva: 'कर्नाटक, गोकर्ण व ओडिशा',
+      desc: 'Prevalent in Karnataka and Odisha. Though it shares the exact text with the Kauthuma branch, it is distinguished by a slower chanting tempo, different musical notations, and phonetic adjustments (e.g. less nasalization).',
+      descDeva: 'कर्नाटक, आंध्र आणि महाराष्ट्राच्या काही भागात (उदा. गोकर्ण) ही परंपरा आहे. लिखित मजकूर कौथुम शाखेसारखाच असला, तरी गायनाचा वेग मंद असतो आणि स्वरांच्या आंदोलनात किंचित फरक असतो.'
+    },
+    {
+      name: 'Jaiminīya / Talavakāra',
+      deva: 'जैमिनीय / तलवकार संहिता',
+      status: 'Fully Extant (Rare)',
+      statusDeva: 'दुर्मिळ पण उपलब्ध',
+      structure: 'Textually distinct, features Jaiminiya Brahmana & Upanishad',
+      structureDeva: 'वेगळा संगीत स्वर संग्रह',
+      region: 'Preserved in Kerala and Tamil Nadu',
+      regionDeva: 'केरळ व तमिळनाडू',
+      desc: 'An ancient and highly distinct lineage. It features an older, less ornamented musical notation and a different set of chants compared to Kauthuma. Kept alive by a handful of families in Kerala and Tamil Nadu.',
+      descDeva: 'सामवेदाची ही सर्वात जुनी आणि अत्यंत कठीण गायन पद्धती आहे. केरळ आणि तमिळनाडूतील मोजक्या नंबुदिरी व इतर ब्राह्मणांनी ही अत्यंत गूढ मौखिक पद्धती जतन केली आहे. यात कौथुमपेक्षा वेगळे राग व स्वर आहेत.'
+    }
+  ],
+  atharva: [
+    {
+      name: 'Śaunakīya Saṃhitā',
+      deva: 'शौनकीय संहिता',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '20 Kāṇḍas (books), 730 Sūktas, 5,977 verses',
+      structureDeva: '२० कांडे, ७३० सूक्ते, ५,९७७ मंत्र',
+      region: 'Prevalent throughout India',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The standard, widely studied recension of the Atharvaveda. It contains domestic rites, healing formulas, hymns to the earth (Bhumi Sukta), and political-social prayers.',
+      descDeva: 'अथर्ववेदाची ही सर्वात व्यापक आणि प्रमाण मानली जाणारी शाखा आहे. यात गृह्यकर्म, आरोग्य, वनस्पती, औषधोपचार आणि प्रसिद्ध \'भूमी सूक्त\' समाविष्ट आहे. संपूर्ण भारतात याच शाखेचा अभ्यास होतो.'
+    },
+    {
+      name: 'Paippalāda Saṃhitā',
+      deva: 'पैप्पलाद संहिता',
+      status: 'Fully Extant / Revived',
+      statusDeva: 'पूर्णपणे उपलब्ध / पुनरुज्जीवित',
+      structure: '20 Kāṇḍas, distinct hymn arrangement',
+      structureDeva: '२० कांडे, स्वतंत्र मंत्र रचना',
+      region: 'Preserved in Odisha and Jharkhand',
+      regionDeva: 'ओडिशा व झारखंड',
+      desc: 'A highly ancient recension, historically popular in Kashmir. A unique manuscript was found in Kashmir in the 19th century. The living oral tradition is preserved in Odisha. It contains additional hymns and alternate readings.',
+      descDeva: 'शौनकीय शाखेपेक्षा अधिक प्राचीन मानली जाणारी शाखा. १९ व्या शतकात काश्मीरमध्ये याच्या शारदा लिपीतील हस्तलिखिताचा शोध लागला. सध्या ओडिशामधील काही वेदपाठशाळांमध्ये याचे सस्वर मौखिक पठण केले जाते.'
+    },
+    {
+      name: 'Other Historical / Lost Shakhas',
+      deva: 'इतर ऐतिहासिक / लुप्त शाखा',
+      status: 'Lost',
+      statusDeva: 'लुप्त',
+      structure: 'Pippalāda and Śaunakīya are the only survivors of the traditional 9',
+      structureDeva: '९ पैकी केवळ २ शाखा शिल्लक',
+      region: 'Historically Northern & Eastern India',
+      regionDeva: 'ऐतिहासिकदृष्ट्या उत्तर व पूर्व भारत',
+      desc: 'The Caraṇavyūha mentions seven other branches: Tauda, Mauda, Jājala, Jalada, Brahmavada, Devadarśa, and Cāraṇavaidyā. They are lost, with only references surviving in ancient commentaries.',
+      descDeva: 'चरणव्यूह ग्रंथानुसार अथर्ववेदाच्या एकूण ९ शाखा होत्या, जसे की तौद, मौद, जाजल, जलद, ब्रह्मवद, देवदर्श आणि चारणवैद्या. सध्या या शाखांचे मूळ मंत्रसंग्रह पूर्णपणे काळाच्या पडद्याआड गेले आहेत.'
+    }
+  ]
+};
+
+const SUKTAS_DATA: Record<string, KeySukta[]> = {
+  rig: [
+    {
+      name: 'Puruṣa Sūkta',
+      nameDeva: 'पुरुषसूक्त',
+      citation: 'RV 10.90',
+      citationDeva: 'ऋग्वेद १०.९०',
+      summary: 'The foundational hymn on the cosmic being (Purusha), detailing the unity of creation and the spiritual origin of the universe and society.',
+      summaryDeva: 'विश्वाच्या निर्मितीचा आणि विराट पुरुषाचा (वैश्विक चेतनेचा) पायाभूत ग्रंथ, जो सृष्टीचे ऐक्य आणि उत्पत्ती स्पष्ट करतो.',
+      verse: {
+        deva: 'सहस्रशीर्षा पुरुषः सहस्राक्षः सहस्रपात् ।\nस भूमिं विश्वतो वृत्वात्यतिष्ठद्दशाङ्गुलम् ॥',
+        trans: 'sahasraśīrṣā puruṣaḥ sahasrākṣaḥ sahasrapāt |\nsa bhūmiṃ viśvato vṛtvātyatiṣṭhaddaśāṅgulam ||',
+        cite: 'RV 10.90.1'
+      }
+    },
+    {
+      name: 'Nāsadīya Sūkta',
+      nameDeva: 'नासदीय सूक्त',
+      citation: 'RV 10.129',
+      citationDeva: 'ऋग्वेद १०.१२९',
+      summary: 'The famous Hymn of Creation exploring the origin of the cosmos with deep philosophical inquiry, famously questioning: "Who knows whence it first came into being?"',
+      summaryDeva: 'विश्वाच्या उत्पत्तीचा सखोल शोध घेणारे प्रसिद्ध सूक्त, ज्यामध्ये अतिशय गंभीर आणि तात्त्विक प्रश्न विचारले गेले आहेत: "सृष्टी नक्की कुठून आली हे कोणाला ठाऊक आहे?"',
+      verse: {
+        deva: 'नासदासीन्नो सदासीत्तदानीं नासीद्रजो नो व्योमा परो यत् ।\nकिमावरीवः कुह कस्य शर्मन्नम्भः किमासीद्गहनं गभीरम् ॥',
+        trans: 'nāsadāsīnno sadāsīttadānīm\u0304 nāsīdrajo no vyomā paro yat |\nkimāvarīvaḥ kuha kasya śarmannambhaḥ kimāsīdgahanaṃ gabhīram ||',
+        cite: 'RV 10.129.1'
+      }
+    },
+    {
+      name: 'Saṃjñāna Sūkta',
+      nameDeva: 'संज्ञान सूक्त',
+      citation: 'RV 10.191',
+      citationDeva: 'ऋग्वेद १०.१९१',
+      summary: 'The final hymn of the Rigveda, offering a powerful prayer for unity, harmony in speech, collective assembly, and common minds.',
+      summaryDeva: 'ऋग्वेदाचा शेवटचा भाग, जो मानवी समाज एकत्र राहण्यासाठी आणि विचारांमध्ये ऐक्य साधण्यासाठी सामूहिक प्रार्थनेचा संदेश देतो.',
+      verse: {
+        deva: 'सङ्गच्छध्वं संवदध्वं सं वो मनांसि जानताम् ।\nदेवा भागं यथा पूर्वे सञ्जानाना उपासते ॥',
+        trans: 'saṅgacchadhvaṃ saṃvadadhvaṃ saṃ vo manāṃsi jānatām |\ndevā bhāgaṃ yathā pūrve sañjānānā upāsate ||',
+        cite: 'RV 10.191.2'
+      }
+    },
+    {
+      name: 'Gāyatrī Mantra (from Savitṛ Sūkta)',
+      nameDeva: 'गायत्री मन्त्र (सवीतृ सूक्त)',
+      citation: 'RV 3.62.10',
+      citationDeva: 'ऋग्वेद ३.६२.१०',
+      summary: 'The most sacred and universally chanted Rigvedic verse, addressed to the solar deity Savitṛ, praying for intellectual illumination.',
+      summaryDeva: 'सवीतृ (सूर्य) देवतेला उद्देशून रचलेला अतिशय पवित्र आणि लोकप्रिय मंत्र, ज्यामध्ये बुद्धीच्या प्रकाशासाठी प्रार्थना केली आहे.',
+      verse: {
+        deva: 'तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि ।\nधियो यो नः प्रचोदयात् ॥',
+        trans: 'tat savitur vareṇyaṃ bhargo devasya dhīmahi |\ndhiyo yo naḥ pracodayāt ||',
+        cite: 'RV 3.62.10'
+      }
+    }
+  ],
+  yajur: [
+    {
+      name: 'Śrī Rudram (Namakam)',
+      nameDeva: 'श्रीरुद्रम् (नमकम्)',
+      citation: 'TS 4.5 / VS 16',
+      citationDeva: 'तैत्तिरीय ४.५ / वाजसनेयी १६',
+      summary: 'A magnificent hymn addressed to Rudra (Shiva) in both his fierce and benevolent aspects, invoking peace, protection, and universal well-being.',
+      summaryDeva: 'रुद्र (शिव) यांच्या उग्र आणि शांत दोन्ही रूपांची स्तुती करणारे महान सूक्त, जे शांती, संरक्षण आणि विश्वाच्या कल्याणासाठी गायले जाते.',
+      verse: {
+        deva: 'नमस्ते रुद्र मन्यव उतोत इषवे नमः ।\nनमस्ते अस्तु धन्वने बाहुभ्यामुत ते नमः ॥',
+        trans: 'namaste rudra manyava utota iṣave namaḥ |\nnamaste astu dhanvane bāhubhyāmuta te namaḥ ||',
+        cite: 'TS 4.5.1.1'
+      }
+    },
+    {
+      name: 'Śivasaiṅkalpa Sūkta',
+      nameDeva: 'शिवसङ्कल्प सूक्त',
+      citation: 'VS 34.1-6',
+      citationDeva: 'वाजसनेयी ३४.१-६',
+      summary: 'A beautiful prayer of six verses from the Shukla Yajurveda, focusing on the mind and requesting that it always resolve upon noble and auspicious thoughts.',
+      summaryDeva: 'शुक्ल यजुर्वेदातील ६ श्लोकांचे प्रसिद्ध सूक्त, ज्यामध्ये आपले मन नेहमी चांगल्या आणि कल्याणकारी विचारांकडेच वळावे अशी प्रार्थना केली आहे.',
+      verse: {
+        deva: 'यज्जाग्रतो दूरमुदैति दैवं तदु सुप्तस्य तथैवेति ।\nदूरङ्गमं ज्योतिषां ज्योतिरेकं तन्मे मनः शिवसङ्कल्पमस्तु ॥',
+        trans: 'yajjāgrato dūramudaiti daivaṃ tadu suptasya tathaiveti |\ndūraṅgamaṃ jyotiṣāṃ jyotirekaṃ tanme manaḥ śivasaṅkalpamastu ||',
+        cite: 'VS 34.1'
+      }
+    },
+    {
+      name: 'Mahāmṛtyuñjaya Mantra',
+      nameDeva: 'महामृत्युञ्जय मन्त्र',
+      citation: 'VS 3.60 / TS 1.8.6',
+      citationDeva: 'वाजसनेयी ३.६० / तैत्तिरीय १.८.६',
+      summary: 'The great mantra of liberation from death, wishing for spiritual immortality and physical well-being, addressed to Tryambaka (Shiva).',
+      summaryDeva: 'मृत्यूच्या भयापासून मुक्त करणारे आणि अमृतत्वाची प्राप्ती करून देणारे महान सूक्त, ज्यामध्ये शंकराची त्रिनेत्र रूपी आराधना केली आहे.',
+      verse: {
+        deva: 'त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय मामृतात् ॥',
+        trans: 'tryambakaṃ yajāmahe sugandhiṃ puṣṭi-vardhanam |\nurvārukam iva bandhanān mṛtyor mukṣīya mā\'mṛtāt ||',
+        cite: 'VS 3.60'
+      }
+    }
+  ],
+  sama: [
+    {
+      name: 'Bṛhat Sāma',
+      nameDeva: 'बृहत् साम',
+      citation: 'SV Gāna Tradition',
+      citationDeva: 'सामवेद गान परंपरा',
+      summary: 'A magnificent melody sung to express cosmic grandeur and strength. In the Bhagavad Gita (10.35), Lord Krishna declares: "Of hymns, I am the Bṛhat-sāma."',
+      summaryDeva: 'वैश्विक भव्यता आणि शक्तीचे प्रदर्शन करणारे सामवेदाचे संगीत. भगवद्गीतेमध्ये (१०.३५) श्रीकृष्ण म्हणतात: "गायनात मी बृहत्-साम आहे."',
+      verse: {
+        deva: 'वेदानां सामवेदोऽस्मि देवानामस्मि वासवः ।\nइन्द्रियाणां मनश्चास्मि भूतानामस्मि चेतना ॥',
+        trans: 'vedānāṃ sāmavedo\'smi devānāmasmi vāsavaḥ |\nindriyāṇāṃ manaścāsmi bhūtānāmasmi cetanā ||',
+        cite: 'Bhagavad Gītā 10.22'
+      }
+    },
+    {
+      name: 'Rathantara Sāma',
+      nameDeva: 'रथन्तर साम',
+      citation: 'SV Ritual Chants',
+      citationDeva: 'सामवेद विधी गान',
+      summary: 'One of the oldest and most sacred melodies of the Sāmaveda, traditionally associated with the cosmic order (Ṛta) and the movement of the sun.',
+      summaryDeva: 'सामवेदातील सर्वात जुन्या आणि पवित्र स्वरांपैकी एक, जे वैश्विक नियम (ऋत) आणि सूर्याच्या प्रवासाशी संबंधित मानले जाते.',
+      verse: {
+        deva: 'अग्न आ याहि वीतये गृणानो हव्यदातये ।\nनि होता सत्सि बर्हिषि ॥',
+        trans: 'agna ā yāhi vītaye gṛṇāno havyadātaye |\nni hotā satsi barhiṣi ||',
+        cite: 'SV 1.1.1'
+      }
+    }
+  ],
+  atharva: [
+    {
+      name: 'Bhūmi Sūkta (Pṛthivī Sūkta)',
+      nameDeva: 'भूमि सूक्त (पृथ्वी सूक्त)',
+      citation: 'AV 12.1',
+      citationDeva: 'अथर्ववेद १२.१',
+      summary: 'A magnificent 63-verse hymn to Mother Earth, celebrated as the world\'s earliest anthem of ecological consciousness and harmony between humans and nature.',
+      summaryDeva: 'पृथ्वीमातेची स्तुती करणारे ६३ श्लोकांचे भव्य सूक्त. पर्यावरण चेतना आणि मनुष्य व निसर्ग यांच्यातील संबंध स्पष्ट करणारे जगातील पहिले निसर्गगीत मानले जाते.',
+      verse: {
+        deva: 'शिला भूमिरश्मा पांसुः सा भूमिः संधृता मयू ।\nतस्यै हिरण्यवक्षसे पृथिव्या अकरं नमः ॥\nमाता भूमिः पुत्रो अहं पृथिव्याः ॥',
+        trans: 'śilā bhūmi raśmā pāṃsuḥ sā bhūmiḥ saṃdhṛtā mayū |\ntasyai hiraṇyavakṣase pṛthivyā akaraṃ namaḥ ||\nmātā bhūmiḥ putro ahaṃ pṛthivyāḥ ||',
+        cite: 'AV 12.1.26 / 12.1.12'
+      }
+    },
+    {
+      name: 'Prāṇa Sūkta',
+      nameDeva: 'प्राण सूक्त',
+      citation: 'AV 11.4',
+      citationDeva: 'अथर्ववेद ११.४',
+      summary: 'A profound hymn glorifying Prāṇa (the vital breath/life-force) as the supreme ruler of all beings, which animates the universe.',
+      summaryDeva: 'प्राणाला (प्राणवायू/जीवनशक्ती) विश्वाचा अधिपती मानून त्याची स्तुती करणारे सूक्त, जे सजीव सृष्टीला चैतन्य प्रदान करते.',
+      verse: {
+        deva: 'प्राणाय नमो यस्य सर्वमिदं वशे ।\nयो भूतः सर्वस्येश्वरो यस्मिन् सर्वं प्रतिष्ठितम् ॥',
+        trans: 'prāṇāya namo yasya sarvamida\u0304m\u0304 vaśe |\nyo bhūtaḥ sarvasyeśvaro yasmin sarvaṃ pratiṣṭhitam ||',
+        cite: 'AV 11.4.1'
+      }
+    }
+  ]
+};
+
+function ShakhaCard({ shakha, lang }: { shakha: Shakha; lang: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const statusLabel = lang === 'mr' ? 'स्थिती' : 'Status';
+  const structureLabel = lang === 'mr' ? 'रचना' : 'Structure';
+  const regionLabel = lang === 'mr' ? 'मुख्य क्षेत्र' : 'Primary Region';
+  
+  const statusVal = lang === 'mr' ? shakha.statusDeva : shakha.status;
+  const structureVal = lang === 'mr' ? shakha.structureDeva : shakha.structure;
+  const regionVal = lang === 'mr' ? shakha.regionDeva : shakha.region;
+  const descVal = lang === 'mr' ? shakha.descDeva : shakha.desc;
+
+  const getStatusClass = (status: string) => {
+    if (status.includes('Fully Extant')) return 'extant';
+    if (status.includes('Partially Extant')) return 'partial';
+    return 'lost';
+  };
+
+  return (
+    <div className="shakha-card" onClick={() => setExpanded(!expanded)}>
+      <div className="shakha-card-header">
+        <div className="shakha-title-group">
+          <h4>{lang === 'mr' ? shakha.deva : shakha.name}</h4>
+          {lang !== 'mr' && <div className="shakha-deva">{shakha.deva}</div>}
+        </div>
+        <span className={`shakha-badge ${getStatusClass(shakha.status)}`}>
+          {statusVal}
+        </span>
+      </div>
+      {(shakha.category || shakha.categoryDeva) && (
+        <div className="shakha-category">
+          {lang === 'mr' ? shakha.categoryDeva : shakha.category}
+        </div>
+      )}
+      <p className="shakha-snippet">
+        {descVal.length > 90 ? `${descVal.substring(0, 90)}...` : descVal}
+      </p>
+      <div className="shakha-card-footer">
+        <span style={{ color: 'var(--ink-soft)' }}>{structureVal.split(',')[0]}</span>
+        <span className="shakha-expand-hint">
+          {expanded ? (lang === 'mr' ? 'कमी करा ▲' : 'Show less ▲') : (lang === 'mr' ? 'तपशील ▼' : 'Details ▼')}
+        </span>
+      </div>
+      {expanded && (
+        <div className="shakha-expanded-details" onClick={(e) => e.stopPropagation()}>
+          <div className="shakha-meta-item">
+            <strong>{statusLabel}:</strong> {statusVal}
+          </div>
+          <div className="shakha-meta-item">
+            <strong>{structureLabel}:</strong> {structureVal}
+          </div>
+          <div className="shakha-meta-item">
+            <strong>{regionLabel}:</strong> {regionVal}
+          </div>
+          <p className="shakha-detail-desc">{descVal}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function KeySuktaCard({ sukta, lang }: { sukta: KeySukta; lang: string }) {
+  const [showVerse, setShowVerse] = useState(false);
+  const title = lang === 'mr' ? sukta.nameDeva : sukta.name;
+  const citation = lang === 'mr' ? sukta.citationDeva : sukta.citation;
+  const summary = lang === 'mr' ? sukta.summaryDeva : sukta.summary;
+
+  return (
+    <div className="sukta-item">
+      <div className="sukta-header">
+        <div className="sukta-title-group">
+          <h4>{title}</h4>
+          {lang !== 'mr' && <div className="shakha-deva" style={{ marginTop: 2 }}>{sukta.nameDeva}</div>}
+        </div>
+        <span className="sukta-cite">{citation}</span>
+      </div>
+      <p className="sukta-desc">{summary}</p>
+      {sukta.verse && (
+        <>
+          <button 
+            type="button" 
+            className="verse-toggle-btn"
+            onClick={() => setShowVerse(!showVerse)}
+          >
+            <span>{showVerse ? '✕' : 'ॐ'}</span>
+            <span>
+              {showVerse 
+                ? (lang === 'mr' ? 'मंत्र लपवा' : 'Hide Verse') 
+                : (lang === 'mr' ? 'मुख्य मंत्र पहा' : 'Show Featured Verse')}
+            </span>
+          </button>
+          {showVerse && (
+            <div className="verse-panel">
+              <div className="deva-line">
+                {sukta.verse.deva.split('\n').map((l, i) => (
+                  <div key={i}>{l}</div>
+                ))}
+              </div>
+              <div className="translit-line">
+                {transliterate(sukta.verse.deva).split('\n').map((l, i) => (
+                  <div key={i}>{l}</div>
+                ))}
+              </div>
+              <p className="trans">{sukta.verse.trans}</p>
+              <div className="cite">{sukta.verse.cite}</div>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+}
+
+function SamhitaSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
+  const [subTab, setSubTab] = useState<'shakhas' | 'suktas'>('shakhas');
+  
+  const shakhas = SHAKHAS_DATA[vedaId] || [];
+  const suktas = SUKTAS_DATA[vedaId] || [];
+
+  const intros: Record<string, { en: string; mr: string }> = {
+    rig: {
+      en: 'The Rigveda was historically preserved in 21 shakhas (branches) according to Patañjali. Today, the Śākala branch is the only complete surviving textual tradition, while others are known through auxiliary texts or references.',
+      mr: 'पतंजलींच्या महाभाष्यानुसार ऋग्वेदाच्या एकूण २१ शाखा होत्या. आज केवळ शाकल शाखा पूर्ण स्वरूपात उपलब्ध आहे, तर इतर शाखांचे विधी ग्रंथ आणि संदर्भ शिल्लक आहेत।'
+    },
+    yajur: {
+      en: 'The Yajurveda is split into two major currents: Śukla (White) and Kṛṣṇa (Black), historically comprising 100 or 101 branches. Six main schools are preserved with vibrant oral recitation and distinct liturgical manuals today.',
+      mr: 'यजुर्वेद शुक्ल आणि कृष्ण अशा दोन मुख्य प्रवाहांत विभागलेला असून त्याच्या १०० पेक्षा जास्त ऐतिहासिक शाखा होत्या. आज ६ प्रमुख शाखांचे सस्वर मौखिक पठण आणि विधी ग्रंथ उपलब्ध आहेत।'
+    },
+    sama: {
+      en: 'Of the legendary 1,000 shakhas of the Sāmaveda (celebrated as "sahasravartmā"), only three survive today. They preserve distinct musical structures, notation, and styles of choral chanting.',
+      mr: 'सामवेदाच्या प्राचीन १००० शाखांपैकी (सहस्रवर्त्मा सामवेद) आज केवळ तीनच शाखा जतन केल्या गेल्या आहेत. या शाखांच्या संगीत आणि स्वर चिन्हांमध्ये वैशिष्ट्यपूर्ण फरक आहेत।'
+    },
+    atharva: {
+      en: 'Historically, the Atharvaveda had 9 shakhas according to the Caraṇavyūha. Today, only two (Śaunakīya and Paippalāda) survive. The Paippalāda branch was recently rediscovered and revived in Odisha.',
+      mr: 'चरणव्यूह ग्रंथानुसार अथर्ववेदाच्या एकूण ९ शाखा होत्या, ज्यापैकी आज शौनकीय आणि पैप्पलाद या दोनच शाखा उपलब्ध आहेत. ओडिशामध्ये पैप्पलाद शाखा पुनरुज्जीवित केली गेली आहे।'
+    }
+  };
+
+  const intro = intros[vedaId]?.[lang as 'en' | 'mr'] || '';
+
+  return (
+    <div className="samhita-sub-panel">
+      <p className="samhita-intro">{intro}</p>
+      
+      <nav className="samhita-tabs-nav" role="tablist">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'shakhas'}
+          className={`samhita-tab-btn ${subTab === 'shakhas' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('shakhas')}
+        >
+          {lang === 'mr' ? 'शाखा / संहितेचे प्रकार' : 'Recensions (Shakhas)'}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'suktas'}
+          className={`samhita-tab-btn ${subTab === 'suktas' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('suktas')}
+        >
+          {lang === 'mr' ? 'लोकप्रिय सूक्ते व ऋचा' : 'Key Hymns & Verses'}
+        </button>
+      </nav>
+
+      {subTab === 'shakhas' ? (
+        <div className="shakha-grid">
+          {shakhas.map((shakha, i) => (
+            <ShakhaCard key={i} shakha={shakha} lang={lang} />
+          ))}
+        </div>
+      ) : (
+        <div className="sukta-list">
+          {suktas.map((sukta, i) => (
+            <KeySuktaCard key={i} sukta={sukta} lang={lang} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 const STRATA_EN = [
   { id: 'samhita', name: 'Saṃhitā', deva: 'संहिता', gloss: 'The mantra-collection itself. Hymns, formulae, chants — the body of the text as the priest performs it.' },
@@ -513,19 +1114,23 @@ function VedaTabs() {
               {veda.strataDetails[activeStratum].title}
             </h3>
           </div>
-          <ul className="details-list">
-            {veda.strataDetails[activeStratum].details.map((detail, idx) => (
-              <li key={idx}>
-                {detail.includes(' — ') ? (
-                  <>
-                    <strong>{detail.split(' — ')[0]}</strong> — {detail.split(' — ')[1]}
-                  </>
-                ) : (
-                  detail
-                )}
-              </li>
-            ))}
-          </ul>
+          {activeStratum === 'samhita' ? (
+            <SamhitaSubPanel vedaId={active} lang={lang} />
+          ) : (
+            <ul className="details-list">
+              {veda.strataDetails[activeStratum].details.map((detail, idx) => (
+                <li key={idx}>
+                  {detail.includes(' — ') ? (
+                    <>
+                      <strong>{detail.split(' — ')[0]}</strong> — {detail.split(' — ')[1]}
+                    </>
+                  ) : (
+                    detail
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </div>

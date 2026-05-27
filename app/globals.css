@@ -1999,3 +1999,318 @@ body::after {
   font-family: var(--font-display);
   font-weight: 600;
 }
+
+/* ----------------------------------------------------------
+   Samhita Stratum Expansion
+   ---------------------------------------------------------- */
+
+.samhita-sub-panel {
+  margin-top: 1.5rem;
+}
+
+.samhita-intro {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+
+.samhita-tabs-nav {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1.5rem;
+}
+
+.samhita-tab-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 0.5rem 0.25rem 0.75rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.samhita-tab-btn:hover {
+  color: var(--ink);
+}
+
+.samhita-tab-btn.is-active {
+  color: var(--maroon);
+  font-weight: 600;
+}
+
+.samhita-tab-btn.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--maroon);
+}
+
+/* Shakha Grid & Cards */
+.shakha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.shakha-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.shakha-card:hover {
+  border-color: var(--gold-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-soft);
+}
+
+.shakha-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shakha-title-group h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+.shakha-deva {
+  font-family: var(--font-deva);
+  font-size: 1rem;
+  color: var(--maroon);
+  margin-top: 0.2rem;
+}
+
+.shakha-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.shakha-badge.extant {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.shakha-badge.partial {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.shakha-badge.lost {
+  background: rgba(107, 114, 128, 0.1);
+  color: #4b5563;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.shakha-category {
+  font-size: 0.8rem;
+  color: var(--gold-deep);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.shakha-snippet {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  flex-grow: 1;
+}
+
+.shakha-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.75rem;
+  margin-top: auto;
+  font-size: 0.85rem;
+}
+
+.shakha-expand-hint {
+  color: var(--maroon);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.shakha-expanded-details {
+  border-top: 1px dashed var(--rule-strong);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: slideDown 200ms ease-out;
+}
+
+.shakha-meta-item {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.shakha-meta-item strong {
+  color: var(--ink);
+  font-family: var(--font-display);
+}
+
+.shakha-detail-desc {
+  font-size: 0.94rem;
+  line-height: 1.45;
+  color: var(--ink);
+  margin-top: 0.25rem;
+}
+
+/* Key Sukta / Verse UI */
+.sukta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sukta-item {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.sukta-item:hover {
+  border-color: var(--rule-strong);
+}
+
+.sukta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.sukta-title-group h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+.sukta-cite {
+  font-size: 0.88rem;
+  color: var(--gold-deep);
+  font-weight: 500;
+}
+
+.sukta-desc {
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.verse-toggle-btn {
+  background: none;
+  border: 1px solid var(--maroon);
+  color: var(--maroon);
+  padding: 0.4rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.verse-toggle-btn:hover {
+  background: var(--maroon);
+  color: white;
+}
+
+.verse-panel {
+  margin-top: 1rem;
+  background: var(--paper-deep);
+  border-left: 3px solid var(--gold-deep);
+  padding: 1.25rem;
+  border-radius: 0 6px 6px 0;
+  animation: slideDown 240ms ease-out;
+}
+
+.verse-panel .deva-line {
+  font-family: var(--font-deva);
+  font-size: 1.45rem;
+  color: var(--maroon);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.verse-panel .translit-line {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--gold-deep);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-sans);
+}
+
+.verse-panel .trans {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 0.5rem 0;
+}
+
+.verse-panel .cite {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
