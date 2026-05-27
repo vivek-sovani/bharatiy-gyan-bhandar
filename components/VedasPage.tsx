@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Glyph } from './Ornaments';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -214,7 +215,7 @@ export default function VedasView() {
         <div className="shell sec-hero-inner">
           <div className="sec-hero-copy">
             <div className="sec-crumb">
-              <a href="/" style={{ color: 'inherit', borderBottom: 0 }}>{t('detail.library')}</a>
+              <Link href="/" style={{ color: 'inherit', borderBottom: 0 }}>{t('detail.library')}</Link>
               <span className="sep">→</span>
               <span>{lang === 'mr' ? 'श्रुति' : 'Śruti'}</span>
               <span className="sep">→</span>
