@@ -63,7 +63,10 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
             </div>
           )}
 
-          {['darshanas', 'upavedas', 'nastika-darshanas', 'puranas', 'itihasa', 'agamas'].includes(sectionId || '') && (
+          {[
+            'darshanas', 'upavedas', 'nastika-darshanas', 'puranas', 'itihasa', 'agamas',
+            'gita', 'dharmashastra', 'arthashastra', 'kavya', 'bhakti', 'subhashita', 'parallel',
+          ].includes(sectionId || '') && (
             <div style={{ marginTop: '2rem' }}>
               <Link
                 href={`/${sectionId}/${item.id}/`}
