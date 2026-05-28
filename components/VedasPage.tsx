@@ -1666,6 +1666,450 @@ const ARANYAKA_PASSAGES_DATA: Record<string, KeySukta[]> = {
   ]
 };
 
+const UPANISHADS_DATA: Record<string, Shakha[]> = {
+  rig: [
+    {
+      name: 'Aitareya Upaniṣad',
+      deva: 'ऐतरेय उपनिषद्',
+      category: 'Śākala recension (sits in AĀ 2.4–3)',
+      categoryDeva: 'शाकल शाखा (ऐतरेय आरण्यक २.४–३)',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 chapters · 33 verses',
+      structureDeva: '३ अध्याय · ३३ श्लोक',
+      region: 'Pan-Indian; one of the ten mukhya Upaniṣads',
+      regionDeva: 'संपूर्ण भारतात; दहा मुख्य उपनिषदांपैकी एक',
+      desc: 'Cosmogony in three short chapters — the Self alone in the beginning, the act of looking, and the emergence of speech, breath, eye, ear and mind from a single original being. Source of the great mahāvākya prajñānaṃ brahma — "consciousness is Brahman".',
+      descDeva: 'तीन छोट्या अध्यायांत सृष्टि-कथा — प्रारंभी केवळ आत्मा होता, त्याचे पाहण्याचे कार्य, आणि एका मूळ अस्तित्वातून वाणी, श्वास, डोळा, कान व मन यांची उत्पत्ती. प्रसिद्ध महावाक्य "प्रज्ञानं ब्रह्म" — चैतन्य हेच ब्रह्म — याचा स्रोत.'
+    },
+    {
+      name: 'Kauṣītaki Upaniṣad',
+      deva: 'कौषीतकि उपनिषद्',
+      category: 'Bāṣkala / Śāṅkhāyana (sits in Kauṣ Ā 3–6)',
+      categoryDeva: 'बाष्कल / शाङ्खायन (कौषीतकि आरण्यक ३–६)',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '4 chapters',
+      structureDeva: '४ अध्याय',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'Four chapters of dialogue and analysis. Treats the path of the soul after death (the devayāna and pitṛyāna), the doctrine of prāṇa as the all-engulfing principle (saṃvarga-vidyā), and the identity of breath with the conscious self. Sometimes counted as the eleventh mukhya.',
+      descDeva: 'चार अध्यायांचा संवाद व विवेचन. मरणानंतर आत्म्याच्या मार्गाचे (देवयान व पितृयान), प्राण हाच सर्व-गिळणारा तत्त्व आहे या सिद्धांताचे (संवर्ग-विद्या), आणि श्वास व चेतन-आत्मा यांच्या ऐक्याचे विवेचन. कधीकधी अकरावा मुख्य उपनिषद म्हणून गणला जातो.'
+    },
+    {
+      name: 'Other Rigvedic Upaniṣads',
+      deva: 'इतर ऋग्वेदी उपनिषदे',
+      category: 'Late / sectarian',
+      categoryDeva: 'उत्तरकालीन / पंथीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '8 minor Upaniṣads in the Muktikā list',
+      structureDeva: 'मुक्तिका-सूचीत ८ लघु उपनिषदे',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The Muktikā count of Rigvedic Upaniṣads is ten. Beyond Aitareya and Kauṣītaki, the rest are mostly late and sectarian: Ātmabodha and Nirvāṇa (Vedānta), Mudgala (yoga), Nādabindu (sound-yoga), Akṣamālikā (rosary practice), Bahvṛca, Tripura and Saubhāgya-lakṣmī (Śākta).',
+      descDeva: 'मुक्तिका-सूचीनुसार ऋग्वेदी उपनिषदांची संख्या दहा. ऐतरेय व कौषीतकि सोडल्यास उरलेली बहुतेक उत्तरकालीन व पंथीय: आत्मबोध व निर्वाण (वेदान्त), मुद्गल (योग), नादबिन्दु (नादयोग), अक्षमालिका, बह्वृच, त्रिपुरा व सौभाग्य-लक्ष्मी (शाक्त).'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Bṛhad-āraṇyaka Upaniṣad',
+      deva: 'बृहदारण्यक उपनिषद्',
+      category: 'Śukla Yajurveda — both recensions',
+      categoryDeva: 'शुक्ल यजुर्वेद — दोन्ही शाखा',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '6 adhyāyas — the final book of the Śatapatha Brāhmaṇa',
+      structureDeva: '६ अध्याय — शतपथ ब्राह्मणाचा शेवटचा कांड',
+      region: 'North & Central India (Mādhyandina); South & East (Kāṇva)',
+      regionDeva: 'उत्तर व मध्य भारत (माध्यन्दिन); दक्षिण व पूर्व (काण्व)',
+      desc: 'The longest and arguably the deepest of the mukhya Upaniṣads. Yājñavalkya in the court of Janaka, the dialogue with Maitreyī on what survives death, the formula "neti, neti — not this, not this", and the great mahāvākya ahaṃ brahmāsmi — "I am Brahman". The canon’s most-cited Upaniṣad outside the Chāndogya.',
+      descDeva: 'मुख्य उपनिषदांत सर्वात मोठा व बहुधा सर्वात गहन. जनकाच्या राजसभेत याज्ञवल्क्य, मैत्रेयीशी मरणोत्तर काय टिकते यावरील संवाद, "नेति, नेति — हे नाही, हे नाही" हे सूत्र, आणि महावाक्य "अहं ब्रह्मास्मि" — "मीच ब्रह्म आहे". छान्दोग्यानंतर सर्वाधिक उद्धृत उपनिषद.'
+    },
+    {
+      name: 'Īśa Upaniṣad (Īśāvāsya)',
+      deva: 'ईशावास्य उपनिषद्',
+      category: 'Śukla Yajurveda — VS ch. 40',
+      categoryDeva: 'शुक्ल यजुर्वेद — वाजसनेयी संहिता अध्याय ४०',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '18 verses',
+      structureDeva: '१८ मंत्र',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The shortest of the mukhya, and the only one that sits inside a Saṃhitā rather than at the end of an Āraṇyaka. Eighteen verses on the world "covered by the Lord", on action without grasping, and on the play of immanence and transcendence. Recited as a single sitting; commented on by every major Vedāntin.',
+      descDeva: 'मुख्य उपनिषदांत सर्वात लहान, आणि एकमेव जो आरण्यकाच्या शेवटी नसून थेट संहितेच्या आत आहे. "ईशावास्यमिदं सर्वम्" या जगाविषयी, फलाशी न जोडलेल्या कर्माविषयी, आणि सगुण-निर्गुण खेळाविषयी अठरा मंत्र. एका बैठकीत पठण; प्रत्येक प्रमुख वेदान्ती भाष्यकाराने यावर भाष्य केले आहे.'
+    },
+    {
+      name: 'Taittirīya Upaniṣad',
+      deva: 'तैत्तिरीय उपनिषद्',
+      category: 'Kṛṣṇa Yajurveda — Taittirīya (TĀ 7–9)',
+      categoryDeva: 'कृष्ण यजुर्वेद — तैत्तिरीय (आरण्यक ७–९)',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 vallīs — Śikṣā, Brahmānanda, Bhṛgu',
+      structureDeva: '३ वल्ली — शिक्षा, ब्रह्मानन्द, भृगु',
+      region: 'South India and beyond',
+      regionDeva: 'दक्षिण भारत व पुढे',
+      desc: 'Three short books. The Śikṣā-vallī gives the foundational precepts of Vedic education (satyaṃ vada, dharmaṃ cara). The Brahmānanda-vallī gives the pañca-kośa model — the five sheaths of the self from anna through ānanda. The Bhṛgu-vallī tells of Bhṛgu repeatedly returning to his father Varuṇa with the question "what is Brahman?"',
+      descDeva: 'तीन छोटी पुस्तके. शिक्षा-वल्ली वैदिक शिक्षणाची मूलभूत आदेशवाक्ये देते (सत्यं वद, धर्मं चर). ब्रह्मानन्द-वल्ली पञ्च-कोष सिद्धांत देते — अन्नापासून आनन्दापर्यंत आत्म्याची पाच आवरणे. भृगु-वल्ली वडील वरुणाकडे "ब्रह्म म्हणजे काय?" हा प्रश्न घेऊन वारंवार जाणाऱ्या भृगूची कथा सांगते.'
+    },
+    {
+      name: 'Kaṭha Upaniṣad',
+      deva: 'कठ उपनिषद्',
+      category: 'Kṛṣṇa Yajurveda — Kāṭhaka',
+      categoryDeva: 'कृष्ण यजुर्वेद — काठक',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '2 adhyāyas · 6 vallīs · 119 verses',
+      structureDeva: '२ अध्याय · ६ वल्ली · ११९ मंत्र',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The boy Naciketas is sent by his father to Yama, lord of death, and asks the secret of what survives. Yama answers in verse — the chariot of the body (with the senses as horses, the mind as reins, the intellect as charioteer), the path "sharp as a razor’s edge", and the famous "uttiṣṭhata jāgrata — arise, awake". The source of much of the Bhagavad-gītā’s imagery.',
+      descDeva: 'पित्याने मृत्यू-देव यमाकडे पाठवलेला नचिकेत बालक त्याला विचारतो: मरणोत्तर काय टिकते? यम पद्यात उत्तर देतो — शरीराचा रथ (इंद्रिये अश्व, मन लगाम, बुद्धी सारथी), "क्षुरस्य धारा निशिता" — वस्तऱ्याच्या धारेसारखा कठीण मार्ग, आणि प्रसिद्ध "उत्तिष्ठत जाग्रत". भगवद्गीतेच्या अनेक प्रतिमांचा स्रोत.'
+    },
+    {
+      name: 'Śvetāśvatara Upaniṣad',
+      deva: 'श्वेताश्वतर उपनिषद्',
+      category: 'Kṛṣṇa Yajurveda — independent',
+      categoryDeva: 'कृष्ण यजुर्वेद — स्वतंत्र',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '6 adhyāyas · 113 verses',
+      structureDeva: '६ अध्याय · ११३ मंत्र',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'Belongs to a Kṛṣṇa-Yajurveda lineage now mostly lost; the Upaniṣad itself is fully preserved. The earliest Vedic text to treat Iśvara — the personal Lord — as the supreme reality, and the proximate scriptural source for both later Sāṅkhya and Śaiva theism. Sometimes counted as a mukhya, sometimes not.',
+      descDeva: 'आता बहुतेक लुप्त झालेल्या कृष्ण-यजुर्वेदी परंपरेचा भाग; उपनिषद् स्वतःच पूर्णपणे जतन. ईश्वर — व्यक्तिगत परमात्मा — हा परम वास्तव म्हणून प्रस्तुत करणारा सर्वात आरंभीचा वैदिक ग्रंथ, आणि पुढच्या सांख्य व शैव ईश्वरवादाचा निकटतम शास्त्रीय स्रोत. कधी मुख्य म्हणून गणला जातो, कधी नाही.'
+    },
+    {
+      name: 'Maitrāyaṇī (Maitrī) Upaniṣad',
+      deva: 'मैत्रायणी (मैत्री) उपनिषद्',
+      category: 'Kṛṣṇa Yajurveda — Maitrāyaṇī',
+      categoryDeva: 'कृष्ण यजुर्वेद — मैत्रायणी',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '7 prapāṭhakas',
+      structureDeva: '७ प्रपाठक',
+      region: 'Western Maharashtra, Gujarat',
+      regionDeva: 'पश्चिम महाराष्ट्र, गुजरात',
+      desc: 'A late Upaniṣad — its Sanskrit mixes Vedic and proto-classical idioms — but rich in early yoga material. Treats the six limbs of the inner discipline (prāṇāyāma, pratyāhāra, dhyāna, dhāraṇā, tarka, samādhi), the syllable Aum as the vehicle, and the meditation on the self in the heart. A direct ancestor of the classical aṣṭāṅga-yoga.',
+      descDeva: 'एक उत्तरकालीन उपनिषद — याची संस्कृत वैदिक व पूर्व-शास्त्रीय भाषा यांचे मिश्रण आहे — परंतु आरंभिक योग-विषयक सामग्रीने समृद्ध. आंतरिक साधनेच्या सहा अंगांवर (प्राणायाम, प्रत्याहार, ध्यान, धारणा, तर्क, समाधि), ओम् अक्षर वाहन म्हणून, आणि हृदयस्थ आत्म्यावरील ध्यानावर विवरण. शास्त्रीय अष्टांगयोगाचा थेट पूर्वज.'
+    },
+    {
+      name: 'Other Yajurvedic Upaniṣads',
+      deva: 'इतर यजुर्वेदी उपनिषदे',
+      category: 'Late / sectarian',
+      categoryDeva: 'उत्तरकालीन / पंथीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '19 (Śukla) + 32 (Kṛṣṇa) in the Muktikā list',
+      structureDeva: 'मुक्तिका-सूचीत १९ (शुक्ल) + ३२ (कृष्ण)',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The Mahānārāyaṇa (TĀ 10) and a long tail of late minor Upaniṣads — yoga (Yogatattva, Yogakuṇḍalinī), sannyāsa (Jābāla, Subāla, Paramahaṃsa, Turīyātīta), śaivism (Kālāgnirudra, Pañcabrahma), vaiṣṇavism (Tārasāra) and pan-Vedānta (Sarvasāra, Adhyātma). Together they make the Yajurveda the largest contributor of minor Upaniṣads to the 108.',
+      descDeva: 'महानारायण (तैत्तिरीय आरण्यक १०) आणि उत्तरकालीन लघु उपनिषदांची दीर्घ शृंखला — योग (योगतत्त्व, योगकुण्डलिनी), संन्यास (जाबाल, सुबाल, परमहंस, तुरीयातीत), शैव (कालाग्निरुद्र, पञ्चब्रह्म), वैष्णव (तारसार) आणि सर्व-वेदान्त (सर्वसार, अध्यात्म). एकत्र यांमुळेच यजुर्वेद १०८ मधील सर्वाधिक लघु उपनिषदे देणारा वेद ठरतो.'
+    }
+  ],
+  sama: [
+    {
+      name: 'Chāndogya Upaniṣad',
+      deva: 'छान्दोग्य उपनिषद्',
+      category: 'Kauthuma (Chāndogya Brāhmaṇa 3–10)',
+      categoryDeva: 'कौथुम (छान्दोग्य ब्राह्मण ३–१०)',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '8 prapāṭhakas',
+      structureDeva: '८ प्रपाठक',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'Long, narrative, foundational. The dialogues of Uddālaka and his son Śvetaketu (culminating in the mahāvākya tat tvam asi — "that thou art"), the salt-in-water demonstration, the fig-seed demonstration, the meditation on the syllable Aum as udgītha, and Sanatkumāra’s teaching of Nārada that bhūman — the wide, the great — is the highest. The most-quoted Upaniṣad in classical Vedānta.',
+      descDeva: 'दीर्घ, कथात्मक, पायाभूत. उद्दालक व त्याचा पुत्र श्वेतकेतु यांचे संवाद (शेवटी महावाक्य "तत्त्वमसि" — "ते तूच आहेस"), पाण्यातील मीठ व वडाच्या बीचे प्रात्यक्षिक, उद्गीथरूप ओम्-अक्षरावरील ध्यान, आणि सनत्कुमारांनी नारदाला दिलेली "भूमा — विशाल, महान — हाच परम" ही शिकवण. शास्त्रीय वेदान्तात सर्वाधिक उद्धृत उपनिषद.'
+    },
+    {
+      name: 'Kena Upaniṣad',
+      deva: 'केनोपनिषद्',
+      category: 'Jaiminīya / Talavakāra (JUB 4)',
+      categoryDeva: 'जैमिनीय / तलवकार (जैमिनीय उपनिषद् ब्राह्मण ४)',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '4 sections — opening in verse, closing in prose',
+      structureDeva: '४ खंड — आरंभी पद्य, अखेरीस गद्य',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'A short dialogue on the ground of all faculties. Opens with the question "by whom is the mind sent forth on its way? by whose order does the first breath go forth?" and answers not with a thing but with the impossibility of grasping the answerer. The prose half tells the parable of Indra and the yakṣa, in which the gods themselves do not know whose strength has just won the battle.',
+      descDeva: 'सर्व इंद्रियांच्या आधारावर एक छोटा संवाद. प्रश्न: "मन कोणाच्या प्रेरणेने प्रवृत्त होते? पहिला श्वास कोणाच्या आज्ञेने बाहेर पडतो?" — आणि उत्तर देणाऱ्याला पकडता न येण्याच्या अशक्यतेनेच त्याचे उत्तर. गद्य भाग इंद्र व यक्ष यांचा दृष्टान्त सांगतो: देवांनाच आपापल्या विजयामागे कोणाचे बळ आहे हे कळत नाही.'
+    },
+    {
+      name: 'Other Sāmavedic Upaniṣads',
+      deva: 'इतर सामवेदी उपनिषदे',
+      category: 'Late / sectarian',
+      categoryDeva: 'उत्तरकालीन / पंथीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '16 minor Upaniṣads in the Muktikā list',
+      structureDeva: 'मुक्तिका-सूचीत १६ लघु उपनिषदे',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'A late tail of mostly short Upaniṣads: Jābāla-darśana, Maitreya, Vajrasūcikā (against birth-based hierarchy), Rudrākṣa-jābāla, Yoga-cūḍāmaṇi, Saṃnyāsa, Mahā-vāmana, Vāsudeva and others. Several are explicitly sectarian — Śākta, Śaiva, Vaiṣṇava — and date from well into the second millennium.',
+      descDeva: 'उत्तरकालीन व बहुतेक लहान उपनिषदांची पुच्छ-शृंखला: जाबाल-दर्शन, मैत्रेय, वज्रसूचिका (जन्म-आधारित श्रेणीविरुद्ध), रुद्राक्ष-जाबाल, योग-चूडामणि, संन्यास, महा-वामन, वासुदेव आणि इतर. यांपैकी अनेक स्पष्टपणे पंथीय — शाक्त, शैव, वैष्णव — आणि दुसऱ्या सहस्रकातील.'
+    }
+  ],
+  atharva: [
+    {
+      name: 'Muṇḍaka Upaniṣad',
+      deva: 'मुण्डक उपनिषद्',
+      category: 'Atharvaveda — Śaunakīya',
+      categoryDeva: 'अथर्ववेद — शौनकीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '3 muṇḍakas × 2 khaṇḍas · 64 verses',
+      structureDeva: '३ मुण्डक × २ खंड · ६४ मंत्र',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'Opens with the distinction of higher and lower knowledge (parā vidyā and aparā vidyā). Source of the famous two-bird verse — one eats the fruit, the other only watches — and of the modern Indian republic’s motto satyam eva jayate, "truth alone triumphs". Verse throughout; among the most-recited mukhya Upaniṣads.',
+      descDeva: 'उच्चतर व निम्नतर ज्ञान (परा विद्या व अपरा विद्या) यांच्या भेदाने सुरुवात. प्रसिद्ध द्वा-सुपर्ण ऋचेचा स्रोत — एक पक्षी फळ खातो, दुसरा फक्त पाहतो — आणि आधुनिक भारत-गणराज्याचे बोधवाक्य "सत्यमेव जयते" चा स्रोत. संपूर्णतः पद्य; सर्वाधिक पठण होणाऱ्या मुख्य उपनिषदांपैकी एक.'
+    },
+    {
+      name: 'Māṇḍūkya Upaniṣad',
+      deva: 'माण्डूक्य उपनिषद्',
+      category: 'Atharvaveda — Śaunakīya',
+      categoryDeva: 'अथर्ववेद — शौनकीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '12 verses (the shortest mukhya)',
+      structureDeva: '१२ मंत्र (सर्वात लघु मुख्य उपनिषद)',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'Twelve verses on the four states of consciousness — waking, dream, deep sleep, and turīya, the "fourth" beyond all three — and on the syllable Aum, whose three sounds (a, u, m) correspond to the first three states and whose silence to the fourth. Gauḍapāda’s Kārikā on it, and Śaṅkara’s commentary on the Kārikā, are the foundational works of Advaita Vedānta.',
+      descDeva: 'चेतनेच्या चार अवस्थांवरील बारा मंत्र — जागृति, स्वप्न, सुषुप्ति, आणि या तिघांपलीकडची "चौथी" तुरीय — आणि ओम् अक्षरावर, ज्याचे तीन ध्वनी (अ, उ, म) पहिल्या तीन अवस्थांशी, आणि त्याचे मौन चौथीशी समीकृत. यावरील गौडपादाची कारिका, व त्या कारिकेवरील शंकराचार्यांचे भाष्य — हे अद्वैत वेदान्ताचे पायाभूत ग्रंथ.'
+    },
+    {
+      name: 'Praśna Upaniṣad',
+      deva: 'प्रश्न उपनिषद्',
+      category: 'Atharvaveda — Paippalāda',
+      categoryDeva: 'अथर्ववेद — पैप्पलाद',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '6 questions, prose',
+      structureDeva: '६ प्रश्न, गद्य',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'Six students approach the sage Pippalāda with six questions: where do creatures come from? what holds the body together? which power is supreme? what happens in sleep and dream? what is gained by meditation on Aum? and what is the being of sixteen parts? Pippalāda answers each in turn — in prose, plainly, and at length.',
+      descDeva: 'सहा जिज्ञासू पिप्पलाद ऋषींकडे सहा प्रश्न घेऊन येतात: प्राणी कोठून येतात? शरीराला कोण धरून ठेवते? कोणती शक्ती सर्वश्रेष्ठ? निद्रा व स्वप्नात काय घडते? ओम्-वर ध्यान केल्याने काय प्राप्त? आणि सोळा कलांचा पुरुष कोण? पिप्पलाद प्रत्येकाला क्रमाने उत्तर देतो — गद्यात, स्पष्ट, विस्ताराने.'
+    },
+    {
+      name: 'Sectarian Atharva Upaniṣads',
+      deva: 'पंथीय अथर्व उपनिषदे',
+      category: 'Late / sectarian',
+      categoryDeva: 'उत्तरकालीन / पंथीय',
+      status: 'Fully Extant',
+      statusDeva: 'पूर्णपणे उपलब्ध',
+      structure: '~28 minor Upaniṣads in the Muktikā list',
+      structureDeva: 'मुक्तिका-सूचीत सुमारे २८ लघु उपनिषदे',
+      region: 'Pan-Indian',
+      regionDeva: 'संपूर्ण भारतात',
+      desc: 'The Atharvaveda is the catch-basin for the largest cluster of minor Upaniṣads. Vaiṣṇava (Nṛsiṃha-tāpinī, Rāma-tāpinī, Gopāla-tāpinī), Śaiva (Atharvaśiras, Kaivalya, Bṛhajjābāla), Śākta (Sītā, Tripura-tāpinī), yoga-and-sannyāsa (Śāṇḍilya, Pāśupata-brahma, Tripādvibhūti). Together they show how late Hindu sectarianism repeatedly reached back to the Veda for legitimation.',
+      descDeva: 'लघु उपनिषदांचा सर्वात मोठा गट अथर्ववेदात पडतो. वैष्णव (नृसिंह-तापिनी, राम-तापिनी, गोपाल-तापिनी), शैव (अथर्वशिर, कैवल्य, बृहज्जाबाल), शाक्त (सीता, त्रिपुर-तापिनी), योग-संन्यास (शाण्डिल्य, पाशुपत-ब्रह्म, त्रिपाद्विभूति). एकत्र हे दर्शवतात की उत्तरकालीन हिंदू पंथवाद वैधतेसाठी पुन्हा पुन्हा वेदाकडे कसा वळला.'
+    }
+  ]
+};
+
+const UPANISHAD_PASSAGES_DATA: Record<string, KeySukta[]> = {
+  rig: [
+    {
+      name: 'Prajñānaṃ brahma — the Rigvedic mahāvākya',
+      nameDeva: 'प्रज्ञानं ब्रह्म — ऋग्वेदाचे महावाक्य',
+      citation: 'Aitareya Up. 3.1.3',
+      citationDeva: 'ऐतरेय उपनिषद् ३.१.३',
+      summary: 'The Aitareya’s final teaching, given as a single noun phrase: prajñānaṃ brahma — "consciousness is Brahman." One of the four classical mahāvākyas (great sayings) of Vedānta, paired with one Upaniṣad per principal Veda. The Rigvedic contribution.',
+      summaryDeva: 'ऐतरेय उपनिषदाची अंतिम शिकवण, एका शब्द-समासात दिलेली: "प्रज्ञानं ब्रह्म" — "चैतन्य हेच ब्रह्म". वेदान्ताच्या चार शास्त्रीय महावाक्यांपैकी एक, प्रत्येक मुख्य वेदाचे एक उपनिषद यांच्याशी जोडलेली. ऋग्वेदाचे योगदान.',
+      verse: {
+        deva: 'प्रज्ञानं ब्रह्म ॥',
+        trans: 'prajñānaṃ brahma ||',
+        cite: 'Aitareya Up. 3.1.3'
+      }
+    },
+    {
+      name: 'The Self alone in the beginning',
+      nameDeva: 'प्रारंभी केवळ आत्मा',
+      citation: 'Aitareya Up. 1.1.1',
+      citationDeva: 'ऐतरेय उपनिषद् १.१.१',
+      summary: 'The opening of the Aitareya. In the beginning there was the Self alone; he looked and desired companions. From his looking came speech, breath, sight, hearing and mind; from those, the worlds. A creation narrative not by act but by attention — the Upaniṣadic move beyond the Brāhmaṇa\'s sacrificial cosmogony.',
+      summaryDeva: 'ऐतरेयाची सुरुवात. प्रारंभी केवळ आत्मा होता; त्याने पाहिले व सहकारी इच्छिले. त्याच्या पाहण्यातून वाणी, श्वास, दृष्टी, श्रवण व मन उत्पन्न झाली; त्यांच्यातून लोक. कृतीने नव्हे तर लक्षाने सृष्टि — ब्राह्मणाच्या यज्ञ-सृष्टिकथेपलीकडची उपनिषदीय हालचाल.'
+    },
+    {
+      name: 'Prāṇa as the conscious self',
+      nameDeva: 'प्राण = चेतन-आत्मा',
+      citation: 'Kauṣītaki Up. 2',
+      citationDeva: 'कौषीतकि उपनिषद् २',
+      summary: 'The Kauṣītaki\'s central doctrine: prāṇa, the breath, is itself the prajñātman — the conscious self. Where the Aitareya names consciousness brahman, the Kauṣītaki names it breath. The same identification, two angles. The Chāndogya later weaves both together.',
+      summaryDeva: 'कौषीतकीची मुख्य शिकवण: प्राण — श्वास — हाच प्रज्ञात्मा, चेतन-आत्मा. ऐतरेय जिथे चैतन्याला "ब्रह्म" म्हणतो, कौषीतकि त्याला "प्राण" म्हणते. एकच ओळख, दोन कोनातून. पुढे छान्दोग्य दोन्ही एकत्र विणतो.'
+    },
+    {
+      name: 'The path of the dead — devayāna and pitṛyāna',
+      nameDeva: 'मृताचा मार्ग — देवयान व पितृयान',
+      citation: 'Kauṣītaki Up. 1',
+      citationDeva: 'कौषीतकि उपनिषद् १',
+      summary: 'The Kauṣītaki opens with the soul\'s journey after death — the two paths the Veda recognises. The devayāna goes through fire, day, the bright half of the moon, and the year, to the world of Brahmā, with no return. The pitṛyāna goes through smoke, night, the dark half, and the half-year, to the moon, and from there back to a new birth.',
+      summaryDeva: 'कौषीतकीची सुरुवात मरणोत्तर आत्म्याच्या प्रवासाने — वेदाने मानलेल्या दोन मार्गांची. देवयान — अग्नी, दिवस, शुक्ल पक्ष, उत्तरायण मार्गे ब्रह्मलोकाकडे, पुनरागमन नाही. पितृयान — धूम, रात्र, कृष्ण पक्ष, दक्षिणायन मार्गे चंद्रलोकाकडे, आणि तेथून पुन्हा नवीन जन्माकडे.'
+    }
+  ],
+  yajur: [
+    {
+      name: 'Ahaṃ brahmāsmi — the Yajurvedic mahāvākya',
+      nameDeva: 'अहं ब्रह्मास्मि — यजुर्वेदाचे महावाक्य',
+      citation: 'Bṛhad. Up. 1.4.10',
+      citationDeva: 'बृहदारण्यक उपनिषद् १.४.१०',
+      summary: 'In the beginning there was Brahman alone. It knew itself: "I am Brahman." That moment of self-knowing is the moment of creation — and the standing answer the Vedānta will give to the question "who am I?" The Yajurvedic mahāvākya, paired with the Bṛhad-āraṇyaka.',
+      summaryDeva: 'प्रारंभी केवळ ब्रह्म होते. त्याने स्वतःला जाणले: "अहं ब्रह्मास्मि" — "मीच ब्रह्म आहे". तो स्वतःला जाणण्याचा क्षण म्हणजेच सृष्टीचा क्षण — आणि "मी कोण?" या प्रश्नाला वेदान्ताने नेहमी दिलेले उत्तर. यजुर्वेदाचे महावाक्य, बृहदारण्यकाशी जोडलेले.',
+      verse: {
+        deva: 'अहं ब्रह्मास्मि ॥',
+        trans: 'ahaṃ brahmāsmi ||',
+        cite: 'Bṛhad. Up. 1.4.10'
+      }
+    },
+    {
+      name: 'Neti, neti — "not this, not this"',
+      nameDeva: 'नेति, नेति',
+      citation: 'Bṛhad. Up. 2.3.6 · 4.5.15',
+      citationDeva: 'बृहदारण्यक उपनिषद् २.३.६ · ४.५.१५',
+      summary: 'The Bṛhad-āraṇyaka\'s formula for what the self is not. Every description fails — neti, neti — not this, not this. The negative way (via negativa) of every later Advaita commentator, condensed into two Sanskrit words. The most quoted phrase in any Upaniṣad after tat tvam asi.',
+      summaryDeva: 'आत्मा काय नाही याचे बृहदारण्यकाचे सूत्र. प्रत्येक वर्णन अपुरे पडते — नेति, नेति — हे नाही, हे नाही. प्रत्येक नंतरच्या अद्वैत भाष्यकाराचा निषेधमार्ग (via negativa), दोन संस्कृत शब्दांत एकवटलेला. "तत्त्वमसि" नंतर कोणत्याही उपनिषदातील सर्वाधिक उद्धृत वाक्य.'
+    },
+    {
+      name: 'Yājñavalkya and Maitreyī',
+      nameDeva: 'याज्ञवल्क्य व मैत्रेयी',
+      citation: 'Bṛhad. Up. 2.4 · 4.5',
+      citationDeva: 'बृहदारण्यक उपनिषद् २.४ · ४.५',
+      summary: 'Before leaving the householder\'s life, Yājñavalkya offers to divide his wealth between his two wives. Maitreyī refuses: "what use is wealth if it cannot make me immortal?" Yājñavalkya answers her — "it is for the love of the self, my dear, that everything is dear" — in one of the most famous passages of philosophical literature anywhere.',
+      summaryDeva: 'गृहस्थाश्रम सोडण्यापूर्वी याज्ञवल्क्य आपली संपत्ती दोन पत्नींत वाटू पाहतो. मैत्रेयी नकार देते: "ज्या संपत्तीने अमर होता येत नाही, तिचा काय उपयोग?" — आणि याज्ञवल्क्य उत्तर देतो: "हे प्रिये, आत्म्याच्या प्रेमामुळेच सर्व काही प्रिय असते" — जगातील तत्त्वज्ञानीय साहित्यातील सर्वात प्रसिद्ध भागांपैकी एक.'
+    },
+    {
+      name: 'Naciketas and Yama',
+      nameDeva: 'नचिकेत व यम',
+      citation: 'Kaṭha Up. 1',
+      citationDeva: 'कठ उपनिषद् १',
+      summary: 'The boy Naciketas, sent by his father to Death, refuses every gift Yama offers — long life, sons, kingdoms, even the goddess Śrī — and insists on his one real question: what happens at death? Yama tries to dissuade him, fails, and finally answers. The framing for the entire Upaniṣad.',
+      summaryDeva: 'पित्याने मृत्यू-देव यमाकडे पाठवलेला नचिकेत बालक यमाने दिलेली प्रत्येक देणगी नाकारतो — दीर्घायुष्य, पुत्र, राज्ये, स्वतः श्रीदेवी सुद्धा — आणि एकाच खऱ्या प्रश्नावर अडून बसतो: मरणाच्या वेळी काय घडते? यम त्याला परावृत्त करण्याचा प्रयत्न करतो, अपयशी ठरतो, आणि शेवटी उत्तर देतो. संपूर्ण उपनिषदाची चौकट.'
+    },
+    {
+      name: 'The razor\'s edge',
+      nameDeva: 'क्षुरस्य धारा',
+      citation: 'Kaṭha Up. 1.3.14',
+      citationDeva: 'कठ उपनिषद् १.३.१४',
+      summary: 'Yama\'s most-quoted single verse. "Arise, awake — having reached the great ones, learn! Sharp as a razor\'s edge, hard to traverse, is that path, the wise say." Vivekananda took the first line as the motto for his lecture tours; the second line gave Somerset Maugham the title of his novel.',
+      summaryDeva: 'यमाची सर्वाधिक उद्धृत ऋचा. "उठा, जागे व्हा — महाजनांकडे जाऊन जाणून घ्या! वस्तऱ्याच्या धारेसारखा तीक्ष्ण, ओलांडण्यास कठीण असा तो मार्ग आहे, असे ज्ञानी सांगतात." विवेकानंदांनी पहिल्या ओळीला आपल्या व्याख्यानांचे ब्रीद बनवले; दुसऱ्या ओळीने सॉमरसेट मॉमला त्याच्या कादंबरीचे शीर्षक दिले.',
+      verse: {
+        deva: 'उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत ।\nक्षुरस्य धारा निशिता दुरत्यया दुर्गं पथस्तत्कवयो वदन्ति ॥',
+        trans: 'uttiṣṭhata jāgrata prāpya varān nibodhata |\nkṣurasya dhārā niśitā duratyayā durgaṃ pathas tat kavayo vadanti ||',
+        cite: 'Kaṭha Up. 1.3.14'
+      }
+    },
+    {
+      name: 'The pañca-kośa — the five sheaths',
+      nameDeva: 'पञ्चकोश',
+      citation: 'Taittirīya Up. 2',
+      citationDeva: 'तैत्तिरीय उपनिषद् २',
+      summary: 'The Brahmānanda-vallī gives the model that would organise every later Indian account of the person — five sheaths nested inside each other: the food-body (annamaya), the breath-body (prāṇamaya), the mental body (manomaya), the body of intellect (vijñānamaya), and at the centre the bliss-body (ānandamaya). The Upaniṣad\'s answer to "what am I?"',
+      summaryDeva: 'ब्रह्मानन्द-वल्ली पुढे प्रत्येक भारतीय व्यक्तित्व-विवरणाला आकार देणारा सिद्धांत देते — एकमेकांत बसलेली पाच आवरणे: अन्नमय (अन्न-शरीर), प्राणमय (प्राण-शरीर), मनोमय (मन-शरीर), विज्ञानमय (बुद्धी-शरीर), आणि सर्वात आत आनन्दमय (आनन्द-शरीर). "मी कोण आहे?" या प्रश्नाला उपनिषदाचे उत्तर.'
+    }
+  ],
+  sama: [
+    {
+      name: 'Tat tvam asi — the Sāmavedic mahāvākya',
+      nameDeva: 'तत्त्वमसि — सामवेदाचे महावाक्य',
+      citation: 'Chāndogya Up. 6.8.7',
+      citationDeva: 'छान्दोग्य उपनिषद् ६.८.७',
+      summary: 'Uddālaka teaches his son Śvetaketu the doctrine of the One, and closes each section with the same nine-syllable refrain: tat tvam asi, Śvetaketo — "that thou art." The deepest of the four mahāvākyas. The Sāmavedic contribution, and the verse Śaṅkara reads as the heart of the Upaniṣadic teaching.',
+      summaryDeva: 'उद्दालक आपला पुत्र श्वेतकेतूला एक-तत्त्वाचा सिद्धांत शिकवतो, आणि प्रत्येक खंडाच्या शेवटी तेच नव-अक्षरी पुनरुक्ती करतो: "तत्त्वमसि श्वेतकेतो" — "ते तूच आहेस". चार महावाक्यांतील सर्वात गहन. सामवेदाचे योगदान, आणि शंकराचार्य ज्या ऋचेला उपनिषदीय शिकवणीचे हृदय मानतात ती.',
+      verse: {
+        deva: 'स य एषोऽणिमैतदात्म्यमिदं सर्वम् । तत्सत्यम् । स आत्मा । तत्त्वमसि श्वेतकेतो ॥',
+        trans: 'sa ya eṣo\'ṇimaitad-ātmyam idaṃ sarvam | tat satyam | sa ātmā | tat tvam asi śvetaketo ||',
+        cite: 'Chāndogya Up. 6.8.7'
+      }
+    },
+    {
+      name: 'The salt in water',
+      nameDeva: 'पाण्यातील मीठ',
+      citation: 'Chāndogya Up. 6.13',
+      citationDeva: 'छान्दोग्य उपनिषद् ६.१३',
+      summary: 'Uddālaka asks Śvetaketu to drop a lump of salt into water and bring it back the next morning. The salt cannot be recovered, but every sip of the water tastes of it. "So too — you cannot see the subtle being, but it is everywhere. That subtle being — that thou art." The most elegant teaching demonstration in any Upaniṣad.',
+      summaryDeva: 'उद्दालक श्वेतकेतूला एक मिठाचा खडा पाण्यात टाकून दुसऱ्या सकाळी परत आणण्यास सांगतो. मीठ परत येत नाही, पण पाण्याचा प्रत्येक घोट खारट लागतो. "तसेच — सूक्ष्म तत्त्व तुला दिसत नाही, पण ते सर्वत्र आहे. ते सूक्ष्म तत्त्व — ते तूच आहेस." कोणत्याही उपनिषदातील सर्वात सुंदर शिकवण-प्रात्यक्षिक.'
+    },
+    {
+      name: 'By whom is the mind sent?',
+      nameDeva: 'कोणाच्या प्रेरणेने मन?',
+      citation: 'Kena Up. 1.1',
+      citationDeva: 'केन उपनिषद् १.१',
+      summary: 'The opening of the Kena — and its whole question in one verse. By whom is the mind sent forth, by whom is the first breath set in motion, by whom is the speech uttered, by whom are the eye and ear yoked? The rest of the Upaniṣad answers by refusing the form of the question.',
+      summaryDeva: 'केनाची सुरुवात — आणि त्याचा संपूर्ण प्रश्न एका ऋचेत. कोणाच्या प्रेरणेने मन प्रवृत्त होते, कोणाच्या आज्ञेने पहिला श्वास बाहेर पडतो, कोणाच्या प्रेरणेने वाणी उच्चारली जाते, डोळा व कान कोण जोडतो? उरलेले उपनिषद प्रश्नाचे रूपच नाकारून उत्तर देते.',
+      verse: {
+        deva: 'केनेषितं पतति प्रेषितं मनः केन प्राणः प्रथमः प्रैति युक्तः ।\nकेनेषितां वाचमिमां वदन्ति चक्षुः श्रोत्रं क उ देवो युनक्ति ॥',
+        trans: 'keneṣitaṃ patati preṣitaṃ manaḥ kena prāṇaḥ prathamaḥ praiti yuktaḥ |\nkeneṣitāṃ vācam imāṃ vadanti cakṣuḥ śrotraṃ ka u devo yunakti ||',
+        cite: 'Kena Up. 1.1'
+      }
+    },
+    {
+      name: 'Bhūman — the great is bliss',
+      nameDeva: 'भूमा — विशालता हाच आनंद',
+      citation: 'Chāndogya Up. 7.23–24',
+      citationDeva: 'छान्दोग्य उपनिषद् ७.२३–२४',
+      summary: 'Nārada has studied every Veda, every science, every art — and is still unhappy. Sanatkumāra leads him through a long ladder of provisional answers, each higher than the last, until he reaches the final one: "where one sees nothing else, hears nothing else, knows nothing else — that is the bhūman, the wide. The small is no bliss; the wide alone is bliss."',
+      summaryDeva: 'नारदाने सर्व वेद, सर्व शास्त्रे, सर्व कला अभ्यासल्या आहेत — आणि तरीही तो अप्रसन्न आहे. सनत्कुमार त्याला अस्थायी उत्तरांच्या दीर्घ शिडीवरून चढवतो, प्रत्येक मागच्यापेक्षा उच्च, शेवटी अंतिम उत्तरापर्यंत: "जिथे काही दुसरे दिसत नाही, ऐकू येत नाही, जाणवत नाही — ती भूमा, विशालता. लहान आनंद नाही; विशालता हाच आनंद."'
+    }
+  ],
+  atharva: [
+    {
+      name: 'Satyam eva jayate — truth alone triumphs',
+      nameDeva: 'सत्यमेव जयते',
+      citation: 'Muṇḍaka Up. 3.1.6',
+      citationDeva: 'मुण्डक उपनिषद् ३.१.६',
+      summary: 'The motto of the modern Indian republic. "Truth alone triumphs, not the false. By truth the divine path is stretched out, on which the sages, freed of desire, walk to where the supreme treasure of truth abides." The line is taken from the third book of the Muṇḍaka, abridged to its first four words on the national emblem.',
+      summaryDeva: 'आधुनिक भारत-गणराज्याचे बोधवाक्य. "सत्याचाच विजय होतो, असत्याचा नाही. सत्याने देवयान-मार्ग विस्तारलेला आहे, ज्यावर निष्काम ऋषि सत्याच्या परम निधानाकडे चालत जातात." ही ओळ मुण्डकाच्या तिसऱ्या मुण्डकातून घेतलेली; राष्ट्रीय प्रतीकावर पहिल्या चार शब्दांत संक्षिप्त.',
+      verse: {
+        deva: 'सत्यमेव जयते नानृतं सत्येन पन्था विततो देवयानः ।\nयेनाक्रमन्त्यृषयो ह्याप्तकामा यत्र तत्सत्यस्य परमं निधानम् ॥',
+        trans: 'satyam eva jayate nānṛtaṃ satyena panthā vitato devayānaḥ |\nyenākramanty ṛṣayo hy āptakāmā yatra tat satyasya paramaṃ nidhānam ||',
+        cite: 'Muṇḍaka Up. 3.1.6'
+      }
+    },
+    {
+      name: 'The two birds on the same tree',
+      nameDeva: 'द्वा सुपर्णा — एकाच वृक्षावरचे दोन पक्षी',
+      citation: 'Muṇḍaka Up. 3.1.1',
+      citationDeva: 'मुण्डक उपनिषद् ३.१.१',
+      summary: 'Two birds, friends, perched on the same tree. One eats the sweet fruit; the other only looks on. The image of the individual self and its silent witness, drawn from a single Vedic ṛc and re-used by every later Indian school — Sāṅkhya, Yoga, Vedānta, even the early Buddhists.',
+      summaryDeva: 'एकाच वृक्षावर बसलेले दोन सखा पक्षी. एक गोड फळ खातो; दुसरा फक्त पाहतो. व्यक्तिगत आत्मा व त्याचा मौनी साक्षी यांचे चित्र — एका वैदिक ऋचेतून घेतलेले, आणि नंतरच्या प्रत्येक भारतीय शाखेने पुन्हा वापरलेले — सांख्य, योग, वेदान्त, अगदी आरंभीच्या बौद्धांनी सुद्धा.',
+      verse: {
+        deva: 'द्वा सुपर्णा सयुजा सखाया समानं वृक्षं परिषस्वजाते ।\nतयोरन्यः पिप्पलं स्वाद्वत्त्यनश्नन्नन्यो अभिचाकशीति ॥',
+        trans: 'dvā suparṇā sayujā sakhāyā samānaṃ vṛkṣaṃ pariṣasvajāte |\ntayor anyaḥ pippalaṃ svādv atty anaśnann anyo abhicākaśīti ||',
+        cite: 'Muṇḍaka Up. 3.1.1'
+      }
+    },
+    {
+      name: 'Aum and the four states',
+      nameDeva: 'ओम् व चार अवस्था',
+      citation: 'Māṇḍūkya Up. 1',
+      citationDeva: 'माण्डूक्य उपनिषद् १',
+      summary: '"All this is Aum. The whole exposition of it is: what was, what is, what will be — all this is just Aum. And whatever else is beyond the three times — that too is just Aum." The opening verse of the Māṇḍūkya, and the starting point for the whole of Gauḍapāda\'s Kārikā and through it the whole of Advaita Vedānta.',
+      summaryDeva: '"हे सर्व ओम् आहे. त्याचे संपूर्ण विवरण: जे होते, जे आहे, जे होणार आहे — हे सर्व केवळ ओम् आहे. आणि याशिवाय जे काही तीन कालापलीकडे आहे — तेही केवळ ओम् आहे." माण्डूक्याची प्रारंभीची ऋचा, आणि संपूर्ण गौडपाद-कारिकेचा आणि त्याद्वारे संपूर्ण अद्वैत वेदान्ताचा प्रारंभबिंदु.',
+      verse: {
+        deva: 'ओमित्येतदक्षरमिदꣳ सर्वं तस्योपव्याख्यानं भूतं भवद्भविष्यदिति सर्वमोङ्कार एव ।\nयच्चान्यत्त्रिकालातीतं तदप्योङ्कार एव ॥',
+        trans: 'om ity etad akṣaram idaṃ sarvaṃ tasyopavyākhyānaṃ bhūtaṃ bhavad bhaviṣyad iti sarvam oṅkāra eva |\nyac cānyat trikālātītaṃ tad apy oṅkāra eva ||',
+        cite: 'Māṇḍūkya Up. 1'
+      }
+    },
+    {
+      name: 'The six questions to Pippalāda',
+      nameDeva: 'पिप्पलादांना सहा प्रश्न',
+      citation: 'Praśna Up. 1–6',
+      citationDeva: 'प्रश्न उपनिषद् १–६',
+      summary: 'Six students — Sukeśā, Satyakāma, Sauryāyaṇī, Kauśalya, Bhāradvāja, Kabandhi — go to Pippalāda and ask, in turn: where do creatures come from? what holds the body together? what is the highest power? what happens in dream and sleep? what is gained by meditating on Aum? and what is the puruṣa of sixteen parts? Each answer is given carefully, in prose, at length.',
+      summaryDeva: 'सहा जिज्ञासू — सुकेशा, सत्यकाम, सौर्यायणी, कौसल्य, भारद्वाज, कबन्धी — पिप्पलाद ऋषींकडे जाऊन क्रमाने विचारतात: प्राणी कोठून येतात? शरीराला कोण धरून ठेवते? सर्वश्रेष्ठ शक्ती कोणती? निद्रा व स्वप्नात काय घडते? ओम्-वर ध्यान केल्याने काय प्राप्त? आणि सोळा कलांचा पुरुष कोण? प्रत्येक उत्तर काळजीपूर्वक, गद्यात, विस्ताराने दिले जाते.'
+    }
+  ]
+};
+
 function ShakhaCard({ shakha, lang }: { shakha: Shakha; lang: string }) {
   const [expanded, setExpanded] = useState(false);
   const statusLabel = lang === 'mr' ? 'स्थिती' : 'Status';
@@ -1985,6 +2429,75 @@ function AranyakaSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
   );
 }
 
+function UpanishadSubPanel({ vedaId, lang }: { vedaId: string; lang: string }) {
+  const [subTab, setSubTab] = useState<'upanishads' | 'passages'>('upanishads');
+
+  const upanishads = UPANISHADS_DATA[vedaId] || [];
+  const passages = UPANISHAD_PASSAGES_DATA[vedaId] || [];
+
+  const intros: Record<string, { en: string; mr: string }> = {
+    rig: {
+      en: 'The Rigveda contributes two of the ten mukhya Upaniṣads — the Aitareya, embedded in the middle books of its Āraṇyaka, and the Kauṣītaki, embedded in chapters three through six of its own. Both end the Rigvedic line on the mahāvākya prajñānaṃ brahma — "consciousness is Brahman".',
+      mr: 'दहा मुख्य उपनिषदांपैकी दोन ऋग्वेदाची देणगी आहेत — ऐतरेय, जो त्याच्या आरण्यकाच्या मधल्या आरण्यकांत आहे, आणि कौषीतकि, जो त्याच्या आरण्यकाच्या तिसऱ्या ते सहाव्या अध्यायांत आहे. दोन्ही ऋग्वेदी परंपरेची सांगता "प्रज्ञानं ब्रह्म" — "चैतन्य हेच ब्रह्म" — या महावाक्याने करतात.'
+    },
+    yajur: {
+      en: 'The Yajurveda gives the canon more Upaniṣads than any other — six of the ten mukhya, between its Śukla and Kṛṣṇa branches, plus the long-recited Mahānārāyaṇa and the philosophically central Śvetāśvatara and Maitrāyaṇī. The Bṛhad-āraṇyaka sets the deep end of the corpus; the Kaṭha tells its most-loved story.',
+      mr: 'इतर कोणत्याही वेदापेक्षा यजुर्वेद कोशाला अधिक उपनिषदे देतो — दहा मुख्यांपैकी सहा, शुक्ल व कृष्ण शाखांमध्ये विभागलेली, शिवाय दीर्घपणे पठण होणारे महानारायण आणि तत्त्वज्ञानदृष्ट्या केंद्रीय श्वेताश्वतर व मैत्रायणी. बृहदारण्यक कोशाची खोली दर्शवते; कठ त्याची सर्वात आवडती कथा सांगते.'
+    },
+    sama: {
+      en: 'The Sāmaveda gives two mukhya Upaniṣads, and they could not be more different. The Chāndogya is the canon\'s longest narrative Upaniṣad, the home of "tat tvam asi" — "that thou art". The Kena is one of its shortest and sharpest, asking by whom the mind is sent forth and answering by refusing the question\'s form.',
+      mr: 'सामवेद दोन मुख्य उपनिषदे देतो, आणि ती परस्परांपासून अधिक वेगळी असू शकत नाहीत. छान्दोग्य हा कोशातील सर्वात मोठा कथात्मक उपनिषद, "तत्त्वमसि" — "ते तूच आहेस" — चे मूळ ठिकाण. केन हा त्याच्या सर्वात लहान व तीक्ष्ण उपनिषदांपैकी एक, मन कोणाच्या प्रेरणेने प्रवृत्त होते हे विचारणारा आणि प्रश्नाचे रूपच नाकारून त्याचे उत्तर देणारा.'
+    },
+    atharva: {
+      en: 'The Atharvaveda gives three of the ten mukhya — the Muṇḍaka (with the two-bird verse and satyam eva jayate), the twelve-verse Māṇḍūkya (the seed of the whole Advaita tradition), and the prose Praśna of the six questions. Beyond the three, it is the catch-basin for the largest cluster of sectarian minor Upaniṣads in the entire corpus.',
+      mr: 'दहा मुख्यांपैकी तीन अथर्ववेदाचे — मुण्डक (द्वा-सुपर्ण ऋचा व सत्यमेव जयते सह), बारा मंत्रांचे माण्डूक्य (संपूर्ण अद्वैत परंपरेचे बीज), आणि सहा प्रश्नांचा गद्य प्रश्न उपनिषद्. या तिघांच्या पलीकडे, संपूर्ण कोशातील पंथीय लघु उपनिषदांचा सर्वात मोठा गट याच वेदात पडतो.'
+    }
+  };
+
+  const intro = intros[vedaId]?.[lang as 'en' | 'mr'] || '';
+
+  return (
+    <div className="samhita-sub-panel">
+      <p className="samhita-intro">{intro}</p>
+
+      <nav className="samhita-tabs-nav" role="tablist">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'upanishads'}
+          className={`samhita-tab-btn ${subTab === 'upanishads' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('upanishads')}
+        >
+          {lang === 'mr' ? 'उपनिषद् ग्रंथ' : 'Upaniṣads'}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={subTab === 'passages'}
+          className={`samhita-tab-btn ${subTab === 'passages' ? 'is-active' : ''}`}
+          onClick={() => setSubTab('passages')}
+        >
+          {lang === 'mr' ? 'महावाक्ये व मुख्य आख्याने' : 'Mahāvākyas & Key Passages'}
+        </button>
+      </nav>
+
+      {subTab === 'upanishads' ? (
+        <div className="shakha-grid">
+          {upanishads.map((u, i) => (
+            <ShakhaCard key={i} shakha={u} lang={lang} />
+          ))}
+        </div>
+      ) : (
+        <div className="sukta-list">
+          {passages.map((p, i) => (
+            <KeySuktaCard key={i} sukta={p} lang={lang} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 const STRATA_EN = [
   { id: 'samhita', name: 'Saṃhitā', deva: 'संहिता', gloss: 'The mantra-collection itself. Hymns, formulae, chants — the body of the text as the priest performs it.' },
   { id: 'brahmana', name: 'Brāhmaṇa', deva: 'ब्राह्मण', gloss: 'Prose treatises that gloss the rite — its meaning, the legend behind each act, the cosmic correspondence each gesture intends.' },
@@ -2122,6 +2635,8 @@ function VedaTabs() {
             <BrahmanaSubPanel vedaId={active} lang={lang} />
           ) : activeStratum === 'aranyaka' ? (
             <AranyakaSubPanel vedaId={active} lang={lang} />
+          ) : activeStratum === 'upanishad' ? (
+            <UpanishadSubPanel vedaId={active} lang={lang} />
           ) : (
             <ul className="details-list">
               {veda.strataDetails[activeStratum].details.map((detail, idx) => (
