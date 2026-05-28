@@ -22,7 +22,7 @@ export function DailyStrip() {
         <Mandala className="mandala" />
         <div className="quote">
           <span className="deva-block">{DAILY.deva}</span>
-          <span className="translit-line">{transliterate(DAILY.deva)}</span>
+          {lang === 'en' && <span className="translit-line">{transliterate(DAILY.deva)}</span>}
           <span>{DAILY.trans}</span>
         </div>
         <div className="attrib">{DAILY.source}</div>

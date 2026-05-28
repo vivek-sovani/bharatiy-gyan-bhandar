@@ -9,7 +9,7 @@ const KV_KEYS = ['detail.recension', 'detail.authors', 'detail.range', 'detail.s
 
 export default function SectionTabs({ items }: { items: SectionItem[] }) {
   const [active, setActive] = useState(items[0].id);
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   const item = items.find((i) => i.id === active)!;
   const idx = items.findIndex((i) => i.id === active);
@@ -72,11 +72,13 @@ export default function SectionTabs({ items }: { items: SectionItem[] }) {
                     <div key={i}>{l}</div>
                   ))}
                 </div>
-                <div className="translit-line">
-                  {transliterate(item.opening.deva).split('\n').map((l, i) => (
-                    <div key={i}>{l}</div>
-                  ))}
-                </div>
+                {lang === 'en' && (
+                  <div className="translit-line">
+                    {transliterate(item.opening.deva).split('\n').map((l, i) => (
+                      <div key={i}>{l}</div>
+                    ))}
+                  </div>
+                )}
                 <p className="trans">{item.opening.trans}</p>
                 <div className="cite">{item.opening.cite}</div>
               </div>

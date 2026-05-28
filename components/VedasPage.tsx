@@ -2207,11 +2207,13 @@ function KeySuktaCard({ sukta, lang }: { sukta: KeySukta; lang: string }) {
                   <div key={i}>{l}</div>
                 ))}
               </div>
-              <div className="translit-line">
-                {transliterate(sukta.verse.deva).split('\n').map((l, i) => (
-                  <div key={i}>{l}</div>
-                ))}
-              </div>
+              {lang === 'en' && (
+                <div className="translit-line">
+                  {transliterate(sukta.verse.deva).split('\n').map((l, i) => (
+                    <div key={i}>{l}</div>
+                  ))}
+                </div>
+              )}
               <p className="trans">{sukta.verse.trans}</p>
               <div className="cite">{sukta.verse.cite}</div>
             </div>
@@ -2578,11 +2580,13 @@ function VedaTabs() {
                 <div key={i}>{l}</div>
               ))}
             </div>
-            <div className="translit-line">
-              {transliterate(veda.opening.deva).split('\n').map((l, i) => (
-                <div key={i}>{l}</div>
-              ))}
-            </div>
+            {lang === 'en' && (
+              <div className="translit-line">
+                {transliterate(veda.opening.deva).split('\n').map((l, i) => (
+                  <div key={i}>{l}</div>
+                ))}
+              </div>
+            )}
             <p className="trans">{veda.opening.trans}</p>
             <div className="cite">{veda.opening.cite}</div>
           </div>

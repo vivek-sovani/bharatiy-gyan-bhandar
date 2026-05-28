@@ -30,11 +30,13 @@ export default function Hero() {
                 <div key={i}>{l}</div>
               ))}
             </div>
-            <div className="translit-line">
-              {transliterate(HERO_SHLOKA.deva).split('\n').map((l, i) => (
-                <div key={i}>{l}</div>
-              ))}
-            </div>
+            {lang === 'en' && (
+              <div className="translit-line">
+                {transliterate(HERO_SHLOKA.deva).split('\n').map((l, i) => (
+                  <div key={i}>{l}</div>
+                ))}
+              </div>
+            )}
             <div className="trans">{HERO_SHLOKA.trans}</div>
             <div className="source">
               <span>{HERO_SHLOKA.source}</span>
