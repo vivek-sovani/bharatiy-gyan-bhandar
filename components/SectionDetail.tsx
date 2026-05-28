@@ -62,7 +62,7 @@ function SecHero({ data, id }: { data: SectionDetail; id: string }) {
 }
 
 function GridLayout({ items, sectionId }: { items: SectionItem[]; sectionId: string }) {
-  const isLink = sectionId === 'vedangas';
+  const isLink = sectionId === 'vedangas' || sectionId === 'upanishads';
 
   return (
     <div className="sec-grid">
