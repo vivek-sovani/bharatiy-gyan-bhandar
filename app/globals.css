@@ -2584,4 +2584,18 @@ html[lang="mr"] .essay .meta {
   font-size: 11px;
 }
 
+/* ──────────────────────────────────────────────────────── Clickable Section Grid Items */
+.sec-grid-item.is-link {
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms, box-shadow 180ms;
+}
+.sec-grid-item.is-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--maroon-soft);
+  box-shadow: 0 4px 12px oklch(from var(--maroon) l c h / 0.05);
+}
+.sec-grid-item.is-link:active {
+  background: var(--paper-deep);
+}
+
 

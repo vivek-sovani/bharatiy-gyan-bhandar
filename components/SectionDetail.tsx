@@ -61,34 +61,49 @@ function SecHero({ data, id }: { data: SectionDetail; id: string }) {
   );
 }
 
-function GridLayout({ items }: { items: SectionItem[] }) {
+function GridLayout({ items, sectionId }: { items: SectionItem[]; sectionId: string }) {
+  const isLink = sectionId === 'vedangas';
+
   return (
     <div className="sec-grid">
-      {items.map((it, i) => (
-        <article key={it.id} className="sec-grid-item">
-          <div className="ord">
-            <span>№ {String(i + 1).padStart(2, '0')}</span>
-          </div>
-          <h3>{it.title}</h3>
-          {it.title !== it.deva && <div className="deva-name deva-only">{it.deva}</div>}
-          {it.epithet && <div className="epithet">{it.epithet}</div>}
-          <p>{it.summary}</p>
-          {it.facets && (
-            <div className="sec-facets">
-              {it.facets.map((f) => (
-                <span key={f} className="facet">{f}</span>
-              ))}
+      {items.map((it, i) => {
+        const content = (
+          <article className={`sec-grid-item ${isLink ? 'is-link' : ''}`}>
+            <div className="ord">
+              <span>№ {String(i + 1).padStart(2, '0')}</span>
+              {isLink && <span className="arrow" style={{ color: 'var(--maroon)' }}>→</span>}
             </div>
-          )}
-          {it.meta && (
-            <div className="meta-strip">
-              {it.meta.map((m) => (
-                <span key={m}>{m}</span>
-              ))}
-            </div>
-          )}
-        </article>
-      ))}
+            <h3>{it.title}</h3>
+            {it.title !== it.deva && <div className="deva-name deva-only">{it.deva}</div>}
+            {it.epithet && <div className="epithet">{it.epithet}</div>}
+            <p>{it.summary}</p>
+            {it.facets && (
+              <div className="sec-facets">
+                {it.facets.map((f) => (
+                  <span key={f} className="facet">{f}</span>
+                ))}
+              </div>
+            )}
+            {it.meta && (
+              <div className="meta-strip">
+                {it.meta.map((m) => (
+                  <span key={m}>{m}</span>
+                ))}
+              </div>
+            )}
+          </article>
+        );
+
+        if (isLink) {
+          return (
+            <Link key={it.id} href={`/${sectionId}/${it.id}/`} style={{ display: 'contents', color: 'inherit' }}>
+              {content}
+            </Link>
+          );
+        }
+
+        return <div key={it.id} style={{ display: 'contents' }}>{content}</div>;
+      })}
     </div>
   );
 }
@@ -222,7 +237,7 @@ export default function SectionDetailView({ id, data: fallbackData }: { id: stri
       <section className="frame">
         <div className="shell">
           {finalData.layout === 'tabs' && finalData.items && <SectionTabs items={finalData.items} />}
-          {finalData.layout === 'grid' && finalData.items && <GridLayout items={finalData.items} />}
+          {finalData.layout === 'grid' && finalData.items && <GridLayout items={finalData.items} sectionId={id} />}
           {finalData.layout === 'primer' && <PrimerLayout />}
         </div>
       </section>
