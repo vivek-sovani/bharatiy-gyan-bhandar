@@ -41,7 +41,7 @@ export default function SectionTabs({ items }: { items: SectionItem[] }) {
         <div className="sec-panel-l">
           <div className="eyebrow">№ 0{idx + 1} of {items.length}</div>
           <h2>{item.title}</h2>
-          <div className="deva-name deva-only">{item.deva}</div>
+          {item.title !== item.deva && <div className="deva-name deva-only">{item.deva}</div>}
           <div className="epithet">{item.epithet}</div>
           <p className="summary">{item.summary}</p>
 

@@ -68,11 +68,18 @@ function GridLayout({ items }: { items: SectionItem[] }) {
         <article key={it.id} className="sec-grid-item">
           <div className="ord">
             <span>№ {String(i + 1).padStart(2, '0')}</span>
-            {it.epithet && <span className="tag">{it.epithet}</span>}
           </div>
           <h3>{it.title}</h3>
-          <div className="deva-name deva-only">{it.deva}</div>
+          {it.title !== it.deva && <div className="deva-name deva-only">{it.deva}</div>}
+          {it.epithet && <div className="epithet">{it.epithet}</div>}
           <p>{it.summary}</p>
+          {it.facets && (
+            <div className="sec-facets">
+              {it.facets.map((f) => (
+                <span key={f} className="facet">{f}</span>
+              ))}
+            </div>
+          )}
           {it.meta && (
             <div className="meta-strip">
               {it.meta.map((m) => (

@@ -150,6 +150,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const saved = localStorage.getItem('bgb-lang') as Language;
     if (saved === 'mr' || saved === 'en') {
       setLangState(saved);
+      document.documentElement.setAttribute('lang', saved);
+    } else {
+      document.documentElement.setAttribute('lang', 'en');
     }
   }, []);
 
@@ -157,6 +160,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLangState(newLang);
     try {
       localStorage.setItem('bgb-lang', newLang);
+      document.documentElement.setAttribute('lang', newLang);
     } catch {}
   };
 

@@ -2568,4 +2568,20 @@ body::after {
   }
 }
 
+/* ──────────────────────────────────────────────────────── Marathi Localization Overrides */
+html[lang="mr"] .facet,
+html[lang="mr"] .meta-strip,
+html[lang="mr"] .sec-grid-item .meta-strip span,
+html[lang="mr"] .sec-crumb,
+html[lang="mr"] .see-also h4,
+html[lang="mr"] .ftr h5,
+html[lang="mr"] .ftr-base,
+html[lang="mr"] .dinacharya .seg .hr,
+html[lang="mr"] .essay .meta {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 11px;
+}
+
 
