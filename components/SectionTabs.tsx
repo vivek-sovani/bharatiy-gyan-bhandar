@@ -63,13 +63,17 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
             </div>
           )}
 
-          {sectionId === 'darshanas' && (
+          {['darshanas', 'upavedas'].includes(sectionId || '') && (
             <div style={{ marginTop: '2rem' }}>
               <Link
-                href={`/darshanas/${item.id}/`}
+                href={`/${sectionId}/${item.id}/`}
                 className="btn-cta"
               >
-                {lang === 'mr' ? 'तपशीलवार दार्शनिक परिचय वाचा →' : 'Read detailed philosophical profile →'}
+                {sectionId === 'darshanas' ? (
+                  lang === 'mr' ? 'तपशीलवार दार्शनिक परिचय वाचा →' : 'Read detailed philosophical profile →'
+                ) : (
+                  lang === 'mr' ? 'तपशीलवार परिचय वाचा →' : 'Read detailed profile →'
+                )}
               </Link>
             </div>
           )}
