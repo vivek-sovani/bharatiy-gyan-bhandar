@@ -2,7 +2,7 @@
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import BranchTree from '@/components/BranchTree';
+import Timeline from '@/components/Timeline';
 import SectionsGrid from '@/components/SectionsGrid';
 import Dinacharya from '@/components/Dinacharya';
 import { DailyStrip, Essays, Sanskrit, Footer } from '@/components/Frames';
@@ -17,20 +17,16 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <section id="tree" className="frame">
+      <section id="timeline" className="frame">
         <div className="shell">
           <div className="frame-hd">
             <div className="title-block">
-              <div className="eyebrow"><Glyph /> {t('tree.eyebrow')}</div>
-              <h2>{t('tree.title')}</h2>
+              <div className="eyebrow"><Glyph /> {t('timeline.eyebrow')}</div>
+              <h2>{t('timeline.title')}</h2>
             </div>
-            <div className="meta">{t('tree.hover_prompt')}</div>
+            <div className="meta">{t('timeline.prompt')}</div>
           </div>
-          <div className="branches">
-            <BranchTree branchId="shruti" />
-            <BranchTree branchId="smriti" />
-            <BranchTree branchId="itara" />
-          </div>
+          <Timeline />
         </div>
       </section>
 

@@ -20,8 +20,8 @@ export default function Header() {
           </span>
         </Link>
         <nav className="hdr-nav" aria-label="Primary">
-          <Link href="/#tree">{t('nav.texts')}</Link>
-          <Link href="/#tree">{t('nav.tree')}</Link>
+          <Link href="/#timeline">{t('nav.texts')}</Link>
+          <Link href="/#timeline">{t('nav.tree')}</Link>
           <Link href="/#sections">{t('nav.library')}</Link>
           <Link href="/#dinacharya">{t('nav.lifestyle')}</Link>
           <Link href="/#essays">{t('nav.essays')}</Link>

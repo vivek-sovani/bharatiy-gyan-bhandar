@@ -16,7 +16,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
   en: {
     // Nav
     'nav.texts': 'Texts',
-    'nav.tree': 'Tree',
+    'nav.tree': 'Timeline',
     'nav.library': 'Library',
     'nav.lifestyle': 'Lifestyle',
     'nav.essays': 'Essays',
@@ -35,6 +35,10 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'tree.branch': 'Branch',
     'tree.streams': 'streams',
     'tree.open_page': 'Open page →',
+    // Timeline
+    'timeline.eyebrow': 'Chronology of the corpus',
+    'timeline.title': 'The historical timeline',
+    'timeline.prompt': 'Click any stream to expand details',
     // Grid
     'grid.eyebrow': 'The library',
     'grid.title': 'Browse the corpus',
@@ -76,7 +80,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
   mr: {
     // Nav
     'nav.texts': 'ग्रंथ',
-    'nav.tree': 'ज्ञानवृक्ष',
+    'nav.tree': 'कालरेषा',
     'nav.library': 'वाचनालय',
     'nav.lifestyle': 'दिनचर्या',
     'nav.essays': 'निबंध',
@@ -95,6 +99,10 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'tree.branch': 'शाखा',
     'tree.streams': 'प्रवाह',
     'tree.open_page': 'पृष्ठ उघडा →',
+    // Timeline
+    'timeline.eyebrow': 'ज्ञानकोश कालक्रम',
+    'timeline.title': 'ऐतिहासिक कालरेषा',
+    'timeline.prompt': 'तपशील पाहण्यासाठी कोणत्याही प्रवाहावर क्लिक करा',
     // Grid
     'grid.eyebrow': 'ग्रंथालय',
     'grid.title': 'ज्ञानकोश चाळा',
