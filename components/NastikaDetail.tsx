@@ -69,61 +69,63 @@ export default function NastikaDetail({ id }: { id: string }) {
 
       {/* Main Content & Verse Section */}
       <section className="frame">
-        <div className="shell sec-panel">
-          <div className="sec-panel-l">
-            <div className="eyebrow" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <Glyph /> {lang === 'mr' ? 'दर्शन परिचय' : 'School Profile'}
-            </div>
-            
-            <dl className="sec-kv" style={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
-              <div className="sec-kv-row">
-                <dt>{lang === 'mr' ? 'प्रणेते / संस्थापक' : 'Founder/Key Sage'}</dt>
-                <dd>{data.founder}</dd>
+        <div className="shell">
+          <div className="sec-panel">
+            <div className="sec-panel-l">
+              <div className="eyebrow" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Glyph /> {lang === 'mr' ? 'दर्शन परिचय' : 'School Profile'}
               </div>
-              <div className="sec-kv-row">
-                <dt>{lang === 'mr' ? 'प्रामाणिक ग्रंथ' : 'Key Literature'}</dt>
-                <dd>{data.texts}</dd>
-              </div>
-              <div className="sec-kv-row">
-                <dt>{lang === 'mr' ? 'प्रमाण मीमांसा' : 'Epistemology'}</dt>
-                <dd>{data.epistemology}</dd>
-              </div>
-              <div className="sec-kv-row">
-                <dt>{lang === 'mr' ? 'तत्वज्ञान / तत्वमीमांसा' : 'Metaphysics'}</dt>
-                <dd>{data.metaphysics}</dd>
-              </div>
-            </dl>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {data.explanation.slice(1).map((para, idx) => (
-                <p key={idx} style={{ fontSize: '1.08rem', lineHeight: '1.65', color: 'var(--ink-soft)', margin: 0 }}>
-                  {para}
-                </p>
-              ))}
-            </div>
-          </div>
-
-          <aside className="sec-aside">
-            <div className="eyebrow" style={{ color: 'var(--gold-deep)' }}>{t('detail.the_opening')}</div>
-            <div className="sec-shloka" style={{ marginTop: '0.6rem' }}>
-              <CornerOrn className="tl" />
-              <CornerOrn className="tr" />
-              <CornerOrn className="bl" />
-              <CornerOrn className="br" />
-              <div className="deva-line deva-only" style={{ fontSize: '1.35rem', lineHeight: '1.7', whiteSpace: 'pre-line' }}>
-                {data.verse.deva}
-              </div>
-              {lang === 'en' && (
-                <div className="translit-line" style={{ marginTop: '0.8rem', whiteSpace: 'pre-line' }}>
-                  {data.verse.translit}
+              
+              <dl className="sec-kv" style={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
+                <div className="sec-kv-row">
+                  <dt>{lang === 'mr' ? 'प्रणेते / संस्थापक' : 'Founder/Key Sage'}</dt>
+                  <dd>{data.founder}</dd>
                 </div>
-              )}
-              <p className="trans" style={{ marginTop: '1rem', fontStyle: 'italic', fontSize: '0.98rem' }}>
-                {data.verse.trans}
-              </p>
-              <div className="cite" style={{ marginTop: '1rem', fontWeight: 600 }}>{data.verse.cite}</div>
+                <div className="sec-kv-row">
+                  <dt>{lang === 'mr' ? 'प्रामाणिक ग्रंथ' : 'Key Literature'}</dt>
+                  <dd>{data.texts}</dd>
+                </div>
+                <div className="sec-kv-row">
+                  <dt>{lang === 'mr' ? 'प्रमाण मीमांसा' : 'Epistemology'}</dt>
+                  <dd>{data.epistemology}</dd>
+                </div>
+                <div className="sec-kv-row">
+                  <dt>{lang === 'mr' ? 'तत्वज्ञान / तत्वमीमांसा' : 'Metaphysics'}</dt>
+                  <dd>{data.metaphysics}</dd>
+                </div>
+              </dl>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                {data.explanation.slice(1).map((para, idx) => (
+                  <p key={idx} style={{ fontSize: '1.08rem', lineHeight: '1.65', color: 'var(--ink-soft)', margin: 0 }}>
+                    {para}
+                  </p>
+                ))}
+              </div>
             </div>
-          </aside>
+
+            <aside className="sec-aside">
+              <div className="eyebrow" style={{ color: 'var(--gold-deep)' }}>{t('detail.the_opening')}</div>
+              <div className="sec-shloka" style={{ marginTop: '0.6rem' }}>
+                <CornerOrn className="tl" />
+                <CornerOrn className="tr" />
+                <CornerOrn className="bl" />
+                <CornerOrn className="br" />
+                <div className="deva-line deva-only" style={{ fontSize: '1.35rem', lineHeight: '1.7', whiteSpace: 'pre-line' }}>
+                  {data.verse.deva}
+                </div>
+                {lang === 'en' && (
+                  <div className="translit-line" style={{ marginTop: '0.8rem', whiteSpace: 'pre-line' }}>
+                    {data.verse.translit}
+                  </div>
+                )}
+                <p className="trans" style={{ marginTop: '1rem', fontStyle: 'italic', fontSize: '0.98rem' }}>
+                  {data.verse.trans}
+                </p>
+                <div className="cite" style={{ marginTop: '1rem', fontWeight: 600 }}>{data.verse.cite}</div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
