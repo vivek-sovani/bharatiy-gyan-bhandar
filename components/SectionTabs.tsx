@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import type { SectionItem } from '@/lib/section-data';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
 
 const KV_KEYS = ['detail.recension', 'detail.authors', 'detail.range', 'detail.scope'];
 
-export default function SectionTabs({ items }: { items: SectionItem[] }) {
+export default function SectionTabs({ items, sectionId }: { items: SectionItem[]; sectionId?: string }) {
   const [active, setActive] = useState(items[0].id);
   const { lang, t } = useLanguage();
 
@@ -59,6 +60,17 @@ export default function SectionTabs({ items }: { items: SectionItem[] }) {
               {item.facets.map((f) => (
                 <span key={f} className="facet">{f}</span>
               ))}
+            </div>
+          )}
+
+          {sectionId === 'darshanas' && (
+            <div style={{ marginTop: '2rem' }}>
+              <Link
+                href={`/darshanas/${item.id}/`}
+                className="btn-cta"
+              >
+                {lang === 'mr' ? 'तपशीलवार दार्शनिक परिचय वाचा →' : 'Read detailed philosophical profile →'}
+              </Link>
             </div>
           )}
         </div>

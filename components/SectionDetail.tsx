@@ -236,7 +236,7 @@ export default function SectionDetailView({ id, data: fallbackData }: { id: stri
 
       <section className="frame">
         <div className="shell">
-          {finalData.layout === 'tabs' && finalData.items && <SectionTabs items={finalData.items} />}
+          {finalData.layout === 'tabs' && finalData.items && <SectionTabs items={finalData.items} sectionId={id} />}
           {finalData.layout === 'grid' && finalData.items && <GridLayout items={finalData.items} sectionId={id} />}
           {finalData.layout === 'primer' && <PrimerLayout />}
         </div>
