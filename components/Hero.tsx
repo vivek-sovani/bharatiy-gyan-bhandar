@@ -6,7 +6,7 @@ import { HERO_SHLOKA as HERO_SHLOKA_EN, FEATURE as FEATURE_EN } from '@/lib/data
 import { HERO_SHLOKA as HERO_SHLOKA_MR, FEATURE as FEATURE_MR } from '@/lib/data_mr';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
-import TodayDate from './TodayDate';
+import Panchanga from './Panchanga';
 
 export default function Hero() {
   const [showTrans, setShowTrans] = useState(false);
@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="shell hero-edit">
         <div className="hero-shloka">
           <div className="eyebrow">
-            <span className="dot" /> <TodayDate />
+            <span className="dot" /> <Panchanga />
           </div>
           <h1>
             {t('hero.title')}

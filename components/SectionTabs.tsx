@@ -1,15 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { SectionItem } from '@/lib/section-data';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
 import { saveScroll } from '@/lib/scroll';
 
+const TAB_KEY = (sectionId?: string) => `tab:${sectionId || 'unknown'}`;
+
 export default function SectionTabs({ items, sectionId }: { items: SectionItem[]; sectionId?: string }) {
+  // Restore the previously-active tab on mount (e.g. when returning from a
+  // detail page). Falls back to the first item on a fresh visit.
   const [active, setActive] = useState(items[0].id);
   const { lang, t } = useLanguage();
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const saved = sessionStorage.getItem(TAB_KEY(sectionId));
+    if (saved && items.some((i) => i.id === saved)) {
+      setActive(saved);
+      sessionStorage.removeItem(TAB_KEY(sectionId));
+    }
+  }, [sectionId, items]);
 
   const item = items.find((i) => i.id === active)!;
   const idx = items.findIndex((i) => i.id === active);
@@ -66,7 +79,14 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
               <Link
                 href={`/${sectionId}/${item.id}/`}
                 className="btn-cta"
-                onClick={() => saveScroll(`section:${sectionId}`)}
+                onClick={() => {
+                  // Save scroll position AND the active tab so a return
+                  // navigation lands on the same tab the user opened from.
+                  saveScroll(`section:${sectionId}`);
+                  if (typeof window !== 'undefined') {
+                    sessionStorage.setItem(TAB_KEY(sectionId), item.id);
+                  }
+                }}
               >
                 {sectionId === 'darshanas' || sectionId === 'nastika-darshanas' ? (
                   lang === 'mr' ? 'तपशीलवार दार्शनिक परिचय वाचा →' : 'Read detailed philosophical profile →'

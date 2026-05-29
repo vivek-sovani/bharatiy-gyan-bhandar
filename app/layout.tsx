@@ -11,8 +11,17 @@ export const metadata: Metadata = {
     'An open digital library of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
 };
 
-// Applies the saved theme before first paint (no flash).
-const themeInit = `(function(){try{var r=document.documentElement;var t=localStorage.getItem('bgb-theme');if(t)r.setAttribute('data-theme',t);}catch(e){}})();`;
+// Applies the theme before first paint (no flash).
+// Precedence: user's saved preference > system prefers-color-scheme > cream default.
+const themeInit = `(function(){try{
+  var r=document.documentElement;
+  var t=localStorage.getItem('bgb-theme');
+  if(!t){
+    var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    t = dark ? 'dark' : 'cream';
+  }
+  r.setAttribute('data-theme',t);
+}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
