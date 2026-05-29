@@ -146,17 +146,41 @@ export default function ItemDetailView({
                 </dl>
               )}
 
-              {/* Full summary */}
-              <p
-                style={{
-                  fontSize: '1.08rem',
-                  lineHeight: '1.7',
-                  color: 'var(--ink-soft)',
-                  margin: 0,
-                }}
-              >
-                {item.summary}
-              </p>
+              {/* Explanation (multi-paragraph) — falls back to single summary */}
+              {item.explanation && item.explanation.length > 0 ? (
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '1.1rem',
+                  }}
+                >
+                  {item.explanation.map((para, i) => (
+                    <p
+                      key={i}
+                      style={{
+                        fontSize: '1.08rem',
+                        lineHeight: '1.7',
+                        color: 'var(--ink-soft)',
+                        margin: 0,
+                      }}
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <p
+                  style={{
+                    fontSize: '1.08rem',
+                    lineHeight: '1.7',
+                    color: 'var(--ink-soft)',
+                    margin: 0,
+                  }}
+                >
+                  {item.summary}
+                </p>
+              )}
 
               {/* Facets */}
               {item.facets && item.facets.length > 0 && (
@@ -238,6 +262,77 @@ export default function ItemDetailView({
           </div>
         </div>
       </section>
+
+      {/* ── Key aspects sub-grid ──────────────────────── */}
+      {item.aspects && item.aspects.length > 0 && (
+        <section className="frame" style={{ background: 'var(--paper-deep)' }}>
+          <div className="shell">
+            <div className="frame-hd">
+              <div className="title-block">
+                <div className="eyebrow">
+                  <Glyph />
+                  {lang === 'mr' ? 'मुख्य पैलू' : 'Key Aspects'}
+                </div>
+                <h2>
+                  {lang === 'mr'
+                    ? `${item.title} चे प्रमुख घटक`
+                    : `Inside ${item.title}`}
+                </h2>
+              </div>
+            </div>
+            <div className="sec-grid" style={{ marginTop: '1.5rem' }}>
+              {item.aspects.map((a, i) => (
+                <article
+                  key={i}
+                  className="sec-grid-item"
+                  style={{ minHeight: 'auto', padding: '1.5rem' }}
+                >
+                  <div className="ord" style={{ marginBottom: '0.5rem' }}>
+                    <span>№ {String(i + 1).padStart(2, '0')}</span>
+                  </div>
+                  <h4
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '1.2rem',
+                      fontWeight: 600,
+                      color: 'var(--ink)',
+                      display: 'inline-flex',
+                      alignItems: 'baseline',
+                      gap: '0.5rem',
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    {a.deva && (
+                      <span
+                        className="deva-only"
+                        style={{
+                          color: 'var(--maroon)',
+                          fontFamily: 'var(--font-deva)',
+                          fontSize: '1.1rem',
+                        }}
+                      >
+                        {a.deva}
+                      </span>
+                    )}
+                    <span>{a.name}</span>
+                  </h4>
+                  <p
+                    style={{
+                      fontSize: '0.95rem',
+                      color: 'var(--ink-soft)',
+                      marginTop: '0.5rem',
+                      marginBottom: 0,
+                      lineHeight: 1.55,
+                    }}
+                  >
+                    {a.desc}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Cross-nav within this section ────────────── */}
       {otherItems.length > 0 && (
