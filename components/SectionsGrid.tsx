@@ -7,6 +7,7 @@ import { SECTIONS as SECTIONS_EN, FILTERS as FILTERS_EN, type FilterOption } fro
 import { SECTIONS as SECTIONS_MR, FILTERS as FILTERS_MR } from '@/lib/data_mr';
 import { sectionPath } from '@/lib/routes';
 import { useLanguage } from '@/lib/LanguageContext';
+import { saveScroll, useScrollRestoration } from '@/lib/scroll';
 
 // ── Era metadata ──────────────────────────────────────────────────────────────
 interface EraMeta {
@@ -67,26 +68,29 @@ const ERAS_META: EraMeta[] = [
   },
 ];
 
-// ── Era header sub-component ──────────────────────────────────────────────────
+// ── Era header sub-component (full-width banner divider) ──────────────────────
 function EraHeader({ era, lang }: { era: EraMeta; lang: string }) {
+  const period = lang === 'mr' ? era.periodDeva : era.period;
+  const gloss = lang === 'mr' ? era.glossDeva : era.gloss;
+
   return (
-    <div className="era-header-card" style={{ marginBottom: '1.5rem', marginTop: '1rem' }}>
-      <CornerOrn className="tl" />
-      <CornerOrn className="tr" />
-      <CornerOrn className="bl" />
-      <CornerOrn className="br" />
-      <div className="era-meta">
-        <span className="era-period">
-          {lang === 'mr' ? era.periodDeva : era.period}
-        </span>
+    <div className="era-banner" aria-label={era.label}>
+      <div className="era-banner-row">
+        <span className="era-banner-period">{period}</span>
+        <h3 className="era-banner-title">
+          {lang === 'mr' ? (
+            // Marathi: Devanāgarī label only — no script-mixing
+            <span className="deva-only">{era.deva}</span>
+          ) : (
+            <>
+              <span>{era.label}</span>
+              <span className="era-banner-sep">·</span>
+              <span className="deva-only">{era.deva}</span>
+            </>
+          )}
+        </h3>
       </div>
-      <h3 className="era-title">
-        <span className="deva-only" style={{ fontFamily: 'var(--font-deva)', color: 'var(--maroon)', marginRight: '0.4em' }}>
-          {era.deva}
-        </span>
-        {era.label}
-      </h3>
-      <p className="era-desc">{lang === 'mr' ? era.glossDeva : era.gloss}</p>
+      <p className="era-banner-gloss">{gloss}</p>
     </div>
   );
 }
@@ -96,6 +100,9 @@ export default function SectionsGrid() {
   const [type, setType] = useState('all');
   const [topic, setTopic] = useState('all');
   const { lang, t } = useLanguage();
+
+  // Restore scroll position when returning to the home page from a section
+  useScrollRestoration('home');
 
   const SECTIONS = lang === 'mr' ? SECTIONS_MR : SECTIONS_EN;
   const FILTERS = lang === 'mr' ? FILTERS_MR : FILTERS_EN;
@@ -176,7 +183,12 @@ export default function SectionsGrid() {
                 {eraSections.map((s) => {
                   const imgPath = `/corpus-${s.id}.png`;
                   return (
-                    <Link key={s.id} className="card" href={sectionPath(s)}>
+                    <Link
+                      key={s.id}
+                      className="card"
+                      href={sectionPath(s)}
+                      onClick={() => saveScroll('home')}
+                    >
                       <div className="card-thumb">
                         <img
                           src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${imgPath}`}
@@ -193,7 +205,9 @@ export default function SectionsGrid() {
                         <span className="tag">{s.tag}</span>
                       </div>
                       <h3>{s.title}</h3>
-                      <div className="deva-name deva-only">{s.deva}</div>
+                      {s.title !== s.deva && (
+                        <div className="deva-name deva-only">{s.deva}</div>
+                      )}
                       <p>{s.blurb}</p>
                       <div className="facets">
                         {s.facets.map((f) => (

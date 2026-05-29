@@ -2315,61 +2315,73 @@ body::after {
 }
 
 /* ============================================================
-   Era Header Cards (used in the era-grouped Library section)
+   Era Banner Strip (full-width section divider between card groups)
    ============================================================ */
 
-/* Era indicator header */
-.era-header-card {
+.era-banner {
   position: relative;
-  background: var(--paper-elev);
-  border: 1px solid var(--rule-strong);
-  padding: 1.6rem 2rem;
-  margin-bottom: 2.5rem;
-  z-index: 2;
-  box-shadow: 0 4px 20px oklch(from var(--ink) l c h / 0.03);
+  background: var(--paper-deep);
+  border-top: 2px solid var(--maroon-soft);
+  border-bottom: 1px solid var(--rule-strong);
+  padding: 1.4rem 2rem 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
-.era-header-card .corner-orn {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  color: var(--maroon);
-  opacity: 0.45;
-}
-.era-header-card .corner-orn.tl { top: 4px; left: 4px; }
-.era-header-card .corner-orn.tr { top: 4px; right: 4px; transform: scaleX(-1); }
-.era-header-card .corner-orn.bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
-.era-header-card .corner-orn.br { bottom: 4px; right: 4px; transform: scale(-1, -1); }
-
-.era-meta {
-  margin-bottom: 0.35rem;
-}
-
-.era-period {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--maroon);
-  text-transform: uppercase;
-}
-
-.era-title {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin: 0.2rem 0 0.8rem;
-  color: var(--ink);
+.era-banner-row {
   display: flex;
   align-items: baseline;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
-.era-desc {
-  color: var(--ink-soft);
-  font-size: 1rem;
-  line-height: 1.5;
+.era-banner-period {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--maroon);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.era-banner-title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 500;
   margin: 0;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  line-height: 1.2;
+}
+
+.era-banner-title .deva-only {
+  font-family: var(--font-deva);
+  color: var(--maroon);
+}
+
+.era-banner-sep {
+  color: var(--ink-faint);
+  font-weight: 300;
+}
+
+.era-banner-gloss {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0.6rem 0 0;
+  max-width: 72ch;
+}
+
+@media (max-width: 600px) {
+  .era-banner {
+    padding: 1.1rem 1.2rem;
+  }
+  .era-banner-title {
+    font-size: 1.4rem;
+  }
 }
 
 /* ──────────────────────────────────────────────────────── Marathi Localization Overrides */

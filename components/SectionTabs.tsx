@@ -5,8 +5,7 @@ import Link from 'next/link';
 import type { SectionItem } from '@/lib/section-data';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
-
-const KV_KEYS = ['detail.recension', 'detail.authors', 'detail.range', 'detail.scope'];
+import { saveScroll } from '@/lib/scroll';
 
 export default function SectionTabs({ items, sectionId }: { items: SectionItem[]; sectionId?: string }) {
   const [active, setActive] = useState(items[0].id);
@@ -46,19 +45,15 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
           <div className="epithet">{item.epithet}</div>
           <p className="summary">{item.summary}</p>
 
-          <dl className="sec-kv">
-            {item.meta.map((m, i) => (
-              <div key={i} className="sec-kv-row">
-                <dt>{t(KV_KEYS[i]) || 'Note'}</dt>
-                <dd>{m}</dd>
-              </div>
-            ))}
-          </dl>
-
-          {item.facets && (
+          {/* Meta + facets merged into a single chip strip — meta labels removed
+              as they were generic and often wrong for the heterogeneous data. */}
+          {(item.meta.length > 0 || (item.facets && item.facets.length > 0)) && (
             <div className="sec-facets">
-              {item.facets.map((f) => (
-                <span key={f} className="facet">{f}</span>
+              {item.meta.map((m) => (
+                <span key={`m-${m}`} className="facet">{m}</span>
+              ))}
+              {item.facets?.map((f) => (
+                <span key={`f-${f}`} className="facet">{f}</span>
               ))}
             </div>
           )}
@@ -71,6 +66,7 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
               <Link
                 href={`/${sectionId}/${item.id}/`}
                 className="btn-cta"
+                onClick={() => saveScroll(`section:${sectionId}`)}
               >
                 {sectionId === 'darshanas' || sectionId === 'nastika-darshanas' ? (
                   lang === 'mr' ? 'तपशीलवार दार्शनिक परिचय वाचा →' : 'Read detailed philosophical profile →'

@@ -8,13 +8,6 @@ import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
 import { CornerOrn, Glyph } from './Ornaments';
 
-const META_KEYS = [
-  'detail.period',
-  'detail.authors',
-  'detail.range',
-  'detail.scope',
-] as const;
-
 export default function ItemDetailView({
   slug,
   id,
@@ -58,17 +51,19 @@ export default function ItemDetailView({
               <span className="cur">{item.title}</span>
             </div>
 
-            <span
-              className="deva-only"
-              style={{
-                fontSize: '2.5rem',
-                color: 'var(--maroon)',
-                marginTop: '1.2rem',
-                display: 'block',
-              }}
-            >
-              {item.deva}
-            </span>
+            {item.deva !== item.title && (
+              <span
+                className="deva-only"
+                style={{
+                  fontSize: '2.5rem',
+                  color: 'var(--maroon)',
+                  marginTop: '1.2rem',
+                  display: 'block',
+                }}
+              >
+                {item.deva}
+              </span>
+            )}
 
             <h1 style={{ marginTop: '0.2rem' }}>{item.title}</h1>
 
@@ -131,19 +126,16 @@ export default function ItemDetailView({
                 {lang === 'mr' ? 'परिचय' : 'Overview'}
               </div>
 
-              {/* Meta key-value */}
+              {/* Meta — rendered as a chip strip (heterogeneous data, generic labels removed) */}
               {item.meta.length > 0 && (
-                <dl
-                  className="sec-kv"
-                  style={{ marginTop: '1.5rem', marginBottom: '2rem' }}
+                <div
+                  className="sec-facets"
+                  style={{ marginTop: '1.25rem', marginBottom: '1.75rem' }}
                 >
-                  {item.meta.map((m, i) => (
-                    <div key={i} className="sec-kv-row">
-                      <dt>{t(META_KEYS[i]) || 'Note'}</dt>
-                      <dd>{m}</dd>
-                    </div>
+                  {item.meta.map((m) => (
+                    <span key={m} className="facet">{m}</span>
                   ))}
-                </dl>
+                </div>
               )}
 
               {/* Explanation (multi-paragraph) — falls back to single summary */}
@@ -302,7 +294,7 @@ export default function ItemDetailView({
                       flexWrap: 'wrap',
                     }}
                   >
-                    {a.deva && (
+                    {a.deva && a.deva !== a.name && (
                       <span
                         className="deva-only"
                         style={{
@@ -352,13 +344,17 @@ export default function ItemDetailView({
                 >
                   <span>
                     <span className="ttl">{other.title}</span>
-                    <br />
-                    <span
-                      className="ttl-de deva-only"
-                      style={{ color: 'var(--maroon)', fontSize: '0.92rem' }}
-                    >
-                      {other.deva}
-                    </span>
+                    {other.deva !== other.title && (
+                      <>
+                        <br />
+                        <span
+                          className="ttl-de deva-only"
+                          style={{ color: 'var(--maroon)', fontSize: '0.92rem' }}
+                        >
+                          {other.deva}
+                        </span>
+                      </>
+                    )}
                   </span>
                   <span className="arrow">→</span>
                 </Link>

@@ -9,6 +9,7 @@ import { SECTION_DETAILS as DETAILS_EN } from '@/lib/section-data';
 import { SECTION_DETAILS as DETAILS_MR } from '@/lib/section-data_mr';
 import SectionTabs from './SectionTabs';
 import { useLanguage } from '@/lib/LanguageContext';
+import { saveScroll, useScrollRestoration } from '@/lib/scroll';
 
 function Crumb({ items }: { items: string[] }) {
   const { t } = useLanguage();
@@ -101,7 +102,12 @@ function GridLayout({ items, sectionId }: { items: SectionItem[]; sectionId: str
 
         if (isLink) {
           return (
-            <Link key={it.id} href={`/${sectionId}/${it.id}/`} style={{ display: 'contents', color: 'inherit' }}>
+            <Link
+              key={it.id}
+              href={`/${sectionId}/${it.id}/`}
+              style={{ display: 'contents', color: 'inherit' }}
+              onClick={() => saveScroll(`section:${sectionId}`)}
+            >
               {content}
             </Link>
           );
@@ -234,6 +240,9 @@ export default function SectionDetailView({ id, data: fallbackData }: { id: stri
   const { lang } = useLanguage();
   const data = lang === 'mr' ? DETAILS_MR[id] : DETAILS_EN[id];
   const finalData = data || fallbackData;
+
+  // Restore scroll position if the user is returning from a detail page
+  useScrollRestoration(`section:${id}`);
 
   return (
     <>
