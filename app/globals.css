@@ -290,12 +290,12 @@ a:hover { color: var(--gold-deep); }
 }
 
 .hero-edit {
-  display: grid;
-  grid-template-columns: 1.05fr 1px 1fr;
-  gap: 3.5rem;
-  align-items: start;
+  display: block;
 }
-.hero-edit .v-rule { background: var(--rule); align-self: stretch; }
+.hero-edit .hero-shloka {
+  max-width: 62ch;
+  margin: 0 auto;
+}
 
 .hero-shloka .eyebrow { display: flex; align-items: center; gap: 0.75rem; }
 .hero-shloka .eyebrow .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--maroon); }
