@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { CornerOrn, Glyph } from './Ornaments';
 import { transliterate } from '@/lib/transliterate';
@@ -2524,6 +2524,26 @@ function VedaTabs() {
 
   const veda = VEDAS.find((v) => v.id === active)!;
 
+  // Refs for scroll-on-expand UX: when a stratum tile is opened, scroll the
+  // expanded sub-panel into view; the "Back" button inside the panel scrolls
+  // back to the strata-grid. Especially important on mobile where the tiles
+  // and the expanded panel don't fit in a single viewport.
+  const detailsRef = useRef<HTMLDivElement>(null);
+  const strataGridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (activeStratum && detailsRef.current) {
+      // Wait a frame so layout/transition has applied
+      requestAnimationFrame(() => {
+        detailsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  }, [activeStratum, active]);
+
+  const handleBackToStrata = () => {
+    strataGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const handleVedaChange = (id: string) => {
     setActive(id);
     setActiveStratum(null); // Reset active stratum detail on Veda change
@@ -2595,7 +2615,7 @@ function VedaTabs() {
 
       <div className="veda-strata">
         <div className="eyebrow" style={{ marginBottom: '1rem' }}><Glyph /> {t('detail.strata')}</div>
-        <div className="strata-grid">
+        <div className="strata-grid" ref={strataGridRef}>
           {STRATA.map((s, i) => (
             <button
               key={s.id}
@@ -2615,11 +2635,20 @@ function VedaTabs() {
       </div>
 
       {activeStratum && veda.strataDetails[activeStratum] && (
-        <div className="stratum-details-panel">
+        <div className="stratum-details-panel" ref={detailsRef}>
           <CornerOrn className="tl" />
           <CornerOrn className="tr" />
           <CornerOrn className="bl" />
           <CornerOrn className="br" />
+          <button
+            type="button"
+            className="stratum-back"
+            onClick={handleBackToStrata}
+            aria-label={lang === 'mr' ? 'स्तरांकडे परत' : 'Back to strata'}
+          >
+            <span aria-hidden="true">←</span>{' '}
+            {lang === 'mr' ? 'स्तरांकडे परत' : 'Back to strata'}
+          </button>
           <div className="panel-header">
             <span className="eyebrow" style={{ color: 'var(--maroon)' }}>
               {t('detail.strata')} · {STRATA.find(s => s.id === activeStratum)?.name}

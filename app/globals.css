@@ -1944,7 +1944,32 @@ body::after {
   border: 1px solid var(--rule-strong);
   position: relative;
   animation: secFade 240ms ease;
+  scroll-margin-top: 1.5rem;
 }
+
+.stratum-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  color: var(--maroon);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background 160ms, border-color 160ms;
+}
+.stratum-back:hover {
+  background: var(--paper);
+  border-color: var(--maroon-soft);
+}
+
+.strata-grid { scroll-margin-top: 1.5rem; }
 
 .stratum-details-panel .panel-header {
   border-bottom: 1px solid var(--rule);
