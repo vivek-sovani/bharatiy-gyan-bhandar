@@ -2450,5 +2450,177 @@ html[lang="mr"] .essay .meta {
   transform: translateX(4px);
 }
 
+/* ============================================================
+   Contributors — ṛṣis, ācāryas, saints, scientists
+   ============================================================ */
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 1.25rem;
+}
+
+.person {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.4rem 1.2rem;
+  background: var(--paper-elev);
+  border: 1px solid var(--rule-strong);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 180ms ease, border-color 180ms;
+  min-height: 240px;
+}
+.person.is-link { cursor: pointer; }
+.person:hover {
+  transform: translateY(-2px);
+  border-color: var(--maroon-soft);
+}
+.person .corner-orn {
+  position: absolute;
+  width: 18px; height: 18px;
+  color: var(--maroon);
+  opacity: 0.45;
+  z-index: 1;
+}
+.person .corner-orn.tl { top: 4px; left: 4px; }
+.person .corner-orn.tr { top: 4px; right: 4px; transform: scaleX(-1); }
+.person .corner-orn.bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
+.person .corner-orn.br { bottom: 4px; right: 4px; transform: scale(-1, -1); }
+
+.person-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dotted var(--rule-strong);
+}
+
+.person-seal {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-deva);
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--maroon);
+  background: var(--paper-deep);
+  border: 1px solid var(--maroon-soft);
+  border-radius: 50%;
+  letter-spacing: 0;
+}
+
+.person-id {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.person-dates {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.25rem;
+}
+html[lang="mr"] .person-dates {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 11px;
+}
+
+.person-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.person-name.deva-only {
+  font-family: var(--font-deva);
+  color: var(--maroon);
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.person-deva {
+  font-family: var(--font-deva);
+  font-size: 1.1rem;
+  color: var(--maroon);
+  line-height: 1.4;
+  margin-top: 0.1rem;
+}
+
+.person-epithet {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+html[lang="mr"] .person-epithet {
+  font-family: var(--font-deva), var(--font-display), serif;
+  font-style: normal;
+}
+
+.person-tradition {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+html[lang="mr"] .person-tradition {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 11.5px;
+}
+
+.person-blurb {
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+  flex: 1;
+}
+
+.person-works {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px dotted var(--rule-strong);
+}
+.person-work {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.person-work + .person-work::before { content: "·"; margin-right: 0.35rem; }
+html[lang="mr"] .person-work {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .person { padding: 1.15rem 1.1rem 1rem; min-height: 0; }
+  .person-seal { width: 42px; height: 42px; font-size: 1.25rem; }
+  .person-name { font-size: 1.15rem; }
+}
 
 

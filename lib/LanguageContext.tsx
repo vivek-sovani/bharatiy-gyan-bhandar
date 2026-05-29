@@ -18,6 +18,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.texts': 'Texts',
     'nav.tree': 'Timeline',
     'nav.library': 'Library',
+    'nav.contrib': 'Contributors',
     'nav.lifestyle': 'Lifestyle',
     'nav.essays': 'Essays',
     'nav.sanskrit': 'Sanskrit',
@@ -46,6 +47,10 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'grid.tag_era': 'Era',
     'grid.tag_canon': 'Canon',
     'grid.tag_topic': 'Topic',
+    // Contributors
+    'contrib.eyebrow': 'The makers',
+    'contrib.title': 'Ṛṣis, ācāryas, scientists & saints — across the timeline',
+    'contrib.meta': '{count} contributors · four eras',
     // Dinacharya
     'dina.eyebrow': 'Lifestyle',
     'dina.title': 'Dinacaryā — the structure of the day',
@@ -82,6 +87,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.texts': 'ग्रंथ',
     'nav.tree': 'कालरेषा',
     'nav.library': 'वाचनालय',
+    'nav.contrib': 'योगदाते',
     'nav.lifestyle': 'दिनचर्या',
     'nav.essays': 'निबंध',
     'nav.sanskrit': 'संस्कृत',
@@ -110,6 +116,10 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'grid.tag_era': 'कालखंड',
     'grid.tag_canon': 'प्रमाण ग्रंथ',
     'grid.tag_topic': 'विषय',
+    // Contributors
+    'contrib.eyebrow': 'योगदाते',
+    'contrib.title': 'ऋषी, आचार्य, संत आणि शास्त्रज्ञ — कालक्रमेण',
+    'contrib.meta': '{count} योगदाते · चार कालखंड',
     // Dinacharya
     'dina.eyebrow': 'जीवनशैली',
     'dina.title': 'दिनचर्या — दिवसाचे नियोजन',

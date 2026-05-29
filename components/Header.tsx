@@ -21,6 +21,7 @@ export default function Header() {
         </Link>
         <nav className="hdr-nav" aria-label="Primary">
           <Link href="/#sections">{t('nav.library')}</Link>
+          <Link href="/#contributors">{t('nav.contrib')}</Link>
           <Link href="/#dinacharya">{t('nav.lifestyle')}</Link>
           <Link href="/#sanskrit">{t('nav.sanskrit')}</Link>
         </nav>
