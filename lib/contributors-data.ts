@@ -577,6 +577,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Caraka-Saṃhitā is the foundational text of internal medicine — pathology, pharmacology and the ethics of the physician — still cited in BAMS curricula today.',
     works: ['Caraka-Saṃhitā'],
     href: '/upavedas/',
+    detail: {
+      intro:
+        'Caraka is the redactor whose name attaches to the Caraka-Saṃhitā, the foundational treatise of Āyurvedic internal medicine (kāya-cikitsā). The text presents itself as a recension of an earlier teaching of Ātreya, organised into a systematic science of health and disease.',
+      contributions: [
+        'Redacted the Caraka-Saṃhitā, the principal classical text of internal medicine.',
+        'Set out a theory of health as the balance of the three doṣas (vāta, pitta, kapha) and disease as their disturbance.',
+        'Developed systematic pathology, diagnosis, dietetics and pharmacology drawn from a vast materia medica of plants and minerals.',
+        'Articulated the ethics of the physician — the duties, training and conduct expected of the vaidya.',
+      ],
+      legacy:
+        'The Caraka-Saṃhitā remains a living text, still studied in BAMS curricula today. Caraka’s framework of doṣa, diet and constitution is the backbone of Āyurveda as it is practised across India and increasingly abroad.',
+    },
   },
   {
     id: 'sushruta',
@@ -593,6 +605,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Suśruta-Saṃhitā describes 300+ surgical procedures, including rhinoplasty and cataract extraction — the earliest systematic surgical manual in any tradition.',
     works: ['Suśruta-Saṃhitā', '120 surgical instruments'],
     href: '/upavedas/',
+    detail: {
+      intro:
+        'Suśruta is the figure behind the Suśruta-Saṃhitā, the great classical treatise of surgery (śalya-tantra). Where Caraka systematised medicine, Suśruta systematised the knife — giving the ancient world its most detailed surgical manual.',
+      contributions: [
+        'Compiled the Suśruta-Saṃhitā, describing more than three hundred surgical procedures and over a hundred surgical instruments.',
+        'Detailed operations including rhinoplasty (reconstruction of the nose), cataract couching, the removal of stones and the suturing of wounds.',
+        'Laid out a programme of surgical training, including practice on models, gourds and animal tissue.',
+        'Integrated surgery with anatomy, requiring direct study of the body — unusual in the ancient world.',
+      ],
+      legacy:
+        'Suśruta is often called the father of surgery, and of plastic surgery in particular; his nose-reconstruction technique reached Europe and shaped early modern rhinoplasty. The Suśruta-Saṃhitā stands as the earliest systematic surgical treatise of any tradition.',
+    },
   },
   {
     id: 'nagarjuna',
@@ -607,6 +631,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Mūlamadhyamaka-Kārikā: the dialectic of śūnyatā (emptiness) that empties every position — including its own — and reorganised Mahāyāna philosophy.',
     works: ['Mūlamadhyamaka-Kārikā', 'Vigrahavyāvartanī'],
     href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Nāgārjuna is the founder of the Madhyamaka (“Middle Way”) school of Mahāyāna Buddhism and one of the most influential philosophers India produced. His dialectic of emptiness (śūnyatā) reorganised Buddhist thought and pressed every philosophical position to its breaking point.',
+      contributions: [
+        'Composed the Mūlamadhyamaka-Kārikā, the foundational verse text of Madhyamaka philosophy.',
+        'Developed the doctrine of śūnyatā — that all things are empty of inherent existence (svabhāva), arising only in dependence.',
+        'Wielded a reductio dialectic (prasaṅga) that exposes the contradictions in every fixed standpoint, including, reflexively, its own.',
+        'Articulated the two-truths distinction between conventional and ultimate reality.',
+      ],
+      legacy:
+        'Nāgārjuna’s emptiness became the philosophical core of Mahāyāna across Tibet, China and Japan, and his dialectical method is studied alongside the great logicians of the world. Few Indian thinkers have had so wide and so lasting an influence.',
+    },
   },
   {
     id: 'kalidasa',
@@ -620,6 +656,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'संस्कृत काव्य · नाट्य',
     blurb: 'Abhijñāna-Śākuntalam, Raghuvaṃśa, Meghadūta, Kumārasambhava — the height of classical Sanskrit poetry, and the standard by which all later kāvya is judged.',
     works: ['Śākuntalam', 'Meghadūta', 'Raghuvaṃśa'],
+    detail: {
+      intro:
+        'Kālidāsa is, by near-universal consent, the greatest poet and dramatist of classical Sanskrit. Little is known of his life, but his works set the standard of kāvya — the ideal of elegance, suggestion and emotional depth against which all later Sanskrit literature measures itself.',
+      contributions: [
+        'Wrote the play Abhijñāna-Śākuntalam, the most celebrated drama in Sanskrit and the first to be widely translated into European languages.',
+        'Composed the great court epics (mahākāvya) Raghuvaṃśa and Kumārasambhava.',
+        'Created the lyric Meghadūta (“The Cloud Messenger”), a perfect miniature of longing and landscape.',
+        'Perfected the poetics of suggestion (dhvani) and the union of natural description with human emotion.',
+      ],
+      legacy:
+        'Kālidāsa became the touchstone of literary taste for the whole tradition — “the kavi” without qualification. The European discovery of Śākuntalā in the eighteenth century, which moved Goethe to praise, helped spark the Western fascination with Indian literature.',
+    },
   },
   {
     id: 'aryabhata',
@@ -634,6 +682,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Āryabhaṭīya: place-value notation, the sine table, π to four decimals, the day-length of the sidereal rotation, and the rotation of the Earth on its axis.',
     works: ['Āryabhaṭīya', 'Sūrya-siddhānta line'],
     href: '/vedangas/',
+    detail: {
+      intro:
+        'Āryabhaṭa, writing at the age of twenty-three in 499 CE, produced in the Āryabhaṭīya a compact masterpiece of mathematics and astronomy that placed Indian science at the frontier of the ancient world.',
+      contributions: [
+        'Used a place-value system and a unique alphabetic notation for very large numbers.',
+        'Gave an accurate value of π (3.1416) and the first Indian sine table, founding the trigonometry that would pass to the Islamic world and Europe.',
+        'Proposed that the Earth rotates on its axis, explaining the apparent daily motion of the stars — a millennium before Copernicus.',
+        'Computed the length of the sidereal day and year with remarkable accuracy and explained eclipses by the shadows of Earth and Moon.',
+      ],
+      legacy:
+        'Āryabhaṭa’s work, translated into Arabic, fed the great flowering of medieval astronomy and reached Europe through that channel. India’s first satellite was named for him — a measure of his standing as the founder of the mathematical tradition.',
+    },
   },
   {
     id: 'varahamihira',
@@ -648,6 +708,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Bṛhat-Saṃhitā — an encyclopaedia of jyotiṣa, omens, meteorology, gemmology and architecture — and the Pañca-siddhāntikā that compares five astronomical systems.',
     works: ['Bṛhat-Saṃhitā', 'Pañca-siddhāntikā', 'Bṛhat-Jātaka'],
     href: '/vedangas/',
+    detail: {
+      intro:
+        'Varāhamihira was the great sixth-century polymath of Ujjain, a master of all three branches of jyotiṣa — mathematical astronomy, astrology and the lore of omens. His works are encyclopaedic in their range and unusually clear in their exposition.',
+      contributions: [
+        'Wrote the Pañca-siddhāntikā, a critical comparison of the five astronomical systems known in his day, preserving knowledge that would otherwise be lost.',
+        'Composed the Bṛhat-Saṃhitā, an encyclopaedia covering astronomy, meteorology, agriculture, architecture, gemmology, omens and much else.',
+        'Authored the Bṛhat-Jātaka, a foundational treatise of Indian astrology.',
+        'Preserved Greek astronomical influence (the Romaka and Pauliśa systems) within the Indian tradition.',
+      ],
+      legacy:
+        'Varāhamihira’s Bṛhat-Saṃhitā is a window onto the whole of sixth-century Indian science and society, and his astronomical works carried earlier Siddhānta knowledge forward. He remains one of the most cited authorities of the classical jyotiṣa tradition.',
+    },
   },
   {
     id: 'adi-shankara',
@@ -662,6 +734,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Bhāṣyas on the Upaniṣads, Brahma-Sūtra and Gītā (the prasthāna-trayī), and the four maṭhas at the four corners of the subcontinent — Advaita made institutional.',
     works: ['Brahma-Sūtra Bhāṣya', 'Vivekacūḍāmaṇi', 'Four maṭhas'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Ādi Śaṅkara, in a life traditionally said to have lasted only thirty-two years, gave Advaita Vedānta its decisive philosophical form and its lasting institutional shape. He is the most influential of all the Vedānta ācāryas.',
+      contributions: [
+        'Wrote bhāṣyas (commentaries) on the prasthāna-trayī — the principal Upaniṣads, the Brahma-Sūtra and the Bhagavad-Gītā.',
+        'Systematised the doctrine of Advaita (non-dualism): Brahman alone is real, the world is appearance (māyā), and the self (ātman) is identical with Brahman.',
+        'Established four maṭhas at the cardinal corners of the subcontinent, founding a monastic order that endures to this day.',
+        'Composed independent works such as the Vivekacūḍāmaṇi and a body of devotional hymns.',
+      ],
+      legacy:
+        'Śaṅkara’s Advaita became the dominant philosophical strand of Hinduism and the reference point — whether to follow or to refute — for every later Vedāntin. Through the maṭhas and the Daśanāmī order he gave Hindu monasticism its enduring institutional frame.',
+    },
   },
 
   // ────────────────────────────── Medieval Era ────────────────────────────────
@@ -677,6 +761,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'काश्मीर शैव · रससिद्धान्त',
     blurb: 'The Tantrāloka synthesises Kashmir Śaivism; the Abhinava-Bhāratī (commentary on the Nāṭyaśāstra) gives rasa-theory its final philosophical form.',
     works: ['Tantrāloka', 'Abhinava-Bhāratī', 'Locana'],
+    detail: {
+      intro:
+        'Abhinavagupta is the towering genius of Kashmir — a philosopher, mystic, aesthetician and tantric master who synthesised the traditions of his region into a single grand system. He worked with equal mastery in metaphysics and in the theory of art.',
+      contributions: [
+        'Composed the Tantrāloka, the monumental synthesis of the monistic Trika (Kashmir) Śaivism.',
+        'Developed the philosophy of recognition (pratyabhijñā) — that liberation is the recognition of one’s identity with Śiva, the universal consciousness.',
+        'Wrote the Abhinava-Bhāratī, the great commentary on the Nāṭyaśāstra, giving rasa theory its definitive philosophical formulation.',
+        'In the Locana, advanced the theory of dhvani (poetic suggestion) as the soul of poetry.',
+      ],
+      legacy:
+        'Abhinavagupta unified Indian aesthetics and Śaiva metaphysics as no one before or since. His account of rasa as a form of self-luminous bliss remains the high point of Indian theory of art, and Kashmir Śaivism is undergoing a worldwide revival in his name.',
+    },
   },
   {
     id: 'ramanuja',
@@ -691,6 +787,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Śrī-Bhāṣya argues that the soul is real and distinct yet inseparable from God. Reformed Śrīraṅgam temple worship and opened it across caste.',
     works: ['Śrī-Bhāṣya', 'Vedārtha-Saṅgraha', 'Gītā-Bhāṣya'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Rāmānuja is the founder of Viśiṣṭādvaita (“qualified non-dualism”) and the greatest philosopher of the theistic Vedānta tradition. Against Śaṅkara’s austere monism he argued for a personal God in whom souls and the world are real, distinct, yet wholly dependent.',
+      contributions: [
+        'Wrote the Śrī-Bhāṣya, the authoritative Viśiṣṭādvaita commentary on the Brahma-Sūtra.',
+        'Argued that the individual self and the world are real attributes (viśeṣaṇa) of Brahman — neither identical with God nor separate from him.',
+        'Gave bhakti and prapatti (loving surrender) a rigorous philosophical foundation alongside knowledge.',
+        'Reformed worship at the Śrīraṅgam temple and, by tradition, opened its teaching across barriers of caste.',
+      ],
+      legacy:
+        'Rāmānuja gave devotional Hinduism its intellectual backbone; the great Vaiṣṇava bhakti movements that followed drew on his synthesis of philosophy and devotion. His Śrī Vaiṣṇava tradition remains a living force in south India and beyond.',
+    },
   },
   {
     id: 'madhva',
@@ -707,6 +815,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Pure dualism: God, soul and world are each fully real and irreducibly distinct. Thirty-seven works including bhāṣyas on every text of the prasthāna-trayī.',
     works: ['Brahma-Sūtra Bhāṣya', 'Anuvyākhyāna'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Madhva, also called Ānandatīrtha, is the founder of Dvaita (“dualist”) Vedānta — the most uncompromising of the three great Vedānta schools. Against both Śaṅkara and Rāmānuja he held that God, souls and the world are each fully and eternally real and irreducibly distinct.',
+      contributions: [
+        'Composed thirty-seven works, including bhāṣyas on every text of the prasthāna-trayī.',
+        'Argued for an absolute distinction (bheda) between God (Viṣṇu), the individual souls, and matter — five eternal differences in all.',
+        'Defended a robust realism and the dependence of all beings on a wholly independent, supreme God.',
+        'Founded the Dvaita tradition centred at Uḍupi, with its enduring system of monastic worship.',
+      ],
+      legacy:
+        'Madhva’s uncompromising realism gave Vedānta its sharpest theistic alternative to Advaita, and his school shaped the Haridāsa devotional movement of Karnataka. The Uḍupi maṭhas he established continue his tradition unbroken to the present day.',
+    },
   },
   {
     id: 'bhaskara-ii',
