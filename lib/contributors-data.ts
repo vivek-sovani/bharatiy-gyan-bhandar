@@ -1,6 +1,14 @@
 // Contributors — ṛṣis, ācāryas, scientists, poets, saints, reformers.
 // All copy is original synthesis intended for an educational platform.
 
+// Full contribution detail shown in the click-through modal.
+// Added in batches of five; cards without a `detail` fall back to the blurb.
+export type ContributorDetail = {
+  intro: string;            // expanded opening paragraph
+  contributions: string[];  // the principal contributions, one per line
+  legacy: string;           // closing paragraph on influence / legacy
+};
+
 export type Contributor = {
   id: string;
   name: string;        // Roman / IAST transliteration
@@ -16,6 +24,7 @@ export type Contributor = {
   blurb: string;
   works: string[];     // 2–4 short tags
   href?: string;       // optional link to a related section page
+  detail?: ContributorDetail; // full contribution write-up for the modal
 };
 
 export const CONTRIBUTORS: Contributor[] = [
@@ -35,6 +44,19 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Divided the one Veda into four and arranged the Brāhmaṇas; composed the Mahābhārata, the Brahma-Sūtra and the eighteen Purāṇas — the architect of the canon.',
     works: ['Veda redaction', 'Mahābhārata', 'Brahma-Sūtra', '18 Purāṇas'],
     href: '/vedas/',
+    detail: {
+      intro:
+        'Vyāsa — literally “the compiler” — stands at the threshold of the recorded tradition. Born Kṛṣṇa Dvaipāyana, he is remembered less as a single author than as the organising intelligence who gave the inherited revelation its lasting architecture.',
+      contributions: [
+        'Divided the single primordial Veda into the four Saṃhitās — Ṛk, Yajus, Sāman and Atharvan — and assigned each to a disciple, founding the four lines of Vedic transmission.',
+        'Arranged the Brāhmaṇa prose and the ritual apparatus that frames the hymns, fixing the relationship between mantra and rite.',
+        'Composed the Mahābhārata, the hundred-thousand-verse “fifth Veda” in which the Bhagavad-Gītā is set.',
+        'Condensed the teaching of the Upaniṣads into the 555 aphorisms of the Brahma-Sūtra — the text every later Vedāntin is obliged to interpret.',
+        'Traditionally credited with the eighteen Mahāpurāṇas, the encyclopaedic narrative vehicle of popular dharma.',
+      ],
+      legacy:
+        'Because the very act of editing the canon is called vyāsa, every later redactor works in his shadow. The four Vedic schools, the epic tradition and the entire enterprise of Vedānta all trace their starting point to him.',
+    },
   },
   {
     id: 'valmiki',
@@ -51,6 +73,17 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The “first poet,” to whom grief gave the first śloka. His Rāmāyaṇa fixes the shape of every later Indic narrative.',
     works: ['Rāmāyaṇa', 'Anuṣṭubh metre'],
     href: '/itihasa/',
+    detail: {
+      intro:
+        'Vālmīki is honoured as the ādi-kavi, the first poet — the figure in whom deliberate, metrical literature is said to begin. Tradition tells that the sight of a hunter killing one of a pair of mating cranes wrung from him the first śloka, grief crystallising into measured speech.',
+      contributions: [
+        'Composed the Rāmāyaṇa, the twenty-four-thousand-verse epic that became the template for narrative poetry across the subcontinent and beyond.',
+        'Gave the anuṣṭubh śloka its classical shape — the thirty-two-syllable couplet that remains the default metre of Sanskrit storytelling.',
+        'Established the conventions of mahākāvya: the heroic protagonist, the structured cantos, and the set descriptions of cities, seasons and battles.',
+      ],
+      legacy:
+        'Every later retelling — Tamil, Awadhi, Bengali, Telugu, Southeast Asian — measures itself against his text. In the Indic imagination the shape of the ideal man, the ideal kingdom and the ideal poem all descend from Vālmīki.',
+    },
   },
   {
     id: 'vasishtha',
@@ -66,6 +99,17 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'ऋग्वेद · सप्तम मण्डल',
     blurb: 'Seer of the seventh maṇḍala and preceptor of the Ikṣvāku line. The Yoga-Vāsiṣṭha carries his name into later Advaita.',
     works: ['Ṛgveda Maṇḍala VII', 'Yoga-Vāsiṣṭha (attrib.)'],
+    detail: {
+      intro:
+        'Vasiṣṭha is counted among the saptarṣis, the seven seers, and is the ṛṣi of the seventh maṇḍala of the Ṛgveda. He appears as the family priest (purohita) of the Ikṣvāku kings — the dynasty into which Rāma is later born.',
+      contributions: [
+        'Seer of the entire seventh maṇḍala of the Ṛgveda, including the hymns to Varuṇa that are among the tradition’s most searching meditations on guilt and grace.',
+        'Embodies the office of the brahman purohita — the priest who binds the kingdom’s prosperity to right ritual conduct.',
+        'Lends his name to the Vasiṣṭha Dharmasūtra and, in later tradition, to the Yoga-Vāsiṣṭha, a vast Advaitic dialogue addressed to Rāma.',
+      ],
+      legacy:
+        'As the archetypal preceptor of kings, Vasiṣṭha stands for the ideal of priestly counsel to royal power — the steady brahminical pole set against the restless kṣatriya energy of his rival Viśvāmitra.',
+    },
   },
   {
     id: 'vishvamitra',
@@ -81,6 +125,17 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'ऋग्वेद · तृतीय मण्डल',
     blurb: 'The kṣatriya who became a brahmarṣi. Seer of the third maṇḍala and of the Gāyatrī — the mantra recited every dawn for three thousand years.',
     works: ['Ṛgveda Maṇḍala III', 'Gāyatrī Mantra'],
+    detail: {
+      intro:
+        'Viśvāmitra is the great exception among the seers — a king by birth who, by sheer ascetic resolve, won the rank of brahmarṣi that no warrior was thought able to reach. His rivalry with Vasiṣṭha is one of the oldest narrative threads in the tradition.',
+      contributions: [
+        'Seer of the third maṇḍala of the Ṛgveda.',
+        'Revealed the Gāyatrī mantra (Ṛgveda 3.62.10) — the verse to Savitṛ recited at dawn for three millennia and the heart of Vedic initiation.',
+        'In the Rāmāyaṇa, the sage who takes the young Rāma and Lakṣmaṇa as his charges and arms them for their task.',
+      ],
+      legacy:
+        'Viśvāmitra is the standing proof, inside the tradition’s own myth, that spiritual attainment is open to effort rather than fixed by birth — a theme later reformers return to again and again.',
+    },
   },
   {
     id: 'bharadvaja',
@@ -96,6 +151,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'ऋग्वेद · षष्ठ मण्डल',
     blurb: 'Seer of the sixth maṇḍala. His gotra continues into both Āyurveda and Dhanurveda — a single line carries medicine and arms.',
     works: ['Ṛgveda Maṇḍala VI', 'Bharadvāja Saṃhitā (Āyurveda)'],
+    detail: {
+      intro:
+        'Bharadvāja is the seer of the sixth maṇḍala of the Ṛgveda and the founder of one of the most populous of brahmin gotras. His name marks a lineage that carries, unusually, both the healing arts and the science of arms.',
+      contributions: [
+        'Seer of the sixth maṇḍala of the Ṛgveda.',
+        'Founding figure of the Bharadvāja gotra, one of the principal pravara lineages.',
+        'Named as an early authority in the Āyurvedic tradition — the Caraka-Saṃhitā opens by tracing medical knowledge through Bharadvāja.',
+        'Associated in later texts with the Dhanurveda, the science of archery and warfare.',
+      ],
+      legacy:
+        'Through the gotra system and the twin inheritances of medicine and arms, Bharadvāja’s name threads through both the Āyurvedic and the martial traditions — a single ṛṣi at the root of two very different sciences.',
+    },
   },
   {
     id: 'yajnavalkya',

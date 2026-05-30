@@ -2468,11 +2468,20 @@ html[lang="mr"] .essay .meta {
   background: var(--paper-elev);
   border: 1px solid var(--rule-strong);
   text-decoration: none;
+  text-align: left;
   color: inherit;
+  font: inherit;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
   transition: transform 180ms ease, border-color 180ms;
   min-height: 240px;
 }
 .person.is-link { cursor: pointer; }
+.person.is-link:focus-visible {
+  outline: 2px solid var(--maroon-soft);
+  outline-offset: 2px;
+}
 .person:hover {
   transform: translateY(-2px);
   border-color: var(--maroon-soft);
@@ -2621,6 +2630,219 @@ html[lang="mr"] .person-work {
   .person { padding: 1.15rem 1.1rem 1rem; min-height: 0; }
   .person-seal { width: 42px; height: 42px; font-size: 1.25rem; }
   .person-name { font-size: 1.15rem; }
+}
+
+/* ── Contributor prompt + click-through detail modal ─────────────────────── */
+.contrib-prompt {
+  margin: 0.4rem 0 0;
+  font-size: 0.86rem;
+  font-style: italic;
+  color: var(--ink-faint);
+}
+html[lang="mr"] .contrib-prompt { font-style: normal; }
+
+.contrib-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(1rem, 5vh, 4rem) 1rem;
+  overflow-y: auto;
+  background: oklch(from var(--paper-deep) l c h / 0.62);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  animation: contrib-fade 160ms ease;
+}
+
+.contrib-modal {
+  position: relative;
+  width: min(680px, 100%);
+  background: var(--paper-elev);
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 24px 70px oklch(from var(--ink) l c h / 0.28);
+  padding: 2rem 2.1rem 1.8rem;
+  animation: contrib-rise 200ms ease;
+}
+.contrib-modal .corner-orn {
+  position: absolute;
+  width: 22px; height: 22px;
+  color: var(--maroon);
+  opacity: 0.5;
+  z-index: 1;
+}
+.contrib-modal .corner-orn.tl { top: 6px; left: 6px; }
+.contrib-modal .corner-orn.tr { top: 6px; right: 6px; transform: scaleX(-1); }
+.contrib-modal .corner-orn.bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+.contrib-modal .corner-orn.br { bottom: 6px; right: 6px; transform: scale(-1, -1); }
+
+.contrib-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 150ms, border-color 150ms;
+}
+.contrib-modal-close:hover { color: var(--maroon); border-color: var(--rule-strong); }
+
+.contrib-modal-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.contrib-modal-seal {
+  flex: 0 0 auto;
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-deva);
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--maroon);
+  background: var(--paper-deep);
+  border: 1px solid var(--maroon-soft);
+  border-radius: 50%;
+}
+.contrib-modal-id { flex: 1 1 auto; min-width: 0; padding-right: 1.6rem; }
+.contrib-modal-id h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin: 0.1rem 0 0;
+  color: var(--ink);
+}
+.contrib-modal-id h3.deva-only {
+  font-family: var(--font-deva);
+  color: var(--maroon);
+}
+.contrib-modal-deva {
+  font-family: var(--font-deva);
+  font-size: 1.25rem;
+  color: var(--maroon);
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+
+.contrib-modal-tradition {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin-top: 1rem;
+}
+html[lang="mr"] .contrib-modal-tradition {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.contrib-modal-body { margin-top: 0.4rem; }
+.contrib-modal-intro {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0.9rem 0 0;
+}
+.contrib-modal-subhead {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 1.4rem 0 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dotted var(--rule-strong);
+}
+html[lang="mr"] .contrib-modal-subhead {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 12.5px;
+}
+.contrib-modal-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+.contrib-modal-list li {
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 0.55rem;
+}
+.contrib-modal-list li::before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  background: var(--maroon);
+  transform: rotate(45deg);
+}
+.contrib-modal-legacy {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.contrib-modal-works { margin-top: 0.2rem; border-top: none; padding-top: 0; }
+
+.contrib-modal-link {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  border-bottom: 1px solid var(--rule-strong);
+}
+html[lang="mr"] .contrib-modal-link {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 13px;
+}
+.contrib-modal-link:hover { border-bottom-color: var(--maroon); }
+
+@keyframes contrib-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes contrib-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contrib-modal-backdrop, .contrib-modal { animation: none; }
+}
+
+@media (max-width: 600px) {
+  .contrib-modal { padding: 1.6rem 1.3rem 1.4rem; }
+  .contrib-modal-seal { width: 50px; height: 50px; font-size: 1.45rem; }
+  .contrib-modal-id h3 { font-size: 1.35rem; }
 }
 
 

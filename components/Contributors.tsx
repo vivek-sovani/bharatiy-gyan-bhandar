@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
 import { CornerOrn, Glyph } from './Ornaments';
 import { CONTRIBUTORS as CONTRIB_EN, CONTRIB_ERAS, type Contributor } from '@/lib/contributors-data';
 import { CONTRIBUTORS as CONTRIB_MR } from '@/lib/contributors-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
+import ContributorModal from './ContributorModal';
 
 interface EraMeta {
   id: Contributor['era'];
@@ -80,9 +81,17 @@ function EraHeader({ era, lang }: { era: EraMeta; lang: string }) {
   );
 }
 
-function PersonCard({ c, lang }: { c: Contributor; lang: string }) {
-  const inner = (
-    <>
+function PersonCard({
+  c,
+  lang,
+  onOpen,
+}: {
+  c: Contributor;
+  lang: string;
+  onOpen: (c: Contributor) => void;
+}) {
+  return (
+    <button type="button" className="person is-link" onClick={() => onOpen(c)}>
       <CornerOrn className="tl" />
       <CornerOrn className="tr" />
       <CornerOrn className="bl" />
@@ -118,20 +127,7 @@ function PersonCard({ c, lang }: { c: Contributor; lang: string }) {
           <span key={w} className="person-work">{w}</span>
         ))}
       </div>
-    </>
-  );
-
-  if (c.href) {
-    return (
-      <Link key={c.id} className="person is-link" href={c.href}>
-        {inner}
-      </Link>
-    );
-  }
-  return (
-    <div key={c.id} className="person">
-      {inner}
-    </div>
+    </button>
   );
 }
 
@@ -139,6 +135,7 @@ export default function Contributors() {
   const { lang, t } = useLanguage();
   const CONTRIBUTORS = lang === 'mr' ? CONTRIB_MR : CONTRIB_EN;
   const total = CONTRIBUTORS.length;
+  const [selected, setSelected] = useState<Contributor | null>(null);
 
   return (
     <section id="contributors" className="frame">
@@ -153,6 +150,8 @@ export default function Contributors() {
           </div>
         </div>
 
+        <p className="contrib-prompt">{t('contrib.prompt')}</p>
+
         {CONTRIB_ERAS.map((eraId) => {
           const era = ERAS_META.find((e) => e.id === eraId);
           if (!era) return null;
@@ -164,13 +163,15 @@ export default function Contributors() {
               <EraHeader era={era} lang={lang} />
               <div className="people">
                 {people.map((c) => (
-                  <PersonCard key={c.id} c={c} lang={lang} />
+                  <PersonCard key={c.id} c={c} lang={lang} onOpen={setSelected} />
                 ))}
               </div>
             </div>
           );
         })}
       </div>
+
+      <ContributorModal contributor={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }
