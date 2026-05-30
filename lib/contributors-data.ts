@@ -840,6 +840,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'गणित · ज्योतिष',
     blurb: 'The Siddhānta-Śiromaṇi treats algebra, calculus precursors and planetary theory; the Līlāvatī teaches arithmetic in verse to a daughter.',
     works: ['Līlāvatī', 'Bījagaṇita', 'Siddhānta-Śiromaṇi'],
+    detail: {
+      intro:
+        'Bhāskara II, known as Bhāskarācārya, is the greatest mathematician-astronomer of medieval India, working at the Ujjain observatory in the twelfth century. His Siddhānta-Śiromaṇi crowns the classical Indian tradition of gaṇita and jyotiṣa.',
+      contributions: [
+        'Composed the four-part Siddhānta-Śiromaṇi, covering arithmetic (Līlāvatī), algebra (Bījagaṇita), the sphere (Golādhyāya) and planetary mathematics (Grahagaṇita).',
+        'Anticipated key ideas of calculus — the instantaneous rate of motion and a form of Rolle’s theorem — five centuries before Newton and Leibniz.',
+        'Advanced the solution of indeterminate (Pell-type) equations through the cakravāla (cyclic) method.',
+        'Wrote the Līlāvatī, a treatise on arithmetic in elegant verse, traditionally addressed to his daughter.',
+      ],
+      legacy:
+        'Bhāskara’s work was the high-water mark of Indian mathematics before the colonial era, and the Līlāvatī remained a standard textbook for centuries. His intuitions about infinitesimals place him among the forerunners of the calculus.',
+    },
   },
   {
     id: 'jnaneshwar',
@@ -855,6 +867,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'मराठी भक्ती · नाथ · वारकरी',
     blurb: 'At nineteen he wrote the Bhāvārtha-Dīpikā — the Gītā translated and unfolded in Marathi ovis — and gave the Vārkarī tradition its first scripture.',
     works: ['Jñāneśvarī', 'Amṛtānubhava', 'Haripāṭh'],
+    detail: {
+      intro:
+        'Jñāneśvar, affectionately called Māuli (“Mother”), is the founding saint of the Marathi Vārkarī tradition. In a life of barely twenty-one years he gave Maharashtra its first great work of philosophy and devotion in the people’s own language.',
+      contributions: [
+        'Wrote the Jñāneśvarī (Bhāvārtha-Dīpikā) at nineteen — a commentary on the Bhagavad-Gītā in flowing Marathi ovī verse.',
+        'Composed the Amṛtānubhava, an original work of Advaitic philosophy independent of any Sanskrit base.',
+        'Drew together the Nāth yogic lineage and Vārkarī devotion to Viṭṭhal of Pandharpur.',
+        'Made the deepest teaching of the Gītā accessible to ordinary Marathi speakers for the first time.',
+      ],
+      legacy:
+        'The Jñāneśvarī is the foundational scripture of the Vārkarī movement and a monument of Marathi literature. Jñāneśvar opened the path of vernacular bhakti in the Deccan that Nāmdev, Eknāth and Tukārām would walk after him.',
+    },
   },
   {
     id: 'namdev',
@@ -868,6 +892,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'मराठी भक्ती · वारकरी',
     blurb: 'A tailor of Pandharpur whose abhangas became canon in two languages — Marathi and Gurmukhi. Sixty-one of his hymns sit in the Guru Granth Sāhib.',
     works: ['Marathi abhangas', 'Hindi pads in Granth Sāhib'],
+    detail: {
+      intro:
+        'Nāmdev, a tailor of Pandharpur, is one of the earliest and best-loved of the Vārkarī sant-poets — and the rare saint whose voice became canon in two religious traditions and two languages.',
+      contributions: [
+        'Composed thousands of Marathi abhangas in devotion to Viṭṭhal, sung on the Vārkarī pilgrimage to this day.',
+        'Wrote hymns in early Hindi/Gurmukhi, sixty-one of which are included in the Sikh Guru Granth Sāhib.',
+        'Carried the message of nirguṇa and saguṇa bhakti across north India during long travels in the Punjab.',
+        'Helped shape the communal, egalitarian style of Vārkarī devotion alongside Jñāneśvar.',
+      ],
+      legacy:
+        'Nāmdev is a living bridge between the Marathi Vārkarī and the Sikh traditions, revered in both. His abhangas remain central to the Pandharpur pilgrimage, and his presence in the Guru Granth Sāhib makes him a saint of two faiths.',
+    },
   },
   {
     id: 'vidyaranya',
@@ -881,6 +917,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'अद्वैत · संस्था-स्थापना',
     blurb: 'Pañcadaśī and Jīvanmukti-Viveka systematise Advaita for the householder. The intellectual force behind the founding of the Vijayanagara empire.',
     works: ['Pañcadaśī', 'Jīvanmukti-Viveka', 'Sarva-darśana-Saṅgraha'],
+    detail: {
+      intro:
+        'Vidyāraṇya was a towering Advaitin scholar and statesman of the fourteenth century, head of the Śṛṅgeri maṭha, who combined the deepest learning with a decisive role in the politics of his age.',
+      contributions: [
+        'Wrote the Pañcadaśī, one of the clearest systematic manuals of Advaita Vedānta for the seeker.',
+        'Composed the Jīvanmukti-Viveka on liberation while still living.',
+        'Associated with the Sarva-darśana-Saṅgraha, the great compendium surveying all the philosophical schools of India.',
+        'Served as the intellectual and spiritual force behind the founding of the Vijayanagara empire, a bulwark of Hindu culture in the south.',
+      ],
+      legacy:
+        'Vidyāraṇya united contemplative depth with worldly purpose; his Pañcadaśī is still a standard text of Advaita, and the empire he helped found preserved south Indian temple culture, music and literature for two centuries.',
+    },
   },
   {
     id: 'madhava-sangamagrama',
@@ -894,6 +942,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'केरळ गणित संप्रदाय',
     blurb: 'Founder of the Kerala school. Infinite-series expansions for π, sine and cosine — three centuries before Leibniz, Newton and Gregory.',
     works: ['Mādhava–Leibniz series', 'Sine & cosine series'],
+    detail: {
+      intro:
+        'Mādhava of Saṅgamagrāma is the founder of the Kerala school of mathematics and astronomy — and, on the evidence of his results, one of the most original mathematicians of the pre-modern world. He arrived at the heart of mathematical analysis centuries before Europe.',
+      contributions: [
+        'Derived infinite-series expansions for π, the sine and the cosine — results known in Europe only with Newton, Leibniz and Gregory, three centuries later.',
+        'Gave the series now called the Mādhava–Leibniz series for π, with methods to accelerate its convergence.',
+        'Founded the Kerala school, whose lineage (Nīlakaṇṭha, Jyeṣṭhadeva) carried his analysis forward for generations.',
+        'Effectively reached the threshold of the calculus through the study of infinite processes.',
+      ],
+      legacy:
+        'Mādhava’s infinite series are among the most remarkable achievements of Indian mathematics, anticipating central tools of modern analysis. The Kerala school he founded shows the classical tradition still innovating at the highest level on the eve of the modern age.',
+    },
   },
   {
     id: 'kabir',
@@ -907,6 +967,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'निर्गुण भक्ती · संत',
     blurb: 'A weaver of Banāras whose dohās scold Hindus and Muslims with equal sharpness. Read across three canons — Bījak, Granth Sāhib and Pañc-vāṇī.',
     works: ['Bījak', 'Pads in Granth Sāhib'],
+    detail: {
+      intro:
+        'Kabīr, a weaver of Banāras, is the most arresting voice of the nirguṇa sant tradition — a poet who belonged fully to neither Hindu nor Muslim and rebuked the externals of both with unmatched force.',
+      contributions: [
+        'Composed dohās and pads in a plain, pointed vernacular that fused Hindu and Sufi devotional idiom.',
+        'Preached a formless (nirguṇa) divine reality beyond temple and mosque, ritual and scripture.',
+        'His verses are preserved across three canons — the Bījak of the Kabīr-panth, the Sikh Guru Granth Sāhib, and the Dādū-panthī Pañc-vāṇī.',
+        'Attacked caste, idolatry and religious hypocrisy in language ordinary people could carry by heart.',
+      ],
+      legacy:
+        'Kabīr is claimed by Hindus, Muslims and Sikhs alike and remains one of the most quoted poets of the subcontinent. His fearless, anti-sectarian voice continues to speak to every later movement for religious reform and social equality.',
+    },
   },
   {
     id: 'guru-nanak',
@@ -920,6 +992,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'सिख धर्म',
     blurb: 'First of the ten Sikh gurus. The Japjī Sāhib opens the Guru Granth Sāhib; the message of one nirguṇa Reality crossed every regional boundary.',
     works: ['Japjī Sāhib', 'Āsā dī Vār'],
+    detail: {
+      intro:
+        'Guru Nānak is the founder of the Sikh tradition and the first of its ten Gurus. Born in the Punjab, he travelled widely and taught a path of devotion to one formless God, beyond the divisions of Hindu and Muslim.',
+      contributions: [
+        'Founded Sikhism, teaching devotion to one nirguṇa God (Ik Oṅkār) expressed through honest work, sharing and remembrance of the Name.',
+        'Composed the Japjī Sāhib, the morning prayer that opens the Guru Granth Sāhib, and hymns such as the Āsā dī Vār.',
+        'Rejected caste, ritualism and empty asceticism, establishing the communal meal (langar) as a practice of equality.',
+        'Set the foundations of the institutions and lineage of Gurus that his successors would build into a full tradition.',
+      ],
+      legacy:
+        'From Guru Nānak’s teaching grew one of the world’s major religions, with the Guru Granth Sāhib at its heart. His vision of one God, equality and service shaped the Punjab and the wider world of the Sikh diaspora.',
+    },
   },
   {
     id: 'sūrdas',
@@ -933,6 +1017,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'ब्रज भक्ती · पुष्टिमार्ग',
     blurb: 'The blind poet whose Sūrsāgar fills four thousand pads with the childhood of Kṛṣṇa — the lyric voice of Braj-bhāṣā devotion.',
     works: ['Sūrsāgar', 'Sāhitya-Laharī'],
+    detail: {
+      intro:
+        'Sūrdās is the great poet of Braj-bhāṣā Kṛṣṇa devotion — traditionally remembered as blind, and as the most tender singer of the child Kṛṣṇa’s play in all of Hindi literature.',
+      contributions: [
+        'Composed the Sūrsāgar, a vast collection of pads on the life and play (līlā) of Kṛṣṇa, especially his childhood in Braj.',
+        'Wrote in the Puṣṭimārga tradition of Vallabha, giving its devotion its most beloved lyric form.',
+        'Perfected the vātsalya (parental tenderness) and śṛṅgāra (love) moods of Kṛṣṇa-bhakti.',
+        'Shaped the literary register of Braj-bhāṣā as a language of devotional poetry.',
+      ],
+      legacy:
+        'Sūrdās’s pads are sung in temples and homes across north India to this day; his portrait of the child Kṛṣṇa defined the devotional imagination of the Braj region and the Hindi-speaking world.',
+    },
   },
   {
     id: 'vallabha',
@@ -946,6 +1042,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'शुद्धाद्वैत · पुष्टिमार्ग',
     blurb: 'Founded the Puṣṭimārga path of divine grace. The Aṇu-Bhāṣya on the Brahma-Sūtra and the Subodhinī on the Bhāgavata anchor Śuddhādvaita.',
     works: ['Aṇu-Bhāṣya', 'Subodhinī', 'Ṣoḍaśa-Granthāḥ'],
+    detail: {
+      intro:
+        'Vallabhācārya is the founder of the Puṣṭimārga (“path of grace”) and of Śuddhādvaita (“pure non-dualism”) Vedānta — a teacher who set devotion to Kṛṣṇa on a rigorous philosophical foundation.',
+      contributions: [
+        'Founded the Puṣṭimārga, the path of divine grace centred on loving service (sevā) to Kṛṣṇa as Śrī Nāthajī.',
+        'Taught Śuddhādvaita, in which the world is a real, unillusory manifestation of Brahman (Kṛṣṇa).',
+        'Wrote the Aṇu-Bhāṣya on the Brahma-Sūtra and the Subodhinī commentary on the Bhāgavata-Purāṇa.',
+        'Composed the Ṣoḍaśa-Granthāḥ, sixteen short works guiding the devotee’s life.',
+      ],
+      legacy:
+        'The Puṣṭimārga remains a major Vaiṣṇava tradition, especially among the merchant communities of western India, and shaped the great flowering of Braj devotional poetry and the temple culture of Nathdwara.',
+    },
   },
   {
     id: 'caitanya',
@@ -959,6 +1067,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'गौडीय वैष्णव · भक्ती',
     blurb: 'Founder of Gauḍīya Vaiṣṇavism. Saṅkīrtana — public chanting of the Name — turned bhakti into a mass devotional practice across Bengal and Odisha.',
     works: ['Śikṣāṣṭakam', 'Saṅkīrtana practice'],
+    detail: {
+      intro:
+        'Caitanya Mahāprabhu is the founder of Gauḍīya Vaiṣṇavism and the saint who turned devotion to Kṛṣṇa into an ecstatic, public, congregational practice across Bengal and Odisha.',
+      contributions: [
+        'Founded the Gauḍīya (Bengali) Vaiṣṇava tradition centred on loving devotion to Rādhā-Kṛṣṇa.',
+        'Popularised saṅkīrtana — communal singing and dancing in the Name of God — as the supreme practice of the age.',
+        'Left the Śikṣāṣṭakam, eight verses that distil the whole of his teaching on devotion.',
+        'Inspired the systematic theology of the Six Gosvāmīs of Vṛndāvana.',
+      ],
+      legacy:
+        'Caitanya transformed bhakti into a mass movement that reshaped the religious life of eastern India. Through his lineage, his saṅkīrtana and the theology he inspired reached the modern world — including the global Hare Kṛṣṇa movement.',
+    },
   },
   {
     id: 'mira',
@@ -972,6 +1092,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'राजस्थानी भक्ती · कृष्ण',
     blurb: 'A Rajput princess who took Kṛṣṇa as her only husband. Her padas — in Rajasthani, Braj and Gujarati — refuse every other allegiance.',
     works: ['Padāvalī', 'Bhajans'],
+    detail: {
+      intro:
+        'Mīrā Bāī, a Rajput princess of Mewar, is the most famous woman saint-poet of the bhakti age — remembered for renouncing royal life and worldly marriage for an all-consuming devotion to Kṛṣṇa as her only Lord.',
+      contributions: [
+        'Composed hundreds of padas (bhajans) of passionate devotion to Kṛṣṇa, sung in Rajasthani, Braj and Gujarati.',
+        'Defied the conventions of caste, gender and royal duty in the name of her chosen devotion.',
+        'Gave bhakti one of its most personal and emotionally direct voices.',
+        'Became, in her own life, a symbol of devotion that overrides every social bond.',
+      ],
+      legacy:
+        'Mīrā’s bhajans are among the best-loved devotional songs of India, sung from village to concert hall. She endures as a symbol of fearless love and of a woman’s spiritual autonomy against the weight of social expectation.',
+    },
   },
   {
     id: 'eknath',
@@ -985,6 +1117,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'मराठी भक्ती · वारकरी',
     blurb: 'The Eknāthī Bhāgavata, the Bhāvārtha-Rāmāyaṇa and bhārūds in vernacular Marathi. The editor who restored Jñāneśvar’s text from corrupted copies.',
     works: ['Eknāthī Bhāgavata', 'Bhāvārtha-Rāmāyaṇa', 'Bhārūds'],
+    detail: {
+      intro:
+        'Eknāth is the great sixteenth-century saint of the Marathi Vārkarī tradition — a householder-sage who was at once a devotional poet, a social reformer and the careful editor who rescued the tradition’s foundational text.',
+      contributions: [
+        'Wrote the Eknāthī Bhāgavata, a Marathi commentary on the eleventh book of the Bhāgavata-Purāṇa, and the Bhāvārtha-Rāmāyaṇa.',
+        'Produced a critical edition of the Jñāneśvarī, restoring Jñāneśvar’s text from corrupted manuscripts.',
+        'Composed bhārūds — dramatic, colloquial devotional songs that carried teaching to ordinary people.',
+        'Challenged caste prejudice in his own conduct, insisting on the dignity of the marginalised.',
+      ],
+      legacy:
+        'Eknāth links the founding age of Jñāneśvar and Nāmdev to the later flowering under Tukārām. His restored Jñāneśvarī, his Bhāgavata and his reforming example remain central to Marathi devotional and cultural life.',
+    },
   },
   {
     id: 'tulsidas',
@@ -998,6 +1142,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'अवधी भक्ती · राम',
     blurb: 'The Rāmcaritmānas told the Rāma story in Awadhi for everyone north India had ever read off a temple wall. The most recited text in Hindi-belt homes.',
     works: ['Rāmcaritmānas', 'Hanumān Cālīsā', 'Vinaya-Patrikā'],
+    detail: {
+      intro:
+        'Tulsīdās is the supreme poet of north Indian Rāma devotion — the author of the Rāmcaritmānas, which placed the story of Rāma in the hearts and homes of the Hindi-speaking world.',
+      contributions: [
+        'Composed the Rāmcaritmānas, retelling the Rāma story in Awadhi for ordinary people, not only the Sanskrit-learned.',
+        'Wrote the Hanumān Cālīsā, perhaps the most recited devotional hymn in all of north India.',
+        'Composed the Vinaya-Patrikā and other works of Rāma-bhakti.',
+        'Fused the highest devotion with a vision of dharma and the ideal social order (Rāma-rājya).',
+      ],
+      legacy:
+        'The Rāmcaritmānas is the most influential text in the religious life of the Hindi belt — read, sung and enacted in the Rāmlīlā every year. Tulsīdās shaped the popular image of Rāma and Hanumān for hundreds of millions.',
+    },
   },
   {
     id: 'tukaram',
@@ -1011,6 +1167,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'मराठी भक्ती · वारकरी',
     blurb: 'Five thousand abhangas — the unsparing inner voice of Marathi bhakti. Sang of doubt and the absent God as honestly as of presence.',
     works: ['Tukārām-gāthā', 'Abhanga corpus'],
+    detail: {
+      intro:
+        'Tukārām is the culminating saint of the Marathi Vārkarī tradition — a grocer of Dehu whose abhangas give Marathi bhakti its most honest and unsparing inner voice.',
+      contributions: [
+        'Composed some five thousand abhangas, the Tukārām-gāthā, ranging from ecstatic praise to raw doubt and self-reproach.',
+        'Sang of the absent God and the struggle of faith with the same honesty as of divine presence.',
+        'Voiced the devotion of the common householder against priestly privilege and empty ritual.',
+        'Brought the Vārkarī tradition begun by Jñāneśvar to its emotional and literary height.',
+      ],
+      legacy:
+        'Tukārām’s abhangas are sung on the Pandharpur pilgrimage and woven into everyday Marathi speech. He stands as the most beloved of the Vārkarī sants and one of the great devotional poets in any Indian language.',
+    },
   },
   {
     id: 'ramdas',
@@ -1024,6 +1192,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'सक्रिय वेदान्त · राम भक्ती',
     blurb: 'Dāsbodh and Manāche Ślok — the gurū of activist Vedānta in the age of Śivājī. Renunciation joined to public reconstruction.',
     works: ['Dāsbodh', 'Manāche Ślok', 'Karuṇāṣṭakas'],
+    detail: {
+      intro:
+        'Samartha Rāmdās is the saint of activist Vedānta in the age of Śivājī — a teacher who joined inner spiritual discipline to outward worldly action and the rebuilding of society.',
+      contributions: [
+        'Composed the Dāsbodh, a comprehensive manual of spiritual life and practical conduct in dialogue form.',
+        'Wrote the Manāche Ślok, verses of moral counsel addressed to the mind, widely memorised in Maharashtra.',
+        'Preached devotion to Rāma and Hanumān joined to strength, self-discipline and public service.',
+        'Founded maṭhas and established Hanumān temples as centres of physical and spiritual vigour.',
+      ],
+      legacy:
+        'Rāmdās gave Maharashtra a spirituality of action — renunciation turned toward the reconstruction of a society. His Dāsbodh and Manāche Ślok remain widely read, and his ideal of strength joined to devotion shaped Maratha self-understanding.',
+    },
   },
 
   // ─────────────────────────────── Modern Era ─────────────────────────────────
