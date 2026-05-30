@@ -314,6 +314,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Set the Four Noble Truths and the Eightfold Path. The middle way reframed dharma without God, soul, or sacrifice — and travelled further than any Indian school.',
     works: ['Dhammacakkappavattana', 'Vinaya', 'Sutta Piṭaka'],
     href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Siddhārtha Gautama, the Śākyamuni Buddha, abandoned a sheltered princely life in search of an end to suffering, and after long ascetic experiment found awakening under the bodhi tree at Bodh Gayā. His teaching reframed the whole question of dharma.',
+      contributions: [
+        'Set out the Four Noble Truths — suffering, its origin in craving, its cessation, and the path to that cessation.',
+        'Taught the Noble Eightfold Path and the Middle Way between indulgence and self-mortification.',
+        'Reframed dharma without reliance on a creator God, an eternal soul (anattā) or Vedic sacrifice, grounding it instead in dependent origination (pratītya-samutpāda).',
+        'Founded the saṅgha, the monastic order whose Vinaya discipline and Sutta discourses preserved and carried the teaching.',
+      ],
+      legacy:
+        'From a teacher in the Gangetic plain the Buddha became the source of a tradition that spread across the whole of Asia — Theravāda, Mahāyāna and Vajrayāna — the most widely travelled of all the schools born in India.',
+    },
   },
   {
     id: 'panini',
@@ -328,6 +340,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Aṣṭādhyāyī: nearly four thousand generative rules that derive every well-formed Sanskrit utterance. The most precise grammar written in any ancient language.',
     works: ['Aṣṭādhyāyī', 'Dhātupāṭha', 'Gaṇapāṭha'],
     href: '/vedangas/',
+    detail: {
+      intro:
+        'Pāṇini, working in the north-west around the fifth or fourth century BCE, produced in the Aṣṭādhyāyī a description of Sanskrit so complete and so economical that it has no rival in the ancient world. It is less a grammar book than a formal system for generating a language.',
+      contributions: [
+        'Composed the Aṣṭādhyāyī, nearly four thousand sūtras that derive every well-formed Sanskrit word and sentence from roots and affixes.',
+        'Built a metalanguage of technical markers, abbreviations and ordering conventions — a generative apparatus anticipating modern formal grammar by millennia.',
+        'Compiled the supporting Dhātupāṭha (list of verbal roots) and Gaṇapāṭha (lists of word-classes) on which the rules operate.',
+        'Fixed the standard of classical Sanskrit, the language in which almost all later śāstra is written.',
+      ],
+      legacy:
+        'Pāṇini’s system became the model of rigour for every Indian science, and in the modern era drew the admiration of linguists from Bloomfield to the founders of generative grammar — a two-and-a-half-thousand-year-old grammar still studied as a working theory.',
+    },
   },
   {
     id: 'kautilya',
@@ -343,6 +367,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'अर्थशास्त्र · राजनीति',
     blurb: 'Architect of the Mauryan order. The Arthaśāstra reads economics, intelligence, foreign policy and law as a single integrated science of rule.',
     works: ['Arthaśāstra', 'Cāṇakya-nīti'],
+    detail: {
+      intro:
+        'Cāṇakya — also called Kauṭilya and Viṣṇugupta — is remembered as the brahmin strategist who toppled the Nanda dynasty and raised Candragupta Maurya to the throne, founding the first great pan-Indian empire. The Arthaśāstra is the manual of the order he built.',
+      contributions: [
+        'Authored the Arthaśāstra, a comprehensive science of statecraft covering administration, law, taxation, agriculture, diplomacy, espionage and war.',
+        'Treated economics (artha) as a discipline in its own right — the material basis of a stable polity.',
+        'Set out a realist theory of inter-state relations, the maṇḍala of allies and enemies, centuries before comparable treatises elsewhere.',
+        'Associated with the Cāṇakya-nīti, a popular collection of aphorisms on conduct and prudence.',
+      ],
+      legacy:
+        'The Arthaśāstra, lost for centuries and rediscovered in 1905, reshaped the modern understanding of ancient Indian political thought. Cāṇakya endures as the subcontinent’s archetype of the shrewd counsellor — India’s answer to Machiavelli, written seventeen centuries earlier.',
+    },
   },
   {
     id: 'patanjali',
@@ -357,6 +393,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Yoga-Sūtra distils meditative practice into 196 aphorisms. The same tradition assigns him the Mahābhāṣya — the great commentary on Pāṇini.',
     works: ['Yoga-Sūtra', 'Mahābhāṣya'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Patañjali is the name attached to two foundational works in two different fields — the Yoga-Sūtra of meditative discipline and the Mahābhāṣya, the great grammatical commentary. Tradition treats them as one author; either way the name stands at the head of yoga as a system.',
+      contributions: [
+        'Compiled the Yoga-Sūtra, 196 aphorisms that organise meditative practice into the eight limbs (aṣṭāṅga) of yoga.',
+        'Defined yoga as the stilling of the modifications of the mind (citta-vṛtti-nirodha) — the classic formulation of the whole tradition.',
+        'Systematised the relationship between Sāṅkhya metaphysics and contemplative practice, giving Yoga its place among the six darśanas.',
+        'By tradition also the author of the Mahābhāṣya, the authoritative commentary on Pāṇini’s grammar.',
+      ],
+      legacy:
+        'The Yoga-Sūtra is the text on which the global practice of yoga ultimately rests. Patañjali’s eight limbs remain the reference framework for meditation, ethics and posture alike, from classical commentaries to the modern studio.',
+    },
   },
   {
     id: 'kapila',
@@ -371,6 +419,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Founding ācārya of Sāṅkhya. The dualism of puruṣa and prakṛti enters the Gītā, Yoga, Āyurveda and every later school as a default working vocabulary.',
     works: ['Sāṅkhya-Sūtra (attrib.)', 'Sāṅkhya-Kārikā (line)'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Kapila is honoured as the founding ācārya of Sāṅkhya, the oldest of the six orthodox darśanas. Though almost nothing of his own work survives, the dualist vocabulary he is credited with became the common property of nearly every later Indian system.',
+      contributions: [
+        'Founder of the Sāṅkhya school, traditionally credited with the (now lost) Sāṅkhya-Sūtra.',
+        'Set out the dualism of puruṣa (pure consciousness) and prakṛti (primal matter), and the unfolding of the world through the three guṇas.',
+        'Provided the analytical scheme of the twenty-five tattvas, the categories by which existence is enumerated — the very word sāṅkhya means “enumeration.”',
+        'Supplied the working vocabulary later taken up by the Gītā, Yoga, Āyurveda and Vedānta.',
+      ],
+      legacy:
+        'Sāṅkhya’s analysis of consciousness and matter is the substructure beneath much of Indian thought; even schools that reject its dualism argue in its terms. Kapila stands as the tradition’s first systematic philosopher.',
+    },
   },
   {
     id: 'gautama-nyaya',
@@ -385,6 +445,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Nyāya-Sūtra: the formal theory of pramāṇa (means of knowledge) and the five-membered syllogism that powered Indic debate for two millennia.',
     works: ['Nyāya-Sūtra'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Akṣapāda Gautama is the founder of Nyāya, the school of logic and epistemology. His Nyāya-Sūtra gave Indian thought its formal tools of reasoning and debate — the apparatus that every other school would have to use to argue at all.',
+      contributions: [
+        'Composed the Nyāya-Sūtra, the foundational text of Indian logic and theory of knowledge.',
+        'Set out the four valid means of knowledge (pramāṇas): perception, inference, comparison and testimony.',
+        'Formalised the five-membered syllogism (avayava) — proposition, reason, example, application and conclusion — the standard form of Indian demonstration.',
+        'Built a theory of debate, fallacy and refutation that disciplined philosophical argument across all traditions.',
+      ],
+      legacy:
+        'Nyāya became the shared grammar of Indian reasoning; mastery of its categories was the price of entry to any serious debate. Its later “new logic” (Navya-Nyāya) developed a technical precision that rivals modern formal logic.',
+    },
   },
   {
     id: 'kanada',
@@ -401,6 +473,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Vaiśeṣika-Sūtra: an atomistic ontology of substance, quality and motion two thousand years before Dalton — and paired with Nyāya into a single school.',
     works: ['Vaiśeṣika-Sūtra'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Kaṇāda, also called Ulūka, is the founder of Vaiśeṣika, the school of natural philosophy. His Vaiśeṣika-Sūtra proposes that the physical world is built from indivisible atoms (paramāṇu) — an analysis that pairs naturally with the logic of Nyāya.',
+      contributions: [
+        'Composed the Vaiśeṣika-Sūtra, the foundational text of Indian atomism and ontology.',
+        'Proposed that material substances are composed of eternal, indivisible atoms combining into dyads and triads.',
+        'Classified reality into categories (padārthas) — substance, quality, action, generality, particularity and inherence.',
+        'Grounded an account of the physical world that the allied Nyāya school adopted as its natural philosophy.',
+      ],
+      legacy:
+        'Kaṇāda’s atomism anticipates, in conceptual outline, ideas that European science would not reach until the nineteenth century. Fused with Nyāya, his Vaiśeṣika supplied classical India with its most developed philosophy of nature.',
+    },
   },
   {
     id: 'jaimini',
@@ -415,6 +499,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Pūrva-Mīmāṃsā-Sūtra: the hermeneutics of Vedic ritual and the theory of injunction (vidhi) that later jurisprudence inherits whole.',
     works: ['Pūrva-Mīmāṃsā-Sūtra'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Jaimini is the founder of Pūrva Mīmāṃsā, the school devoted to the interpretation of the ritual portion of the Veda. His Mīmāṃsā-Sūtra is, in effect, the first systematic theory of how to read an authoritative text — a science of interpretation born from the need to apply Vedic injunction.',
+      contributions: [
+        'Composed the Pūrva-Mīmāṃsā-Sūtra, the foundational text of Vedic hermeneutics.',
+        'Developed the theory of injunction (vidhi) — how a command is identified, qualified and applied — the heart of Mīmāṃsā.',
+        'Defended the eternality and self-validity of the Veda and the inherent power of the ritual word.',
+        'Built the rules of textual interpretation that later Dharmaśāstra and Hindu jurisprudence inherited whole.',
+      ],
+      legacy:
+        'Mīmāṃsā’s interpretive principles became the shared method for reading any normative text in India, from ritual manuals to law. Jaimini’s hermeneutics underlie the entire later tradition of dharma and its application.',
+    },
   },
   {
     id: 'badarayana',
@@ -429,6 +525,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Brahma-Sūtra summarises the Upaniṣads in 555 aphorisms. Every later Vedāntin — Śaṅkara, Rāmānuja, Madhva — writes a bhāṣya on it.',
     works: ['Brahma-Sūtra'],
     href: '/darshanas/',
+    detail: {
+      intro:
+        'Bādarāyaṇa is the author of the Brahma-Sūtra, the foundational text of Vedānta. In a few hundred terse aphorisms he organised the scattered teaching of the Upaniṣads into a single coherent system — and set the agenda for two thousand years of Indian metaphysics.',
+      contributions: [
+        'Composed the Brahma-Sūtra (also called the Vedānta-Sūtra), summarising the Upaniṣads in 555 aphorisms.',
+        'Reconciled apparently conflicting Upaniṣadic statements into a unified doctrine of Brahman, the ground of all being.',
+        'Established the Brahma-Sūtra as one of the three canonical bases (prasthāna-trayī) of Vedānta, beside the Upaniṣads and the Gītā.',
+        'Framed the questions — the nature of Brahman, the self, and their relation — that every later school would answer differently.',
+      ],
+      legacy:
+        'Every major Vedāntin — Śaṅkara, Rāmānuja, Madhva and the rest — had to write a commentary on the Brahma-Sūtra to establish his school. Bādarāyaṇa is thus the common ancestor of the whole Vedānta tradition, however much its branches disagree.',
+    },
   },
   {
     id: 'bharata-muni',
@@ -443,6 +551,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'The Nāṭyaśāstra codified drama, music, dance and the eight rasas. Every classical Indian art still references it as a first source.',
     works: ['Nāṭyaśāstra', 'Rasa-sūtra'],
     href: '/upavedas/',
+    detail: {
+      intro:
+        'Bharata Muni is the sage to whom the Nāṭyaśāstra is ascribed — the encyclopaedic treatise that codified the performing arts of classical India. It treats drama, music, dance and aesthetics as a single integrated science, and remains the first source for them all.',
+      contributions: [
+        'Compiled the Nāṭyaśāstra, the foundational treatise on theatre, dance, music and dramaturgy.',
+        'Set out the theory of rasa — the aesthetic “flavours” a performance evokes — beginning with eight basic emotional states.',
+        'Described in detail the elements of performance: gesture, costume, stagecraft, vocal and instrumental music, and the structure of dramatic plot.',
+        'Gave the rasa-sūtra, the formula relating dramatic situation, emotion and aesthetic experience that later aestheticians endlessly debated.',
+      ],
+      legacy:
+        'Every classical Indian art — Bharatanāṭyam, Kathak, the rāga system, Sanskrit drama — still traces its first principles to the Nāṭyaśāstra. Bharata’s rasa theory became the central concept of all Indian aesthetics.',
+    },
   },
   {
     id: 'charaka',
