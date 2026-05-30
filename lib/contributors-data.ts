@@ -177,6 +177,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Central voice of the Bṛhadāraṇyaka. Compiled the Śukla Yajurveda; the Yājñavalkya-Smṛti carries his name as a rule-book of dharma.',
     works: ['Bṛhadāraṇyaka dialogues', 'Śukla Yajurveda', 'Yājñavalkya-Smṛti'],
     href: '/upanishads/',
+    detail: {
+      intro:
+        'Yājñavalkya is the towering intellect of the early Upaniṣadic age — the sage of the Bṛhadāraṇyaka, equally at home in the technicalities of ritual and in the most radical metaphysics of the Self. At the court of King Janaka of Videha he outargues every rival brought against him.',
+      contributions: [
+        'Dominates the Bṛhadāraṇyaka Upaniṣad, where his dialogues — with Gārgī, Maitreyī and Janaka — set out the doctrine of the imperishable Self (ātman) and the method of negation, neti neti (“not this, not this”).',
+        'Compiled and transmitted the Śukla (White) Yajurveda, the Vājasaneyī Saṃhitā, which tradition says he received afresh from the Sun.',
+        'Lends his name to the Yājñavalkya-Smṛti, one of the most systematic of the dharmaśāstras and a major source for later Hindu jurisprudence.',
+        'Frames the teaching that the knower can never be made an object of knowledge — “you cannot see the seer of seeing.”',
+      ],
+      legacy:
+        'Yājñavalkya fixes the characteristic move of Upaniṣadic thought: the turn inward to the witnessing Self that all later Vedānta — Advaita above all — takes as its starting point.',
+    },
   },
   {
     id: 'gargi',
@@ -193,6 +205,17 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'At Janaka’s court she pressed Yājñavalkya with the question on which all metaphysics turns — and was the only interlocutor told to stop.',
     works: ['Bṛhadāraṇyaka 3.6, 3.8'],
     href: '/upanishads/',
+    detail: {
+      intro:
+        'Gārgī Vāchaknavī is among the brahmavādinīs, the women who debated openly in the Vedic assemblies. At Janaka’s great sacrificial gathering she alone returns to challenge Yājñavalkya a second time, with the deepest question of all — what is the ground on which everything, warp and woof, is woven?',
+      contributions: [
+        'Interlocutor of Yājñavalkya in two celebrated passages of the Bṛhadāraṇyaka Upaniṣad (3.6 and 3.8).',
+        'Presses the regress of causes — “on what is the world woven?” — until the inquiry reaches the akṣara, the imperishable, beyond space, time and ether.',
+        'Stands in the tradition as a woman acknowledged as a master of brahmavidyā, the knowledge of the Absolute.',
+      ],
+      legacy:
+        'Gārgī’s questions mark the outer edge of metaphysical inquiry in the Upaniṣads — the point where the chain of explanation stops and the imperishable is named. She remains a touchstone for the place of women in the Vedic intellectual tradition.',
+    },
   },
   {
     id: 'maitreyi',
@@ -209,6 +232,17 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Refused her husband’s wealth and asked for what makes a thing dear instead. The Maitreyī dialogue opens the Upaniṣadic teaching on the Self.',
     works: ['Bṛhadāraṇyaka 2.4, 4.5'],
     href: '/upanishads/',
+    detail: {
+      intro:
+        'Maitreyī is the wife of Yājñavalkya who, when he prepares to renounce the world and divide his property, refuses the wealth and asks instead for what is truly worth having. Her dialogue is one of the most quoted passages in all of Vedānta.',
+      contributions: [
+        'Central voice of the Maitreyī dialogue in the Bṛhadāraṇyaka Upaniṣad (2.4, repeated at 4.5).',
+        'Asks whether wealth can make one immortal — and on being told it cannot, sets it aside: “what should I do with that by which I do not become immortal?”',
+        'Receives the teaching that all things are dear not for their own sake but for the sake of the Self (ātman) — “it is the Self that should be seen, heard, reflected on and meditated upon.”',
+      ],
+      legacy:
+        'The Maitreyī dialogue compresses the whole Upaniṣadic ethic into a single exchange: the move from possession to knowledge, from the dear object to the Self for whose sake all is dear. She is remembered as a brahmavādinī and a model seeker.',
+    },
   },
   {
     id: 'agastya',
@@ -222,6 +256,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'ऋग्वेद · दक्षिण प्रसार',
     blurb: 'Seer credited with carrying Vedic dharma south of the Vindhyas. Lopāmudrā shares his hymns; the southern grammars and siddha lineages claim him as ādi-guru.',
     works: ['Ṛgveda hymns (with Lopāmudrā)', 'Agastya-Saṃhitā'],
+    detail: {
+      intro:
+        'Agastya is the ṛṣi the tradition credits with carrying Vedic culture south across the Vindhya range — the sage of the threshold between north and south, and one of the saptarṣis of the southern sky. His wife Lopāmudrā is herself a hymn-composer of the Ṛgveda.',
+      contributions: [
+        'Seer of Ṛgvedic hymns, several composed in dialogue with his wife Lopāmudrā — among the rare hymns voiced by a woman.',
+        'Remembered as the sage who first took Vedic dharma south of the Vindhyas, in legend bidding the mountain bow until his return.',
+        'Claimed as ādi-guru by the Tamil grammatical tradition (the Agattiyam) and as a founder-figure by the Siddha medical lineages of the south.',
+        'Lends his name to the Agastya-Saṃhitā and to a wide body of later tantric and astronomical literature.',
+      ],
+      legacy:
+        'Agastya is the bridge-figure of the tradition — the point at which the northern Vedic and the southern Dravidian streams are imagined to meet. Few ṛṣis are invoked across so many fields: hymn, grammar, medicine and the very geography of the subcontinent.',
+    },
   },
 
   // ───────────────────────────── Classical Era ────────────────────────────────
@@ -240,6 +286,18 @@ export const CONTRIBUTORS: Contributor[] = [
     blurb: 'Recensed and systematised the Jaina path of ahiṃsā, anekāntavāda and aparigraha — the ethics of multi-sided truth and radical non-harm.',
     works: ['Five mahāvratas', 'Syādvāda', 'Āgama tradition'],
     href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Vardhamāna Mahāvīra, the twenty-fourth and last Tīrthaṅkara of this cosmic age, is the figure who gave Jainism its enduring shape. A contemporary of the Buddha, he renounced a princely life for twelve years of extreme asceticism before teaching the path of liberation he had won.',
+      contributions: [
+        'Systematised the five great vows (mahāvratas): non-violence (ahiṃsā), truth, non-stealing, celibacy and non-possession (aparigraha).',
+        'Taught anekāntavāda, the doctrine of the many-sidedness of reality, and its logical expression syādvāda — that every assertion holds only “in some respect.”',
+        'Carried ahiṃsā to its furthest reach, extending non-harm to every living being down to the most minute.',
+        'Organised the fourfold community (saṅgha) of monks, nuns, laymen and laywomen, and stands behind the Āgama scriptures that preserve his teaching.',
+      ],
+      legacy:
+        'Mahāvīra’s anekāntavāda gave Indian thought its most rigorous philosophy of intellectual humility, and his radical ahiṃsā shaped the ethics of the whole subcontinent — reaching, much later, the non-violence of Gandhi.',
+    },
   },
   {
     id: 'buddha',
