@@ -1219,6 +1219,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'सुधारक · ब्राह्मो समाज',
     blurb: 'Founder of the Brāhmo Samāj. Translated the Upaniṣads into Bengali and English, and lobbied the colonial state into banning satī.',
     works: ['Translations of Upaniṣads', 'Tuhfat-ul-Muwahhidin'],
+    detail: {
+      intro:
+        'Rām Mohan Roy is often called the father of the Indian Renaissance — a Bengali polymath who, at the dawn of the colonial encounter, set out to reform Hinduism from within and to reconcile its deepest insights with reason and modernity.',
+      contributions: [
+        'Founded the Brāhmo Samāj in 1828, a reformist movement teaching the worship of one formless God and rejecting idolatry and ritualism.',
+        'Translated several Upaniṣads into Bengali and English, arguing that monotheism was the true core of the Vedānta.',
+        'Campaigned successfully for the abolition of satī (widow-burning), which the colonial state banned in 1829.',
+        'Championed women’s rights, modern education and a free press, and wrote the Tuhfat-ul-Muwahhidin against religious dogmatism.',
+      ],
+      legacy:
+        'Rām Mohan Roy opened the age of modern Hindu reform; the Brāhmo Samāj shaped generations of Bengali thinkers, and his fusion of rational inquiry with the Upaniṣadic vision set the pattern for every later reformer.',
+    },
   },
   {
     id: 'dayananda',
@@ -1232,6 +1244,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'सुधारक · आर्य समाज',
     blurb: 'Founder of the Ārya Samāj. Satyārtha Prakāś called for a return to the Vedas and against idol-worship, caste-by-birth and child marriage.',
     works: ['Satyārtha Prakāś', 'Ṛgveda Bhāṣya'],
+    detail: {
+      intro:
+        'Dayānanda Sarasvatī was the fiery reformer who called Hindu India “back to the Vedas” — rejecting the accretions of later centuries in favour of what he held to be the pure, rational religion of the Vedic seers.',
+      contributions: [
+        'Founded the Ārya Samāj in 1875, a reform movement based on the sole authority of the Vedas.',
+        'Wrote the Satyārtha Prakāś (“Light of Truth”), the manifesto of his reform.',
+        'Attacked idol-worship, caste-by-birth, untouchability and child marriage, and championed women’s education and widow remarriage.',
+        'Began a Vedic commentary (Ṛgveda Bhāṣya) and revived the study of the Saṃhitās.',
+      ],
+      legacy:
+        'The Ārya Samāj became a powerful force for social reform and education across north India and the diaspora, and Dayānanda’s assertion of Vedic authority and Hindu self-confidence fed directly into the national awakening.',
+    },
   },
   {
     id: 'tilak',
@@ -1247,6 +1271,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'कर्मयोग · राष्ट्रवाद',
     blurb: 'Wrote the Gītā-Rahasya in a Mandalay prison. Read the Gītā as a manual of karma-yoga — a charter for action, not withdrawal.',
     works: ['Gītā-Rahasya', 'Orion', 'Arctic Home in the Vedas'],
+    detail: {
+      intro:
+        'Bāḷ Gaṅgādhar Tilak, hailed as Lokmānya (“accepted by the people”), was the foremost radical leader of the early national movement — and a scholar who reread the Bhagavad-Gītā as a summons to action.',
+      contributions: [
+        'Wrote the Gītā-Rahasya in a Mandalay prison, interpreting the Gītā as a manual of karma-yoga — selfless action, not withdrawal.',
+        'Declared that “Swaraj is my birthright and I shall have it,” galvanising the demand for self-rule.',
+        'Revived public Gaṇeśa and Śivājī festivals as vehicles of national feeling.',
+        'Wrote scholarly works on Vedic antiquity, Orion and The Arctic Home in the Vedas.',
+      ],
+      legacy:
+        'Tilak transformed the freedom struggle from elite petitioning into a mass movement, and his karma-yoga reading of the Gītā gave Indian nationalism a spiritual charter. His call for Swaraj echoed through the entire independence movement.',
+    },
   },
   {
     id: 'ramakrishna',
@@ -1260,6 +1296,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'भक्ती · ज्ञान · सर्व-धर्म-समभाव',
     blurb: 'The Bengali mystic of Dakṣiṇeśvar who practiced — to verify — Vaiṣṇava, Śākta, Advaita, Christian and Islamic paths in turn, and reported the same goal.',
     works: ['Gospel of Śrī Rāmakṛṣṇa', 'Kathāmṛta'],
+    detail: {
+      intro:
+        'Rāmakṛṣṇa Paramahaṃsa was the Bengali mystic of the Dakṣiṇeśvar Kālī temple whose direct, experimental spirituality became the seed of a worldwide movement. He sought not to argue religions but to verify them in his own experience.',
+      contributions: [
+        'Practised in turn the paths of Vaiṣṇava devotion, Śākta worship, Advaita, Christianity and Islam — and reported that all led to the same Reality.',
+        'Taught a religion of direct experience (anubhava) over doctrine, in vivid parables drawn from everyday Bengali life.',
+        'His conversations were recorded in the Kathāmṛta (Gospel of Śrī Rāmakṛṣṇa), one of the great spiritual documents of modern India.',
+        'Formed the circle of disciples, led by Vivekānanda, who would carry his message to the world.',
+      ],
+      legacy:
+        'Rāmakṛṣṇa’s testimony that all religions reach the same goal became one of the most influential spiritual ideas of the modern age. Through his disciples and the Mission they founded, his life reshaped how Hinduism understood and presented itself abroad.',
+    },
   },
   {
     id: 'vivekananda',
@@ -1273,6 +1321,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'प्रायोगिक वेदान्त · सेवा',
     blurb: 'The 1893 Chicago address. Founded the Rāmakṛṣṇa Mission. Recast Vedānta as a rational, this-worldly creed and made service of the human the worship of God.',
     works: ['Rāja-Yoga', 'Karma-Yoga', 'Chicago Addresses'],
+    detail: {
+      intro:
+        'Swāmī Vivekānanda is the monk who carried Vedānta to the world and recast it for the modern age — the foremost disciple of Rāmakṛṣṇa and one of the most electrifying figures of the Indian awakening.',
+      contributions: [
+        'Electrified the 1893 Parliament of Religions in Chicago with his address on tolerance and universal religion.',
+        'Founded the Rāmakṛṣṇa Mission, uniting spiritual practice with organised social service (sevā).',
+        'Recast Vedānta as a rational, life-affirming, this-worldly creed — “practical Vedānta” — and taught the divinity of every human being.',
+        'Wrote enduring expositions of Rāja-Yoga, Karma-Yoga, Bhakti-Yoga and Jñāna-Yoga.',
+      ],
+      legacy:
+        'Vivekānanda gave modern India its spiritual self-confidence and the West its first compelling presentation of Vedānta and yoga. His vision of service as worship and his summons to national strength inspired generations of reformers and freedom-fighters.',
+    },
   },
   {
     id: 'aurobindo',
@@ -1288,6 +1348,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'पूर्ण योग · पुदुच्चेरी',
     blurb: 'The Life Divine, the Essays on the Gītā and Savitrī — an integral yoga that reads the spiritual life as evolutionary and the body as the field of transformation.',
     works: ['The Life Divine', 'Essays on the Gītā', 'Savitrī'],
+    detail: {
+      intro:
+        'Aurobindo Ghose was a revolutionary nationalist who became one of the most original spiritual philosophers of modern India — abandoning politics for a yoga aimed at nothing less than the transformation of human nature itself.',
+      contributions: [
+        'Wrote The Life Divine, a vast synthesis of Vedānta and an evolutionary vision of consciousness.',
+        'Developed integral yoga (pūrṇa yoga), which seeks to bring the divine down into mind, life and body rather than escape the world.',
+        'Composed Savitrī, an epic poem of some 24,000 lines, the fullest expression of his vision.',
+        'Wrote the Essays on the Gītā, reading it as a gospel of divine action.',
+      ],
+      legacy:
+        'Aurobindo’s evolutionary spirituality — the idea that humanity is a transitional being moving toward a higher consciousness — gave modern Indian thought one of its boldest visions. The Pondicherry āśrama and Auroville continue his work.',
+    },
   },
   {
     id: 'ramana',
@@ -1301,6 +1373,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'अद्वैत · आत्म-विचार',
     blurb: 'On the hill of Aruṇācala, the silent revival of the one question — “Who am I?” The simplest possible method of self-inquiry, made universal.',
     works: ['Upadeśa Sāram', 'Forty Verses on Reality'],
+    detail: {
+      intro:
+        'Ramaṇa Maharṣi was the silent sage of Aruṇācala — a teacher who, after a spontaneous awakening at sixteen, lived for over fifty years on the slopes of the holy hill, teaching mostly through his presence.',
+      contributions: [
+        'Revived the practice of self-inquiry (ātma-vicāra), centred on the single question “Who am I?”',
+        'Taught the direct path to the Self in the simplest possible terms, beyond ritual, doctrine and sect.',
+        'Composed the Upadeśa Sāram and the Forty Verses on Reality (Uḷḷadu Nāṟpadu).',
+        'Drew seekers from every land to Tiruvaṇṇāmalai through the power of his silent abiding.',
+      ],
+      legacy:
+        'Ramaṇa’s method of self-inquiry has become one of the most widely practised forms of Advaita in the modern world, East and West. He stands as living proof that the highest realisation can be expressed in a single, universal question.',
+    },
   },
   {
     id: 'sivananda',
@@ -1314,6 +1398,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'योग · वेदान्त · सेवा',
     blurb: 'Founded the Divine Life Society at Ṛṣikeśa. Three hundred books that taught yoga, Vedānta and a householder discipline accessible to the modern reader.',
     works: ['Divine Life Society', '300+ books'],
+    detail: {
+      intro:
+        'Svāmī Śivānanda was a physician who became one of the great teaching saints of modern India — a tireless populariser of yoga and Vedānta who made the tradition accessible to the ordinary householder.',
+      contributions: [
+        'Founded the Divine Life Society at Ṛṣikeśa in 1936 and the Sivananda Ashram on the Ganges.',
+        'Wrote more than three hundred books on yoga, Vedānta, ethics and daily spiritual practice in plain, practical language.',
+        'Taught an integral “Yoga of Synthesis” combining karma, bhakti, rāja and jñāna yoga.',
+        'Trained a worldwide network of disciples (including Vishnudevananda and Chinmayananda) who carried yoga across the globe.',
+      ],
+      legacy:
+        'Through his vast output and his disciples, Śivānanda did more than almost anyone to bring yoga and Vedānta to a modern, global audience. The Divine Life Society and its offshoots remain active worldwide.',
+    },
   },
   {
     id: 'radhakrishnan',
@@ -1327,6 +1423,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'तत्त्वज्ञान · राजनीति',
     blurb: 'Philosopher-statesman. Indian Philosophy and translations of the Upaniṣads, Gītā and Brahma-Sūtra carried Vedānta into the academies of the world.',
     works: ['Indian Philosophy', 'Translations of prasthāna-trayī'],
+    detail: {
+      intro:
+        'Sarvepalli Rādhākrishnan was the philosopher-statesman who interpreted Indian thought to the modern academic world and rose to become the second President of India. He bridged the worlds of Eastern wisdom and Western scholarship as few have done.',
+      contributions: [
+        'Wrote Indian Philosophy, the comprehensive survey that introduced the subject to the global academy.',
+        'Produced scholarly translations and commentaries on the principal Upaniṣads, the Bhagavad-Gītā and the Brahma-Sūtra.',
+        'Held chairs at Calcutta and Oxford and argued for the rational and experiential basis of religion.',
+        'Served as India’s first Vice-President and second President; his birthday is observed as Teachers’ Day.',
+      ],
+      legacy:
+        'Rādhākrishnan carried Vedānta into the universities of the world and won it intellectual respect on the global stage. His writings remain standard introductions, and he stands as a model of the scholar in public life.',
+    },
   },
   {
     id: 'gandhi',
@@ -1340,6 +1448,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'सत्याग्रह · गीता नैतिकता',
     blurb: 'Hind Svarāj and the Anāsakti-Yoga commentary on the Gītā. Satyāgraha turned ahiṃsā into a political method that ended an empire.',
     works: ['Hind Svarāj', 'Anāsakti-Yoga', 'My Experiments with Truth'],
+    detail: {
+      intro:
+        'Mohandas Karamchand Gāndhī, the Mahātmā, is the figure who turned a spiritual ethic into a method of mass political action — leading India to independence through truth and non-violence and reshaping the moral imagination of the twentieth century.',
+      contributions: [
+        'Developed satyāgraha (“holding firmly to truth”), a method of non-violent resistance tested in South Africa and India.',
+        'Read the Bhagavad-Gītā as a guide to selfless, desireless action, expressed in his Anāsakti-Yoga commentary.',
+        'Wrote Hind Svarāj, a critique of modern industrial civilisation, and the autobiography My Experiments with Truth.',
+        'Led the Indian independence movement to success through ahiṃsā and constructive social work.',
+      ],
+      legacy:
+        'Gāndhī demonstrated that ahiṃsā could be a force in history, ending an empire without an army. His method inspired Martin Luther King, Nelson Mandela and movements for justice across the world, and made him the moral conscience of the modern age.',
+    },
   },
   {
     id: 'ambedkar',
@@ -1355,6 +1475,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'विधिशास्त्र · नवयान बौद्ध',
     blurb: 'Chief architect of the Indian Constitution. The Buddha and His Dhamma reframes Buddhism as a modern social ethic for the republic.',
     works: ['Indian Constitution', 'The Buddha and His Dhamma', 'Annihilation of Caste'],
+    detail: {
+      intro:
+        'Bhimrao Ramji Ambedkar, known as Bābāsāheb, was the jurist, economist and social reformer who became the chief architect of independent India’s Constitution and the foremost champion of the country’s oppressed.',
+      contributions: [
+        'Chaired the drafting committee of the Indian Constitution, embedding equality, liberty and social justice in its foundations.',
+        'Led the struggle against untouchability and caste, demanding the annihilation of caste itself.',
+        'Wrote Annihilation of Caste and The Buddha and His Dhamma, reframing Buddhism as a rational social ethic.',
+        'In 1956 led the mass conversion of his followers to Buddhism (Navayāna), offering a path of dignity outside the caste order.',
+      ],
+      legacy:
+        'Ambedkar gave the Indian republic its constitutional framework and gave its most marginalised a voice, a method and a faith. His thought remains central to every debate on caste, equality and social justice in India today.',
+    },
   },
   {
     id: 'yogananda',
@@ -1368,6 +1500,18 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'क्रिया-योग · वैश्विक प्रसार',
     blurb: 'Autobiography of a Yogi opened kriyā-yoga to the West with a reach no earlier teacher matched. Founded the Self-Realization Fellowship.',
     works: ['Autobiography of a Yogi', 'God Talks with Arjuna'],
+    detail: {
+      intro:
+        'Paramahaṃsa Yogānanda was the yogi who introduced kriyā-yoga and the science of meditation to the West on a scale no earlier teacher had reached — a bridge between the spiritual traditions of India and the modern world.',
+      contributions: [
+        'Wrote Autobiography of a Yogi, one of the most widely read spiritual books of the twentieth century.',
+        'Founded the Self-Realization Fellowship to disseminate the techniques of kriyā-yoga.',
+        'Taught meditation as a practical, verifiable science of inner experience accessible to all.',
+        'Wrote God Talks with Arjuna, a commentary on the Bhagavad-Gītā for the modern seeker.',
+      ],
+      legacy:
+        'Yogānanda’s Autobiography of a Yogi has drawn millions to meditation and the spiritual traditions of India, and the Self-Realization Fellowship continues his work worldwide. He is among the most influential of those who carried yoga to the global stage.',
+    },
   },
 ];
 
