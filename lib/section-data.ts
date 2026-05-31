@@ -34,7 +34,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   upavedas: {
     title: 'The Upavedas',
     deva: 'उपवेदाः',
-    crumb: ['Library', 'Smṛti', 'The Upavedas'],
+    crumb: ['Collection', 'Smṛti', 'The Upavedas'],
     lede: 'Four applied sciences — one paired with each principal Veda. Where the Vedas record the rite, the Upavedas record what to do with the rest of life: a body to keep healthy, a polity to defend, a music to make, a building to raise.',
     layout: 'tabs',
     items: [
@@ -85,7 +85,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   vedangas: {
     title: 'The Six Vedāṅgas',
     deva: 'षड्वेदाङ्गानि',
-    crumb: ['Library', 'Auxiliary', 'The Six Vedāṅgas'],
+    crumb: ['Collection', 'Auxiliary', 'The Six Vedāṅgas'],
     lede: 'The six limbs without which the Veda cannot be read — phonetics, ritual, grammar, etymology, prosody, astronomy. Every limb has its own sūtra literature; together they make the Veda intelligible.',
     layout: 'grid',
     items: [
@@ -102,7 +102,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   upanishads: {
     title: 'The Upaniṣads',
     deva: 'उपनिषदः',
-    crumb: ['Library', 'Śruti', 'The Upaniṣads'],
+    crumb: ['Collection', 'Śruti', 'The Upaniṣads'],
     lede: 'The “sitting-down-near” — late-Vedic dialogues that turn from the outer rite toward the question of the self. Tradition counts 108; ten are conventionally called principal (mukhya). Together they form the source of every later Vedānta school.',
     layout: 'grid',
     items: [
@@ -123,8 +123,8 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   darshanas: {
     title: 'The Āstika Darśanas',
     deva: 'षड्दर्शनानि',
-    crumb: ['Library', 'Smṛti', 'Āstika Darśanas'],
-    lede: 'Six orthodox schools of Indic philosophy — orthodox in the technical sense that they accept the authority of the Veda. Paired in three couples, each pair sharing its method and each member countering the other. The classical opposing schools, the Nāstika Darśanas, sit beside them in the library.',
+    crumb: ['Collection', 'Smṛti', 'Āstika Darśanas'],
+    lede: 'Six orthodox schools of Indic philosophy — orthodox in the technical sense that they accept the authority of the Veda. Paired in three couples, each pair sharing its method and each member countering the other. The classical opposing schools, the Nāstika Darśanas, sit beside them in the collection.',
     layout: 'tabs',
     items: [
       { id: 'nyaya', title: 'Nyāya', deva: 'न्याय', epithet: 'The school of logic',
@@ -164,7 +164,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   agamas: {
     title: 'Āgamas & Tantra',
     deva: 'आगमाः · तन्त्रम्',
-    crumb: ['Library', 'Tantra', 'Āgamas & Tantra'],
+    crumb: ['Collection', 'Tantra', 'Āgamas & Tantra'],
     lede: 'Three vast streams of ritual and esoteric literature — Śaiva, Vaiṣṇava and Śākta — that handed Indic religious life its working manuals. Where Vedic śruti speaks of yajña around the fire, the Āgamas speak of pratimā in the temple, mantra in the mouth, and yantra on the wall.',
     layout: 'tabs',
     items: [
@@ -190,7 +190,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   itihasa: {
     title: 'Itihāsa',
     deva: 'इतिहासः',
-    crumb: ['Library', 'Smṛti', 'Itihāsa'],
+    crumb: ['Collection', 'Smṛti', 'Itihāsa'],
     lede: 'Itihāsa — literally “thus indeed it was.” Two great narrative encyclopaedias, transmitted as the people’s Veda: the Rāmāyaṇa of Vālmīki and the Mahābhārata of Vyāsa. Between them they contain the Indic theory of dharma in story form.',
     layout: 'tabs',
     items: [
@@ -211,7 +211,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   lifestyle: {
     title: 'Dinacaryā & Living',
     deva: 'दिनचर्या',
-    crumb: ['Library', 'Practice', 'Dinacaryā & Living'],
+    crumb: ['Collection', 'Practice', 'Dinacaryā & Living'],
     lede: 'How the day is structured — and the week, the season, the lifetime — when the science of life is taken seriously at the scale of a single morning. Four interlocking calendars: the day (dinacaryā), the season (ṛtucaryā), the four ages of a person (āśrama), and the four ends of life (puruṣārtha).',
     layout: 'grid',
     items: [
@@ -318,7 +318,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   'nastika-darshanas': {
     title: 'The Nāstika Darśanas',
     deva: 'नास्तिक दर्शनानि',
-    crumb: ['Library', 'Philosophy', 'Nāstika Darśanas'],
+    crumb: ['Collection', 'Philosophy', 'Nāstika Darśanas'],
     lede: 'Three schools — Cārvāka, Bauddha and Jaina — that decline the authority of the Veda and were therefore classed nāstika by their orthodox opponents. The word does not mean “atheist”; it means “those who say na — those who do not accept.” Indic philosophy as argued by its sharpest counter-positions.',
     layout: 'tabs',
     items: [
@@ -344,7 +344,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   puranas: {
     title: 'The Purāṇas',
     deva: 'पुराणानि',
-    crumb: ['Library', 'Smṛti', 'The Purāṇas'],
+    crumb: ['Collection', 'Smṛti', 'The Purāṇas'],
     lede: 'Eighteen great Purāṇas — and another eighteen sub-Purāṇas — taken together as a kind of people’s Veda. By the classical period they were sorted into three groups according to the predominant guṇa: Vaiṣṇava (sattva), Brāhma (rajas) and Śaiva (tamas). Every Purāṇa is in principle expected to treat five subjects: creation, dissolution, dynasties, the manvantaras, and royal genealogies.',
     layout: 'tabs',
     items: [
@@ -370,7 +370,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   dharmashastra: {
     title: 'Dharma-śāstra',
     deva: 'धर्मशास्त्र',
-    crumb: ['Library', 'Smṛti', 'Dharma-śāstra'],
+    crumb: ['Collection', 'Smṛti', 'Dharma-śāstra'],
     lede: 'The codes — smṛti texts that translate dharma into a working civil law for the householder, the king and the court. The largest of them, the Manusmṛti, ran for centuries as the operating manual of brahmanical society; the others tightened, contested and updated it.',
     layout: 'tabs',
     items: [
@@ -447,7 +447,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   arthashastra: {
     title: 'Artha-śāstra',
     deva: 'अर्थशास्त्र',
-    crumb: ['Library', 'Applied', 'Artha-śāstra'],
+    crumb: ['Collection', 'Applied', 'Artha-śāstra'],
     lede: 'The science of artha — material welfare, polity, statecraft, war, espionage and the running of an economy. Kauṭilya’s Arthaśāstra is the central text; the later nīti-tradition trimmed and updated it for the medieval court.',
     layout: 'tabs',
     items: [
@@ -523,7 +523,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   kavya: {
     title: 'Kāvya & Nāṭya',
     deva: 'काव्य · नाट्य',
-    crumb: ['Library', 'Literature', 'Kāvya & Nāṭya'],
+    crumb: ['Collection', 'Literature', 'Kāvya & Nāṭya'],
     lede: 'Classical Sanskrit literature — the kāvya of the courtly poets and the nāṭya of the dramatic stage, the long mahākāvyas, the wandering messenger-poems, and the prose tale of the fox and the lion. Where Indic literary art reaches its self-aware peak.',
     layout: 'tabs',
     items: [
@@ -602,7 +602,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   sciences: {
     title: 'Indic Sciences & Mathematics',
     deva: 'गणितम् · ज्योतिषम्',
-    crumb: ['Library', 'Applied', 'Sciences & Mathematics'],
+    crumb: ['Collection', 'Applied', 'Sciences & Mathematics'],
     lede: 'A long arc — from the geometric altars of the Śulba-sūtras, through the decimal system with zero, the trigonometry of Āryabhaṭa, the algebra of Brahmagupta and Bhāskara, to the infinite-series calculus of the Kerala school. Older, longer, and more continuous than the credit it usually receives.',
     layout: 'grid',
     items: [
@@ -709,7 +709,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   subhashita: {
     title: 'Subhāṣita & Nīti',
     deva: 'सुभाषित · नीति',
-    crumb: ['Library', 'Literature', 'Subhāṣita & Nīti'],
+    crumb: ['Collection', 'Literature', 'Subhāṣita & Nīti'],
     lede: 'The aphoristic tradition — the wit-literature that distils the rest of the canon into single verses you can quote across a dinner table. Where the dharma-śāstras prescribe and the kāvyas describe, the subhāṣitas observe.',
     layout: 'tabs',
     items: [
@@ -785,7 +785,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   modern: {
     title: 'Modern Indic Thought',
     deva: 'आधुनिक भारतीय चिन्तनम्',
-    crumb: ['Library', 'Philosophy', 'Modern Indic Thought'],
+    crumb: ['Collection', 'Philosophy', 'Modern Indic Thought'],
     lede: 'The long nineteenth and twentieth centuries — how the Indic corpus was reread, contested and remade under colonial rule and after independence. Reformers, mystics, poets, jurists; men and women who took the canon apart and tried to put it back together for a country that had become a republic.',
     layout: 'grid',
     items: [
@@ -908,7 +908,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   gita: {
     title: 'Bhagavad Gītā',
     deva: 'भगवद्गीता',
-    crumb: ['Library', 'Smṛti', 'Bhagavad Gītā'],
+    crumb: ['Collection', 'Smṛti', 'Bhagavad Gītā'],
     lede: 'Seven hundred verses spoken between Kṛṣṇa and Arjuna on the battlefield of Kurukṣetra — eighteen chapters embedded in the Mahābhārata that became, by the classical period, a self-contained scripture in its own right. The most-commented Indic text outside the Upaniṣads.',
     layout: 'tabs',
     items: [
@@ -987,7 +987,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   bhakti: {
     title: 'Bhakti Traditions',
     deva: 'भक्ति-परम्परा',
-    crumb: ['Library', 'Practice', 'Bhakti Traditions'],
+    crumb: ['Collection', 'Practice', 'Bhakti Traditions'],
     lede: 'The devotional turn — a long, plural movement that begins in the Tamil country around the seventh century and rolls northward over the next thousand years. Vernacular poetry, personal address to the Lord, the dignity of every singer regardless of caste, the temple as a community more than a precinct.',
     layout: 'tabs',
     items: [
@@ -1065,8 +1065,8 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   parallel: {
     title: 'Parallel Canons',
     deva: 'इतर परम्पराः',
-    crumb: ['Library', 'Parallel', 'Other canons'],
-    lede: 'Three vast bodies of text that share Indic ground while standing outside the Vedic line. Each runs on its own languages, its own scripts, its own apparatus of commentary; each shaped, and was shaped by, the corpus described in the rest of the library.',
+    crumb: ['Collection', 'Parallel', 'Other canons'],
+    lede: 'Three vast bodies of text that share Indic ground while standing outside the Vedic line. Each runs on its own languages, its own scripts, its own apparatus of commentary; each shaped, and was shaped by, the corpus described in the rest of the collection.',
     layout: 'tabs',
     items: [
       {
@@ -1127,7 +1127,7 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
   'shruti-smriti': {
     title: 'Śruti & Smṛti',
     deva: 'श्रुति · स्मृति',
-    crumb: ['Library', 'Field guide', 'Śruti & Smṛti'],
+    crumb: ['Collection', 'Field guide', 'Śruti & Smṛti'],
     lede: 'A two-tier distinction that holds the entire Indic corpus together — and has no exact European parallel. The field guide.',
     layout: 'primer',
   },

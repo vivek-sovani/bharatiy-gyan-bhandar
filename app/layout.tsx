@@ -4,11 +4,11 @@ import { LanguageProvider } from '@/lib/LanguageContext';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Bhāratīya Jñāna Bhaṇḍāra · भारतीय ज्ञान भण्डार',
-    template: '%s · Bhāratīya Jñāna Bhaṇḍāra',
+    default: 'Indian Knowledge Bank · भारतीय ज्ञान भंडार',
+    template: '%s · Indian Knowledge Bank',
   },
   description:
-    'An open digital library of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
+    'An open digital collection of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
 };
 
 // Applies the theme before first paint (no flash).

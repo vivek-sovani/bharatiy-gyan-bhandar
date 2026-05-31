@@ -25,7 +25,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'search.placeholder': 'Search verses, sūktas, schools…',
     // Hero
     'hero.eyebrow': 'Daily wisdom · 24 Vaiśākha · Saumya saṃvatsara',
-    'hero.title': 'A digital library of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
+    'hero.title': 'A digital collection of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
     'hero.show_trans': 'Show translation',
     'hero.hide_trans': 'Hide translation',
     'hero.read_essay': 'Read essay →',
@@ -41,7 +41,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'timeline.title': 'The historical timeline',
     'timeline.prompt': 'Click any stream to expand details',
     // Grid
-    'grid.eyebrow': 'The library',
+    'grid.eyebrow': 'The collection',
     'grid.title': 'Browse the corpus',
     'grid.showing': 'Showing {count} of {total} streams',
     'grid.tag_era': 'Era',
@@ -56,7 +56,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'contrib.detail.contributions': 'Principal contributions',
     'contrib.detail.legacy': 'Legacy & influence',
     'contrib.detail.works': 'Key works',
-    'contrib.detail.explore': 'Explore in the library',
+    'contrib.detail.explore': 'Explore in the collection',
     'contrib.detail.close': 'Close',
     // Dinacharya
     'dina.eyebrow': 'Lifestyle',
@@ -67,7 +67,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'essays.title': 'Essays from the editors',
     'essays.meta': 'Updated weekly',
     // Footer
-    'footer.colophon': 'An open digital library of the Indic knowledge systems. Texts in transliteration and original. Translations and commentary by working scholars. Free to read; built to last.',
+    'footer.colophon': 'An open digital collection of the Indic knowledge systems. Texts in transliteration and original. Translations and commentary by working scholars. Free to read; built to last.',
     'footer.sec_texts': 'Texts',
     'footer.sec_tools': 'Tools',
     'footer.sec_about': 'About',
@@ -75,8 +75,8 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'footer.setin': 'Set in Cormorant, Lora & Tiro Devanagari Sanskrit',
     'footer.license': 'An open archive · CC BY-SA 4.0',
     // Details
-    'detail.back': '← Back to the library',
-    'detail.continue': 'Continue in the library',
+    'detail.back': '← Back to the collection',
+    'detail.continue': 'Continue in the collection',
     'detail.the_opening': 'The opening',
     'detail.at_a_glance': 'At a glance',
     'detail.practice_focused': 'Practice-focused stream. See the full reading-list in the references panel.',
@@ -87,7 +87,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'detail.officiant': 'Officiant',
     'detail.period': 'Period',
     'detail.strata': 'The four strata of every Veda',
-    'detail.library': 'Library'
+    'detail.library': 'Collection'
   },
   mr: {
     // Nav
@@ -101,7 +101,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'search.placeholder': 'श्लोक, सूक्त, संप्रदाय शोधा...',
     // Hero
     'hero.eyebrow': 'दैनिक सुभाषित · २४ वैशाख · सौम्य संवत्सर',
-    'hero.title': 'भारतीय ज्ञानप्रणालींमध्ये रुजलेले ग्रंथ, विज्ञान आणि जीवनपद्धतींचे एक खुले डिजिटल ग्रंथालय.',
+    'hero.title': 'भारतीय ज्ञानप्रणालींमध्ये रुजलेले ग्रंथ, विज्ञान आणि जीवनपद्धतींचे एक खुले डिजिटल संग्रहण.',
     'hero.show_trans': 'भाषांतर दाखवा',
     'hero.hide_trans': 'भाषांतर लपवा',
     'hero.read_essay': 'निबंध वाचा →',
@@ -117,7 +117,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'timeline.title': 'ऐतिहासिक कालरेषा',
     'timeline.prompt': 'तपशील पाहण्यासाठी कोणत्याही प्रवाहावर क्लिक करा',
     // Grid
-    'grid.eyebrow': 'ग्रंथालय',
+    'grid.eyebrow': 'संग्रहण',
     'grid.title': 'ज्ञानकोश चाळा',
     'grid.showing': '{total} पैकी {count} प्रवाह दर्शवत आहे',
     'grid.tag_era': 'कालखंड',
@@ -132,7 +132,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'contrib.detail.contributions': 'प्रमुख योगदान',
     'contrib.detail.legacy': 'वारसा व प्रभाव',
     'contrib.detail.works': 'प्रमुख ग्रंथ',
-    'contrib.detail.explore': 'वाचनालयात अधिक पहा',
+    'contrib.detail.explore': 'संग्रहणात अधिक पहा',
     'contrib.detail.close': 'बंद करा',
     // Dinacharya
     'dina.eyebrow': 'जीवनशैली',
@@ -143,7 +143,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'essays.title': 'संपादकांचे निबंध',
     'essays.meta': 'साप्ताहिक अद्यतने',
     // Footer
-    'footer.colophon': 'भारतीय ज्ञानप्रणालींचे खुले डिजिटल ग्रंथालय. मूळ मजकूर आणि लिप्यंतरण स्वरूपात उपलब्ध. संशोधक आणि विद्वानांद्वारे भाषांतर व स्पष्टीकरण. वाचनासाठी विनामूल्य; चिरंतन रचलेले.',
+    'footer.colophon': 'भारतीय ज्ञानप्रणालींचे खुले डिजिटल संग्रहण. मूळ मजकूर आणि लिप्यंतरण स्वरूपात उपलब्ध. संशोधक आणि विद्वानांद्वारे भाषांतर व स्पष्टीकरण. वाचनासाठी विनामूल्य; चिरंतन रचलेले.',
     'footer.sec_texts': 'ग्रंथ संपदा',
     'footer.sec_tools': 'साधने',
     'footer.sec_about': 'माहिती',
@@ -151,8 +151,8 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'footer.setin': 'कॉर्मोरेंट, लोरा आणि तिरो देवनागरी संस्कृत फॉन्टमध्ये डिझाइन केलेले',
     'footer.license': 'एक खुले संग्रहण · CC BY-SA 4.0',
     // Details
-    'detail.back': '← वाचनालयाकडे परत',
-    'detail.continue': 'वाचनालयात वाचन सुरू ठेवा',
+    'detail.back': '← संग्रहणाकडे परत',
+    'detail.continue': 'संग्रहणात वाचन सुरू ठेवा',
     'detail.the_opening': 'प्रारंभ',
     'detail.at_a_glance': 'एका दृष्टीक्षेपात',
     'detail.practice_focused': 'सराव-केंद्रित प्रवाह. संदर्भ पॅनेलमध्ये संपूर्ण वाचन-सूची पहा.',
@@ -163,7 +163,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'detail.officiant': 'पुरोहित/ऋत्विज',
     'detail.period': 'कालखंड',
     'detail.strata': 'प्रत्येक वेदाचे चार स्तर',
-    'detail.library': 'वाचनालय'
+    'detail.library': 'संग्रहण'
   }
 };
 

@@ -137,8 +137,11 @@ export function Footer() {
     <footer className="ftr">
       <div className="shell ftr-grid">
         <div className="colophon">
-          <div className="name-en">Bhāratīya Jñāna Bhaṇḍāra</div>
-          <div className="name-de deva-only">भारतीय ज्ञान भण्डार</div>
+          {lang === 'mr' ? (
+            <div className="name-en deva-only">भारतीय ज्ञान भंडार</div>
+          ) : (
+            <div className="name-en">Indian Knowledge Bank</div>
+          )}
           <p>{t('footer.colophon')}</p>
         </div>
         <div>

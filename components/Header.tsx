@@ -8,7 +8,7 @@ import LangControl from './LangControl';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Header() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Close the mobile menu on Escape.
@@ -29,8 +29,11 @@ export default function Header() {
         <Link href="/" className="hdr-mark" style={{ border: 0 }} onClick={close}>
           <span className="seal"><HeaderSeal /></span>
           <span className="titles">
-            <div className="name-en">Bhāratīya Jñāna Bhaṇḍāra</div>
-            <div className="name-de deva-only">भारतीय ज्ञान भण्डार</div>
+            {lang === 'mr' ? (
+              <div className="name-en deva-only">भारतीय ज्ञान भंडार</div>
+            ) : (
+              <div className="name-en">Indian Knowledge Bank</div>
+            )}
           </span>
         </Link>
 
