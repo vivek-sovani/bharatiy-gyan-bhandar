@@ -17,7 +17,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Nav
     'nav.texts': 'Texts',
     'nav.tree': 'Timeline',
-    'nav.library': 'Library',
+    'nav.library': 'Collection',
     'nav.contrib': 'Contributors',
     'nav.lifestyle': 'Lifestyle',
     'nav.essays': 'Essays',
@@ -93,7 +93,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Nav
     'nav.texts': 'ग्रंथ',
     'nav.tree': 'कालरेषा',
-    'nav.library': 'वाचनालय',
+    'nav.library': 'संग्रहण',
     'nav.contrib': 'योगदाते',
     'nav.lifestyle': 'दिनचर्या',
     'nav.essays': 'निबंध',
