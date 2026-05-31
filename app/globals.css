@@ -215,6 +215,45 @@ a:hover { color: var(--gold-deep); }
 .hdr-nav a:hover { color: var(--ink); border-bottom-color: var(--gold); }
 
 .hdr-tools { display: flex; align-items: center; gap: 0.75rem; }
+
+/* Hamburger button — hidden on desktop, shown on mobile (≤900px). */
+.hdr-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: var(--paper-elev);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.hdr-burger:hover { color: var(--ink); border-color: var(--rule-strong); }
+.hdr-burger-icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+}
+.hdr-burger-icon span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 200ms ease, opacity 150ms ease, top 200ms ease;
+}
+.hdr-burger-icon span:nth-child(1) { top: 0; }
+.hdr-burger-icon span:nth-child(2) { top: 5px; }
+.hdr-burger-icon span:nth-child(3) { top: 10px; }
+.hdr-burger-icon.is-open span:nth-child(1) { top: 5px; transform: rotate(45deg); }
+.hdr-burger-icon.is-open span:nth-child(2) { opacity: 0; }
+.hdr-burger-icon.is-open span:nth-child(3) { top: 5px; transform: rotate(-45deg); }
 .search-pill {
   display: flex; align-items: center; gap: 0.5rem;
   padding: 0.4rem 0.75rem 0.4rem 0.7rem;
@@ -240,7 +279,44 @@ a:hover { color: var(--gold-deep); }
   .hdr-nav a:nth-child(n+5) { display: none; }
 }
 @media (max-width: 900px) {
-  .hdr-nav { display: none; }
+  .hdr-burger { display: inline-flex; }
+
+  /* The primary nav collapses into a dropdown panel under the header. */
+  .hdr-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+    background: oklch(from var(--paper) l c h / 0.98);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 16px 40px oklch(from var(--ink) l c h / 0.16);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
+  }
+  .hdr-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  /* The 5th-item hide from the 1100px breakpoint no longer applies on mobile. */
+  .hdr-nav a:nth-child(n+5) { display: block; }
+  .hdr-nav a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hdr-nav a:last-child { border-bottom: 0; }
+  .hdr-nav a:hover { border-bottom-color: var(--rule); background: var(--paper-elev); }
+
   .search-pill { width: auto; }
   .search-pill input { display: none; }
   .search-pill kbd { display: none; }
