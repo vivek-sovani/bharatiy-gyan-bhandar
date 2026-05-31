@@ -43,6 +43,7 @@ export default function Header() {
           aria-label="Primary"
         >
           <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
+          <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
           <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
           <Link href="/#dinacharya" onClick={close}>{t('nav.lifestyle')}</Link>
           <Link href="/#sanskrit" onClick={close}>{t('nav.sanskrit')}</Link>
