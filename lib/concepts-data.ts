@@ -591,6 +591,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The triguṇa scheme gives Indian thought a supple psychology and ethics of character, and underlies Āyurvedic and dietary classification to this day.',
+      origin: {
+        label: 'Sāṅkhya (Sāṅkhya Kārikā)',
+        href: '/darshanas/',
+        explainer:
+          'The triguṇa doctrine appears in the Sāṅkhya Kārikā as part of its analysis of prakṛti — the three guṇas are not separable ingredients but the three modes in which all of prakṛti exists. Sattva is the principle of luminosity and pleasure; rajas is the principle of activity and pain; tamas is the principle of restraint and indifference. They are always co-present but in varying ratios — no object or mental state is purely one guṇa. Their interplay accounts for the entire variety of the manifest world, from the finest intellect (sattva-dominant) down to the grossest matter (tamas-dominant). Liberation in Sāṅkhya means the puruṣa recognising it is wholly distinct from all three guṇas — the witness that no combination of strands can reach.',
+      },
+      references: [
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā takes the guṇa framework from Sāṅkhya and extends it far beyond cosmology into ethics and character. Chapter 14 describes how all three guṇas bind the embodied person: sattva binds by attachment to happiness and knowledge, rajas by attachment to action and its fruits, tamas by delusion, torpor and sleep. Chapters 17 and 18 apply the guṇas to faith, food, sacrifice, austerity, charity, knowledge, action, doer, intellect and happiness — a sattvic gift is given without expectation of return; a rajasic gift expects reciprocation; a tamasic gift is given at the wrong place and time to an unworthy recipient. This gives the Gītā one of the most detailed character-typologies in Indian literature.',
+        },
+        {
+          label: 'Upavedas (Āyurveda)',
+          href: '/upavedas/',
+          explainer:
+            'Āyurveda takes the guṇa framework and applies it as the practical foundation of medicine and dietetics. The three doṣas are constituted by guṇa-combinations operating through the five elements: pitta is predominantly rajasic (hot, sharp, penetrating), vāta involves rajas and tamas (light, mobile, dry), kapha is predominantly sattvic-tamasic (heavy, slow, stable). Food, herbs, seasons and activities are classified by their guṇa-effects on the body-mind system. A practitioner aims to maintain the guṇa-balance appropriate to the patient\'s constitution. The guṇa framework thus travels directly from Sāṅkhya metaphysics into clinical medicine.',
+        },
+      ],
     },
   },
   {
@@ -616,6 +636,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The five-element scheme is the shared physics of Indian medicine, cosmology and even architecture (vāstu) — the building blocks of the manifest world.',
+      origin: {
+        label: 'Taittirīya Upaniṣad · Sāṅkhya Kārikā',
+        href: '/upanishads/',
+        explainer:
+          'The five-element analysis first appears as cosmology in the Taittirīya Upaniṣad, which describes a cascade from subtlest to most gross: from ākāśa (ether/space) arises vāyu (air), from vāyu arises agni (fire/heat), from agni arises āpas (water), from āpas arises pṛthvī (earth). The Taittirīya also names the outermost sheath of the self the annamaya kośa — "made of food" — implying that the physical body is constituted by the gross elements of the material world. The Sāṅkhya Kārikā systematises this fully: the five gross elements evolve from five subtle essences (tanmātras — sound, touch, form, taste, smell), which in turn evolve from the cosmic ego (ahaṃkāra), locating the elements precisely within the twenty-five-tattva cosmological framework.',
+      },
+      references: [
+        {
+          label: 'Upavedas (Āyurveda)',
+          href: '/upavedas/',
+          explainer:
+            'Āyurveda takes the pañca-mahābhūta as the physical foundation of its entire medical system. Each doṣa is an elemental compound: vāta is air and ether (mobile, light, dry, cold), pitta is fire and water (hot, sharp, penetrating), kapha is water and earth (heavy, slow, stable, cold). The seven body tissues (dhātus) and the three waste products (malas) are similarly analysed in elemental terms. Diagnosis partly consists of identifying which elemental quality is in excess or deficiency; treatment introduces opposing elemental qualities through food, herbs, oils, heat or purification procedures. The five elements are thus not philosophical abstractions but clinical tools operating through measurable qualities (guṇas).',
+        },
+        {
+          label: 'Vedāṅgas · Purāṇas (Vāstu)',
+          href: '/vedangas/',
+          explainer:
+            'Beyond medicine, the pañca-mahābhūta underlie sacred architecture (vāstu-śāstra) and cosmology. In vāstu, the five elements are mapped onto directions and zones of the built space — earth governs the centre, water the north-east, fire the south-east, air the north-west and ether the vertical axis. The layout of a temple or house is planned so the elemental character of each zone reinforces its function: the north-east (water, clarity) is suited to prayer, the south-east (fire, heat) to cooking. In the Purāṇas, the same five elements describe the structure of cosmic geography — the concentric continents, the seven oceans — scaling the bhūta-scheme from the individual body to the body of the cosmos.',
+        },
+      ],
     },
   },
   {
@@ -641,6 +681,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Cyclic time gives Indian thought its characteristic vastness of scale and its sense that decline is not final — every Kali age is followed by renewal.',
+      origin: {
+        label: 'Purāṇas (Viṣṇu · Bhāgavata)',
+        href: '/puranas/',
+        explainer:
+          'The fully articulated yuga-cycle with precise numerical durations appears most systematically in the Viṣṇu Purāṇa and the Bhāgavata Purāṇa. The Viṣṇu Purāṇa establishes the canonical figures: the Kṛta/Satya yuga lasts 1,728,000 human years, Tretā 1,296,000, Dvāpara 864,000 and Kali 432,000 — a 4:3:2:1 ratio reflecting progressive decline. A complete mahāyuga is 4,320,000 years; a kalpa (a day of Brahmā) is 1,000 mahāyugas. The Bhāgavata Purāṇa adds the doctrine that Viṣṇu descends as an avatāra in each age in response to the degree of dharma\'s decline — each avatāra is calibrated to the needs of the yuga in which it appears. The scale is not mythological embellishment but systematic cosmological calculation.',
+      },
+      references: [
+        {
+          label: 'Vedāṅgas (Jyotiṣa)',
+          href: '/vedangas/',
+          explainer:
+            'The cyclic time scheme receives precise astronomical grounding in Jyotiṣa. Āryabhaṭa\'s Āryabhaṭīya (499 CE) places the beginning of the current Kali yuga at 3102 BCE — a date correlating with a calculated conjunction of the planets at the starting meridian. Jyotiṣa uses nested astronomical cycles — the nakṣatras (lunar mansions), the sidereal year, the synodic periods of the planets, the mahāyuga — to construct a chronological framework of extraordinary scope. The yuga scheme is not purely narrative: it is embedded in a technical astronomy that tracks celestial cycles in order to establish the sacred calendar (pañcāṅga) and determine the auspicious times for rites and festivals.',
+        },
+        {
+          label: 'Itihāsa (Mahābhārata)',
+          href: '/itihasa/',
+          explainer:
+            'The Mahābhārata locates its narrative at the cusp of Dvāpara and Kali yugas — the death of Kṛṣṇa marks the onset of the Kali age in epic chronology. The Śānti Parvan makes the yuga-theory explicit: in the Kṛta age dharma stands on all four legs; in Tretā, three; in Dvāpara, two; in Kali, one. The epic\'s own tragic arc — the fratricidal war, the destruction of both lineages, Kṛṣṇa\'s final departure — enacts this transition in narrative form. The Gītā is delivered at the close of the Dvāpara age, its teaching of niṣkāma-karma designed precisely for beings who must act in a declining world without perfect knowledge of outcomes.',
+        },
+      ],
     },
   },
 
@@ -668,6 +728,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Pramāṇa theory made Indian philosophy rigorously self-critical: no claim stood without an account of how it could be known, the discipline every school had to master to debate at all.',
+      origin: {
+        label: 'Nyāya Sūtras (Gautama)',
+        href: '/darshanas/',
+        explainer:
+          'Pramāṇa theory receives its first fully systematic treatment in the Nyāya Sūtras of Gautama (c. 2nd century BCE – 2nd century CE), which open by stating that liberation comes through right knowledge — and that right knowledge requires valid means of knowing. Gautama accepts four pramāṇas: pratyakṣa (direct perception), anumāna (inference), upamāna (analogical comparison) and śabda (testimony of a reliable speaker). He analyses each exhaustively. Anumāna receives the most attention: a valid Nyāya inference has five steps — thesis, reason, rule, example and conclusion — structuring the form that became the standard for all subsequent Indian debate. The Nyāyasūtras also inaugurate the systematic analysis of fallacies (hetvābhāsas), the conditions under which an inference appears valid but fails.',
+      },
+      references: [
+        {
+          label: 'Darśanas (all schools)',
+          href: '/darshanas/',
+          explainer:
+            'Every Indian school defines itself partly by which pramāṇas it accepts, and the disagreements are philosophically consequential. Sāṅkhya accepts three (dropping upamāna). Mīmāṃsā and Advaita Vedānta add arthāpatti (postulation — if it is daytime and Devadatta is not home, he must be outside) and abhāva (non-perception as a pramāṇa for the knowledge of absence). The Cārvāka materialists accept only pratyakṣa, rejecting inference as unreliable for unobserved entities — a position that forced all other schools to rigorously justify anumāna. The sheer range of these positions means that pramāṇa theory was not a preliminary to Indian philosophy but its constant engine, driving each school to articulate and defend its epistemological foundations.',
+        },
+        {
+          label: 'Nāstika Darśanas (Bauddha pramāṇa)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'The Buddhist tradition developed its own rigorous pramāṇa theory in Dignāga\'s Pramāṇa-samuccaya (c. 5th century CE) and Dharmakīrti\'s Pramāṇavārttika (c. 7th century CE). Dignāga accepts only two pramāṇas — perception and inference — and argues these are sufficient for all valid knowledge. His theory of apoha (exclusion) holds that a concept like "cow" does not pick out a real universal but works by excluding everything that is non-cow — a nominalist challenge to Nyāya realism. Dharmakīrti refines this against Brahmanical objections with extraordinary logical precision. The resulting Nyāya–Buddhist debate over the nature of universals, the validity of inference and the conditions for valid testimony constitutes the most technically sophisticated epistemological exchange in premodern philosophy.',
+        },
+      ],
     },
   },
 
@@ -695,6 +775,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Duḥkha sets the whole Buddhist project in motion — a clear-eyed naming of the problem that the Eightfold Path is designed to dissolve.',
+      origin: {
+        label: 'Bauddha darśana (First Sermon at Sarnath)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The Buddha\'s first teaching after his enlightenment — the Dhammacakkappavattana Sutta, "Setting the Wheel of Dhamma in Motion" — announces duḥkha as the first of the Four Noble Truths. The statement is precise: birth is duḥkha, aging, death, sorrow, lamentation, pain, grief and despair are duḥkha; union with the unloved and separation from the loved are duḥkha; not getting what one wants is duḥkha; and in brief, the five aggregates of clinging are duḥkha. This is not pessimism but diagnosis: the recognition that unsatisfactoriness pervades conditioned existence is the necessary first step toward the cessation (nirodha) that the Noble Eightfold Path produces. The Four Noble Truths are modelled on the ancient Indian medical format: name the disease, identify its cause, state the prognosis, prescribe the cure.',
+      },
+      references: [
+        {
+          label: 'Nāstika Darśanas (Bauddha Abhidharma)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Buddhist philosophy, especially in the Abhidharma literature, develops the analysis of duḥkha into three distinct layers. The first is duḥkha-duḥkha — obvious suffering: pain, grief, physical and mental anguish. The second is vipariṇāma-duḥkha — the suffering of change: even pleasures are a form of duḥkha because they are impermanent, and their inevitable loss causes pain. The third and subtlest is saṃkhāra-duḥkha — the pervasive unease inherent in all conditioned existence, because it is compounded, impermanent and without a fixed self. This analysis shows that the first noble truth is not a claim that everything is always painful — it is the claim that nothing conditioned can provide the stable, complete satisfaction that craving seeks.',
+        },
+        {
+          label: 'Upaniṣads (parallel in śoka)',
+          href: '/upanishads/',
+          explainer:
+            'While duḥkha is distinctively a Buddhist category, it resonates with the Upaniṣadic starting-point of inquiry. The Chāndogya Upaniṣad\'s dialogue between Nārada and Sanatkumāra begins with Nārada confessing: "I have learned all the scriptures but know only words, not the self — I am in sorrow (śoce)." The Kaṭha Upaniṣad\'s teaching to Naciketa and the Bṛhadāraṇyaka\'s analysis of the self both proceed from the recognition that ordinary life — driven by desire for finite goods — is ultimately unsatisfying. Both traditions begin with the same diagnosis of dissatisfaction; they differ on its mechanism and its remedy: the Upaniṣads prescribe ātma-jñāna, Buddhism prescribes the insight into anātman and the cessation of craving.',
+        },
+      ],
     },
   },
   {
