@@ -820,10 +820,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Anātman is the most distinctive Buddhist contribution to Indian thought, and the sharpest of its disagreements with the Vedāntic tradition over the nature of the self.',
-    },
-  },
-  {
-    id: 'pratityasamutpada',
+      origin: {
+        label: 'Bauddha darśana (Anattalakkhana Sutta)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The anātman teaching is set out in the Pali Anattalakkhana Sutta — delivered as the second discourse after the First Sermon. The Buddha applies a single test to each of the five aggregates (form, feeling, perception, volition, consciousness): "Is this self? If it were self, it would not lead to affliction, and one could say of it: let it be thus, let it not be thus — but since it leads to affliction and one cannot command it, it is not self." The method is not metaphysical assertion but therapeutic analysis. Crucially, the Buddha consistently declines both to say "there is a self" (eternalism) and "there is no self" (nihilism) — anātman is the rejection of clinging to any view of self, not the positive assertion of its non-existence.',
+      },
+      references: [
+        {
+          label: 'Nāstika Darśanas (Abhidharma · Madhyamaka · Yogācāra)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Later Buddhist philosophy develops anātman in two major directions. The Abhidharma tradition atomises personal existence into momentary dharmas — ultimate psycho-physical events — none of which constitutes a self. Madhyamaka (Nāgārjuna) pushes further: not only is there no personal self, but the dharmas themselves lack svabhāva — inherent self-existence. This move from the selflessness of persons (pudgala-nairātmya) to the selflessness of all dharmas (dharma-nairātmya) grounds śūnyatā. The Yogācāra school of Asaṅga and Vasubandhu retains both forms of selflessness while arguing that all phenomena arise as constructions within the stream of consciousness — the two selflessnesses become the master key of Buddhist metaphysics.',
+        },
+        {
+          label: 'Upaniṣads (contrast with ātman)',
+          href: '/upanishads/',
+          explainer:
+            'The anātman teaching acquires its sharpest meaning against the Upaniṣadic ātman it directly counters. Where Yājñavalkya teaches that the witnessing self is the one real and unchanging ground of experience — "the unseen seer, the unheard hearer, the unthought thinker" — the Buddha teaches that examining each candidate for selfhood (body, feeling, perception, volition, consciousness) yields only impermanence and affliction, never a fixed witness. The philosophical question this generates — whether a stream of momentary processes can bear moral responsibility, sustain memory and motivate liberation — became the defining problem for both traditions and generated the most sustained cross-traditional philosophical engagement in Indian intellectual history.',
+        },
+      ],
     name: 'Pratītya-samutpāda',
     deva: 'प्रतीत्यसमुत्पाद',
     seal: 'प्र',
@@ -845,6 +861,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Dependent origination is the philosophical heart of Buddhism — a middle way between "things exist absolutely" and "nothing exists," reframing reality as a web of conditions.',
+      origin: {
+        label: 'Bauddha darśana (Saṃyutta Nikāya)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'Pratītya-samutpāda is stated in its most compressed form in the Pali Saṃyutta Nikāya: "imasmiṃ sati idaṃ hoti — when this is, that is; from the arising of this, that arises; when this is not, that is not; from the cessation of this, that ceases." This four-part formula is the deepest structure of the teaching — not a temporal causal sequence but a statement about the mutual conditionality of all existing things. It is then spelled out in the twelve-linked chain (dvādaśa-nidāna): from ignorance (avidyā) arise volitional formations (saṃskāra); from these, consciousness; from consciousness, name-and-form; then the six sense-bases, contact, feeling, craving, clinging, becoming, birth, and finally aging-and-death with all their suffering. The chain traces the entire mechanism of saṃsāra with surgical precision.',
+      },
+      references: [
+        {
+          label: 'Nāstika Darśanas (Madhyamaka · Yogācāra)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Nāgārjuna\'s Mūlamadhyamaka-kārikā takes pratītya-samutpāda as its central thesis and draws out its most radical implications. If everything arises only through conditions and nothing exists independently, nothing has svabhāva — inherent self-standing essence. This is śūnyatā: to be dependently arisen is to be empty of intrinsic nature. Nāgārjuna\'s twenty-seven chapters refute the attribution of svabhāva to motion, causation, the self, time and even nirvāṇa itself, showing that every supposed independent entity dissolves under analysis into a web of conditions. MMK 24.18 states the equation: "Whatever is dependently arisen, that is explained as emptiness." Yogācāra names the same insight as paratantra-svabhāva — the dependent nature of all phenomena within the stream of consciousness.',
+        },
+        {
+          label: 'Darśanas (contrast with Sāṅkhya satkāryavāda)',
+          href: '/darshanas/',
+          explainer:
+            'Pratītya-samutpāda defines itself partly against Sāṅkhya\'s satkāryavāda — the teaching that effects pre-exist in their causes: a pot pre-exists in the clay, and causation is simply the manifestation of what was always already latent. For Sāṅkhya, there is no genuine novelty in the world. Buddhist dependent origination takes the opposite view: effects are genuinely new, arising in dependence on conditions — not pre-existing in those conditions, nor arising from nothing. This middle-way account of causation rejects both the absolute identity of cause and effect (Sāṅkhya) and the production of effects from sheer non-existence (which the Nyāya-Vaiśeṣika tradition at times implies). The disagreement is not merely technical — it determines whether the path to liberation can introduce genuine change or only uncover what was always there.',
+        },
+      ],
     },
   },
   {
@@ -870,6 +906,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Śūnyatā became the philosophical core of Mahāyāna across Tibet, China and Japan — one of the most influential and rigorously argued ideas India produced.',
+      origin: {
+        label: 'Madhyamaka (Nāgārjuna, Mūlamadhyamaka-kārikā)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'Śūnyatā receives its definitive philosophical treatment in Nāgārjuna\'s Mūlamadhyamaka-kārikā (MMK, c. 2nd century CE). Nāgārjuna argues by systematic deconstruction: in twenty-seven chapters he applies the same relentless argument to every metaphysical category — motion, causation, the self, time, the aggregates, nirvāṇa — showing that no thing has svabhāva (inherent, independent, self-standing existence). Each supposed independent entity dissolves when examined into a network of conditions. The crowning move of chapter 24 identifies śūnyatā with pratītya-samutpāda: to be empty is to be dependently arisen, and to be dependently arisen is to be empty. This makes emptiness not a void but a positive description of the way things exist — through mutual conditionality, without any fixed essence.',
+      },
+      references: [
+        {
+          label: 'Nāstika Darśanas (Candrakīrti · Tibetan reception)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Candrakīrti\'s Prasannapadā and Madhyamakāvatāra (c. 7th century CE) are the most influential commentarial expositions of śūnyatā. Candrakīrti defends the Prāsaṅgika position — that the Mādhyamika should use only consequence (prasaṅga) to reduce opponents\' positions to absurdity, without asserting autonomous inferences — against Bhāviveka\'s Svātantrika. This distinction determines how emptiness is understood: for Candrakīrti, even the most refined positive assertion about emptiness would still be grasping at svabhāva. The Tibetan tradition received śūnyatā through this Prāsaṅgika lens, making it the dominant reading in all four Tibetan Buddhist schools and generating the rich Madhyamaka debate that continues today.',
+        },
+        {
+          label: 'Darśanas (contrast with Advaita māyā)',
+          href: '/darshanas/',
+          explainer:
+            'Śūnyatā is often compared with the Advaita Vedānta concept of māyā, but the resemblance is surface-level and the difference philosophically fundamental. Both hold that ordinary experience misrepresents reality — Advaita says the world of multiplicity is not ultimately real, Madhyamaka says all phenomena are empty of inherent existence. But Advaita posits brahman as the one positively real substratum behind appearance — śūnyatā is what māyā veils. Nāgārjuna explicitly refuses any such positive ground: even brahman, even nirvāṇa, even śūnyatā itself is subject to the same analysis and found empty of svabhāva. Śūnyatā is not a ground but the absence of any ground — a more radical dissolution of metaphysical foundations than Advaita undertakes, and the point where the two traditions diverge most sharply.',
+        },
+      ],
     },
   },
   {
@@ -895,6 +951,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Ahiṃsā is perhaps India\'s most influential ethical export: from Mahāvīra to Gandhi to the movements of King and Mandela, it became a force in world history.',
+      origin: {
+        label: 'Jaina darśana (Ācārāṅga Sūtra)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The Ācārāṅga Sūtra — the oldest surviving Jaina text, recording the practices of Mahāvīra (c. 599–527 BCE) — places ahiṃsā at the very foundation of Jaina ethics. Its opening books describe with harrowing attention the pain experienced by every form of life, including earth, water, fire and air as one-sensed jīvas. The first of the five mahāvratas (great vows) taken by a Jaina monk is the vow of non-harm extended to all living beings — one-sensed (plants, elements), two-sensed, three-sensed, four-sensed and five-sensed. The intensity is unmatched elsewhere: the Jaina monk sweeps the path before each step, covers his mouth to prevent inhaling insects, and strains his drinking water. The starting principle is stated directly: all living beings desire pleasure and fear pain; to harm them is therefore to act against what one would not wish upon oneself.',
+      },
+      references: [
+        {
+          label: 'Vedas · pan-Indic (Yoga, Mahābhārata)',
+          href: '/vedas/',
+          explainer:
+            'Ahiṃsā appears in the Brahmanical tradition in the Śatapatha Brāhmaṇa ("ahiṃsā sarvabhūtebhyaḥ" — non-harm to all beings), but it is in the later texts that it becomes a primary virtue. Patañjali names it the first and greatest of the five yamas — applicable to all regardless of caste, place, time or circumstance — and calls it mahāvrata. The Mahābhārata declares it the highest dharma: "ahiṃsā paramo dharmaḥ." The Gītā lists it among the divine qualities (daivī-sampat) and the highest form of austerity. The wide distribution of the term shows how ahiṃsā crossed from its Jaina technical roots into a shared norm of Indian ethical discourse, embraced by traditions that otherwise disagree on almost everything else.',
+        },
+        {
+          label: 'Modern reception (Gandhi · Satyāgraha)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Gandhi\'s reinterpretation of ahiṃsā as satyāgraha — "truth-force" or "holding fast to truth" — is the concept\'s most influential modern transformation. Gandhi fused the Jaina absolute commitment to non-harm with the Gītā\'s teaching on fearless action without attachment to results, creating a method of active non-violent resistance. Satyāgraha does not merely refrain from violence; it confronts injustice by accepting suffering on oneself rather than inflicting it — a form of moral force that exposes the injustice of the opponent. Adopted by Martin Luther King Jr. in the American civil rights movement, by Nelson Mandela, by Cesar Chavez and others, this method makes ahiṃsā one of the most consequential ethical ideas of the twentieth century.',
+        },
+      ],
     },
   },
   {
@@ -920,6 +996,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Anekāntavāda gave Indian thought its most rigorous philosophy of intellectual humility — a principled openness to the partial truth in rival positions.',
+      origin: {
+        label: 'Jaina darśana (Tattvārtha Sūtra)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'Anekāntavāda is systematised most rigorously in Umāsvāti\'s Tattvārtha Sūtra (c. 2nd–5th century CE), the definitive Jaina philosophical text accepted by both Digambara and Śvetāmbara sects. Umāsvāti distinguishes the substance (dravya), qualities (guṇas) and modes (paryāyas) of any entity to show that multiple apparently contradictory descriptions can be simultaneously true: a substance is permanent (with respect to its underlying nature), impermanent (with respect to its modes), both, and in one sense inexpressible. The logical technique for handling this is syādvāda — every predication is qualified by syāt ("in some respect"), preventing any single description from claiming absolute adequacy. The seven-fold predication (saptabhaṅgī) — "in some respect it is; in some respect it is not; in some respect it both is and is not; in some respect it is inexpressible" — systematises all possible truth-values for any claim about reality.',
+      },
+      references: [
+        {
+          label: 'Nāstika Darśanas (Jaina nayavāda)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Anekāntavāda is complemented by nayavāda — the doctrine of standpoints. A naya is a partial perspective valid within its own scope that becomes a durnaya (bad standpoint) when claimed as the whole truth. Jaina philosophy catalogues the main standpoints: the universal (seeing only the substance, ignoring its modes), the particular (seeing only the modes), the standpoint of the present moment, of synonymy, of etymology, and so on. Each is a legitimate analytical tool; none exhausts reality. This gives the Jaina tradition a remarkable meta-philosophical advantage in inter-school debate: every rival position — Advaita\'s claim that brahman alone is real, Buddhism\'s claim of universal impermanence, Sāṅkhya\'s dualism — can be acknowledged as a valid naya while being shown to err in elevating itself to an exclusive truth.',
+        },
+        {
+          label: 'Darśanas (contrast with other epistemologies)',
+          href: '/darshanas/',
+          explainer:
+            'Anekāntavāda stands in pointed contrast to the dominant epistemological approaches of rival schools. Buddhism\'s two-truths doctrine holds that conventional and ultimate truth are strictly distinct levels; what is valid conventionally is not ultimately real, and the two cannot both be true in the same sense at once. Nyāya and Mīmāṃsā assert robust realism — external objects and universals exist just as they appear. Advaita holds that brahman alone is ultimately real and the world is appearance. Against all of these, Jainism insists that reality is irreducibly complex and cannot be flattened into any single metaphysical vision. This makes anekāntavāda the most explicitly pluralist epistemology in the Indian tradition and the one most structurally resistant to dogmatism — the system that built its own critique of system into its foundations.',
+        },
+      ],
     },
   },
 
