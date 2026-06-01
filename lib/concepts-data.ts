@@ -374,9 +374,19 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The scheme gives Indian thought a strikingly balanced ethics: material success and pleasure are affirmed, not denied — but framed by duty and crowned by liberation.',
-      origin: { label: 'Darśanas · Dharma-śāstra', href: '/darshanas/' },
+      origin: {
+        label: 'Darśanas · Dharma-śāstra',
+        href: '/darshanas/',
+        explainer:
+          'The puruṣārtha framework does not appear fully formed in any single foundational text — it crystallises gradually across the Dharma Sūtras and Dharma Śāstras. The Āpastamba Dharma Sūtra already codifies the relation between dharma, artha and kāma; Kauṭilya\'s Arthaśāstra presupposes the framework when it insists on the legitimacy of artha and kāma within dharma. The term puruṣārtha ("the proper aim of the person") emerges as the tradition reflects on what a human life is for and finds not one answer but four, held in ordered relationship. By the time of Manu\'s Dharmaśāstra, the fourfold scheme is treated as foundational common ground, not a contested position.',
+      },
       references: [
-        { label: 'Itihāsa (Mahābhārata)', href: '/itihasa/' },
+        {
+          label: 'Itihāsa (Mahābhārata)',
+          href: '/itihasa/',
+          explainer:
+            'The Mahābhārata is the richest literary exploration of the puruṣārthas in tension. The epic\'s central conflict is precisely a conflict between dharma and artha — legitimate power-pursuit — and the text explores every position on how they relate. The Śānti Parvan contains sustained philosophical discussions of all four aims, their priority and their conflicts; the Rājadharma sections explore how artha and kāma are to be pursued within dharmic limits for a king. The Gītā, embedded in the epic, crystallises the deepest difficulty: when sva-dharma conflicts with ahiṃsā (the desire to avoid harm), which aim takes precedence? The Mahābhārata refuses an easy answer — and that refusal is itself its teaching.',
+        },
       ],
     },
   },
@@ -405,10 +415,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Saṃsāra is the problem to which mokṣa is the answer; nearly every Indian path defines itself by how it proposes to bring the wandering to an end.',
-      origin: { label: 'Upaniṣads (Bṛhadāraṇyaka)', href: '/upanishads/' },
+      origin: {
+        label: 'Upaniṣads (Bṛhadāraṇyaka)',
+        href: '/upanishads/',
+        explainer:
+          'Saṃsāra as a doctrine first receives systematic treatment in the Bṛhadāraṇyaka Upaniṣad. Yājñavalkya teaches the "two paths" after death: those with full knowledge travel the path of the gods (devayāna) to brahman and do not return; those who perform only ritual action go by the path of the ancestors (pitṛyāna) to the lunar world, exhaust their merit and return to earth to be reborn. The Chāndogya Upaniṣad develops this into a complete rebirth account: the soul returns through rain, enters the food chain, passes from male to female, and is born again — and the quality of that rebirth is determined by the conduct of the previous life. The key move: the beginningless cycle is made morally intelligible, its turning-mechanism identified as karma.',
+      },
       references: [
-        { label: 'Nāstika Darśanas (Bauddha · Jaina)', href: '/nastika-darshanas/' },
-        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+        {
+          label: 'Nāstika Darśanas (Bauddha · Jaina)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Buddhism and Jainism take up saṃsāra and make it the central problem their paths are designed to solve. Buddhism names the driving force precisely: craving (tṛṣṇā) in three forms — for sensual pleasure, for existence and for non-existence — is what keeps rebirth turning. The twelve-linked chain of dependent origination traces exactly how ignorance conditions craving and craving conditions the next arising. Jainism maps saṃsāra onto the cosmic structure: the soul (jīva) bound by karma-matter cycles through all four classes of being — gods, humans, animals and hell-beings — in a vast circuit until, liberated, it rises on its own nature to the apex of the universe. Both traditions accept the structure of saṃsāra fully; they differ on what the mechanism is and how to stop it.',
+        },
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā treats saṃsāra not as an abstract metaphysical backdrop but as the immediate stakes of every moment of consciousness. In chapter 8, Kṛṣṇa describes the two paths — the path of no return (through brahman) and the path of return (the cycle) — framing the entire spiritual enterprise as a fork that one\'s final thought at death determines. In chapter 9, he describes how those devoted to lesser goals return to them after death and thus to rebirth; only those who remember him at the moment of death reach him and do not return. Saṃsāra is thus not an impersonal mechanism but a direct consequence of what the practitioner truly loves — and can be broken by a shift in that deepest devotion.',
+        },
       ],
     },
   },
@@ -435,10 +460,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Mokṣa is the orienting horizon of Indian spirituality — the point at which the long account of karma, rebirth and bondage is finally cancelled.',
-      origin: { label: 'Upaniṣads', href: '/upanishads/' },
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'Mokṣa as a named concept crystallises in the later Upaniṣads, but its content is established earlier. Yājñavalkya teaches Janaka in the Bṛhadāraṇyaka that the self, when fully known, is not born again — the doctrine in substance, before the canonical term arrives. The Kaṭha Upaniṣad names the goal as "mukti" and describes the liberated soul as freed from the mouth of death itself. The Muṇḍaka states it most compactly: "the knower of brahman becomes brahman" — liberation is not a reward for knowing but the very act of knowing, because what one truly is was never bound. By the time of the Gītā, mokṣa is the established fourth and highest puruṣārtha — the aim that gives the other three their final meaning.',
+      },
       references: [
-        { label: 'Darśanas (Vedānta · Yoga · Sāṅkhya)', href: '/darshanas/' },
-        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+        {
+          label: 'Darśanas (Vedānta · Yoga · Sāṅkhya)',
+          href: '/darshanas/',
+          explainer:
+            'Each school describes mokṣa differently, and the differences are not merely verbal. For Advaita Vedānta, mokṣa is the recognition that one was never bound — not a change of state but the removal of the ignorance that made bondage seem real. For Patañjali\'s Yoga, it is kaivalya: the complete isolation of pure consciousness (puruṣa) from all that prakṛti presents, a stillness beyond all movement. For Rāmānuja\'s Viśiṣṭādvaita, liberation means dwelling in the presence of Nārāyaṇa — distinct from but in loving communion with the supreme, union without identity. For Buddhism, its cognate nirvāṇa is the cessation of craving and the extinction of the fuel that drives rebirth, not any positive metaphysical state. The divergences map precisely onto each school\'s account of what bondage is.',
+        },
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā approaches mokṣa from every direction without reducing it to a single path. Chapter 18\'s declaration of the "highest secret" — sarva-dharmān parityajya mām ekaṃ śaraṇaṃ vraja, "abandon all duties and take refuge in me alone; I shall free you from all sins" — presents the bhakti route to liberation in its most concentrated form. Elsewhere, Kṛṣṇa teaches jñāna-yoga (ch. 4), karma-yoga (ch. 3) and dhyāna-yoga (ch. 6) as parallel routes, each leading to the same end. His teaching is that the path should match the seeker\'s nature (svabhāva) — not one route but one destination, many roads.',
+        },
       ],
     },
   },
@@ -465,6 +505,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Yoga is the practical engine of the tradition — the how to the what of liberation — and the single Indic concept most fully adopted by the modern world.',
+      origin: {
+        label: 'Upaniṣads (Kaṭha · Śvetāśvatara)',
+        href: '/upanishads/',
+        explainer:
+          'Yoga as a disciplined inner practice appears in embryonic form in the Kaṭha Upaniṣad, where Yama tells Naciketa that the steady holding of the senses — called yoga — is the path by which the self is apprehended. The Śvetāśvatara Upaniṣad goes further and describes the practice in physical detail: sitting straight, holding the breath, controlling the senses, fixing the mind on brahman — recognisably the techniques that later become canonical. The Maitrī Upaniṣad explicitly names a sixfold yoga (ṣaḍaṅga-yoga) and frames it as the discipline by which the self is known. These are the earliest textual descriptions of meditation posture, breath-control and sensory withdrawal in the Upaniṣadic tradition.',
+      },
+      references: [
+        {
+          label: 'Darśanas (Yoga · Patañjali)',
+          href: '/darshanas/',
+          explainer:
+            'Patañjali\'s Yoga Sūtras are the founding text of yoga as a philosophical system — one of the six āstika darśanas. His opening definition, "yogaś citta-vṛtti-nirodhaḥ" — yoga is the stilling of the modifications of the mind — sets the goal with precise economy. The eight limbs (aṣṭāṅga) form a complete programme: ethical restraint (yamas), personal observance (niyamas), posture (āsana), breath-regulation (prāṇāyāma), withdrawal of the senses (pratyāhāra), concentration (dhāraṇā), meditation (dhyāna) and complete absorption (samādhi). The Sūtras also provide a detailed psychology of the obstacles (kleśas), the structure of karma, and the nature of the mind — making this the most rigorously argued of the Indian liberation-paths and the framework within which virtually all later yoga-thought operates.',
+        },
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā broadens the meaning of yoga decisively. Kṛṣṇa uses the word not for one specific technique but for any disciplined path walked with full inner commitment: karma-yoga (the yoga of action without attachment), jñāna-yoga (the yoga of liberating knowledge) and bhakti-yoga (the yoga of devotion). Chapter 6 describes the practice of meditation — sitting still, mind steadied on the self, breath controlled, neither too tense nor too slack — in terms that echo Patañjali without adopting his full system. Kṛṣṇa\'s culminating statement reorients the entire tradition: "a yogi is greater than the ascetic, greater than the man of knowledge, greater than the man of ritual action — therefore be a yogi." The Gītā moves yoga from the renunciant\'s forest to the centre of ordinary engaged life.',
+        },
+      ],
     },
   },
 
@@ -492,6 +552,20 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The puruṣa–prakṛti analysis is the substructure beneath a vast amount of Indian thought; even schools that reject its dualism reason in its terms.',
+      origin: {
+        label: 'Sāṅkhya (Sāṅkhya Kārikā)',
+        href: '/darshanas/',
+        explainer:
+          'The puruṣa–prakṛti dualism is the foundational teaching of the Sāṅkhya darśana, and its earliest systematic exposition is the Sāṅkhya Kārikā of Īśvarakṛṣṇa. Its opening verse states the project: to overcome the three kinds of suffering (ādhyātmika, ādhibhautika and ādhidaivika — internal, external and cosmic). Its answer is discriminative knowledge (viveka-khyāti): seeing clearly that puruṣa, pure witnessing consciousness, is not prakṛti. The Kārikā then unfolds the twenty-five tattvas (principles of existence): from avyakta (unmanifest prakṛti), through buddhi, ahaṃkāra, the eleven sense-faculties, five subtle essences (tanmātras) and five gross elements — all of it the self-evolution of prakṛti, with puruṣa standing entirely apart as silent witness throughout.',
+      },
+      references: [
+        {
+          label: 'Darśanas (Yoga · Āyurveda) · Itihāsa (Bhagavad-Gītā)',
+          href: '/darshanas/',
+          explainer:
+            'The puruṣa–prakṛti framework became the most widely borrowed conceptual inheritance in classical Indian thought. Patañjali\'s Yoga Sūtras adopt the entire Sāṅkhya cosmology and add a twenty-sixth principle — Īśvara, a special puruṣa untouched by afflictions — as the object of meditative devotion; liberation remains the full disentanglement of puruṣa from prakṛti. Āyurveda takes over the guṇa-analysis of prakṛti and builds its theory of doṣas (vāta, pitta, kapha), dhātus and individual constitution on Sāṅkhya foundations. The Bhagavad-Gītā (ch. 13) explicitly uses the distinction, naming puruṣa "the knower of the field" (kṣetrajña) and prakṛti "the field" (kṣetra), and teaches that clearly understanding this is itself the path of liberating knowledge.',
+        },
+      ],
     },
   },
   {
