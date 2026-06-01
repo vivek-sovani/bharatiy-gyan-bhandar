@@ -12,32 +12,20 @@ export function CornerOrn({ className = '', size = 24 }: { className?: string; s
   );
 }
 
-// Haṃsa (swan) — symbol of viveka (wisdom/discernment) and vehicle of Sarasvatī,
-// goddess of knowledge. Fills the header mark on the left of the site name.
-export function HeaderSeal({ size = 40 }: { size?: number }) {
+// Seal in the header — lotus-derived monogram.
+export function HeaderSeal({ size = 38 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 60 60" aria-hidden="true">
-      {/* Body — plump rounded shape, breast to the right, tail narrowing left */}
-      <path
-        d="M 42 50 C 50 50,57 43,57 37 C 57 31,51 25,43 25
-           C 35 25,27 29,22 36 C 16 43,18 52,26 54
-           C 30 56,36 56,42 50 Z"
-        fill="var(--maroon)"
-      />
-      {/* Neck — thick stroke rising from body upper-left to head */}
-      <path
-        d="M 29 34 C 25 26,20 18,16 10"
-        fill="none" stroke="var(--maroon)" strokeWidth="7.5" strokeLinecap="round"
-      />
-      {/* Head */}
-      <circle cx="14" cy="8" r="7.5" fill="var(--maroon)"/>
-      {/* Beak — short angled wedge pointing left */}
-      <path d="M 7 7 L 0 9.5 L 5 14 Z" fill="var(--maroon)"/>
-      {/* Wing fold — cream arc suggesting the folded primary feathers */}
-      <path
-        d="M 27 37 C 36 31,46 31,54 37"
-        fill="none" stroke="var(--paper)" strokeWidth="2"
-      />
+      <circle cx="30" cy="30" r="29" fill="none" stroke="var(--maroon)" strokeWidth="0.8" />
+      <circle cx="30" cy="30" r="24" fill="none" stroke="var(--maroon)" strokeWidth="0.5" />
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
+        <g key={a} transform={`rotate(${a} 30 30)`}>
+          <path d="M30 8 C 35 16, 35 22, 30 26 C 25 22, 25 16, 30 8 Z"
+                fill="none" stroke="var(--maroon)" strokeWidth="0.8" />
+        </g>
+      ))}
+      <circle cx="30" cy="30" r="3.5" fill="var(--maroon)" />
+      <circle cx="30" cy="30" r="1.4" fill="var(--paper)" />
     </svg>
   );
 }
