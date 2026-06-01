@@ -12,20 +12,41 @@ export function CornerOrn({ className = '', size = 24 }: { className?: string; s
   );
 }
 
-// Seal in the header — small lotus-derived monogram.
-export function HeaderSeal({ size = 38 }: { size?: number }) {
+// Dharma Chakra seal in the header — 24-spoke wheel matching the site logo.
+export function HeaderSeal({ size = 40 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 60 60" aria-hidden="true">
-      <circle cx="30" cy="30" r="29" fill="none" stroke="var(--maroon)" strokeWidth="0.8" />
-      <circle cx="30" cy="30" r="24" fill="none" stroke="var(--maroon)" strokeWidth="0.5" />
-      {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
-        <g key={a} transform={`rotate(${a} 30 30)`}>
-          <path d="M30 8 C 35 16, 35 22, 30 26 C 25 22, 25 16, 30 8 Z"
-                fill="none" stroke="var(--maroon)" strokeWidth="0.8" />
-        </g>
-      ))}
-      <circle cx="30" cy="30" r="3.5" fill="var(--maroon)" />
-      <circle cx="30" cy="30" r="1.4" fill="var(--paper)" />
+    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
+      {/* Triple outer ring */}
+      <circle cx="50" cy="50" r="48.5" fill="none" stroke="var(--maroon)" strokeWidth="1.8"/>
+      <circle cx="50" cy="50" r="45"   fill="none" stroke="var(--maroon)" strokeWidth="0.7"/>
+      <circle cx="50" cy="50" r="41.5" fill="none" stroke="var(--maroon)" strokeWidth="1.8"/>
+      {/* 24 spokes at 15° intervals */}
+      {Array.from({ length: 24 }, (_, i) => {
+        const a = (i * 15 * Math.PI) / 180;
+        return (
+          <line key={i}
+            x1={50 + 12.5 * Math.cos(a)} y1={50 + 12.5 * Math.sin(a)}
+            x2={50 + 41.5 * Math.cos(a)} y2={50 + 41.5 * Math.sin(a)}
+            stroke="var(--maroon)" strokeWidth="1.3"/>
+        );
+      })}
+      {/* Hub outer ring */}
+      <circle cx="50" cy="50" r="12.5" fill="none" stroke="var(--maroon)" strokeWidth="1.5"/>
+      {/* Hub inner ring */}
+      <circle cx="50" cy="50" r="7.5"  fill="none" stroke="var(--maroon)" strokeWidth="0.8"/>
+      {/* 8 mini hub-spokes */}
+      {Array.from({ length: 8 }, (_, i) => {
+        const a = (i * 45 * Math.PI) / 180;
+        return (
+          <line key={i}
+            x1={50 + 2.5 * Math.cos(a)} y1={50 + 2.5 * Math.sin(a)}
+            x2={50 + 7.5 * Math.cos(a)} y2={50 + 7.5 * Math.sin(a)}
+            stroke="var(--maroon)" strokeWidth="1"/>
+        );
+      })}
+      {/* Centre */}
+      <circle cx="50" cy="50" r="2"   fill="none" stroke="var(--maroon)" strokeWidth="0.7"/>
+      <circle cx="50" cy="50" r="0.9" fill="var(--maroon)"/>
     </svg>
   );
 }

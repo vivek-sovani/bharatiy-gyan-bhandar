@@ -1,13 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <g id="sp">
+      <rect x="-3.4" y="-77.5" width="6.8" height="53" rx="1" fill="#f5edda"/>
+      <rect x="-5" y="-34" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
+      <rect x="-5" y="-46" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
+      <rect x="-5" y="-59" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
+      <rect x="-5" y="-70" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
+      <polygon points="0,-89 -6,-79 6,-79" fill="#f5edda"/>
+      <polygon points="-12,-84 -5,-80 -8,-87" fill="#f5edda"/>
+      <polygon points="12,-84 5,-80 8,-87" fill="#f5edda"/>
+    </g>
+  </defs>
   <rect width="192" height="192" fill="#b5853a"/>
-  <rect x="10" y="10" width="172" height="172" rx="3" fill="none" stroke="#f5edda" stroke-width="1" opacity="0.35"/>
-  <text
-    x="96" y="130"
-    font-family="Georgia, 'Noto Serif Devanagari', 'Tiro Devanagari Sanskrit', serif"
-    font-size="108"
-    text-anchor="middle"
-    fill="#f5edda"
-    font-weight="400"
-    opacity="0.95"
-  >ॐ</text>
+  <circle cx="96" cy="96" r="88" fill="none" stroke="#f5edda"
+    stroke-width="6" stroke-dasharray="3.5 4" stroke-linecap="round"/>
+  <circle cx="96" cy="96" r="81" fill="none" stroke="#f5edda" stroke-width="2"/>
+  <circle cx="96" cy="96" r="78" fill="none" stroke="#f5edda" stroke-width="1"/>
+  <use href="#sp" transform="translate(96,96)"/>
+  <use href="#sp" transform="translate(96,96) rotate(45)"/>
+  <use href="#sp" transform="translate(96,96) rotate(90)"/>
+  <use href="#sp" transform="translate(96,96) rotate(135)"/>
+  <use href="#sp" transform="translate(96,96) rotate(180)"/>
+  <use href="#sp" transform="translate(96,96) rotate(225)"/>
+  <use href="#sp" transform="translate(96,96) rotate(270)"/>
+  <use href="#sp" transform="translate(96,96) rotate(315)"/>
+  <circle cx="96" cy="96" r="26" fill="#b5853a"/>
+  <circle cx="96" cy="96" r="26" fill="none" stroke="#f5edda" stroke-width="2.2"/>
+  <g transform="translate(96,96)">
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(315)"/>
+  </g>
+  <circle cx="96" cy="96" r="7.5" fill="#b5853a" stroke="#f5edda" stroke-width="1.5"/>
+  <circle cx="96" cy="96" r="3.5" fill="#f5edda"/>
 </svg>
