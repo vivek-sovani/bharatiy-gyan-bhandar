@@ -147,10 +147,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The Upaniṣadic equation ātman = brahman — that the innermost self is identical with the ultimate reality — is the high point of Indian metaphysics and the pivot of the whole Vedānta tradition.',
-      origin: { label: 'Upaniṣads', href: '/upanishads/' },
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The Upaniṣads approach brahman from multiple angles, none of which fully captures it — which is precisely the point. The Bṛhadāraṇyaka introduces it through negation: when pressed on the nature of the divine, Yājñavalkya works all answers down to one — brahman — defined only as neti neti, "not this, not this." The Chāndogya approaches from the other side: brahman is sat, pure being, "the subtle essence underlying all things," and the teaching culminates in tat tvam asi — that (brahman) thou art. The Taittirīya attempts a positive description: brahman is ānanda (bliss), the deepest sheath of the self. Together these texts establish brahman as simultaneously the ground of the cosmos and the ground of the self — and as identical with each other.',
+      },
       references: [
-        { label: 'Darśanas (Vedānta)', href: '/darshanas/' },
-        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+        {
+          label: 'Darśanas (Vedānta)',
+          href: '/darshanas/',
+          explainer:
+            'The brahman of the Upaniṣads becomes the central problem of Vedānta — a school defined precisely as the inquiry into brahman (brahma-jijñāsā). The three great schools disagree most sharply on how brahman relates to world and self. Śaṅkara\'s Advaita holds brahman to be the sole reality: world and individual self are appearances produced by māyā; liberation is the recognition of identity with brahman. Rāmānuja\'s Viśiṣṭādvaita holds that brahman is real, the world is real, and selves are real — but selves and world exist as the body of brahman, qualifying it rather than standing apart from it. Madhva\'s Dvaita insists on an eternal distinction between brahman (as Viṣṇu) and everything else; devotion, not identity, is the path.',
+        },
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā deploys brahman in several registers without forcing a single definition. Kṛṣṇa uses it as the impersonal absolute — the akṣara brahman, the imperishable — and speaks of "brahma-nirvāṇa," the peace that comes from union with brahman. He describes sacrifice as brahman offering into brahman within brahman. He also uses it as the ground of action: "consecrating all deeds to brahman" is the Gītā\'s formula for disinterested action. The Gītā holds the personal and impersonal together — brahman is real, Kṛṣṇa is real, and they are ultimately the same ground approached from different directions.',
+        },
       ],
     },
   },
@@ -177,10 +192,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The mahāvākyas ("great sayings") — tat tvam asi ("that thou art"), ahaṃ brahmāsmi ("I am Brahman") — compress the entire teaching: to know the self is to know the Absolute.',
-      origin: { label: 'Upaniṣads', href: '/upanishads/' },
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The Bṛhadāraṇyaka is the primary locus. Yājñavalkya, instructing his wife Maitreyī, strips away everything the self is not — body, breath, mind — until what remains is the pure witness who cannot itself be known as an object, and declares "ahaṃ brahmāsmi" — I am brahman. The Chāndogya gives the complementary approach: Uddālaka Āruṇi shows his son Śvetaketu, through examples of salt dissolved in water and the seed within a fig, that the subtle ātman pervades all things — and "tat tvam asi," that art thou. The Kaṭha Upaniṣad dramatises the teaching as Death (Yama) instructing Naciketa: the ātman is "subtler than the subtle, greater than the great," and it cannot be reached by learning or sharp intellect alone — only by the grace of what it itself is.',
+      },
       references: [
-        { label: 'Darśanas (Vedānta · Sāṅkhya)', href: '/darshanas/' },
-        { label: 'Nāstika Darśanas (anātman)', href: '/nastika-darshanas/' },
+        {
+          label: 'Darśanas (Vedānta · Sāṅkhya)',
+          href: '/darshanas/',
+          explainer:
+            'Vedānta takes the Upaniṣadic ātman as its central object. In Advaita, ātman and brahman are numerically identical — self-knowledge and knowledge of ultimate reality are the same act; avidyā (ignorance) is the only thing concealing what is already the case. Sāṅkhya, by contrast, posits many individual puruṣas (conscious witnesses) rather than one universal ātman; each puruṣa is distinct and eternally separate both from prakṛti and from other puruṣas. Liberation in Sāṅkhya is viveka — discriminative insight that sees the witness as always already free from all that prakṛti presents — not the recognition of identity with any Absolute. The contrast shows how different accounts of the self generate entirely different liberation-paths.',
+        },
+        {
+          label: 'Nāstika Darśanas (anātman)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'The Buddhist teaching of anātman (Pali anattā) is the most direct philosophical challenge to the Upaniṣadic ātman. The Buddha analyses the person into five aggregates (skandhas) — form, feeling, perception, volition and consciousness — and shows that none of them is the self, nor is any combination. The "self" is a useful conventional label for a stream of momentary processes, not an abiding entity. This is not mere word-play: the conviction that there is a permanent self is, for Buddhism, a root cause of suffering, and the insight into non-self is the beginning of liberation — the precise reverse of the Upaniṣadic position, and the sharpest philosophical disagreement in the Indian tradition.',
+        },
       ],
     },
   },
@@ -207,9 +237,19 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Māyā lets Advaita affirm both that Brahman alone is real and that the world we experience is not simply nothing — the bridge between the absolute and the everyday.',
-      origin: { label: 'Upaniṣads (Śvetāśvatara)', href: '/upanishads/' },
+      origin: {
+        label: 'Upaniṣads (Śvetāśvatara)',
+        href: '/upanishads/',
+        explainer:
+          'The Śvetāśvatara Upaniṣad is the first text to use māyā in a philosophically systematic way. It declares "māyāṃ tu prakṛtiṃ vidyāt māyinaṃ tu maheśvaram" — know that prakṛti is māyā, and the lord is the possessor of māyā. Here māyā is the creative power of the supreme deity through which the world of appearance arises; it is not yet the full Advaita concept, but the crucial move is made: māyā links the supreme deity to the produced world, making the world neither fully real nor simply non-existent. Earlier Upaniṣads use māyā in the simpler sense of "magic" or "creative power" — it is the Śvetāśvatara that begins the technical transformation.',
+      },
       references: [
-        { label: 'Darśanas (Advaita Vedānta)', href: '/darshanas/' },
+        {
+          label: 'Darśanas (Advaita Vedānta)',
+          href: '/darshanas/',
+          explainer:
+            'Śaṅkara\'s Advaita gives māyā its definitive philosophical treatment. Māyā is the power by which brahman appears as the manifold world of names and forms — not a second reality alongside brahman, but brahman\'s inexplicable appearance-making capacity. Its two functions are āvaraṇa (veiling the real — concealing the knowledge that brahman alone is) and vikṣepa (projection — superimposing the apparent world on the undivided ground). The classic illustration is the rope mistaken for a snake in dim light: the snake has no independent existence, yet the fear it generates is experienced as fully real. The world stands to brahman as the snake to the rope — empirically real (vyāvahārika), not ultimately so (pāramārthika). Māyā is the hinge that allows Advaita to hold both levels of truth simultaneously without collapsing into either nihilism or naive realism.',
+        },
       ],
     },
   },
@@ -238,10 +278,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Dharma is the ethical heir of Vedic ṛta — the cosmic order turned into a way of living. It remains the central organising idea of Hindu, Buddhist (dhamma) and Jaina ethics alike.',
-      origin: { label: 'Vedas (ṛta → dharman)', href: '/vedas/' },
+      origin: {
+        label: 'Vedas (ṛta → dharman)',
+        href: '/vedas/',
+        explainer:
+          'In the Ṛgveda the word dharman (neuter) appears as an adjective meaning "supporting" or "holding in place" — the sustaining-function associated with the great gods, especially Varuṇa and Mitra. The later Vedic literature (Brāhmaṇas, Āraṇyakas) begins to shift toward dharma as a noun denoting right ritual order and correct religious procedure. The conceptual move is precise: the word inherits the content of ṛta — the order that upholds both nature and society — and applies it specifically to human obligation. By the time of the Dharma Sūtras, dharma has settled into its classical range: what one ought to do as a member of a particular community, station and stage of life.',
+      },
       references: [
-        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
-        { label: 'Darśanas (Mīmāṃsā)', href: '/darshanas/' },
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā is where dharma receives its most intense philosophical treatment — because the epic makes it a crisis. Arjuna cannot determine the right action when his duty as a warrior (sva-dharma) conflicts with his duty to his family (kula-dharma). Kṛṣṇa\'s answer unfolds dharma from multiple angles: sva-dharma is the duty specific to one\'s own nature and station, and even an imperfectly performed sva-dharma is better than a para-dharma (another\'s duty) well done. But the deeper teaching goes further: action performed without egoic attachment to results — niṣkāma-karma — is itself the highest form of dharmic action. The Gītā holds sva-dharma as the form and non-attachment as the spirit of right action.',
+        },
+        {
+          label: 'Darśanas (Mīmāṃsā)',
+          href: '/darshanas/',
+          explainer:
+            'Mīmāṃsā makes dharma its central and defining subject — the school is in fact a systematic inquiry into what dharma is and how it can be validly known. Jaimini opens with the foundational question: "athāto dharma-jijñāsā" — now, therefore, the inquiry into dharma. His definition is terse: "codanā-lakṣaṇo \'rtho dharmaḥ" — dharma is the good characterised by Vedic injunction (codanā). Because dharma concerns what ought to be done rather than what is, it cannot be derived from observation or inference; only an eternal, self-authoritative Veda can reveal it. This is why Mīmāṃsā\'s entire metaphysics of an authorless, eternal Veda follows: only such a text could be the valid source of moral obligation.',
+        },
       ],
     },
   },
@@ -268,11 +323,31 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Karma joined to rebirth gives the Indian traditions their account of justice and inequality across lives, and frames the whole problem that liberation (mokṣa) is meant to solve.',
-      origin: { label: 'Upaniṣads (Bṛhadāraṇyaka)', href: '/upanishads/' },
+      origin: {
+        label: 'Upaniṣads (Bṛhadāraṇyaka)',
+        href: '/upanishads/',
+        explainer:
+          'The Bṛhadāraṇyaka Upaniṣad gives karma its first systematic statement. Yājñavalkya teaches: "as one acts, as one conducts oneself, so one becomes — the doer of good becomes good, the doer of evil becomes evil." This moral principle is then joined to rebirth: the self travels after death by a path determined by the residue of its deeds — those of good conduct rise to good births, those of harmful conduct to bad ones. The Chāndogya Upaniṣad develops the same link through a different image: pleasant conduct leads to a pleasant womb (a brahmin\'s, kṣatriya\'s or vaiśya\'s), foul conduct to a foul womb. Here, for the first time, karma and rebirth are explicitly connected into the single mechanism that will define Indian soteriology.',
+      },
       references: [
-        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
-        { label: 'Darśanas (Mīmāṃsā · Yoga)', href: '/darshanas/' },
-        { label: 'Nāstika Darśanas', href: '/nastika-darshanas/' },
+        {
+          label: 'Itihāsa (Bhagavad-Gītā)',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā transforms the karma doctrine from a mechanism of bondage into a path of liberation. The problem karma poses is acute: every action leaves a residue that binds the actor to its consequences. Kṛṣṇa\'s answer is niṣkāma-karma — action without desire for its fruits: "you have a right to perform your duties, but you are not entitled to the fruits of your actions; let not the fruits of action be your motive, nor let attachment to inaction be yours" (2.47). The actor does not cease acting — that is impossible — but acts as an instrument of the universal order, consecrating every deed to Kṛṣṇa, so that no residue accumulates. Karma-yoga thus reframes the doctrine: not an iron causal law to be escaped, but a daily discipline to be mastered.',
+        },
+        {
+          label: 'Darśanas (Mīmāṃsā · Yoga)',
+          href: '/darshanas/',
+          explainer:
+            'Mīmāṃsā and Yoga address karma from opposite angles. Mīmāṃsā is concerned with the karma of sacrifice: the prescribed ritual action generates apūrva — an unseen potency — that ripens into the promised fruit across time, even across lifetimes, independently of any deity\'s will; the causal chain is inexorable. Yoga, following Patañjali, analyses karma as cumulative conditioning: karmas have their roots in the afflictions (kleśas — ignorance, ego, attraction, aversion and the fear of death) and produce their effects in present and future lives. The eightfold yogic discipline both prevents new karma from forming and burns off accumulated karma through austerity (tapas), making Yoga a systematic technology for dismantling the karmic mechanism from the inside.',
+        },
+        {
+          label: 'Nāstika Darśanas',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Both Buddhism and Jainism adopt karma as a central category but reshape it profoundly. Buddhism rejects a permanent self who accumulates karma, yet retains the principle: intentional action (cetanā) leaves dispositions (saṃskāras) that condition the next arising in the stream of experience. Karma is thus a feature of the process, not of an abiding agent. Jainism takes the most literal view: karma is a fine material substance that physically adheres to the soul (jīva) in proportion to the soul\'s passions, weighing it down and binding it to saṃsāra. Liberation requires simultaneously stopping new karma (saṃvara) and burning off accumulated karma (nirjarā) through austerity. The contrast with Vedāntic and Yogic accounts shows how deep a shared term\'s divergence can run.',
+        },
       ],
     },
   },
