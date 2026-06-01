@@ -2940,8 +2940,22 @@ html[lang="mr"] .concept-ref-tag {
   border-bottom: 1px solid var(--rule-strong);
 }
 .concept-ref-link:hover { border-bottom-color: var(--maroon); }
+.concept-ref-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.concept-ref-explainer {
+  padding-left: 10.4rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--ink-body);
+  margin: 0;
+  font-style: italic;
+}
 @media (max-width: 600px) {
   .concept-ref-tag { flex-basis: 100%; }
+  .concept-ref-explainer { padding-left: 0; }
 }
 
 @keyframes contrib-fade {

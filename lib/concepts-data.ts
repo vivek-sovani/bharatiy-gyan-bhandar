@@ -11,8 +11,9 @@ export type ConceptDetail = {
 
 // A pointer into the collection — where a concept is explained or referenced.
 export type ConceptSource = {
-  label: string;   // section / text name
-  href: string;    // link to the relevant section
+  label: string;      // section / text name
+  href: string;       // link to the relevant section
+  explainer?: string; // prose description of how the concept is stated / used here
 };
 
 export type Concept = {
@@ -56,10 +57,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Ṛta is the conceptual ancestor of dharma: as the tradition turns from cosmos to conduct, the cosmic order of ṛta becomes the lived order of dharma.',
-      origin: { label: 'Ṛgveda', href: '/vedas/' },
+      origin: {
+        label: 'Ṛgveda',
+        href: '/vedas/',
+        explainer:
+          'Ṛta pervades the Ṛgveda as its deepest organising principle — the word appears over 300 times across the hymns. The sun travels "the path of ṛta," the dawn rises by it, the rivers flow in its track and the seasons turn by its rhythm. Varuṇa, the great sovereign god, holds the epithet gopā ṛtasya — guardian of ṛta. The sacrifice is effective only when performed in strict alignment with ṛta; any deviation is anṛta — falsehood, disorder, a transgression against the cosmic compact. Ṛta thus fuses the regularity of nature, the precision of ritual and the rightness of moral conduct into a single, undivided order.',
+      },
       references: [
-        { label: 'Upaniṣads', href: '/upanishads/' },
-        { label: 'Darśanas (Mīmāṃsā)', href: '/darshanas/' },
+        {
+          label: 'Upaniṣads',
+          href: '/upanishads/',
+          explainer:
+            'As the tradition turns from cosmic speculation to inner inquiry, ṛta recedes as a central term but its substance is absorbed and transformed. The Taittirīya Upaniṣad enjoins "satyam vada, dharmaṃ cara" — speak truth, walk in dharma — showing how ṛta has bifurcated into its two heirs: satya takes on its moral-verbal face, dharma its normative-conduct face. The Bṛhadāraṇyaka then identifies brahman itself with satya: "satyam brahma" — the cosmic regularity that was ṛta is now disclosed as the very nature of ultimate reality, carrying ṛta\'s cosmological weight into the metaphysics of the Absolute.',
+        },
+        {
+          label: 'Darśanas (Mīmāṃsā)',
+          href: '/darshanas/',
+          explainer:
+            'Mīmāṃsā inherits the ritual face of ṛta most directly. Jaimini holds that the Veda is self-authoritative and that the sacrifice, when correctly and precisely performed, generates an unseen potency (apūrva) that inevitably produces its fruit. This conviction — that correctly ordered ritual action aligns the human sphere with the moral structure of the cosmos — is the philosophical heir of the Vedic insight that the universe runs by ṛta. For Mīmāṃsā, the Vedic injunctions are not commands from a deity but the articulation of a timeless cosmic order; to follow them is to participate in ṛta.',
+        },
       ],
     },
   },
@@ -86,10 +102,25 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The motto satyam eva jayate ("truth alone triumphs"), drawn from the Muṇḍaka Upaniṣad, became the emblem of the modern Indian republic — the concept carried into national life.',
-      origin: { label: 'Ṛgveda (with ṛta)', href: '/vedas/' },
+      origin: {
+        label: 'Ṛgveda (with ṛta)',
+        href: '/vedas/',
+        explainer:
+          'In the Ṛgveda, satya appears most characteristically beside ṛta — "ṛtaṃ ca satyaṃ ca" (cosmic order and truth) is a recurring pairing in hymns invoking the great order of things. Satya here is the moral and verbal face of ṛta: while ṛta is the objective cosmic regularity, satya is the truthful speech and action that aligns the human person with it. To speak satya is not merely to state facts but to be in accord with the real order of things — a mode of participation in the cosmic. False speech (anṛta) is not merely wrong but a transgression against the order of the world itself.',
+      },
       references: [
-        { label: 'Upaniṣads (Muṇḍaka)', href: '/upanishads/' },
-        { label: 'Darśanas (Yoga · the yamas)', href: '/darshanas/' },
+        {
+          label: 'Upaniṣads (Muṇḍaka)',
+          href: '/upanishads/',
+          explainer:
+            'The Upaniṣads deepen satya from ethics into metaphysics. The Chāndogya grounds the great teaching tat tvam asi in sat, pure being — "in the beginning this was sat alone, one only without a second" — making satya the ontological foundation of all existence. The Bṛhadāraṇyaka declares "satyam brahma": brahman, the ultimate reality, is truth. The Muṇḍaka then supplies the phrase that carried the concept into national life — "satyam eva jayate nānṛtam," truth alone triumphs, not untruth — framing satya as the very force that ultimately prevails in the order of things.',
+        },
+        {
+          label: 'Darśanas (Yoga · the yamas)',
+          href: '/darshanas/',
+          explainer:
+            'Patañjali lists satya as the second of the five great yamas — the ethical foundations of the entire yogic path, binding on all regardless of caste, place or time. His sūtra states: "satya-pratiṣṭhāyāṃ kriyā-phala-āśrayatvam" — when one is truly established in truthfulness, actions and their fruits follow with complete fidelity, and causality becomes transparent to the yogi. The Yoga tradition treats satya not as a rule to be obeyed but as a sādhana (discipline) whose sustained practice re-tunes the practitioner\'s consciousness to the texture of reality itself — the ethical commitment and the metaphysical insight made one.',
+        },
       ],
     },
   },
