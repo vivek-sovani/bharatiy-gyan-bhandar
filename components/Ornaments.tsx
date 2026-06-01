@@ -12,7 +12,7 @@ export function CornerOrn({ className = '', size = 24 }: { className?: string; s
   );
 }
 
-// Seal in the header — small lotus-derived monogram.
+// Seal in the header — lotus-derived monogram.
 export function HeaderSeal({ size = 38 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 60 60" aria-hidden="true">
