@@ -1,41 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
   <defs>
-    <g id="sp">
-      <rect x="-3.4" y="-77.5" width="6.8" height="53" rx="1" fill="#f5edda"/>
-      <rect x="-5" y="-34" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
-      <rect x="-5" y="-46" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
-      <rect x="-5" y="-59" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
-      <rect x="-5" y="-70" width="10" height="3.5" rx="0.5" fill="#f5edda"/>
-      <polygon points="0,-89 -6,-79 6,-79" fill="#f5edda"/>
-      <polygon points="-12,-84 -5,-80 -8,-87" fill="#f5edda"/>
-      <polygon points="12,-84 5,-80 8,-87" fill="#f5edda"/>
+    <g id="LP">
+      <path d="M 256,174 C 244,171 224,179 208,193 C 182,160 184,98 256,67
+               C 328,98 330,160 304,193 C 288,179 268,171 256,174 Z"
+            fill="#f5edda"/>
+      <path d="M 218,190 C 194,157 197,103 256,74 C 315,103 318,157 294,190"
+            fill="none" stroke="#b5853a" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 231,185 C 212,157 214,110 256,84 C 298,110 300,157 281,185"
+            fill="none" stroke="#b5853a" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 256,67 C 261,80 261,93 256,107 C 251,93 251,80 256,67 Z"
+            fill="#b5853a"/>
+      <path d="M 256,128 C 262,141 262,157 256,170 C 250,157 250,141 256,128 Z"
+            fill="#b5853a"/>
+    </g>
+    <g id="SP">
+      <path d="M 256,174 C 251,163 248,147 256,134 C 264,147 261,163 256,174 Z"
+            fill="#f5edda"/>
+    </g>
+    <g id="CP">
+      <ellipse cx="256" cy="223" rx="9" ry="20" fill="#f5edda"/>
     </g>
   </defs>
-  <rect width="192" height="192" fill="#b5853a"/>
-  <circle cx="96" cy="96" r="88" fill="none" stroke="#f5edda"
-    stroke-width="6" stroke-dasharray="3.5 4" stroke-linecap="round"/>
-  <circle cx="96" cy="96" r="81" fill="none" stroke="#f5edda" stroke-width="2"/>
-  <circle cx="96" cy="96" r="78" fill="none" stroke="#f5edda" stroke-width="1"/>
-  <use href="#sp" transform="translate(96,96)"/>
-  <use href="#sp" transform="translate(96,96) rotate(45)"/>
-  <use href="#sp" transform="translate(96,96) rotate(90)"/>
-  <use href="#sp" transform="translate(96,96) rotate(135)"/>
-  <use href="#sp" transform="translate(96,96) rotate(180)"/>
-  <use href="#sp" transform="translate(96,96) rotate(225)"/>
-  <use href="#sp" transform="translate(96,96) rotate(270)"/>
-  <use href="#sp" transform="translate(96,96) rotate(315)"/>
-  <circle cx="96" cy="96" r="26" fill="#b5853a"/>
-  <circle cx="96" cy="96" r="26" fill="none" stroke="#f5edda" stroke-width="2.2"/>
-  <g transform="translate(96,96)">
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(45)"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(90)"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(135)"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(180)"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(225)"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(270)"/>
-    <ellipse cx="0" cy="-13" rx="4.2" ry="8.5" fill="#f5edda" transform="rotate(315)"/>
-  </g>
-  <circle cx="96" cy="96" r="7.5" fill="#b5853a" stroke="#f5edda" stroke-width="1.5"/>
-  <circle cx="96" cy="96" r="3.5" fill="#f5edda"/>
+
+  <rect width="512" height="512" fill="#b5853a"/>
+
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#f5edda"
+    stroke-width="4" stroke-dasharray="14 5 3 5" stroke-linecap="round"/>
+  <circle cx="256" cy="256" r="213" fill="none" stroke="#f5edda" stroke-width="2.5"/>
+  <circle cx="256" cy="256" r="208" fill="none" stroke="#f5edda" stroke-width="1.5"/>
+
+  <use href="#LP" transform="rotate(0   256 256)"/>
+  <use href="#LP" transform="rotate(45  256 256)"/>
+  <use href="#LP" transform="rotate(90  256 256)"/>
+  <use href="#LP" transform="rotate(135 256 256)"/>
+  <use href="#LP" transform="rotate(180 256 256)"/>
+  <use href="#LP" transform="rotate(225 256 256)"/>
+  <use href="#LP" transform="rotate(270 256 256)"/>
+  <use href="#LP" transform="rotate(315 256 256)"/>
+
+  <use href="#SP" transform="rotate(22.5  256 256)"/>
+  <use href="#SP" transform="rotate(67.5  256 256)"/>
+  <use href="#SP" transform="rotate(112.5 256 256)"/>
+  <use href="#SP" transform="rotate(157.5 256 256)"/>
+  <use href="#SP" transform="rotate(202.5 256 256)"/>
+  <use href="#SP" transform="rotate(247.5 256 256)"/>
+  <use href="#SP" transform="rotate(292.5 256 256)"/>
+  <use href="#SP" transform="rotate(337.5 256 256)"/>
+
+  <circle cx="256" cy="256" r="78" fill="#b5853a"/>
+  <circle cx="256" cy="256" r="78" fill="none" stroke="#f5edda" stroke-width="5"/>
+
+  <use href="#CP" transform="rotate(0   256 256)"/>
+  <use href="#CP" transform="rotate(45  256 256)"/>
+  <use href="#CP" transform="rotate(90  256 256)"/>
+  <use href="#CP" transform="rotate(135 256 256)"/>
+  <use href="#CP" transform="rotate(180 256 256)"/>
+  <use href="#CP" transform="rotate(225 256 256)"/>
+  <use href="#CP" transform="rotate(270 256 256)"/>
+  <use href="#CP" transform="rotate(315 256 256)"/>
+
+  <circle cx="256" cy="256" r="10" fill="#f5edda"/>
 </svg>
