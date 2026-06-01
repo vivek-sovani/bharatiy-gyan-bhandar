@@ -28,6 +28,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'ऋत ही धर्माची संकल्पनात्मक पूर्वज आहे: परंपरा विश्वाकडून आचरणाकडे वळते तसतसा ऋताचा विश्वनियम धर्माचा जगण्याचा नियम बनतो.',
+      origin: { label: 'ऋग्वेद', href: '/vedas/' },
+      references: [
+        { label: 'उपनिषदे', href: '/upanishads/' },
+        { label: 'दर्शने (मीमांसा)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -53,6 +58,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'मुण्डक उपनिषदातून आलेले "सत्यमेव जयते" हे ब्रीद आधुनिक भारतीय प्रजासत्ताकाचे बोधवाक्य बनले — ही संकल्पना राष्ट्रीय जीवनात पोहोचली.',
+      origin: { label: 'ऋग्वेद (ऋतासह)', href: '/vedas/' },
+      references: [
+        { label: 'उपनिषदे (मुण्डक)', href: '/upanishads/' },
+        { label: 'दर्शने (योग · यम)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -78,6 +88,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'अंतरात्मा परम तत्त्वाशी अभिन्न आहे ही उपनिषदीय समीकरणे (आत्मा = ब्रह्म) हे भारतीय तत्त्वज्ञानाचे शिखर आणि संपूर्ण वेदान्त परंपरेचा केंद्रबिंदू आहे.',
+      origin: { label: 'उपनिषदे', href: '/upanishads/' },
+      references: [
+        { label: 'दर्शने (वेदान्त)', href: '/darshanas/' },
+        { label: 'इतिहास (भगवद्गीता)', href: '/itihasa/' },
+      ],
     },
   },
   {
@@ -103,6 +118,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'महावाक्ये — "तत्त्वमसि" (ते तू आहेस), "अहं ब्रह्मास्मि" (मी ब्रह्म आहे) — संपूर्ण शिकवण साररूपात सांगतात: आत्म्याला जाणणे म्हणजे परम तत्त्वाला जाणणे.',
+      origin: { label: 'उपनिषदे', href: '/upanishads/' },
+      references: [
+        { label: 'दर्शने (वेदान्त · सांख्य)', href: '/darshanas/' },
+        { label: 'नास्तिक दर्शने (अनात्म)', href: '/nastika-darshanas/' },
+      ],
     },
   },
   {
@@ -128,6 +148,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'मायेमुळे अद्वैत हे दोन्ही मांडू शकते की केवळ ब्रह्म सत्य आहे आणि तरीही आपण अनुभवणारे जग नुसते शून्य नाही — परम व व्यावहारिक यांतला सेतू.',
+      origin: { label: 'उपनिषदे (श्वेताश्वतर)', href: '/upanishads/' },
+      references: [
+        { label: 'दर्शने (अद्वैत वेदान्त)', href: '/darshanas/' },
+      ],
     },
   },
 
@@ -155,6 +179,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'धर्म हा वैदिक ऋताचा नैतिक वारस — विश्वनियम जगण्याचा मार्ग बनलेला. हिंदू, बौद्ध (धम्म) व जैन नैतिकतेची तो मध्यवर्ती संयोजक कल्पना राहतो.',
+      origin: { label: 'वेद (ऋत → धर्मन्)', href: '/vedas/' },
+      references: [
+        { label: 'इतिहास (भगवद्गीता)', href: '/itihasa/' },
+        { label: 'दर्शने (मीमांसा)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -180,6 +209,12 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'कर्म पुनर्जन्माशी जोडले गेल्याने भारतीय परंपरांना जन्मोजन्मीच्या न्याय व विषमतेचे स्पष्टीकरण मिळते, आणि मोक्ष ज्या समस्येचे उत्तर आहे ती समस्या मांडते.',
+      origin: { label: 'उपनिषदे (बृहदारण्यक)', href: '/upanishads/' },
+      references: [
+        { label: 'इतिहास (भगवद्गीता)', href: '/itihasa/' },
+        { label: 'दर्शने (मीमांसा · योग)', href: '/darshanas/' },
+        { label: 'नास्तिक दर्शने', href: '/nastika-darshanas/' },
+      ],
     },
   },
   {
@@ -205,6 +240,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'या योजनेने भारतीय विचाराला उल्लेखनीय संतुलित नैतिकता दिली: भौतिक यश व सुख नाकारले नाहीत, तर कर्तव्याच्या चौकटीत ठेवून मुक्तीने कळसित केले.',
+      origin: { label: 'दर्शने · धर्मशास्त्र', href: '/darshanas/' },
+      references: [
+        { label: 'इतिहास (महाभारत)', href: '/itihasa/' },
+      ],
     },
   },
 
@@ -232,6 +271,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'संसार ही समस्या ज्याचे उत्तर मोक्ष आहे; जवळजवळ प्रत्येक भारतीय मार्ग या भटकंतीचा अंत कसा करायचा यावरून स्वतःची व्याख्या करतो.',
+      origin: { label: 'उपनिषदे (बृहदारण्यक)', href: '/upanishads/' },
+      references: [
+        { label: 'नास्तिक दर्शने (बौद्ध · जैन)', href: '/nastika-darshanas/' },
+        { label: 'इतिहास (भगवद्गीता)', href: '/itihasa/' },
+      ],
     },
   },
   {
@@ -257,6 +301,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'मोक्ष हा भारतीय अध्यात्माचा दिशादर्शक क्षितिज — जिथे कर्म, पुनर्जन्म व बंधनाचा दीर्घ हिशेब अखेर रद्द होतो तो बिंदू.',
+      origin: { label: 'उपनिषदे', href: '/upanishads/' },
+      references: [
+        { label: 'दर्शने (वेदान्त · योग · सांख्य)', href: '/darshanas/' },
+        { label: 'इतिहास (भगवद्गीता)', href: '/itihasa/' },
+      ],
     },
   },
   {

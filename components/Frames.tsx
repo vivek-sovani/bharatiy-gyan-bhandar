@@ -152,6 +152,7 @@ export function Footer() {
             <li><a href="#">{lang === 'mr' ? 'दर्शने · दर्शनानि' : 'Darśanas · दर्शनानि'}</a></li>
             <li><a href="#">{lang === 'mr' ? 'आगम · आगमाः' : 'Āgamas · आगमाः'}</a></li>
             <li><a href="#">{lang === 'mr' ? 'इतिहास · इतिहासः' : 'Itihāsa · इतिहासः'}</a></li>
+            <li><a href="/#concepts">{lang === 'mr' ? 'मूलसंकल्पना' : 'Core concepts'}</a></li>
           </ul>
         </div>
         <div>

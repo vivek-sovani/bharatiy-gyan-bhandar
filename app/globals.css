@@ -2903,6 +2903,47 @@ html[lang="mr"] .contrib-modal-link {
 }
 .contrib-modal-link:hover { border-bottom-color: var(--maroon); }
 
+/* Concept cross-references — where a concept is first explained and referred. */
+.concept-refs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.concept-ref-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+}
+.concept-ref-tag {
+  flex: 0 0 9.5rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+html[lang="mr"] .concept-ref-tag {
+  font-family: var(--font-deva), var(--font-body), sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 12px;
+}
+.concept-ref-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+}
+.concept-ref-link {
+  font-size: 0.92rem;
+  color: var(--maroon);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.concept-ref-link:hover { border-bottom-color: var(--maroon); }
+@media (max-width: 600px) {
+  .concept-ref-tag { flex-basis: 100%; }
+}
+
 @keyframes contrib-fade {
   from { opacity: 0; }
   to   { opacity: 1; }

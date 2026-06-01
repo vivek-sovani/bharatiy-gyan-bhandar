@@ -5,6 +5,14 @@ export type ConceptDetail = {
   intro: string;          // expanded opening
   aspects: string[];      // key aspects, one per line
   significance: string;   // why it matters / where it leads
+  origin?: ConceptSource;        // where the concept is first explained
+  references?: ConceptSource[];  // where it is further developed / referred to
+};
+
+// A pointer into the collection — where a concept is explained or referenced.
+export type ConceptSource = {
+  label: string;   // section / text name
+  href: string;    // link to the relevant section
 };
 
 export type Concept = {
@@ -48,6 +56,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Ṛta is the conceptual ancestor of dharma: as the tradition turns from cosmos to conduct, the cosmic order of ṛta becomes the lived order of dharma.',
+      origin: { label: 'Ṛgveda', href: '/vedas/' },
+      references: [
+        { label: 'Upaniṣads', href: '/upanishads/' },
+        { label: 'Darśanas (Mīmāṃsā)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -73,6 +86,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The motto satyam eva jayate ("truth alone triumphs"), drawn from the Muṇḍaka Upaniṣad, became the emblem of the modern Indian republic — the concept carried into national life.',
+      origin: { label: 'Ṛgveda (with ṛta)', href: '/vedas/' },
+      references: [
+        { label: 'Upaniṣads (Muṇḍaka)', href: '/upanishads/' },
+        { label: 'Darśanas (Yoga · the yamas)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -98,6 +116,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The Upaniṣadic equation ātman = brahman — that the innermost self is identical with the ultimate reality — is the high point of Indian metaphysics and the pivot of the whole Vedānta tradition.',
+      origin: { label: 'Upaniṣads', href: '/upanishads/' },
+      references: [
+        { label: 'Darśanas (Vedānta)', href: '/darshanas/' },
+        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+      ],
     },
   },
   {
@@ -123,6 +146,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The mahāvākyas ("great sayings") — tat tvam asi ("that thou art"), ahaṃ brahmāsmi ("I am Brahman") — compress the entire teaching: to know the self is to know the Absolute.',
+      origin: { label: 'Upaniṣads', href: '/upanishads/' },
+      references: [
+        { label: 'Darśanas (Vedānta · Sāṅkhya)', href: '/darshanas/' },
+        { label: 'Nāstika Darśanas (anātman)', href: '/nastika-darshanas/' },
+      ],
     },
   },
   {
@@ -148,6 +176,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Māyā lets Advaita affirm both that Brahman alone is real and that the world we experience is not simply nothing — the bridge between the absolute and the everyday.',
+      origin: { label: 'Upaniṣads (Śvetāśvatara)', href: '/upanishads/' },
+      references: [
+        { label: 'Darśanas (Advaita Vedānta)', href: '/darshanas/' },
+      ],
     },
   },
 
@@ -175,6 +207,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Dharma is the ethical heir of Vedic ṛta — the cosmic order turned into a way of living. It remains the central organising idea of Hindu, Buddhist (dhamma) and Jaina ethics alike.',
+      origin: { label: 'Vedas (ṛta → dharman)', href: '/vedas/' },
+      references: [
+        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+        { label: 'Darśanas (Mīmāṃsā)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -200,6 +237,12 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Karma joined to rebirth gives the Indian traditions their account of justice and inequality across lives, and frames the whole problem that liberation (mokṣa) is meant to solve.',
+      origin: { label: 'Upaniṣads (Bṛhadāraṇyaka)', href: '/upanishads/' },
+      references: [
+        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+        { label: 'Darśanas (Mīmāṃsā · Yoga)', href: '/darshanas/' },
+        { label: 'Nāstika Darśanas', href: '/nastika-darshanas/' },
+      ],
     },
   },
   {
@@ -225,6 +268,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The scheme gives Indian thought a strikingly balanced ethics: material success and pleasure are affirmed, not denied — but framed by duty and crowned by liberation.',
+      origin: { label: 'Darśanas · Dharma-śāstra', href: '/darshanas/' },
+      references: [
+        { label: 'Itihāsa (Mahābhārata)', href: '/itihasa/' },
+      ],
     },
   },
 
@@ -252,6 +299,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Saṃsāra is the problem to which mokṣa is the answer; nearly every Indian path defines itself by how it proposes to bring the wandering to an end.',
+      origin: { label: 'Upaniṣads (Bṛhadāraṇyaka)', href: '/upanishads/' },
+      references: [
+        { label: 'Nāstika Darśanas (Bauddha · Jaina)', href: '/nastika-darshanas/' },
+        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+      ],
     },
   },
   {
@@ -277,6 +329,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Mokṣa is the orienting horizon of Indian spirituality — the point at which the long account of karma, rebirth and bondage is finally cancelled.',
+      origin: { label: 'Upaniṣads', href: '/upanishads/' },
+      references: [
+        { label: 'Darśanas (Vedānta · Yoga · Sāṅkhya)', href: '/darshanas/' },
+        { label: 'Itihāsa (Bhagavad-Gītā)', href: '/itihasa/' },
+      ],
     },
   },
   {

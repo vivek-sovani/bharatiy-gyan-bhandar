@@ -88,6 +88,32 @@ export default function ConceptModal({
 
               <h4 className="contrib-modal-subhead">{t('concepts.detail.significance')}</h4>
               <p className="contrib-modal-legacy">{c.detail.significance}</p>
+
+              {c.detail.origin && (
+                <>
+                  <h4 className="contrib-modal-subhead">{t('concepts.detail.appears')}</h4>
+                  <div className="concept-refs">
+                    <div className="concept-ref-row">
+                      <span className="concept-ref-tag">{t('concepts.detail.first')}</span>
+                      <Link className="concept-ref-link" href={c.detail.origin.href}>
+                        {c.detail.origin.label}
+                      </Link>
+                    </div>
+                    {c.detail.references && c.detail.references.length > 0 && (
+                      <div className="concept-ref-row">
+                        <span className="concept-ref-tag">{t('concepts.detail.referred')}</span>
+                        <span className="concept-ref-links">
+                          {c.detail.references.map((r) => (
+                            <Link key={r.href + r.label} className="concept-ref-link" href={r.href}>
+                              {r.label}
+                            </Link>
+                          ))}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
             </>
           )}
 

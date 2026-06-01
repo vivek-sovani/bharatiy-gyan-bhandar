@@ -67,6 +67,9 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'concepts.detail.aspects': 'Key aspects',
     'concepts.detail.significance': 'Why it matters',
     'concepts.detail.related': 'Related terms',
+    'concepts.detail.appears': 'Where it appears',
+    'concepts.detail.first': 'First explained in',
+    'concepts.detail.referred': 'Further developed in',
     'concepts.detail.explore': 'Explore in the collection',
     'concepts.detail.close': 'Close',
     // Dinacharya
@@ -154,6 +157,9 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'concepts.detail.aspects': 'मुख्य पैलू',
     'concepts.detail.significance': 'महत्त्व',
     'concepts.detail.related': 'संबंधित संज्ञा',
+    'concepts.detail.appears': 'ग्रंथसंपदेत कुठे',
+    'concepts.detail.first': 'प्रथम विवेचन',
+    'concepts.detail.referred': 'पुढील विकास',
     'concepts.detail.explore': 'संग्रहणात अधिक पहा',
     'concepts.detail.close': 'बंद करा',
     // Dinacharya
