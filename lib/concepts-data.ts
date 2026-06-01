@@ -1043,6 +1043,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Rasa theory underlies every classical Indian art — dance, drama, music and poetry — and remains the central category through which they are made and judged.',
+      origin: {
+        label: 'Nāṭyaśāstra (Bharata)',
+        href: '/upavedas/',
+        explainer:
+          'The Nāṭyaśāstra (c. 2nd century BCE–2nd century CE), attributed to Bharata Muni, is the foundational text of Indian dramaturgy and the first systematic treatment of rasa. Chapter 6 states the defining sūtra: "vibhāva-anubhāva-vyabhicāri-saṃyogād rasa-niṣpattiḥ" — rasa arises from the combination of vibhāvas (causal determinants), anubhāvas (expressive responses) and transitory emotions (vyabhicāri-bhāvas). Bharata identifies eight rasas — śṛṅgāra (erotic), hāsya (comic), karuṇa (pathetic), raudra (furious), vīra (heroic), bhayānaka (fearful), bībhatsa (disgustful), and adbhuta (marvellous) — each associated with a permanent underlying emotion (sthāyī-bhāva) in the cultivated audience. The text describes how actor, director and poet together create conditions for rasa through character types, narrative structures, gesture (abhinaya), costume, music and verse. Crucially, rasa is not the private emotion of a character on stage but an aesthetic experience produced in the sāhṛdaya — the audience member who shares the poet\'s sensibility.',
+      },
+      references: [
+        {
+          label: 'Abhinavagupta (Abhinavabhāratī)',
+          href: '/upavedas/',
+          explainer:
+            'Abhinavagupta\'s 10th-century commentary on the Nāṭyaśāstra, the Abhinavabhāratī, is the most philosophically sophisticated treatment of rasa. Working within his Pratyabhijñā school of Kashmiri Śaivism, Abhinavagupta asked how rasa can arise from watching suffering or strangers\' love stories. His answer: rasa is not personal emotion but a generalised (sādhāraṇīkaraṇa), impersonal aesthetic experience in which the audience\'s ego-barriers temporarily dissolve and consciousness expands into pure awareness — ānanda — akin to the bliss of brahman-recognition. He championed śānta (the peaceful) as a ninth rasa — absent in Bharata\'s original eight — and the highest of all, being the aesthetic equivalent of spiritual liberation. His reading transformed rasa from a theatrical technique into a complete philosophy of consciousness.',
+        },
+        {
+          label: 'Classical Indian arts (Bharatanāṭyam · music · kāvya)',
+          href: '/upavedas/',
+          explainer:
+            'Rasa became the shared aesthetic criterion across all classical Indian arts. In Bharatanāṭyam the dancer\'s abhinaya is explicitly organised around the nine rasas, with codified hand gestures, facial expressions and eye movements calibrated to evoke each one. Carnatic and Hindustani musicians treat bhāva — the emotional quality that leads to rasa — as the ultimate criterion of a performance, above technical precision. Sanskrit kāvya critics — Ānandavardhana, Mammaṭa, Viśvanātha — built their poetic theories around whether a poem succeeds in evoking rasa; Viśvanātha\'s Sāhityadarpaṇa defines kāvya itself as "vākyaṃ rasātmakaṃ kāvyam" — poetry is speech that has rasa as its soul. Every classical Indian aesthetic treatise, dance manual and music text takes the rasa framework as its starting point rather than something to establish.',
+        },
+      ],
     },
   },
   {
@@ -1068,6 +1088,26 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Dhvani theory made resonance, not statement, the measure of poetic excellence — one of the most sophisticated accounts of literary meaning in any premodern tradition.',
+      origin: {
+        label: 'Ānandavardhana (Dhvanyāloka)',
+        href: '/upavedas/',
+        explainer:
+          'Ānandavardhana\'s Dhvanyāloka (c. 850 CE, Kashmir) is the founding text of dhvani theory. Before it, Sanskrit poetic theory had centred on guṇas (qualities), doṣas (faults) and alaṃkāras (ornaments/figures) as the components of excellence. Ānandavardhana argued that all these are merely means to a deeper end: the power of suggestion (dhvani or vyañjanā). He distinguished three functions of language — abhidhā (literal denotation), lakṣaṇā (extended or metaphorical meaning) and vyañjanā (resonant suggestion beyond both) — and held that the finest poetry is that in which the suggested sense, especially rasa, dominates over the expressed. His famous example: "Traveller, do not enter the Vindhya forest by night — the lion, once a noble king in a former life, has grown angry." The literal words warn of a lion; the suggested sense is the humiliation of a king reduced to beast. Ānandavardhana classified dhvani by type — rasa-dhvani (the highest), bhāva-dhvani, vastv-alaṃkāra-dhvani — and argued that all great poetry depends on dhvani even when it appears to work through direct statement.',
+      },
+      references: [
+        {
+          label: 'Abhinavagupta (Locana)',
+          href: '/upavedas/',
+          explainer:
+            'Abhinavagupta\'s commentary Locana ("the eye") on the Dhvanyāloka (c. 1000 CE) is the most philosophically complete defence of dhvani theory. Abhinavagupta grounded dhvani in his doctrine of śabda-brahman — developed in the Spanda and Trika schools, the view that language itself participates in consciousness and that the supreme form of speech (parā-vāk) transcends ordinary denotation. On this view, vyañjanā is not merely a literary device but reflects the deep structure of all language: words always carry more than they literally mean, and it is in that surplus that poetic meaning lives. Abhinavagupta also used the Locana to argue for the unity of dhvani and rasa theory: the "soul of poetry" is not dhvani as a technical mechanism but dhvani as the vehicle through which rasa — impersonal aesthetic consciousness — is transmitted from poet to audience across time.',
+        },
+        {
+          label: 'Later poetics (Mammaṭa · Viśvanātha · alaṃkāra-vādins)',
+          href: '/upavedas/',
+          explainer:
+            'Dhvani theory entered a century-long debate with the alaṃkāra-vādins — critics who held that ornaments (upamā, rūpaka, anuprāsa) are the essence of poetry. Mammaṭa\'s Kāvyaprakāśa (c. 11th century) synthesised the two positions: alaṃkāras are recognised as important but subordinate to rasa and dhvani. He defined three grades of kāvya: dhvani-kāvya (the highest, where suggestion predominates), guṇī-bhūta-vyaṅgya (where expressed sense is primary but suggested sense is present), and citra-kāvya (where only ornament matters). Viśvanātha\'s Sāhityadarpaṇa (c. 14th century) sharpened the hierarchy further. This debate shaped all subsequent Sanskrit literary criticism and established dhvani — the implied, the resonant, the unsaid — as the supreme criterion that separates great poetry from competent versification.',
+        },
+      ],
     },
   },
 ];
