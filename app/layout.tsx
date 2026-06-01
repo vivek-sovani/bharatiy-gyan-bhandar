@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     startupImage: [{ url: '/splash.png' }],
   },
   icons: {
+    icon: '/icon.svg',
     apple: '/icon.svg',
   },
 };
