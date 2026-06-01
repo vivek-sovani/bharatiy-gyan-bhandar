@@ -840,6 +840,10 @@ export const CONCEPTS: Concept[] = [
             'The anātman teaching acquires its sharpest meaning against the Upaniṣadic ātman it directly counters. Where Yājñavalkya teaches that the witnessing self is the one real and unchanging ground of experience — "the unseen seer, the unheard hearer, the unthought thinker" — the Buddha teaches that examining each candidate for selfhood (body, feeling, perception, volition, consciousness) yields only impermanence and affliction, never a fixed witness. The philosophical question this generates — whether a stream of momentary processes can bear moral responsibility, sustain memory and motivate liberation — became the defining problem for both traditions and generated the most sustained cross-traditional philosophical engagement in Indian intellectual history.',
         },
       ],
+    },
+  },
+  {
+    id: 'pratityasamutpada',
     name: 'Pratītya-samutpāda',
     deva: 'प्रतीत्यसमुत्पाद',
     seal: 'प्र',
