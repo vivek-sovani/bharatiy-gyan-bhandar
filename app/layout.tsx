@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
@@ -9,6 +9,24 @@ export const metadata: Metadata = {
   },
   description:
     'An open digital collection of the texts, sciences and ways of living rooted in the Indic knowledge systems.',
+  manifest: '/manifest.webmanifest',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Jñāna Bhaṇḍāra',
+  },
+  icons: {
+    apple: '/icon.svg',
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#b5853a' },
+    { media: '(prefers-color-scheme: dark)', color: '#8a6428' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
 };
 
 // Applies the theme before first paint (no flash).
@@ -23,6 +41,9 @@ const themeInit = `(function(){try{
   r.setAttribute('data-theme',t);
 }catch(e){}})();`;
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const swInit = `(function(){if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${basePath}/sw.js').catch(function(e){console.warn('SW registration failed:',e)})})}})();`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="cream" data-deva="on" data-card="stamp">
@@ -34,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script dangerouslySetInnerHTML={{ __html: swInit }} />
       </head>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
