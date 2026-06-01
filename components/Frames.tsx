@@ -1,15 +1,22 @@
 'use client';
 
+import { useState } from 'react';
 import { Mandala, Glyph } from './Ornaments';
-import { DAILY as DAILY_EN, ESSAYS as ESSAYS_EN } from '@/lib/data';
-import { DAILY as DAILY_MR, ESSAYS as ESSAYS_MR } from '@/lib/data_mr';
-import { transliterate } from '@/lib/transliterate';
+import { ESSAYS as ESSAYS_EN } from '@/lib/data';
+import { ESSAYS as ESSAYS_MR } from '@/lib/data_mr';
+import { SUBHASHITS } from '@/lib/subhashit-data';
 import { useLanguage } from '@/lib/LanguageContext';
+import { useRandomVerse } from '@/lib/useRandomVerse';
+import VerseModal from './VerseModal';
 
 export function DailyStrip() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-  const { lang } = useLanguage();
-  const DAILY = lang === 'mr' ? DAILY_MR : DAILY_EN;
+  const { lang, t } = useLanguage();
+  const [showModal, setShowModal] = useState(false);
+  const { index, next } = useRandomVerse(SUBHASHITS.length);
+
+  const sub = SUBHASHITS[index];
+  const meaning = lang === 'mr' ? sub.meaningMr : sub.meaningEn;
 
   return (
     <section
@@ -21,12 +28,34 @@ export function DailyStrip() {
       <div className="shell strip-inner">
         <Mandala className="mandala" />
         <div className="quote">
-          <span className="deva-block">{DAILY.deva}</span>
-          {lang === 'en' && <span className="translit-line">{transliterate(DAILY.deva)}</span>}
-          <span>{DAILY.trans}</span>
+          <span className="deva-block">{sub.deva}</span>
+          {lang === 'en' && sub.translit && (
+            <span className="translit-line">{sub.translit}</span>
+          )}
+          <span>{meaning}</span>
         </div>
-        <div className="attrib">{DAILY.source}</div>
+        <div className="strip-meta">
+          <div className="attrib">{sub.source}</div>
+          <div className="strip-actions">
+            <button className="trans-btn" onClick={() => setShowModal(true)}>
+              {t('verse.show_explanation')} →
+            </button>
+            <button className="verse-next" onClick={next} title={t('verse.next')}>
+              ↻ {t('verse.next')}
+            </button>
+          </div>
+        </div>
       </div>
+
+      <VerseModal
+        open={showModal}
+        onClose={() => setShowModal(false)}
+        deva={sub.deva}
+        translit={sub.translit}
+        meaning={meaning}
+        explanation={lang === 'mr' ? sub.explanationMr : sub.explanationEn}
+        source={sub.source}
+      />
     </section>
   );
 }

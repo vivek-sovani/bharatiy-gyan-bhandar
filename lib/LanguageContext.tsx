@@ -30,6 +30,12 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'hero.show_trans': 'Show translation',
     'hero.hide_trans': 'Hide translation',
     'hero.read_essay': 'Read essay →',
+    // Verse (mahāvākya / subhāṣita)
+    'verse.show_explanation': 'Show explanation',
+    'verse.next': 'Another verse',
+    'verse.meaning': 'Meaning',
+    'verse.explanation': 'Explanation',
+    'verse.close': 'Close',
     // Tree
     'tree.eyebrow': 'Map of the corpus',
     'tree.title': 'The three streams',
@@ -120,6 +126,12 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'hero.show_trans': 'भाषांतर दाखवा',
     'hero.hide_trans': 'भाषांतर लपवा',
     'hero.read_essay': 'निबंध वाचा →',
+    // Verse (mahāvākya / subhāṣita)
+    'verse.show_explanation': 'विवेचन पहा',
+    'verse.next': 'दुसरे वचन',
+    'verse.meaning': 'अर्थ',
+    'verse.explanation': 'विवेचन',
+    'verse.close': 'बंद करा',
     // Tree
     'tree.eyebrow': 'ज्ञानकोश नकाशा',
     'tree.title': 'तीन ज्ञानप्रवाह',

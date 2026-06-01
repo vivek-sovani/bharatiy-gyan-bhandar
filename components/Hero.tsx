@@ -2,17 +2,18 @@
 
 import { useState } from 'react';
 import { CornerOrn } from './Ornaments';
-import { HERO_SHLOKA as HERO_SHLOKA_EN } from '@/lib/data';
-import { HERO_SHLOKA as HERO_SHLOKA_MR } from '@/lib/data_mr';
-import { transliterate } from '@/lib/transliterate';
+import { MAHAVAKYAS } from '@/lib/mahavakya-data';
 import { useLanguage } from '@/lib/LanguageContext';
+import { useRandomVerse } from '@/lib/useRandomVerse';
 import Panchanga from './Panchanga';
+import VerseModal from './VerseModal';
 
 export default function Hero() {
-  const [showTrans, setShowTrans] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const { lang, t } = useLanguage();
+  const { index, next } = useRandomVerse(MAHAVAKYAS.length);
 
-  const HERO_SHLOKA = lang === 'mr' ? HERO_SHLOKA_MR : HERO_SHLOKA_EN;
+  const vakya = MAHAVAKYAS[index];
 
   return (
     <section className="hero">
@@ -24,25 +25,29 @@ export default function Hero() {
           <h1>
             {t('hero.title')}
           </h1>
-          <div className={`shloka ${showTrans ? 'show-trans' : ''}`}>
+          <div className="shloka">
             <div className="deva-line deva-only">
-              {HERO_SHLOKA.deva.split('\n').map((l, i) => (
+              {vakya.deva.split('\n').map((l, i) => (
                 <div key={i}>{l}</div>
               ))}
             </div>
-            {lang === 'en' && (
+            {lang === 'en' && vakya.translit && (
               <div className="translit-line">
-                {transliterate(HERO_SHLOKA.deva).split('\n').map((l, i) => (
+                {vakya.translit.split('\n').map((l, i) => (
                   <div key={i}>{l}</div>
                 ))}
               </div>
             )}
-            <div className="trans">{HERO_SHLOKA.trans}</div>
             <div className="source">
-              <span>{HERO_SHLOKA.source}</span>
-              <button className="trans-btn" onClick={() => setShowTrans((v) => !v)}>
-                {showTrans ? t('hero.hide_trans') : t('hero.show_trans')}
-              </button>
+              <span>{vakya.source}</span>
+              <span className="verse-actions">
+                <button className="trans-btn" onClick={() => setShowModal(true)}>
+                  {t('verse.show_explanation')} →
+                </button>
+                <button className="verse-next" onClick={next} title={t('verse.next')}>
+                  ↻ {t('verse.next')}
+                </button>
+              </span>
             </div>
           </div>
         </div>
@@ -69,6 +74,17 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <VerseModal
+        open={showModal}
+        onClose={() => setShowModal(false)}
+        title={vakya.title}
+        deva={vakya.deva}
+        translit={vakya.translit}
+        meaning={lang === 'mr' ? vakya.meaningMr : vakya.meaningEn}
+        explanation={lang === 'mr' ? vakya.explanationMr : vakya.explanationEn}
+        source={vakya.source}
+      />
     </section>
   );
 }
