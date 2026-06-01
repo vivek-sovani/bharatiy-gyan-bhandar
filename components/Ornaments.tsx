@@ -12,41 +12,32 @@ export function CornerOrn({ className = '', size = 24 }: { className?: string; s
   );
 }
 
-// Dharma Chakra seal in the header — 24-spoke wheel matching the site logo.
+// Haṃsa (swan) — symbol of viveka (wisdom/discernment) and vehicle of Sarasvatī,
+// goddess of knowledge. Fills the header mark on the left of the site name.
 export function HeaderSeal({ size = 40 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
-      {/* Triple outer ring */}
-      <circle cx="50" cy="50" r="48.5" fill="none" stroke="var(--maroon)" strokeWidth="1.8"/>
-      <circle cx="50" cy="50" r="45"   fill="none" stroke="var(--maroon)" strokeWidth="0.7"/>
-      <circle cx="50" cy="50" r="41.5" fill="none" stroke="var(--maroon)" strokeWidth="1.8"/>
-      {/* 24 spokes at 15° intervals */}
-      {Array.from({ length: 24 }, (_, i) => {
-        const a = (i * 15 * Math.PI) / 180;
-        return (
-          <line key={i}
-            x1={50 + 12.5 * Math.cos(a)} y1={50 + 12.5 * Math.sin(a)}
-            x2={50 + 41.5 * Math.cos(a)} y2={50 + 41.5 * Math.sin(a)}
-            stroke="var(--maroon)" strokeWidth="1.3"/>
-        );
-      })}
-      {/* Hub outer ring */}
-      <circle cx="50" cy="50" r="12.5" fill="none" stroke="var(--maroon)" strokeWidth="1.5"/>
-      {/* Hub inner ring */}
-      <circle cx="50" cy="50" r="7.5"  fill="none" stroke="var(--maroon)" strokeWidth="0.8"/>
-      {/* 8 mini hub-spokes */}
-      {Array.from({ length: 8 }, (_, i) => {
-        const a = (i * 45 * Math.PI) / 180;
-        return (
-          <line key={i}
-            x1={50 + 2.5 * Math.cos(a)} y1={50 + 2.5 * Math.sin(a)}
-            x2={50 + 7.5 * Math.cos(a)} y2={50 + 7.5 * Math.sin(a)}
-            stroke="var(--maroon)" strokeWidth="1"/>
-        );
-      })}
-      {/* Centre */}
-      <circle cx="50" cy="50" r="2"   fill="none" stroke="var(--maroon)" strokeWidth="0.7"/>
-      <circle cx="50" cy="50" r="0.9" fill="var(--maroon)"/>
+    <svg width={size} height={size} viewBox="0 0 60 60" aria-hidden="true">
+      {/* Body — plump rounded shape, breast to the right, tail narrowing left */}
+      <path
+        d="M 42 50 C 50 50,57 43,57 37 C 57 31,51 25,43 25
+           C 35 25,27 29,22 36 C 16 43,18 52,26 54
+           C 30 56,36 56,42 50 Z"
+        fill="var(--maroon)"
+      />
+      {/* Neck — thick stroke rising from body upper-left to head */}
+      <path
+        d="M 29 34 C 25 26,20 18,16 10"
+        fill="none" stroke="var(--maroon)" strokeWidth="7.5" strokeLinecap="round"
+      />
+      {/* Head */}
+      <circle cx="14" cy="8" r="7.5" fill="var(--maroon)"/>
+      {/* Beak — short angled wedge pointing left */}
+      <path d="M 7 7 L 0 9.5 L 5 14 Z" fill="var(--maroon)"/>
+      {/* Wing fold — cream arc suggesting the folded primary feathers */}
+      <path
+        d="M 27 37 C 36 31,46 31,54 37"
+        fill="none" stroke="var(--paper)" strokeWidth="2"
+      />
     </svg>
   );
 }
