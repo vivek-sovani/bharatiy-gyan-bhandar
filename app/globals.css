@@ -877,6 +877,20 @@ a:hover { color: var(--gold-deep); }
   .strip-meta { align-items: flex-start; }
 }
 
+/* Section labels for the random verse spaces */
+.verse-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--maroon);
+}
+.hero-shloka .shloka .verse-label { margin-bottom: 1rem; }
+.strip .quote .verse-label {
+  display: flex;
+  margin-bottom: 0.9em;
+  font-style: normal;
+}
+
 /* Verse actions (mahāvākya / subhāṣita) — "show explanation" + "another verse" */
 .verse-actions {
   display: inline-flex;

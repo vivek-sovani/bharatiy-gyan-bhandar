@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CornerOrn } from './Ornaments';
+import { CornerOrn, Glyph } from './Ornaments';
 import { MAHAVAKYAS } from '@/lib/mahavakya-data';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useRandomVerse } from '@/lib/useRandomVerse';
@@ -26,6 +26,7 @@ export default function Hero() {
             {t('hero.title')}
           </h1>
           <div className="shloka">
+            <div className="eyebrow verse-label"><Glyph /> {t('verse.mahavakya_label')}</div>
             <div className="deva-line deva-only">
               {vakya.deva.split('\n').map((l, i) => (
                 <div key={i}>{l}</div>

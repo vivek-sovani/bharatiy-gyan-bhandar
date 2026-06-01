@@ -28,6 +28,7 @@ export function DailyStrip() {
       <div className="shell strip-inner">
         <Mandala className="mandala" />
         <div className="quote">
+          <span className="eyebrow verse-label"><Glyph /> {t('verse.subhashit_label')}</span>
           <span className="deva-block">{sub.deva}</span>
           {lang === 'en' && sub.translit && (
             <span className="translit-line">{sub.translit}</span>

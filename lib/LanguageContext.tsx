@@ -31,6 +31,8 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'hero.hide_trans': 'Hide translation',
     'hero.read_essay': 'Read essay →',
     // Verse (mahāvākya / subhāṣita)
+    'verse.mahavakya_label': 'Mahāvākya · the great utterances',
+    'verse.subhashit_label': 'Subhāṣita · Bhartṛhari',
     'verse.show_explanation': 'Show explanation',
     'verse.next': 'Another verse',
     'verse.meaning': 'Meaning',
@@ -127,6 +129,8 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'hero.hide_trans': 'भाषांतर लपवा',
     'hero.read_essay': 'निबंध वाचा →',
     // Verse (mahāvākya / subhāṣita)
+    'verse.mahavakya_label': 'महावाक्य · महान वचने',
+    'verse.subhashit_label': 'सुभाषित · भर्तृहरि',
     'verse.show_explanation': 'विवेचन पहा',
     'verse.next': 'दुसरे वचन',
     'verse.meaning': 'अर्थ',
