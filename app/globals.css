@@ -1319,13 +1319,17 @@ body::after {
 }
 .era-tick {
   flex: 1 1 9rem;
+  border-right: 1px solid var(--rule);
+}
+.era-tick:last-child { border-right: none; }
+.era-tick-link {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   padding: 0.9rem 1.2rem 0.9rem 0;
-  border-right: 1px solid var(--rule);
+  text-decoration: none;
+  transition: color 140ms;
 }
-.era-tick:last-child { border-right: none; }
 .era-tick-label {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -1334,6 +1338,17 @@ body::after {
 .era-tick-period {
   color: var(--ink-faint);
 }
+.era-tick-link:hover .era-tick-label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.era-tick-link:hover .era-tick-period { color: var(--maroon-soft); }
+.era-tick-link:focus-visible {
+  outline: 2px solid var(--maroon-soft);
+  outline-offset: 2px;
+}
+/* Offset era anchors so the sticky header doesn't cover the banner. */
+.era-group { scroll-margin-top: 90px; }
 .about-guide { margin-top: 0.4rem; }
 .about-steps {
   margin: 0.9rem 0 0;
@@ -1350,6 +1365,9 @@ body::after {
   font-family: var(--font-mono);
   font-size: 0.85em;
 }
+/* Marathi: Devanāgarī list numerals (१, २, ३ …). */
+.about-steps-deva { list-style-type: devanagari; }
+.about-steps-deva li::marker { font-family: var(--font-deva); }
 .about-steps a {
   color: var(--maroon);
   text-decoration: none;

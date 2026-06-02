@@ -47,15 +47,17 @@ export default function About() {
         <ol className="era-ribbon" aria-label={isMr ? 'कालखंड' : 'Eras'}>
           {eras.map((era) => (
             <li key={era.id} className="era-tick">
-              <span className="era-tick-label">{isMr ? era.deva : era.label}</span>
-              <span className="era-tick-period mono">{isMr ? era.periodDeva : era.period}</span>
+              <a className="era-tick-link" href={`#era-${era.id}`}>
+                <span className="era-tick-label">{isMr ? era.deva : era.label}</span>
+                <span className="era-tick-period mono">{isMr ? era.periodDeva : era.period}</span>
+              </a>
             </li>
           ))}
         </ol>
 
         <div className="about-guide">
           <div className="eyebrow"><Glyph /> {isMr ? 'कसे पहावे' : 'How to explore'}</div>
-          <ol className="about-steps">
+          <ol className={`about-steps${isMr ? ' about-steps-deva' : ''}`}>
             {isMr ? (
               <>
                 <li>

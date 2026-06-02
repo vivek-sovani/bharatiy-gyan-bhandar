@@ -10,28 +10,40 @@ import { MhahPanchang } from 'mhah-panchang';
 const UJJAIN_LAT = 23.1765;
 const UJJAIN_LNG = 75.7885;
 
-// Tithi names — 30 indexed positions, used regardless of paksha.
-// mhah-panchang's name_en_IN gives us the tithi name without paksha prefix
-// (e.g. "Chaturdasi" rather than "Krishna Chaturdasi"), so we map by name.
+// Tithi names — keyed by mhah-panchang's name_en_IN, which uses Telugu-style
+// names (Padyami, Vidhiya, Thadiya, …) without a paksha prefix. We map each to
+// its standard Sanskrit transliteration and Marathi Devanāgarī. A few Sanskrit
+// aliases are kept too in case the library output ever changes.
 const TITHI_NAMES: Record<string, { en: string; mr: string }> = {
-  Prathama:    { en: 'Pratipadā',   mr: 'प्रतिपदा' },
-  Pratipada:   { en: 'Pratipadā',   mr: 'प्रतिपदा' },
-  Dvitiya:     { en: 'Dvitīyā',     mr: 'द्वितीया' },
-  Tritiya:     { en: 'Tṛtīyā',      mr: 'तृतीया' },
-  Chaturthi:   { en: 'Caturthī',    mr: 'चतुर्थी' },
+  // mhah-panchang names (name_en_IN)
+  Padyami:     { en: 'Pratipadā',   mr: 'प्रतिपदा' },
+  Vidhiya:     { en: 'Dvitīyā',     mr: 'द्वितीया' },
+  Thadiya:     { en: 'Tṛtīyā',      mr: 'तृतीया' },
+  Chavithi:    { en: 'Caturthī',    mr: 'चतुर्थी' },
+  Chaviti:     { en: 'Caturthī',    mr: 'चतुर्थी' },
   Panchami:    { en: 'Pañcamī',     mr: 'पंचमी' },
-  Sasthi:      { en: 'Ṣaṣṭhī',      mr: 'षष्ठी' },
-  Saptami:     { en: 'Saptamī',     mr: 'सप्तमी' },
-  Astami:      { en: 'Aṣṭamī',      mr: 'अष्टमी' },
+  Shasti:      { en: 'Ṣaṣṭhī',      mr: 'षष्ठी' },
+  Sapthami:    { en: 'Saptamī',     mr: 'सप्तमी' },
+  Ashtami:     { en: 'Aṣṭamī',      mr: 'अष्टमी' },
   Navami:      { en: 'Navamī',      mr: 'नवमी' },
   Dasami:      { en: 'Daśamī',      mr: 'दशमी' },
   Ekadasi:     { en: 'Ekādaśī',     mr: 'एकादशी' },
   Dvadasi:     { en: 'Dvādaśī',     mr: 'द्वादशी' },
   Trayodasi:   { en: 'Trayodaśī',   mr: 'त्रयोदशी' },
   Chaturdasi:  { en: 'Caturdaśī',   mr: 'चतुर्दशी' },
+  Punnami:     { en: 'Pūrṇimā',     mr: 'पौर्णिमा' },
+  Amavasya:    { en: 'Amāvāsyā',    mr: 'अमावस्या' },
+  // Sanskrit aliases (defensive)
+  Prathama:    { en: 'Pratipadā',   mr: 'प्रतिपदा' },
+  Pratipada:   { en: 'Pratipadā',   mr: 'प्रतिपदा' },
+  Dvitiya:     { en: 'Dvitīyā',     mr: 'द्वितीया' },
+  Tritiya:     { en: 'Tṛtīyā',      mr: 'तृतीया' },
+  Chaturthi:   { en: 'Caturthī',    mr: 'चतुर्थी' },
+  Sasthi:      { en: 'Ṣaṣṭhī',      mr: 'षष्ठी' },
+  Saptami:     { en: 'Saptamī',     mr: 'सप्तमी' },
+  Astami:      { en: 'Aṣṭamī',      mr: 'अष्टमी' },
   Purnima:     { en: 'Pūrṇimā',     mr: 'पौर्णिमा' },
   Pournami:    { en: 'Pūrṇimā',     mr: 'पौर्णिमा' },
-  Amavasya:    { en: 'Amāvāsyā',    mr: 'अमावस्या' },
 };
 
 // Vāra (day of week) — keyed by mhah-panchang's English name

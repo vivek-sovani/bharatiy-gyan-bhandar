@@ -176,7 +176,7 @@ export default function SectionsGrid() {
           if (eraSections.length === 0) return null;
 
           return (
-            <div key={era.id} style={{ marginTop: '2.5rem' }}>
+            <div key={era.id} id={`era-${era.id}`} className="era-group" style={{ marginTop: '2.5rem' }}>
               <EraHeader era={era} lang={lang} />
 
               <div className="cards">
