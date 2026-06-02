@@ -216,6 +216,9 @@ a:hover { color: var(--gold-deep); }
 
 .hdr-tools { display: flex; align-items: center; gap: 0.75rem; }
 
+/* Theme switcher inside the mobile nav drawer — hidden on desktop. */
+.hdr-nav-prefs { display: none; }
+
 /* Hamburger button — hidden on desktop, shown on mobile (≤900px). */
 .hdr-burger {
   display: none;
@@ -320,6 +323,27 @@ a:hover { color: var(--gold-deep); }
   .search-pill { width: auto; }
   .search-pill input { display: none; }
   .search-pill kbd { display: none; }
+
+  /* The bar theme switcher moves into the menu on mobile. */
+  .hdr-tools .prefs-theme { display: none; }
+
+  .hdr-nav-prefs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.9rem 1.5rem 0.7rem;
+    margin-top: 0.25rem;
+    border-top: 1px solid var(--rule);
+  }
+  .hdr-nav-prefs-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .prefs-menu .pref-btn { font-size: 11px; padding: 0.45rem 0.7rem; }
 }
 
 /* ----------------------------------------------------------

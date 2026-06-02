@@ -59,6 +59,12 @@ export default function About() {
             {isMr ? (
               <>
                 <li>
+                  सर्वांत वर त्या दिवसाचे <a href="#hero"><strong>महावाक्य</strong></a> आणि{' '}
+                  <a href="#daily"><strong>सुभाषित</strong></a> — श्लोकाचा अर्थ उलगडण्यासाठी{' '}
+                  <strong>“विवेचन पहा”</strong> निवडा, किंवा नवीन श्लोकासाठी{' '}
+                  <strong>“↻ दुसरे वचन”</strong>.
+                </li>
+                <li>
                   <a href="#sections"><strong>संग्रहणा</strong>पासून सुरुवात करा</a> — वैदिक ते
                   आधुनिक, कालखंडानुसार मांडलेला संपूर्ण ग्रंथसंभार.
                 </li>
@@ -75,13 +81,19 @@ export default function About() {
                   <a href="#sanskrit"><strong>मार्गदर्शिका</strong></a> वाचा.
                 </li>
                 <li>
-                  कोणत्याही श्लोकावरील <strong>“स्पष्टीकरण पाहा”</strong> निवडल्यास सोप्या
-                  भाषेत अर्थ मिळेल, आणि वरच्या पट्टीतून <strong>English व मराठी</strong> मध्ये
-                  केव्हाही बदल करता येतो.
+                  वरच्या पट्टीतून <strong>English व मराठी</strong> आणि{' '}
+                  <strong>रंगसंगती</strong> केव्हाही बदला — मोबाइलवर मेनूमधून (☰).
                 </li>
               </>
             ) : (
               <>
+                <li>
+                  Right at the top, the day’s{' '}
+                  <a href="#hero"><strong>Mahāvākya</strong></a> and{' '}
+                  <a href="#daily"><strong>Subhāṣita</strong></a> — tap{' '}
+                  <strong>“Show explanation”</strong> to unpack a verse, or{' '}
+                  <strong>“↻ Another verse”</strong> for a new one.
+                </li>
                 <li>
                   Start with <a href="#sections"><strong>the Collection</strong></a> — the
                   corpus grouped era by era, Vedic to modern.
@@ -100,9 +112,9 @@ export default function About() {
                   <a href="#sanskrit"><strong>field guides</strong></a>.
                 </li>
                 <li>
-                  Tap <strong>“Show explanation”</strong> on any verse for a plain-language
-                  reading, and switch between <strong>English and मराठी</strong> anytime from
-                  the top bar.
+                  Switch <strong>English and मराठी</strong> and the{' '}
+                  <strong>theme</strong> anytime from the top bar — on mobile, from the
+                  menu (☰).
                 </li>
               </>
             )}

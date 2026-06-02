@@ -16,7 +16,7 @@ export default function Hero() {
   const vakya = MAHAVAKYAS[index];
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="shell hero-edit">
         <div className="hero-shloka">
           <div className="eyebrow">

@@ -20,6 +20,7 @@ export function DailyStrip() {
 
   return (
     <section
+      id="daily"
       className="strip"
       style={{
         '--strip-bg': `url(${basePath}/wisdom-strip.png)`,
