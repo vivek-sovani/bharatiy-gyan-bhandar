@@ -414,6 +414,8 @@ interface KeySukta {
   citationDeva: string;
   summary: string;
   summaryDeva: string;
+  detail?: string;
+  detailDeva?: string;
   verse?: {
     deva: string;
     trans: string;
@@ -657,6 +659,8 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       citationDeva: 'ऋग्वेद १०.९०',
       summary: 'The foundational hymn on the cosmic being (Purusha), detailing the unity of creation and the spiritual origin of the universe and society.',
       summaryDeva: 'विश्वाच्या निर्मितीचा आणि विराट पुरुषाचा (वैश्विक चेतनेचा) पायाभूत ग्रंथ, जो सृष्टीचे ऐक्य आणि उत्पत्ती स्पष्ट करतो.',
+      detail: 'Found near the close of the tenth Maṇḍala, it portrays the Puruṣa as a thousand-headed cosmic being whom the gods offer in a primordial sacrifice. From his body arise the sun and moon, the sky and earth, the four varṇas, and the Vedas themselves — the earliest articulation of the idea that all creation is a single conscious organism.',
+      detailDeva: 'दहाव्या मंडळाच्या अखेरीस येणारे हे सूक्त विराट पुरुषाला सहस्रशीर्ष वैश्विक तत्त्व मानते, ज्याची देव आदिम यज्ञात आहुती देतात. त्याच्या देहापासून सूर्य-चंद्र, द्यावा-पृथ्वी, चार वर्ण आणि वेद यांची उत्पत्ती होते — संपूर्ण सृष्टी हा एकच चैतन्यमय जीव आहे ही कल्पना प्रथम येथे मांडली गेली.',
       verse: {
         deva: 'सहस्रशीर्षा पुरुषः सहस्राक्षः सहस्रपात् ।\nस भूमिं विश्वतो वृत्वात्यतिष्ठद्दशाङ्गुलम् ॥',
         trans: 'sahasraśīrṣā puruṣaḥ sahasrākṣaḥ sahasrapāt |\nsa bhūmiṃ viśvato vṛtvātyatiṣṭhaddaśāṅgulam ||',
@@ -670,6 +674,8 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       citationDeva: 'ऋग्वेद १०.१२९',
       summary: 'The famous Hymn of Creation exploring the origin of the cosmos with deep philosophical inquiry, famously questioning: "Who knows whence it first came into being?"',
       summaryDeva: 'विश्वाच्या उत्पत्तीचा सखोल शोध घेणारे प्रसिद्ध सूक्त, ज्यामध्ये अतिशय गंभीर आणि तात्त्विक प्रश्न विचारले गेले आहेत: "सृष्टी नक्की कुठून आली हे कोणाला ठाऊक आहे?"',
+      detail: 'In seven brief verses the seer contemplates the state before creation — when there was neither existence nor non-existence, neither death nor immortality, only "the One" breathing without breath. It ends not in dogma but in radical humility: perhaps even the overseer in the highest heaven does not know whence it all arose.',
+      detailDeva: 'केवळ सात ऋचांमध्ये ऋषी सृष्टीपूर्वीच्या अवस्थेचे चिंतन करतात — जेव्हा सत् नव्हते, असत् नव्हते, मृत्यू नव्हता, अमरत्वही नव्हते, केवळ "ते एक" श्वासाविना श्वसत होते. सूक्ताचा शेवट कोणत्याही ठाम सिद्धांताने न होता अपूर्व नम्रतेने होतो: कदाचित परमव्योमातील अध्यक्षालाही हे सर्व कोठून आले हे ठाऊक नसेल.',
       verse: {
         deva: 'नासदासीन्नो सदासीत्तदानीं नासीद्रजो नो व्योमा परो यत् ।\nकिमावरीवः कुह कस्य शर्मन्नम्भः किमासीद्गहनं गभीरम् ॥',
         trans: 'nāsadāsīnno sadāsīttadānīm nāsīdrajo no vyomā paro yat |\nkimāvarīvaḥ kuha kasya śarmannambhaḥ kimāsīdgahanaṃ gabhīram ||',
@@ -683,6 +689,8 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       citationDeva: 'ऋग्वेद १०.१९१',
       summary: 'The final hymn of the Rigveda, offering a powerful prayer for unity, harmony in speech, collective assembly, and common minds.',
       summaryDeva: 'ऋग्वेदाचा शेवटचा भाग, जो मानवी समाज एकत्र राहण्यासाठी आणि विचारांमध्ये ऐक्य साधण्यासाठी सामूहिक प्रार्थनेचा संदेश देतो.',
+      detail: 'The closing hymn of the entire Rigveda, attributed to the sage Saṃvanana. Its final verses pray that people walk together, speak together, and know their minds as one — that their assembly (samiti), their purposes, and their hearts be united. It is invoked to this day as a benediction for collective harmony.',
+      detailDeva: 'संपूर्ण ऋग्वेदाचे समारोप सूक्त, जे संवनन ऋषींना प्रदान केले जाते. याच्या अंतिम ऋचा प्रार्थना करतात की लोकांनी एकत्र चालावे, एकत्र बोलावे आणि आपली मने एकरूप जाणावीत — त्यांची सभा (समिती), ध्येये व हृदये एक व्हावीत. सामूहिक ऐक्याचा आशीर्वाद म्हणून आजही याचे पठण केले जाते.',
       verse: {
         deva: 'सङ्गच्छध्वं संवदध्वं सं वो मनांसि जानताम् ।\nदेवा भागं यथा पूर्वे सञ्जानाना उपासते ॥',
         trans: 'saṅgacchadhvaṃ saṃvadadhvaṃ saṃ vo manāṃsi jānatām |\ndevā bhāgaṃ yathā pūrve sañjānānā upāsate ||',
@@ -696,6 +704,8 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       citationDeva: 'ऋग्वेद ३.६२.१०',
       summary: 'The most sacred and universally chanted Rigvedic verse, addressed to the solar deity Savitṛ, praying for intellectual illumination.',
       summaryDeva: 'सवीतृ (सूर्य) देवतेला उद्देशून रचलेला अतिशय पवित्र आणि लोकप्रिय मंत्र, ज्यामध्ये बुद्धीच्या प्रकाशासाठी प्रार्थना केली आहे.',
+      detail: 'A single ṛc from a hymn of Viśvāmitra to Savitṛ, the impeller-sun. Chanted daily in the Sandhyā worship for millennia, it asks not for wealth or victory but only that the divine light awaken and guide the intellect (dhī). Its 24-syllable Gāyatrī metre gives the verse its name.',
+      detailDeva: 'विश्वामित्र ऋषींनी सवितृ (प्रेरक सूर्य) देवतेला उद्देशून रचलेल्या सूक्तातील एकच ऋचा. सहस्रावधी वर्षांपासून संध्योपासनेत नित्य पठण केली जाणारी ही ऋचा धन वा विजय न मागता केवळ दिव्य प्रकाशाने बुद्धी (धी) जागृत व्हावी अशी प्रार्थना करते. २४ अक्षरांच्या गायत्री छंदामुळे या ऋचेला हे नाव मिळाले.',
       verse: {
         deva: 'तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि ।\nधियो यो नः प्रचोदयात् ॥',
         trans: 'tat savitur vareṇyaṃ bhargo devasya dhīmahi |\ndhiyo yo naḥ pracodayāt ||',
@@ -709,6 +719,8 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       citationDeva: 'ऋग्वेद १०.१२५',
       summary: 'A profound hymn where the goddess Vāk (Speech/Cosmic Power) speaks in the first person, declaring herself as the sustaining energy of the entire universe.',
       summaryDeva: 'वाग्देवतेने स्वतःच्या मुखातून वदलेले सूक्त, ज्यामध्ये ती स्वतःला विश्वाची चेतना व शक्ती म्हणून घोषित करते. शाक्त तत्त्वज्ञानाचा हा मुख्य आधार आहे.',
+      detail: 'Spoken in the first person by the goddess Vāk (Speech), daughter of the seer Ambhṛṇa. She declares that she moves with the Rudras, Vasus and Ādityas, bends the bow for Rudra, and makes mighty whomever she loves. It is the foundational scripture of the Śākta tradition and a seed of the later Devī Māhātmya.',
+      detailDeva: 'अंभृण ऋषींची कन्या वाग्देवता प्रथमपुरुषात हे सूक्त उच्चारते. ती सांगते की मी रुद्र, वसु व आदित्यांसह संचार करते, रुद्रासाठी धनुष्य ताणते आणि ज्याच्यावर प्रेम करते त्याला सामर्थ्यवान बनवते. हे शाक्त परंपरेचे मूलाधार सूक्त असून पुढील देवीमाहात्म्याचे बीज मानले जाते.',
       verse: {
         deva: 'अहमेव वात इव प्रवाम्य आरभमाणा भुवनानि विश्वा ।\nपरो दिवा पर एना पृथिव्यैतावती महिना संबभूव ॥',
         trans: 'ahameva vāta iva pravāmyārabhamāṇā bhuvanāni viśvā |\nparo divā para enā pṛthivyaitāvatī mahinā saṃbabhūva ||',
@@ -722,10 +734,87 @@ const SUKTAS_DATA: Record<string, KeySukta[]> = {
       citationDeva: 'ऋग्वेद १०.१२१',
       summary: 'Hymn to the "Golden Womb/Child", celebrating the source of all light, life, and creation, asking rhetorically: "To which deity should we offer our worship?"',
       summaryDeva: '\'हिरण्यगर्भ\' म्हणजेच सुवर्ण गर्भाचे (विश्वाच्या उगमस्थानी असणाऱ्या प्रकाशाचे) सूक्त, जे संपूर्ण सृष्टीच्या उत्पत्तीचा ध्यास घेते.',
+      detail: 'Ten verses trace creation back to the "golden womb" that arose first and became the one lord of all that exists. Every verse but the last closes with the haunting refrain "kasmai devāya haviṣā vidhema" — "to which god shall we offer our worship?" — making the unknowable creator itself the subject of inquiry.',
+      detailDeva: 'दहा ऋचा सृष्टीचा शोध \'हिरण्यगर्भा\'पर्यंत — सर्वप्रथम प्रकटलेल्या व अस्तित्वाचा एकमेव अधिपती बनलेल्या सुवर्ण गर्भापर्यंत — घेऊन जातात. शेवटची ऋचा वगळता प्रत्येक ऋचा \'कस्मै देवाय हविषा विधेम\' — \'कोणत्या देवाला आम्ही हवि अर्पण करावे?\' — या भारदस्त ध्रुवपदाने संपते, ज्यामुळे अज्ञेय निर्माताच चिंतनाचा विषय बनतो.',
       verse: {
         deva: 'हिरण्यगर्भः समवर्तताग्रे भूतस्य जातः पतिरेक आसीत् ।\nस दाधार पृथिवीं द्यामुतेमां कस्मै देवाय हविषा विधेम ॥',
         trans: 'hiraṇyagarbhaḥ samavartatāgre bhūtasya jātaḥ patireka āsīt |\nsa dādhāra pṛthivīṃ dyāmutemāṃ kasmai devāya haviṣā vidhema ||',
         cite: 'RV 10.121.1'
+      }
+    },
+    {
+      name: 'Agni Sūkta',
+      nameDeva: 'अग्निसूक्त',
+      citation: 'RV 1.1',
+      citationDeva: 'ऋग्वेद १.१',
+      summary: 'The very first hymn of the Rigveda, by the seer Madhucchandas, invoking Agni as the priest of the sacrifice and the messenger who carries offerings between humans and the gods.',
+      summaryDeva: 'ऋग्वेदाचे सर्वात पहिले सूक्त, मधुच्छंदस ऋषींनी रचलेले, ज्यात अग्नीला यज्ञाचा पुरोहित व मानव आणि देव यांच्यातील आहुती वाहून नेणारा दूत म्हणून आवाहन केले आहे.',
+      detail: 'Standing at the very threshold of the Veda, its nine verses praise Agni as purohita — the god-priest who carries every offering to the devas and brings their blessings back. Agni is hailed as the most ancient yet ever-new, the guardian of ṛta (cosmic order), and as approachable as a father to his son.',
+      detailDeva: 'संपूर्ण वेदाच्या उंबरठ्यावर उभे असलेले हे सूक्त, आपल्या नऊ ऋचांत अग्नीला पुरोहित — प्रत्येक आहुती देवांपर्यंत पोहोचवणारा व त्यांचे आशीर्वाद परत आणणारा देव-पुरोहित — म्हणून स्तवते. अग्नी सर्वात प्राचीन तरीही नित्यनूतन, ऋताचा रक्षक आणि पुत्राला पित्याप्रमाणे सुलभ असा संबोधला आहे.',
+      verse: {
+        deva: 'अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम् ।\nहोतारं रत्नधातमम् ॥',
+        trans: 'agnimīḷe purohitaṃ yajñasya devamṛtvijam |\nhotāraṃ ratnadhātamam ||',
+        cite: 'RV 1.1.1'
+      }
+    },
+    {
+      name: 'Nadī Sūkta (River Hymn)',
+      nameDeva: 'नदी सूक्त',
+      citation: 'RV 10.75',
+      citationDeva: 'ऋग्वेद १०.७५',
+      summary: 'A hymn to the rivers, naming and praising the great waters of the Sapta-Sindhu from the Gaṅgā in the east to the Sindhu and beyond — a vital source for the geography of Vedic India.',
+      summaryDeva: 'नद्यांची स्तुती करणारे सूक्त, ज्यात पूर्वेकडील गंगेपासून सिंधू व त्यापलीकडील सप्तसिंधूच्या महान जलप्रवाहांची नावे घेऊन स्तुती केली आहे. वैदिक भारताच्या भूगोलाचा हा एक अमूल्य स्रोत आहे.',
+      detail: 'Attributed to the seer Sindhukṣit, it calls the rivers by name in geographic order — Gaṅgā, Yamunā, Sarasvatī, Śutudrī (Sutlej), Paruṣṇī (Ravi), Asiknī (Chenab), Vitastā (Jhelum) and the Sindhu — likening them to lowing mother-cows hastening to their calves. It is the single most important textual witness to the river-system of the Ṛgvedic homeland.',
+      detailDeva: 'सिंधुक्षित ऋषींना प्रदान केलेले हे सूक्त नद्यांना भौगोलिक क्रमाने नावाने हाक मारते — गंगा, यमुना, सरस्वती, शुतुद्री (सतलज), परुष्णी (रावी), असिक्नी (चिनाब), वितस्ता (झेलम) व सिंधू — आणि त्यांना वासरांकडे धावणाऱ्या हंबरणाऱ्या मातृधेनूंची उपमा देते. ऋग्वेदकालीन भूमीच्या नदीप्रणालीचा हा सर्वात महत्त्वाचा ग्रंथसाक्षी आहे.',
+      verse: {
+        deva: 'इमं मे गङ्गे यमुने सरस्वति शुतुद्रि स्तोमं सचता परुष्ण्या ।\nअसिक्न्या मरुद्वृधे वितस्तयार्जीकीये शृणुह्या सुषोमया ॥',
+        trans: 'imaṃ me gaṅge yamune sarasvati śutudri stomaṃ sacatā paruṣṇyā |\nasiknyā marudvṛdhe vitastayārjīkīye śṛṇuhyā suṣomayā ||',
+        cite: 'RV 10.75.5'
+      }
+    },
+    {
+      name: 'Aghamarṣaṇa Sūkta',
+      nameDeva: 'अघमर्षण सूक्त',
+      citation: 'RV 10.190',
+      citationDeva: 'ऋग्वेद १०.१९०',
+      summary: 'A short, potent cosmogonic hymn declaring that ṛta (truth-order) and satya (truth) were born first from tapas (cosmic heat); recited in the rite of washing away sins.',
+      summaryDeva: 'ऋत आणि सत्य हे तपातून (वैश्विक उष्णतेतून) प्रथम जन्मले असे घोषित करणारे छोटे पण प्रभावी सृष्टी-सूक्त, जे पापक्षालनाच्या (अघमर्षण) विधीत पठण केले जाते.',
+      detail: 'Just three verses, attributed to the seer Aghamarṣaṇa, sketch a sequence of creation: from tapas arose ṛta and satya, then night, then the surging ocean, then the year that orders day and night — and the Ordainer (Dhātṛ) fashioned sun and moon, sky and earth, just as before. Its recitation during ritual bathing is held to dissolve sin, giving the hymn its name.',
+      detailDeva: 'अघमर्षण ऋषींना प्रदान केलेल्या केवळ तीन ऋचा सृष्टीचा क्रम रेखाटतात: तपातून ऋत व सत्य, मग रात्र, मग उसळणारा समुद्र, मग दिवस-रात्रीचे नियमन करणारे संवत्सर निर्माण झाले — आणि धात्याने पूर्वीप्रमाणेच सूर्य-चंद्र, द्यावा-पृथ्वी घडवले. स्नानाच्या वेळी याचे पठण पाप विरघळवते अशी श्रद्धा असल्याने सूक्ताला हे नाव मिळाले.',
+      verse: {
+        deva: 'ऋतं च सत्यं चाभीद्धात्तपसोऽध्यजायत ।\nततो रात्र्यजायत ततः समुद्रो अर्णवः ॥',
+        trans: 'ṛtaṃ ca satyaṃ cābhīddhāttapaso\'dhyajāyata |\ntato rātryajāyata tataḥ samudro arṇavaḥ ||',
+        cite: 'RV 10.190.1'
+      }
+    },
+    {
+      name: 'Akṣa Sūkta (The Gambler\'s Lament)',
+      nameDeva: 'अक्ष सूक्त (द्यूत सूक्त)',
+      citation: 'RV 10.34',
+      citationDeva: 'ऋग्वेद १०.३४',
+      summary: 'A remarkably human hymn in which a gambler laments his ruin by the dice, mourning his lost wife and home, and finally resolves to abandon gambling for honest farming.',
+      summaryDeva: 'द्यूताने झालेल्या आपल्या नाशाचा शोक करणारे एक अत्यंत मानवी सूक्त, ज्यात जुगारी आपली गमावलेली पत्नी व घर यांचा विलाप करतो आणि अखेरीस जुगार सोडून प्रामाणिक शेती करण्याचा निश्चय करतो.',
+      detail: 'Unique in the Veda for its secular, almost confessional tone, it gives voice to a man enslaved by the rattling brown dice of the vibhīdaka nut — they bring him no joy yet he cannot resist them; his wife pushes him away and his mother grieves. The hymn closes with the counsel of Savitṛ: do not gamble, plough your field, prize what you have — there lie your cattle and your wife.',
+      detailDeva: 'आपल्या ऐहिक, जवळजवळ कबुलीजबाबासारख्या स्वरामुळे वेदात अद्वितीय असलेले हे सूक्त, विभीदक फळाच्या खुळखुळणाऱ्या तपकिरी फाशांनी गुलाम झालेल्या माणसाला वाचा देते — त्या आनंद देत नाहीत तरी त्यांचा मोह सुटत नाही; पत्नी दूर लोटते व माता शोक करते. सूक्ताचा शेवट सवितृच्या उपदेशाने होतो: जुगार खेळू नकोस, शेत नांग, जे आहे त्यात समाधान मान — तिथेच तुझे गोधन व पत्नी आहे.',
+      verse: {
+        deva: 'अक्षैर्मा दीव्यः कृषिमित्कृषस्व वित्ते रमस्व बहु मन्यमानः ।\nतत्र गावः कितव तत्र जाया तन्मे वि चष्टे सवितायमर्यः ॥',
+        trans: 'akṣairmā dīvyaḥ kṛṣimit kṛṣasva vitte ramasva bahu manyamānaḥ |\ntatra gāvaḥ kitava tatra jāyā tanme vi caṣṭe savitāyamaryaḥ ||',
+        cite: 'RV 10.34.13'
+      }
+    },
+    {
+      name: 'Maṇḍūka Sūkta (Hymn of the Frogs)',
+      nameDeva: 'मण्डूक सूक्त (बेडूक सूक्त)',
+      citation: 'RV 7.103',
+      citationDeva: 'ऋग्वेद ७.१०३',
+      summary: 'A vivid hymn comparing the frogs that croak in chorus at the first monsoon rains to Vedic priests chanting in unison around the sacrificial fire.',
+      summaryDeva: 'पहिल्या पावसात एकसुरात ओरडणाऱ्या बेडकांची तुलना यज्ञवेदीभोवती एकत्र मंत्रपठण करणाऱ्या वैदिक पुरोहितांशी करणारे एक जिवंत सूक्त.',
+      detail: 'Attributed to Vasiṣṭha, it watches the frogs lie silent and dry through the year, then burst into voice when the rains arrive — one taking up the call of another like pupils repeating a teacher\'s recitation. Read variously as gentle humour or as praise of the rains, it is a striking early example of close nature-observation woven into ritual poetry.',
+      detailDeva: 'वसिष्ठ ऋषींना प्रदान केलेले हे सूक्त वर्षभर मूक व कोरडे पडून राहिलेले बेडूक पाऊस येताच वाचा फुटल्यासारखे ओरडू लागतात असे पाहते — एक दुसऱ्याची हाक उचलतो, जणू शिष्य गुरूचे पठण पुन्हा म्हणतात. सौम्य विनोद किंवा पर्जन्यस्तुती म्हणून वाचले जाणारे हे सूक्त, विधीकाव्यात गुंफलेल्या सूक्ष्म निसर्गनिरीक्षणाचे एक लक्षणीय आरंभीचे उदाहरण आहे.',
+      verse: {
+        deva: 'संवत्सरं शशयाना ब्राह्मणा व्रतचारिणः ।\nवाचं पर्जन्यजिन्वितां प्र मण्डूका अवादिषुः ॥',
+        trans: 'saṃvatsaraṃ śaśayānā brāhmaṇā vratacāriṇaḥ |\nvācaṃ parjanyajinvitāṃ pra maṇḍūkā avādiṣuḥ ||',
+        cite: 'RV 7.103.1'
       }
     }
   ],
@@ -2175,6 +2264,7 @@ function KeySuktaCard({ sukta, lang }: { sukta: KeySukta; lang: string }) {
   const title = lang === 'mr' ? sukta.nameDeva : sukta.name;
   const citation = lang === 'mr' ? sukta.citationDeva : sukta.citation;
   const summary = lang === 'mr' ? sukta.summaryDeva : sukta.summary;
+  const detail = lang === 'mr' ? sukta.detailDeva : sukta.detail;
 
   return (
     <div className="sukta-item">
@@ -2186,6 +2276,7 @@ function KeySuktaCard({ sukta, lang }: { sukta: KeySukta; lang: string }) {
         <span className="sukta-cite">{citation}</span>
       </div>
       <p className="sukta-desc">{summary}</p>
+      {detail && <p className="sukta-detail">{detail}</p>}
       {sukta.verse && (
         <>
           <button 

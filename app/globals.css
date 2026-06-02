@@ -2583,7 +2583,17 @@ body::after {
   font-size: 0.98rem;
   color: var(--ink-soft);
   line-height: 1.5;
+  margin-bottom: 0.7rem;
+}
+
+.sukta-detail {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
   margin-bottom: 1rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--gold-soft, var(--gold-deep));
+  opacity: 0.92;
 }
 
 .verse-toggle-btn {
