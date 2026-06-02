@@ -6,7 +6,6 @@ import About from '@/components/About';
 import SectionsGrid from '@/components/SectionsGrid';
 import Contributors from '@/components/Contributors';
 import Concepts from '@/components/Concepts';
-import Dinacharya from '@/components/Dinacharya';
 import { DailyStrip, Sanskrit, Footer } from '@/components/Frames';
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <SectionsGrid />
       <Contributors />
       <Concepts />
-      <Dinacharya />
       <Sanskrit />
       <Footer />
     </>
