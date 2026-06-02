@@ -280,6 +280,22 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
         ],
       },
       {
+        id: 'dharma', title: 'Dharma', deva: 'धर्म', epithet: 'The living order',
+        meta: ['Ṛtam · Satyam', 'Sva-dharma · Vivechan', 'Order in conduct'],
+        summary: 'Dharma is ṛtam — the Vedic cosmic order — brought into human conduct through satyam. Where ṛtam governs the turning of seasons and the arc of the sun, dharma governs how a person moves within that same order: what is owed, what is timely, what restores rather than disrupts. Vivechan — discriminative discernment — is the faculty by which one reads the moment and names what dharma requires, from this person, now.',
+        facets: ['Ṛtam · ground', 'Satyam · alignment', 'Sva-dharma', 'Vivechan'],
+        explanation: [
+          'The Ṛgveda pairs ṛtam and satyam as the two faces of a single order — ṛtaṃ ca satyaṃ ca, cosmic regularity and truth, never apart. Ṛtam is the deep grammar of the universe: the sun\'s circuit, the river\'s course, the wheeling of the year. Its violation is anṛtam — disorder, falsehood, the unravelling of the compact. Satyam is what ṛtam looks like in human speech and action: word brought into alignment with what is real, the refusal to falsify. As the tradition matures, ṛtam bifurcates: satyam inherits its moral-verbal face, dharma its normative-conduct face. The Taittirīya Upaniṣad encodes this relationship in its parting charge to the student: satyam vada, dharmaṃ cara — speak truth, walk in dharma. Two words, one order. Manu\'s ten marks of dharma (dharma-lakṣaṇa) — steadiness, patience, self-restraint, non-theft, purity, sense-control, wisdom, knowledge, satyam, and freedom from anger — place satyam itself inside the definition, weaving ṛtam\'s original pairing back into the daily texture of right conduct.',
+          'Dharma as a lived practice is not a fixed rule-list but a relational demand. The Mahābhārata is precise: sūkṣmo dharmasya tattvam — the essence of dharma is subtle. Subtle because it shifts by station, relationship and moment: the same ṛtam that asks a warrior to stand firm asks a teacher to question, a parent to shelter, a student to listen. This contextual specificity is not relativism; it is the recognition that ṛtam runs through every situation differently, and dharma is its local form. The faculty that reads the situation and names what dharma requires is vivechan — discriminative discernment. Its opposite is moha — the confusion that made Arjuna lower his bow not from compassion but from failure to see clearly; Kṛṣṇa\'s eighteen chapters are the restoration of vivechan, not a new rule but a sharpened perception. The Mahābhārata\'s further line is the reward: dharma eva hato hanti, dharmo rakṣati rakṣitaḥ — dharma slain slays; dharma protected protects. The reciprocity is total: the person who sustains the order is sustained by it.',
+        ],
+        aspects: [
+          { name: 'Ṛtam', deva: 'ऋतम्', desc: 'The cosmic order — the deep regularity by which the universe holds together. Older than the gods, who serve it rather than command it. Varuṇa is its guardian (gopā ṛtasya) in the Ṛgveda. Dharma is ṛtam refracted into the human sphere.' },
+          { name: 'Satyam', deva: 'सत्यम्', desc: 'Truth — the moral and verbal face of ṛtam. Paired with it in the Ṛgveda as ṛtaṃ ca satyaṃ ca. To speak satyam is to keep word in alignment with what is real, sustaining the cosmic compact rather than breaking it. One of the ten marks of dharma in Manu.' },
+          { name: 'Sva-dharma', deva: 'स्वधर्म', desc: 'The dharma specific to one\'s own station and moment. The Gītā\'s insistence — that one\'s own dharma, even imperfectly performed, is better than another\'s done perfectly — is the tradition\'s answer to every temptation to borrow another\'s obligations.' },
+          { name: 'Vivechan', deva: 'विवेचन', desc: 'Discriminative discernment — the trained capacity to see a situation clearly, stripped of desire and fear, and read what the order of things requires in response. Neither mere opinion nor mechanical rule-following, vivechan is the inner faculty that makes dharma a living practice rather than a catechism.' },
+        ],
+      },
+      {
         id: 'yoga', title: 'Yoga', deva: 'योग', epithet: 'Internal practice',
         meta: ['Aṣṭāṅga', 'Pātañjala', '8 limbs'],
         summary: 'Yoga as the inner counterpart of dinacaryā — yama and niyama before āsana, āsana before prāṇāyāma, prāṇāyāma before pratyāhāra. A path, not a workout.',
