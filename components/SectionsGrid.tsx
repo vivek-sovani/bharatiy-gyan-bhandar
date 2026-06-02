@@ -10,7 +10,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 import { saveScroll, useScrollRestoration } from '@/lib/scroll';
 
 // ── Era metadata ──────────────────────────────────────────────────────────────
-interface EraMeta {
+export interface EraMeta {
   id: string;
   label: string;
   deva: string;
@@ -20,7 +20,7 @@ interface EraMeta {
   glossDeva: string;
 }
 
-const ERAS_META: EraMeta[] = [
+export const ERAS_META: EraMeta[] = [
   {
     id: 'vedic',
     label: 'Vedic Era',

@@ -8,8 +8,8 @@
   --paper-elev: oklch(0.95 0.022 80);
   --paper-deep: oklch(0.89 0.025 78);
   --ink: oklch(0.22 0.015 40);
-  --ink-soft: oklch(0.22 0.015 40 / 0.66);
-  --ink-faint: oklch(0.22 0.015 40 / 0.38);
+  --ink-soft: oklch(0.22 0.015 40 / 0.82);
+  --ink-faint: oklch(0.22 0.015 40 / 0.55);
   --rule: oklch(0.22 0.015 40 / 0.16);
   --rule-strong: oklch(0.22 0.015 40 / 0.32);
   --maroon: oklch(0.36 0.10 25);
@@ -34,8 +34,8 @@
   --paper-elev: oklch(0.21 0.014 40);
   --paper-deep: oklch(0.15 0.010 38);
   --ink: oklch(0.92 0.018 75);
-  --ink-soft: oklch(0.92 0.018 75 / 0.66);
-  --ink-faint: oklch(0.92 0.018 75 / 0.38);
+  --ink-soft: oklch(0.92 0.018 75 / 0.82);
+  --ink-faint: oklch(0.92 0.018 75 / 0.55);
   --rule: oklch(0.92 0.018 75 / 0.18);
   --rule-strong: oklch(0.92 0.018 75 / 0.35);
   --maroon: oklch(0.62 0.12 28);
@@ -50,8 +50,8 @@
   --paper-elev: oklch(0.97 0.030 84);
   --paper-deep: oklch(0.93 0.050 80);
   --ink: oklch(0.24 0.04 35);
-  --ink-soft: oklch(0.24 0.04 35 / 0.66);
-  --ink-faint: oklch(0.24 0.04 35 / 0.38);
+  --ink-soft: oklch(0.24 0.04 35 / 0.82);
+  --ink-faint: oklch(0.24 0.04 35 / 0.55);
   --rule: oklch(0.24 0.04 35 / 0.18);
   --rule-strong: oklch(0.24 0.04 35 / 0.36);
   --maroon: oklch(0.50 0.16 40);
@@ -1267,6 +1267,78 @@ body::after {
   .sanskrit-inner {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+/* About / orientation section */
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.about-lede {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+.era-ribbon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.era-tick {
+  flex: 1 1 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.9rem 1.2rem 0.9rem 0;
+  border-right: 1px solid var(--rule);
+}
+.era-tick:last-child { border-right: none; }
+.era-tick-label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--maroon);
+}
+.era-tick-period {
+  color: var(--ink-faint);
+}
+.about-guide { margin-top: 0.4rem; }
+.about-steps {
+  margin: 0.9rem 0 0;
+  padding-left: 1.4rem;
+  max-width: 62ch;
+  color: var(--ink-soft);
+}
+.about-steps li {
+  margin-bottom: 0.7rem;
+  line-height: 1.55;
+}
+.about-steps li::marker {
+  color: var(--maroon);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+.about-steps a {
+  color: var(--maroon);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.about-steps a:hover {
+  border-bottom-color: var(--maroon);
+}
+@media (max-width: 720px) {
+  .era-tick {
+    flex-basis: 45%;
+    border-right: none;
+    padding-right: 0.6rem;
   }
 }
 
