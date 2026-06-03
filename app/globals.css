@@ -1117,7 +1117,7 @@ a:hover { color: var(--gold-deep); }
 }
 .ftr-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 2.5rem;
 }
 .ftr h5 {
