@@ -45,7 +45,7 @@ export default function Header() {
           <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
           <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
           <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
-          <Link href="/#dinacharya" onClick={close}>{t('nav.lifestyle')}</Link>
+          <Link href="/lifestyle/" onClick={close}>{t('nav.lifestyle')}</Link>
 
           <div className="hdr-nav-prefs">
             <span className="hdr-nav-prefs-label">{lang === 'mr' ? 'रंगसंगती' : 'Theme'}</span>
