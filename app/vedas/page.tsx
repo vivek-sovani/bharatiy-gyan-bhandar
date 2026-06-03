@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
-import { Footer } from '@/components/Frames';
 import VedasView from '@/components/VedasPage';
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function VedasPage() {
     <>
       <Header />
       <VedasView />
-      <Footer />
     </>
   );
 }

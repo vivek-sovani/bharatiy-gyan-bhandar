@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { Footer } from '@/components/Frames';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function NotFound() {
@@ -32,7 +31,6 @@ export default function NotFound() {
           </p>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

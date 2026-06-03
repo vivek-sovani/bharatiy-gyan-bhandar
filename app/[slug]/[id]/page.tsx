@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
-import { Footer } from '@/components/Frames';
 import ItemDetailView from '@/components/ItemDetailView';
 import { SECTION_DETAILS } from '@/lib/section-data';
 
@@ -77,7 +76,6 @@ export default async function ItemPage({
         fallbackData={section}
         fallbackItem={item}
       />
-      <Footer />
     </>
   );
 }

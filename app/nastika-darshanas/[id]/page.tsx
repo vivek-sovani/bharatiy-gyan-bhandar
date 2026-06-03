@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
-import { Footer } from '@/components/Frames';
 import NastikaDetailView from '@/components/NastikaDetail';
 import { NASTIKA_DETAILS } from '@/lib/nastika-data';
 
@@ -38,7 +37,6 @@ export default async function NastikaPage({
     <>
       <Header />
       <NastikaDetailView id={id} />
-      <Footer />
     </>
   );
 }

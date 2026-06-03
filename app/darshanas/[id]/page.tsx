@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
-import { Footer } from '@/components/Frames';
 import DarshanaDetailView from '@/components/DarshanaDetail';
 import { DARSHANAS_DETAILS } from '@/lib/darshanas-data';
 
@@ -38,7 +37,6 @@ export default async function DarshanaPage({
     <>
       <Header />
       <DarshanaDetailView id={id} />
-      <Footer />
     </>
   );
 }

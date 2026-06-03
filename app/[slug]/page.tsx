@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
-import { Footer } from '@/components/Frames';
 import SectionDetailView from '@/components/SectionDetail';
 import { SECTION_DETAILS } from '@/lib/section-data';
 
@@ -38,7 +37,6 @@ export default async function SectionPage({
     <>
       <Header />
       <SectionDetailView id={slug} data={data} />
-      <Footer />
     </>
   );
 }
