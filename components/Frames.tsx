@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Mandala, Glyph } from './Ornaments';
 import { ESSAYS as ESSAYS_EN } from '@/lib/data';
 import { ESSAYS as ESSAYS_MR } from '@/lib/data_mr';
@@ -128,10 +129,10 @@ export function Footer() {
         <div>
           <h5>{lang === 'mr' ? 'मार्गदर्शन' : 'Navigate'}</h5>
           <ul>
-            <li><a href="/#sections">{t('nav.library')}</a></li>
-            <li><a href="/#concepts">{t('nav.concepts')}</a></li>
-            <li><a href="/#contributors">{t('nav.contrib')}</a></li>
-            <li><a href="/lifestyle/">{t('nav.lifestyle')}</a></li>
+            <li><Link href="/#sections">{t('nav.library')}</Link></li>
+            <li><Link href="/#concepts">{t('nav.concepts')}</Link></li>
+            <li><Link href="/#contributors">{t('nav.contrib')}</Link></li>
+            <li><Link href="/lifestyle/">{t('nav.lifestyle')}</Link></li>
           </ul>
         </div>
       </div>
