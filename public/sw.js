@@ -1,7 +1,7 @@
 // Service worker for Indian Knowledge Bank PWA
 // Strategy: network-first for HTML, cache-first for static assets, cache Google Fonts.
 
-const CACHE = 'bgb-v1';
+const CACHE = 'bgb-v3';
 
 // ── Install ──────────────────────────────────────────────────────────────────
 self.addEventListener('install', e => {
