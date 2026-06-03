@@ -1225,6 +1225,119 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Marathi Sants
+  'marathi-sants': {
+    title: 'Marathi Sants',
+    deva: 'मराठी संत',
+    crumb: ['Collection', 'Devotional', 'Marathi Sants'],
+    lede: 'The Vārkarī tradition of Maharashtra — five centuries of devotion to Viṭṭhal of Pandharpur, carried in the abhaṅga and the annual wārī pilgrimage. From Jñāneśvar in the thirteenth century to Tukārām in the seventeenth, its sants wrote not in Sanskrit but in living Marathi, and opened the path to liberation across every barrier of caste and gender. Theirs is the Bhāgavata-dharma made song.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'jnaneshwar', title: 'Jñāneśvar', deva: 'ज्ञानेश्वर', epithet: 'Jñāneśvarī · the foundation',
+        meta: ['1275–1296 CE', 'Jñāneśvarī · Amṛtānubhava', 'Founder of the Vārkarī path'],
+        summary: 'The fountainhead of Marathi spirituality. At barely fifteen Jñāneśvar composed the Jñāneśvarī, a luminous Marathi commentary on the Bhagavad-gītā that made the highest Vedānta available to ordinary people in their own tongue. With his siblings he set the Vārkarī tradition on its course before taking sañjīvana samādhi at twenty-one.',
+        opening: { deva: 'जो जे वांछील तो ते लाहो । प्राणिजात ॥', trans: '“May every living being attain whatever it longs for.”', cite: 'Jñāneśvarī · Pasāydāna' },
+        facets: ['Jñāneśvarī', 'Pasāydāna', 'Sañjīvana samādhi'],
+        explanation: [
+          'Jñāneśvar (Jñānadeva, 1275–1296) stands at the head of the entire Marathi devotional tradition. Born into a family treated as outcastes — his father a sannyāsin who had returned to household life — he and his siblings Nivṛttināth, Sopān and Muktābāī were denied the rites of their community, and out of that exclusion came one of the glories of Indian literature.',
+          'His Jñāneśvarī (also Bhāvārtha-dīpikā), composed when he was about fifteen, is a verse commentary on the Bhagavad-gītā in flowing Marathi ovī metre. It clothes the rigorous non-dualism he inherited through the Nāth lineage in imagery of such tenderness that it remains, seven centuries on, a living devotional text recited daily across Maharashtra. His Amṛtānubhava is an independent work of mystical philosophy. He took sañjīvana samādhi at Āḷandī at the age of twenty-one.',
+        ],
+        aspects: [
+          { name: 'Jñāneśvarī', deva: 'ज्ञानेश्वरी', desc: 'The Marathi commentary on the Gītā, in ovī verse, that founded the tradition and made Vedānta sing in the vernacular.' },
+          { name: 'Pasāydāna', deva: 'पसायदान', desc: 'The closing prayer of the Jñāneśvarī — a universal benediction asking welfare for all beings, perhaps the best-loved passage in Marathi.' },
+          { name: 'The Nāth lineage', deva: 'नाथ संप्रदाय', desc: 'His initiation through his elder brother Nivṛttināth into the Nāth yogic tradition, the philosophical root of his work.' },
+          { name: 'Sañjīvana samādhi', deva: 'संजीवन समाधी', desc: 'The conscious entombment at Āḷandī, which became a principal Vārkarī pilgrimage centre.' },
+        ],
+      },
+      {
+        id: 'namdev', title: 'Nāmdev', deva: 'नामदेव', epithet: 'The kīrtan and the open door',
+        meta: ['1270–1350 CE', 'Abhaṅgas · kīrtan', 'Verses in the Guru Granth Sāhib'],
+        summary: 'A tailor by birth and Jñāneśvar’s companion, Nāmdev carried the devotion of Pandharpur across northern India through song. His abhaṅgas are among the most beloved in Marathi, and sixty-one of his hymns entered the Sikh Guru Granth Sāhib — a reach no other Marathi sant attained.',
+        opening: { deva: 'नाचू कीर्तनाचे रंगी । ज्ञानदीप लावू जगी ॥', trans: '“Let us dance in the joy of kīrtan and light the lamp of knowledge through the world.”', cite: 'Nāmdev · abhaṅga' },
+        facets: ['Abhaṅga', 'Kīrtan', 'Guru Granth Sāhib'],
+        explanation: [
+          'Nāmdev (c. 1270–1350), a calico-printer or tailor (śimpī) by community, was the great popularizer of Vārkarī devotion and, with Jñāneśvar, its co-founder in the public imagination. Where Jñāneśvar gave the tradition its philosophy, Nāmdev gave it its voice — the kīrtan, the sung, congregational praise of the divine name (nāma) that became the tradition’s central practice.',
+          'He travelled north as far as Punjab, and his influence on the wider sant movement was so great that sixty-one of his compositions were incorporated into the Sikh Guru Granth Sāhib, where he appears as Bhagat Nāmdev. His abhaṅgas to Viṭṭhal — direct, intimate, often playfully reproachful — remain among the best-loved in the Marathi devotional canon.',
+        ],
+        aspects: [
+          { name: 'Nāma and kīrtan', deva: 'नामस्मरण · कीर्तन', desc: 'The remembrance and congregational singing of the divine name, which Nāmdev made the heart of the path.' },
+          { name: 'Pan-Indian reach', deva: 'अखिल भारतीय', desc: 'His journeys north and the inclusion of his hymns in the Guru Granth Sāhib, linking the Vārkarī and Sant streams.' },
+          { name: 'The sant fellowship', deva: 'संतमेळा', desc: 'His role in binding the early Vārkarī circle around Jñāneśvar into a single movement.' },
+          { name: 'Viṭṭhal of Pandharpur', deva: 'विठ्ठल', desc: 'The dark, hands-on-hips form of Viṭhobā at Pandharpur, the focus of his and the tradition’s devotion.' },
+        ],
+      },
+      {
+        id: 'eknath', title: 'Eknāth', deva: 'एकनाथ', epithet: 'The bridge across the centuries',
+        meta: ['1533–1599 CE', 'Eknāthī Bhāgavata · Bhāvārtha Rāmāyaṇa', 'Bhāruḍ'],
+        summary: 'After two centuries of decline, Eknāth revived the Vārkarī tradition. He produced a reliable text of the Jñāneśvarī, wrote the Eknāthī Bhāgavata and the Bhāvārtha Rāmāyaṇa, and perfected the bhāruḍ — dramatic folk-poems carrying spiritual teaching. A householder-saint, he insisted devotion needs no withdrawal from the world.',
+        opening: { deva: 'माझे माहेर पंढरी । आहे भीवरेच्या तीरी ॥', trans: '“My mother’s home is Pandharpur, there on the bank of the Bhīvarā river.”', cite: 'Eknāth · abhaṅga' },
+        facets: ['Eknāthī Bhāgavata', 'Bhāruḍ', 'Householder sainthood'],
+        explanation: [
+          'Eknāth (1533–1599) of Paithan is the great reviver of the Vārkarī tradition, working two centuries after Jñāneśvar and Nāmdev. His first service was textual: the manuscript of the Jñāneśvarī had become corrupt, and Eknāth produced the careful, authoritative recension (the śuddha prati of 1584) that is still the basis of the text read today.',
+          'His own works are vast — the Eknāthī Bhāgavata, a Marathi commentary on the eleventh book of the Bhāgavata Purāṇa, and the Bhāvārtha Rāmāyaṇa among them. He is also the master of the bhāruḍ, a form of dramatic folk-poem that carries spiritual instruction in the voices of ordinary characters. A married householder all his life, Eknāth embodied the Vārkarī conviction that the way to God runs through the world, not away from it, and was known for his open defiance of caste prejudice.',
+        ],
+        aspects: [
+          { name: 'Restoring the Jñāneśvarī', deva: 'शुद्ध प्रत', desc: 'His authoritative 1584 recension of the founding text, which rescued it from centuries of scribal corruption.' },
+          { name: 'Eknāthī Bhāgavata', deva: 'एकनाथी भागवत', desc: 'His Marathi exposition of the eleventh skandha of the Bhāgavata Purāṇa, a cornerstone of Vārkarī teaching.' },
+          { name: 'Bhāruḍ', deva: 'भारूड', desc: 'Dramatic folk-poems that smuggle spiritual teaching into everyday voices and characters.' },
+          { name: 'Sansār and sainthood', deva: 'प्रपंच व परमार्थ', desc: 'Holiness realised within married, worldly life — the way to God runs through the household, not away from it.' },
+        ],
+      },
+      {
+        id: 'tukaram', title: 'Tukārām', deva: 'तुकाराम', epithet: 'The summit of the abhaṅga',
+        meta: ['1608–1649 CE', 'Abhaṅga Gāthā', 'Sant Tukārām'],
+        summary: 'The greatest of the Vārkarī poets. A grocer ruined by famine and grief, Tukārām turned to Viṭṭhal and poured out thousands of abhaṅgas of unmatched directness — by turns adoring, anguished, angry and humble. His Gāthā is the devotional heart of Maharashtra; with him the Vārkarī path reaches its summit.',
+        opening: { deva: 'जे का रंजले गांजले । त्यासि म्हणे जो आपुले ॥\nतोचि साधु ओळखावा । देव तेथेचि जाणावा ॥', trans: '“The one who takes the suffering and the cast-down as his own — know that one as the saint, for God dwells there.”', cite: 'Tukārām · Gāthā' },
+        facets: ['Abhaṅga Gāthā', 'Viṭṭhal-bhakti', 'Voice of the common person'],
+        explanation: [
+          'Tukārām (1608–1649) of Dehu is, by common consent, the supreme poet of the Vārkarī tradition and one of the greatest devotional voices in any Indian language. A grocer (kuṇbī) by birth, he lost his first wife and son in famine, saw his business collapse, and from that devastation turned wholly to Viṭṭhal.',
+          'His abhaṅgas — some four thousand survive in the Gāthā — are extraordinary for their plainness and emotional truth: he praises, pleads, rages at and jokes with his God in the speech of ordinary people, refusing every pretension of learning or status. He measured holiness by compassion, and tradition holds that at the end of his life he was taken bodily to Vaikuṇṭha. He remains the devotional conscience of Maharashtra.',
+        ],
+        aspects: [
+          { name: 'The Gāthā', deva: 'तुकाराम गाथा', desc: 'The collected abhaṅgas — some four thousand — that form the central devotional scripture of the Vārkarī tradition.' },
+          { name: 'Compassion as the test', deva: 'दया · करुणा', desc: 'True sainthood measured not by ritual or learning but by care for the suffering and the cast-down.' },
+          { name: 'Plain speech', deva: 'सोपी भाषा', desc: 'The deliberate refusal of Sanskritic ornament for the direct, living speech of ordinary Marathi people.' },
+          { name: 'Viṭṭhal-bhakti', deva: 'विठ्ठलभक्ती', desc: 'Total, unmediated love of the God of Pandharpur — adoring, quarrelling and surrendering by turns.' },
+        ],
+      },
+      {
+        id: 'ramdas', title: 'Samarth Rāmdās', deva: 'समर्थ रामदास', epithet: 'Devotion joined to action',
+        meta: ['1608–1681 CE', 'Dāsbodh · Manāche Śloka', 'Rāma & Hanumān bhakti'],
+        summary: 'A contemporary of Tukārām but of a different temper: a devotee of Rāma and Hanumān who joined spiritual discipline to worldly vigour. His Dāsbodh is a manual of both self-knowledge and effective action, and his Manāche Śloka are memorised across Maharashtra. He founded a network of maṭhas and is linked in tradition to Shivaji.',
+        opening: { deva: 'जगी सर्वसुखी असा कोण आहे । विचारे मना तूंचि शोधूनि पाहे ॥', trans: '“Who in this world is wholly happy? Reflect, O mind, and search it out for yourself.”', cite: 'Manāche Śloka · 17' },
+        facets: ['Dāsbodh', 'Manāche Śloka', 'Prayatna · action'],
+        explanation: [
+          'Samarth Rāmdās (1608–1681) stands a little apart from the Vārkarī mainstream. A devotee not of Viṭṭhal but of Rāma and his servant Hanumān, he combined intense spiritual discipline with an insistence on energy, organisation and worldly competence (prayatna-vāda) rare among the bhakti poets.',
+          'His major work, the Dāsbodh, is a wide-ranging Marathi treatise in dialogue form covering self-knowledge, devotion, discernment and the practical conduct of life and affairs. His Manāche Śloka — two hundred and five verses of counsel to the mind — and his Karuṇāṣṭakas are learnt by heart across Maharashtra. He established a network of maṭhas centred on Hanumān worship to renew dharma and society, and tradition links him as guru to Chhatrapati Shivaji, making him the saint most associated with the union of devotion and public action.',
+        ],
+        aspects: [
+          { name: 'Dāsbodh', deva: 'दासबोध', desc: 'The great Marathi manual, in guru–disciple dialogue, of knowledge, devotion and the practical conduct of life.' },
+          { name: 'Manāche Śloka', deva: 'मनाचे श्लोक', desc: 'Two hundred and five verses of counsel to the restless mind, among the most widely memorised lines in Marathi.' },
+          { name: 'Devotion and effort', deva: 'भक्ती व प्रयत्न', desc: 'The joining of inner discipline to worldly vigour, organisation and competence — bhakti that builds.' },
+          { name: 'Rāma and Hanumān', deva: 'राम · हनुमान', desc: 'His chosen deities, and the network of maṭhas he raised around Hanumān worship to renew society.' },
+        ],
+      },
+      {
+        id: 'sant-mandali', title: 'The sant circle', deva: 'संतमंडळी', epithet: 'Janābāī, Cokhāmeḷā, Muktābāī & more',
+        meta: ['13th–17th c.', 'Across every caste and gender', 'One fellowship'],
+        summary: 'The Vārkarī tradition was never the work of a few famous men. Around them stands a whole fellowship of sants from every community and including women — Janābāī the maidservant, Cokhāmeḷā the untouchable, Muktābāī, Gorā the potter, Sāvatā the gardener, Senā the barber, Narahari the goldsmith — whose abhaṅgas are sung beside the great names to this day.',
+        opening: { deva: 'दळिता कांडिता । तुज गाईन अनंता ॥', trans: '“As I grind and pound the grain, I will sing of you, O endless one.”', cite: 'Janābāī · abhaṅga' },
+        facets: ['Janābāī · Cokhāmeḷā', 'Women sants', 'Radical equality'],
+        explanation: [
+          'What makes the Vārkarī tradition remarkable is not only its great names but the breadth of its fellowship. Around Jñāneśvar and Tukārām stands a circle of sants drawn from every layer of society, their abhaṅgas preserved and sung with equal love.',
+          'Among them are Janābāī, a maidservant in Nāmdev’s household who sang of God grinding grain at her side; Cokhāmeḷā and his family, from an untouchable community, whose verses confront the cruelty of caste from within devotion; Muktābāī, Jñāneśvar’s sister and a sant in her own right; and the artisan-saints — Gorā the potter, Sāvatā the gardener, Senā the barber, Narahari the goldsmith. That a maidservant and an outcaste are honoured alongside brahman-born poets is the tradition’s deepest claim: before Viṭṭhal there is no high and low.',
+        ],
+        aspects: [
+          { name: 'Janābāī', deva: 'जनाबाई', desc: 'The maidservant-poet of Nāmdev’s household who found God in the drudgery of grinding and sweeping.' },
+          { name: 'Cokhāmeḷā', deva: 'चोखामेळा', desc: 'The sant from an untouchable community whose abhaṅgas indict caste cruelty from within bhakti itself.' },
+          { name: 'Women sants', deva: 'स्त्री संत', desc: 'Muktābāī, Janābāī, Kānhopātrā and others — full participants and authors in a path open to women.' },
+          { name: 'Artisan saints', deva: 'बलुतेदार संत', desc: 'Gorā the potter, Sāvatā the gardener, Senā the barber, Narahari the goldsmith — devotion across every craft and caste.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Parallel Canons
   parallel: {
     title: 'Parallel Canons',
