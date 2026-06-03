@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Mandala, Glyph } from './Ornaments';
 import { ESSAYS as ESSAYS_EN } from '@/lib/data';
 import { ESSAYS as ESSAYS_MR } from '@/lib/data_mr';
 import { SUBHASHITS } from '@/lib/subhashit-data';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useRandomVerse } from '@/lib/useRandomVerse';
+import { getPanchanga, type PanchangaInfo } from '@/lib/panchanga';
 import VerseModal from './VerseModal';
 
 export function DailyStrip() {
@@ -96,6 +97,23 @@ export function Essays() {
 export function Footer() {
   const { lang, t } = useLanguage();
 
+  // Live Vikram Saṃvat year + masa, matching the header's Panchanga strip.
+  // Falls back to the static translation until the client computes it.
+  const [info, setInfo] = useState<PanchangaInfo | null>(null);
+  useEffect(() => {
+    try {
+      setInfo(getPanchanga(new Date()));
+    } catch (err) {
+      console.error('Panchanga compute failed:', err);
+    }
+  }, []);
+
+  const samvatLine = info
+    ? lang === 'mr'
+      ? `© विक्रम संवत् ${info.samvat.mr} · ${info.masa.mr}`
+      : `© Vikram Saṃvat ${info.samvat.en} · ${info.masa.en}`
+    : t('footer.samvat');
+
   return (
     <footer className="ftr">
       <div className="shell ftr-grid">
@@ -118,7 +136,7 @@ export function Footer() {
         </div>
       </div>
       <div className="shell ftr-base">
-        <span>{t('footer.samvat')}</span>
+        <span>{samvatLine}</span>
         <span>{t('footer.setin')}</span>
         <span>{t('footer.license')}</span>
       </div>

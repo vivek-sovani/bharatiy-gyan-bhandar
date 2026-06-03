@@ -93,7 +93,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'footer.sec_texts': 'Texts',
     'footer.sec_tools': 'Tools',
     'footer.sec_about': 'About',
-    'footer.samvat': '© Saṃvat 2082 · Vaiśākha',
+    'footer.samvat': '© Vikram Saṃvat 2083',
     'footer.setin': 'Set in Cormorant, Lora & Tiro Devanagari Sanskrit',
     'footer.license': 'An open archive · CC BY-SA 4.0',
     // Details
@@ -191,7 +191,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'footer.sec_texts': 'ग्रंथ संपदा',
     'footer.sec_tools': 'साधने',
     'footer.sec_about': 'माहिती',
-    'footer.samvat': '© संवत २०८२ · वैशाख',
+    'footer.samvat': '© विक्रम संवत् २०८३',
     'footer.setin': 'कॉर्मोरेंट, लोरा आणि तिरो देवनागरी संस्कृत फॉन्टमध्ये डिझाइन केलेले',
     'footer.license': 'एक खुले संग्रहण · CC BY-SA 4.0',
     // Details
