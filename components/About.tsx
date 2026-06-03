@@ -79,8 +79,7 @@ export default function About() {
                   ऋत यांसारख्या प्रत्येक कालखंडात व्यापणाऱ्या कल्पना.
                 </li>
                 <li>
-                  <a href="#dinacharya"><strong>दिनचर्येत</strong></a> दिवसाची लय पाहा, आणि नंतर{' '}
-                  <a href="#sanskrit"><strong>मार्गदर्शिका</strong></a> वाचा.
+                  <a href="#dinacharya"><strong>दिनचर्येत</strong></a> दिवसाची लय पाहा.
                 </li>
                 <li>
                   वरच्या पट्टीतून <strong>English व मराठी</strong> आणि{' '}
@@ -110,8 +109,7 @@ export default function About() {
                 </li>
                 <li>
                   See the shape of a day in{' '}
-                  <a href="#dinacharya"><strong>Dinacharya</strong></a>, then read the{' '}
-                  <a href="#sanskrit"><strong>field guides</strong></a>.
+                  <a href="#dinacharya"><strong>Dinacharya</strong></a>.
                 </li>
                 <li>
                   Switch <strong>English and मराठी</strong> and the{' '}
