@@ -543,6 +543,50 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Kāma-śāstra
+  kamashastra: {
+    title: 'Kāma-śāstra',
+    deva: 'कामशास्त्र',
+    crumb: ['Collection', 'Applied', 'Kāma-śāstra'],
+    lede: 'The science of kāma — desire, pleasure and the cultivation of a refined life, treated as one of the four legitimate aims of a human being. Vātsyāyana’s Kāma-sūtra is the central text: far less the manual of erotics its modern reputation suggests than a treatise on aesthetic living, companionship and the arts.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'kamasutra', title: 'Kāma-sūtra', deva: 'कामसूत्र', epithet: 'Vātsyāyana’s science of pleasure',
+        meta: ['Vātsyāyana Mallanāga', '7 books · 36 chapters · ~1,250 sūtras', '~3rd c. CE'],
+        summary: 'The foundational text of kāma-śāstra, composed by Vātsyāyana from a much older body of teaching he names and condenses. Its subject is kāma — desire and sensory pleasure — taken not as indulgence but as the third of the four puruṣārthas, to be pursued with the same discipline and refinement that dharma and artha demand. Of its seven books, only one treats the sexual act; the rest cover courtship, marriage, the household, the world of courtesans, and the cultivated life of the citizen.',
+        opening: { deva: 'श्रोत्रत्वक्चक्षुर्जिह्वाघ्राणानाम् आत्मसंयुक्तेन मनसाधिष्ठितानां स्वेषु विषयेष्वानुकूल्यतः प्रवृत्तिः कामः ।', trans: '“Kāma is the engagement of the ear, skin, eye, tongue and nose — each with its proper object — when directed by the mind in union with the self.”', cite: 'Kāma-sūtra · 1.2.11' },
+        facets: ['7 adhikaraṇas', 'Nāgaraka life', '64 kalās'],
+        explanation: [
+          'The Kāma-sūtra is the foundational text of kāma-śāstra, composed by Vātsyāyana Mallanāga around the third century CE. Vātsyāyana does not claim to invent the science — he names the earlier teachers (Bābhravya, Dattaka, Suvarṇanābha and others) whose larger works he is condensing. His subject is kāma — desire and sensory pleasure — treated not as something to be apologised for but as the third of the four puruṣārthas, a legitimate human aim to be pursued with the same learning, discipline and taste that dharma and artha demand.',
+          'The text’s real subject is the nāgaraka — the urbane householder whose life is organised around cultivation: the sixty-four arts (kalās) from music and painting to cookery and conversation, the care of the body, the keeping of friends and the conduct of relationships as a civilised practice rather than mere appetite. Of its seven books only one concerns the sexual act; the others treat courtship, marriage, the running of the household, the world of courtesans and the manners of the cultivated. It is among the most important sources we have for the social life, material culture and gender relations of classical urban India, and it is notable for taking women’s pleasure, education and agency seriously within the limits of its age.',
+          'A note on authorship: the Vātsyāyana of the Kāma-sūtra (Mallanāga) is, on the prevailing scholarly view, a different person from the Vātsyāyana (Pakṣilasvāmin) who wrote the Nyāya-bhāṣya catalogued under the Darśanas — separated by name, subject and probably by a century or more, though tradition sometimes runs the two together. The Kāma-sūtra was carried forward by a rich commentarial tradition, chief among them Yaśodhara’s Jayamaṅgalā.',
+        ],
+        aspects: [
+          { name: 'Kāma among the puruṣārthas', deva: 'पुरुषार्थ', desc: 'Kāma is the third of the four human aims, after dharma and artha and before mokṣa. Vātsyāyana’s rule is one of priority, not exclusion: each aim is to be cultivated in its time, and where they conflict, dharma outranks artha and artha outranks kāma.' },
+          { name: 'The nāgaraka', deva: 'नागरक', desc: 'The cultivated citizen whose day Vātsyāyana describes in detail — the well-kept house, the disciplined body, the circle of friends, and a life ordered around the arts. The Kāma-sūtra is as much a portrait of refined urban living as a treatise on desire.' },
+          { name: 'The sixty-four arts', deva: 'चतुःषष्टि कला', desc: 'The kalās a cultivated person was expected to command — music, dance, painting, garland-making, cookery, the composition of verse, conversation and many more. Mastery of the arts, not appetite alone, is what marks the practitioner of kāma.' },
+          { name: 'Seven adhikaraṇas', deva: 'सप्ताधिकरण', desc: 'The seven books: Sādhāraṇa (general principles), Sāmprayogika (union), Kanyāsamprayuktaka (courtship and marriage), Bhāryādhikārika (the wife), Pāradārika (the wives of others), Vaiśika (courtesans) and Aupaniṣadika (secret means). Only the second concerns the sexual act directly.' },
+        ],
+      },
+      {
+        id: 'jayamangala', title: 'Jayamaṅgalā', deva: 'जयमङ्गला', epithet: 'Yaśodhara’s classic commentary',
+        meta: ['Yaśodhara Indrapāda', '~13th c. CE', 'Sanskrit commentary'],
+        summary: 'Yaśodhara’s Jayamaṅgalā is the standard classical commentary on the Kāma-sūtra — the lens through which the text was read for centuries. It expands Vātsyāyana’s terse sūtras into discursive prose, identifies the older authorities he names, and preserves readings the bare text leaves obscure.',
+        facets: ['Yaśodhara', 'Standard gloss', 'Preserves readings'],
+        explanation: [
+          'Vātsyāyana wrote in sūtra form — compressed, allusive, often unintelligible without a teacher. Yaśodhara’s Jayamaṅgalā, composed probably in the thirteenth century, is the commentary that made the Kāma-sūtra readable. It unpacks the sūtras into discursive prose, identifies the earlier ācāryas whom Vātsyāyana only names, and resolves the many places where the root text is ambiguous.',
+          'The Jayamaṅgalā is the single most important aid to the Kāma-sūtra and the basis of nearly every later edition and translation, including the readings that reached European scholarship in the nineteenth century. Where modern readers meet the Kāma-sūtra, they very often meet it through Yaśodhara’s eyes.',
+        ],
+        aspects: [
+          { name: 'Sūtra into prose', deva: 'वृत्ति', desc: 'The commentary’s core work — turning Vātsyāyana’s terse, memorisable sūtras into readable, contextual exposition that a reader without a living teacher can follow.' },
+          { name: 'Naming the authorities', deva: 'पूर्वाचार्य', desc: 'Yaśodhara identifies the earlier teachers — Bābhravya, Dattaka, Suvarṇanābha and the rest — whose lost works Vātsyāyana condensed, preserving the memory of the tradition behind the text.' },
+          { name: 'Basis of the editions', deva: 'पाठ-निर्धारण', desc: 'The manuscript readings most printed editions and translations follow descend from the Jayamaṅgalā. It is the textual anchor of the entire modern Kāma-sūtra.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Kāvya & Nāṭya
   kavya: {
     title: 'Kāvya & Nāṭya',
