@@ -160,6 +160,102 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Vedānta Schools
+  'vedanta-schools': {
+    title: 'Vedānta Schools',
+    deva: 'वेदान्त संप्रदाय',
+    crumb: ['Collection', 'Darśana', 'Vedānta Schools'],
+    lede: 'Vedānta is one school, but its interpreters are many. Every ācārya writes a bhāṣya on the same prasthāna-trayī — the Upaniṣads, the Brahma-sūtra and the Gītā — yet reads the relation of self, world and Brahman differently. From Gauḍapāda’s non-origination through Śaṅkara’s non-dualism to Rāmānuja’s qualified non-dualism, Madhva’s dualism and the bhedābheda streams of Kṛṣṇa-bhakti, these are the great answers to a single question: how is the soul related to the absolute?',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'gaudapada', title: 'Gauḍapāda', deva: 'गौडपाद', epithet: 'Ajātivāda · the precursor of Advaita',
+        meta: ['c. 6th c. CE', 'Māṇḍūkya-kārikā', 'Param-guru of Śaṅkara'],
+        summary: 'The earliest systematic Advaitin whose work survives. Gauḍapāda’s Māṇḍūkya-kārikā — verse set upon the twelve mantras of the Māṇḍūkya Upaniṣad — argues ajātivāda, non-origination: nothing is ever truly born, the perceived world is dream-like, and only the non-dual fourth (turīya) is real. By tradition he is the teacher of Śaṅkara’s teacher.',
+        opening: { deva: 'न निरोधो न चोत्पत्तिर्न बद्धो न च साधकः ।\nन मुमुक्षुर्न वै मुक्त इत्येषा परमार्थता ॥', trans: '“There is no dissolution and no origination, none bound and none striving, none seeking release and none released — this is the highest truth.”', cite: 'Māṇḍūkya-kārikā · 2.32' },
+        facets: ['Ajātivāda', 'Turīya', 'Asparśa-yoga'],
+        explanation: [
+          'Gauḍapāda (c. sixth century CE) is the earliest Advaitin whose work has come down to us — the bridge between the Upaniṣads and the systematic non-dualism of Śaṅkara, who by tradition is his disciple’s disciple (parama-guru). His Māṇḍūkya-kārikā sets four chapters of verse upon the twelve mantras of the Māṇḍūkya Upaniṣad and turns the Upaniṣad’s analysis of waking, dream and deep sleep into a full metaphysics of consciousness.',
+          'His central claim is ajātivāda — the doctrine of non-origination. Causation, change and plurality are, on close analysis, no more real than the objects of a dream; what appears never genuinely comes into being, and the one non-dual reality, turīya (“the fourth”), alone is. The fourth chapter draws openly on Buddhist dialectic to press the argument, and Gauḍapāda’s exact relationship to Mādhyamaka has been debated ever since.',
+        ],
+        aspects: [
+          { name: 'Ajātivāda', deva: 'अजातिवाद', desc: 'Non-origination — nothing is ever truly born. Cause and effect, like the events of a dream, are appearance; the real neither arises nor passes away.' },
+          { name: 'The four states', deva: 'चतुष्पाद', desc: 'Waking, dream and deep sleep, with turīya as the fourth — mapped onto the three sounds A-U-M and the silence that completes Auṃ.' },
+          { name: 'Asparśa-yoga', deva: 'अस्पर्शयोग', desc: 'The “touchless” discipline — a contemplation free of all contact with objects, by which the mind rests in the non-dual.' },
+          { name: 'The dream analogy', deva: 'स्वप्न-दृष्टान्त', desc: 'The waking world is treated as no more independently real than a dream: vivid while it lasts, but not a genuine origination.' },
+        ],
+      },
+      {
+        id: 'advaita', title: 'Advaita', deva: 'अद्वैत', epithet: 'Ādi Śaṅkara · non-dualism',
+        meta: ['Ādi Śaṅkara · 788–820 CE', 'Bhāṣyas on the prasthāna-trayī', 'Four maṭhas'],
+        summary: 'Śaṅkara’s non-dualism: Brahman alone is real, the world is appearance (mithyā) superimposed on it, and the self (ātman) is identical with Brahman. He gave Advaita its decisive form in commentaries on the Upaniṣads, Brahma-sūtra and Gītā, and its institutional shape in four monasteries.',
+        opening: { deva: 'ब्रह्म सत्यं जगन्मिथ्या जीवो ब्रह्मैव नापरः ।', trans: '“Brahman is real, the world is appearance, and the self is none other than Brahman.”', cite: 'attr. Śaṅkara · Brahma-jñānāvalī-mālā' },
+        facets: ['Brahman = Ātman', 'Māyā', 'Jīvanmukti'],
+        explanation: [
+          'Advaita Vedānta is the non-dualism given decisive form by Ādi Śaṅkara (trad. 788–820 CE). Its single thesis is that Brahman — pure being-consciousness — alone is real; the manifold world is a superimposition (adhyāsa) upon that reality, neither quite real nor wholly unreal (mithyā); and the innermost self, ātman, is not a part or reflection of Brahman but identical with it. The great Upaniṣadic sentences — tat tvam asi, ahaṃ brahmāsmi — are read as direct statements of this identity.',
+          'Śaṅkara argued the position in bhāṣyas on the prasthāna-trayī (the principal Upaniṣads, the Brahma-sūtra and the Bhagavad-gītā) and in independent works such as the Upadeśasāhasrī. Liberation (mokṣa) is therefore not an attainment but a recognition — the removal of ignorance (avidyā) — and can be realised while still embodied (jīvanmukti). He gave the tradition its institutional spine by founding four maṭhas and the Daśanāmī monastic order.',
+        ],
+        aspects: [
+          { name: 'Brahman and Ātman', deva: 'ब्रह्म-आत्म-ऐक्य', desc: 'Their identity is the whole of the teaching — the self one already is, mistaken for a limited individual, is the absolute itself.' },
+          { name: 'Māyā and adhyāsa', deva: 'माया · अध्यास', desc: 'The world as a beginningless superimposition on Brahman, like silver mistakenly seen in a shell — real enough to function, unreal under analysis.' },
+          { name: 'Two levels of truth', deva: 'व्यावहारिक · पारमार्थिक', desc: 'The empirical (vyāvahārika) order in which the world operates, and the absolute (pāramārthika) order in which only Brahman is.' },
+          { name: 'Jīvanmukti', deva: 'जीवन्मुक्ति', desc: 'Liberation-in-life — since bondage is only ignorance, knowledge frees one here and now, before the body falls.' },
+        ],
+      },
+      {
+        id: 'vishishtadvaita', title: 'Viśiṣṭādvaita', deva: 'विशिष्टाद्वैत', epithet: 'Rāmānuja · qualified non-dualism',
+        meta: ['Rāmānuja · 1017–1137 CE', 'Śrī-Bhāṣya', 'Śrī Vaiṣṇavism'],
+        summary: 'Rāmānuja’s “non-dualism of the qualified whole”: reality is one, but the One is internally differentiated. Souls and matter are real and distinct, yet stand to Brahman as the body to the soul. Brahman is the personal God, Viṣṇu-Nārāyaṇa, and the path is bhakti deepened into surrender (prapatti).',
+        opening: { deva: 'सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज ।\nअहं त्वा सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः ॥', trans: '“Abandon all duties and take refuge in me alone; I will free you from all sins — do not grieve.”', cite: 'Bhagavad-gītā · 18.66 (carama-śloka)' },
+        facets: ['Śarīra-śarīri-bhāva', 'Tattva-traya', 'Prapatti'],
+        explanation: [
+          'Viśiṣṭādvaita — “non-dualism of the qualified whole” — is the theistic Vedānta founded by Rāmānuja (trad. 1017–1137 CE). It accepts that reality is ultimately one, but insists the One is internally differentiated: the individual selves (cit) and matter (acit) are fully real and distinct, yet stand to Brahman as the body stands to the soul (śarīra-śarīri-bhāva). Brahman is not the attributeless absolute of Advaita but the personal God, Viṣṇu-Nārāyaṇa, possessed of infinite auspicious qualities.',
+          'Against Śaṅkara, Rāmānuja held that the self never loses its individuality, even in liberation, and that māyā is God’s real creative power, not a veil of unreality. The path is bhakti deepened into prapatti — total loving surrender — for which the Gītā’s carama-śloka is the charter. He argued the system in the Śrī-Bhāṣya on the Brahma-sūtra and the Vedārtha-saṅgraha, and reformed temple worship at Śrīraṅgam, by tradition opening it across barriers of caste.',
+        ],
+        aspects: [
+          { name: 'Śarīra-śarīri-bhāva', deva: 'शरीर-शरीरि-भाव', desc: 'The soul–body relation: all selves and all matter form the “body” of Brahman, controlled by and existing for it, yet not identical with it.' },
+          { name: 'The three reals', deva: 'तत्त्वत्रय', desc: 'Cit (conscious selves), acit (unconscious matter) and Īśvara (God) — three eternally real categories, the last the ground of the first two.' },
+          { name: 'Prapatti', deva: 'प्रपत्ति', desc: 'Loving surrender — the accessible path of grace alongside the demanding discipline of bhakti, open to all regardless of qualification.' },
+          { name: 'Distinct yet inseparable', deva: 'अपृथक्सिद्धि', desc: 'Souls and world are distinguishable from Brahman but never found apart from it — the precise sense in which the system is still “non-dual.”' },
+        ],
+      },
+      {
+        id: 'dvaita', title: 'Dvaita', deva: 'द्वैत', epithet: 'Madhva · dualism',
+        meta: ['Madhva (Ānandatīrtha) · 1238–1317 CE', '37 works', 'Uḍupi tradition'],
+        summary: 'Madhva’s unqualified realism: God, the souls and the world are each fully and eternally real and irreducibly distinct. Systematised as the pañca-bheda — five eternal differences. Brahman is Viṣṇu, the one wholly independent reality on which all else depends; liberation is the soul’s enjoyment of its own bliss near God.',
+        opening: { deva: 'श्रीमन्मध्वमते हरिः परतरः सत्यं जगत्तत्त्वतो\nभेदो जीवगणा हरेरनुचराः नीचोच्चभावं गताः ।', trans: '“In the honoured teaching of Madhva: Hari is the supreme; the world is real; difference is real; the host of souls are servants of Hari, ranged in a hierarchy of low and high.”', cite: 'Dvaita prameya-navaka (nine tenets)' },
+        facets: ['Pañca-bheda', 'Svatantra · paratantra', 'Taratamya'],
+        explanation: [
+          'Dvaita — unqualified dualism — is the realism of Madhva, also called Ānandatīrtha (trad. 1238–1317 CE), the most uncompromising of the three great Vedānta schools. Against both Śaṅkara and Rāmānuja he held that God, the souls and the world are each fully and eternally real and irreducibly distinct. He systematised this as the pañca-bheda — five eternal differences: between God and soul, God and matter, soul and soul, soul and matter, and matter and matter.',
+          'Brahman is unambiguously the personal supreme God, Viṣṇu — wholly independent (svatantra), while everything else is dependent (paratantra). The souls are graded in a real hierarchy (taratamya), and not all are destined for release. Liberation is the soul’s enjoyment of its own innate bliss in the presence of God, won through bhakti and the grace of Vāyu, his agent. Madhva composed thirty-seven works, including bhāṣyas on the whole prasthāna-trayī, and founded the tradition centred at Uḍupi.',
+        ],
+        aspects: [
+          { name: 'Pañca-bheda', deva: 'पञ्चभेद', desc: 'The five eternal, real differences — God/soul, God/matter, soul/soul, soul/matter, matter/matter — the backbone of Madhva’s realism.' },
+          { name: 'Independent & dependent', deva: 'स्वतन्त्र · परतन्त्र', desc: 'Only Viṣṇu is svatantra, existing in his own right; all souls and all matter are paratantra, real but utterly dependent on him.' },
+          { name: 'Taratamya', deva: 'तरतम्य', desc: 'A graded hierarchy of souls — they differ intrinsically, and their destinies, including eternal bondage for some, differ accordingly.' },
+          { name: 'Supremacy of Viṣṇu', deva: 'विष्णुसर्वोत्तमत्व', desc: 'The unqualified supremacy of Viṣṇu over all gods, souls and worlds — the devotional heart of the system.' },
+        ],
+      },
+      {
+        id: 'bhedabheda', title: 'Bhedābheda streams', deva: 'भेदाभेद', epithet: 'Nimbārka · Vallabha · Caitanya',
+        meta: ['Difference-and-non-difference', 'Bhāskara · Nimbārka', 'Vallabha · Caitanya'],
+        summary: 'A family of schools holding that the self is both different and non-different from Brahman — neither the pure identity of Advaita nor the pure distinction of Dvaita. Its great theistic forms are Nimbārka’s Dvaitādvaita, Vallabha’s Śuddhādvaita and Caitanya’s Acintya-bhedābheda, each a major Kṛṣṇa-bhakti tradition.',
+        opening: { deva: 'तृणादपि सुनीचेन तरोरपि सहिष्णुना ।\nअमानिना मानदेन कीर्तनीयः सदा हरिः ॥', trans: '“Humbler than a blade of grass, more forbearing than a tree, claiming no honour yet giving it to all — so should one ceaselessly sing the name of Hari.”', cite: 'Śikṣāṣṭaka · 3 (Caitanya)' },
+        facets: ['Dvaitādvaita', 'Śuddhādvaita', 'Acintya-bhedābheda'],
+        explanation: [
+          'Between the poles of Advaita and Dvaita lies a whole family of bhedābheda (“difference-and-non-difference”) positions, which hold that the soul and the world are at once distinct from and identical with Brahman — as waves are to the sea, or sparks to the fire. The earliest systematic exponent is Bhāskara (9th c.). The position is congenial to devotion, because it lets the devotee remain real enough to love God while never being finally cut off from him.',
+          'Its great theistic flowerings are all Kṛṣṇa-centred: Nimbārka’s Dvaitādvaita (difference and non-difference held together as equally real), Vallabha’s Śuddhādvaita (“pure non-dualism,” the world a real transformation of Brahman, with the Puṣṭimārga path of grace), and Caitanya’s Acintya-bhedābheda — “inconceivable difference-and-non-difference,” the theology behind Gauḍīya Vaiṣṇavism and its ecstatic saṅkīrtana. Together they carried Vedānta into the heart of the bhakti movement.',
+        ],
+        aspects: [
+          { name: 'Dvaitādvaita', deva: 'द्वैताद्वैत', desc: 'Nimbārka’s school — difference and non-difference are both real and simultaneous, the soul a distinct part wholly dependent on Kṛṣṇa.' },
+          { name: 'Śuddhādvaita', deva: 'शुद्धाद्वैत', desc: 'Vallabha’s “pure non-dualism” — the world is a real, unmodified manifestation of Brahman; release comes by the Puṣṭimārga, the path of divine grace (puṣṭi).' },
+          { name: 'Acintya-bhedābheda', deva: 'अचिन्त्यभेदाभेद', desc: 'Caitanya’s teaching — the soul’s difference-and-non-difference from God is real but inconceivable, beyond the reach of logic and known in devotion.' },
+          { name: 'Bhakti as the path', deva: 'भक्तिमार्ग', desc: 'Across these streams loving devotion, not bare knowledge, is the heart of Vedānta — the philosophy that fed the Kṛṣṇa-bhakti movements of the north and east.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Agamas
   agamas: {
     title: 'Āgamas & Tantra',

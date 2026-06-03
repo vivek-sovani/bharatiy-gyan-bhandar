@@ -733,7 +733,7 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'अद्वैत वेदान्त',
     blurb: 'Bhāṣyas on the Upaniṣads, Brahma-Sūtra and Gītā (the prasthāna-trayī), and the four maṭhas at the four corners of the subcontinent — Advaita made institutional.',
     works: ['Brahma-Sūtra Bhāṣya', 'Vivekacūḍāmaṇi', 'Four maṭhas'],
-    href: '/darshanas/',
+    href: '/vedanta-schools/',
     detail: {
       intro:
         'Ādi Śaṅkara, in a life traditionally said to have lasted only thirty-two years, gave Advaita Vedānta its decisive philosophical form and its lasting institutional shape. He is the most influential of all the Vedānta ācāryas.',
@@ -786,7 +786,7 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'विशिष्टाद्वैत वेदान्त',
     blurb: 'The Śrī-Bhāṣya argues that the soul is real and distinct yet inseparable from God. Reformed Śrīraṅgam temple worship and opened it across caste.',
     works: ['Śrī-Bhāṣya', 'Vedārtha-Saṅgraha', 'Gītā-Bhāṣya'],
-    href: '/darshanas/',
+    href: '/vedanta-schools/',
     detail: {
       intro:
         'Rāmānuja is the founder of Viśiṣṭādvaita (“qualified non-dualism”) and the greatest philosopher of the theistic Vedānta tradition. Against Śaṅkara’s austere monism he argued for a personal God in whom souls and the world are real, distinct, yet wholly dependent.',
@@ -814,7 +814,7 @@ export const CONTRIBUTORS: Contributor[] = [
     traditionDeva: 'द्वैत वेदान्त',
     blurb: 'Pure dualism: God, soul and world are each fully real and irreducibly distinct. Thirty-seven works including bhāṣyas on every text of the prasthāna-trayī.',
     works: ['Brahma-Sūtra Bhāṣya', 'Anuvyākhyāna'],
-    href: '/darshanas/',
+    href: '/vedanta-schools/',
     detail: {
       intro:
         'Madhva, also called Ānandatīrtha, is the founder of Dvaita (“dualist”) Vedānta — the most uncompromising of the three great Vedānta schools. Against both Śaṅkara and Rāmānuja he held that God, souls and the world are each fully and eternally real and irreducibly distinct.',
