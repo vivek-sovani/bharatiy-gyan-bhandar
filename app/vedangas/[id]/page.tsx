@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
+import { Footer } from '@/components/Frames';
 import VedangaDetailView from '@/components/VedangaDetail';
 import { VEDANGAS_DETAILS } from '@/lib/vedangas-data';
 
@@ -37,6 +38,7 @@ export default async function VedangaPage({
     <>
       <Header />
       <VedangaDetailView id={id} />
+      <Footer />
     </>
   );
 }

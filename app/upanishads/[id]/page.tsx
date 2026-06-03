@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
+import { Footer } from '@/components/Frames';
 import UpanishadDetailView from '@/components/UpanishadDetail';
 import { UPANISHADS_DETAILS } from '@/lib/upanishads-data';
 
@@ -37,6 +38,7 @@ export default async function UpanishadPage({
     <>
       <Header />
       <UpanishadDetailView id={id} />
+      <Footer />
     </>
   );
 }

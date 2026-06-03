@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
+import { Footer } from '@/components/Frames';
 import ItihasaDetailView from '@/components/ItihasaDetail';
 import { ITIHASA_DETAILS } from '@/lib/itihasa-data';
 
@@ -37,6 +38,7 @@ export default async function ItihasaPage({
     <>
       <Header />
       <ItihasaDetailView id={id} />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
+import { Footer } from '@/components/Frames';
 import UpavedaDetailView from '@/components/UpavedaDetail';
 import { UPAVEDAS_DETAILS } from '@/lib/upavedas-data';
 
@@ -37,6 +38,7 @@ export default async function UpavedaPage({
     <>
       <Header />
       <UpavedaDetailView id={id} />
+      <Footer />
     </>
   );
 }

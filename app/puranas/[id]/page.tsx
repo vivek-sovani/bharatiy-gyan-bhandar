@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
+import { Footer } from '@/components/Frames';
 import PuranaDetailView from '@/components/PuranaDetail';
 import { PURANAS_DETAILS } from '@/lib/puranas-data';
 
@@ -37,6 +38,7 @@ export default async function PuranaPage({
     <>
       <Header />
       <PuranaDetailView id={id} />
+      <Footer />
     </>
   );
 }

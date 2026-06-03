@@ -6,7 +6,7 @@ import About from '@/components/About';
 import SectionsGrid from '@/components/SectionsGrid';
 import Contributors from '@/components/Contributors';
 import Concepts from '@/components/Concepts';
-import { DailyStrip } from '@/components/Frames';
+import { DailyStrip, Footer } from '@/components/Frames';
 
 export default function Home() {
   return (
@@ -18,6 +18,7 @@ export default function Home() {
       <SectionsGrid />
       <Contributors />
       <Concepts />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
+import { Footer } from '@/components/Frames';
 import AgamaDetailView from '@/components/AgamaDetail';
 import { AGAMAS_DETAILS } from '@/lib/agamas-data';
 
@@ -37,6 +38,7 @@ export default async function AgamaPage({
     <>
       <Header />
       <AgamaDetailView id={id} />
+      <Footer />
     </>
   );
 }
