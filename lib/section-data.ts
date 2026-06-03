@@ -256,6 +256,102 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Philosophy of Language
+  'language-philosophy': {
+    title: 'Philosophy of Language',
+    deva: 'शब्ददर्शनम्',
+    crumb: ['Collection', 'Darśana', 'Philosophy of Language'],
+    lede: 'Alone among the world’s traditions, India made grammar a path to liberation and the word itself a name for the absolute. Out of the Sanskrit grammarians — Pāṇini, Kātyāyana, Patañjali — grew a whole philosophy of language, brought to its height in Bhartṛhari’s Vākyapadīya: that reality is śabda-brahman, the Word-Absolute; that meaning is grasped not piece by piece but in a single flash (sphoṭa); and that correct speech is itself a discipline of the spirit.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'bhartrihari', title: 'Bhartṛhari & the Vākyapadīya', deva: 'भर्तृहरि', epithet: 'The grammarian-philosopher',
+        meta: ['c. 5th c. CE', 'Vākyapadīya · 3 kāṇḍas', 'Śabda-brahman'],
+        summary: 'The founding text of Indian philosophy of language. Bhartṛhari’s Vākyapadīya (“on the sentence and the word”) argues that the ultimate reality is itself of the nature of language — śabda-brahman — and that the world unfolds from it as its appearance. Note: this Bhartṛhari the grammarian is, on the usual view, distinct from the Bhartṛhari of the Śataka verses.',
+        opening: { deva: 'अनादिनिधनं ब्रह्म शब्दतत्त्वं यदक्षरम् ।\nविवर्ततेऽर्थभावेन प्रक्रिया जगतो यतः ॥', trans: '“The Brahman, without beginning or end, whose essence is the Word, the imperishable — it appears as objects, and from it proceeds the unfolding of the world.”', cite: 'Vākyapadīya · 1.1' },
+        facets: ['Śabda-brahman', 'Three kāṇḍas', 'Levels of speech'],
+        explanation: [
+          'The Vākyapadīya of Bhartṛhari (c. 5th century CE) is the foundational work of the Indian philosophy of language — the vyākaraṇa-darśana, the “philosophy of grammar.” It grows out of the grammatical tradition of Pāṇini and Patañjali but turns their technical science into a metaphysics: its very first verse identifies the absolute, Brahman, with śabda-tattva, the principle of the Word, and describes the world as its vivarta, its appearance, much as Advaita describes the world as the appearance of Brahman.',
+          'The work is in three books (kāṇḍas): the Brahma-kāṇḍa on the Word-Absolute, the Vākya-kāṇḍa on the sentence, and the Pada-kāṇḍa on words and their constituents. Among its lasting contributions is the doctrine of the three levels of speech — vaikharī (audible, articulated speech), madhyamā (the mental, “middle” word) and paśyantī (the “seeing” word, language at its source, undivided) — a scheme later taken deep into Tantra and Kashmir Śaivism. (The grammarian Bhartṛhari is generally held to be a different person from the poet of the Nīti-, Śṛṅgāra- and Vairāgya-śatakas catalogued under the Subhāṣitas.)',
+        ],
+        aspects: [
+          { name: 'Śabda-brahman', deva: 'शब्दब्रह्म', desc: 'The thesis that the absolute is itself of the nature of the Word — language is not a tool laid over reality but its very ground.' },
+          { name: 'The three kāṇḍas', deva: 'त्रिकाण्डी', desc: 'Brahma-kāṇḍa (the Word-Absolute), Vākya-kāṇḍa (the sentence) and Pada-kāṇḍa (words) — the architecture of the Vākyapadīya.' },
+          { name: 'Levels of speech', deva: 'वैखरी · मध्यमा · पश्यन्ती', desc: 'Speech at three depths — audible (vaikharī), mental (madhyamā) and the undivided source (paśyantī) — a scheme that passed into Tantra.' },
+          { name: 'Vivarta', deva: 'विवर्त', desc: 'The world as the appearance of the Word-Absolute — a transformation only in seeming, the model Advaita Vedānta would also use.' },
+        ],
+      },
+      {
+        id: 'shabda-brahman', title: 'Śabda-brahman & Sphoṭa', deva: 'स्फोट', epithet: 'Word, meaning and the flash of sense',
+        meta: ['Vākyapadīya doctrine', 'Sphoṭa · śabdādvaita', 'Word-permeated cognition'],
+        summary: 'Two ideas at the heart of the tradition. Śabdādvaita: there is no thought without language — all awareness is shot through with words. And sphoṭa: the unit of meaning is not the sequence of sounds but a single indivisible “burst,” grasped whole in a flash of understanding once the last syllable falls.',
+        opening: { deva: 'न सोऽस्ति प्रत्ययो लोके यः शब्दानुगमादृते ।\nअनुविद्धमिव ज्ञानं सर्वं शब्देन भासते ॥', trans: '“There is no cognition in the world that is free of the word; all knowledge shines as if interwoven with language.”', cite: 'Vākyapadīya · 1.131' },
+        facets: ['Sphoṭa', 'Śabdādvaita', 'Pratibhā'],
+        explanation: [
+          'If the absolute is the Word, then language is not added to thought from outside — it is the medium of thought itself. This is śabdādvaita, the “non-dualism of the word”: Bhartṛhari argues that no cognition arises wholly free of language; even an infant’s or an animal’s awareness is permeated by an inarticulate word. Knowledge and language are not two things but one, shining together.',
+          'From this follows his most influential technical doctrine, sphoṭa (“bursting forth”). When we hear a word, we hear a succession of sounds, each vanishing as the next arrives — yet the meaning is one and indivisible. Bhartṛhari argues the meaning cannot reside in the fleeting sounds themselves; rather they progressively reveal a single, partless meaning-whole, the sphoṭa, which “bursts” upon the mind in a flash of comprehension (pratibhā) when the utterance completes. The sphoṭa doctrine became one of the great debates of Indian philosophy, contested for centuries by the Mīmāṃsakas and Naiyāyikas.',
+        ],
+        aspects: [
+          { name: 'Sphoṭa', deva: 'स्फोट', desc: 'The single, indivisible meaning-whole that the sequence of sounds reveals — meaning grasped entire, not assembled from parts.' },
+          { name: 'Śabdādvaita', deva: 'शब्दाद्वैत', desc: 'The non-dualism of the word — no awareness is ever wholly without language; thought and speech are one reality.' },
+          { name: 'Pratibhā', deva: 'प्रतिभा', desc: 'The intuitive flash in which the meaning of a whole sentence dawns at once, beyond the mere addition of word-meanings.' },
+          { name: 'The great debate', deva: 'स्फोटवाद', desc: 'The centuries-long contest over sphoṭa — defended by the grammarians, attacked by Mīmāṃsā and Nyāya — one of the deepest in Indian thought.' },
+        ],
+      },
+      {
+        id: 'grammar-liberation', title: 'Grammar as a Path to Mokṣa', deva: 'व्याकरणयोगः', epithet: 'The purification of speech',
+        meta: ['Vākyapadīya · 1.14', 'Correct speech as discipline', 'Apaśabda & merit'],
+        summary: 'India’s most distinctive claim about language: that grammar is not merely a tool of analysis but a spiritual discipline. To use words correctly is to purify speech, and the purification of speech is held to be a gateway to liberation — the “supreme science” that cleanses all the others.',
+        opening: { deva: 'तद्द्वारमपवर्गस्य वाङ्मलानां चिकित्सितम् ।\nपवित्रं सर्वविद्यानामधिविद्यं प्रकाशते ॥', trans: '“It is the doorway to liberation, the cure for the impurities of speech, the purifier of all knowledge — the supreme science shines forth.”', cite: 'Vākyapadīya · 1.14' },
+        facets: ['Apavarga', 'Śabda-pūrva-yoga', 'Correct usage'],
+        explanation: [
+          'Where other traditions treat grammar as a preliminary, the Indian grammarians made it a path. Bhartṛhari calls vyākaraṇa the “doorway to liberation” (apavarga) and the “supreme science” (adhividyā) that purifies all the rest. The reasoning is direct: if reality is the Word, then to know and use words rightly is to come into accord with the structure of reality itself; the discipline of correct speech, and the inner contemplation of the Word behind it (śabda-pūrva-yoga), is a genuine sādhana.',
+          'This is why the grammarians took the distinction between the correct word (śabda) and the corrupt form (apaśabda) so seriously — not as mere pedantry but as a matter of spiritual hygiene. Patañjali’s Mahābhāṣya already says that a single word, perfectly known and rightly used, fulfils every desire; Bhartṛhari raises this to a metaphysics in which the mastery of language is the mastery of the self.',
+        ],
+        aspects: [
+          { name: 'Apavarga', deva: 'अपवर्ग', desc: 'Liberation — held by the grammarians to be reached, in part, through the right knowledge and use of language.' },
+          { name: 'Purifying speech', deva: 'वाङ्मल-चिकित्सा', desc: 'Grammar as the “cure for the impurities of speech” — correct usage as a discipline that refines the speaker.' },
+          { name: 'Śabda-pūrva-yoga', deva: 'शब्दपूर्वयोग', desc: 'The contemplative discipline of resting in the Word that underlies all speech — grammar turned inward into yoga.' },
+          { name: 'Śabda & apaśabda', deva: 'शब्द · अपशब्द', desc: 'The careful distinction of the correct word from the corrupt form — taken as a matter of merit, not mere correctness.' },
+        ],
+      },
+      {
+        id: 'mahabhashya', title: 'Patañjali’s Mahābhāṣya', deva: 'महाभाष्य', epithet: 'The “great commentary”',
+        meta: ['Patañjali · c. 2nd c. BCE', 'On Pāṇini & Kātyāyana', 'The trimuni'],
+        summary: 'The foundation on which the whole philosophy of language stands. Patañjali’s Mahābhāṣya — the “great commentary” on Pāṇini’s grammar and Kātyāyana’s critical notes — is far more than a grammar: in its discursive, almost conversational style it raises and settles deep questions about the word, its meaning, and the eternity of language.',
+        opening: { deva: 'एकः शब्दः सम्यग्ज्ञातः सुप्रयुक्तः स्वर्गे लोके च कामधुग् भवति ।', trans: '“A single word, perfectly understood and rightly used, becomes a wish-granting cow in heaven and on earth.”', cite: 'Mahābhāṣya · Paspaśāhnika' },
+        facets: ['Trimuni', 'Paspaśāhnika', 'Nitya-śabda'],
+        explanation: [
+          'Patañjali’s Mahābhāṣya (c. 2nd century BCE) is the great commentary on Pāṇini’s Aṣṭādhyāyī and on Kātyāyana’s vārttikas (critical annotations). Together these three — Pāṇini, Kātyāyana, Patañjali — are honoured as the trimuni, the “three sages” whose word is final in grammar, the later in authority outranking the earlier. But the Mahābhāṣya is no dry gloss: written in a lively dialogue of objection and reply, it continually opens out into philosophy.',
+          'Its famous opening section, the Paspaśāhnika (“introduction”), asks why one should study grammar at all, and answers with arguments that shaped everything after: that the relationship of word and meaning is fixed and eternal (nitya), that śabda is permanent rather than produced, and that the correct use of even a single word carries merit. Bhartṛhari’s Vākyapadīya is, in large part, the metaphysical unfolding of seeds already present in Patañjali’s text.',
+        ],
+        aspects: [
+          { name: 'The trimuni', deva: 'त्रिमुनि', desc: 'Pāṇini, Kātyāyana and Patañjali — the “three sages” of grammar, whose authority is final, the later overruling the earlier.' },
+          { name: 'Paspaśāhnika', deva: 'पस्पशाह्निक', desc: 'The celebrated introduction asking why grammar should be studied — the seedbed of the whole philosophy of language.' },
+          { name: 'Eternity of the word', deva: 'नित्य-शब्द', desc: 'The doctrine that śabda and its bond with meaning are permanent and uncreated, not made by convention alone.' },
+          { name: 'Word as wish-cow', deva: 'कामधुक्', desc: 'The Mahābhāṣya’s image — one word, perfectly known and used, yields every desired fruit, in this world and beyond.' },
+        ],
+      },
+      {
+        id: 'vaiyakarana-legacy', title: 'The Grammarian Legacy', deva: 'वैयाकरणपरम्परा', epithet: 'Nāgeśa, the poets & the tantras',
+        meta: ['Kauṇḍa Bhaṭṭa · Nāgeśa', '17th–18th c.', 'Influence across darśanas'],
+        summary: 'The philosophy of grammar did not end with Bhartṛhari. It was revived in the navya (“new”) grammar of Kauṇḍa Bhaṭṭa and Nāgeśa Bhaṭṭa, sharpened against the logicians, and its ideas — sphoṭa, the levels of speech, śabda-brahman — flowed outward into poetics, Vedānta and Tantra.',
+        opening: { deva: 'यद्यपि बहु नाधीषे तथापि पठ पुत्र व्याकरणम् ।\nस्वजनो श्वजनो मा भूत् सकलं शकलं सकृत् शकृत् ॥', trans: '“Even if you study little else, study grammar, my son — lest svajana (kinsman) become śvajana (a dog), sakala (whole) become śakala (a fragment), sakṛt (once) become śakṛt (dung).”', cite: 'classical subhāṣita' },
+        facets: ['Navya-vyākaraṇa', 'Nāgeśa Bhaṭṭa', 'Cross-influence'],
+        explanation: [
+          'After Bhartṛhari the philosophy of grammar had a long afterlife. In the seventeenth and eighteenth centuries it was reborn as navya-vyākaraṇa, the “new grammar,” in the hands of Kauṇḍa Bhaṭṭa (the Vaiyākaraṇa-bhūṣaṇa) and above all Nāgeśa Bhaṭṭa, whose Vaiyākaraṇa-siddhānta-mañjūṣā restated the grammarians’ theory of meaning with new rigour, defending sphoṭa against the now-dominant Navya-Nyāya logicians.',
+          'The grammarians’ ideas also travelled far beyond grammar. The theory of suggestion (dhvani) in poetics drew on their analysis of meaning; Advaita Vedānta borrowed the model of vivarta; and the doctrine of the three levels of speech — paśyantī, madhyamā, vaikharī — became central to the mantra-theory of Tantra and Kashmir Śaivism. The little verse on the perils of bad grammar, with its puns turning a kinsman into a dog, is the tradition’s own light-hearted reminder of how much can ride on a single sound.',
+        ],
+        aspects: [
+          { name: 'Navya-vyākaraṇa', deva: 'नव्यव्याकरण', desc: 'The “new grammar” of Kauṇḍa Bhaṭṭa and Nāgeśa Bhaṭṭa, restating the theory of meaning against the Navya-Nyāya logicians.' },
+          { name: 'Nāgeśa Bhaṭṭa', deva: 'नागेशभट्ट', desc: 'The great early-modern grammarian whose Mañjūṣā and Laghu-mañjūṣā are the classic late statements of the vyākaraṇa-darśana.' },
+          { name: 'Into poetics & Vedānta', deva: 'ध्वनि · विवर्त', desc: 'The grammarians’ analysis of meaning fed the dhvani theory of poetics and the vivarta model of Advaita Vedānta.' },
+          { name: 'Into Tantra', deva: 'मन्त्रशास्त्र', desc: 'The three levels of speech became foundational to the mantra-theory of Tantra and Kashmir Śaivism.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Tantra & Āgama Texts
   'tantra-texts': {
     title: 'Tantra & Āgama Texts',
