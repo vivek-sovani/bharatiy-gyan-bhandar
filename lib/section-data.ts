@@ -352,6 +352,115 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Yantra & Maṇḍala
+  'yantra': {
+    title: 'Yantra & Maṇḍala',
+    deva: 'यन्त्रम्',
+    crumb: ['Collection', 'Tantra', 'Yantra & Maṇḍala'],
+    lede: 'A yantra is a diagram that is also a deity — a geometry in which a god is made present, worshipped and meditated upon. Where the mantra is sacred sound, the yantra is sacred form; together with the deity they are held to be one. From the great Śrī Yantra of nine interlocking triangles to the cosmogram of the maṇḍala and the square grid beneath every temple, this is the Indic science of sacred geometry — the point become the cosmos, drawn in line and worshipped as a living presence.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'yantra', title: 'The Yantra', deva: 'यन्त्र', epithet: 'Sacred form, mantra made visible',
+        meta: ['Geometry as deity', 'Yantra · mantra · devatā', 'Worship & meditation'],
+        summary: 'A yantra is a precise geometric diagram used in worship and meditation, held to be the very body and abode of a deity. In the tantric understanding the three — the yantra (form), the mantra (sound) and the devatā (deity) — are not three things but one: to draw and worship the yantra is to make the god present.',
+        opening: { deva: 'यन्त्रं मन्त्रमयं प्रोक्तं देवता मन्त्ररूपिणी ।', trans: '“The yantra is said to be made of mantra, and the deity too is of the very nature of mantra.”', cite: 'tantric maxim' },
+        facets: ['Yantra–mantra–devatā', 'Bindu to cosmos', 'Consecrated form'],
+        explanation: [
+          'A yantra (“instrument, contrivance”) is a geometric diagram — typically built of a central point, triangles, lotus-petals, circles and an enclosing square with gates — used as the support of worship and meditation. It is not a symbol that merely points to a deity; in tantric thought the yantra is the deity, its subtle body made visible in line. The same teaching that holds the mantra to be the sound-form of a god holds the yantra to be its form-form: yantra, mantra and devatā are a single reality in three modes.',
+          'Because of this, a yantra must be drawn with exact proportions and then consecrated (prāṇa-pratiṣṭhā, the “installing of breath”) before it is alive for worship; an incorrectly drawn or unconsecrated yantra is held to be inert or even harmful. Yantras are inscribed on metal, stone, crystal or birch-bark, drawn in coloured powders for a rite, or visualised inwardly in meditation. The folk rangoli at the threshold is the popular, ephemeral cousin of this exacting sacred geometry.',
+        ],
+        aspects: [
+          { name: 'Yantra–mantra–devatā', deva: 'त्रिकम्', desc: 'The core doctrine — the diagram (form), the mantra (sound) and the deity are one; the yantra is the god’s very body in line.' },
+          { name: 'Exact proportion', deva: 'मान', desc: 'A yantra’s power depends on precise construction — its triangles, circles and gates drawn to fixed measure, never approximately.' },
+          { name: 'Consecration', deva: 'प्राणप्रतिष्ठा', desc: 'The “installing of breath” that brings a drawn yantra to life; until consecrated it is held to be inert.' },
+          { name: 'Supports of worship', deva: 'आधार', desc: 'Engraved on metal or crystal, drawn in powder for a rite, or visualised within — the yantra as the seat of the deity.' },
+        ],
+      },
+      {
+        id: 'sri-yantra', title: 'The Śrī Yantra', deva: 'श्रीयन्त्र', epithet: 'The queen of yantras',
+        meta: ['Śrī Cakra · Śrī-vidyā', '9 triangles → 43', 'Tripura-sundarī'],
+        summary: 'The most celebrated and intricate of all yantras — nine interlocking triangles, four pointing up for Śiva and five down for Śakti, interlacing into forty-three smaller triangles around a central point. Ringed by lotuses and the earth-square, the Śrī Cakra is the yantra of the goddess Tripura-sundarī and the heart of the Śrī-vidyā tradition.',
+        opening: { deva: 'चतुर्भिः श्रीकण्ठैः शिवयुवतिभिः पञ्चभिरपि\nप्रभिन्नाभिः शम्भोर्नवभिरपि मूलप्रकृतिभिः ।', trans: '“By four Śiva-triangles and five of the Goddess — nine primal triangles in all, distinct from Śambhu — your abode, O Devī, is formed, with its forty-four corners, lotus-rings and bounding lines.”', cite: 'Saundarya-laharī · 11' },
+        facets: ['Nine triangles', 'Navāvaraṇa', 'Bindu'],
+        explanation: [
+          'The Śrī Yantra (or Śrī Cakra, “the auspicious wheel”) is the supreme yantra of the Indic tradition. At its centre is the bindu, the dimensionless point from which all manifestation issues. Around it interlace nine large triangles — four upward, the male principle of Śiva, and five downward, the female Śakti — whose interpenetration generates a figure of forty-three smaller triangles. This is enclosed by two rings of lotus petals (eight and sixteen) and finally by the bhūpura, the square “earth-stretch” with four gates.',
+          'The whole is read as nine concentric enclosures, the navāvaraṇa, through which the worshipper moves inward in meditation — from the outer square to the central point — retracing the path from the manifest cosmos back to its source, and outward again as the source becoming the cosmos. The Śrī Yantra is the geometric body of the goddess Tripura-sundarī and the object of Śrī-vidyā worship; Śaṅkara’s Saundarya-laharī gives, in its eleventh verse, the classic description of its construction.',
+        ],
+        aspects: [
+          { name: 'Nine triangles', deva: 'नवयोनि', desc: 'Four upward (Śiva) and five downward (Śakti), interlacing — the union of consciousness and energy from which the figure is born.' },
+          { name: 'The bindu', deva: 'बिन्दु', desc: 'The central, dimensionless point — the source of all manifestation and the goal of the inward meditation.' },
+          { name: 'Navāvaraṇa', deva: 'नवावरण', desc: 'The nine concentric enclosures through which worship proceeds, from the outer square to the central bindu and back.' },
+          { name: 'Forty-three triangles', deva: 'त्रिचत्वारिंशत्', desc: 'The web of smaller triangles produced by the nine — each the seat of a goddess in the full ritual of the Śrī Cakra.' },
+        ],
+      },
+      {
+        id: 'bindu-trikona', title: 'Bindu & the Sacred Triangle', deva: 'बिन्दु-त्रिकोण', epithet: 'The grammar of the diagram',
+        meta: ['Point · triangle · square', 'Sṛṣṭi & saṃhāra', 'Geometry as metaphysics'],
+        summary: 'Every yantra is built from a small alphabet of forms, each carrying meaning. The bindu is the origin; the upward triangle is Śiva and fire, the downward triangle Śakti and water; their union makes the hexagram. Lotuses mark unfolding, and the square bhūpura with its gates is the earth. To read a yantra is to read a metaphysics in line.',
+        facets: ['Bindu · origin', 'Triangle · Śiva-Śakti', 'Bhūpura · the gates'],
+        explanation: [
+          'The forms of a yantra are a visual language. At the centre stands the bindu, the point — partless, dimensionless, the concentrated origin of all that follows, identified with the supreme consciousness before it divides into subject and object. From the point comes the line, and from the line the first enclosed shape: the triangle. The triangle pointing upward (śikhara) is the masculine principle, Śiva, fire, aspiration; the triangle pointing downward (the yoni, the “shakti-koṇa”) is the feminine, water, descent. Their interpenetration — the six-pointed star — is the union of the two from which the world is born.',
+          'Around this core the diagram expands outward through lotus-rings, signifying the unfolding of life and consciousness, to the bhūpura — the square “earth-stretch” with four T-shaped gates facing the directions, the boundary that fixes the sacred space within the ordinary world. Read from the centre out, the yantra is sṛṣṭi, creation, the point becoming the cosmos; read from the boundary in, it is saṃhāra, the return of the many to the One. The same geometry thus maps both the structure of reality and the path of the meditator through it.',
+        ],
+        aspects: [
+          { name: 'Bindu', deva: 'बिन्दु', desc: 'The point — origin and end, the undivided consciousness from which the diagram and the cosmos both unfold.' },
+          { name: 'The two triangles', deva: 'शिव-शक्ति-कोण', desc: 'Upward Śiva (fire, aspiration) and downward Śakti (water, descent); their union is the hexagram, the world arising.' },
+          { name: 'Lotus and unfolding', deva: 'पद्म', desc: 'Rings of petals marking the unfolding of life and consciousness between the centre and the boundary.' },
+          { name: 'Bhūpura', deva: 'भूपुर', desc: 'The square earth-enclosure with four gates — the boundary that consecrates the space and orients it to the directions.' },
+        ],
+      },
+      {
+        id: 'mandala', title: 'The Maṇḍala', deva: 'मण्डल', epithet: 'The cosmogram and the deity’s palace',
+        meta: ['Hindu & Buddhist', 'Coloured-powder rite', 'Made and dissolved'],
+        summary: 'Where the yantra is usually linear and abstract, the maṇḍala (“circle”) is a fuller cosmogram — typically a circle enclosing a square “palace” with four gates, in which a deity and its retinue are installed. Central to both Hindu and Buddhist (Vajrayāna) tantra, it is often built in coloured powder for a single rite and then ceremonially swept away.',
+        facets: ['Circle & palace', 'Deity & retinue', 'Construction & dissolution'],
+        explanation: [
+          'A maṇḍala is a ritual diagram of the cosmos centred on a deity — most often a circle enclosing a square palace (the vimāna) with four gates opening to the directions, and within it the seat of the central god surrounded by an ordered retinue of attendant deities. It is at once a map of the universe and the floor-plan of a divine residence; to enter it in meditation or rite is to move from the periphery of ordinary existence toward the sacred centre.',
+          'The maṇḍala is shared across Hindu and Buddhist tantra, where in the Vajrayāna it reached extraordinary elaboration — the great sand maṇḍalas built grain by grain over days by teams of monks and then, their rite complete, deliberately destroyed, the coloured sand poured into running water. That making-and-dissolution enacts the tantric truth the whole science of sacred geometry teaches: that all form arises from and returns to the formless, and that the diagram, however perfect, is a means and not the end.',
+        ],
+        aspects: [
+          { name: 'Circle and palace', deva: 'वृत्त-प्रासाद', desc: 'The typical structure — an outer circle enclosing a square divine palace with four directional gates.' },
+          { name: 'Deity and retinue', deva: 'परिवार-देवता', desc: 'The central god seated within, surrounded by an ordered hierarchy of attendant deities, each in its place.' },
+          { name: 'Made and unmade', deva: 'सृष्टि-संहार', desc: 'Often built in coloured sand or powder for one rite and then dissolved — form arising from and returning to the formless.' },
+          { name: 'Hindu & Buddhist', deva: 'साझा परम्परा', desc: 'A sacred technology shared across traditions, brought to its height in the sand maṇḍalas of Vajrayāna Buddhism.' },
+        ],
+      },
+      {
+        id: 'vastu-mandala', title: 'Vāstu-puruṣa-maṇḍala', deva: 'वास्तुपुरुषमण्डल', epithet: 'The grid beneath the temple',
+        meta: ['Sthāpatya-veda', 'Cosmic man in a square', 'Temple & house plan'],
+        summary: 'The maṇḍala that underlies architecture. Before a temple or house is built, its ground is laid out as a square grid in which the Vāstu-puruṣa — the cosmic “site-man” — lies pinned, his body apportioned among the presiding deities. This sacred diagram orients the building, fixes the place of the sanctum, and makes the structure itself a yantra.',
+        facets: ['Square grid', 'Vāstu-puruṣa', 'Orientation'],
+        explanation: [
+          'Indic architecture begins not with a wall but with a diagram. The vāstu-puruṣa-maṇḍala is a square divided into a grid of smaller squares (commonly 8×8 or 9×9), on which is mapped the body of the Vāstu-puruṣa — a primordial being who, in the myth, was pinned face-down to the earth by the gods, each holding down a part of him and so taking his station in the grid. Brahmā occupies the centre; the guardians of the directions and a host of lesser deities hold the border squares.',
+          'This maṇḍala governs the whole act of building. It orients the structure to the cardinal directions, fixes the centre (the brahmasthāna, kept open) and the place of the sanctum, and assigns every zone its proper use according to the deity that rules it. A temple raised on this plan is not merely decorated with sacred geometry; its very ground-plan is a yantra, the building a three-dimensional diagram of the cosmos with the deity at its heart. It is the point at which the science of the yantra meets the Sthāpatya-veda.',
+        ],
+        aspects: [
+          { name: 'The site-man', deva: 'वास्तुपुरुष', desc: 'The cosmic being pinned to the building-ground, his body apportioned among the gods who hold the squares of the grid.' },
+          { name: 'Brahmasthāna', deva: 'ब्रह्मस्थान', desc: 'The central square, seat of Brahmā, kept open and unbuilt — the still heart of the plan.' },
+          { name: 'Orientation', deva: 'दिग्विभाग', desc: 'The grid fixes the building’s alignment to the directions and assigns each zone its deity and proper use.' },
+          { name: 'Building as yantra', deva: 'स्थापत्य-यन्त्र', desc: 'The temple’s ground-plan is itself a yantra — the meeting-point of sacred geometry and Sthāpatya-veda.' },
+        ],
+      },
+      {
+        id: 'ritual-yantras', title: 'Ritual & Protective Yantras', deva: 'पूज्ययन्त्राणि', epithet: 'Deities, planets and the worn amulet',
+        meta: ['Navagraha · deity yantras', 'Bīja-mantras inscribed', 'Kavaca & amulet'],
+        summary: 'Beyond the great Śrī Yantra lies a whole working repertoire of yantras for particular ends — diagrams for each deity, for the nine planets (navagraha), and protective yantras (kavaca) worn on the body or installed in home and shop. Each is built around the bīja, the seed-syllable of its deity, inscribed at the centre.',
+        facets: ['Navagraha yantras', 'Bīja at the centre', 'Worn & installed'],
+        explanation: [
+          'Most yantras are made not for the highest meditation but for living use. Every major deity has its yantra — the Gaṇeśa yantra, the Kālī yantra, the yantras of the ten Mahāvidyās — used in that deity’s worship; and beyond the deities stand the navagraha yantras of the nine planets, employed to steady or strengthen a planetary influence in a person’s life. At the heart of each is inscribed the bīja, the seed-syllable that is the deity’s sound-essence, the form and the sound locked together.',
+          'Smaller protective yantras (kavaca, “armour”) are drawn on metal foil or birch-bark, consecrated, and worn in an amulet or installed at the threshold of a home or shop to draw prosperity and turn away harm. This is the most everyday face of the science — the same logic of the consecrated diagram that builds the Śrī Cakra, scaled down to a square of copper worn at the throat. Across all of it the principle holds: rightly drawn and rightly enlivened, the yantra is the deity present.',
+        ],
+        aspects: [
+          { name: 'Deity yantras', deva: 'देवता-यन्त्र', desc: 'A yantra for each god and goddess — Gaṇeśa, Kālī, the ten Mahāvidyās — used as the seat of that deity’s worship.' },
+          { name: 'Navagraha yantras', deva: 'नवग्रह-यन्त्र', desc: 'Diagrams of the nine planets, used to steady or strengthen a planetary influence in a person’s life.' },
+          { name: 'The bīja', deva: 'बीज', desc: 'The seed-syllable of the deity, inscribed at the yantra’s centre — sound and form locked together as one essence.' },
+          { name: 'Kavaca & amulet', deva: 'कवच', desc: 'Protective yantras worn on the body or installed at the threshold to draw prosperity and turn away harm.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Tantra & Āgama Texts
   'tantra-texts': {
     title: 'Tantra & Āgama Texts',
