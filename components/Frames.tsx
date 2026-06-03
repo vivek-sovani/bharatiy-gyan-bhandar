@@ -125,6 +125,7 @@ export function Footer() {
             <div className="name-en">Indian Knowledge Bank</div>
           )}
           <p>{t('footer.colophon')}</p>
+          <p className="ftr-credit">{t('footer.compiled_by')}</p>
         </div>
         <div>
           <h5>{lang === 'mr' ? 'मार्गदर्शन' : 'Navigate'}</h5>

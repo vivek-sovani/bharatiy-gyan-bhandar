@@ -90,6 +90,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'essays.meta': 'Updated weekly',
     // Footer
     'footer.colophon': 'An open digital collection of the Indic knowledge systems. Texts in transliteration and original. Translations and commentary by working scholars. Free to read; built to last.',
+    'footer.compiled_by': 'Compiled by Vivek Sovani',
     'footer.sec_texts': 'Texts',
     'footer.sec_tools': 'Tools',
     'footer.sec_about': 'About',
@@ -188,6 +189,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'essays.meta': 'साप्ताहिक अद्यतने',
     // Footer
     'footer.colophon': 'भारतीय ज्ञानप्रणालींचे खुले डिजिटल संग्रहण. मूळ मजकूर आणि लिप्यंतरण स्वरूपात उपलब्ध. संशोधक आणि विद्वानांद्वारे भाषांतर व स्पष्टीकरण. वाचनासाठी विनामूल्य; चिरंतन रचलेले.',
+    'footer.compiled_by': 'संकलन — विवेक सोवनी',
     'footer.sec_texts': 'ग्रंथ संपदा',
     'footer.sec_tools': 'साधने',
     'footer.sec_about': 'माहिती',
