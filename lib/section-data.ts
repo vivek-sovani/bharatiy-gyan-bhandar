@@ -256,6 +256,119 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Tantra & Āgama Texts
+  'tantra-texts': {
+    title: 'Tantra & Āgama Texts',
+    deva: 'तन्त्र-आगम-ग्रन्थाः',
+    crumb: ['Collection', 'Tantra', 'Tantra & Āgama Texts'],
+    lede: 'Beneath the broad streams of Śaiva, Vaiṣṇava and Śākta worship lie the actual books — revealed sūtras, dialogues between Śiva and the Goddess, philosophical treatises and hymns. From the Śiva-sūtra and the Vijñāna Bhairava through the Pratyabhijñā philosophy to the Śrī-vidyā and Kaula tantras, these are the texts in which the tantric vision of a single vibrant consciousness, and the body as its temple, is set down.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'shiva-sutra', title: 'Śiva-sūtra', deva: 'शिवसूत्र', epithet: 'Vasugupta · the revealed aphorisms',
+        meta: ['Vasugupta · 9th c. CE', '77 sūtras · 3 sections', 'Root text of Kashmir Śaivism'],
+        summary: 'The foundational revealed text of monistic Kashmir Śaivism. Tradition holds that Śiva disclosed these seventy-seven terse aphorisms to the sage Vasugupta, who found them inscribed on a rock. In three sections they map three paths to recognising that the individual self is nothing other than Śiva, universal consciousness.',
+        opening: { deva: 'चैतन्यमात्मा ।', trans: '“The Self is consciousness itself.”', cite: 'Śiva-sūtra · 1.1' },
+        facets: ['Caitanya', 'Three upāyas', 'Revealed sūtras'],
+        explanation: [
+          'The Śiva-sūtra is the revealed foundation of the monistic (Trika) Śaivism of Kashmir. By tradition the aphorisms were granted to Vasugupta (early 9th c.) in a dream and found inscribed on a rock on Mount Mahādeva near Srinagar — a revelation meant to counter the dualism then dominant and restore the teaching that reality is a single, free consciousness.',
+          'Its seventy-seven sūtras are arranged in three sections corresponding to the three upāyas, the means of realisation: the divine way (śāmbhavopāya) of direct recognition, the way of energy (śāktopāya) through the contemplation of mantra and thought, and the individual way (āṇavopāya) using breath, body and concentration. The opening sūtra, caitanyam ātmā — “the Self is consciousness” — states the whole system in two words.',
+        ],
+        aspects: [
+          { name: 'Caitanya', deva: 'चैतन्य', desc: 'Consciousness as the very nature of the Self — not a property of it, but its essence, and identical with Śiva.' },
+          { name: 'The three upāyas', deva: 'त्रयोपाय', desc: 'Śāmbhava (the divine, immediate way), śākta (the way of energy and thought) and āṇava (the individual way of breath and body).' },
+          { name: 'Revelation on the rock', deva: 'शिवोपदेश', desc: 'The tradition that Śiva himself disclosed the sūtras to Vasugupta — the text claims the authority of direct revelation, not human authorship.' },
+          { name: 'Spanda and Pratyabhijñā', deva: 'स्पन्द · प्रत्यभिज्ञा', desc: 'The Śiva-sūtra is the seed from which both the Spanda doctrine and the later Pratyabhijñā philosophy grow.' },
+        ],
+      },
+      {
+        id: 'spanda', title: 'Spanda-kārikā', deva: 'स्पन्दकारिका', epithet: 'The doctrine of divine vibration',
+        meta: ['Vasugupta / Kallaṭa · 9th c.', '~52 verses', 'The pulse of consciousness'],
+        summary: 'A concise verse exposition of spanda — the subtle “vibration” or creative throb of consciousness by which the one reality unfolds the universe and withdraws it. Closely tied to the Śiva-sūtra, it teaches that this pulse can be caught in the charged moments of experience — intense fear, wonder, the edge of sleep — where the Self stands revealed.',
+        opening: { deva: 'यस्योन्मेषनिमेषाभ्यां जगतः प्रलयोदयौ ।\nतं शक्तिचक्रविभवप्रभवं शङ्करं स्तुमः ॥', trans: '“By whose opening and closing of the eyes the world dissolves and arises — we praise that Śaṅkara, the source of the glory of the wheel of powers.”', cite: 'Spanda-kārikā · 1.1' },
+        facets: ['Spanda', 'Unmeṣa · nimeṣa', 'Catching the pulse'],
+        explanation: [
+          'The Spanda-kārikā — attributed either to Vasugupta or to his pupil Kallaṭa — sets out in some fifty verses the doctrine of spanda, the “vibration” of consciousness. Spanda is not physical motion but the inner creative throb, the self-stirring of the one awareness by which it manifests the world and reabsorbs it, as if by the opening and closing of an eye (unmeṣa and nimeṣa).',
+          'The teaching is intensely practical. The kārikās point to the junctures (sandhi) of experience — the flash of extreme fear or joy, the verge of sleep, the moment a strong desire seizes the mind — as the gaps where the underlying vibration of consciousness shows through. To catch and rest in that pulse is to recognise oneself as Śiva. The Spanda doctrine became one of the two great philosophical wings of Kashmir Śaivism.',
+        ],
+        aspects: [
+          { name: 'Spanda', deva: 'स्पन्द', desc: 'The subtle creative “vibration” of consciousness — not movement in space, but the self-stirring by which the one reality becomes the world.' },
+          { name: 'Unmeṣa and nimeṣa', deva: 'उन्मेष · निमेष', desc: 'The “opening and closing of the eye” — the rhythm by which the universe arises and dissolves within consciousness.' },
+          { name: 'The charged junctures', deva: 'सन्धि', desc: 'The gaps of intense experience — fear, wonder, the edge of sleep — where the underlying pulse of the Self becomes catchable.' },
+          { name: 'Wheel of powers', deva: 'शक्तिचक्र', desc: 'The śakti-cakra — the array of energies through which the single consciousness expresses and conceals itself.' },
+        ],
+      },
+      {
+        id: 'vijnana-bhairava', title: 'Vijñāna Bhairava Tantra', deva: 'विज्ञानभैरव', epithet: '112 gateways to the infinite',
+        meta: ['c. 8th–9th c. CE', '~112–163 verses', 'A manual of dhāraṇā'],
+        summary: 'A dialogue in which the Goddess asks Bhairava for the essence of his teaching, and he answers with some hundred and twelve dhāraṇās — short meditation techniques, each a doorway into the boundless consciousness behind ordinary experience. Among the most practical and beloved of all tantras, it grounds the highest non-dualism in immediate practice.',
+        opening: { deva: 'यत्र यत्र मनो याति बहिर्वाभ्यन्तरेऽपि वा ।\nतत्र तत्र शिवावस्था व्यापकत्वात्क्व यास्यति ॥', trans: '“Wherever the mind goes, outward or inward, there is the state of Śiva — being all-pervading, where could it go to escape him?”', cite: 'Vijñāna Bhairava · 116' },
+        facets: ['112 dhāraṇās', 'Bhairava-Devī dialogue', 'Meditation manual'],
+        explanation: [
+          'The Vijñāna Bhairava Tantra is cast as an intimate dialogue: the Goddess (Bhairavī) asks Bhairava what his ultimate nature truly is, beyond ritual and form, and he replies not with doctrine but with practice — a garland of some one hundred and twelve dhāraṇās, brief contemplative techniques. Each takes an ordinary moment — a breath, a sneeze, the space between two thoughts, the pleasure of food, the dark behind closed eyes — and turns it into a doorway to limitless consciousness (vijñāna).',
+          'What makes the text exceptional is its sheer practicality and openness. The techniques require no temple, image or elaborate rite; they meet the practitioner wherever attention happens to be. Treasured within Kashmir Śaivism as the distilled heart of the tantric path, the Vijñāna Bhairava has in modern times become one of the most widely read of all tantras.',
+        ],
+        aspects: [
+          { name: 'The 112 dhāraṇās', deva: 'धारणा', desc: 'A hundred and twelve short meditation techniques, each a distinct “way in” to the consciousness underlying ordinary experience.' },
+          { name: 'Bhairava and Bhairavī', deva: 'भैरव-भैरवी', desc: 'The teaching framed as the God’s answer to the Goddess’s question about his ultimate, formless nature.' },
+          { name: 'The gap between thoughts', deva: 'मध्य-दशा', desc: 'A recurring method — resting in the interval between two breaths, two thoughts or two perceptions, where the Self stands open.' },
+          { name: 'Practice over ritual', deva: 'उपाय', desc: 'The highest non-dualism made immediate: no apparatus is needed, only attention rightly placed.' },
+        ],
+      },
+      {
+        id: 'pratyabhijna', title: 'Pratyabhijñā & Tantrāloka', deva: 'प्रत्यभिज्ञा', epithet: 'Utpaladeva · Abhinavagupta',
+        meta: ['Utpaladeva · 10th c.', 'Kṣemarāja · Abhinavagupta', 'The philosophy of recognition'],
+        summary: 'The philosophical summit of Kashmir Śaivism. Utpaladeva’s Īśvara-pratyabhijñā argues that liberation is not attainment but recognition (pratyabhijñā) — suddenly knowing the Self one already is to be Śiva. Abhinavagupta’s vast Tantrāloka synthesised the whole tradition, and Kṣemarāja’s Pratyabhijñā-hṛdaya distilled it into twenty sūtras.',
+        opening: { deva: 'चितिः स्वतन्त्रा विश्वसिद्धिहेतुः ।', trans: '“Universal Consciousness, utterly free, is the cause of the manifestation of the whole world.”', cite: 'Pratyabhijñā-hṛdaya · 1' },
+        facets: ['Pratyabhijñā', 'Tantrāloka', 'Citi · free consciousness'],
+        explanation: [
+          'The Pratyabhijñā (“recognition”) school is the intellectual high-water mark of Kashmir Śaivism. Its founder Utpaladeva (10th c.), building on his teacher Somānanda, argued in the Īśvara-pratyabhijñā-kārikā that the bound soul is already Śiva — full, free and self-luminous — and lacks nothing but the recognition of the fact. Liberation is therefore sudden, like recognising a long-unseen friend: not the acquisition of something new but a turning of awareness upon what was always the case.',
+          'The tradition culminates in Abhinavagupta (c. 950–1016), whose monumental Tantrāloka (“light on the tantras”) gathered the scattered Śaiva and Śākta scriptures into a single ordered system, and whose disciple Kṣemarāja compressed the philosophy into the twenty luminous sūtras of the Pratyabhijñā-hṛdaya, “the heart of recognition.” Its first sūtra — citiḥ svatantrā, “consciousness, free” — names the whole: a single, self-aware, sovereign awareness that out of its own freedom becomes the universe and the soul.',
+        ],
+        aspects: [
+          { name: 'Pratyabhijñā', deva: 'प्रत्यभिज्ञा', desc: 'Recognition — liberation as the sudden re-knowing of oneself as Śiva, who was never in fact lost.' },
+          { name: 'Citi svatantrā', deva: 'चितिः स्वतन्त्रा', desc: 'Free consciousness — a single, self-luminous awareness that, of its own sovereignty, manifests as world and self.' },
+          { name: 'Tantrāloka', deva: 'तन्त्रालोक', desc: 'Abhinavagupta’s vast synthesis ordering the whole of Śaiva-Śākta tantra into one coherent system.' },
+          { name: 'Heart of recognition', deva: 'प्रत्यभिज्ञाहृदय', desc: 'Kṣemarāja’s twenty sūtras distilling the Pratyabhijñā philosophy into a short, teachable essence.' },
+        ],
+      },
+      {
+        id: 'saundarya-lahari', title: 'Saundarya-laharī & Śrī-vidyā', deva: 'सौन्दर्यलहरी', epithet: 'The Śākta stream',
+        meta: ['attr. Śaṅkara', '100 verses · Śrī-cakra', 'Tripura-sundarī'],
+        summary: 'The great hymn of the Goddess and the gateway to Śrī-vidyā, the most refined of the Śākta traditions. Its hundred verses — the first on the power of Śakti, the rest on the beauty of the Devī from crown to foot — encode the worship of Tripura-sundarī through the Śrī-cakra and the fifteen-syllable mantra.',
+        opening: { deva: 'शिवः शक्त्या युक्तो यदि भवति शक्तः प्रभवितुं\nन चेदेवं देवो न खलु कुशलः स्पन्दितुमपि ।', trans: '“Joined with Śakti, Śiva has the power to create; without her, the god cannot so much as stir.”', cite: 'Saundarya-laharī · 1' },
+        facets: ['Śrī-cakra', 'Tripura-sundarī', 'Kuṇḍalinī'],
+        explanation: [
+          'The Saundarya-laharī (“the wave of beauty”), traditionally ascribed to Ādi Śaṅkara, is the most celebrated hymn of the Śākta tantra and the literary face of Śrī-vidyā — the elegant, meditative tradition of worship centred on the goddess Tripura-sundarī. Its hundred verses fall in two parts: the first forty-one (the Ānanda-laharī) are dense with esoteric teaching on Śakti, the Śrī-cakra and the rising of kuṇḍalinī; the remainder lavish a poet’s attention on the Goddess’s form, limb by limb.',
+          'The opening verse states the whole theology of the tradition in a line: Śiva is inert without Śakti — pure consciousness is powerless to act or even to stir without its own energy. Śrī-vidyā worships that energy through the Śrī-cakra, the great yantra of nine interlocking triangles, and the fifteen-syllable pañcadaśī mantra, holding the refined, “right-hand” pole of Śākta practice against the more antinomian Kālī-centred Kaula streams.',
+        ],
+        aspects: [
+          { name: 'Śiva-Śakti', deva: 'शिव-शक्ति', desc: 'The hymn’s first principle — consciousness (Śiva) is powerless without its energy (Śakti); the two are one reality in two aspects.' },
+          { name: 'Śrī-cakra', deva: 'श्रीचक्र', desc: 'The great yantra of nine interlocking triangles, the geometric body of the Goddess and the focus of Śrī-vidyā meditation.' },
+          { name: 'Tripura-sundarī', deva: 'त्रिपुरसुन्दरी', desc: 'The presiding goddess of Śrī-vidyā — “beautiful in the three worlds,” worshipped through the pañcadaśī mantra.' },
+          { name: 'Kuṇḍalinī', deva: 'कुण्डलिनी', desc: 'The coiled inner energy whose rising through the centres the Ānanda-laharī verses describe in coded form.' },
+        ],
+      },
+      {
+        id: 'kaula-tantras', title: 'The Kaula Tantras', deva: 'कौलतन्त्राणि', epithet: 'Kulārṇava · Mahānirvāṇa',
+        meta: ['Kulārṇava · Mahānirvāṇa', 'Kaula practice', 'Guru, mantra & the five M’s'],
+        summary: 'The scriptures of the Kaula path — the “left-hand” tantra that seeks liberation not by renouncing the world but by transmuting its very substances. The Kulārṇava Tantra is the classic manual of Kaula doctrine and the supremacy of the guru; the Mahānirvāṇa Tantra codifies practice and conduct for the Kali age.',
+        opening: { deva: 'नरत्वं दुर्लभं लोके विद्या तत्र सुदुर्लभा ।', trans: '“Hard to win in this world is human birth; harder still, true knowledge within it.”', cite: 'Kulārṇava Tantra' },
+        facets: ['Kaulācāra', 'Guru-supremacy', 'Pañca-makāra'],
+        explanation: [
+          'The Kaula tantras give the most radical of the tantric paths their scriptures. Where the right-hand (dakṣiṇa) traditions sublimate ritual into pure meditation, the Kaula or “left-hand” (vāma) way holds that nothing is intrinsically impure and that the very forces that bind the ordinary person — desire, the body, the substances of the world — can, under a qualified guru, be turned into the means of release. This is the context of the famous (and often misunderstood) pañca-makāra, the “five M’s.”',
+          'The Kulārṇava Tantra is the classic exposition of Kaula doctrine: it dwells on the rarity of human birth and true knowledge, the absolute necessity of the guru, the discipline of mantra, and the inner meaning behind the outer rite. The later Mahānirvāṇa Tantra, framed as Śiva’s teaching to the Goddess for the degenerate Kali age, codifies worship of the formless Brahman, daily conduct, and social and legal duty — the most “reformed” and systematic of the tantras.',
+        ],
+        aspects: [
+          { name: 'Kaulācāra', deva: 'कौलाचार', desc: 'The “left-hand” path that transmutes rather than renounces — holding that nothing is impure to one who truly knows.' },
+          { name: 'Supremacy of the guru', deva: 'गुरुतत्त्व', desc: 'In Kaula tantra the living guru is indispensable — the secret meaning of the rite is transmitted person to person, never from the book alone.' },
+          { name: 'The five M’s', deva: 'पञ्चमकार', desc: 'The pañca-makāra — read literally by some lineages, symbolically by most as inner offerings; the emblem of the antinomian path.' },
+          { name: 'Tantra for the Kali age', deva: 'कलियुग-धर्म', desc: 'The Mahānirvāṇa’s claim — that in a degenerate age the tantric way, rightly followed, is the accessible road to liberation.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Agamas
   agamas: {
     title: 'Āgamas & Tantra',
