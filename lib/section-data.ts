@@ -762,6 +762,119 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Kāvya Poets
+  'kavya-poets': {
+    title: 'The Kāvya Poets',
+    deva: 'महाकवयः',
+    crumb: ['Collection', 'Literature', 'The Kāvya Poets'],
+    lede: 'Classical Sanskrit poetry has its genres — the mahākāvya, the play, the prose romance — but it lives in its poets. From Kālidāsa, by common consent the supreme voice, through the dramatists, the prose-masters and the great mahākāvya virtuosos to Jayadeva’s song of Rādhā and Kṛṣṇa, these are the makers in whom Indic literary art becomes self-aware: refined, allusive, and built on the ideal of rasa — the distilled emotional flavour a poem leaves in the heart.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'kalidasa', title: 'Kālidāsa', deva: 'कालिदास', epithet: 'The supreme poet',
+        meta: ['c. 4th–5th c. CE', 'Śakuntalā · Meghadūta · Raghuvaṃśa', 'Drama, epic & lyric'],
+        summary: 'By long consensus the greatest of all Sanskrit poets. Kālidāsa mastered every form — the play (Abhijñānaśākuntala), the lyric (Meghadūta), the courtly epic (Raghuvaṃśa, Kumārasambhava) — with a clarity and tenderness that became the standard against which all later poetry was measured. Of his life almost nothing certain is known; of his art, everything.',
+        opening: { deva: 'वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये ।\nजगतः पितरौ वन्दे पार्वतीपरमेश्वरौ ॥', trans: '“To win the right understanding of word and meaning, I bow to the parents of the world — Pārvatī and the Supreme Lord — joined together as word and meaning are.”', cite: 'Raghuvaṃśa · 1.1' },
+        facets: ['Abhijñānaśākuntala', 'Meghadūta', 'Raghuvaṃśa'],
+        explanation: [
+          'Kālidāsa (c. fourth–fifth century CE) is, by a consensus that has lasted fifteen hundred years, the supreme poet of the Sanskrit language. Almost nothing certain is known of his life — tradition places him at the court of a king Vikramāditya, probably the Gupta emperor Candragupta II — but his seven surviving works define the classical ideal. He wrote three plays (the Abhijñānaśākuntala, the Vikramorvaśīya and the Mālavikāgnimitra), two great courtly epics (the Raghuvaṃśa and the Kumārasambhava), and two lyric poems (the Meghadūta and the Ṛtusaṃhāra).',
+          'His Abhijñānaśākuntala — the recognition of Śakuntalā — is the most celebrated play in the language and the work that, in translation, astonished Goethe and the European Romantics. The Meghadūta (“cloud-messenger”), in which an exiled spirit asks a passing cloud to carry word to his beloved, founded a whole genre of messenger-poems. What sets Kālidāsa apart is not display but balance: an unforced perfection of simile (upamā), a deep feeling for nature and the seasons, and an emotional restraint that later poets admired but rarely matched.',
+        ],
+        aspects: [
+          { name: 'Abhijñānaśākuntala', deva: 'अभिज्ञानशाकुन्तल', desc: 'The recognition of Śakuntalā — the supreme Sanskrit play, on the love, loss and reunion of the king Duṣyanta and the hermitage-girl Śakuntalā.' },
+          { name: 'Meghadūta', deva: 'मेघदूत', desc: 'The “cloud-messenger” — an exiled yakṣa entrusts his love-message to a monsoon cloud, founding the dūta-kāvya genre of messenger-poems.' },
+          { name: 'The courtly epics', deva: 'रघुवंश · कुमारसंभव', desc: 'The Raghuvaṃśa (the dynasty of Raghu) and the Kumārasambhava (the birth of Kumāra) — the model mahākāvyas of the classical tradition.' },
+          { name: 'Upamā Kālidāsasya', deva: 'उपमा', desc: 'His simile became proverbial — “Kālidāsa for upamā” — shorthand for an aptness of comparison no later poet was thought to equal.' },
+        ],
+      },
+      {
+        id: 'dramatists', title: 'The Dramatists', deva: 'नाट्यकाराः', epithet: 'Bhāsa · Śūdraka · Viśākhadatta · Bhavabhūti',
+        meta: ['c. 3rd–8th c. CE', 'Svapnavāsavadatta · Mṛcchakaṭika', 'Mudrārākṣasa · Uttararāmacarita'],
+        summary: 'Around and after Kālidāsa stands a brilliant tradition of Sanskrit theatre: Bhāsa, the earliest surviving dramatist; Śūdraka, whose Mṛcchakaṭika is the most life-filled of the plays; Viśākhadatta, the master of political drama; and Bhavabhūti, the great tragic poet of the generation after Kālidāsa.',
+        opening: { deva: 'उत्पत्स्यते तु मम कोऽपि समानधर्मा\nकालो ह्ययं निरवधिर्विपुला च पृथ्वी ॥', trans: '“Some day will be born one whose taste is kin to mine — for time is without limit, and the earth is vast.”', cite: 'Mālatīmādhava · 1.6 (Bhavabhūti)' },
+        facets: ['Bhāsa', 'Mṛcchakaṭika', 'Bhavabhūti'],
+        explanation: [
+          'Sanskrit drama (nāṭya) is a tradition as rich as its poetry, governed by the conventions of Bharata’s Nāṭyaśāstra and aimed always at the evocation of rasa. Its earliest surviving voice is Bhāsa (c. 3rd c. CE), thirteen of whose plays — among them the Svapnavāsavadatta, the finest — were rediscovered only in 1912. Śūdraka’s Mṛcchakaṭika (“the little clay cart”), with its impoverished merchant, its courtesan heroine and its city full of gamblers and thieves, is the warmest and most socially vivid of all the plays.',
+          'Viśākhadatta’s Mudrārākṣasa is a tense drama of pure statecraft — the political maneuvering of Cāṇakya, with scarcely a woman in it. Bhavabhūti (8th c.), the greatest dramatist after Kālidāsa, brought a darker, more powerful voice to the stage in the Uttararāmacarita, the tragedy of Rāma and Sītā’s separation; his proud verse on the reader yet to come, who will share his taste across the vastness of time, is among the most quoted in the language. Harṣa, the seventh-century emperor-playwright, rounds out the canon with the graceful Ratnāvalī and Nāgānanda.',
+        ],
+        aspects: [
+          { name: 'Bhāsa', deva: 'भास', desc: 'The earliest surviving Sanskrit dramatist; his thirteen plays, including the masterly Svapnavāsavadatta, were recovered from a Kerala manuscript only in 1912.' },
+          { name: 'Mṛcchakaṭika', deva: 'मृच्छकटिक', desc: 'Śūdraka’s “little clay cart” — the most realistic and socially crowded of the plays, alive with the ordinary people of the ancient city.' },
+          { name: 'Mudrārākṣasa', deva: 'मुद्राराक्षस', desc: 'Viśākhadatta’s drama of pure politics — Cāṇakya’s campaign to win over the minister Rākṣasa, a play almost without romance.' },
+          { name: 'Bhavabhūti', deva: 'भवभूति', desc: 'The powerful, tragic voice of the Uttararāmacarita and Mālatīmādhava — the dramatist most often ranked second only to Kālidāsa.' },
+        ],
+      },
+      {
+        id: 'bana', title: 'Bāṇabhaṭṭa', deva: 'बाणभट्ट', epithet: 'The master of prose kāvya',
+        meta: ['7th c. CE · Harṣa’s court', 'Kādambarī · Harṣacarita', 'Gadya-kāvya'],
+        summary: 'The supreme master of Sanskrit prose. Bāṇa’s Kādambarī, an immense and intricate romance, and his Harṣacarita, the first Sanskrit prose biography of a living king, set the standard for gadya-kāvya — ornate art-prose whose long, garlanded sentences are a world unto themselves. Tradition says he left no theme untouched.',
+        opening: { deva: 'बाणोच्छिष्टं जगत्सर्वम् ।', trans: '“All the world is Bāṇa’s leavings” — the classical tribute that he exhausted every theme, leaving nothing fresh for later poets.', cite: 'classical saying' },
+        facets: ['Kādambarī', 'Harṣacarita', 'Gadya-kāvya'],
+        explanation: [
+          'Bāṇabhaṭṭa (7th c. CE), a poet at the court of the emperor Harṣa of Kanauj, is the unrivalled master of Sanskrit prose (gadya). His Kādambarī — a romance of lovers across rebirths, left unfinished at his death and completed by his son — is the most celebrated prose work in the language: a labyrinth of long, perfectly balanced sentences, dense with compound words, double meanings and cascading description, in which a single passage can run for pages.',
+          'His Harṣacarita (“the deeds of Harṣa”) is the first Sanskrit prose account of a living, historical king, and a rare window onto seventh-century court life — including, in its opening chapters, a vivid autobiographical sketch of the poet himself. Bāṇa’s art is the opposite of Kālidāsa’s restraint: it is maximal, ornamental, virtuosic. The proverb bāṇocchiṣṭaṃ jagat sarvam — “all the world is Bāṇa’s leftovers” — captures the tradition’s sense that he had used up every available theme and figure.',
+        ],
+        aspects: [
+          { name: 'Kādambarī', deva: 'कादम्बरी', desc: 'The great prose romance of lovers reunited across lifetimes — the most admired and most difficult work of Sanskrit art-prose.' },
+          { name: 'Harṣacarita', deva: 'हर्षचरित', desc: 'The “deeds of Harṣa” — the first Sanskrit prose biography of a reigning king, and a precious source for seventh-century history.' },
+          { name: 'Gadya-kāvya', deva: 'गद्यकाव्य', desc: 'Ornate art-prose — long garland-like sentences, śleṣa (double meaning) and dense compounding raised to the level of high poetry.' },
+          { name: 'The poet’s own voice', deva: 'आत्मवृत्त', desc: 'The autobiographical opening of the Harṣacarita, in which Bāṇa describes his village, family and restless youth — unusual candour for the age.' },
+        ],
+      },
+      {
+        id: 'mahakavya', title: 'The Mahākāvya Masters', deva: 'महाकाव्यकाराः', epithet: 'Bhāravi · Māgha · Śrīharṣa',
+        meta: ['6th–12th c. CE', 'Kirātārjunīya · Śiśupālavadha', 'Naiṣadhīyacarita'],
+        summary: 'After Kālidāsa the mahākāvya — the long courtly epic — grew ever more virtuosic. Bhāravi’s Kirātārjunīya prized weight of meaning, Māgha’s Śiśupālavadha aimed to surpass all rivals at once, and Śrīharṣa’s Naiṣadhīyacarita pushed learned difficulty to its limit. These are the “great poems” (mahākāvya) on which a poet’s mastery was finally judged.',
+        opening: { deva: 'उपमा कालिदासस्य भारवेरर्थगौरवम् ।\nदण्डिनः पदलालित्यं माघे सन्ति त्रयो गुणाः ॥', trans: '“Kālidāsa for simile, Bhāravi for weight of meaning, Daṇḍin for grace of phrase — all three virtues meet in Māgha.”', cite: 'classical encomium' },
+        facets: ['Kirātārjunīya', 'Śiśupālavadha', 'Naiṣadhīyacarita'],
+        explanation: [
+          'The mahākāvya — the long, ornate court epic in many cantos — is the form on which a classical poet’s reputation was finally staked, and after Kālidāsa it became a contest of virtuosity. Bhāravi (6th c.) opened the next phase with the Kirātārjunīya, the story of Arjuna’s combat with Śiva in the guise of a hunter, prized for the gravity and density of its meaning (artha-gaurava). Māgha (7th c.) answered with the Śiśupālavadha, consciously built to display every excellence at once — including a famous canto of metrical and verbal acrobatics.',
+          'The tradition counts five mahākāvyas as the canonical models, and ranks the poets in a single proverbial verse — upamā Kālidāsasya — that awards simile to Kālidāsa, weight to Bhāravi, grace to Daṇḍin, and all three to Māgha. The line ends with Śrīharṣa (12th c.), whose Naiṣadhīyacarita, on the love of Nala and Damayantī, carried learned difficulty (the “scholar’s poem”) to a height few readers could follow without a commentary — the brilliant, demanding close of the great mahākāvya tradition.',
+        ],
+        aspects: [
+          { name: 'Kirātārjunīya', deva: 'किरातार्जुनीय', desc: 'Bhāravi’s epic of Arjuna and the mountain-dwelling Śiva — celebrated for artha-gaurava, the weight and depth of its meaning.' },
+          { name: 'Śiśupālavadha', deva: 'शिशुपालवध', desc: 'Māgha’s epic on the slaying of Śiśupāla — built to surpass all predecessors, famous for its dazzling feats of metre and wordplay.' },
+          { name: 'Naiṣadhīyacarita', deva: 'नैषधीयचरित', desc: 'Śrīharṣa’s “scholar’s poem” on Nala and Damayantī — the most learned and difficult of the mahākāvyas, the tradition’s virtuoso finale.' },
+          { name: 'The five mahākāvyas', deva: 'पञ्चमहाकाव्य', desc: 'The canonical set — Kālidāsa’s two, Bhāravi, Māgha and Śrīharṣa — held up as the models of the form.' },
+        ],
+      },
+      {
+        id: 'dandin', title: 'Daṇḍin & prose romance', deva: 'दण्डी', epithet: 'The story-teller and the theorist',
+        meta: ['c. 7th–8th c. CE', 'Daśakumāracarita · Kāvyādarśa', 'Prose romance & poetics'],
+        summary: 'Daṇḍin wrote the most readable of the prose works — the Daśakumāracarita, the rollicking “tale of ten princes” through a world of gamblers, thieves and courtesans — and one of the founding manuals of literary theory, the Kāvyādarśa. With Subandhu’s Vāsavadattā he represents the lighter, more narrative face of Sanskrit prose.',
+        opening: { deva: 'इदमन्धन्तमः कृत्स्नं जायेत भुवनत्रयम् ।\nयदि शब्दाह्वयं ज्योतिरासंसारं न दीप्यते ॥', trans: '“This whole three-world would be blind darkness, if the light called ‘the word’ did not shine through it from the beginning of creation.”', cite: 'Kāvyādarśa · 1.4 (Daṇḍin)' },
+        facets: ['Daśakumāracarita', 'Kāvyādarśa', 'Vāsavadattā'],
+        explanation: [
+          'Daṇḍin (c. 7th–8th c. CE) stands for the more accessible, story-driven side of Sanskrit prose. His Daśakumāracarita — the “adventures of the ten princes” — abandons the dense ornament of Bāṇa for a fast, witty, picaresque narrative that moves through a fully realised demi-monde of gamblers, conmen, courtesans and merchants; it is the easiest and most entertaining of the classical prose works to read.',
+          'He was also one of the founders of Sanskrit literary theory. His Kāvyādarśa (“mirror of poetry”) is among the earliest and most influential manuals of poetics, classifying the figures of speech (alaṅkāra) and the “qualities” (guṇa) and styles (mārga) of poetry; its opening verse on the word as the one light that saves the world from darkness is itself famous. Alongside him stands Subandhu, whose Vāsavadattā is a prose romance built almost entirely on śleṣa, the figure of double meaning — together they mark the range of classical Sanskrit prose, from clear narrative to pure verbal play.',
+        ],
+        aspects: [
+          { name: 'Daśakumāracarita', deva: 'दशकुमारचरित', desc: 'The “tale of ten princes” — a fast, comic, picaresque prose romance through the low life of the classical city; the most readable of the gadya works.' },
+          { name: 'Kāvyādarśa', deva: 'काव्यादर्श', desc: 'The “mirror of poetry” — an early, foundational manual of poetics cataloguing the figures of speech, qualities and styles of kāvya.' },
+          { name: 'Subandhu’s Vāsavadattā', deva: 'वासवदत्ता', desc: 'A prose romance built throughout on śleṣa (double meaning) — the extreme of verbal ingenuity in Sanskrit prose.' },
+          { name: 'Narrative prose', deva: 'कथा-गद्य', desc: 'The lighter, story-telling face of gadya-kāvya, set against the dense art-prose of Bāṇa — together the two poles of the form.' },
+        ],
+      },
+      {
+        id: 'jayadeva', title: 'Jayadeva', deva: 'जयदेव', epithet: 'The Gīta-govinda',
+        meta: ['12th c. CE · Bengal', 'Gīta-govinda', 'Lyric & devotion'],
+        summary: 'With the Gīta-govinda, Jayadeva fused high kāvya with devotional song. Its lyrical cantos on the love, separation and union of Rādhā and Kṛṣṇa — meant to be sung, in lilting metres with refrains — became the fountainhead of Kṛṣṇa-bhakti poetry and one of the most beloved works in all of Sanskrit.',
+        opening: { deva: 'मेघैर्मेदुरमम्बरं वनभुवः श्यामास्तमालद्रुमैः\nनक्तं भीरुरयं त्वमेव तदिमं राधे गृहं प्रापय ।', trans: '“The sky is thick with cloud, the forest dark with tamāla trees; the night frightens him — so you, O Rādhā, lead him home.”', cite: 'Gīta-govinda · 1.1' },
+        facets: ['Rādhā–Kṛṣṇa', 'Aṣṭapadī', 'Sung lyric'],
+        explanation: [
+          'Jayadeva (12th c. CE), a poet of the Bengal court of king Lakṣmaṇasena, wrote in the Gīta-govinda (“the song of Govinda”) a work unlike anything before it — a lyrical drama, meant to be sung, on the love of Rādhā and Kṛṣṇa through longing, jealousy, separation and ecstatic reunion. Its twenty-four songs, the aṣṭapadīs (“eight-footed” lyrics), are set in soft, musical metres with recurring refrains, closer to song than to recitation.',
+          'The poem stands at a hinge in Indian literature: it is fully classical kāvya in its polish and erotic suggestion, yet wholly devotional in its subject, reading the union of the lovers as the soul’s union with God. It made Rādhā central to Kṛṣṇa devotion, became part of temple liturgy at Puri and elsewhere, and seeded the whole later tradition of Kṛṣṇa-bhakti lyric — from the Vaiṣṇava poets of Bengal to the singers of every later century.',
+        ],
+        aspects: [
+          { name: 'Rādhā and Kṛṣṇa', deva: 'राधा-कृष्ण', desc: 'The poem made Rādhā’s love the centre of Kṛṣṇa devotion — its cycle of longing, estrangement and reunion read as the soul’s path to God.' },
+          { name: 'The aṣṭapadī', deva: 'अष्टपदी', desc: 'The twenty-four sung lyrics, in soft musical metres with refrains, that give the Gīta-govinda its form — poetry composed to be sung.' },
+          { name: 'Kāvya as devotion', deva: 'भक्ति-काव्य', desc: 'A turning point where the polish and sensuous suggestion of classical kāvya are turned wholly to devotional ends.' },
+          { name: 'Liturgy and legacy', deva: 'परम्परा', desc: 'Absorbed into temple worship at Puri and beyond, the Gīta-govinda became the fountainhead of all later Kṛṣṇa-bhakti lyric.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Indic Sciences & Mathematics
   sciences: {
     title: 'Indic Sciences & Mathematics',
