@@ -512,6 +512,114 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────── Rangoli & Ritual Art
+  'rangoli': {
+    title: 'Rangoli & Ritual Art',
+    deva: 'रङ्गवल्ली',
+    crumb: ['Collection', 'Living art', 'Rangoli & Ritual Art'],
+    lede: 'Every morning, on thresholds across India, women draw the world anew in rice flour, chalk and petals — and erase it by nightfall. Rangoli and its regional kin (kolam, alpana, mandana, pūkkaḷam) are among the oldest living arts of the subcontinent: domestic, devotional and impermanent, a folk sacred geometry by which the home is made auspicious and the threshold turned into an altar. Listed among the sixty-four classical arts, it survives today not in museums but on the floor of the house.',
+    layout: 'tabs',
+    items: [
+      {
+        id: 'rangoli', title: 'Rangoli', deva: 'रांगोळी', epithet: 'The threshold drawn anew each dawn',
+        meta: ['Pan-Indian · living art', 'Rice flour · chalk · colour', 'One of the 64 kalās'],
+        summary: 'The most widespread of the floor arts — geometric and floral patterns drawn at the doorstep and in the courtyard, daily and especially at festivals. An everyday act of welcome and auspiciousness, traditionally a woman’s art, passed mother to daughter, and counted among the sixty-four classical kalās as the “making of designs with rice and flowers.”',
+        opening: { deva: 'तण्डुलकुसुमबलिविकाराः ।', trans: '“The making of designs and offerings with grains of rice and flowers” — listed among the sixty-four arts.', cite: 'Kāma-sūtra · the 64 kalās' },
+        facets: ['Auspicious threshold', 'Daily & festival', 'Women’s art'],
+        explanation: [
+          'Rangoli — from raṅga, “colour” — is the art of laying down patterns on the cleaned floor of the threshold and courtyard, in rice flour, dry colour, chalk powder, flower petals or coloured sand. It is drawn fresh each morning and at every festival, swept away and made again: an art whose whole nature is to be daily renewed and impermanent. Its purpose is at once decorative, devotional and protective — to greet the day, to welcome guests and the goddess Lakṣmī, and to make the home an auspicious, ordered space.',
+          'The tradition is ancient and pan-Indian, appearing under different names in every region, and it is overwhelmingly a women’s art, handed down through practice rather than text. Yet it is also acknowledged by the classical tradition: the Kāmasūtra’s famous list of the sixty-four kalās includes taṇḍula-kusuma-bali-vikāra — “designs and offerings made with rice-grains and flowers” — which is rangoli exactly. From simple daily patterns to the vast, intricate compositions of Diwali, it remains one of the most alive of all Indic arts.',
+        ],
+        aspects: [
+          { name: 'Raṅga · colour', deva: 'रङ्ग', desc: 'The name itself — from raṅga, colour, and āvalī, a row or creeper — “a creeper of colour” laid along the threshold.' },
+          { name: 'Auspicious welcome', deva: 'मङ्गल', desc: 'Drawn to greet the day and to invite Lakṣmī and prosperity into the home; the threshold made an altar of welcome.' },
+          { name: 'Impermanence', deva: 'क्षणभङ्गुर', desc: 'Made each dawn and erased by dusk — an art whose meaning lies partly in its daily renewal and letting-go.' },
+          { name: 'A women’s lineage', deva: 'परम्परा', desc: 'Transmitted mother to daughter through doing, not writing — a living domestic art older than most of the texts beside it.' },
+        ],
+      },
+      {
+        id: 'kolam', title: 'Kolam', deva: 'கோலம்', epithet: 'The dotted grid of Tamil country',
+        meta: ['Tamil Nadu · daily', 'Puḷḷi (dots) & loops', 'Drawn at dawn in rice flour'],
+        summary: 'The Tamil floor art, drawn each dawn on the wet-swept threshold as a grid of dots (puḷḷi) around which a single looping line is woven into symmetrical knots and curves. Mathematically structured and often unicursal, kolam has fascinated computer scientists for its grammar; traditionally made in rice flour so that ants and birds may eat — art as a small daily act of giving.',
+        facets: ['Puḷḷi · dot grid', 'Mathematical', 'Feeding the ants'],
+        explanation: [
+          'Kolam is the daily threshold art of Tamil Nadu (with close kin in Andhra’s muggu and Karnataka’s raṅgavalli). Before sunrise the doorstep is swept and sprinkled with water, a grid of dots (puḷḷi) is laid out, and around those dots a continuous line is drawn — looping, turning and closing on itself into symmetrical figures. The finest kolams are unicursal: a single unbroken line that encloses every dot and returns to its start.',
+          'This formal structure has drawn the attention of mathematicians and computer scientists, who study kolam as a kind of picture-grammar — its symmetry groups, its array-rewriting rules, its knot-like closed curves. But its everyday meaning is humbler and humane: traditionally drawn in rice flour, the kolam is food for ants, insects and birds, so that the householder’s first act of the day is an offering to the smallest creatures. Made fresh each morning, walked over and gone by noon, it is renewed the next dawn.',
+        ],
+        aspects: [
+          { name: 'Puḷḷi grid', deva: 'बिन्दु-जाल', desc: 'The lattice of dots around which the line is drawn — the skeleton that gives the kolam its geometric order.' },
+          { name: 'The unbroken line', deva: 'एकरेखा', desc: 'The prized unicursal kolam — a single continuous line enclosing every dot and returning to its origin, like a knot.' },
+          { name: 'Picture-grammar', deva: 'रचना-नियम', desc: 'Its rule-governed symmetry has made kolam a subject of study in mathematics and computer science as a formal “grammar” of patterns.' },
+          { name: 'Food for the ants', deva: 'अन्नदान', desc: 'Drawn in rice flour so that ants and birds may feed — the day begun with a small, daily act of giving.' },
+        ],
+      },
+      {
+        id: 'alpana', title: 'Alpana & Aripana', deva: 'अल्पना', epithet: 'The rice-paste art of the east',
+        meta: ['Bengal & Mithila', 'Rice-paste, drawn by hand', 'Vrata & festival art'],
+        summary: 'The eastern stream of the floor arts — Bengal’s ālpanā and Mithila’s aripana — painted not in dry powder but in a paste of ground rice and water, applied with the fingertips or a cloth wick. Tied closely to women’s vratas (vows) and festivals, its flowing motifs of lotus, foot-prints, paddy and creeper are cousins to the famous Madhubani (Mithila) painting.',
+        facets: ['Rice-paste', 'Vrata art', 'Lotus & paddy motifs'],
+        explanation: [
+          'In Bengal and the Mithila region of Bihar, the floor and threshold art is made wet, not dry: ground rice is mixed with water into a white paste (piṭhā/piṭhar) and drawn on the swept earth with the fingertips or a twist of cloth. Bengal calls it ālpanā, Mithila aripana — and both are bound up with the women’s ritual year, drawn for vratas (devotional vows), weddings, and festivals such as Lakṣmī-pūjā.',
+          'The motifs are flowing and emblematic — the lotus, the owl and footprints of Lakṣmī, sheaves of paddy, fish, creepers and the sun — each carrying an auspicious meaning. The same regional aesthetic and many of the same symbols reappear, in pigment on walls and paper, as the celebrated Madhubani or Mithila painting; alpana and aripana are its everyday, ephemeral ground. The art was consciously revived in early twentieth-century Bengal, notably at Tagore’s Santiniketan, as a living folk heritage.',
+        ],
+        aspects: [
+          { name: 'Rice-paste line', deva: 'पिष्ट-रेखा', desc: 'Drawn in wet ground-rice paste with fingertip or cloth wick — a flowing white line rather than dry-poured powder.' },
+          { name: 'Vrata and vow', deva: 'व्रत', desc: 'Intimately tied to women’s vratas and the ritual calendar — each occasion with its own prescribed motifs.' },
+          { name: 'Auspicious motifs', deva: 'मङ्गल-चिह्न', desc: 'Lotus, Lakṣmī’s footprints, paddy, fish and creeper — emblems of fertility, prosperity and welcome.' },
+          { name: 'Kin to Madhubani', deva: 'मिथिला-चित्र', desc: 'The same symbols and aesthetic as Mithila (Madhubani) painting, of which alpana/aripana is the ephemeral floor counterpart.' },
+        ],
+      },
+      {
+        id: 'mandana', title: 'Mandana', deva: 'माण्डना', epithet: 'Wall and floor painting of the west',
+        meta: ['Rajasthan & Madhya Pradesh', 'Red ochre ground · white line', 'Festival & wedding art'],
+        summary: 'The mandana of Rajasthan and Madhya Pradesh extends the floor art up the walls. On a ground of red ochre or cow-dung wash, women draw in white chalk or lime a vocabulary of geometric and figural motifs — peacocks, the sun, footprints, lattices and the sacred svastika — for festivals, weddings and the protection of the home.',
+        facets: ['Ochre & white', 'Wall & floor', 'Geometric & figural'],
+        explanation: [
+          'Mandana (from maṇḍana, “adornment”) is the painted floor-and-wall art of Rajasthan, Madhya Pradesh and neighbouring regions. The surface — the swept courtyard, the threshold, the walls around the door and hearth — is first washed with red-brown ochre (geru) or a cow-dung ground, and on this rich red the patterns are drawn in white lime or chalk paste, the high contrast giving mandana its striking look.',
+          'Its motifs run from pure geometry — grids, lattices, stars and the auspicious svastika — to stylised figures of peacocks, elephants, the sun and moon, and human footprints marking the entry of the goddess. Made for Diwali, weddings, harvest and the everyday consecration of the home, mandana is, like its sisters, a women’s hereditary art; its bolder figural forms also feed the region’s tradition of folk wall-painting.',
+        ],
+        aspects: [
+          { name: 'Maṇḍana · adornment', deva: 'माण्डन', desc: 'The name means “adornment” — the ritual beautifying of the house at its thresholds, walls and hearth.' },
+          { name: 'Red ground, white line', deva: 'गेरु', desc: 'Drawn in white lime on a ground of red ochre or cow-dung wash — the strong contrast that defines the style.' },
+          { name: 'Geometry & figure', deva: 'रेखाचित्र', desc: 'A vocabulary from pure lattice-geometry and the svastika to peacocks, elephants and the goddess’s footprints.' },
+          { name: 'Protection & festival', deva: 'गृह-रक्षा', desc: 'Made for Diwali, weddings and harvest, and to guard and sanctify the home through the year.' },
+        ],
+      },
+      {
+        id: 'pookalam', title: 'Pūkkaḷam & Flower Art', deva: 'पुष्परङ्गवल्ली', epithet: 'Carpets of petals',
+        meta: ['Kerala · Onam', 'Flower petals', 'The floral rangoli'],
+        summary: 'The floral branch of the tradition — above all the pūkkaḷam of Kerala, the great circular carpets of fresh flower petals laid out over the ten days of Onam to welcome the returning king Mahābali. Across India, petal-rangoli turns the same impulse of the threshold-offering into pure, fragrant colour.',
+        facets: ['Onam · ten days', 'Concentric circles', 'Fresh petals'],
+        explanation: [
+          'Where most floor art is line and powder, the pūkkaḷam (“flower-design”) is made entirely of fresh flowers — petals and whole blossoms laid out, usually in concentric circles, on the swept courtyard. It is the heart of Kerala’s Onam festival: a pūkkaḷam is begun on the first day with a small ring and enlarged each of the ten days, growing into a great wheel of colour to welcome the spirit of the just king Mahābali on his annual return.',
+          'Flower-rangoli of this kind appears across India for festivals and temple celebrations, and joins the floor-art tradition to the wider practice of puṣpa-alaṅkāra, the art of floral decoration that is itself counted among the classical kalās. Like the rice-flour kolam it is gloriously impermanent — the blossoms fade within the day — and like all of these arts it turns the ground before the door into a place of welcome and festival.',
+        ],
+        aspects: [
+          { name: 'Onam pūkkaḷam', deva: 'ओणम्', desc: 'The flower-carpet of Kerala’s Onam, grown larger over ten days to welcome the returning king Mahābali.' },
+          { name: 'Concentric rings', deva: 'वृत्त', desc: 'Built outward in circles of contrasting petals — a mandala of flowers laid on the courtyard floor.' },
+          { name: 'Puṣpa-alaṅkāra', deva: 'पुष्पालङ्कार', desc: 'The art of floral decoration, kin to garland-making, itself among the classical sixty-four arts.' },
+          { name: 'Fragrant impermanence', deva: 'क्षणिक', desc: 'Made of fresh petals that wilt within the day — the threshold-offering in its most fleeting, living form.' },
+        ],
+      },
+      {
+        id: 'sacred-geometry', title: 'The Auspicious Threshold', deva: 'मङ्गल-रेखा', epithet: 'Folk geometry, yantra & the doorway',
+        meta: ['Threshold as liminal space', 'Folk yantra & maṇḍala', 'Order, welcome, protection'],
+        summary: 'Beneath the beauty lies a grammar of meaning. The floor arts are a folk sacred geometry — close cousins of the yantra and maṇḍala — drawn on the threshold, the charged boundary between outside and in. They order chaos into symmetry, invite the auspicious and turn away the harmful, and enact in powder and petal the same logic the tantras set down in line.',
+        facets: ['Threshold · dehlī', 'Folk yantra', 'Symmetry & order'],
+        explanation: [
+          'These arts are not only decorative. The place they are drawn — the dehlī, the threshold — is in Indic thought a charged, liminal zone, neither inside nor out, where the household meets the world and where the auspicious may be drawn in and the inauspicious kept at bay. To inscribe an ordered, symmetrical figure there each morning is a small daily act of cosmology: chaos turned to order, the formless given an auspicious form, the home re-consecrated.',
+          'In their symmetry, their centres and enclosures, their bounding lines, the floor designs are a folk sacred geometry — the popular, ephemeral cousin of the yantra and the maṇḍala that Tantra and the Āgamas draw with ritual precision. The same impulse that builds the Śrī-cakra in nine triangles builds the lotus at the doorstep in rice flour; the difference is that the rangoli is made by anyone, every day, and swept away by night. It is the most democratic and most living of India’s sacred arts.',
+        ],
+        aspects: [
+          { name: 'The threshold', deva: 'देहली', desc: 'The doorstep as a liminal, sacred boundary — the meeting of home and world, where the auspicious is invited and the harmful turned away.' },
+          { name: 'Folk yantra', deva: 'लोक-यन्त्र', desc: 'The patterns as a popular, ephemeral sacred geometry — kin to the yantra and maṇḍala of Tantra and the Āgamas.' },
+          { name: 'Order from chaos', deva: 'ऋत', desc: 'Drawing symmetry on the swept ground each dawn — a daily enactment of the cosmic move from formlessness to ordered form.' },
+          { name: 'The democratic sacred', deva: 'लोककला', desc: 'Sacred geometry made not by priests but by every household, every day — the most living and inclusive of the ritual arts.' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────────────────────────────────── Lifestyle
   lifestyle: {
     title: 'Dinacaryā & Living',
