@@ -110,7 +110,25 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'detail.officiant': 'Officiant',
     'detail.period': 'Period',
     'detail.strata': 'The four strata of every Veda',
-    'detail.library': 'Collection'
+    'detail.library': 'Collection',
+    // Living Knowledge
+    'nav.lk': 'Living Knowledge',
+    'lk.eyebrow': 'Living knowledge',
+    'lk.title': 'Gifts of Indian knowledge systems to the world',
+    'lk.title_short': 'Living Knowledge',
+    'lk.meta': '{count} contributions · nine domains',
+    'lk.note_label': 'A note on honesty:',
+    'lk.prompt': 'Click any domain tile to reveal its contributions, then click a contribution to read more.',
+    'lk.count': '{n} contributions',
+    'lk.debated': 'Debated claim',
+    'lk.expand': 'See contributions',
+    'lk.collapse': 'Collapse',
+    'lk.read_more': 'Read more →',
+    'lk.what': 'What it is',
+    'lk.when': 'When it emerged',
+    'lk.how': 'How it applies today',
+    'lk.back_label': '← Back to Living Knowledge',
+    'lk.phase2': 'Detailed account coming soon — check back in Phase II.'
   },
   mr: {
     // Nav
@@ -209,7 +227,25 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'detail.officiant': 'पुरोहित/ऋत्विज',
     'detail.period': 'कालखंड',
     'detail.strata': 'प्रत्येक वेदाचे चार स्तर',
-    'detail.library': 'संग्रहण'
+    'detail.library': 'संग्रहण',
+    // Living Knowledge
+    'nav.lk': 'जिवंत ज्ञान',
+    'lk.eyebrow': 'जिवंत ज्ञान',
+    'lk.title': 'भारतीय ज्ञानप्रणालींची जगाला देणगी',
+    'lk.title_short': 'जिवंत ज्ञान',
+    'lk.meta': '{count} योगदाने · नऊ क्षेत्रे',
+    'lk.note_label': 'प्रामाणिकतेची नोंद:',
+    'lk.prompt': 'योगदाने पाहण्यासाठी कोणत्याही क्षेत्र टाइलवर क्लिक करा, नंतर अधिक वाचण्यासाठी योगदानावर क्लिक करा.',
+    'lk.count': '{n} योगदाने',
+    'lk.debated': 'विवादित दावा',
+    'lk.expand': 'योगदाने पहा',
+    'lk.collapse': 'लपवा',
+    'lk.read_more': 'अधिक वाचा →',
+    'lk.what': 'हे काय आहे',
+    'lk.when': 'कधी उदयास आले',
+    'lk.how': 'आज कसे उपयुक्त आहे',
+    'lk.back_label': '← जिवंत ज्ञानाकडे परत',
+    'lk.phase2': 'सविस्तर माहिती लवकरच येणार आहे — दुसऱ्या टप्प्यात तपासा.'
   }
 };
 

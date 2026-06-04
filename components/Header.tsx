@@ -45,6 +45,7 @@ export default function Header() {
           <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
           <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
           <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
+          <Link href="/#living-knowledge" onClick={close}>{t('nav.lk')}</Link>
           <Link href="/lifestyle/" onClick={close}>{t('nav.lifestyle')}</Link>
 
           <div className="hdr-nav-prefs">
