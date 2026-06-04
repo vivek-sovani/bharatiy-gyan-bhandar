@@ -359,6 +359,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Yoga is the practical engine of the tradition — the how to the what of liberation — and the single Indic concept most fully adopted by the modern world.',
+      origin: { label: 'Darśanas (Yoga-Sūtra)', href: '/darshanas/' },
+      references: [
+        { label: 'Bhagavad-Gītā', href: '/gita/' },
+        { label: 'Upaniṣads (Kaṭha)', href: '/upanishads/' },
+      ],
     },
   },
 
@@ -386,6 +391,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The puruṣa–prakṛti analysis is the substructure beneath a vast amount of Indian thought; even schools that reject its dualism reason in its terms.',
+      origin: { label: 'Darśanas (Sāṅkhya)', href: '/darshanas/' },
+      references: [
+        { label: 'Bhagavad-Gītā', href: '/gita/' },
+        { label: 'Upavedas (Āyurveda)', href: '/upavedas/' },
+      ],
     },
   },
   {
@@ -411,6 +421,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The triguṇa scheme gives Indian thought a supple psychology and ethics of character, and underlies Āyurvedic and dietary classification to this day.',
+      origin: { label: 'Darśanas (Sāṅkhya)', href: '/darshanas/' },
+      references: [
+        { label: 'Bhagavad-Gītā', href: '/gita/' },
+        { label: 'Upavedas (Āyurveda)', href: '/upavedas/' },
+      ],
     },
   },
   {
@@ -436,6 +451,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'The five-element scheme is the shared physics of Indian medicine, cosmology and even architecture (vāstu) — the building blocks of the manifest world.',
+      origin: { label: 'Darśanas (Sāṅkhya · Vaiśeṣika)', href: '/darshanas/' },
+      references: [
+        { label: 'Upavedas (Āyurveda)', href: '/upavedas/' },
+        { label: 'Sciences & Mathematics', href: '/sciences/' },
+      ],
     },
   },
   {
@@ -461,6 +481,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Cyclic time gives Indian thought its characteristic vastness of scale and its sense that decline is not final — every Kali age is followed by renewal.',
+      origin: { label: 'Purāṇas', href: '/puranas/' },
+      references: [
+        { label: 'Vedāṅgas (Jyotiṣa)', href: '/vedangas/' },
+        { label: 'Sciences (astronomy)', href: '/sciences/' },
+      ],
     },
   },
 
@@ -488,6 +513,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Pramāṇa theory made Indian philosophy rigorously self-critical: no claim stood without an account of how it could be known, the discipline every school had to master to debate at all.',
+      origin: { label: 'Darśanas (Nyāya)', href: '/darshanas/' },
+      references: [
+        { label: 'Nāstika Darśanas (Bauddha)', href: '/nastika-darshanas/' },
+      ],
     },
   },
 
@@ -515,6 +544,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Duḥkha sets the whole Buddhist project in motion — a clear-eyed naming of the problem that the Eightfold Path is designed to dissolve.',
+      origin: { label: 'Nāstika Darśanas (Bauddha)', href: '/nastika-darshanas/' },
+      references: [
+        { label: 'Darśanas (Yoga)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -540,6 +573,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Anātman is the most distinctive Buddhist contribution to Indian thought, and the sharpest of its disagreements with the Vedāntic tradition over the nature of the self.',
+      origin: { label: 'Nāstika Darśanas (Bauddha)', href: '/nastika-darshanas/' },
+      references: [
+        { label: 'Upaniṣads (contrast: ātman)', href: '/upanishads/' },
+      ],
     },
   },
   {
@@ -565,6 +602,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Dependent origination is the philosophical heart of Buddhism — a middle way between "things exist absolutely" and "nothing exists," reframing reality as a web of conditions.',
+      origin: { label: 'Nāstika Darśanas (Bauddha)', href: '/nastika-darshanas/' },
+      references: [
+        { label: 'Darśanas (theories of causation)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -590,6 +631,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Śūnyatā became the philosophical core of Mahāyāna across Tibet, China and Japan — one of the most influential and rigorously argued ideas India produced.',
+      origin: { label: 'Nāstika Darśanas (Madhyamaka)', href: '/nastika-darshanas/' },
+      references: [
+        { label: 'Darśanas (Advaita Vedānta)', href: '/darshanas/' },
+      ],
     },
   },
   {
@@ -615,6 +660,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Ahiṃsā is perhaps India\'s most influential ethical export: from Mahāvīra to Gandhi to the movements of King and Mandela, it became a force in world history.',
+      origin: { label: 'Nāstika Darśanas (Jaina)', href: '/nastika-darshanas/' },
+      references: [
+        { label: 'Darśanas (Yoga · the yamas)', href: '/darshanas/' },
+        { label: 'Modern Indic Thought (Gandhi)', href: '/modern/' },
+      ],
     },
   },
   {
@@ -640,6 +690,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Anekāntavāda gave Indian thought its most rigorous philosophy of intellectual humility — a principled openness to the partial truth in rival positions.',
+      origin: { label: 'Nāstika Darśanas (Jaina)', href: '/nastika-darshanas/' },
+      references: [
+        { label: 'Darśanas (Nyāya — logic)', href: '/darshanas/' },
+      ],
     },
   },
 
@@ -667,6 +721,11 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Rasa theory underlies every classical Indian art — dance, drama, music and poetry — and remains the central category through which they are made and judged.',
+      origin: { label: 'Upavedas (Nāṭyaśāstra)', href: '/upavedas/' },
+      references: [
+        { label: 'Kāvya & Nāṭya', href: '/kavya/' },
+        { label: 'Āgamas (Kashmir Śaiva · Abhinavagupta)', href: '/agamas/' },
+      ],
     },
   },
   {
@@ -692,6 +751,10 @@ export const CONCEPTS: Concept[] = [
       ],
       significance:
         'Dhvani theory made resonance, not statement, the measure of poetic excellence — one of the most sophisticated accounts of literary meaning in any premodern tradition.',
+      origin: { label: 'Kāvya & Nāṭya (Sanskrit poetics)', href: '/kavya/' },
+      references: [
+        { label: 'Āgamas (Abhinavagupta)', href: '/agamas/' },
+      ],
     },
   },
 ];
