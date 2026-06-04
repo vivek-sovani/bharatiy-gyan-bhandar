@@ -29,6 +29,8 @@ export type Concept = {
   blurb: string;       // card text
   tags: string[];      // related terms / short tags
   href?: string;       // optional link to a related section
+  /** Optional cover image (filename under /public) shown as the tile banner. */
+  image?: string;
   detail?: ConceptDetail;
 };
 

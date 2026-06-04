@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CornerOrn, Glyph } from './Ornaments';
+import { CornerOrn, Glyph, Emblem } from './Ornaments';
 import { CONTRIBUTORS as CONTRIB_EN, CONTRIB_ERAS, type Contributor } from '@/lib/contributors-data';
 import { CONTRIBUTORS as CONTRIB_MR } from '@/lib/contributors-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -62,7 +62,9 @@ function EraHeader({ era, lang }: { era: EraMeta; lang: string }) {
 
   return (
     <div className="era-banner" aria-label={era.label}>
+      <Emblem name={era.id} className="era-banner-emblem" size={92} />
       <div className="era-banner-row">
+        <Emblem name={era.id} className="era-banner-mark" size={30} />
         <span className="era-banner-period">{period}</span>
         <h3 className="era-banner-title">
           {lang === 'mr' ? (
@@ -159,7 +161,10 @@ export default function Contributors() {
           if (people.length === 0) return null;
 
           return (
-            <div key={eraId} style={{ marginTop: '2.5rem' }}>
+            <div
+              key={eraId}
+              style={{ marginTop: '2.5rem', '--accent': `var(--ac-${eraId})` } as React.CSSProperties}
+            >
               <EraHeader era={era} lang={lang} />
               <div className="people">
                 {people.map((c) => (

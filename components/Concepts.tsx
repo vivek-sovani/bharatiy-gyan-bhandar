@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CornerOrn, Glyph } from './Ornaments';
+import { CornerOrn, Glyph, Emblem } from './Ornaments';
 import { CONCEPTS as CONCEPTS_EN, CONCEPT_DOMAINS, type Concept } from '@/lib/concepts-data';
 import { CONCEPTS as CONCEPTS_MR } from '@/lib/concepts-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -72,7 +72,9 @@ function DomainHeader({ domain, lang }: { domain: DomainMeta; lang: string }) {
 
   return (
     <div className="era-banner" aria-label={domain.label}>
+      <Emblem name={domain.id} className="era-banner-emblem" size={92} />
       <div className="era-banner-row">
+        <Emblem name={domain.id} className="era-banner-mark" size={30} />
         <h3 className="era-banner-title">
           {lang === 'mr' ? (
             <span className="deva-only">{domain.deva}</span>
@@ -99,15 +101,27 @@ function ConceptCard({
   lang: string;
   onOpen: (c: Concept) => void;
 }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
-    <button type="button" className="person is-link" onClick={() => onOpen(c)}>
+    <button
+      type="button"
+      className={`person is-link${c.image ? ' has-cover' : ''}`}
+      onClick={() => onOpen(c)}
+    >
       <CornerOrn className="tl" />
       <CornerOrn className="tr" />
       <CornerOrn className="bl" />
       <CornerOrn className="br" />
 
+      {c.image && (
+        <span className="person-cover" aria-hidden>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${basePath}/${c.image}`} alt="" loading="lazy" />
+        </span>
+      )}
+
       <div className="person-row">
-        <span className="person-seal" aria-hidden>{c.seal}</span>
+        {!c.image && <span className="person-seal" aria-hidden>{c.seal}</span>}
         <div className="person-id">
           <span className="person-dates">{lang === 'mr' ? c.glossDeva : c.gloss}</span>
           {lang === 'mr' ? (
@@ -163,7 +177,10 @@ export default function Concepts() {
           if (items.length === 0) return null;
 
           return (
-            <div key={domainId} style={{ marginTop: '2.5rem' }}>
+            <div
+              key={domainId}
+              style={{ marginTop: '2.5rem', '--accent': `var(--ac-${domainId})` } as React.CSSProperties}
+            >
               <DomainHeader domain={domain} lang={lang} />
               <div className="people">
                 {items.map((c) => (
