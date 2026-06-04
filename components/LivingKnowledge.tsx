@@ -20,26 +20,32 @@ export default function LivingKnowledge() {
   // Refs for focus/scroll management
   const subgridHeadingRef = useRef<HTMLHeadingElement>(null);
   const tilesRef = useRef<HTMLDivElement>(null);
+  const tileButtonRefs = useRef<Map<DomainId, HTMLButtonElement>>(new Map());
 
   const openDomain = useCallback((id: DomainId) => {
     setActiveDomain(id);
-    // Defer so the sub-grid has rendered before we scroll/focus
     requestAnimationFrame(() => {
       subgridHeadingRef.current?.focus({ preventScroll: true });
       subgridHeadingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }, []);
 
-  const closeDomain = useCallback(() => {
+  const closeDomain = useCallback((returnTo?: DomainId) => {
     setActiveDomain(null);
     requestAnimationFrame(() => {
-      tilesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const tile = returnTo ? tileButtonRefs.current.get(returnTo) : null;
+      if (tile) {
+        tile.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        tile.focus({ preventScroll: true });
+      } else {
+        tilesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }, []);
 
   function toggleDomain(id: DomainId) {
     if (activeDomain === id) {
-      closeDomain();
+      closeDomain(id);
     } else {
       openDomain(id);
     }
@@ -83,6 +89,10 @@ export default function LivingKnowledge() {
                 type="button"
                 className="person is-link"
                 aria-pressed={isActive}
+                ref={(el) => {
+                  if (el) tileButtonRefs.current.set(domainId, el);
+                  else tileButtonRefs.current.delete(domainId);
+                }}
                 onClick={() => toggleDomain(domainId)}
                 style={isActive ? { borderColor: 'var(--maroon)', background: 'var(--paper-deep)' } : undefined}
               >
@@ -196,7 +206,7 @@ export default function LivingKnowledge() {
             <div style={{ marginTop: '1.75rem', display: 'flex', justifyContent: 'flex-start' }}>
               <button
                 type="button"
-                onClick={closeDomain}
+                onClick={() => closeDomain(activeDomain ?? undefined)}
                 style={{
                   appearance: 'none',
                   background: 'transparent',
