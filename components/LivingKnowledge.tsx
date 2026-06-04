@@ -60,6 +60,11 @@ export default function LivingKnowledge() {
       const domainId = hash.slice('#lk-domain-'.length) as DomainId;
       if ((LK_DOMAINS as readonly string[]).includes(domainId)) {
         setActiveDomain(domainId);
+        // Wait for the sub-grid to render, then scroll to it
+        setTimeout(() => {
+          subgridHeadingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          subgridHeadingRef.current?.focus({ preventScroll: true });
+        }, 150);
       }
     }
   }, []);
