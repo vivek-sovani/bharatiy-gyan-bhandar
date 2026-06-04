@@ -131,8 +131,9 @@ export function Footer() {
           <h5>{lang === 'mr' ? 'मार्गदर्शन' : 'Navigate'}</h5>
           <ul>
             <li><Link href="/#sections">{t('nav.library')}</Link></li>
-            <li><Link href="/#concepts">{t('nav.concepts')}</Link></li>
             <li><Link href="/#contributors">{t('nav.contrib')}</Link></li>
+            <li><Link href="/#concepts">{t('nav.concepts')}</Link></li>
+            <li><Link href="/#living-knowledge">{t('nav.lk')}</Link></li>
             <li><Link href="/lifestyle/">{t('nav.lifestyle')}</Link></li>
           </ul>
         </div>

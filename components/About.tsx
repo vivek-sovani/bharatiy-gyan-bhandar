@@ -79,6 +79,12 @@ export default function About() {
                   ऋत यांसारख्या प्रत्येक कालखंडात व्यापणाऱ्या कल्पना.
                 </li>
                 <li>
+                  <a href="#living-knowledge"><strong>जिवंत ज्ञान</strong></a> अनुभवा —
+                  शून्य, बीजगणित, ध्यान, शल्यचिकित्सा आणि शाश्वत जीवनापासून ते आजच्या
+                  जगात उपयुक्त असलेल्या भारतीय परंपरेतील ७२ व्यावहारिक योगदानांचा शोध घ्या.
+                  क्षेत्र टाइलवर क्लिक करा; कोणत्याही योगदानावर क्लिक केल्यावर संपूर्ण माहिती मिळेल.
+                </li>
+                <li>
                   <a href="#dinacharya"><strong>दिनचर्येत</strong></a> दिवसाची लय पाहा.
                 </li>
                 <li>
@@ -106,6 +112,12 @@ export default function About() {
                 <li>
                   Follow <a href="#concepts"><strong>the Concepts</strong></a> — ideas like
                   dharma, mokṣa and ṛta that run across every period.
+                </li>
+                <li>
+                  Explore <a href="#living-knowledge"><strong>Living Knowledge</strong></a> —
+                  72 practical contributions of the Indic tradition still relevant today,
+                  from zero and algebra to meditation, surgery, and sustainable living.
+                  Click a domain tile to browse; click any contribution for the full account.
                 </li>
                 <li>
                   See the shape of a day in{' '}
