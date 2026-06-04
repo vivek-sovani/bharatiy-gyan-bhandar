@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { CornerOrn, Glyph } from './Ornaments';
 import { LK_DOMAINS, LK_DOMAIN_META, LIVING_KNOWLEDGE, LK_NOTE, type DomainId } from '@/lib/living-knowledge-data';
@@ -53,6 +53,17 @@ export default function LivingKnowledge() {
 
   const activeGifts = activeDomain ? gifts.filter((g) => g.domain === activeDomain) : [];
 
+  // Auto-open domain when arriving from a detail-page back-link (/#lk-domain-<id>)
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash.startsWith('#lk-domain-')) {
+      const domainId = hash.slice('#lk-domain-'.length) as DomainId;
+      if ((LK_DOMAINS as readonly string[]).includes(domainId)) {
+        setActiveDomain(domainId);
+      }
+    }
+  }, []);
+
   return (
     <section id="living-knowledge" className="frame">
       <div className="shell">
@@ -86,6 +97,7 @@ export default function LivingKnowledge() {
             return (
               <button
                 key={domainId}
+                id={`lk-domain-${domainId}`}
                 type="button"
                 className="person is-link"
                 aria-pressed={isActive}

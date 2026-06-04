@@ -16,7 +16,8 @@ export default function LivingKnowledgeDetail({ id }: { id: string }) {
   if (!gift) return null;
 
   const domain = domainMeta.find((d) => d.id === gift.domain);
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const domainHref = `/#lk-domain-${gift.domain}`;
+  const isPlaceholder = gift.what.includes('Phase II') || gift.what.includes('लवकरच');
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function LivingKnowledgeDetail({ id }: { id: string }) {
             <div className="sec-crumb">
               <Link href="/">{t('detail.library')}</Link>
               <span className="sep">→</span>
-              <Link href="/#living-knowledge">{t('lk.title_short')}</Link>
+              <Link href={domainHref}>{t('lk.title_short')}</Link>
               <span className="sep">→</span>
               <span className="cur">{gift.name}</span>
             </div>
@@ -155,25 +156,14 @@ export default function LivingKnowledgeDetail({ id }: { id: string }) {
                   </div>
                 )}
 
-                {/* Contribution number */}
-                <div style={{ borderTop: '1px solid var(--rule)', paddingTop: '1rem', marginTop: '1rem' }}>
-                  <div className="eyebrow" style={{ color: 'var(--ink-faint)', marginBottom: '0.3rem' }}>
-                    {lang === 'mr' ? 'क्रमांक' : 'No.'}
+                {/* Phase II notice — only when content is not yet written */}
+                {isPlaceholder && (
+                  <div style={{ borderTop: '1px solid var(--rule)', paddingTop: '1rem', marginTop: '1rem' }}>
+                    <p style={{ color: 'var(--ink-faint)', fontSize: '0.88rem', fontStyle: 'italic', margin: 0 }}>
+                      {t('lk.phase2')}
+                    </p>
                   </div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--gold-deep)', fontStyle: 'italic' }}>
-                    {String(gift.n).padStart(2, '0')}
-                  </div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.14em', color: 'var(--ink-faint)', textTransform: 'uppercase', marginTop: '0.2rem' }}>
-                    {lang === 'mr' ? 'एकूण ७२ पैकी' : 'of 72'}
-                  </div>
-                </div>
-
-                {/* Phase II notice */}
-                <div style={{ borderTop: '1px solid var(--rule)', paddingTop: '1rem', marginTop: '1rem' }}>
-                  <p style={{ color: 'var(--ink-faint)', fontSize: '0.88rem', fontStyle: 'italic', margin: 0 }}>
-                    {t('lk.phase2')}
-                  </p>
-                </div>
+                )}
               </div>
             </aside>
           </div>
@@ -185,9 +175,13 @@ export default function LivingKnowledgeDetail({ id }: { id: string }) {
         <div className="shell">
           <h4>{lang === 'mr' ? 'नेव्हिगेशन' : 'Navigation'}</h4>
           <div className="see-grid">
-            <Link className="see-link" href="/#living-knowledge">
+            <Link className="see-link" href={domainHref}>
               <span>
-                <span className="ttl">{t('lk.back_label')}</span>
+                <span className="ttl">
+                  {lang === 'mr'
+                    ? `← ${domain?.deva ?? t('lk.title_short')} मधील इतर योगदाने पाहा`
+                    : `← Explore more in ${domain?.label ?? t('lk.title_short')}`}
+                </span>
               </span>
               <span className="arrow">→</span>
             </Link>
