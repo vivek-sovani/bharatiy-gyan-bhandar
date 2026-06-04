@@ -8,6 +8,7 @@ import { LK_DOMAIN_META as LK_DOMAIN_META_MR, LIVING_KNOWLEDGE as LIVING_KNOWLED
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function LivingKnowledge() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { lang, t } = useLanguage();
   const [activeDomain, setActiveDomain] = useState<DomainId | null>(null);
 
@@ -104,7 +105,7 @@ export default function LivingKnowledge() {
                 key={domainId}
                 id={`lk-domain-${domainId}`}
                 type="button"
-                className="person is-link"
+                className={`person is-link${meta.image ? ' has-cover' : ''}`}
                 aria-pressed={isActive}
                 ref={(el) => {
                   if (el) tileButtonRefs.current.set(domainId, el);
@@ -118,8 +119,17 @@ export default function LivingKnowledge() {
                 <CornerOrn className="bl" />
                 <CornerOrn className="br" />
 
+                {meta.image && (
+                  <span className="person-cover" aria-hidden>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={`${basePath}/${meta.image}`} alt="" loading="lazy" />
+                  </span>
+                )}
+
                 <div className="person-row">
-                  <span className="person-seal" aria-hidden>{meta.seal}</span>
+                  {!meta.image && (
+                    <span className="person-seal" aria-hidden>{meta.seal}</span>
+                  )}
                   <div className="person-id">
                     <span className="person-dates">
                       {t('lk.count').replace('{n}', count.toString())}

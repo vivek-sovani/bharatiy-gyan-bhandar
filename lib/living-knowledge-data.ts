@@ -32,6 +32,8 @@ export type DomainMeta = {
   deva: string;
   seal: string;
   gloss: string;
+  /** Optional cover image (filename under /public), shown as the tile banner. */
+  image?: string;
 };
 
 export const LK_DOMAINS: DomainId[] = [
@@ -45,6 +47,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Mathematics & Logic',
     deva: 'गणित व तर्कशास्त्र',
     seal: '०',
+    image: 'lk-math.png',
     gloss: 'Zero, algebra, trigonometry, binary numbers, infinite series — the mathematical bedrock of modern computing and science.',
   },
   {
@@ -52,6 +55,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Astronomy & Time',
     deva: 'खगोलशास्त्र व कालगणना',
     seal: '☽',
+    image: 'lk-astronomy.png',
     gloss: 'Earth\'s rotation, accurate eclipse prediction, solar calendars, and cosmic time scales spanning billions of years.',
   },
   {
@@ -59,6 +63,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Medicine & Physical Health',
     deva: 'आयुर्वेद',
     seal: 'औ',
+    image: 'lk-medicine.png',
     gloss: 'Preventive medicine, surgery, a vast herbal pharmacopoeia, daily health rhythms, and the concept of food as medicine.',
   },
   {
@@ -66,6 +71,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Psychology & the Mind',
     deva: 'मनोविज्ञान',
     seal: 'ध्',
+    image: 'lk-mind.png',
     gloss: 'Meditation, breath regulation, layered models of the psyche, equanimity, and self-inquiry — all clinically studied today.',
   },
   {
@@ -73,6 +79,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'The Body & Physical Practice',
     deva: 'शरीर व साधना',
     seal: 'आ',
+    image: 'lk-body.png',
     gloss: 'Āsanas, Sūrya Namaskāra, martial traditions, and purification practices now studied by modern medicine.',
   },
   {
@@ -80,6 +87,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Environment & Sustainable Living',
     deva: 'पर्यावरण व सुस्थिर जीवन',
     seal: 'वृ',
+    image: 'lk-environment.png',
     gloss: 'Sacred groves, plant science, water harvesting, low-footprint vegetarian living, and the five-elements worldview.',
   },
   {
@@ -87,6 +95,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Language, Arts & Society',
     deva: 'भाषा, कला व समाज',
     seal: 'पा',
+    image: 'lk-language.png',
     gloss: 'The world\'s first formal grammar, music theory, statecraft, fables that shaped world literature, and chess.',
   },
   {
@@ -94,6 +103,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Materials, Trade & Technology',
     deva: 'धातुकर्म व व्यापार',
     seal: 'ल',
+    image: 'lk-materials.png',
     gloss: 'Rust-resistant iron, crucible steel, zinc distillation, crystallized sugar, cotton, diamonds — cornerstones of global trade.',
   },
   {
@@ -101,6 +111,7 @@ export const LK_DOMAIN_META: DomainMeta[] = [
     label: 'Frameworks for a Happy, Balanced Life',
     deva: 'संतुलित जीवनाची चौकट',
     seal: 'पु',
+    image: 'lk-life.png',
     gloss: 'The Puruṣārthas, Āśrama life stages, situational ethics, fasting, and the universal-family ethic.',
   },
 ];
