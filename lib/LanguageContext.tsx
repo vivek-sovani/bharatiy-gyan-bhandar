@@ -128,6 +128,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'lk.when': 'When it emerged',
     'lk.how': 'How it applies today',
     'lk.back_label': '← Back to Living Knowledge',
+    'lk.back_to_domains': 'Back to all domains',
     'lk.phase2': 'Detailed account coming soon — check back in Phase II.'
   },
   mr: {
@@ -245,6 +246,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'lk.when': 'कधी उदयास आले',
     'lk.how': 'आज कसे उपयुक्त आहे',
     'lk.back_label': '← जिवंत ज्ञानाकडे परत',
+    'lk.back_to_domains': '↑ सर्व क्षेत्रांकडे परत',
     'lk.phase2': 'सविस्तर माहिती लवकरच येणार आहे — दुसऱ्या टप्प्यात तपासा.'
   }
 };

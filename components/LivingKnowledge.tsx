@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { CornerOrn, Glyph } from './Ornaments';
 import { LK_DOMAINS, LK_DOMAIN_META, LIVING_KNOWLEDGE, LK_NOTE, type DomainId } from '@/lib/living-knowledge-data';
@@ -17,8 +17,32 @@ export default function LivingKnowledge() {
 
   const total = LIVING_KNOWLEDGE.length;
 
+  // Refs for focus/scroll management
+  const subgridHeadingRef = useRef<HTMLHeadingElement>(null);
+  const tilesRef = useRef<HTMLDivElement>(null);
+
+  const openDomain = useCallback((id: DomainId) => {
+    setActiveDomain(id);
+    // Defer so the sub-grid has rendered before we scroll/focus
+    requestAnimationFrame(() => {
+      subgridHeadingRef.current?.focus({ preventScroll: true });
+      subgridHeadingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }, []);
+
+  const closeDomain = useCallback(() => {
+    setActiveDomain(null);
+    requestAnimationFrame(() => {
+      tilesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }, []);
+
   function toggleDomain(id: DomainId) {
-    setActiveDomain((prev) => (prev === id ? null : id));
+    if (activeDomain === id) {
+      closeDomain();
+    } else {
+      openDomain(id);
+    }
   }
 
   const activeGifts = activeDomain ? gifts.filter((g) => g.domain === activeDomain) : [];
@@ -46,7 +70,7 @@ export default function LivingKnowledge() {
         <p className="contrib-prompt">{t('lk.prompt')}</p>
 
         {/* Domain tile grid */}
-        <div className="people">
+        <div className="people" ref={tilesRef}>
           {LK_DOMAINS.map((domainId) => {
             const meta = domainMeta.find((d) => d.id === domainId);
             if (!meta) return null;
@@ -102,7 +126,13 @@ export default function LivingKnowledge() {
           <div style={{ marginTop: '2rem' }}>
             <div className="era-banner">
               <div className="era-banner-row">
-                <h3 className="era-banner-title">
+                {/* tabIndex=-1 so JS focus() works; outline suppressed visually */}
+                <h3
+                  className="era-banner-title"
+                  ref={subgridHeadingRef}
+                  tabIndex={-1}
+                  style={{ outline: 'none' }}
+                >
                   {lang === 'mr' ? (
                     <span className="deva-only">
                       {domainMeta.find((d) => d.id === activeDomain)?.deva}
@@ -151,9 +181,7 @@ export default function LivingKnowledge() {
                     </span>
                   </div>
 
-                  <h3 style={{ marginTop: '0.25rem' }}>
-                    {lang === 'mr' ? gift.name : gift.name}
-                  </h3>
+                  <h3 style={{ marginTop: '0.25rem' }}>{gift.name}</h3>
 
                   <p>{gift.blurb}</p>
 
@@ -162,6 +190,31 @@ export default function LivingKnowledge() {
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* Return to domain tiles */}
+            <div style={{ marginTop: '1.75rem', display: 'flex', justifyContent: 'flex-start' }}>
+              <button
+                type="button"
+                onClick={closeDomain}
+                style={{
+                  appearance: 'none',
+                  background: 'transparent',
+                  border: '1px solid var(--rule-strong)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '10.5px',
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--maroon)',
+                  padding: '0.45rem 1rem',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                ↑ {t('lk.back_to_domains')}
+              </button>
             </div>
           </div>
         )}
