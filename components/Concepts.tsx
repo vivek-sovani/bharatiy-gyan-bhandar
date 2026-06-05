@@ -2,6 +2,68 @@
 
 import { useState } from 'react';
 import { CornerOrn, Glyph, Emblem } from './Ornaments';
+
+const CONCEPT_EMOJI: Record<string, string> = {
+  rta:                  '☀️',
+  satya:                '💎',
+  brahman:              '🕉️',
+  atman:                '🪷',
+  maya:                 '🌊',
+  dharma:               '☸️',
+  karma:                '⚡',
+  purusharthas:         '🎯',
+  samsara:              '♾️',
+  moksha:               '🕊️',
+  yoga:                 '🧘',
+  'purusha-prakriti':   '☯️',
+  triguna:              '🔱',
+  panchamahabhuta:      '🌍',
+  'kala-yuga':          '⏳',
+  pramana:              '👁️',
+  duhkha:               '💧',
+  anatman:              '🌀',
+  pratityasamutpada:    '🕸️',
+  shunyata:             '⭕',
+  ahimsa:               '🌱',
+  anekantavada:         '🔮',
+  rasa:                 '🎭',
+  dhvani:               '🎵',
+  'avastha-turiya':     '🌙',
+  antahkarana:          '🧠',
+  panchakosha:          '🪆',
+  indriya:              '🌺',
+  'samskara-vasana':    '🧬',
+  prana:                '💨',
+  'atma-guna':          '✨',
+  saccidananda:         '🌟',
+  ishvara:              '🙏',
+  'nama-rupa':          '🪞',
+  padartha:             '📐',
+  'anu-paramanu':       '⚛️',
+  anumana:              '🔍',
+  'shabda-sphota':      '📜',
+  'vada-shastrartha':   '⚖️',
+  'nishkama-karma':     '🌾',
+  sthitaprajna:         '🏔️',
+  ashrama:              '🛤️',
+  'rina-traya':         '🤝',
+  svadharma:            '⚔️',
+  yajna:                '🔥',
+  bhakti:               '❤️',
+  jnana:                '📚',
+  'ashtanga-yoga':      '🪷',
+  samadhi:              '💫',
+  'viveka-vairagya':    '🧭',
+  'guru-shishya':       '🪔',
+  'catvari-arya-satya': '🌸',
+  'ashtangika-marga':   '🌿',
+  nirvana:              '🕯️',
+  anitya:               '🍂',
+  kshanikavada:         '⏱️',
+  syadvada:             '🔀',
+  kevalajnana:          '💡',
+  'bhava-sthayibhava':  '🎨',
+};
 import { CONCEPTS as CONCEPTS_EN, CONCEPT_DOMAINS, type Concept } from '@/lib/concepts-data';
 import { CONCEPTS as CONCEPTS_MR } from '@/lib/concepts-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -113,8 +175,7 @@ function ConceptCard({
       <CornerOrn className="br" />
 
       <span className="person-cover" aria-hidden>
-        <Emblem name={c.domain} className="person-cover-motif" size={150} />
-        <span className="person-cover-seal">{c.seal}</span>
+        <span className="person-cover-emoji">{CONCEPT_EMOJI[c.id] ?? '🔵'}</span>
       </span>
 
       <div className="person-row">
