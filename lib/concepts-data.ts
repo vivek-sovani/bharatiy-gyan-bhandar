@@ -1725,6 +1725,242 @@ export const CONCEPTS: Concept[] = [
       ],
     },
   },
+
+  // ─────────────────── Action, duty & the shape of a life (added) ──────────────────
+  {
+    id: 'nishkama-karma',
+    name: 'Niṣkāma-karma',
+    deva: 'निष्काम कर्म',
+    seal: 'नि',
+    gloss: 'Desireless action',
+    glossDeva: 'फलाची आसक्ती सोडून केलेले कर्म',
+    domain: 'ethics',
+    source: 'Bhagavad Gītā',
+    sourceDeva: 'भगवद्गीता',
+    blurb: 'Act fully, but release your grip on the fruit. The Gītā\'s resolution of the oldest tension — between engagement in the world and freedom from it.',
+    tags: ['Karma-yoga', 'Detachment', 'Gītā'],
+    href: '/itihasa/',
+    detail: {
+      intro:
+        'Niṣkāma-karma — action without craving for its fruit — is the heart of the Bhagavad Gītā\'s teaching. One acts with full skill and commitment, but surrenders attachment to the outcome; the deed is done as an offering, not as a bid for reward.',
+      aspects: [
+        '"Your right is to the action alone, never to its fruits" — duty is performed for its own sake, not for what it may win.',
+        'Detachment is from the fruit, not from the work: the Gītā rejects both anxious striving and the cop-out of inaction.',
+        'Acting this way, one is not bound by karma — the same deed that binds when done from craving liberates when done as offering.',
+      ],
+      significance:
+        'Niṣkāma-karma reconciles the worldly life of duty with the spiritual goal of freedom. One need not flee to the forest to seek liberation; the householder\'s work, done without grasping, becomes itself a path — karma-yoga, the discipline of action.',
+      origin: {
+        label: 'Bhagavad Gītā',
+        href: '/itihasa/',
+        explainer:
+          'On the battlefield, Arjuna is paralysed — unwilling to fight, yet unable simply to walk away. Kṛṣṇa\'s answer is not "fight" or "renounce" but a third way: do your duty, but let go of the craving for its results. The famous verse "karmaṇy evādhikāras te mā phaleṣu kadācana" makes the point exactly — you govern the action, never the fruit, so anchor yourself in the doing and release the rest. This reframes the whole problem of action: bondage lies not in working but in the grasping ego that works "for" a reward, and freedom is available within action itself.',
+      },
+      references: [
+        {
+          label: 'Karma-yoga & the three paths',
+          href: '/itihasa/',
+          explainer:
+            'Niṣkāma-karma is the seed of karma-yoga, which the Gītā weaves together with jñāna (knowledge) and bhakti (devotion) into a single integrated path: action offered without attachment, illumined by knowledge of the self, and dedicated to the divine. The teaching let later thinkers — most powerfully Gandhi, who called the Gītā his "spiritual dictionary" — read it as a charter for selfless work in the world (niṣkāma sevā), turning a meditation on inner freedom into an ethic of engaged, disinterested service.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'sthitaprajna',
+    name: 'Sthitaprajña',
+    deva: 'स्थितप्रज्ञ',
+    seal: 'स्थि',
+    gloss: 'One of steady wisdom',
+    glossDeva: 'स्थिर बुद्धीचा मनुष्य',
+    domain: 'ethics',
+    source: 'Bhagavad Gītā',
+    sourceDeva: 'भगवद्गीता',
+    blurb: 'The Gītā\'s portrait of the realised person — unshaken in sorrow, unhungry in pleasure, senses reined like a tortoise drawing in its limbs. The ideal of the liberated-in-life.',
+    tags: ['Equanimity', 'Self-mastery', 'Gītā'],
+    href: '/itihasa/',
+    detail: {
+      intro:
+        'When Arjuna asks how a person of settled wisdom speaks, sits and walks, Kṛṣṇa answers with the portrait of the sthitaprajña — one whose insight (prajñā) is steady (sthita). It is the Gītā\'s vivid image of what liberation looks like in an ordinary living human being.',
+      aspects: [
+        'Content in the self by the self, "abandoning all desires that enter the mind, as rivers enter the sea that stays unmoved though ever filled."',
+        'Even-minded in pleasure and pain, gain and loss, praise and blame — equanimity (samatva) as the mark of wisdom.',
+        'Senses withdrawn from their objects at will, "as a tortoise draws in its limbs" — master of the indriyas rather than their servant.',
+      ],
+      significance:
+        'The sthitaprajña makes liberation concrete and ethical: not a trance or an escape, but a way of standing in the world — steady, unswayed, and free while fully alive. It is the human face of the Gītā\'s teaching, the jīvanmukta described not in metaphysics but in character.',
+      origin: {
+        label: 'Bhagavad Gītā',
+        href: '/itihasa/',
+        explainer:
+          'The portrait closes the Gītā\'s second chapter, its philosophical overture. Arjuna\'s four questions — how does the steady-minded one speak, sit, move, and rest? — draw from Kṛṣṇa a sustained description that became one of the most memorised passages in the tradition. It traces a psychology of freedom: desire breeds attachment, attachment breeds anger, anger breeds confusion and the ruin of judgement; the sthitaprajña breaks the chain at its root by mastering desire, and so keeps a clear, unshaken mind. The image answers a practical question — what does the liberated person actually look like? — in terms anyone can recognise.',
+      },
+      references: [
+        {
+          label: 'Jīvanmukti & later Vedānta',
+          href: '/upanishads/',
+          explainer:
+            'The sthitaprajña anticipates the later Vedāntic ideal of the jīvanmukta — one liberated while still living, who continues to act and inhabit a body but is inwardly free, untouched by the results of action. Advaita texts elaborate this state at length, and the same figure appears across the tradition: the saint who lives among people, works and suffers outwardly, yet rests unshaken in the self. The Gītā\'s steady-minded sage thus became the shared model of realised humanity, equally claimed by paths of knowledge, action and devotion.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'ashrama',
+    name: 'Āśrama',
+    deva: 'आश्रम',
+    seal: 'आ',
+    gloss: 'The four stages of life',
+    glossDeva: 'जीवनाचे चार आश्रम',
+    domain: 'ethics',
+    source: 'Dharmaśāstra',
+    sourceDeva: 'धर्मशास्त्र',
+    blurb: 'A whole human life mapped in four seasons — student, householder, forest-dweller, renouncer — so that learning, family, and the turn inward each get their proper time.',
+    tags: ['Life-stages', 'Gṛhastha', 'Sannyāsa'],
+    href: '/itihasa/',
+    detail: {
+      intro:
+        'The āśrama scheme divides an ideal life into four successive stages, each with its own duties and its own goods. It is the tradition\'s answer to how a single life can honour worldly aims and spiritual freedom alike — not by choosing between them, but by giving each its season.',
+      aspects: [
+        'Brahmacarya — the student: disciplined learning and self-restraint under a teacher.',
+        'Gṛhastha — the householder: marriage, work, raising a family and supporting society, pursuing artha and kāma within dharma.',
+        'Vānaprastha and sannyāsa — the forest-dweller who gradually withdraws, and the renouncer who lets go of all worldly ties to seek mokṣa.',
+      ],
+      significance:
+        'The āśramas integrate the four aims of life (puruṣārtha) across time: the householder pursues prosperity and pleasure, the renouncer liberation, and dharma runs through all. The scheme honours the world without absolutising it — engagement and renunciation become phases of one journey rather than rival ideals.',
+      origin: {
+        label: 'Dharmaśāstra',
+        href: '/itihasa/',
+        explainer:
+          'The dharma literature — the Dharmasūtras and the later Manusmṛti and Yājñavalkyasmṛti — sets out the āśrama system as a framework of life-long duty. It pointedly elevates the householder: the gṛhastha, by producing food, children and support, is said to sustain the other three stages, "as all rivers and streams find rest in the ocean." The texts debate whether the stages must be passed through in sequence or can be entered directly, a tension that mirrors the long argument between the values of social duty and world-renunciation.',
+      },
+      references: [
+        {
+          label: 'The renunciant counter-current',
+          href: '/upanishads/',
+          explainer:
+            'The āśrama scheme is partly a domestication of the powerful renunciant impulse that runs from the Upaniṣadic forest-teachers through the Buddhists and Jains. By making sannyāsa the culminating stage rather than a rejection of the whole social order, the tradition made room for radical renunciation within a life that had first discharged its debts to teachers, gods and ancestors. The result is a characteristic balance: the call to liberation is honoured, but so is the householder\'s world that sustains it — each in its proper time.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'rina-traya',
+    name: 'Ṛṇa-traya',
+    deva: 'ऋणत्रय',
+    seal: 'ऋ',
+    gloss: 'The three debts',
+    glossDeva: 'तीन ऋणे',
+    domain: 'ethics',
+    source: 'Vedas · Dharmaśāstra',
+    sourceDeva: 'वेद · धर्मशास्त्र',
+    blurb: 'To be born is to owe — to the sages who preserved knowledge, the gods who sustain the world, and the ancestors who gave us life. Duty grounded in gratitude, not command.',
+    tags: ['Debt', 'Gratitude', 'Duty'],
+    href: '/vedas/',
+    detail: {
+      intro:
+        'The doctrine of the three debts (ṛṇa) frames the moral life as repayment of what we have received before we could earn it. Each person is born owing three debts — and discharging them, not asserting rights, is the root of duty.',
+      aspects: [
+        'Debt to the ṛṣis (the sages) — repaid by study and the transmission of knowledge to the next generation.',
+        'Debt to the devas (the gods) — repaid by ritual offering and right living that maintains the cosmic order.',
+        'Debt to the pitṛs (the ancestors) — repaid by raising a family and continuing the line that gave one life.',
+      ],
+      significance:
+        'The ṛṇa scheme grounds ethics in gratitude and reciprocity rather than in commandment: we are obligated because we are recipients. It also explains the high value placed on the householder, whose ordinary life of study, worship and family is precisely how the three debts are paid.',
+      origin: {
+        label: 'Vedas & the Brāhmaṇas',
+        href: '/vedas/',
+        explainer:
+          'The three debts are stated in the Brāhmaṇa literature and the Taittirīya Saṃhitā: a brahmin is born with a debt to the sages, to the gods, and to the ancestors, owed respectively through studentship, sacrifice and offspring. Some texts add a fourth, the debt to fellow humans and guests, repaid by hospitality and generosity. The framework turns the whole of ordinary life — learning, ritual and raising children — into the steady discharge of obligations one did not choose but cannot honourably ignore.',
+      },
+      references: [
+        {
+          label: 'Dharmaśāstra & the āśramas',
+          href: '/itihasa/',
+          explainer:
+            'The dharma texts make the three debts the rationale for the life-stages: one should not renounce the world (enter sannyāsa) before having repaid the debts — studied as a brahmacārī, sacrificed and raised a family as a gṛhastha. Only a life that has met its obligations is free to seek release. This linkage gave the renunciant ideal a social anchor and made the debts a recurring argument for the priority of the householder\'s duties, voiced by Manu and the later jurists against the pull of premature world-renunciation.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'svadharma',
+    name: 'Svadharma',
+    deva: 'स्वधर्म',
+    seal: 'स्व',
+    gloss: 'One\'s own duty',
+    glossDeva: 'स्वतःचा धर्म',
+    domain: 'ethics',
+    source: 'Bhagavad Gītā',
+    sourceDeva: 'भगवद्गीता',
+    blurb: 'Duty is not one-size-fits-all: each person has their own, fitted to their nature and station. "Better one\'s own duty done imperfectly than another\'s done well."',
+    tags: ['Duty', 'Vocation', 'Gītā'],
+    href: '/itihasa/',
+    detail: {
+      intro:
+        'Svadharma — "one\'s own dharma" — is the principle that duty is particular, not generic: what is right for a person depends on their nature, capacities and place in life. The same act may be obligatory for one and forbidden for another.',
+      aspects: [
+        'Dharma is differentiated by temperament (svabhāva) and role, so that each person\'s path of right action is genuinely their own.',
+        'The Gītā\'s striking verse: "better one\'s own duty though imperfect than another\'s duty well performed."',
+        'It frames Arjuna\'s crisis: as a warrior, his svadharma is to fight a just war, however much he would prefer the renouncer\'s peace.',
+      ],
+      significance:
+        'Svadharma roots ethics in the concrete particular rather than an abstract universal — a person fulfils themselves by acting from their own nature and station. The idea has a double edge: it dignifies every honest vocation, yet historically also underwrote the fixed duties of caste, a tension modern readers have had to confront directly.',
+      origin: {
+        label: 'Bhagavad Gītā',
+        href: '/itihasa/',
+        explainer:
+          'Kṛṣṇa invokes svadharma to move Arjuna past his paralysis: his duty as a kṣatriya is to uphold justice in battle, and to abandon it out of squeamishness would be a failure of his own nature, not a virtue. The teaching insists that acting from one\'s authentic role — even when hard — is better than borrowing a path that looks higher but is not one\'s own. Coupled with niṣkāma-karma, it tells Arjuna both what to do (his svadharma) and how (without attachment to the fruit).',
+      },
+      references: [
+        {
+          label: 'Dharmaśāstra & modern re-readings',
+          href: '/itihasa/',
+          explainer:
+            'In the dharma literature svadharma is tied to varṇa and āśrama — the specific duties of one\'s social order and life-stage — and this became one of the most contested inheritances of the tradition. Modern thinkers re-read it sharply: Gandhi interpreted svadharma as faithfulness to one\'s own conscience and calling rather than birth-station, while Ambedkar attacked its caste-bound form directly. The concept thus sits at the centre of the modern argument over how much of the tradition gives life and how much must be questioned — a duty to one\'s nature, or a cage of inherited role.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'yajna',
+    name: 'Yajña',
+    deva: 'यज्ञ',
+    seal: 'य',
+    gloss: 'Sacrifice & offering',
+    glossDeva: 'यज्ञ · आहुती',
+    domain: 'ethics',
+    source: 'Vedas',
+    sourceDeva: 'वेद',
+    blurb: 'The central Vedic act — offering into fire to sustain the order of the world — and its long inward journey, from outer ritual to the sacrifice of the ego itself.',
+    tags: ['Ritual', 'Agni', 'Offering'],
+    href: '/vedas/',
+    detail: {
+      intro:
+        'Yajña, the offering made into the sacred fire, is the central act of Vedic religion — the means by which humans, gods and the cosmos are kept in working relationship. Its history is a journey inward: from the literal fire-rite to sacrifice reinterpreted as ethics, knowledge and self-giving.',
+      aspects: [
+        'In the Vedas, the offering (often through Agni, who carries it upward) sustains ṛta, the cosmic order, and binds the human and divine worlds in reciprocity.',
+        'The Brāhmaṇas elaborate it into a vast precise science of ritual — and the very stimulus for grammar, geometry and astronomy.',
+        'The Upaniṣads and Gītā interiorise it: the true yajña becomes self-restraint, breath, knowledge, or action offered without attachment.',
+      ],
+      significance:
+        'Yajña is the thread that runs from the oldest layer of the tradition to its most refined. Watching the word travel — from a fire on the altar to "all action done as offering" in the Gītā — is to watch the whole movement of Indian thought from outer rite to inner meaning in a single concept.',
+      origin: {
+        label: 'Vedas & Brāhmaṇas',
+        href: '/vedas/',
+        explainer:
+          'The Ṛgveda\'s very first hymn invokes Agni as the priest of the sacrifice, and the offering stands at the centre of Vedic life: correctly performed, it keeps the seasons turning, the rains falling and the order of ṛta intact. The Brāhmaṇas then develop the rite into an immense technical system, where a mispronounced syllable or misplaced act could render the whole offering void — a demand for precision that drove the creation of the auxiliary sciences (vedāṅgas), from phonetics to the geometry of building the altar.',
+      },
+      references: [
+        {
+          label: 'Upaniṣads & Bhagavad Gītā',
+          href: '/itihasa/',
+          explainer:
+            'As the tradition turned inward, yajña was reinterpreted rather than abandoned. The Upaniṣads speak of the "inner sacrifice" — offering the breath, the senses or knowledge itself into the fire of the self. The Bhagavad Gītā completes the move: it lists many kinds of yajña — of wealth, of austerity, of knowledge, of breath-control — and declares that all action can be done as offering, so that work itself, performed without craving for its fruit, becomes sacrifice. The outer fire-rite thus becomes a universal ethic: to live rightly is to make of one\'s whole life an offering.',
+        },
+      ],
+    },
+  },
 ];
 
 export const CONCEPT_DOMAINS = [
