@@ -113,6 +113,7 @@ function ConceptCard({
       <CornerOrn className="br" />
 
       <span className="person-cover" aria-hidden>
+        <Emblem name={c.domain} className="person-cover-motif" size={150} />
         <span className="person-cover-seal">{c.seal}</span>
       </span>
 

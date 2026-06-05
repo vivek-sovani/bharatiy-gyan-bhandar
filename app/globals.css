@@ -3026,36 +3026,53 @@ html[lang="mr"] .essay .meta {
 .person .corner-orn.bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
 .person .corner-orn.br { bottom: 4px; right: 4px; transform: scale(-1, -1); }
 
-/* Concept banner — a lightweight, domain-tinted field carrying the seal glyph.
+/* Concept banner — a domain-tinted field carrying the line-art domain emblem
+   as a faint watermark with the Devanagari seal as the focal point.
    Replaces per-concept cover images: zero network weight, scales with the theme. */
 .person-cover {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: -1.4rem -1.4rem 1.1rem;
+  padding-left: 1.4rem;
   height: 118px;
   overflow: hidden;
   border-bottom: 1px solid var(--rule-strong);
   background:
-    radial-gradient(circle at 28% 22%,
-      color-mix(in oklch, var(--accent, var(--maroon)) 26%, transparent),
-      transparent 62%),
-    linear-gradient(140deg,
-      color-mix(in oklch, var(--accent, var(--maroon)) 16%, var(--paper-deep)),
+    linear-gradient(150deg,
+      color-mix(in oklch, var(--accent, var(--maroon)) 12%, var(--paper)),
       var(--paper-deep));
 }
+/* Domain emblem — large, faint, bleeding off the right edge. */
+.person-cover-motif {
+  position: absolute;
+  right: -26px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent, var(--maroon));
+  opacity: 0.16;
+  pointer-events: none;
+  transition: transform 0.55s ease, opacity 0.55s ease;
+}
+.person.has-cover:hover .person-cover-motif,
+.person.has-cover:focus-visible .person-cover-motif {
+  transform: translateY(-50%) scale(1.06) rotate(4deg);
+  opacity: 0.22;
+}
+/* Devanagari seal — the focal glyph, sitting over the watermark. */
 .person-cover-seal {
+  position: relative;
   font-family: var(--font-deva);
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   line-height: 1;
   color: var(--accent, var(--maroon));
-  opacity: 0.9;
   text-shadow: 0 1px 1px color-mix(in oklch, var(--paper) 70%, transparent);
   transition: transform 0.45s ease;
 }
 .person.has-cover:hover .person-cover-seal,
 .person.has-cover:focus-visible .person-cover-seal {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .person-row {
@@ -3190,8 +3207,9 @@ html[lang="mr"] .person-work {
   .person { padding: 1.15rem 1.1rem 1rem; min-height: 0; }
   .person-seal { width: 42px; height: 42px; font-size: 1.25rem; }
   .person-name { font-size: 1.15rem; }
-  .person-cover { margin: -1.15rem -1.1rem 0.9rem; height: 96px; }
-  .person-cover-seal { font-size: 3rem; }
+  .person-cover { margin: -1.15rem -1.1rem 0.9rem; padding-left: 1.1rem; height: 100px; }
+  .person-cover-seal { font-size: 2.9rem; }
+  .person-cover-motif { right: -30px; }
 }
 
 /* ── Contributor prompt + click-through detail modal ─────────────────────── */
