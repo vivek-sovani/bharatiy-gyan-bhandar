@@ -175,7 +175,9 @@ function ConceptCard({
       <CornerOrn className="br" />
 
       <div className="person-row">
-        <span className="person-seal" aria-hidden>{CONCEPT_EMOJI[c.id] ?? '🔵'}</span>
+        <span className="person-seal" aria-hidden>
+          <Emblem name={c.domain} size={26} />
+        </span>
         <div className="person-id">
           <span className="person-dates">{lang === 'mr' ? c.glossDeva : c.gloss}</span>
           {lang === 'mr' ? (
