@@ -1113,6 +1113,7 @@ export const CONCEPTS: Concept[] = [
   // ─────────────────── मन, चैतन्य व सूक्ष्म देह (नवीन) ──────────────────
   {
     id: 'avastha-turiya',
+    image: 'concept-avastha-turiya.png',
     name: 'अवस्थात्रय व तुरीय',
     deva: 'अवस्थात्रय व तुरीय',
     seal: 'तु',
@@ -1158,6 +1159,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'antahkarana',
+    image: 'concept-antahkarana.png',
     name: 'अंतःकरण',
     deva: 'अंतःकरण',
     seal: 'अं',
@@ -1203,6 +1205,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'panchakosha',
+    image: 'concept-panchakosha.png',
     name: 'पंचकोश',
     deva: 'पंचकोश',
     seal: 'को',
@@ -1242,6 +1245,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'indriya',
+    image: 'concept-indriya.png',
     name: 'इंद्रिय',
     deva: 'इंद्रिय',
     seal: 'इं',
@@ -1287,6 +1291,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'samskara-vasana',
+    image: 'concept-samskara-vasana.png',
     name: 'संस्कार व वासना',
     deva: 'संस्कार व वासना',
     seal: 'सं',
@@ -1326,6 +1331,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'prana',
+    image: 'concept-prana.png',
     name: 'प्राण',
     deva: 'प्राण',
     seal: 'प्र',
@@ -1367,6 +1373,7 @@ export const CONCEPTS: Concept[] = [
   // ─────────────────── व्यवस्था, आत्मा व सत्तेच्या मूलकोटी (नवीन) ──────────────────
   {
     id: 'atma-guna',
+    image: 'concept-atma-guna.png',
     name: 'आत्मगुण',
     deva: 'आत्मगुण',
     seal: 'आ',
@@ -1406,6 +1413,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'saccidananda',
+    image: 'concept-saccidananda.png',
     name: 'सच्चिदानंद',
     deva: 'सच्चिदानंद',
     seal: 'स',
@@ -1445,6 +1453,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'ishvara',
+    image: 'concept-ishvara.png',
     name: 'ईश्वर',
     deva: 'ईश्वर',
     seal: 'ई',
@@ -1484,6 +1493,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'nama-rupa',
+    image: 'concept-nama-rupa.png',
     name: 'नामरूप',
     deva: 'नामरूप',
     seal: 'ना',
@@ -1523,6 +1533,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'padartha',
+    image: 'concept-padartha.png',
     name: 'पदार्थ',
     deva: 'पदार्थ',
     seal: 'प',
@@ -1562,6 +1573,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'anu-paramanu',
+    image: 'concept-anu-paramanu.png',
     name: 'अणु व परमाणु',
     deva: 'अणु व परमाणु',
     seal: 'अ',
