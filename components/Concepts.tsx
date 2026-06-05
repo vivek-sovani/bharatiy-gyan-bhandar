@@ -101,11 +101,10 @@ function ConceptCard({
   lang: string;
   onOpen: (c: Concept) => void;
 }) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <button
       type="button"
-      className={`person is-link${c.image ? ' has-cover' : ''}`}
+      className="person is-link has-cover"
       onClick={() => onOpen(c)}
     >
       <CornerOrn className="tl" />
@@ -113,15 +112,11 @@ function ConceptCard({
       <CornerOrn className="bl" />
       <CornerOrn className="br" />
 
-      {c.image && (
-        <span className="person-cover" aria-hidden>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${basePath}/${c.image}`} alt="" loading="lazy" />
-        </span>
-      )}
+      <span className="person-cover" aria-hidden>
+        <span className="person-cover-seal">{c.seal}</span>
+      </span>
 
       <div className="person-row">
-        {!c.image && <span className="person-seal" aria-hidden>{c.seal}</span>}
         <div className="person-id">
           <span className="person-dates">{lang === 'mr' ? c.glossDeva : c.gloss}</span>
           {lang === 'mr' ? (
