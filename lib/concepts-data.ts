@@ -2197,6 +2197,281 @@ export const CONCEPTS: Concept[] = [
       ],
     },
   },
+
+  // ─────────────────── Heterodox concepts — Bauddha & Jaina (added) ──────────────────
+  {
+    id: 'catvari-arya-satya',
+    name: 'Catvāri Ārya-satyāni',
+    deva: 'चत्वारि आर्यसत्यानि',
+    seal: 'च',
+    gloss: 'The Four Noble Truths',
+    glossDeva: 'चार आर्यसत्ये',
+    domain: 'heterodox',
+    source: 'Bauddha',
+    sourceDeva: 'बौद्ध',
+    blurb: 'The Buddha\'s first teaching, framed like a physician\'s diagnosis — there is suffering, it has a cause, it can end, and there is a path to its ending.',
+    tags: ['Buddha', 'Duḥkha', 'Path'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'The Four Noble Truths are the framework of the Buddha\'s first sermon and the kernel of all Buddhist thought. They are structured like a medical diagnosis: name the disease, find its cause, affirm that a cure exists, and prescribe the treatment.',
+      aspects: [
+        'Duḥkha — there is suffering: birth, ageing, sickness, loss and the deep unsatisfactoriness woven through conditioned existence.',
+        'Samudaya — suffering has a cause: craving (tṛṣṇā), the thirst that clings to pleasure, existence and becoming.',
+        'Nirodha and mārga — suffering can cease with the ending of craving (nirvāṇa), and there is a path that leads there: the Eightfold Path.',
+      ],
+      significance:
+        'The Four Truths reframe the religious problem itself: not sin and forgiveness, not ritual and reward, but suffering and its cessation, diagnosed and treated. Their cool, analytical, cause-and-effect structure set the tone for the whole rigorous, psychological character of Buddhist philosophy.',
+      origin: {
+        label: 'Nāstika darśanas (Bauddha)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'According to tradition, the Buddha set out the Four Noble Truths in his very first discourse at Sārnāth, the "turning of the wheel of dharma." He framed them as a middle way between indulgence and harsh asceticism, and presented each truth as a task: suffering is to be understood, its cause to be abandoned, its cessation to be realised, the path to be cultivated. The diagnostic form is deliberate — the early texts repeatedly compare the Buddha to a physician who is concerned not with metaphysical speculation but with curing a concrete affliction.',
+      },
+      references: [
+        {
+          label: 'The development of the path',
+          href: '/nastika-darshanas/',
+          explainer:
+            'From this seed grew the whole edifice of Buddhist analysis. The first truth was unpacked through the marks of existence (impermanence, suffering, no-self); the second through dependent origination (pratītya-samutpāda), the detailed chain by which craving produces rebirth; the fourth through the Eightfold Path and later the elaborate maps of meditation and the stages of awakening. Every Buddhist school, however much it differed on metaphysics, took the Four Noble Truths as common ground — the shared diagnosis from which all its medicine was compounded.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'ashtangika-marga',
+    name: 'Aṣṭāṅgika-mārga',
+    deva: 'अष्टांगिक मार्ग',
+    seal: 'मा',
+    gloss: 'The Noble Eightfold Path',
+    glossDeva: 'आर्य अष्टांगिक मार्ग',
+    domain: 'heterodox',
+    source: 'Bauddha',
+    sourceDeva: 'बौद्ध',
+    blurb: 'The Buddha\'s prescription for the end of suffering — eight interwoven practices of wisdom, ethical conduct and mental discipline, walked as a "middle way."',
+    tags: ['Middle Way', 'Sīla', 'Samādhi'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'The Noble Eightfold Path is the fourth of the Four Noble Truths spelled out — the concrete way leading to the cessation of suffering. Its eight factors are not sequential steps but mutually supporting practices, cultivated together as a balanced "middle way."',
+      aspects: [
+        'Wisdom (prajñā): right view and right intention — seeing things as they are and orienting the will accordingly.',
+        'Ethical conduct (śīla): right speech, right action and right livelihood — a life that harms neither others nor oneself.',
+        'Mental discipline (samādhi): right effort, right mindfulness and right concentration — the training of attention that culminates in meditative insight.',
+      ],
+      significance:
+        'The Eightfold Path makes the Buddhist goal a practice rather than a belief: liberation is something done, by working simultaneously on understanding, conduct and mind. Its threefold structure — wisdom, ethics, discipline — became the template for the entire Buddhist training.',
+      origin: {
+        label: 'Nāstika darśanas (Bauddha)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The Buddha presented the path in the same first sermon as the Four Truths, explicitly as the middle way (madhyamā pratipad) avoiding both sensual indulgence and self-torturing asceticism — the two extremes he had himself tried and abandoned. The eight factors are each qualified as samyak, "right" or "complete," and the tradition groups them into the three trainings of śīla, samādhi and prajñā. Rather than a ladder climbed rung by rung, they form a single integrated way of life in which ethical, contemplative and cognitive development reinforce one another.',
+      },
+      references: [
+        {
+          label: 'The three trainings & meditation',
+          href: '/nastika-darshanas/',
+          explainer:
+            'The threefold scheme of the path — virtue, concentration, wisdom — became the organising structure of Buddhist practice across all schools, elaborated into detailed systems of ethical precepts, stages of meditative absorption (the jhānas/dhyānas) and the cultivation of insight (vipaśyanā). Mindfulness (smṛti), one of the eight factors, generated an entire literature of its own and, in modern times, travelled far beyond Buddhism into secular psychology and medicine. The path thus remains the practical backbone connecting the Buddhist diagnosis of suffering to its lived cure.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'nirvana',
+    name: 'Nirvāṇa',
+    deva: 'निर्वाण',
+    seal: 'नि',
+    gloss: 'The blowing-out',
+    glossDeva: 'निर्वाण · विझणे',
+    domain: 'heterodox',
+    source: 'Bauddha',
+    sourceDeva: 'बौद्ध',
+    blurb: 'Liberation imagined not as arrival but as extinction — the "blowing out" of the fires of craving, aversion and delusion, and with them the whole round of suffering.',
+    tags: ['Liberation', 'Extinction', 'Peace'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Nirvāṇa — literally "blowing out," as of a flame — is the Buddhist name for liberation. It is the extinguishing of the fires of craving (rāga), aversion (dveṣa) and delusion (moha), and with them the end of the round of rebirth and suffering. It is defined more by what ceases than by what remains.',
+      aspects: [
+        'Not annihilation and not a heaven, but the cessation of the craving that fuels suffering — described as the highest peace and freedom.',
+        'The tradition distinguishes nirvāṇa "with remainder" (attained in life, the fires out but the body continuing) from "without remainder" (at the death of the liberated one).',
+        'The Buddha consistently refused to define its positive nature, treating speculation about it as a distraction from the work of attaining it.',
+      ],
+      significance:
+        'Nirvāṇa reframes the goal of the spiritual life in a strikingly negative-yet-liberating key: not union with an absolute or arrival in a realm, but the simple, complete ending of the conditions that produce suffering. It is the Buddhist counterpart to mokṣa, reached by a very different analysis of the self.',
+      origin: {
+        label: 'Nāstika darśanas (Bauddha)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The fire imagery is central and deliberate: in the famous "Fire Sermon," the Buddha declares that all is burning — the senses, their objects, and consciousness ablaze with the fires of passion, hatred and delusion — and that liberation is the going-out of those fires. Because the Buddha taught no permanent self, nirvāṇa cannot be the survival of a soul; yet he equally denied that it is mere annihilation, repeatedly setting aside questions about the state of a liberated being after death as ill-formed. What he affirmed was experiential: the unconditioned peace available when craving is uprooted.',
+      },
+      references: [
+        {
+          label: 'Mahāyāna developments',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Later Mahāyāna thought reread nirvāṇa profoundly. Nāgārjuna\'s Madhyamaka declared that nirvāṇa and saṃsāra are not two separate realms — "there is not the slightest difference between them" — since both are empty of inherent existence; liberation is a transformed way of seeing this very world, not an escape to another. The bodhisattva ideal then reframed the goal ethically: out of compassion the bodhisattva declines final nirvāṇa to remain and help all beings. These moves turned an originally austere notion of extinction into the basis for an expansive philosophy of emptiness and compassion.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'anitya',
+    name: 'Anitya & Tri-lakṣaṇa',
+    deva: 'अनित्य व त्रिलक्षण',
+    seal: 'अ',
+    gloss: 'Impermanence & the three marks',
+    glossDeva: 'अनित्यता व तीन लक्षणे',
+    domain: 'heterodox',
+    source: 'Bauddha',
+    sourceDeva: 'बौद्ध',
+    blurb: 'The Buddhist reading of all conditioned things by three marks: impermanent, unsatisfactory, and without a self. To see them clearly is the beginning of freedom.',
+    tags: ['Impermanence', 'Anattā', 'Insight'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'The three marks of existence (tri-lakṣaṇa) are the characteristics the Buddha said belong to all conditioned things: anitya (impermanence), duḥkha (unsatisfactoriness) and anātman (no-self). Foremost among them is impermanence — the ceaseless arising and passing of everything that is made.',
+      aspects: [
+        'Anitya — everything conditioned is in flux: there are no stable things, only processes arising and dissolving moment by moment.',
+        'Duḥkha — because we grasp at what cannot last, clinging to the impermanent breeds suffering.',
+        'Anātman — nowhere in this flux is there a permanent, independent self to be found; the "person" is a stream of changing factors.',
+      ],
+      significance:
+        'The three marks are the Buddhist lens for seeing reality as it is. Insight (vipaśyanā) is largely the direct, felt recognition of impermanence and no-self — and it is this seeing, not belief, that the tradition holds loosens craving at its root and opens the way to liberation.',
+      origin: {
+        label: 'Nāstika darśanas (Bauddha)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The Buddha is said to have summed up his teaching in the formula that "all conditioned things are impermanent, all are unsatisfactory, all phenomena are without self" — a refrain repeated throughout the early discourses. Impermanence is the most immediately observable of the three and the gateway to the others: watching sensations, thoughts and the body arise and vanish reveals that nothing offers a stable resting place, and that the felt sense of a solid, owning self does not survive close inspection. His reported last words — "all conditioned things are subject to decay; strive on with diligence" — make impermanence the very frame of the path.',
+      },
+      references: [
+        {
+          label: 'Contrast with the Upaniṣadic self',
+          href: '/upanishads/',
+          explainer:
+            'The three marks define the sharpest fault line between Buddhism and the Vedic mainstream. Where the Upaniṣads seek, beneath the flux, an unchanging self (ātman) identical with the absolute, the Buddha turned the same meditative attention to the flux and concluded that no such permanent self is to be found — only impermanent, interdependent processes. This was not nihilism: it was offered as the precise insight that ends grasping. The long, fertile debate between ātman and anātman — is there an abiding self, or only a stream? — became one of the most productive disagreements in all of Indian philosophy.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'kshanikavada',
+    name: 'Kṣaṇikavāda',
+    deva: 'क्षणिकवाद',
+    seal: 'क्ष',
+    gloss: 'Momentariness',
+    glossDeva: 'क्षणभंगुरतेचा सिद्धान्त',
+    domain: 'heterodox',
+    source: 'Bauddha',
+    sourceDeva: 'बौद्ध',
+    blurb: 'Impermanence pushed to its limit — nothing endures even for two moments; what looks like a lasting thing is a rapid succession of momentary flashes, like a flame or a flowing river.',
+    tags: ['Flux', 'Momentariness', 'Abhidharma'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Kṣaṇikavāda — the doctrine of momentariness — is the Buddhist philosophers\' radicalisation of impermanence. Things do not merely change over time; nothing persists even for two consecutive moments. What appears to be an enduring object is a stream of momentary entities, each arising and perishing instantly, replaced so quickly that we mistake the series for a stable thing.',
+      aspects: [
+        'Whatever exists is momentary: existence and causal efficacy are taken to entail instantaneous arising and ceasing.',
+        'Apparent persistence is like a flame or a river — a continuity of distinct, fleeting events, not one abiding entity.',
+        'It dispenses with enduring substance altogether: there are events and their causal links, but no thing that stays the same beneath them.',
+      ],
+      significance:
+        'Momentariness is one of the most rigorous metaphysics of process ever developed. It supplied the Buddhist answer to identity and change without a self or substance, and forced the realist schools (Nyāya–Vaiśeṣika) to defend enduring objects with new precision — driving some of the deepest debates in Indian philosophy.',
+      origin: {
+        label: 'Nāstika darśanas (Abhidharma & logicians)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'The doctrine grew from the Abhidharma analysis of experience into momentary factors (dharmas) and was sharpened by the great logicians Dignāga and Dharmakīrti into a formal argument: to be real is to be causally effective, and causal efficacy, they argued, requires that a thing produce its effect and immediately give way — so "whatever exists is momentary" (yat sat tat kṣaṇikam). On this view the smooth, continuous world of common sense is a construction laid by the mind over an underlying flicker of instantaneous events, much as a whirling firebrand appears as a solid circle of light.',
+      },
+      references: [
+        {
+          label: 'The realist reply (Nyāya–Vaiśeṣika)',
+          href: '/darshanas/',
+          explainer:
+            'The orthodox realists rejected momentariness vigorously. Nyāya argued that recognition — "this is the same pot I saw yesterday" — and memory presuppose enduring objects and an enduring knower; if everything vanished each instant, there could be no one to remember and nothing recognised. They also pressed the problem of how a thing that has utterly ceased could produce an effect in the next moment without a persisting cause. The clash between Buddhist momentariness and Nyāya\'s enduring substances became a defining debate of classical Indian thought, each side refining its logic against the other for centuries.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'syadvada',
+    name: 'Syādvāda',
+    deva: 'स्याद्वाद',
+    seal: 'स्या',
+    gloss: 'The logic of "perhaps"',
+    glossDeva: 'स्यात्‌वादाचे सप्तभंगी तर्क',
+    domain: 'heterodox',
+    source: 'Jaina',
+    sourceDeva: 'जैन',
+    blurb: 'The Jaina logic of conditioned assertion — every claim qualified by syāt, "in some respect." A formal humility built into the very grammar of truth.',
+    tags: ['Anekānta', 'Standpoint', 'Humility'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Syādvāda is the Jaina theory of qualified assertion — the logical expression of anekāntavāda, the many-sidedness of reality. Every statement is prefixed by syāt, "in some respect" or "perhaps," acknowledging that it is true only from a particular standpoint and that other standpoints yield other truths.',
+      aspects: [
+        'Reality is many-sided, so any single claim captures only one aspect; syāt marks the perspective from which it holds.',
+        'The famous sevenfold scheme (saptabhaṅgī): a thing, in some respect, is; is not; both is and is not; is inexpressible; and the combinations thereof.',
+        'It is not vagueness or relativism but precision about perspective — each "perhaps" is a definite claim about a definite standpoint.',
+      ],
+      significance:
+        'Syādvāda builds intellectual humility into the form of logic itself. By insisting that every assertion is partial and standpoint-bound, it offered the tradition a principled basis for tolerance and synthesis — a way to honour rival views as partial truths rather than simply refute them.',
+      origin: {
+        label: 'Nāstika darśanas (Jaina)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'Jaina philosophers grounded syādvāda in their metaphysics: because every real thing has infinite aspects and undergoes origination, persistence and decay all at once, no simple unconditional assertion can be wholly true. The doctrine of standpoints (nayavāda) and the sevenfold predication formalise how partial truths combine. The famous parable of the blind men and the elephant — each grasping one part and mistaking it for the whole — is the tradition\'s own illustration: each description is true of what it touches and false only when absolutised. Syāt is the word that keeps the claim honest about its scope.',
+      },
+      references: [
+        {
+          label: 'Anekāntavāda & the ethics of non-absolutism',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Syādvāda is the logical limb of anekāntavāda, and together they extend the Jaina commitment to non-violence (ahiṃsā) into the realm of thought: to absolutise one\'s own partial view and dismiss another\'s is a kind of intellectual harm. By treating opposing positions as standpoints that each capture something real, Jaina thought modelled a distinctive philosophical pluralism — sharply argued yet constitutively humble — and made a lasting contribution to Indian debate culture, where it served as a tool for harmonising rival schools rather than merely defeating them.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'kevalajnana',
+    name: 'Kevalajñāna',
+    deva: 'केवलज्ञान',
+    seal: 'के',
+    gloss: 'Omniscience · absolute knowledge',
+    glossDeva: 'केवलज्ञान · पूर्णज्ञान',
+    domain: 'heterodox',
+    source: 'Jaina',
+    sourceDeva: 'जैन',
+    blurb: 'The Jaina summit of knowing — the infinite, unobstructed omniscience of a liberated soul, shining forth once the karmic matter veiling it is wholly removed.',
+    tags: ['Omniscience', 'Kevalin', 'Mokṣa'],
+    href: '/nastika-darshanas/',
+    detail: {
+      intro:
+        'Kevalajñāna — "isolated" or "absolute" knowledge — is the highest of the Jaina kinds of cognition: the complete, unlimited omniscience native to the soul (jīva), which knows all things in all times and places simultaneously. It is not acquired but uncovered, revealed when the karma obscuring it is destroyed.',
+      aspects: [
+        'In Jaina thought the soul is intrinsically all-knowing; ignorance is not a lack but a veiling by subtle karmic matter.',
+        'As that karmic matter is shed through discipline, knowledge expands by degrees until, with its total removal, infinite omniscience shines forth.',
+        'One who attains it is a kevalin; the great teachers (tīrthaṅkaras) are kevalins who then teach the path to others.',
+      ],
+      significance:
+        'Kevalajñāna expresses the distinctive Jaina vision of bondage and freedom as physical: liberation is the literal cleansing of the soul from clinging matter, and omniscience its natural radiance once cleansed. It also grounds the authority of the tīrthaṅkaras — their teaching carries weight because it issues from perfected, all-seeing knowledge.',
+      origin: {
+        label: 'Nāstika darśanas (Jaina)',
+        href: '/nastika-darshanas/',
+        explainer:
+          'Jaina epistemology ranks five kinds of knowledge, rising from ordinary sense-and-mind cognition through clairvoyance and mind-reading to kevalajñāna at the summit. Underlying this is a strikingly material theory of karma: karma is fine particulate matter that flows into and binds the soul through passion and action, weighing it down and dimming its innate luminosity. The whole Jaina path — non-violence, austerity, vows — is aimed at stopping this inflow and burning off the accumulated matter, so that the soul, fully purified, recovers its original infinite knowledge and rises, liberated, to the summit of the universe.',
+      },
+      references: [
+        {
+          label: 'Contrast with Buddhist & Vedāntic liberation',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Kevalajñāna sets Jainism apart from its neighbours. Where Buddhist nirvāṇa is framed as the extinguishing of craving and Advaita\'s mokṣa as the dissolving of ignorance into a self that is pure consciousness, the Jaina liberated soul retains its full individuality and is positively characterised by infinite knowledge, perception, bliss and energy. Liberation is not merger or extinction but the soul restored to its own perfected, omniscient nature. This realist, pluralist picture — many eternal souls, each capable of recovering boundless knowledge — is a distinctive Jaina contribution to the Indian map of freedom.',
+        },
+      ],
+    },
+  },
 ];
 
 export const CONCEPT_DOMAINS = [
