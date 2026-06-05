@@ -75,7 +75,8 @@ export default function Introduction() {
 
         {/* Conclusion — the four threads, always visible */}
         <div className="intro-threads">
-          <div className="eyebrow"><Glyph /> {intro.conclusion.title}</div>
+          <div className="eyebrow"><Glyph /> {isMr ? 'समारोप' : 'In closing'}</div>
+          <h3 className="intro-threads-title">{intro.conclusion.title}</h3>
           <p className="intro-threads-lede">{intro.conclusion.intro}</p>
           <dl className="intro-thread-list">
             {intro.conclusion.threads.map((thread) => (
