@@ -1116,6 +1116,496 @@ export const CONCEPTS: Concept[] = [
       ],
     },
   },
+
+  // ─────────────────── Mind, consciousness & the subtle body (added) ──────────────────
+  {
+    id: 'avastha-turiya',
+    name: 'Avasthā & Turīya',
+    deva: 'अवस्थात्रय व तुरीय',
+    seal: 'तु',
+    gloss: 'Waking, dream, deep sleep — and the fourth',
+    glossDeva: 'जागृति, स्वप्न, सुषुप्ति — आणि चौथे',
+    domain: 'mind',
+    source: 'Māṇḍūkya Upaniṣad',
+    sourceDeva: 'मांडूक्य उपनिषद',
+    blurb: 'A map of consciousness in four states — waking, dream and dreamless sleep, and turīya, "the fourth": the silent witness that underlies and illumines the other three.',
+    tags: ['Consciousness', 'Turīya', 'Oṃ'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'The Māṇḍūkya Upaniṣad analyses experience itself into four states (avasthā): waking (jāgrat), dream (svapna) and deep sleep (suṣupti), and a fourth — turīya — that is not one state beside the others but their underlying ground and witness. It is the tradition\'s most exact map of consciousness.',
+      aspects: [
+        'Jāgrat — outward awareness of the gross world through the senses; the waking self, vaiśvānara.',
+        'Svapna — inward awareness that fashions a whole world out of impressions alone; the dreaming self, taijasa.',
+        'Suṣupti — dreamless sleep: undivided and at peace, yet without objects; the self as prājña, the seed of the other states.',
+      ],
+      significance:
+        'Turīya — literally "the fourth" — names pure consciousness itself, present and unchanged through waking, dream and sleep. To realise it is to recognise the ātman that the Upaniṣads equate with brahman: not a further experience but the witness of all experience.',
+      origin: {
+        label: 'Upaniṣads (Māṇḍūkya)',
+        href: '/upanishads/',
+        explainer:
+          'The Māṇḍūkya, shortest of the principal Upaniṣads at twelve verses, sets the four states in correspondence with the syllable Oṃ and its sounds — A (waking), U (dream), M (deep sleep) — and the silence that follows the sound, which is turīya. Each state is given a name and a "mouth" of experience, building a precise phenomenology: the same self moves through all three ordinary states yet is exhausted by none of them. The text describes turīya only by negation — not inward-knowing, not outward-knowing, not a mass of cognition, ungraspable, the cessation of the manifold, peace itself — and concludes that this fourth is the ātman, that which is to be known.',
+      },
+      references: [
+        {
+          label: 'Gauḍapāda (Māṇḍūkya Kārikā)',
+          href: '/upanishads/',
+          explainer:
+            'Gauḍapāda\'s verse commentary (c. 6th century) is the first systematic statement of Advaita. He reads the three states as equally unreal relative to turīya: just as the dream world is real only within the dream, the waking world is real only within waking, and both dissolve in the witnessing fourth. From this he develops ajātivāda — the doctrine of non-origination — arguing that nothing is ever truly born or destroyed; plurality is an appearance in the one unborn consciousness. The Kārikā turns the Māṇḍūkya\'s map of states into a full metaphysics of non-duality.',
+        },
+        {
+          label: 'Vedānta (Advaita)',
+          href: '/darshanas/',
+          explainer:
+            'Śaṅkara built on Gauḍapāda to make the analysis of the three states (avasthā-traya) a central method of Advaita. Because the self is present in waking, dream and deep sleep alike but identifies fully with none of them — you do not become your dream-body, nor cease to exist in dreamless sleep — the self must be the constant witness (sākṣin) distinct from every changing state. The argument from the states became one of Vedānta\'s most powerful routes to the ātman: not reached by adding an experience, but uncovered by seeing through the ones we already have.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'antahkarana',
+    name: 'Antaḥkaraṇa',
+    deva: 'अंतःकरण',
+    seal: 'अं',
+    gloss: 'The inner instrument of mind',
+    glossDeva: 'मनाचे अंतःकरण',
+    domain: 'mind',
+    source: 'Vedānta · Sāṃkhya',
+    sourceDeva: 'वेदान्त · सांख्य',
+    blurb: 'The "inner instrument" — the mind analysed into four functions: manas (sensing), buddhi (judging), ahaṅkāra (the I-maker) and citta (memory). Not the self, but its nearest tool.',
+    tags: ['Manas', 'Buddhi', 'Ahaṅkāra'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Antaḥkaraṇa, the "inner instrument," is the tradition\'s name for the mind treated not as a single thing but as a set of functions. It is subtle matter, not consciousness itself — the instrument through which the witnessing self engages a world.',
+      aspects: [
+        'Manas — the registering, doubting faculty that gathers the senses and turns raw input into a presented object.',
+        'Buddhi — intellect: discrimination, judgement and decision; the highest and most luminous function, closest to the self.',
+        'Ahaṅkāra — the "I-maker" that appropriates experience as mine, generating the sense of a separate agent.',
+      ],
+      significance:
+        'By distinguishing the inner instrument from the consciousness that lights it up, the tradition can hold a crucial line: the mind is known, therefore it is not the knower. Liberation is disidentification from the antaḥkaraṇa, not its destruction.',
+      origin: {
+        label: 'Sāṃkhya · the Upaniṣads',
+        href: '/darshanas/',
+        explainer:
+          'Sāṃkhya supplies the analytic frame: from prakṛti evolve buddhi (also called mahat), then ahaṅkāra, then manas, each a product of matter, not of puruṣa (consciousness). The Upaniṣads already use the chariot image of the Kaṭha — the self is the rider, the body the chariot, buddhi the charioteer, manas the reins and the senses the horses — to rank these inner functions and subordinate them to the self. Together they establish that what we casually call "mind" is layered machinery, with buddhi at the top as the faculty of decision.',
+      },
+      references: [
+        {
+          label: 'Yoga (Patañjali · citta-vṛtti)',
+          href: '/darshanas/',
+          explainer:
+            'Patañjali frames the whole path as citta-vṛtti-nirodha — the stilling of the modifications of the citta, the mind-stuff. Yoga treats the inner instrument as something that takes the shape of whatever it perceives, like water taking the shape of its vessel; the vṛttis (waves) are these shapings. When they are stilled, the seer (puruṣa) rests in its own nature rather than being mistaken for its fluctuating instrument. Yoga thus turns the Sāṃkhya analysis into a practical psychology of attention and restraint.',
+        },
+        {
+          label: 'Vedānta',
+          href: '/upanishads/',
+          explainer:
+            'Advaita Vedānta uses antaḥkaraṇa to explain how the one consciousness appears as many individual knowers. The witnessing self (sākṣin) is reflected in each inner instrument as in a mirror; the quality of the reflection depends on the clarity of the buddhi. Bondage is the self mistaking itself for this reflected, limited mind-complex (the jīva); knowledge is recognising the difference between the unchanging witness and the changing instrument it illumines.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'panchakosha',
+    name: 'Pañca-kośa',
+    deva: 'पंचकोश',
+    seal: 'को',
+    gloss: 'The five sheaths of the self',
+    glossDeva: 'आत्म्याचे पाच कोश',
+    domain: 'mind',
+    source: 'Taittirīya Upaniṣad',
+    sourceDeva: 'तैत्तिरीय उपनिषद',
+    blurb: 'The self wrapped in five concentric sheaths — food, breath, mind, intellect and bliss — each subtler than the last. A method of peeling inward from body to being.',
+    tags: ['Kośa', 'Ānandamaya', 'Self-inquiry'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'The Taittirīya Upaniṣad pictures the self as veiled in five sheaths (kośa), one within the next like the layers of a casket. The image is also a method: by recognising each layer as something one has rather than something one is, inquiry moves from the outermost body toward the innermost ground.',
+      aspects: [
+        'Annamaya — the sheath "made of food," the physical body sustained by and returning to matter.',
+        'Prāṇamaya and manomaya — the vital-breath sheath that animates the body and the mind-sheath of sensation and emotion.',
+        'Vijñānamaya and ānandamaya — the sheath of discerning intellect and, subtlest of all, the sheath of bliss closest to the self.',
+      ],
+      significance:
+        'The kośa scheme gives self-inquiry a graded ladder: each sheath is real at its own level yet is not the ātman, because each is an object the self is aware of. Peeling them away — neti, neti, "not this, not this" — is a disciplined path to what remains when every layer is set aside.',
+      origin: {
+        label: 'Upaniṣads (Taittirīya)',
+        href: '/upanishads/',
+        explainer:
+          'In the Brahmānanda Vallī of the Taittirīya, a teacher leads the student inward sheath by sheath, each described as having the form of a bird with head, wings and tail. Beginning from the annamaya self of food, the text discloses a subtler self within each — prāṇa within food, manas within prāṇa, vijñāna within manas, ānanda within vijñāna — and at the innermost reaches an extraordinary meditation on bliss itself, measuring it in ascending degrees until it culminates in the bliss of brahman. The structure is at once cosmological, psychological and contemplative.',
+      },
+      references: [
+        {
+          label: 'Vedānta',
+          href: '/darshanas/',
+          explainer:
+            'Later Vedānta, especially in primers like the Vivekacūḍāmaṇi and Pañcadaśī, made the five sheaths a standard tool of analysis (kośa-viveka). The seeker is taught to observe that the body changes while awareness persists, that breath and mind come and go while the witness remains, and that even the bliss of deep sleep is experienced by something more fundamental still. Each sheath is methodically negated as "not the self," so that the ānandamaya sheath — often mistaken for liberation — is itself transcended, leaving only the witnessing consciousness it veils.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'indriya',
+    name: 'Indriya',
+    deva: 'इंद्रिय',
+    seal: 'इं',
+    gloss: 'The senses & organs of action',
+    glossDeva: 'ज्ञान व कर्म यांची इंद्रिये',
+    domain: 'mind',
+    source: 'Sāṃkhya · Upaniṣads',
+    sourceDeva: 'सांख्य · उपनिषदे',
+    blurb: 'The eleven indriyas — five senses of knowing, five organs of action, and the mind that coordinates them — the bridge between an inner self and an outer world.',
+    tags: ['Senses', 'Jñānendriya', 'Karmendriya'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Indriya names a capacity — a "power" — rather than a physical organ. The tradition counts eleven: five faculties of knowing (jñānendriya), five of acting (karmendriya), and manas, the inner sense that binds them. They are the gateways through which consciousness meets the world and acts back upon it.',
+      aspects: [
+        'Jñānendriya — the five knowing-powers of hearing, touch, sight, taste and smell, each correlated with an element.',
+        'Karmendriya — the five acting-powers of speech, grasping, locomotion, excretion and generation.',
+        'Manas — the eleventh, the coordinating sense that presents the data of the others to the intellect; sense-restraint (dama) is its discipline.',
+      ],
+      significance:
+        'Mapping the senses as powers rather than mere organs lets the tradition speak of withdrawing them (pratyāhāra) and mastering them as a charioteer reins horses. Control of the indriyas, not their denial, is the recurring image of the disciplined life.',
+      origin: {
+        label: 'Sāṃkhya · the Upaniṣads',
+        href: '/darshanas/',
+        explainer:
+          'Sāṃkhya derives the eleven indriyas as evolutes of ahaṅkāra in its sattva aspect, pairing the five knowing-senses with the subtle elements (tanmātra) they perceive and the five action-organs with the functions they perform. The Kaṭha Upaniṣad\'s chariot supplies the governing metaphor: the senses are the horses, their objects the roads, and the self the rider who suffers or thrives by how well the chariot is driven. The analysis is consistently practical — the senses are not condemned but located within a hierarchy that the self is meant to govern.',
+      },
+      references: [
+        {
+          label: 'Yoga (pratyāhāra)',
+          href: '/darshanas/',
+          explainer:
+            'In Patañjali\'s eight limbs, pratyāhāra — the withdrawal of the senses from their objects — is the hinge between the outer limbs and the inner. When the indriyas no longer chase outward, the mind ceases to be scattered and turns available for concentration. Yoga compares the withdrawn senses to a tortoise drawing in its limbs, an image the Bhagavad Gītā also uses for the person of steady wisdom. Sense-mastery is thus not a goal in itself but the gateway to the inner disciplines of dhāraṇā and dhyāna.',
+        },
+        {
+          label: 'Bhagavad Gītā',
+          href: '/itihasa/',
+          explainer:
+            'The Gītā repeatedly diagnoses bondage as the mind being dragged by the senses "as a gale carries away a ship," and prescribes not suppression but trained equanimity: acting in the world while the senses move among their objects without craving or aversion. Its ideal, the sthitaprajña, is one whose senses are under the self\'s command rather than the reverse — making indriya-mastery a cornerstone of its ethics of action.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'samskara-vasana',
+    name: 'Saṃskāra & Vāsanā',
+    deva: 'संस्कार व वासना',
+    seal: 'सं',
+    gloss: 'Latent impressions & tendencies',
+    glossDeva: 'सुप्त संस्कार व प्रवृत्ती',
+    domain: 'mind',
+    source: 'Yoga · Bauddha',
+    sourceDeva: 'योग · बौद्ध',
+    blurb: 'Every act leaves a trace; traces gather into tendencies. Saṃskāras are the imprints of past experience, vāsanās the dispositions they harden into — the mechanism behind habit, character and karma.',
+    tags: ['Imprints', 'Habit', 'Karma'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'A saṃskāra is the residual imprint left in the mind by any experience or action; a vāsanā is the standing disposition that accumulated imprints become. Together they explain how the past lives on in us — as memory, habit, instinct and the inclinations we are born with.',
+      aspects: [
+        'Every cognition and action deposits a saṃskāra, which can later reactivate as memory or impulse.',
+        'Repeated imprints consolidate into vāsanās — grooves of tendency that shape perception and choice before we deliberate.',
+        'This stored momentum is the psychological engine of karma: it carries dispositions across a life, and in most schools across lives.',
+      ],
+      significance:
+        'Saṃskāra and vāsanā make character intelligible without a fixed essence: we are the sediment of what we have repeatedly done. They also make freedom possible — new action lays down new grooves, and disciplined practice can thin and finally erase the old ones.',
+      origin: {
+        label: 'Yoga (Patañjali)',
+        href: '/darshanas/',
+        explainer:
+          'Patañjali makes saṃskāras central to his account of the mind. Vṛttis (mental activities) leave saṃskāras, which give rise to fresh vṛttis, in a self-feeding cycle; the vāsanās are the deep reservoir of these imprints, conditioning even the kleśas (afflictions) and the shape of future births. The aim of yoga is to weaken the binding saṃskāras through practice (abhyāsa) and dispassion (vairāgya) and to cultivate a counter-imprint of restraint, until at the highest stage even that is released — a "seedless" absorption in which no new binding imprint is sown.',
+      },
+      references: [
+        {
+          label: 'Bauddha thought (vāsanā · bīja)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Buddhism develops a closely parallel theory without a permanent self to store the traces. Actions "perfume" the mind-stream, leaving vāsanās; the Yogācāra school systematised this as bīja (seeds) deposited in the ālaya-vijñāna, the storehouse consciousness, which ripen into future experience. Because there is no enduring self, continuity is precisely this flow of conditioned imprints — a powerful answer to how karma and memory work if, as the Buddhists hold, there is no soul to carry them.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'prana',
+    name: 'Prāṇa',
+    deva: 'प्राण',
+    seal: 'प्र',
+    gloss: 'Vital breath & life-force',
+    glossDeva: 'प्राणशक्ती · जीवनऊर्जा',
+    domain: 'mind',
+    source: 'Upaniṣads · Yoga',
+    sourceDeva: 'उपनिषदे · योग',
+    blurb: 'The life-force that animates body and cosmos alike — felt most directly as breath. Through prāṇāyāma, the link between breath and mind becomes a road inward.',
+    tags: ['Breath', 'Prāṇāyāma', 'Subtle body'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'Prāṇa is the vital energy that animates a living being — encountered most immediately as the breath, but understood as a single life-force pervading body and universe. To study prāṇa is to study the meeting point of the physical, the vital and the mental.',
+      aspects: [
+        'Analysed into five functions (the pañca-prāṇa): prāṇa, apāna, samāna, udāna and vyāna, governing breathing, elimination, digestion, upward movement and circulation.',
+        'Said to flow through subtle channels (nāḍī) centred on the spine — the framework later mapped as cakras in haṭha and tantric yoga.',
+        'Tied intimately to the mind: where breath is agitated the mind is restless, where breath is steady the mind grows still.',
+      ],
+      significance:
+        'Because breath is the one bodily process that is both automatic and consciously controllable, prāṇa becomes the practical bridge of yoga — the place where regulating the body directly settles the mind. Prāṇāyāma turns a reflex into a discipline.',
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The Upaniṣads exalt prāṇa as the chief of the vital powers. A recurring parable in the Chāndogya and Bṛhadāraṇyaka stages a contest among the faculties — speech, sight, hearing, mind and breath each depart the body in turn to prove their worth; the body survives the loss of each until prāṇa makes to leave, and the others rush to acknowledge it as the indispensable one. The Praśna Upaniṣad is devoted largely to questions about prāṇa, its origin and its fivefold operation, establishing breath as the binding life of the whole organism.',
+      },
+      references: [
+        {
+          label: 'Yoga (prāṇāyāma)',
+          href: '/darshanas/',
+          explainer:
+            'Prāṇāyāma — the regulation of breath — is the fourth of Patañjali\'s eight limbs, placed just before the turn inward. By lengthening and steadying the breath, the yogi steadies the citta and prepares it for concentration; the sūtras say it thins the veil over the inner light and makes the mind fit for dhāraṇā. Later haṭha-yoga texts such as the Haṭha-pradīpikā elaborate this into a detailed science of channels, locks and breath-retention aimed at awakening and raising the subtle energy along the spine — the most physically explicit branch of the Indic disciplines of the self.',
+        },
+      ],
+    },
+  },
+
+  // ─────────────────── Order, self & the categories of the real (added) ──────────────────
+  {
+    id: 'atma-guna',
+    name: 'Ātma-guṇa',
+    deva: 'आत्मगुण',
+    seal: 'आ',
+    gloss: 'The qualities of the self',
+    glossDeva: 'आत्म्याचे गुण',
+    domain: 'order',
+    source: 'Nyāya–Vaiśeṣika',
+    sourceDeva: 'न्याय–वैशेषिक',
+    blurb: 'In Nyāya–Vaiśeṣika the self is a real substance, known not directly but through its qualities — cognition, pleasure, pain, desire, aversion, effort. The mind inferred from what it does.',
+    tags: ['Self', 'Buddhi', 'Vaiśeṣika'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Where Vedānta makes the self pure consciousness, Nyāya–Vaiśeṣika treats it as a real, eternal substance (dravya) — and argues that we know it only through the qualities (guṇa) that inhere in it. These ātma-guṇas are the evidence from which the self is inferred.',
+      aspects: [
+        'The classic list names nine qualities special to the self: cognition (buddhi/jñāna), pleasure, pain, desire, aversion, effort, merit, demerit and mental disposition (saṃskāra).',
+        'These qualities are not the self but inhere in it, the way roundness and colour inhere in a pot — the self is their unchanging substratum.',
+        'In the liberated state these qualities cease to be produced: mokṣa here is the self stripped of cognition and feeling, resting in its bare substantiality.',
+      ],
+      significance:
+        'The doctrine is the analytic counterweight to the Upaniṣadic self: it builds the self up from the outside, by inference from psychological qualities, rather than disclosing it from within as the witness. It anchors Nyāya\'s case that the self is a knowable object of valid cognition, not a mystical absolute.',
+      origin: {
+        label: 'Darśanas (Vaiśeṣika)',
+        href: '/darshanas/',
+        explainer:
+          'Kaṇāda\'s Vaiśeṣika-sūtra classifies everything real under categories, and lists qualities (guṇa) as one of them; among the twenty-four qualities, a specific cluster inheres only in the self. Because the self is imperceptible to the outer senses, Vaiśeṣika holds that its existence is established by inference: the presence of cognition, desire and effort requires a substance in which they inhere, just as smoke requires fire. The ātma-guṇas thus function as the logical bridge from observable mental life to the unobservable self that owns it.',
+      },
+      references: [
+        {
+          label: 'Nyāya',
+          href: '/darshanas/',
+          explainer:
+            'Nyāya adopts the same self and sharpens the inference. Gautama\'s Nyāya-sūtra opens its proof of the self from desire and aversion: because a person seeks what once gave pleasure and shuns what once gave pain, there must be a single persisting knower who connects the past experience to the present impulse — the body and senses, being momentary and many, cannot do this. Liberation (apavarga) is then defined as the absolute cessation of pain, when the chain of qualities that bind the self to rebirth is finally broken. The ātma-guṇas are at once the proof of the self and the bondage from which it is freed.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'saccidananda',
+    name: 'Saccidānanda',
+    deva: 'सच्चिदानंद',
+    seal: 'स',
+    gloss: 'Being · consciousness · bliss',
+    glossDeva: 'सत् · चित् · आनंद',
+    domain: 'order',
+    source: 'Vedānta',
+    sourceDeva: 'वेदान्त',
+    blurb: 'Not three attributes of Brahman but its very nature, named from three sides — sat (being), cit (consciousness), ānanda (bliss). The positive face of the otherwise indescribable absolute.',
+    tags: ['Brahman', 'Bliss', 'Advaita'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'Saccidānanda is the great affirmative description of brahman in Vedānta — being (sat), consciousness (cit) and bliss (ānanda). It is not a list of properties an entity happens to have, but three words pointing at one indivisible reality from three directions.',
+      aspects: [
+        'Sat — pure being, that which truly is, the existence underlying all that comes and goes.',
+        'Cit — pure consciousness, the self-luminous awareness by which everything else is known.',
+        'Ānanda — bliss not as an emotion but as the fullness of the self lacking nothing, glimpsed in deep sleep and in liberation.',
+      ],
+      significance:
+        'Saccidānanda lets the tradition speak positively of an absolute it otherwise approaches only by negation (neti, neti). It also grounds the equation of ātman and brahman experientially: the being, awareness and contentment we sense at our own core are said to be the very nature of the ultimate.',
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The three terms are drawn from the Upaniṣads, though the compound itself is later. The Bṛhadāraṇyaka and Chāndogya identify brahman with satya/sat (being) and with vijñāna/cit (consciousness), and the Taittirīya famously climbs through the sheaths to ānanda, declaring that brahman is bliss (ānando brahmeti vyajānāt) and measuring its degrees. Drawing these threads together, Vedānta fused them into the single description saccidānanda — the positive pole balancing the negative theology of "not this, not this."',
+      },
+      references: [
+        {
+          label: 'Vedānta (Advaita & later schools)',
+          href: '/darshanas/',
+          explainer:
+            'In Advaita, saccidānanda names the one reality whose appearance as a manifold world is māyā; the jīva\'s true nature is this very being-consciousness-bliss, momentarily forgotten. The theistic Vedāntas adapt the term to a personal God: for them saccidānanda is the nature of the Lord (Bhagavān), whose being, knowledge and bliss are infinite and who is the proper object of devotion. Across the schools the word became the standard shorthand for the divine ground, carried into modern times by teachers like Vivekananda as the affirmative heart of Indian metaphysics.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'ishvara',
+    name: 'Īśvara',
+    deva: 'ईश्वर',
+    seal: 'ई',
+    gloss: 'The Lord · personal God',
+    glossDeva: 'ईश्वर · सगुण परमेश्वर',
+    domain: 'order',
+    source: 'Yoga · Vedānta',
+    sourceDeva: 'योग · वेदान्त',
+    blurb: 'The personal face of the absolute — God conceived as a being one can know, trust and turn to. How the tradition holds an impersonal ground and a God of devotion together.',
+    tags: ['God', 'Bhakti', 'Saguṇa'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Īśvara — "the Lord," from the root meaning to rule or be able — is the personal God of the tradition: the absolute conceived with qualities, will and grace, a being one can love and approach. The concept lets a philosophy of impersonal Brahman also be a religion of devotion.',
+      aspects: [
+        'Distinguished from the impersonal absolute as saguṇa (with qualities) rather than nirguṇa (without): the same reality approached as a "Thou."',
+        'In Yoga, a special puruṣa untouched by affliction and karma, meditation on whom (with the syllable Oṃ) steadies the mind.',
+        'The supreme object of bhakti — knower of hearts, dispenser of grace, the one to whom one surrenders (prapatti).',
+      ],
+      significance:
+        'Īśvara is the hinge between metaphysics and worship. It allows the high non-dual philosophy and the warm devotional religion of the temples and saints to be two registers of one tradition rather than rivals — the formless reality and the God with a face.',
+      origin: {
+        label: 'Darśanas (Yoga)',
+        href: '/darshanas/',
+        explainer:
+          'Patañjali gives Īśvara a precise philosophical role: a distinct puruṣa (consciousness) untouched by the afflictions, actions and their results that bind ordinary selves, and the original teacher, unconditioned by time. Devotion to Īśvara (īśvara-praṇidhāna) is offered as one direct means to absorption (samādhi), and Oṃ is named as the sound that designates him. Crucially, even atheistic-leaning systems could accommodate this functional Lord, making Yoga\'s Īśvara a bridge between disciplined practice and theistic faith.',
+      },
+      references: [
+        {
+          label: 'Vedānta (Advaita & Vaiṣṇava schools)',
+          href: '/upanishads/',
+          explainer:
+            'The Vedānta schools divide precisely over Īśvara. For Advaita, Īśvara is brahman seen through māyā — wholly real at the level of the world and worship, yet ultimately to be transcended in the realisation of the attributeless absolute. For Rāmānuja, Madhva and the Vaiṣṇava traditions, Īśvara is the highest reality itself: a personal Lord with infinite auspicious qualities, of whom souls and matter form the "body," and loving relationship with whom is the goal. The single word thus carries the central debate of Indian theism — whether the personal God is the absolute or its highest appearance.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'nama-rupa',
+    name: 'Nāma-rūpa',
+    deva: 'नामरूप',
+    seal: 'ना',
+    gloss: 'Name & form',
+    glossDeva: 'नाम व रूप',
+    domain: 'order',
+    source: 'Upaniṣads · Bauddha',
+    sourceDeva: 'उपनिषदे · बौद्ध',
+    blurb: 'The world as a play of "name and form" — the differentiation by which one reality appears as many distinct, nameable things. The seam where unity becomes plurality.',
+    tags: ['Plurality', 'Appearance', 'Māyā'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'Nāma-rūpa — "name and form" — is the tradition\'s term for the principle of individuation: the way an undivided ground comes to appear as a world of separate, named shapes. To see through nāma-rūpa is to see the one behind the many.',
+      aspects: [
+        'Rūpa is the distinguishing form, nāma the distinguishing name; together they make a "this" different from a "that."',
+        'In the Upaniṣads, the one being differentiates itself into the manifold precisely by taking on names and forms.',
+        'In Buddhism, nāma-rūpa is a link in dependent origination — the psycho-physical complex that constitutes a sentient being.',
+      ],
+      significance:
+        'Nāma-rūpa marks exactly where metaphysics and experience meet: the world we know is a world of named forms, yet the deepest teaching is that this differentiation is not the final truth. It is the conceptual seam that both Vedānta and Buddhism work to loosen.',
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The Chāndogya Upaniṣad gives the classic account: in the beginning there was being alone, which "entered" its creation and differentiated itself by name and form — "let me make each of these tripartite," it says, deploying nāma-rūpa as the very mechanism of manifestation. The Bṛhadāraṇyaka likewise says the world was then undifferentiated and became differentiated by name and form, so that one says "this is so-and-so, of such-and-such a form." Naming and shaping are thus presented not as human labels added later but as the cosmic act by which the one becomes the many.',
+      },
+      references: [
+        {
+          label: 'Bauddha thought (pratītya-samutpāda)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'Buddhism gives nāma-rūpa a technical role as the fourth link in the twelvefold chain of dependent origination: conditioned by consciousness, nāma-rūpa is the bundle of mental factors (nāma — feeling, perception, intention, contact, attention) and physical form (rūpa) that together constitute an experiencing being. Far from naming an enduring person, it analyses the "person" into impersonal, interdependent processes — the Buddhist counterpart to the Upaniṣadic use, turning name-and-form from the disguise of the One into evidence that there is no abiding self at all.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'padartha',
+    name: 'Padārtha',
+    deva: 'पदार्थ',
+    seal: 'प',
+    gloss: 'The categories of the real',
+    glossDeva: 'सत्तेच्या मूलकोटी',
+    domain: 'mind',
+    source: 'Vaiśeṣika',
+    sourceDeva: 'वैशेषिक',
+    blurb: 'Vaiśeṣika\'s inventory of everything that exists, sorted into ultimate categories — substance, quality, action, universal, particular, inherence. An early periodic table of being.',
+    tags: ['Categories', 'Dravya', 'Vaiśeṣika'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'A padārtha is literally "the referent of a word" — a category of the real. Vaiśeṣika\'s project is to list, exhaustively, the ultimate kinds of thing there are, so that every nameable item finds its place. It is one of the world\'s earliest systematic ontologies.',
+      aspects: [
+        'The six classic categories: substance (dravya), quality (guṇa), action (karma), universal (sāmānya), particular (viśeṣa) and inherence (samavāya).',
+        'Later Vaiśeṣika adds a seventh, abhāva — absence — to account for the reality of "not being there" (the missing pot is a genuine fact).',
+        'Substances are nine: earth, water, fire, air, ether, time, space, self and mind — the bearers in which qualities and actions reside.',
+      ],
+      significance:
+        'Padārtha analysis makes Vaiśeṣika a realist, pluralist physics-and-metaphysics: the world is many real things of definite kinds, knowable by analysis. Its category of viśeṣa — the ultimate differentiator that keeps two atoms distinct — even gives the school its name.',
+      origin: {
+        label: 'Darśanas (Vaiśeṣika)',
+        href: '/darshanas/',
+        explainer:
+          'Kaṇāda\'s Vaiśeṣika-sūtra opens by promising to explain dharma and then proceeds, remarkably, through a rigorous classification of being itself. Everything that can be known and named is sorted under the categories; knowledge, on this view, is precisely knowing the similarity and difference of things — placing each correctly within the scheme. The system is austere and naturalistic, building the cosmos from eternal atoms combining under unseen moral law, with the categories as the grid on which all explanation is laid out.',
+      },
+      references: [
+        {
+          label: 'Nyāya (combined Nyāya–Vaiśeṣika)',
+          href: '/darshanas/',
+          explainer:
+            'Nyāya, with its strength in logic and epistemology, gradually merged with Vaiśeṣika\'s strength in ontology to form a single Nyāya–Vaiśeṣika tradition. Nyāya supplied the means of knowledge (pramāṇa) by which the categories are established and debated, while Vaiśeṣika supplied the catalogue of what those means disclose. The later "new logic" (Navya-Nyāya) refined the categories into an extraordinarily precise technical language of relations and absences, which became the shared analytical idiom of Sanskrit scholarship across disciplines — from law to poetics — for centuries.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'anu-paramanu',
+    name: 'Aṇu & Paramāṇu',
+    deva: 'अणु व परमाणु',
+    seal: 'अ',
+    gloss: 'The atom · indivisible matter',
+    glossDeva: 'अणु · अविभाज्य द्रव्य',
+    domain: 'mind',
+    source: 'Vaiśeṣika',
+    sourceDeva: 'वैशेषिक',
+    blurb: 'Matter cut down to its limit: the paramāṇu, an eternal, partless, indivisible point of substance. India\'s atomism, argued out a millennium before Dalton.',
+    tags: ['Atom', 'Matter', 'Vaiśeṣika'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Vaiśeṣika argues that divisibility must stop somewhere: keep halving a thing and you reach the paramāṇu, an eternal, indivisible, dimensionless ultimate unit of matter. From these atoms the whole physical world is built up. It is one of the most rigorous atomisms of the ancient world.',
+      aspects: [
+        'The argument from division: if matter were infinitely divisible, a mountain and a mustard seed would contain equally infinite parts — absurd; so there must be a smallest, partless unit.',
+        'Paramāṇus are eternal and uncaused; what is created and destroyed are their combinations, beginning with the dyad (dvyaṇuka) and triad (tryaṇuka).',
+        'Atoms of earth, water, fire and air carry the distinctive qualities (smell, taste, colour, touch) that their compounds display.',
+      ],
+      significance:
+        'Atomism let India explain change and plurality without making matter illusory: the world genuinely arises and perishes as atoms combine and separate, under the governance of unseen moral law (adṛṣṭa). It is the realist alternative to the idealisms of Vedānta and the flux of the Buddhists.',
+      origin: {
+        label: 'Darśanas (Vaiśeṣika)',
+        href: '/darshanas/',
+        explainer:
+          'Kaṇāda — whose very name puns on "atom-eater" — sets out the atomic theory in the Vaiśeṣika-sūtra and its commentaries. Because partless atoms have no magnitude, two alone cannot produce a perceptible body; the system therefore posits that atoms first form imperceptible dyads, and that three dyads form the triad, the smallest visible mote (seen in a sunbeam). Combination is set in motion not by chance but by adṛṣṭa, the unseen force of accumulated karma, tying the physics of creation to the moral order of the cosmos.',
+      },
+      references: [
+        {
+          label: 'Nyāya & the Bauddha critics',
+          href: '/nastika-darshanas/',
+          explainer:
+            'The atom became a major battleground of Indian philosophy. Nyāya defended and refined the Vaiśeṣika atoms as the realist foundation of the world. The Buddhist idealists, especially Vasubandhu, attacked them with a famous dilemma: a truly partless atom could not join others, for if it touched a neighbour on one side it would need a "side," and so have parts; if it occupied the same point, no aggregate could ever grow larger. From this the Yogācāra concluded that external atoms are incoherent and that "matter" is finally mind-made — making the debate over the paramāṇu one of the sharpest exchanges between realism and idealism in the tradition.',
+        },
+      ],
+    },
+  },
 ];
 
 export const CONCEPT_DOMAINS = [
