@@ -1606,6 +1606,125 @@ export const CONCEPTS: Concept[] = [
       ],
     },
   },
+
+  // ─────────────────── Knowledge, inference & debate (added) ──────────────────
+  {
+    id: 'anumana',
+    name: 'Anumāna',
+    deva: 'अनुमान',
+    seal: 'अ',
+    gloss: 'Inference',
+    glossDeva: 'अनुमान',
+    domain: 'knowledge',
+    source: 'Nyāya',
+    sourceDeva: 'न्याय',
+    blurb: 'Knowing the unseen from the seen — fire from smoke. Nyāya\'s analysis of valid inference, built on the invariable tie (vyāpti) between sign and signified.',
+    tags: ['Logic', 'Vyāpti', 'Hetu'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Anumāna is inference: knowledge of something not directly perceived, reached through a sign that is reliably tied to it. Seeing smoke on a hill, one knows there is fire — the standard example by which the whole Indian theory of reasoning is taught.',
+      aspects: [
+        'It rests on vyāpti — the invariable concomitance "wherever smoke, there fire" — established by repeated observation and the absence of counter-instances.',
+        'The classic public form has five members: claim (pratijñā), reason (hetu), example (udāharaṇa), application (upanaya) and conclusion (nigamana).',
+        'A valid reason must meet strict conditions; the theory of fallacies (hetvābhāsa) catalogues exactly how an inference goes wrong.',
+      ],
+      significance:
+        'Anumāna is the second of the means of knowledge (pramāṇa) and the engine of Indian logic. Its demand for a stated reason, a securing example and rules against fallacy made disciplined argument — not mere assertion — the currency of philosophical debate across every school.',
+      origin: {
+        label: 'Darśanas (Nyāya)',
+        href: '/darshanas/',
+        explainer:
+          'Gautama\'s Nyāya-sūtra defines anumāna and distinguishes its kinds, and the later logicians built it into a rigorous science. The five-membered demonstration is designed for public debate: it does not merely assert the conclusion but exhibits the reason, secures it with an example embodying the universal rule, applies the rule to the case, and only then concludes. The heart of the analysis is vyāpti — the pervasion relation — and much of Nyāya\'s ingenuity went into how a universal tie between sign and signified can be reliably established from finite observation, anticipating the problem of induction.',
+      },
+      references: [
+        {
+          label: 'Bauddha logic (Dignāga · Dharmakīrti)',
+          href: '/nastika-darshanas/',
+          explainer:
+            'The Buddhist logicians transformed inference theory. Dignāga reduced the five members to a tighter core and formulated the "three marks of a valid reason" (trairūpya): the reason must be present in the case, present in all similar cases, and absent in all dissimilar ones. Dharmakīrti then grounded vyāpti not in mere observation but in real relations — causation and identity — so that a reliable inference reflects how things actually are. This Buddhist–Nyāya exchange produced some of the most sophisticated logic of the pre-modern world, and the "new logic" (Navya-Nyāya) that grew from it supplied a technical vocabulary used across Indian learning.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'shabda-sphota',
+    name: 'Śabda & Sphoṭa',
+    deva: 'शब्द व स्फोट',
+    seal: 'श',
+    gloss: 'Word, testimony & meaning',
+    glossDeva: 'शब्द, आप्तवचन व अर्थ',
+    domain: 'knowledge',
+    source: 'Vyākaraṇa · Mīmāṃsā',
+    sourceDeva: 'व्याकरण · मीमांसा',
+    blurb: 'Two questions about language: how reliable words give us knowledge (śabda as testimony), and how strings of sounds carry a single meaning (sphoṭa). India\'s deep philosophy of language.',
+    tags: ['Language', 'Testimony', 'Bhartṛhari'],
+    href: '/vedangas/',
+    detail: {
+      intro:
+        'Indian thought took language as seriously as logic. Śabda names two linked concerns: word as a valid means of knowledge — reliable testimony — and the deeper puzzle of how meaning arises at all, answered by the grammarians\' theory of sphoṭa, the meaning-bearing whole that "bursts forth" in understanding.',
+      aspects: [
+        'Śabda as pramāṇa: the trustworthy word of a reliable source (āpta) is an independent route to knowledge, irreducible to inference.',
+        'The puzzle of meaning: sounds are heard one after another and vanish, so what carries the unified sense of a word or sentence?',
+        'Sphoṭa is the grammarians\' answer — an indivisible linguistic unit, grasped whole, that the passing sounds only manifest.',
+      ],
+      significance:
+        'By treating testimony as a genuine source of knowledge, the tradition gave scripture and teacher their epistemic standing. And in sphoṭa it produced a theory of meaning as an integral whole rather than a sum of parts — a philosophy of language that still speaks to modern debates.',
+      origin: {
+        label: 'Vyākaraṇa (Bhartṛhari)',
+        href: '/vedangas/',
+        explainer:
+          'Bhartṛhari\'s Vākyapadīya (c. 5th century) is the great text of the grammarians\' philosophy. He argues that the real linguistic unit is not the letter or even the word but the sentence, grasped as a single meaning-whole (sphoṭa); the sequence of sounds merely reveals it, the way successive glimpses reveal one object. Behind this he sets a bold metaphysics — śabda-brahman, the view that ultimate reality is of the nature of language, and that all awareness is "interpenetrated by the word." Thought and language, for Bhartṛhari, cannot finally be prised apart.',
+      },
+      references: [
+        {
+          label: 'Mīmāṃsā & Nyāya',
+          href: '/darshanas/',
+          explainer:
+            'Mīmāṃsā, the school of Vedic interpretation, developed the theory of śabda most rigorously, since everything turned on how the words of the Veda convey their injunctions; it held the word–meaning relation to be eternal and the Veda authorless, so its testimony needs no human guarantor. Nyāya, by contrast, grounded verbal testimony in the reliability of a trustworthy speaker and argued against sphoṭa, holding that meaning is built up from individual letters and words by convention. The disagreement made philosophy of language a central, sharply argued field — concerning the eternity of language, the unit of meaning, and how words hook onto the world.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'vada-shastrartha',
+    name: 'Vāda & Śāstrārtha',
+    deva: 'वाद व शास्त्रार्थ',
+    seal: 'वा',
+    gloss: 'Honest debate',
+    glossDeva: 'वाद व शास्त्रार्थ',
+    domain: 'knowledge',
+    source: 'Nyāya',
+    sourceDeva: 'न्याय',
+    blurb: 'The rules of the public contest of ideas — the difference between truth-seeking debate and mere point-scoring, and the etiquette that made open argument the tradition\'s engine.',
+    tags: ['Debate', 'Vāda', 'Method'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Indian thought advanced largely through formal public debate (śāstrārtha), and Nyāya theorised the debate itself. Its categories distinguish honest, truth-seeking argument from its corrupt imitations — a code of intellectual conduct as much as a logic.',
+      aspects: [
+        'Vāda — the good kind: debate between parties who both seek the truth, bound by valid means of knowledge and reasoning, willing to be convinced.',
+        'Jalpa and vitaṇḍā — the degenerate kinds: wrangling that aims only to win, and pure refutation that tears down without defending any thesis.',
+        'A shared apparatus of valid reasons, examples, and recognised fallacies (hetvābhāsa) let opponents disagree precisely and concede honestly.',
+      ],
+      significance:
+        'Because positions had to be defended in open assembly against the sharpest critics — often across sectarian lines, with the loser expected to concede — Indian philosophy was forced to be rigorous, explicit and self-critical. The debate culture is why the tradition argued with itself for two thousand years and grew stronger for it.',
+      origin: {
+        label: 'Darśanas (Nyāya)',
+        href: '/darshanas/',
+        explainer:
+          'The Nyāya-sūtra devotes whole sections to the machinery of debate: the members of a demonstration, legitimate and illegitimate tactics, the points of defeat (nigraha-sthāna) that end a contest, and the three modes vāda, jalpa and vitaṇḍā. This was not idle taxonomy — courts, monasteries and royal assemblies hosted real debates with real stakes, and a thinker needed both a winning argument and a way to show, by agreed rules, that he had won. Nyāya supplied the shared rulebook that made such contests decidable.',
+      },
+      references: [
+        {
+          label: 'The wider tradition (Upaniṣads to the schools)',
+          href: '/upanishads/',
+          explainer:
+            'The debate impulse runs from the Upaniṣadic dialogues — Yājñavalkya facing down a hall of questioners, Gārgī pressing him to the limit — through the great cross-school contests of the classical age. Buddhists, Jains and the orthodox schools met in public to defend their views by shared standards of evidence; tradition records debates said to have turned the allegiance of kings and the fate of monasteries. This ethos made dissent productive rather than threatening: an opponent who exposed a weak argument was doing the tradition a service, forcing every school to sharpen its claims.',
+        },
+      ],
+    },
+  },
 ];
 
 export const CONCEPT_DOMAINS = [
