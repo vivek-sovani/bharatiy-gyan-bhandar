@@ -1961,6 +1961,242 @@ export const CONCEPTS: Concept[] = [
       ],
     },
   },
+
+  // ─────────────────── Paths to liberation (added) ──────────────────
+  {
+    id: 'bhakti',
+    name: 'Bhakti',
+    deva: 'भक्ती',
+    seal: 'भ',
+    gloss: 'Loving devotion',
+    glossDeva: 'प्रेमस्वरूप भक्ती',
+    domain: 'liberation',
+    source: 'Gītā · Bhāgavata · sants',
+    sourceDeva: 'गीता · भागवत · संत',
+    blurb: 'The path of the heart — liberation through love of and surrender to the divine. The most democratic of the paths, open to all regardless of birth, gender or learning.',
+    tags: ['Devotion', 'Surrender', 'Saints'],
+    href: '/puranas/',
+    detail: {
+      intro:
+        'Bhakti is the path of loving devotion — reaching the divine not chiefly through ritual or analysis but through love, trust and self-surrender. Of the three great paths it is the warmest and the most widely open, asking not erudition but the heart.',
+      aspects: [
+        'A personal relationship with a personal God (Īśvara), expressed in worship, song, remembrance and surrender (prapatti).',
+        'Radically inclusive: the saints insisted that devotion, not caste, gender or literacy, is what draws one to liberation.',
+        'Sung in the languages of the people — the bhakti movements turned the highest teaching into vernacular poetry anyone could carry.',
+      ],
+      significance:
+        'Bhakti is the great democratiser of the tradition. By making love and surrender the qualification for liberation, it opened the deepest goal to the unlettered farmer and the celebrated scholar alike — and, in the saints\' vernacular songs, carried Sanskrit wisdom onto the lips of all.',
+      origin: {
+        label: 'Bhagavad Gītā',
+        href: '/itihasa/',
+        explainer:
+          'The Bhagavad Gītā gives bhakti its classical charter, weaving it together with the paths of action and knowledge and finally exalting it: Kṛṣṇa promises that whoever offers him even a leaf, a flower or water with devotion is dear to him, and that those who surrender to him with love cross beyond sorrow. Crucially the Gītā declares this path open to all — "even those of lowly birth, women, vaiśyas, śūdras" reach the highest goal by taking refuge in the divine — planting the seed of bhakti\'s characteristic inclusiveness.',
+      },
+      references: [
+        {
+          label: 'The Bhāgavata & the sant traditions',
+          href: '/puranas/',
+          explainer:
+            'The Bhāgavata Purāṇa systematised devotion into a full theology of love, celebrating its ecstatic forms and its nine modes (listening, singing, remembering, serving, and so on). From the sixth century the bhakti movements spread across the land — the Āḻvārs and Nāyaṉārs of the Tamil south, the Vārkarī sants of Maharashtra (Jñāneśvar, Tukārām, Janābāī, Nāmdev), and the northern saints (Kabīr, Mīrā, Sūrdās). Singing God in the mother tongue, they made devotion a mass movement and the moral high point of the whole tradition — wisdom carried from the temple\'s inner sanctum to every doorstep.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'jnana',
+    name: 'Jñāna',
+    deva: 'ज्ञान',
+    seal: 'ज्ञ',
+    gloss: 'Liberating knowledge',
+    glossDeva: 'मुक्ती देणारे ज्ञान',
+    domain: 'liberation',
+    source: 'Upaniṣads · Vedānta',
+    sourceDeva: 'उपनिषदे · वेदान्त',
+    blurb: 'Not information but realisation — the direct knowing of the self that, like a light dispelling darkness, ends ignorance and with it bondage. The path of insight.',
+    tags: ['Knowledge', 'Self-realisation', 'Vedānta'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'Jñāna as a path means liberating knowledge — not the accumulation of facts but a transforming realisation of the self\'s true nature. Where bhakti liberates through love and karma through action, jñāna liberates through seeing what is, directly and without remainder.',
+      aspects: [
+        'The bondage it ends is ignorance (avidyā) — mistaking the self for the body-mind; knowledge removes it as light removes dark.',
+        'It is not mere intellectual assent but immediate realisation (anubhava) of the identity of ātman and brahman.',
+        'Its discipline is inquiry: hearing the teaching (śravaṇa), reflecting on it (manana) and deep meditation upon it (nididhyāsana).',
+      ],
+      significance:
+        'The path of knowledge holds that liberation is not something produced but something recognised — we are already free, and only ignorance veils it. This makes jñāna the most uncompromising of the paths: nothing need be attained, only the truth realised, here and now.',
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The Upaniṣads ground the path of knowledge: "knowing That, one becomes That"; the one who knows brahman becomes brahman. Liberation comes not from rites, which yield only perishable fruits, but from realising the self — the knower behind all knowing, "by which all this is known." The great sayings (mahāvākyas) — tat tvam asi ("that thou art"), ahaṃ brahmāsmi ("I am brahman") — are not propositions to believe but pointers to a realisation that, once it dawns, ends the whole error of bondage at its root.',
+      },
+      references: [
+        {
+          label: 'Advaita Vedānta (Śaṅkara)',
+          href: '/darshanas/',
+          explainer:
+            'Śaṅkara made jñāna the decisive means of liberation: since bondage is caused by ignorance and not by any real defect, only knowledge — never action — can remove it, just as knowing the rope dispels the snake one feared. Action belongs to the realm of the doer and produces results within saṃsāra; liberating knowledge dissolves the very sense of being a separate doer. Advaita therefore subordinates ritual and even devotion to the final, direct realisation of the non-dual self, in which the seeker discovers there was never anything to attain, only something to be uncovered.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'ashtanga-yoga',
+    name: 'Aṣṭāṅga-yoga',
+    deva: 'अष्टांगयोग',
+    seal: 'अ',
+    gloss: 'The eight limbs of yoga',
+    glossDeva: 'योगाची आठ अंगे',
+    domain: 'liberation',
+    source: 'Yoga-sūtra',
+    sourceDeva: 'योगसूत्र',
+    blurb: 'Patañjali\'s graded ladder to absorption — from ethical restraint through posture and breath to the deepening stages of concentration. A practical engineering of the mind.',
+    tags: ['Patañjali', 'Samādhi', 'Discipline'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Aṣṭāṅga-yoga — the "eight-limbed" yoga of Patañjali — is a graduated discipline leading from outward conduct to inner stillness and final absorption. It is the tradition\'s most systematic manual for transforming the mind, a step-by-step path rather than a single leap.',
+      aspects: [
+        'The outer limbs build the foundation: yama (ethical restraints) and niyama (observances), āsana (steady posture) and prāṇāyāma (breath-regulation).',
+        'Pratyāhāra — withdrawing the senses — is the hinge that turns attention from the world toward the inner field.',
+        'The inner limbs deepen by degrees: dhāraṇā (concentration), dhyāna (sustained meditation) and samādhi (absorption), together called saṃyama.',
+      ],
+      significance:
+        'The eightfold scheme makes liberation a craft that can be practised, not merely a grace to be awaited. By beginning with ethics and the body and ending in absorption, it insists that the steadying of the mind rests on a steadied life — a sequence still followed wherever yoga is taught.',
+      origin: {
+        label: 'Darśanas (Yoga-sūtra)',
+        href: '/darshanas/',
+        explainer:
+          'Patañjali\'s Yoga-sūtra (c. 2nd century BCE–2nd century CE) compresses the whole path into terse aphorisms, opening with its definition — yoga is the stilling of the modifications of the mind (citta-vṛtti-nirodha) — and then laying out the eight limbs as the means. Built on a Sāṃkhya metaphysics of puruṣa (consciousness) and prakṛti (nature), the aim is kaivalya: the seer abiding in its own nature, no longer confused with the fluctuations of the mind. The genius of the text is its practicality — it treats the mind as something that can be trained by method, in a definite order.',
+      },
+      references: [
+        {
+          label: 'Later yoga (Haṭha & the global path)',
+          href: '/darshanas/',
+          explainer:
+            'Later haṭha-yoga traditions, codified in texts like the Haṭha-pradīpikā, elaborated the bodily limbs — posture, breath and subtle-energy practices — as preparation for the meditative ascent Patañjali describes. It is this lineage, filtered through modern teachers, that carried āsana and prāṇāyāma to the world. The eight-limbed framework remains the backbone of yoga as a discipline of liberation: a reminder that the postures now practised globally were originally the early rungs of a ladder whose top is samādhi.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'samadhi',
+    name: 'Samādhi',
+    deva: 'समाधी',
+    seal: 'स',
+    gloss: 'Meditative absorption',
+    glossDeva: 'ध्यानातील समाधी',
+    domain: 'liberation',
+    source: 'Yoga · Vedānta',
+    sourceDeva: 'योग · वेदान्त',
+    blurb: 'The summit of meditation — where the knower, knowing and known fuse, and the mind grows utterly still. The state in which the goal of the contemplative paths is realised.',
+    tags: ['Absorption', 'Meditation', 'Kaivalya'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Samādhi is the culmination of meditation: a state of complete absorption in which the usual gap between the meditator and the object of meditation collapses, and the restless mind comes to rest. It is the eighth and final limb of yoga and the threshold of liberation.',
+      aspects: [
+        'In deep absorption the triad of knower, knowing and known fuses, and the mind "shines with the object alone, as if empty of itself."',
+        'Yoga distinguishes stages — samādhi "with seed" (savikalpa/sabīja), still resting on an object, and "without seed" (nirbīja), beyond all support.',
+        'It is not unconsciousness but its opposite: heightened, luminous clarity in which the seer abides in its own nature.',
+      ],
+      significance:
+        'Samādhi names the experiential summit toward which the disciplines of meditation aim — the still, undivided awareness in which, the traditions hold, the true self is realised. It is the point where method ends and what method was for is finally disclosed.',
+      origin: {
+        label: 'Darśanas (Yoga-sūtra)',
+        href: '/darshanas/',
+        explainer:
+          'Patañjali devotes the first chapter of the Yoga-sūtra to samādhi, charting its degrees with great precision: from absorptions still accompanied by reasoning and reflection, through subtler and subtler states, to asamprajñāta samādhi where even the seed of objective awareness is dissolved. The progression maps an inward ascent in which the mind is gradually emptied of its contents until only pure witnessing remains — kaivalya, the seer\'s aloneness in its own light, free of identification with the changing mind.',
+      },
+      references: [
+        {
+          label: 'Vedānta & the Bauddha jhānas',
+          href: '/nastika-darshanas/',
+          explainer:
+            'The vocabulary of absorption is shared across the meditative traditions. Buddhism maps a closely parallel series of meditative depths (the jhānas/dhyānas) on the way to liberating insight, and the very word dhyāna travelled with Buddhism across Asia to become Chan and Zen. Vedānta speaks of samādhi as the state in which the non-dual self is directly realised, distinguishing absorption that still preserves a subtle duality from the final, seedless realisation. Across the schools, samādhi marks the common summit where the contemplative disciplines converge.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'viveka-vairagya',
+    name: 'Viveka & Vairāgya',
+    deva: 'विवेक व वैराग्य',
+    seal: 'वि',
+    gloss: 'Discernment & dispassion',
+    glossDeva: 'विवेक व वैराग्य',
+    domain: 'liberation',
+    source: 'Vedānta · Yoga',
+    sourceDeva: 'वेदान्त · योग',
+    blurb: 'The two wings of the seeker — discerning the real from the unreal, and loosening the grip of craving. The qualifications that make the path passable.',
+    tags: ['Discernment', 'Dispassion', 'Sādhanā'],
+    href: '/darshanas/',
+    detail: {
+      intro:
+        'Viveka and vairāgya are the paired qualifications a seeker must cultivate before liberation comes within reach. Viveka is discernment — telling the real from the unreal, the eternal from the passing. Vairāgya is dispassion — the loosening of craving for what discernment has shown to be fleeting.',
+      aspects: [
+        'Viveka: the discrimination between the permanent self and the impermanent not-self (nitya-anitya-vastu-viveka), the foundational insight of the path.',
+        'Vairāgya: not cold aversion but the natural fading of craving once its objects are seen for what they are — for things here and hereafter.',
+        'They reinforce each other: clear seeing cools desire, and a quietened mind sees more clearly.',
+      ],
+      significance:
+        'Together viveka and vairāgya make the difference between knowing a teaching and being changed by it. They are the practical heart of sādhanā — the inner work that prepares a mind steady and unclouded enough for knowledge or absorption to take hold.',
+      origin: {
+        label: 'Yoga & Vedānta',
+        href: '/darshanas/',
+        explainer:
+          'Patañjali names abhyāsa (steady practice) and vairāgya (dispassion) as the two means by which the movements of the mind are stilled, making dispassion a pillar of the yogic path. Advaita Vedānta makes the pair even more central: viveka heads the "fourfold qualification" (sādhana-catuṣṭaya) required of a student, followed by vairāgya, the six virtues, and the longing for liberation. Śaṅkara\'s Vivekacūḍāmaṇi — "the crest-jewel of discrimination" — is named for the first of them, treating the cultivation of discernment and dispassion as the indispensable groundwork without which the highest teaching cannot land.',
+      },
+      references: [
+        {
+          label: 'The wider contemplative tradition',
+          href: '/upanishads/',
+          explainer:
+            'The Kaṭha Upaniṣad gives the pair an enduring image: the path is "sharp as a razor\'s edge," and the wise choose the good (śreyas) over the merely pleasant (preyas) — an act of viveka — and turn from the latter — an act of vairāgya. The same two virtues recur across the schools and the saints, whether framed as discriminating the swan\'s milk from water or as the heart\'s turning from the world toward the divine. They are the common psychological prerequisites that every path, however it conceives the goal, asks the seeker to develop.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'guru-shishya',
+    name: 'Guru–śiṣya',
+    deva: 'गुरु–शिष्य',
+    seal: 'गु',
+    gloss: 'The teacher–student bond',
+    glossDeva: 'गुरु–शिष्य परंपरा',
+    domain: 'liberation',
+    source: 'Upaniṣads',
+    sourceDeva: 'उपनिषदे',
+    blurb: 'Knowledge passed not from book to reader but from person to person, in trust and over time. The living relationship that carried the tradition unbroken for millennia.',
+    tags: ['Transmission', 'Paramparā', 'Initiation'],
+    href: '/upanishads/',
+    detail: {
+      intro:
+        'The guru–śiṣya relationship is the human channel through which the tradition transmits itself: deep knowledge, especially of liberation, is held to pass best not through texts alone but from a realised teacher to a prepared student, in a bond of trust sustained over years.',
+      aspects: [
+        'The word upaniṣad itself means "sitting close" — knowledge given in intimacy, earned by service and readiness, not bought or merely read.',
+        'Transmission runs through an unbroken lineage (paramparā), each teacher having received from their own, vouching for what is passed on.',
+        'The teacher tailors the teaching to the student — the same truth spoken differently to different readiness — so the relationship is personal, not mechanical.',
+      ],
+      significance:
+        'The guru–śiṣya bond is how a vast oral tradition survived three thousand years without a single break, and why Indian knowledge stayed personal and lived rather than merely archived. Liberating knowledge, in this view, is not information to be looked up but a flame lit from another flame.',
+      origin: {
+        label: 'Upaniṣads',
+        href: '/upanishads/',
+        explainer:
+          'The Upaniṣads stage knowledge as something earned within relationship: a student approaches a teacher "fuel in hand," signalling willingness to serve, and the deepest teachings are given only when the seeker is ready and tested — Naciketas must persist through Yama\'s evasions, Śvetaketu is sent back by his father to learn humility. The setting is always the living encounter — question and answer, trial and gift — never a doctrine simply handed over. Knowledge "received" without this readiness is held to be barren.',
+      },
+      references: [
+        {
+          label: 'The lineages (sampradāya)',
+          href: '/darshanas/',
+          explainer:
+            'The relationship hardened into the institution of the sampradāya — the named lineages through which schools of philosophy, yoga, music, medicine and craft transmitted their knowledge across generations. A teaching\'s authority rested partly on its unbroken descent from teacher to student, and initiation (dīkṣā) marked entry into the line. This same model shaped the gharānās of classical music and the lineages of the crafts, making the guru–śiṣya bond not only a spiritual ideal but the basic mechanism by which expertise of every kind was preserved and renewed.',
+        },
+      ],
+    },
+  },
 ];
 
 export const CONCEPT_DOMAINS = [
