@@ -3026,31 +3026,6 @@ html[lang="mr"] .essay .meta {
 .person .corner-orn.bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
 .person .corner-orn.br { bottom: 4px; right: 4px; transform: scale(-1, -1); }
 
-/* Concept banner — domain-tinted background with one large matching emoji centered. */
-.person-cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: -1.4rem -1.4rem 1.1rem;
-  height: 100px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--rule-strong);
-  background:
-    linear-gradient(150deg,
-      color-mix(in oklch, var(--accent, var(--maroon)) 10%, var(--paper)),
-      var(--paper-deep));
-}
-.person-cover-emoji {
-  font-size: 3rem;
-  line-height: 1;
-  filter: drop-shadow(0 1px 2px color-mix(in oklch, var(--paper) 60%, transparent));
-  transition: transform 0.35s ease;
-  user-select: none;
-}
-.person.has-cover:hover .person-cover-emoji,
-.person.has-cover:focus-visible .person-cover-emoji {
-  transform: scale(1.12);
-}
 
 .person-row {
   display: flex;
@@ -3068,14 +3043,12 @@ html[lang="mr"] .essay .meta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-deva);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   line-height: 1;
-  color: var(--accent, var(--maroon));
-  background: var(--paper-deep);
+  background: color-mix(in oklch, var(--accent, var(--maroon)) 12%, var(--paper-deep));
   border: 1.5px solid var(--accent, var(--maroon-soft));
   border-radius: 50%;
-  letter-spacing: 0;
+  filter: drop-shadow(0 0 6px color-mix(in oklch, var(--accent, var(--maroon)) 30%, transparent));
 }
 
 .person-id {
@@ -3184,8 +3157,6 @@ html[lang="mr"] .person-work {
   .person { padding: 1.15rem 1.1rem 1rem; min-height: 0; }
   .person-seal { width: 42px; height: 42px; font-size: 1.25rem; }
   .person-name { font-size: 1.15rem; }
-  .person-cover { margin: -1.15rem -1.1rem 0.9rem; height: 86px; }
-  .person-cover-emoji { font-size: 2.5rem; }
 }
 
 /* ── Contributor prompt + click-through detail modal ─────────────────────── */

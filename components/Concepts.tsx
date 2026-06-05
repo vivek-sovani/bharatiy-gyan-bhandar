@@ -166,7 +166,7 @@ function ConceptCard({
   return (
     <button
       type="button"
-      className="person is-link has-cover"
+      className="person is-link"
       onClick={() => onOpen(c)}
     >
       <CornerOrn className="tl" />
@@ -174,11 +174,8 @@ function ConceptCard({
       <CornerOrn className="bl" />
       <CornerOrn className="br" />
 
-      <span className="person-cover" aria-hidden>
-        <span className="person-cover-emoji">{CONCEPT_EMOJI[c.id] ?? '🔵'}</span>
-      </span>
-
       <div className="person-row">
+        <span className="person-seal" aria-hidden>{CONCEPT_EMOJI[c.id] ?? '🔵'}</span>
         <div className="person-id">
           <span className="person-dates">{lang === 'mr' ? c.glossDeva : c.gloss}</span>
           {lang === 'mr' ? (
