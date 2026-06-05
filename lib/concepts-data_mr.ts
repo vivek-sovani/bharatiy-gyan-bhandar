@@ -7,6 +7,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── वैश्विक व तात्त्विक व्यवस्था ──────────────────────
   {
     id: 'rta',
+    image: 'concept-rta.png',
     name: 'ऋत',
     deva: 'ऋत',
     seal: 'ऋ',
@@ -52,6 +53,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'satya',
+    image: 'concept-satya.png',
     name: 'सत्य',
     deva: 'सत्य',
     seal: 'स',
@@ -97,6 +99,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'brahman',
+    image: 'concept-brahman.png',
     name: 'ब्रह्मन्',
     deva: 'ब्रह्मन्',
     seal: 'ब्र',
@@ -142,6 +145,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'atman',
+    image: 'concept-atman.png',
     name: 'आत्मन्',
     deva: 'आत्मन्',
     seal: 'आ',
@@ -187,6 +191,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'maya',
+    image: 'concept-maya.png',
     name: 'माया',
     deva: 'माया',
     seal: 'मा',
@@ -228,6 +233,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── कर्म, नीती व समाज ────────────────────────────────
   {
     id: 'dharma',
+    image: 'concept-dharma.png',
     name: 'धर्म',
     deva: 'धर्म',
     seal: 'ध',
@@ -273,6 +279,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'karma',
+    image: 'concept-karma.png',
     name: 'कर्म',
     deva: 'कर्म',
     seal: 'क',
@@ -324,6 +331,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'purusharthas',
+    image: 'concept-purusharthas.png',
     name: 'पुरुषार्थ',
     deva: 'पुरुषार्थ',
     seal: 'पु',
@@ -365,6 +373,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── बंधन व मुक्ती ────────────────────────────────────
   {
     id: 'samsara',
+    image: 'concept-samsara.png',
     name: 'संसार',
     deva: 'संसार',
     seal: 'सं',
@@ -410,6 +419,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'moksha',
+    image: 'concept-moksha.png',
     name: 'मोक्ष',
     deva: 'मोक्ष',
     seal: 'मो',
@@ -455,6 +465,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'yoga',
+    image: 'concept-yoga.png',
     name: 'योग',
     deva: 'योग',
     seal: 'यो',
@@ -502,6 +513,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── मन, द्रव्य व विश्व ───────────────────────────────
   {
     id: 'purusha-prakriti',
+    image: 'concept-purusha-prakriti.png',
     name: 'पुरुष · प्रकृति',
     deva: 'पुरुष · प्रकृति',
     seal: 'पुप्र',
@@ -541,6 +553,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'triguna',
+    image: 'concept-triguna.png',
     name: 'त्रिगुण',
     deva: 'त्रिगुण',
     seal: 'त्रि',
@@ -586,6 +599,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'panchamahabhuta',
+    image: 'concept-panchamahabhuta.png',
     name: 'पञ्चमहाभूत',
     deva: 'पञ्चमहाभूत',
     seal: 'पं',
@@ -631,6 +645,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'kala-yuga',
+    image: 'concept-kala-yuga.png',
     name: 'काल · युग',
     deva: 'काल · युग',
     seal: 'का',
@@ -678,6 +693,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── ज्ञान व ज्ञानमीमांसा ─────────────────────────────
   {
     id: 'pramana',
+    image: 'concept-pramana.png',
     name: 'प्रमाण',
     deva: 'प्रमाण',
     seal: 'प्र',
@@ -725,6 +741,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── नास्तिक संकल्पना (बौद्ध व जैन) ────────────────────
   {
     id: 'duhkha',
+    image: 'concept-duhkha.png',
     name: 'दुःख',
     deva: 'दुःख',
     seal: 'दुः',
@@ -770,6 +787,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'anatman',
+    image: 'concept-anatman.png',
     name: 'अनात्मन्',
     deva: 'अनात्मन्',
     seal: 'अन्',
@@ -815,6 +833,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'pratityasamutpada',
+    image: 'concept-pratityasamutpada.png',
     name: 'प्रतीत्यसमुत्पाद',
     deva: 'प्रतीत्यसमुत्पाद',
     seal: 'प्र',
@@ -860,6 +879,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'shunyata',
+    image: 'concept-shunyata.png',
     name: 'शून्यता',
     deva: 'शून्यता',
     seal: 'शू',
@@ -905,6 +925,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'ahimsa',
+    image: 'concept-ahimsa.png',
     name: 'अहिंसा',
     deva: 'अहिंसा',
     seal: 'अ',
@@ -950,6 +971,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'anekantavada',
+    image: 'concept-anekantavada.png',
     name: 'अनेकान्तवाद',
     deva: 'अनेकान्तवाद',
     seal: 'अने',
@@ -997,6 +1019,7 @@ export const CONCEPTS: Concept[] = [
   // ───────────────────────── सौंदर्यशास्त्र व भाषा ────────────────────────────
   {
     id: 'rasa',
+    image: 'concept-rasa.png',
     name: 'रस',
     deva: 'रस',
     seal: 'र',
@@ -1042,6 +1065,7 @@ export const CONCEPTS: Concept[] = [
   },
   {
     id: 'dhvani',
+    image: 'concept-dhvani.png',
     name: 'ध्वनि',
     deva: 'ध्वनि',
     seal: 'ध्व',
