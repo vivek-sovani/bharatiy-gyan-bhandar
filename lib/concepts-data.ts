@@ -2472,6 +2472,164 @@ export const CONCEPTS: Concept[] = [
       ],
     },
   },
+
+  // ─────────────────── Aesthetics & language (added) ──────────────────
+  {
+    id: 'bhava-sthayibhava',
+    name: 'Bhāva & Sthāyibhāva',
+    deva: 'भाव व स्थायिभाव',
+    seal: 'भा',
+    gloss: 'Emotion & the abiding mood',
+    glossDeva: 'भाव व स्थायिभाव',
+    domain: 'aesthetics',
+    source: 'Nāṭyaśāstra',
+    sourceDeva: 'नाट्यशास्त्र',
+    blurb: 'The raw material of rasa — the emotions a work evokes. A stable, abiding mood (sthāyibhāva) ripens, through fleeting feelings, into the savoured flavour of rasa.',
+    tags: ['Emotion', 'Rasa', 'Drama'],
+    href: '/upavedas/',
+    detail: {
+      intro:
+        'If rasa is the aesthetic flavour the audience tastes, bhāvas are the emotional ingredients from which it is cooked. Bharata\'s theory distinguishes the stable, abiding emotions (sthāyibhāva) that anchor a work from the transient feelings that colour and develop them.',
+      aspects: [
+        'Sthāyibhāva — the eight (later nine) abiding emotions, such as love, mirth, sorrow, anger, fear and wonder, each the basis of one rasa.',
+        'Vyabhicāribhāva — the many transient feelings (anxiety, joy, shame, fatigue and the rest) that flicker across the abiding mood and enrich it.',
+        'These combine with the situation (vibhāva), the outward expressions (anubhāva) and the passing states to ripen into rasa.',
+      ],
+      significance:
+        'The bhāva analysis gives Indian aesthetics a precise emotional grammar: art does not simply "stir feeling" but works through a structured set of moods. The abiding emotion is what a whole work is "about" emotionally; rasa is that emotion savoured, transformed and made impersonal.',
+      origin: {
+        label: 'Nāṭyaśāstra (Bharata)',
+        href: '/upavedas/',
+        explainer:
+          'Bharata\'s Nāṭyaśāstra, the foundational treatise on drama, sets out the emotional machinery of art in its famous "rasa-sūtra" and the chapters around it. It enumerates the abiding emotions and pairs each with its corresponding rasa, then catalogues the transient feelings and the means of expression. The governing image is culinary: just as a fine taste arises when a principal flavour is combined with many spices, so a rasa arises when an abiding emotion is brought to ripeness by the situation, the actors\' expression and the play of transient feelings.',
+      },
+      references: [
+        {
+          label: 'Abhinavagupta & rasa theory',
+          href: '/upavedas/',
+          explainer:
+            'Later aestheticians, above all Abhinavagupta, deepened the relationship between bhāva and rasa. On his account the personal emotion (bhāva) of a character is universalised in the sensitive spectator (sahṛdaya) and tasted as rasa — no longer the spectator\'s own anxious feeling but emotion contemplated in a serene, impersonal mode, akin to aesthetic bliss. The bhāva is the seed bound to a particular person and situation; rasa is that seed flowered into shared, savoured experience. This refinement made the bhāva–rasa pair the central axis of all subsequent Indian thinking about art.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'alankara',
+    name: 'Alaṅkāra',
+    deva: 'अलंकार',
+    seal: 'अ',
+    gloss: 'Figures of speech · ornament',
+    glossDeva: 'काव्यालंकार',
+    domain: 'aesthetics',
+    source: 'Kāvyaśāstra',
+    sourceDeva: 'काव्यशास्त्र',
+    blurb: 'The "ornaments" of poetry — simile, metaphor, pun, alliteration and the rest — analysed into a vast, precise catalogue. The craft side of literary beauty.',
+    tags: ['Poetics', 'Metaphor', 'Craft'],
+    href: '/upavedas/',
+    detail: {
+      intro:
+        'Alaṅkāra — literally "ornament" — is the Sanskrit term for the figures of speech that adorn poetry. The poeticians built an extraordinarily detailed science of them, classifying the devices of sound and sense by which ordinary language is heightened into the literary.',
+      aspects: [
+        'Divided into figures of sound (śabdālaṅkāra), like alliteration and pun, and figures of sense (arthālaṅkāra), like simile, metaphor and poetic fancy.',
+        'Analysed with great precision: upamā (simile) alone is subdivided into many varieties, and hundreds of figures are named and defined.',
+        'For the early "ornamentalists," alaṅkāra was close to the essence of poetry; for later critics it was a means subordinate to rasa and dhvani.',
+      ],
+      significance:
+        'The science of alaṅkāra is the craft pole of Indian poetics, balancing the soul-centred theories of rasa and suggestion. Its meticulous taxonomy gave criticism a precise vocabulary for how poetic effects are actually made — the technique that the higher theories then put in service of feeling.',
+      origin: {
+        label: 'Kāvyaśāstra (the ālaṅkārikas)',
+        href: '/upavedas/',
+        explainer:
+          'The earliest surviving poeticians — Bhāmaha and Daṇḍin (c. 7th century) — built the study of literature around alaṅkāra, treating the figures as the defining feature that separates poetry from plain statement; Daṇḍin\'s Kāvyādarśa catalogues them with loving precision. This "ornamentalist" school held that beauty (and the qualities, guṇas, of good style) is carried chiefly by the figures. The tradition\'s analytic temper is fully on display here: even the play of imagination is sorted into named types, each with its definition and examples.',
+      },
+      references: [
+        {
+          label: 'The dhvani critique & synthesis',
+          href: '/upavedas/',
+          explainer:
+            'With Ānandavardhana\'s theory of dhvani (suggestion), alaṅkāra was demoted from the essence of poetry to one of its instruments: ornament is valuable, but the "soul" of poetry is the suggested meaning and the rasa it conveys. Mammaṭa\'s later synthesis settled the hierarchy — figures matter, but serve rasa and dhvani rather than standing on their own. The long debate between the ornamentalists and the suggestion theorists is one of the richest in world literary criticism, and it left Sanskrit poetics with both a superb technical analysis of figures and a clear account of what they are ultimately for.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'aucitya',
+    name: 'Aucitya',
+    deva: 'औचित्य',
+    seal: 'औ',
+    gloss: 'Propriety · fitness',
+    glossDeva: 'औचित्य · समुचितता',
+    domain: 'aesthetics',
+    source: 'Kāvyaśāstra',
+    sourceDeva: 'काव्यशास्त्र',
+    blurb: 'The principle that every element of a poem must fit its context — the right word, image and ornament in the right place. Beauty as appropriateness.',
+    tags: ['Propriety', 'Decorum', 'Kṣemendra'],
+    href: '/upavedas/',
+    detail: {
+      intro:
+        'Aucitya is the principle of propriety or fitness in art: the demand that every element — word, figure, metre, mood, character\'s speech — be appropriate to its context. A device beautiful in itself becomes a blemish when out of place; rightness of placement is itself a source of beauty.',
+      aspects: [
+        'Fitness across every level: word to sense, ornament to mood, speech to speaker, metre to subject, part to whole.',
+        'Even the most striking ornament or the strongest emotion can fail if it is unsuited to its setting — impropriety is the chief destroyer of rasa.',
+        'A regulative, integrating principle rather than a device: it governs how all the other elements are deployed.',
+      ],
+      significance:
+        'Aucitya is Indian poetics\' theory of artistic decorum and coherence. By making appropriateness the master criterion, it subordinates technique to the unity of the whole work — and locates beauty not in any element by itself but in the fitness of each element to its place.',
+      origin: {
+        label: 'Kāvyaśāstra (Kṣemendra)',
+        href: '/upavedas/',
+        explainer:
+          'Kṣemendra (11th century) made aucitya the centrepiece of a whole treatise, the Aucitya-vicāra-carcā, declaring propriety to be the very life of poetry that possesses rasa. He argued that ornaments are like jewellery — lovely when worn in the right place, absurd when misplaced (an anklet on the wrist) — and illustrated impropriety with examples of words, qualities and figures gone wrong in their settings. For him aucitya was not one merit among many but the organising principle that makes all the others effective.',
+      },
+      references: [
+        {
+          label: 'Rasa, dhvani & the unity of the work',
+          href: '/upavedas/',
+          explainer:
+            'Though Kṣemendra elevated it most explicitly, the idea of propriety runs throughout Sanskrit poetics. The rasa theorists insisted that anything which breaks the appropriate mood — an unfitting word, a jarring image, an action untrue to character — destroys the aesthetic experience (rasa-bhaṅga), making aucitya the practical guardian of rasa. In the dhvani tradition too, the suggested meaning depends on a delicate fitness of means to effect. Across these schools aucitya functions as the principle of artistic integrity, ensuring that brilliance in the parts serves, rather than fractures, the beauty of the whole.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'sadharanikarana',
+    name: 'Sādhāraṇīkaraṇa',
+    deva: 'साधारणीकरण',
+    seal: 'सा',
+    gloss: 'Universalisation of emotion',
+    glossDeva: 'भावाचे साधारणीकरण',
+    domain: 'aesthetics',
+    source: 'Kāvyaśāstra',
+    sourceDeva: 'काव्यशास्त्र',
+    blurb: 'How a particular character\'s grief becomes the audience\'s savoured sorrow — the depersonalising of emotion that turns private feeling into shared aesthetic experience.',
+    tags: ['Universalisation', 'Sahṛdaya', 'Abhinavagupta'],
+    href: '/upavedas/',
+    detail: {
+      intro:
+        'Sādhāraṇīkaraṇa — "universalisation" or "generalisation" — is the theory of how art transforms a specific, personal emotion into a shared aesthetic experience. The grief of one character on stage is lifted out of its particular circumstances and made the common, savourable sorrow of every sensitive viewer.',
+      aspects: [
+        'The emotion is freed from its bindings to a particular person, time and place, becoming emotion-as-such rather than someone\'s private feeling.',
+        'So tasted, even painful emotions (sorrow, fear) give pleasure: the spectator is moved yet not personally afflicted, contemplating the feeling rather than suffering it.',
+        'It explains the cultivated spectator (sahṛdaya) — the "kindred heart" capable of this depersonalised, generalised response.',
+      ],
+      significance:
+        'Sādhāraṇīkaraṇa is the conceptual bridge between bhāva and rasa, and Indian aesthetics\' answer to one of art\'s oldest puzzles: why we take delight in depictions of grief and terror. The pleasure lies in emotion universalised — felt fully, but contemplated from a serene, impersonal distance.',
+      origin: {
+        label: 'Kāvyaśāstra (Bhaṭṭa Nāyaka)',
+        href: '/upavedas/',
+        explainer:
+          'The concept is credited to the theorist Bhaṭṭa Nāyaka (c. 10th century), who introduced it to solve a problem in rasa theory: how does the spectator relish an emotion that is neither his own nor literally present? His answer was that poetic language has a special power (bhāvakatva) to generalise the depicted emotion, lifting it free of its particular owner so that it can be universally enjoyed (bhojakatva) in a state of restful savour. Sādhāraṇīkaraṇa thus names the mechanism by which the personal becomes the shared.',
+      },
+      references: [
+        {
+          label: 'Abhinavagupta\'s synthesis',
+          href: '/upavedas/',
+          explainer:
+            'Abhinavagupta absorbed Bhaṭṭa Nāyaka\'s insight into his definitive theory of rasa, grounded in his Trika philosophy of consciousness. For him, universalisation removes the obstacles — the spectator\'s own preoccupations and the sense of "mine" and "his" — that would block aesthetic experience, so that the emotion is contemplated in a generalised mode close to the bliss of pure consciousness itself. The savouring of rasa thus becomes faintly akin to a spiritual experience: a tasting of emotion freed from ego, which is why he could call aesthetic delight a "twin" of the bliss of realising brahman.',
+        },
+      ],
+    },
+  },
 ];
 
 export const CONCEPT_DOMAINS = [
