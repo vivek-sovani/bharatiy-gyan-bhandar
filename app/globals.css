@@ -3029,7 +3029,7 @@ html[lang="mr"] .essay .meta {
 
 .person-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.85rem;
   margin-bottom: 0.85rem;
   padding-bottom: 0.85rem;
