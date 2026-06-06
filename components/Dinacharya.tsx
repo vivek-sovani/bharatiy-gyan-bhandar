@@ -42,8 +42,11 @@ export default function Dinacharya() {
 
         <div className="dinacharya">
           {DINACHARYA.map((d, i) => (
-            <div key={i} className="seg">
+            <div key={i} className={i === activeIdx ? 'seg is-now' : 'seg'}>
               {i === activeIdx && <div className="marker" style={{ width: '100%' }} />}
+              {i === activeIdx && (
+                <span className="seg-now">{lang === 'mr' ? 'आता' : 'now'}</span>
+              )}
               <div className="hr">{d.hr}</div>
               <div className="ph">{d.ph}</div>
               <div className="de deva-only">{d.de}</div>

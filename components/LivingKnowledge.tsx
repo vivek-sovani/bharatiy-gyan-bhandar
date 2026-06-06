@@ -2,10 +2,18 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
-import { CornerOrn, Glyph } from './Ornaments';
+import { CornerOrn, Glyph, Emblem } from './Ornaments';
 import { LK_DOMAINS, LK_DOMAIN_META, LIVING_KNOWLEDGE, LK_NOTE, type DomainId } from '@/lib/living-knowledge-data';
 import { LK_DOMAIN_META as LK_DOMAIN_META_MR, LIVING_KNOWLEDGE as LIVING_KNOWLEDGE_MR, LK_NOTE as LK_NOTE_MR } from '@/lib/living-knowledge-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
+
+// Key each living-knowledge domain to one of the palette accents, so an opened
+// domain reads with its own colour identity (matching the Concepts section).
+const LK_ACCENT: Record<string, string> = {
+  math: 'knowledge', astronomy: 'ethics', medicine: 'liberation', mind: 'mind',
+  body: 'order', environment: 'heterodox', language: 'aesthetics', materials: 'vedic', life: 'classical',
+};
+const lkAccent = (id: string) => `var(--ac-${LK_ACCENT[id] ?? 'order'})`;
 
 export default function LivingKnowledge() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -112,7 +120,10 @@ export default function LivingKnowledge() {
                   else tileButtonRefs.current.delete(domainId);
                 }}
                 onClick={() => toggleDomain(domainId)}
-                style={isActive ? { borderColor: 'var(--maroon)', background: 'var(--paper-deep)' } : undefined}
+                style={{
+                  '--accent': lkAccent(domainId),
+                  ...(isActive ? { borderColor: 'var(--accent)', background: 'var(--paper-deep)' } : {}),
+                } as React.CSSProperties}
               >
                 <CornerOrn className="tl" />
                 <CornerOrn className="tr" />
@@ -160,9 +171,11 @@ export default function LivingKnowledge() {
 
         {/* Contribution sub-grid — shown when a domain is active */}
         {activeDomain && activeGifts.length > 0 && (
-          <div style={{ marginTop: '2rem' }}>
+          <div style={{ marginTop: '2rem', '--accent': lkAccent(activeDomain) } as React.CSSProperties}>
             <div className="era-banner">
+              <Emblem name={LK_ACCENT[activeDomain] ?? 'order'} className="era-banner-emblem" size={92} />
               <div className="era-banner-row">
+                <Emblem name={LK_ACCENT[activeDomain] ?? 'order'} className="era-banner-mark" size={30} />
                 {/* tabIndex=-1 so JS focus() works; outline suppressed visually */}
                 <h3
                   className="era-banner-title"

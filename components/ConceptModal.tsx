@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { CornerOrn } from './Ornaments';
 import type { Concept } from '@/lib/concepts-data';
@@ -14,19 +14,38 @@ export default function ConceptModal({
   onClose: () => void;
 }) {
   const { lang, t } = useLanguage();
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
 
-  // Close on Escape and lock background scroll while the modal is open.
+  // Close on Escape, lock background scroll, and manage focus while open:
+  // move focus into the dialog, trap Tab within it, and restore focus to
+  // whatever opened it on close.
   useEffect(() => {
     if (!concept) return;
+    const opener = document.activeElement as HTMLElement | null;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') { onClose(); return; }
+      if (e.key !== 'Tab') return;
+      const focusables = dialogRef.current?.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusables || focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
     };
     document.addEventListener('keydown', onKey);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    closeRef.current?.focus();
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = prevOverflow;
+      opener?.focus?.();
     };
   }, [concept, onClose]);
 
@@ -45,6 +64,7 @@ export default function ConceptModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby="concept-modal-title"
+        ref={dialogRef}
         onClick={(e) => e.stopPropagation()}
       >
         <CornerOrn className="tl" />
@@ -55,6 +75,7 @@ export default function ConceptModal({
         <button
           type="button"
           className="contrib-modal-close"
+          ref={closeRef}
           onClick={onClose}
           aria-label={t('concepts.detail.close')}
         >

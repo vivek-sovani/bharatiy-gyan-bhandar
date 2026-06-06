@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { CornerOrn, Glyph } from './Ornaments';
+import { CornerOrn, Glyph, Emblem } from './Ornaments';
 import { SECTIONS as SECTIONS_EN, FILTERS as FILTERS_EN, type FilterOption } from '@/lib/data';
 import { SECTIONS as SECTIONS_MR, FILTERS as FILTERS_MR } from '@/lib/data_mr';
 import { sectionPath } from '@/lib/routes';
@@ -73,9 +73,14 @@ function EraHeader({ era, lang }: { era: EraMeta; lang: string }) {
   const period = lang === 'mr' ? era.periodDeva : era.period;
   const gloss = lang === 'mr' ? era.glossDeva : era.gloss;
 
+  // Vedic / classical / medieval / modern have line-art emblems; "all" does not.
+  const hasEmblem = era.id !== 'all';
+
   return (
     <div className="era-banner" aria-label={era.label}>
+      {hasEmblem && <Emblem name={era.id} className="era-banner-emblem" size={92} />}
       <div className="era-banner-row">
+        {hasEmblem && <Emblem name={era.id} className="era-banner-mark" size={30} />}
         <span className="era-banner-period">{period}</span>
         <h3 className="era-banner-title">
           {lang === 'mr' ? (
@@ -165,7 +170,7 @@ export default function SectionsGrid() {
         <div className="filter-stack">
           <div className="filter-row">
             <ChipGroup label={t('grid.tag_canon')} value={type} options={FILTERS.type} onChange={setType} />
-            <span style={{ flex: 1 }} />
+            <span className="lk-filter-spacer" style={{ flex: 1 }} />
             <ChipGroup label={t('grid.tag_topic')} value={topic} options={FILTERS.topic} onChange={setTopic} />
           </div>
         </div>
@@ -176,7 +181,17 @@ export default function SectionsGrid() {
           if (eraSections.length === 0) return null;
 
           return (
-            <div key={era.id} id={`era-${era.id}`} className="era-group" style={{ marginTop: '2.5rem' }}>
+            <div
+              key={era.id}
+              id={`era-${era.id}`}
+              className="era-group"
+              style={{
+                marginTop: '2.5rem',
+                // Key each era to its own accent so the long library scroll
+                // reads as a coloured timeline (matches the Concepts section).
+                ...(era.id !== 'all' ? { '--accent': `var(--ac-${era.id})` } : {}),
+              } as React.CSSProperties}
+            >
               <EraHeader era={era} lang={lang} />
 
               <div className="cards">

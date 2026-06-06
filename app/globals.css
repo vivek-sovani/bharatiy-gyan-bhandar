@@ -2582,7 +2582,7 @@ body::after {
   border-radius: 6px;
   padding: 1.25rem;
   cursor: pointer;
-  transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.24s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.24s, box-shadow 0.24s, background 0.24s;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -2719,7 +2719,7 @@ body::after {
   border: 1px solid var(--rule);
   border-radius: 6px;
   padding: 1.5rem;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .sukta-item:hover {
@@ -2775,7 +2775,7 @@ body::after {
   font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -3423,6 +3423,127 @@ html[lang="mr"] .concept-ref-tag {
   .contrib-modal { padding: 1.6rem 1.3rem 1.4rem; }
   .contrib-modal-seal { width: 50px; height: 50px; font-size: 1.45rem; }
   .contrib-modal-id h3 { font-size: 1.35rem; }
+}
+
+/* ============================================================
+   POLISH PASS — review refinements (June 2026)
+   Appended at the end so these rules win by source order.
+   Everything keys off existing tokens; no hard-coded colour.
+   ============================================================ */
+
+:root {
+  /* Variables that were referenced across the codebase but never declared.
+     Two of these changed the render (dead shadow / wrong font); the rest
+     were dead code. Declaring them here makes the intent explicit. */
+  --shadow-soft: oklch(from var(--ink) l c h / 0.16);
+  --gold-soft:   oklch(from var(--gold) l c h / 0.5);
+  --ink-body:    var(--ink-soft);
+  --font-sans:   var(--font-mono);
+}
+
+/* 1 · Era / domain bands — never break the English label mid-phrase, and
+       give the band a faint accent wash so it reads as a divider. */
+.era-banner-title > span:first-child { white-space: nowrap; }
+.era-banner {
+  background:
+    linear-gradient(180deg, oklch(from var(--accent, var(--maroon)) l c h / 0.06), transparent 60%),
+    var(--paper-deep);
+}
+/* Period becomes an accent kicker with a leading rule, so it reads as a
+   label for the era rather than competing with the title on the baseline. */
+.era-banner-period {
+  color: var(--accent, var(--maroon));
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.era-banner-period::before {
+  content: "";
+  width: 1.6rem;
+  height: 2px;
+  background: var(--accent, var(--maroon));
+}
+
+/* 2 · Cards — quiet resting depth, accent-tinted hover, real focus ring.
+       The richer motion is gated on prefers-reduced-motion. */
+.card { box-shadow: 0 1px 0 oklch(from var(--ink) l c h / 0.04); }
+.card .num .tag { color: var(--accent, var(--maroon)); }
+.card h3 { transition: color 180ms; }
+.card-thumb img { transition: transform 600ms cubic-bezier(.2,.7,.2,1); }
+.card:hover h3 { color: var(--accent, var(--maroon)); }
+.card:hover .corner-orn { color: var(--accent, var(--maroon)); opacity: .85; }
+@media (prefers-reduced-motion: no-preference) {
+  .card { transition: transform 220ms cubic-bezier(.2,.7,.2,1), border-color 220ms, box-shadow 220ms; }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent, var(--maroon-soft));
+    box-shadow: 0 14px 30px -12px oklch(from var(--accent, var(--maroon)) l c h / 0.35);
+  }
+  .card:hover .card-thumb img { transform: scale(1.045); }
+}
+:where(.card, .person.is-link, .chip, .trans-btn, .verse-next, .sec-tab, .see-link, .shakha-card, .hdr-nav a):focus-visible {
+  outline: 2px solid var(--accent, var(--maroon));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* 3 · Touch targets — comfortable hit areas on phones (≥44px). */
+@media (max-width: 600px) {
+  .btn-cta, .trans-btn, .verse-next, .sec-tab, .verse-toggle-btn {
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .contrib-modal-close { width: 44px; height: 44px; justify-content: center; }
+}
+
+/* 4 · Tab strips — fade the right edge on mobile so hidden tabs are discoverable. */
+@media (max-width: 600px) {
+  .sec-tabs-nav, .veda-tab-nav {
+    -webkit-mask: linear-gradient(90deg, #000 86%, transparent);
+            mask: linear-gradient(90deg, #000 86%, transparent);
+  }
+}
+
+/* 5 · Vedas page — bring it back onto the design system:
+       square folios (not 6px), OKLCH status badges that theme, explicit font. */
+.shakha-card, .sukta-item, .verse-panel { border-radius: 0; }
+.verse-panel .translit-line { font-family: var(--font-mono); font-style: normal; }
+@media (prefers-reduced-motion: no-preference) {
+  .shakha-card { transition: transform 200ms cubic-bezier(.2,.7,.2,1), border-color 200ms, box-shadow 200ms; }
+  .shakha-card:hover { transform: translateY(-3px); }
+}
+.shakha-badge { font-family: var(--font-mono); letter-spacing: .12em; border-radius: 999px; }
+.shakha-badge.extant  { background: oklch(0.55 0.09 150 / .12); color: oklch(0.46 0.09 150); border: 1px solid oklch(0.55 0.09 150 / .35); }
+.shakha-badge.partial { background: oklch(from var(--gold) l c h / .14); color: var(--gold-deep); border: 1px solid oklch(from var(--gold) l c h / .4); }
+.shakha-badge.lost    { background: oklch(from var(--ink) l c h / .06); color: var(--ink-faint); border: 1px solid var(--rule-strong); }
+[data-theme="dark"] .shakha-badge.extant { color: oklch(0.72 0.10 150); }
+
+/* 6 · Lifestyle (dinacaryā) — make the live "now" window unmistakable, not just
+       a 3px bar: a faint accent wash on the active segment + a small "now" pill. */
+.dinacharya .seg.is-now {
+  background:
+    linear-gradient(180deg, oklch(from var(--maroon) l c h / 0.07), transparent 70%),
+    var(--paper-deep);
+}
+.dinacharya .seg.is-now .ph { color: var(--maroon); }
+.dinacharya .seg .seg-now {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--maroon);
+  padding: 0.18rem 0.42rem;
+  border-radius: 999px;
+}
+
+/* 7 · Library filter — drop the invisible flex spacer on phones so the
+       two filter groups stack cleanly instead of leaving an awkward gap. */
+@media (max-width: 600px) {
+  .lk-filter-spacer { display: none; }
 }
 
 
