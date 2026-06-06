@@ -8,6 +8,7 @@ import SectionsGrid from '@/components/SectionsGrid';
 import Contributors from '@/components/Contributors';
 import Concepts from '@/components/Concepts';
 import LivingKnowledge from '@/components/LivingKnowledge';
+import Dinacharya from '@/components/Dinacharya';
 import { DailyStrip, Footer } from '@/components/Frames';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Contributors />
       <Concepts />
       <LivingKnowledge />
+      <Dinacharya />
       <Footer />
     </>
   );
