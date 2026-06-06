@@ -3579,4 +3579,19 @@ html[lang="mr"] .concept-ref-tag {
   .lk-filter-spacer { display: none; }
 }
 
+/* 8 · Person tiles (Concepts, Contributors, Living-Knowledge domains) — bring
+       their hover up to parity with the Collection cards: accent border, the
+       title and corner ornaments warming to the section accent, and an
+       accent-tinted lift. Each tile already inherits / sets --accent. */
+.person.is-link .person-name { transition: color 180ms; }
+.person.is-link:hover { border-color: var(--accent, var(--maroon-soft)); }
+.person.is-link:hover .person-name { color: var(--accent, var(--maroon)); }
+.person.is-link:hover .corner-orn { color: var(--accent, var(--maroon)); opacity: 0.85; }
+@media (prefers-reduced-motion: no-preference) {
+  .person.is-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px -12px oklch(from var(--accent, var(--maroon)) l c h / 0.35);
+  }
+}
+
 
