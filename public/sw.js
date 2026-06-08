@@ -8,11 +8,23 @@ const CACHE = 'bgb-v4';
 const BASE = self.location.pathname.replace(/\/sw\.js$/, '');
 const ROOT = BASE + '/';
 
-// ── Install ──────────────────────────────────────────────────────────────────
+// ── Install: precache the app shell ──────────────────────────────────────────
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE)
-      .then(c => c.add(ROOT))
+    fetch(ROOT)
+      .then(async res => {
+        const cache = await caches.open(CACHE);
+        const html = await res.clone().text();
+        await cache.put(ROOT, res);
+        // Extract and precache all /_next/static/ assets (CSS, JS) listed in the HTML
+        const urls = [...new Set(
+          [...html.matchAll(/["']([^"']*\/_next\/static\/[^"'?#\s]+)/g)].map(m => m[1])
+        )];
+        await Promise.allSettled(
+          urls.map(u => fetch(u).then(r => { if (r.ok) cache.put(u, r); }))
+        );
+      })
+      .catch(() => {}) // if offline during install, assets will cache on first online visit
       .then(() => self.skipWaiting())
   );
 });
