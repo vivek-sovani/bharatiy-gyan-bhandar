@@ -24,6 +24,20 @@ export default function manifest(): MetadataRoute.Manifest {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         purpose: 'any' as any,
       },
+      {
+        src: base + '/icon-192.svg',
+        sizes: '192x192',
+        type: 'image/svg+xml',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        purpose: 'any' as any,
+      },
+      {
+        src: base + '/icon-512.svg',
+        sizes: '512x512',
+        type: 'image/svg+xml',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        purpose: 'maskable' as any,
+      },
     ],
   };
 }

@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'default',
     title: 'Jñāna Bhaṇḍāra',
-    startupImage: [{ url: '/splash.png' }],
   },
   icons: {
     icon: '/icon.svg',

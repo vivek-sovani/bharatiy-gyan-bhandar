@@ -1,13 +1,18 @@
 // Service worker for Indian Knowledge Bank PWA
 // Strategy: network-first for HTML, cache-first for static assets, cache Google Fonts.
 
-const CACHE = 'bgb-v3';
+const CACHE = 'bgb-v4';
+
+// Derive the base path from the SW's own URL so this works on both
+// localhost (served at /) and GitHub Pages (served at /bharatiy-gyan-bhandar/).
+const BASE = self.location.pathname.replace(/\/sw\.js$/, '');
+const ROOT = BASE + '/';
 
 // ── Install ──────────────────────────────────────────────────────────────────
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE)
-      .then(c => c.add('/'))
+      .then(c => c.add(ROOT))
       .then(() => self.skipWaiting())
   );
 });
@@ -44,7 +49,7 @@ self.addEventListener('fetch', e => {
           return res;
         })
         .catch(() =>
-          caches.match(e.request).then(cached => cached || caches.match('/'))
+          caches.match(e.request).then(cached => cached || caches.match(ROOT))
         )
     );
     return;
