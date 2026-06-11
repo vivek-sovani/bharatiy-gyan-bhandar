@@ -11,7 +11,12 @@ A library can show you what a civilization knew. It is harder to show how it cam
 
 Bhāratīya Jñāna Bhaṇḍāra maps India's three-thousand-year knowledge tradition — the Vedas, Upaniṣads, six darśanas, Āyurveda, mathematics, the epics, and the Bhakti poets — all in one place, with translations and commentary. Free to read; built to last.
 
-Not a museum of a finished past — the living record of people who asked the largest questions they could, refused easy answers, and passed the conversation forward. To us.`,
+Not a museum of a finished past — the living record of people who asked the largest questions they could, refused easy answers, and passed the conversation forward. To us.
+
+📲 Install as an app (works offline too):
+Android — Open in Chrome → tap Menu (⋮) → "Add to Home Screen"
+iPhone / iPad — Open in Safari → tap Share (□↑) → "Add to Home Screen"
+PC / Mac — Open in Chrome or Edge → click the Install icon (⊕) in the address bar`,
 
   mr: `✦ भारतीय ज्ञान भंडार ✦
 
@@ -21,7 +26,12 @@ Not a museum of a finished past — the living record of people who asked the la
 
 व्याकरण जन्मलं प्रार्थना नीट म्हणायच्या ओढीतून. भूमिती उभी राहिली वेदी बांधण्यातून. गणित घडलं पंचांग जुळवताना. हे ज्ञान कुणी ठरवून रचलं नाही — एका न थांबणाऱ्या जिज्ञासेतून, एकातून दुसरं, असं आपोआप वाढत गेलं.
 
-भूतकाळाचं संग्रहालय नाही हे. अवघड प्रश्नांना भिडलेल्या, सोप्या उत्तरांना न बधलेल्या, आणि तो संवाद थेट आपल्यापर्यंत पोचवलेल्या असंख्य मनांची ही जिवंत नोंद आहे.`,
+भूतकाळाचं संग्रहालय नाही हे. अवघड प्रश्नांना भिडलेल्या, सोप्या उत्तरांना न बधलेल्या, आणि तो संवाद थेट आपल्यापर्यंत पोचवलेल्या असंख्य मनांची ही जिवंत नोंद आहे.
+
+📲 अ‍ॅप म्हणून इन्स्टॉल करा (ऑफलाइनही वापरता येते):
+Android — Chrome मध्ये उघडा → मेनू (⋮) → "Add to Home Screen"
+iPhone / iPad — Safari मध्ये उघडा → Share (□↑) → "Add to Home Screen"
+PC / Mac — Chrome किंवा Edge मध्ये उघडा → पत्ता बारमधील Install (⊕) वर क्लिक करा`,
 };
 
 type Props = { variant?: 'footer' | 'icon' };
