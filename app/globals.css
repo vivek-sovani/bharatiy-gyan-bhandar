@@ -1054,6 +1054,70 @@ a:hover { color: var(--gold-deep); }
 @keyframes verse-fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes verse-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
+/* Share button + dropdown menu */
+.share-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.share-btn {
+  appearance: none; background: transparent;
+  border: 0; padding: 0;
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.share-btn:hover { color: var(--maroon); }
+.share-menu {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: 0;
+  z-index: 200;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  padding: 0.3rem 0;
+  min-width: 140px;
+  box-shadow: 0 4px 16px -4px oklch(from var(--ink) l c h / 0.15);
+  animation: verse-rise 0.14s ease;
+}
+.share-item {
+  display: block; width: 100%;
+  padding: 0.45rem 0.9rem;
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-soft);
+  background: transparent; border: 0;
+  text-align: left; text-decoration: none;
+  cursor: pointer;
+  transition: background 120ms, color 120ms;
+}
+.share-item:hover { background: oklch(from var(--maroon) l c h / 0.08); color: var(--maroon); }
+
+/* Share button inside the verse strip (same style as .strip-actions buttons) */
+.strip-actions .share-btn { color: var(--ink-faint); }
+.strip-actions .share-btn:hover { color: var(--maroon); }
+
+/* Share button inside the verse modal */
+.verse-modal-footer {
+  margin-top: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.verse-modal-footer .verse-modal-source {
+  margin: 0; padding: 0; border: 0;
+}
+.verse-modal-share .share-menu { bottom: auto; top: calc(100% + 6px); right: 0; }
+
+@media (max-width: 600px) {
+  .share-btn { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
 /* ----------------------------------------------------------
    Lifestyle ribbon (Dinacharya)
    ---------------------------------------------------------- */

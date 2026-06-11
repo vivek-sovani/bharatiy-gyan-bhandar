@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
+import ShareButton from './ShareButton';
 
 type VerseModalProps = {
   open: boolean;
@@ -90,7 +91,17 @@ export default function VerseModal({
           )}
         </div>
 
-        {source && <div className="verse-modal-source">{source}</div>}
+        <div className="verse-modal-footer">
+          {source && <div className="verse-modal-source">{source}</div>}
+          <ShareButton
+            deva={deva}
+            translit={translit}
+            meaning={meaning}
+            source={source}
+            label={title}
+            className="verse-modal-share"
+          />
+        </div>
       </div>
     </div>
   );

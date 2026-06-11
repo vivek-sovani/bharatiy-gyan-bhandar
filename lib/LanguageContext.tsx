@@ -38,6 +38,9 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'verse.meaning': 'Meaning',
     'verse.explanation': 'Explanation',
     'verse.close': 'Close',
+    'verse.share': 'Share',
+    'verse.copy': 'Copy text',
+    'verse.copied': 'Copied ✓',
     // Tree
     'tree.eyebrow': 'Map of the corpus',
     'tree.title': 'The three streams',
@@ -156,6 +159,9 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'verse.meaning': 'अर्थ',
     'verse.explanation': 'विवेचन',
     'verse.close': 'बंद करा',
+    'verse.share': 'शेअर करा',
+    'verse.copy': 'मजकूर कॉपी करा',
+    'verse.copied': 'कॉपी झाले ✓',
     // Tree
     'tree.eyebrow': 'ज्ञानकोश नकाशा',
     'tree.title': 'तीन ज्ञानप्रवाह',

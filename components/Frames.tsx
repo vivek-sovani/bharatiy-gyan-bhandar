@@ -10,6 +10,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 import { useRandomVerse } from '@/lib/useRandomVerse';
 import { getPanchanga, type PanchangaInfo } from '@/lib/panchanga';
 import VerseModal from './VerseModal';
+import ShareButton from './ShareButton';
 
 export function DailyStrip() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -47,6 +48,13 @@ export function DailyStrip() {
             <button className="verse-next" onClick={next} title={t('verse.next')}>
               ↻ {t('verse.next')}
             </button>
+            <ShareButton
+              deva={sub.deva}
+              translit={sub.translit}
+              meaning={meaning}
+              source={sub.source}
+              label={t('verse.subhashit_label')}
+            />
           </div>
         </div>
       </div>

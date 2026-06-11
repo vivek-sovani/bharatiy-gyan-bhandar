@@ -7,6 +7,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 import { useRandomVerse } from '@/lib/useRandomVerse';
 import Panchanga from './Panchanga';
 import VerseModal from './VerseModal';
+import ShareButton from './ShareButton';
 
 export default function Hero() {
   const [showModal, setShowModal] = useState(false);
@@ -48,6 +49,13 @@ export default function Hero() {
                 <button className="verse-next" onClick={next} title={t('verse.next')}>
                   ↻ {t('verse.next')}
                 </button>
+                <ShareButton
+                  deva={vakya.deva}
+                  translit={vakya.translit}
+                  meaning={lang === 'mr' ? vakya.meaningMr : vakya.meaningEn}
+                  source={vakya.source}
+                  label={t('verse.mahavakya_label')}
+                />
               </span>
             </div>
           </div>
