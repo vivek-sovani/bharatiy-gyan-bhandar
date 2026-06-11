@@ -24,7 +24,9 @@ Not a museum of a finished past — the living record of people who asked the la
 भूतकाळाचं संग्रहालय नाही हे. अवघड प्रश्नांना भिडलेल्या, सोप्या उत्तरांना न बधलेल्या, आणि तो संवाद थेट आपल्यापर्यंत पोचवलेल्या असंख्य मनांची ही जिवंत नोंद आहे.`,
 };
 
-export default function SiteShareButton() {
+type Props = { variant?: 'footer' | 'icon' };
+
+export default function SiteShareButton({ variant = 'footer' }: Props) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -41,7 +43,9 @@ export default function SiteShareButton() {
     return () => document.removeEventListener('mousedown', handler);
   }, [open]);
 
-  const url = typeof window !== 'undefined' ? window.location.origin + (window.location.pathname !== '/' ? window.location.pathname : '') : '';
+  const url = typeof window !== 'undefined'
+    ? window.location.origin + (window.location.pathname !== '/' ? window.location.pathname : '')
+    : '';
   const body = SITE_SHARE_TEXT[lang];
   const shareText = `${body}\n\n${url}`;
 
@@ -70,19 +74,30 @@ export default function SiteShareButton() {
   const whatsappHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
   const twitterHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(body)}&url=${encodeURIComponent(url)}`;
 
+  const isIcon = variant === 'icon';
+
   return (
-    <div className="share-wrap site-share-wrap" ref={ref}>
+    <div className={`share-wrap ${isIcon ? 'hdr-share-wrap' : 'ftr-share-wrap'}`} ref={ref}>
       <button
-        className="site-share-btn"
+        className={isIcon ? 'hdr-share-btn' : 'ftr-share-btn'}
         onClick={handleClick}
         aria-label={t('site.share_btn')}
+        title={t('site.share_btn')}
         aria-expanded={open}
         aria-haspopup="menu"
       >
-        ↗ {t('site.share_btn')}
+        {isIcon ? (
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+            <polyline points="16 6 12 2 8 6"/>
+            <line x1="12" y1="2" x2="12" y2="15"/>
+          </svg>
+        ) : (
+          <>↗ {t('site.share_btn')}</>
+        )}
       </button>
       {open && (
-        <div className="share-menu site-share-menu" role="menu">
+        <div className={`share-menu ${isIcon ? 'hdr-share-menu' : 'ftr-share-menu'}`} role="menu">
           <button className="share-item" role="menuitem" onClick={handleCopy}>
             {copied ? t('verse.copied') : t('verse.copy')}
           </button>

@@ -136,6 +136,7 @@ export function Footer() {
           )}
           <p>{t('footer.colophon')}</p>
           <p className="ftr-credit">{t('footer.compiled_by')}</p>
+          <SiteShareButton variant="footer" />
         </div>
         <div>
           <h5>{lang === 'mr' ? 'मार्गदर्शन' : 'Navigate'}</h5>
@@ -152,7 +153,6 @@ export function Footer() {
         <span>{samvatLine}</span>
         <span>{t('footer.setin')}</span>
         <span>{t('footer.license')}</span>
-        <SiteShareButton />
       </div>
     </footer>
   );

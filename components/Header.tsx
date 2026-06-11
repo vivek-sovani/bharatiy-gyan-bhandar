@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { HeaderSeal } from './Ornaments';
 import ThemeControl from './ThemeControl';
 import LangControl from './LangControl';
+import SiteShareButton from './SiteShareButton';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Header() {
@@ -55,6 +56,7 @@ export default function Header() {
         </nav>
 
         <div className="hdr-tools">
+          <SiteShareButton variant="icon" />
           <LangControl />
           <ThemeControl />
           <button
