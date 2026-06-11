@@ -31,7 +31,7 @@ PC / Mac — Open in Chrome or Edge → click the Install icon (⊕) in the addr
 📲 अ‍ॅप म्हणून इन्स्टॉल करा (ऑफलाइनही वापरता येते):
 Android — Chrome मध्ये उघडा → मेनू (⋮) → "Add to Home Screen"
 iPhone / iPad — Safari मध्ये उघडा → Share (□↑) → "Add to Home Screen"
-PC / Mac — Chrome किंवा Edge मध्ये उघडा → पत्ता बारमधील Install (⊕) वर क्लिक करा`,
+PC / Mac — Chrome किंवा Edge मध्ये उघडा → address bar मधील Install (⊕) वर क्लिक करा`,
 };
 
 type Props = { variant?: 'footer' | 'icon' };
