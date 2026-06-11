@@ -52,6 +52,7 @@ export function DailyStrip() {
               deva={sub.deva}
               translit={sub.translit}
               meaning={meaning}
+              explanation={lang === 'mr' ? sub.explanationMr : sub.explanationEn}
               source={sub.source}
               label={t('verse.subhashit_label')}
             />

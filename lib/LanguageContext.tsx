@@ -41,6 +41,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'verse.share': 'Share',
     'verse.copy': 'Copy text',
     'verse.copied': 'Copied ✓',
+    'verse.share_footer': 'To know more about Bhāratīya Jñāna Bhaṇḍāra — India\'s open digital archive of Indic knowledge systems —',
     // Tree
     'tree.eyebrow': 'Map of the corpus',
     'tree.title': 'The three streams',
@@ -162,6 +163,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'verse.share': 'शेअर करा',
     'verse.copy': 'मजकूर कॉपी करा',
     'verse.copied': 'कॉपी झाले ✓',
+    'verse.share_footer': 'भारतीय ज्ञान भंडाराबद्दल अधिक जाणून घेण्यासाठी — भारतीय ज्ञानप्रणालींचे एक खुले डिजिटल संग्रहण —',
     // Tree
     'tree.eyebrow': 'ज्ञानकोश नकाशा',
     'tree.title': 'तीन ज्ञानप्रवाह',

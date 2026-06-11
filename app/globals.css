@@ -1065,10 +1065,12 @@ a:hover { color: var(--gold-deep); }
   border: 0; padding: 0;
   font-family: var(--font-mono); font-size: 10.5px;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--maroon);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 2px;
   cursor: pointer;
 }
-.share-btn:hover { color: var(--maroon); }
+.share-btn:hover { border-bottom-color: currentColor; }
 .share-menu {
   position: absolute;
   bottom: calc(100% + 6px);
@@ -1078,7 +1080,7 @@ a:hover { color: var(--gold-deep); }
   border: 1px solid var(--rule-strong);
   border-radius: 4px;
   padding: 0.3rem 0;
-  min-width: 140px;
+  min-width: 150px;
   box-shadow: 0 4px 16px -4px oklch(from var(--ink) l c h / 0.15);
   animation: verse-rise 0.14s ease;
 }
@@ -1094,10 +1096,6 @@ a:hover { color: var(--gold-deep); }
   transition: background 120ms, color 120ms;
 }
 .share-item:hover { background: oklch(from var(--maroon) l c h / 0.08); color: var(--maroon); }
-
-/* Share button inside the verse strip (same style as .strip-actions buttons) */
-.strip-actions .share-btn { color: var(--ink-faint); }
-.strip-actions .share-btn:hover { color: var(--maroon); }
 
 /* Share button inside the verse modal */
 .verse-modal-footer {

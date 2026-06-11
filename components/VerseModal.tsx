@@ -97,6 +97,7 @@ export default function VerseModal({
             deva={deva}
             translit={translit}
             meaning={meaning}
+            explanation={explanation}
             source={source}
             label={title}
             className="verse-modal-share"

@@ -7,25 +7,61 @@ type ShareButtonProps = {
   deva: string;
   translit?: string;
   meaning: string;
+  explanation?: string;
   source?: string;
   label?: string;
   className?: string;
 };
 
-function buildShareText(deva: string, translit: string | undefined, meaning: string, source: string | undefined, label: string | undefined, lang: string): string {
+function buildShareText(
+  deva: string,
+  translit: string | undefined,
+  meaning: string,
+  explanation: string | undefined,
+  source: string | undefined,
+  label: string | undefined,
+  lang: string,
+  footer: string,
+  url: string,
+): string {
+  const meaningLabel = lang === 'mr' ? 'अर्थ' : 'Meaning';
+  const explanationLabel = lang === 'mr' ? 'विवेचन' : 'Explanation';
+
   const parts: string[] = [];
-  if (label) parts.push(label);
+
+  if (label) {
+    parts.push(`✦ ${label} ✦`);
+    parts.push('');
+  }
+
+  parts.push(deva.replace(/\n/g, '\n'));
+  if (lang === 'en' && translit) {
+    parts.push(translit.replace(/\n/g, '\n'));
+  }
+
   parts.push('');
-  parts.push(deva.replace(/\n/g, ' '));
-  if (lang === 'en' && translit) parts.push(translit.replace(/\n/g, ' '));
+  parts.push(meaningLabel);
+  parts.push(meaning.trim());
+
+  if (explanation && explanation.trim()) {
+    parts.push('');
+    parts.push(explanationLabel);
+    parts.push(explanation.trim());
+  }
+
+  if (source) {
+    parts.push('');
+    parts.push(`— ${source}`);
+  }
+
   parts.push('');
-  parts.push(meaning.split('\n\n')[0]);
-  if (source) parts.push('');
-  if (source) parts.push(`— ${source}`);
+  parts.push(footer);
+  parts.push(url);
+
   return parts.join('\n');
 }
 
-export default function ShareButton({ deva, translit, meaning, source, label, className }: ShareButtonProps) {
+export default function ShareButton({ deva, translit, meaning, explanation, source, label, className }: ShareButtonProps) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -42,9 +78,9 @@ export default function ShareButton({ deva, translit, meaning, source, label, cl
     return () => document.removeEventListener('mousedown', handler);
   }, [open]);
 
-  const shareText = buildShareText(deva, translit, meaning, source, label, lang);
   const url = typeof window !== 'undefined' ? window.location.href : '';
-  const fullText = `${shareText}\n\n${url}`;
+  const footer = t('verse.share_footer');
+  const shareText = buildShareText(deva, translit, meaning, explanation, source, label, lang, footer, url);
 
   const handleClick = async () => {
     if (typeof navigator !== 'undefined' && navigator.share) {
@@ -56,16 +92,16 @@ export default function ShareButton({ deva, translit, meaning, source, label, cl
     setOpen((v) => !v);
   };
 
+  const whatsappHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+  const twitterHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(fullText);
+      await navigator.clipboard.writeText(shareText);
       setCopied(true);
       setTimeout(() => { setCopied(false); setOpen(false); }, 1600);
     } catch { /* clipboard unavailable */ }
   };
-
-  const whatsappHref = `https://wa.me/?text=${encodeURIComponent(fullText)}`;
-  const twitterHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`;
 
   return (
     <div className={`share-wrap${className ? ` ${className}` : ''}`} ref={ref}>

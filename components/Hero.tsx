@@ -53,6 +53,7 @@ export default function Hero() {
                   deva={vakya.deva}
                   translit={vakya.translit}
                   meaning={lang === 'mr' ? vakya.meaningMr : vakya.meaningEn}
+                  explanation={lang === 'mr' ? vakya.explanationMr : vakya.explanationEn}
                   source={vakya.source}
                   label={t('verse.mahavakya_label')}
                 />
