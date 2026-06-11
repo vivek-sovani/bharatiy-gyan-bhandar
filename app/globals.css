@@ -1116,6 +1116,18 @@ a:hover { color: var(--gold-deep); }
   .share-btn { min-height: 44px; display: inline-flex; align-items: center; }
 }
 
+/* Site share button — lives in footer base bar */
+.site-share-btn {
+  appearance: none; background: transparent; border: 0; padding: 0;
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-faint);
+  cursor: pointer;
+  transition: color 140ms;
+}
+.site-share-btn:hover { color: var(--maroon); }
+.site-share-menu { bottom: auto; top: calc(100% + 6px); right: 0; left: auto; }
+
 /* ----------------------------------------------------------
    Lifestyle ribbon (Dinacharya)
    ---------------------------------------------------------- */

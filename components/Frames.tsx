@@ -11,6 +11,7 @@ import { useRandomVerse } from '@/lib/useRandomVerse';
 import { getPanchanga, type PanchangaInfo } from '@/lib/panchanga';
 import VerseModal from './VerseModal';
 import ShareButton from './ShareButton';
+import SiteShareButton from './SiteShareButton';
 
 export function DailyStrip() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -151,6 +152,7 @@ export function Footer() {
         <span>{samvatLine}</span>
         <span>{t('footer.setin')}</span>
         <span>{t('footer.license')}</span>
+        <SiteShareButton />
       </div>
     </footer>
   );
