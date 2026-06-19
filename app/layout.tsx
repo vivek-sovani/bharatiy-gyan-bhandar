@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: '/hero-manuscript.png',
         width: 1200,
         height: 900,
-        alt: 'Bhāratīya Jñāna Bhaṇḍāra — India's open digital archive of Indic knowledge systems',
+        alt: "Bhāratīya Jñāna Bhaṇḍāra — India's open digital archive of Indic knowledge systems",
       },
     ],
   },
@@ -71,7 +71,6 @@ const themeInit = `(function(){try{
   r.setAttribute('data-theme',t);
 }catch(e){}})();`;
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const swInit = `(function(){if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${basePath}/sw.js').catch(function(e){console.warn('SW registration failed:',e)})})}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

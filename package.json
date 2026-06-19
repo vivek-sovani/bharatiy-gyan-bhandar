@@ -10,6 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/core": "^8.4.1",
     "mhah-panchang": "^1.2.0",
     "next": "^15.1.0",
     "react": "^19.0.0",
