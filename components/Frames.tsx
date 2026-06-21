@@ -146,6 +146,7 @@ export function Footer() {
             <li><Link href="/#concepts">{t('nav.concepts')}</Link></li>
             <li><Link href="/#living-knowledge">{t('nav.lk')}</Link></li>
             <li><Link href="/lifestyle/">{t('nav.lifestyle')}</Link></li>
+            <li><Link href="/privacy/">{lang === 'mr' ? 'गोपनीयता धोरण' : 'Privacy Policy'}</Link></li>
           </ul>
         </div>
       </div>
