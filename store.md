@@ -113,8 +113,8 @@ Three themes, Devanāgarī toggle, Marathi translations and a live Pañcāṅga.
 | Field | Value |
 |-------|-------|
 | **Developer name** | Vivek Sovani |
-| **Contact email** | vivek.sovani@kimayainfotech.com |
-| **Privacy policy URL** | *(host a policy page — template below)* |
+| **Contact email** | vivek.sovani@gmail.com |
+| **Privacy policy URL** | https://vivek-sovani.github.io/bharatiy-gyan-bhandar/privacy/ |
 | **Website** | https://vivek-sovani.github.io/bharatiy-gyan-bhandar/ |
 
 ### Minimal Privacy Policy (host at your domain or GitHub Pages)

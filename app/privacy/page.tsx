@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import { useLanguage } from '@/lib/LanguageContext';
 
-const CONTACT_EMAIL = 'vivek.sovani@kimayainfotech.com';
+const CONTACT_EMAIL = 'vivek.sovani@gmail.com';
 const EFFECTIVE_DATE = { en: '21 June 2026', mr: '२१ जून २०२६' };
 
 export default function Privacy() {
