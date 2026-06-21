@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bhāratīya Jñāna Bhaṇḍāra</string>
+    <string name="title_activity_main">Bhāratīya Jñāna Bhaṇḍāra</string>
+    <string name="package_name">com.bharatiyagyan.bhandar</string>
+    <string name="custom_url_scheme">com.bharatiyagyan.bhandar</string>
+</resources>
