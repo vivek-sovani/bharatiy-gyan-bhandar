@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { LanguageProvider } from '@/lib/LanguageContext';
+import JourneyRibbon from '@/components/JourneyRibbon';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const siteUrl = `https://vivek-sovani.github.io${basePath}`;
@@ -90,7 +91,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: swInit }} />
       </head>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <JourneyRibbon />
+        </LanguageProvider>
       </body>
     </html>
   );

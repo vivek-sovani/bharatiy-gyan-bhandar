@@ -23,6 +23,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.lifestyle': 'Lifestyle',
     'nav.essays': 'Essays',
     'nav.sanskrit': 'Sanskrit',
+    'nav.journeys': 'Journeys',
     'search.placeholder': 'Search verses, sūktas, schools…',
     // Hero
     'hero.eyebrow': 'Daily wisdom · 24 Vaiśākha · Saumya saṃvatsara',
@@ -33,6 +34,8 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Verse (mahāvākya / subhāṣita)
     'verse.mahavakya_label': 'Mahāvākya · the great utterances',
     'verse.subhashit_label': 'Subhāṣita · Bhartṛhari',
+    'verse.today_mahavakya': "Today's Mahāvākya",
+    'verse.today_subhashit': "Today's Subhāṣita",
     'verse.show_explanation': 'Show explanation',
     'verse.next': 'Another verse',
     'verse.meaning': 'Meaning',
@@ -42,6 +45,15 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'verse.copy': 'Copy text',
     'verse.copied': 'Copied ✓',
     'verse.share_footer': 'To know more about Bhāratīya Jñāna Bhaṇḍāra — India\'s open digital archive of Indic knowledge systems —',
+    // Daily notification (Android app)
+    'notify.title': 'Daily verse notification',
+    'notify.desc': "Get today's verse each morning — works fully offline.",
+    'notify.time': 'Time',
+    'notify.collection': 'Verse',
+    'notify.subhashita': 'Subhāṣita',
+    'notify.mahavakya': 'Mahāvākya',
+    'notify.both': 'Both, alternating',
+    'notify.denied': 'Notification permission was denied — enable it in system settings.',
     // Site share
     'site.share_btn': 'Share this website',
     // Tree
@@ -135,7 +147,27 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'lk.how': 'How it applies today',
     'lk.back_label': '← Back to Living Knowledge',
     'lk.back_to_domains': 'Back to all domains',
-    'lk.phase2': 'Detailed account coming soon — check back in Phase II.'
+    'lk.phase2': 'Detailed account coming soon — check back in Phase II.',
+    // Journeys
+    'jrn.eyebrow': 'Guided reading',
+    'jrn.title': 'Not sure where to start?',
+    'jrn.meta': '{count} journeys · pick a path',
+    'jrn.steps_min': '{steps} steps · ~{minutes} min',
+    'jrn.begin': 'Begin →',
+    'jrn.continue': 'Continue · step {n} →',
+    'jrn.complete_badge': 'Walked ✓',
+    'jrn.list.eyebrow': 'Guided reading',
+    'jrn.list.title': 'All Journeys',
+    'jrn.crumb': 'Journeys',
+    'jrn.step_of': 'Step {n} of {total}',
+    'jrn.min_short': '{n} min',
+    'jrn.visited': 'Visited',
+    'jrn.begin_step': 'Begin this journey →',
+    'jrn.ribbon.next': 'Next',
+    'jrn.ribbon.trail': 'Trail map',
+    'jrn.ribbon.dismiss': 'Dismiss',
+    'jrn.ribbon.done_title': "You've walked {title}.",
+    'jrn.ribbon.done_more': 'Continue with:',
   },
   mr: {
     // Nav
@@ -147,6 +179,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.lifestyle': 'दिनचर्या',
     'nav.essays': 'निबंध',
     'nav.sanskrit': 'संस्कृत',
+    'nav.journeys': 'प्रवास',
     'search.placeholder': 'श्लोक, सूक्त, संप्रदाय शोधा...',
     // Hero
     'hero.eyebrow': 'दैनिक सुभाषित · २४ वैशाख · सौम्य संवत्सर',
@@ -157,6 +190,8 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Verse (mahāvākya / subhāṣita)
     'verse.mahavakya_label': 'महावाक्य · महान वचने',
     'verse.subhashit_label': 'सुभाषित · भर्तृहरि',
+    'verse.today_mahavakya': 'आजचे महावाक्य',
+    'verse.today_subhashit': 'आजचे सुभाषित',
     'verse.show_explanation': 'विवेचन पहा',
     'verse.next': 'दुसरे वचन',
     'verse.meaning': 'अर्थ',
@@ -166,6 +201,15 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'verse.copy': 'मजकूर कॉपी करा',
     'verse.copied': 'कॉपी झाले ✓',
     'verse.share_footer': 'भारतीय ज्ञान भंडाराबद्दल अधिक जाणून घेण्यासाठी — भारतीय ज्ञानप्रणालींचे एक खुले डिजिटल संग्रहण —',
+    // Daily notification (Android app)
+    'notify.title': 'दैनिक वचन सूचना',
+    'notify.desc': 'रोज सकाळी आजचे वचन मिळवा — इंटरनेटशिवायही चालते.',
+    'notify.time': 'वेळ',
+    'notify.collection': 'वचन',
+    'notify.subhashita': 'सुभाषित',
+    'notify.mahavakya': 'महावाक्य',
+    'notify.both': 'दोन्ही, आलटून पालटून',
+    'notify.denied': 'सूचनांची परवानगी नाकारली गेली — सिस्टम सेटिंग्जमध्ये ती सुरू करा.',
     // Site share
     'site.share_btn': 'हे संकेतस्थळ शेअर करा',
     // Tree
@@ -259,7 +303,27 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'lk.how': 'आज कसे उपयुक्त आहे',
     'lk.back_label': '← जिवंत ज्ञानाकडे परत',
     'lk.back_to_domains': '↑ सर्व क्षेत्रांकडे परत',
-    'lk.phase2': 'सविस्तर माहिती लवकरच येणार आहे — दुसऱ्या टप्प्यात तपासा.'
+    'lk.phase2': 'सविस्तर माहिती लवकरच येणार आहे — दुसऱ्या टप्प्यात तपासा.',
+    // Journeys
+    'jrn.eyebrow': 'मार्गदर्शित वाचन',
+    'jrn.title': 'कुठून सुरुवात करावी हे कळत नाही?',
+    'jrn.meta': '{count} प्रवास · एक मार्ग निवडा',
+    'jrn.steps_min': '{steps} टप्पे · अंदाजे {minutes} मिनिटे',
+    'jrn.begin': 'सुरू करा →',
+    'jrn.continue': 'पुढे सुरू ठेवा · टप्पा {n} →',
+    'jrn.complete_badge': 'पूर्ण झाले ✓',
+    'jrn.list.eyebrow': 'मार्गदर्शित वाचन',
+    'jrn.list.title': 'सर्व प्रवास',
+    'jrn.crumb': 'प्रवास',
+    'jrn.step_of': '{total} पैकी टप्पा {n}',
+    'jrn.min_short': '{n} मिनिटे',
+    'jrn.visited': 'वाचले',
+    'jrn.begin_step': 'हा प्रवास सुरू करा →',
+    'jrn.ribbon.next': 'पुढे',
+    'jrn.ribbon.trail': 'मार्ग-नकाशा',
+    'jrn.ribbon.dismiss': 'बंद करा',
+    'jrn.ribbon.done_title': 'तुम्ही {title} हा प्रवास पूर्ण केला.',
+    'jrn.ribbon.done_more': 'पुढे सुरू ठेवा:',
   }
 };
 

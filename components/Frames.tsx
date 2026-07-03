@@ -7,20 +7,37 @@ import { ESSAYS as ESSAYS_EN } from '@/lib/data';
 import { ESSAYS as ESSAYS_MR } from '@/lib/data_mr';
 import { SUBHASHITS } from '@/lib/subhashit-data';
 import { useLanguage } from '@/lib/LanguageContext';
-import { useRandomVerse } from '@/lib/useRandomVerse';
+import { useDailyVerse } from '@/lib/useRandomVerse';
 import { getPanchanga, type PanchangaInfo } from '@/lib/panchanga';
 import VerseModal from './VerseModal';
 import ShareButton from './ShareButton';
 import SiteShareButton from './SiteShareButton';
+import { OPEN_VERSE_EVENT, consumePendingOpen } from '@/lib/notifications';
 
 export function DailyStrip() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { lang, t } = useLanguage();
   const [showModal, setShowModal] = useState(false);
-  const { index, next } = useRandomVerse(SUBHASHITS.length);
+  const { index, next, isToday } = useDailyVerse(SUBHASHITS.length);
+
+  // Notification tap (Android) → open today's verse explanation
+  useEffect(() => {
+    if (consumePendingOpen('daily-subhashita')) setShowModal(true);
+    const onOpen = (e: Event) => {
+      if ((e as CustomEvent).detail === 'daily-subhashita') setShowModal(true);
+    };
+    window.addEventListener(OPEN_VERSE_EVENT, onOpen);
+    return () => window.removeEventListener(OPEN_VERSE_EVENT, onOpen);
+  }, []);
 
   const sub = SUBHASHITS[index];
   const meaning = lang === 'mr' ? sub.meaningMr : sub.meaningEn;
+  const verseLabel = isToday
+    ? `${t('verse.today_subhashit')} · ${new Date().toLocaleDateString(
+        lang === 'mr' ? 'mr-IN' : 'en-GB',
+        { day: 'numeric', month: 'long' }
+      )}`
+    : t('verse.subhashit_label');
 
   return (
     <section
@@ -33,7 +50,7 @@ export function DailyStrip() {
       <div className="shell strip-inner">
         <Mandala className="mandala" />
         <div className="quote">
-          <span className="eyebrow verse-label"><Glyph /> {t('verse.subhashit_label')}</span>
+          <span className="eyebrow verse-label"><Glyph /> {verseLabel}</span>
           <span className="deva-block">{sub.deva}</span>
           {lang === 'en' && sub.translit && (
             <span className="translit-line">{sub.translit}</span>
@@ -142,6 +159,7 @@ export function Footer() {
           <h5>{lang === 'mr' ? 'मार्गदर्शन' : 'Navigate'}</h5>
           <ul>
             <li><Link href="/#sections">{t('nav.library')}</Link></li>
+            <li><Link href="/journeys/">{t('nav.journeys')}</Link></li>
             <li><Link href="/#contributors">{t('nav.contrib')}</Link></li>
             <li><Link href="/#concepts">{t('nav.concepts')}</Link></li>
             <li><Link href="/#living-knowledge">{t('nav.lk')}</Link></li>

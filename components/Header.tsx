@@ -6,6 +6,7 @@ import { HeaderSeal } from './Ornaments';
 import ThemeControl from './ThemeControl';
 import LangControl from './LangControl';
 import SiteShareButton from './SiteShareButton';
+import NotifySettings from './NotifySettings';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Header() {
@@ -44,6 +45,7 @@ export default function Header() {
           aria-label="Primary"
         >
           <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
+          <Link href="/journeys/" onClick={close}>{t('nav.journeys')}</Link>
           <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
           <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
           <Link href="/#living-knowledge" onClick={close}>{t('nav.lk')}</Link>
@@ -53,6 +55,8 @@ export default function Header() {
             <span className="hdr-nav-prefs-label">{lang === 'mr' ? 'रंगसंगती' : 'Theme'}</span>
             <ThemeControl variant="menu" />
           </div>
+
+          <NotifySettings />
         </nav>
 
         <div className="hdr-tools">
