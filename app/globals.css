@@ -3988,4 +3988,45 @@ html[lang="mr"] .concept-ref-tag {
   color: var(--maroon); font-weight: 600; margin-top: 0.2rem;
 }
 
+/* ── Exit-confirm dialog (Android hardware back, at the root) ─────────── */
+
+.exit-confirm-backdrop {
+  position: fixed; inset: 0; z-index: 1100;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  background: rgba(28, 18, 12, 0.55);
+  backdrop-filter: blur(2px);
+  animation: verse-fade 0.18s ease;
+}
+.exit-confirm-dialog {
+  width: min(320px, 100%);
+  background: var(--paper, #fbf6ec);
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 24px 60px rgba(28, 18, 12, 0.3);
+  padding: 1.75rem 1.5rem 1.5rem;
+  text-align: center;
+  animation: verse-rise 0.2s ease;
+}
+.exit-confirm-dialog p {
+  font-family: var(--font-display); font-size: 1.1rem;
+  color: var(--ink); margin: 0 0 1.25rem;
+}
+.exit-confirm-actions {
+  display: flex; gap: 0.75rem; justify-content: center;
+}
+.exit-confirm-actions button {
+  appearance: none; cursor: pointer;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;
+  padding: 0.55rem 1.3rem; border-radius: 999px;
+  transition: background 140ms, color 140ms, border-color 140ms;
+}
+.exit-confirm-stay {
+  background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
+}
+.exit-confirm-stay:hover { opacity: 0.88; }
+.exit-confirm-leave {
+  background: transparent; color: var(--ink-faint); border: 1px solid var(--rule-strong);
+}
+.exit-confirm-leave:hover { color: var(--maroon); border-color: var(--maroon-soft); }
+
 
