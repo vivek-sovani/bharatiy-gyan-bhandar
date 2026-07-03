@@ -13,6 +13,7 @@ const DEDICATED_SECTIONS = new Set([
   'itihasa',
   'nastika-darshanas',
   'puranas',
+  'sciences',
   'upanishads',
   'upavedas',
   'vedangas',

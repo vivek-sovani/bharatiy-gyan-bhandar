@@ -1326,6 +1326,12 @@ export const SECTION_DETAILS: Record<string, SectionDetail> = {
         ],
       },
       {
+        id: 'altar-geometry', title: 'Circling the Square', deva: 'वर्ग-वृत्त-समीकरणम्', epithet: 'The vedi problem: two altars, one area',
+        meta: ['~800 – 200 BCE', 'Baudhāyana Śulba-sūtra 2.9', 'Vedi construction'],
+        summary: 'A worked construction for turning a square altar into a circular one of equal area, built from nothing but a cord and a straightedge — off by under 2%, which implicitly treats π as roughly 3.088.',
+        facets: ['Square → circle', 'Cord-and-peg construction', 'π implied ≈ 3.088'],
+      },
+      {
         id: 'aryabhata', title: 'Āryabhaṭa', deva: 'आर्यभट', epithet: 'The first dated astronomer',
         meta: ['476 – c. 550 CE', 'Āryabhaṭīya · 121 verses', 'Kusumapura'],
         summary: 'A single short text — 121 verses — sets out a complete astronomy and a complete mathematics. The earth is a sphere that rotates; the sine table is given (Āryabhaṭa coins jyā); π is approximated to 3.1416; the algorithm for solving the “pulveriser” (kuṭṭaka) equation is laid down.',
