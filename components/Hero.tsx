@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CornerOrn, Glyph } from './Ornaments';
 import { MAHAVAKYAS } from '@/lib/mahavakya-data';
 import { useLanguage } from '@/lib/LanguageContext';
-import { useRandomVerse } from '@/lib/useRandomVerse';
+import { useDailyVerse } from '@/lib/useRandomVerse';
+import { OPEN_VERSE_EVENT, consumePendingOpen } from '@/lib/notifications';
 import Panchanga from './Panchanga';
 import VerseModal from './VerseModal';
 import ShareButton from './ShareButton';
@@ -12,9 +13,25 @@ import ShareButton from './ShareButton';
 export default function Hero() {
   const [showModal, setShowModal] = useState(false);
   const { lang, t } = useLanguage();
-  const { index, next } = useRandomVerse(MAHAVAKYAS.length);
+  const { index, next, isToday } = useDailyVerse(MAHAVAKYAS.length);
+
+  // Notification tap (Android) → open today's verse explanation
+  useEffect(() => {
+    if (consumePendingOpen('daily-mahavakya')) setShowModal(true);
+    const onOpen = (e: Event) => {
+      if ((e as CustomEvent).detail === 'daily-mahavakya') setShowModal(true);
+    };
+    window.addEventListener(OPEN_VERSE_EVENT, onOpen);
+    return () => window.removeEventListener(OPEN_VERSE_EVENT, onOpen);
+  }, []);
 
   const vakya = MAHAVAKYAS[index];
+  const verseLabel = isToday
+    ? `${t('verse.today_mahavakya')} · ${new Date().toLocaleDateString(
+        lang === 'mr' ? 'mr-IN' : 'en-GB',
+        { day: 'numeric', month: 'long' }
+      )}`
+    : t('verse.mahavakya_label');
 
   return (
     <section id="hero" className="hero">
@@ -27,7 +44,7 @@ export default function Hero() {
             {t('hero.title')}
           </h1>
           <div className="shloka">
-            <div className="eyebrow verse-label"><Glyph /> {t('verse.mahavakya_label')}</div>
+            <div className="eyebrow verse-label"><Glyph /> {verseLabel}</div>
             <div className="deva-line deva-only">
               {vakya.deva.split('\n').map((l, i) => (
                 <div key={i}>{l}</div>
