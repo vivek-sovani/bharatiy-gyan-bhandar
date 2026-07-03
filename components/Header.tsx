@@ -27,60 +27,65 @@ export default function Header() {
   const close = () => setMenuOpen(false);
 
   return (
-    <header className="hdr">
+    <>
+      {/* Rendered outside <header> deliberately: .hdr has backdrop-filter,
+          which creates a containing block for position:fixed descendants —
+          nesting the exit-confirm dialog inside it broke centering. */}
       <BackButtonHandler />
-      <div className="shell hdr-inner">
-        <Link href="/" className="hdr-mark" style={{ border: 0 }} onClick={close}>
-          <span className="seal"><HeaderSeal /></span>
-          <span className="titles">
-            {lang === 'mr' ? (
-              <div className="name-en deva-only">भारतीय ज्ञान भंडार</div>
-            ) : (
-              <div className="name-en">Indian Knowledge Bank</div>
-            )}
-          </span>
-        </Link>
-
-        <nav
-          id="primary-nav"
-          className={`hdr-nav${menuOpen ? ' is-open' : ''}`}
-          aria-label="Primary"
-        >
-          <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
-          <Link href="/journeys/" onClick={close}>{t('nav.journeys')}</Link>
-          <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
-          <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
-          <Link href="/#living-knowledge" onClick={close}>{t('nav.lk')}</Link>
-          <Link href="/lifestyle/" onClick={close}>{t('nav.lifestyle')}</Link>
-
-          <div className="hdr-nav-prefs">
-            <span className="hdr-nav-prefs-label">{lang === 'mr' ? 'रंगसंगती' : 'Theme'}</span>
-            <ThemeControl variant="menu" />
-          </div>
-
-          <NotifySettings />
-        </nav>
-
-        <div className="hdr-tools">
-          <SiteShareButton variant="icon" />
-          <LangControl />
-          <ThemeControl />
-          <button
-            type="button"
-            className="hdr-burger"
-            aria-label="Menu"
-            aria-controls="primary-nav"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((v) => !v)}
-          >
-            <span className={`hdr-burger-icon${menuOpen ? ' is-open' : ''}`} aria-hidden>
-              <span />
-              <span />
-              <span />
+      <header className="hdr">
+        <div className="shell hdr-inner">
+          <Link href="/" className="hdr-mark" style={{ border: 0 }} onClick={close}>
+            <span className="seal"><HeaderSeal /></span>
+            <span className="titles">
+              {lang === 'mr' ? (
+                <div className="name-en deva-only">भारतीय ज्ञान भंडार</div>
+              ) : (
+                <div className="name-en">Indian Knowledge Bank</div>
+              )}
             </span>
-          </button>
+          </Link>
+
+          <nav
+            id="primary-nav"
+            className={`hdr-nav${menuOpen ? ' is-open' : ''}`}
+            aria-label="Primary"
+          >
+            <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
+            <Link href="/journeys/" onClick={close}>{t('nav.journeys')}</Link>
+            <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
+            <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
+            <Link href="/#living-knowledge" onClick={close}>{t('nav.lk')}</Link>
+            <Link href="/lifestyle/" onClick={close}>{t('nav.lifestyle')}</Link>
+
+            <div className="hdr-nav-prefs">
+              <span className="hdr-nav-prefs-label">{lang === 'mr' ? 'रंगसंगती' : 'Theme'}</span>
+              <ThemeControl variant="menu" />
+            </div>
+
+            <NotifySettings />
+          </nav>
+
+          <div className="hdr-tools">
+            <SiteShareButton variant="icon" />
+            <LangControl />
+            <ThemeControl />
+            <button
+              type="button"
+              className="hdr-burger"
+              aria-label="Menu"
+              aria-controls="primary-nav"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+            >
+              <span className={`hdr-burger-icon${menuOpen ? ' is-open' : ''}`} aria-hidden>
+                <span />
+                <span />
+                <span />
+              </span>
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
