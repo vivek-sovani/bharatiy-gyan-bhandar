@@ -7,6 +7,7 @@ import ThemeControl from './ThemeControl';
 import LangControl from './LangControl';
 import SiteShareButton from './SiteShareButton';
 import NotifySettings from './NotifySettings';
+import BackButtonHandler from './BackButtonHandler';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Header() {
@@ -27,6 +28,7 @@ export default function Header() {
 
   return (
     <header className="hdr">
+      <BackButtonHandler />
       <div className="shell hdr-inner">
         <Link href="/" className="hdr-mark" style={{ border: 0 }} onClick={close}>
           <span className="seal"><HeaderSeal /></span>
