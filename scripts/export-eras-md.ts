@@ -4,8 +4,9 @@
 //
 //   node --experimental-strip-types scripts/export-eras-md.ts
 //
-// Reads: lib/data.ts, lib/section-data.ts, and each dedicated *-data.ts file.
-// Writes: docs/eras/{vedic,classical,medieval,modern,all-eras}.md
+// Reads: lib/data.ts, lib/section-data.ts, lib/intro-data.ts, and each
+// dedicated *-data.ts file.
+// Writes: docs/eras/{introduction,vedic,classical,medieval,modern,all-eras}.md
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -22,6 +23,7 @@ import { UPANISHADS_DETAILS } from '../lib/upanishads-data.ts';
 import { UPAVEDAS_DETAILS } from '../lib/upavedas-data.ts';
 import { VEDANGAS_DETAILS } from '../lib/vedangas-data.ts';
 import { SCIENCES } from '../lib/sciences-data.ts';
+import { INTRO } from '../lib/intro-data.ts';
 import {
   SHAKHAS_DATA, SUKTAS_DATA,
   BRAHMANAS_DATA, BRAHMANAS_TEACHINGS_DATA,
@@ -135,6 +137,64 @@ function renderEntry(entry: any, level: number): string {
 
 function renderEntries(entries: any[], level: number): string {
   return entries.map((e) => renderEntry(e, level)).join('\n\n');
+}
+
+// ---- introduction essay rendering --------------------------------------------
+// lib/intro-data.ts is "The Living Tree" — the site's narrative essay on how
+// the corpus grew, era by era. Paragraph strings carry inline <strong>/<em>
+// markup (rendered via dangerouslySetInnerHTML on the site); convert that to
+// markdown emphasis for a plain-text read.
+
+function htmlToMd(s: string): string {
+  return s
+    .replace(/<strong>(.*?)<\/strong>/g, '**$1**')
+    .replace(/<em>(.*?)<\/em>/g, '*$1*');
+}
+
+function renderIntroduction(): string {
+  const lines: string[] = [];
+  lines.push(`# ${INTRO.title}`);
+  lines.push(`*${INTRO.subtitle}*`);
+  lines.push('');
+  lines.push(`> ${INTRO.note}`);
+  lines.push('');
+  lines.push('> Auto-generated from `lib/intro-data.ts` — the narrative essay behind the site\'s Introduction component — by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.');
+
+  for (const p of INTRO.lede) {
+    lines.push('');
+    lines.push(htmlToMd(p));
+  }
+
+  for (const section of INTRO.sections) {
+    lines.push('');
+    lines.push('---');
+    lines.push('');
+    lines.push(`## ${section.number}. ${section.title}`);
+    for (const p of section.paragraphs) {
+      lines.push('');
+      lines.push(htmlToMd(p));
+    }
+    if (section.pullQuote) {
+      lines.push('');
+      lines.push(`> ${htmlToMd(section.pullQuote)}`);
+    }
+  }
+
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push(`## ${INTRO.conclusion.title}`);
+  lines.push('');
+  lines.push(INTRO.conclusion.intro);
+  for (const thread of INTRO.conclusion.threads) {
+    lines.push('');
+    lines.push(`**${htmlToMd(thread.label)}** ${htmlToMd(thread.text)}`);
+  }
+
+  lines.push('');
+  lines.push(htmlToMd(INTRO.closing));
+
+  return lines.join('\n');
 }
 
 // ---- section-level rendering ------------------------------------------------
@@ -261,7 +321,11 @@ function main() {
     'Regenerate with `node --experimental-strip-types scripts/export-eras-md.ts`.',
     'English content only — the Marathi text lives in the matching `_mr` data file for each module.',
     '',
+    '- [Introduction — The Living Tree](./introduction.md) — the narrative essay on how the corpus grew, era by era',
   ];
+
+  writeFileSync(join(OUT_DIR, 'introduction.md'), renderIntroduction() + '\n');
+  console.log('Wrote docs/eras/introduction.md');
 
   for (const era of ERA_ORDER) {
     const meta = ERA_META[era];
