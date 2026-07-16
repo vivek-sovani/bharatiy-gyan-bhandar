@@ -26,6 +26,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# scripts/export-eras-md.ts build output (see scripts/tsconfig.export.json)
+/scripts/.build/
+
 # Capacitor Android build artifacts
 android/.gradle/
 android/build/

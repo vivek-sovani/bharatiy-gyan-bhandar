@@ -1,14 +1,14 @@
-# The Modern Era — आधुनिक काल
-*c. 1800 CE – present*
+# The Modern Era — आधुनिक कालखंड
+*c. 1800 CE – Present*
 
-The re-reading of the Indic corpus under and after colonial rule.
+The critical re-reading, interpretation, and revival of the Indic corpus in the modern world — reformers, mystics, poets, jurists, and activists who remade the tradition for a republic.
 
 > Auto-generated from `lib/data.ts` and the corresponding `lib/*-data.ts` files by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.
 
 ---
 
 ## 28. Modern Indic Thought — आधुनिक भारतीय चिन्तनम्
-`modern` · Modern · philosophy · 19th–20th centuries
+`modern` · Modern · Philosophy · 19th–20th centuries
 
 Rammohan Roy, Vivekananda, Tagore, Aurobindo, Gandhi, Ambedkar, Krishnamurti — how the Indic corpus was reread, contested and remade in the long nineteenth and twentieth centuries.
 

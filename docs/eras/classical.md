@@ -1,14 +1,14 @@
-# The Classical Era — शास्त्रीय काल
+# The Classical Era — अभिजात कालखंड
 *c. 500 BCE – 800 CE*
 
-The great flowering of darśana, śāstra and kāvya — Upaniṣads, the six āstika and three nāstika schools, Itihāsa, Purāṇas, Āgamas, the dharma/artha/kāma-śāstras, and classical literature.
+The flowering of philosophy, logic, civil law, statecraft, literature, mathematics, and temple ritual — the great age of śāstra, kāvya, darśana, and itihāsa.
 
 > Auto-generated from `lib/data.ts` and the corresponding `lib/*-data.ts` files by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.
 
 ---
 
 ## 04. Upaniṣads — उपनिषदः
-`upanishads` · Śruti · philosophy · 108 (10 principal)
+`upanishads` · Śruti · Philosophy · 108 (10 principal)
 
 The “sitting-down-near” — dialogues at the close of each Veda that turn from ritual to the question of the self.
 
@@ -306,7 +306,7 @@ The central figure of the text is the great sage Yājñavalkya. Through his inte
 ---
 
 ## 05. The Āstika Darśanas — षड्दर्शनानि
-`darshanas` · Āstika · philosophy · 6 schools
+`darshanas` · Āstika · Philosophy · 6 schools
 
 Nyāya, Vaiśeṣika, Sāṅkhya, Yoga, Mīmāṃsā, Vedānta — the six orthodox schools that accept the authority of the Veda.
 
@@ -316,7 +316,7 @@ Nyāya, Vaiśeṣika, Sāṅkhya, Yoga, Mīmāṃsā, Vedānta — the six ortho
 
 #### Nyāya — न्याय
 
-**Founder:** Akṣapāda Gautama · **Core Text:** Nyāya-sūtras · **Metaphysics:** Realistic Pluralism (16 Categories / Padārthas) · **Paired School:** Vaiśeṣika · **Paired School Id:** vaisheshika
+**Founder:** Akṣapāda Gautama · **Core Text:** Nyāya-sūtras · **Metaphysics:** Realistic Pluralism (16 Categories / Padārthas) · **Paired School:** Vaiśeṣika
 
 > प्रमाण-प्रमेय-संशय-प्रयोजन-दृष्टान्त-सिद्धान्तावयव-तर्क-निर्णय-वाद-जल्प-वितण्डा-हेत्वाभास-छल-जाति-निग्रहस्थानानां तत्त्वज्ञानात् निःश्रेयसाधिगमः ॥
 > *pramāṇa-prameya-saṃśaya-prayojana-dṛṣṭānta-siddhāntāvayava-tarka-nirṇaya-vāda-jalpa-vitaṇḍā-hetvābhāsa-chala-jāti-nigrahasthānānāṃ tattvajñānāt niḥśreyasādhigamaḥ ||*
@@ -342,7 +342,7 @@ According to Nyāya, suffering is caused by ignorance (mithyā-jñāna), which l
 
 #### Vaiśeṣika — वैशेषिक
 
-**Founder:** Kaṇāda · **Core Text:** Vaiśeṣika-sūtras · **Epistemology:** 2 Valid Means (Perception and Inference) · **Metaphysics:** Atomistic Pluralism (7 Categories / Padārthas) · **Paired School:** Nyāya · **Paired School Id:** nyaya
+**Founder:** Kaṇāda · **Core Text:** Vaiśeṣika-sūtras · **Epistemology:** 2 Valid Means (Perception and Inference) · **Metaphysics:** Atomistic Pluralism (7 Categories / Padārthas) · **Paired School:** Nyāya
 
 > धर्मविशेषप्रसूताद् द्रव्यगुणकर्मसामान्यविशेषसमवायानां पदार्थानां साधर्म्यवैधर्म्याभ्यां तत्त्वज्ञानान्निःश्रेयसम् ॥
 > *dharmaviśeṣaprasūtād dravyaguṇakarmasāmānyaviśeṣasamavāyānāṃ padārthānāṃ sādharmyavaidharmyābhyāṃ tattvajñānānniḥśreyasam ||*
@@ -368,7 +368,7 @@ The school is strictly realistic, asserting that the objects of our perception e
 
 #### Sāṅkhya — साङ्ख्य
 
-**Founder:** Kapila · **Core Text:** Sāṅkhya-kārikā (by Īśvarakṛṣṇa) · **Epistemology:** 3 Valid Means (Perception, Inference, and Testimony) · **Metaphysics:** Dualistic Realism (25 Tattvas, Puruṣa & Prakṛti) · **Paired School:** Yoga · **Paired School Id:** yoga
+**Founder:** Kapila · **Core Text:** Sāṅkhya-kārikā (by Īśvarakṛṣṇa) · **Epistemology:** 3 Valid Means (Perception, Inference, and Testimony) · **Metaphysics:** Dualistic Realism (25 Tattvas, Puruṣa & Prakṛti) · **Paired School:** Yoga
 
 > मूलप्रकृतिरविकृतिः महदाद्याः प्रकृतिविकृतयः सप्त ।
 > षोडशकस्तु विकारो न प्रकृतिर्न विकृतिः पुरुषः ॥
@@ -395,7 +395,7 @@ The entire universe evolves from Prakṛti when it is disturbed by the proximity
 
 #### Yoga — योग
 
-**Founder:** Patañjali · **Core Text:** Yoga-sūtras · **Epistemology:** 3 Valid Means (Perception, Inference, and Testimony) · **Metaphysics:** Dualistic Realism with Iśvara (God) · **Paired School:** Sāṅkhya · **Paired School Id:** sankhya
+**Founder:** Patañjali · **Core Text:** Yoga-sūtras · **Epistemology:** 3 Valid Means (Perception, Inference, and Testimony) · **Metaphysics:** Dualistic Realism with Iśvara (God) · **Paired School:** Sāṅkhya
 
 > योगश्चित्तवृत्तिनिरोधः ॥
 > तदा द्रष्टुः स्वरूपेऽवस्थानम् ॥
@@ -422,7 +422,7 @@ Patañjali defines Yoga as the restriction of the fluctuations of the mind-stuff
 
 #### Pūrva-Mīmāṃsā — पूर्व-मीमांसा
 
-**Founder:** Jaimini · **Core Text:** Mīmāṃsā-sūtras · **Epistemology:** 5 or 6 Valid Means (Prabhākara/Kumārila schools) · **Metaphysics:** Realistic Pluralism, Eternal Unauthored Veda · **Paired School:** Uttara-Mīmāṃsā (Vedānta) · **Paired School Id:** vedanta
+**Founder:** Jaimini · **Core Text:** Mīmāṃsā-sūtras · **Epistemology:** 5 or 6 Valid Means (Prabhākara/Kumārila schools) · **Metaphysics:** Realistic Pluralism, Eternal Unauthored Veda · **Paired School:** Uttara-Mīmāṃsā (Vedānta)
 
 > अथातो धर्मजिज्ञासा ।
 > चोदनालक्षणोऽर्थो धर्मः ॥
@@ -449,7 +449,7 @@ Unlike other schools, Mīmāṃsā does not focus on a creator God. Instead, it 
 
 #### Vedānta — वेदान्त
 
-**Founder:** Bādarāyaṇa · **Core Text:** Brahma-sūtras · **Epistemology:** 6 Valid Means (in Advaita) · **Metaphysics:** Non-dualism / Qualified Non-dualism / Dualism · **Paired School:** Pūrva-Mīmāṃsā · **Paired School Id:** mimamsa
+**Founder:** Bādarāyaṇa · **Core Text:** Brahma-sūtras · **Epistemology:** 6 Valid Means (in Advaita) · **Metaphysics:** Non-dualism / Qualified Non-dualism / Dualism · **Paired School:** Pūrva-Mīmāṃsā
 
 > अथातो ब्रह्मजिज्ञासा ।
 > जन्माद्यस्य यतः ॥
@@ -477,7 +477,7 @@ Vedānta split into three major classical streams based on different commentarie
 ---
 
 ## 06. Vedānta Schools — वेदान्त संप्रदाय
-`vedanta-schools` · Darśana · philosophy · Śaṅkara · Rāmānuja · Madhva
+`vedanta-schools` · Darśana · Philosophy · Śaṅkara · Rāmānuja · Madhva
 
 The great interpreters of Vedānta and the schools they founded — from Gauḍapāda and Śaṅkara’s non-dualism through Rāmānuja’s qualified non-dualism to Madhva’s dualism and the bhedābheda streams of Kṛṣṇa-bhakti.
 
@@ -619,7 +619,7 @@ Its great theistic flowerings are all Kṛṣṇa-centred: Nimbārka’s Dvaitā
 ---
 
 ## 07. Philosophy of Language — शब्ददर्शनम्
-`language-philosophy` · Darśana · philosophy · Bhartṛhari · Vākyapadīya
+`language-philosophy` · Darśana · Philosophy · Bhartṛhari · Vākyapadīya
 
 India’s philosophy of grammar — Bhartṛhari’s Vākyapadīya and the doctrine of śabda-brahman, the Word-Absolute; sphoṭa, the flash of meaning; and grammar itself as a path to liberation.
 
@@ -761,7 +761,7 @@ The grammarians’ ideas also travelled far beyond grammar. The theory of sugges
 ---
 
 ## 08. Nāstika Darśanas — नास्तिक दर्शनानि
-`nastika-darshanas` · Nāstika · philosophy · 3 schools
+`nastika-darshanas` · Nāstika · Philosophy · 3 schools
 
 Cārvāka, Bauddha, Jaina — the heterodox schools that decline the authority of the Veda. Indic philosophy as argued by its sharpest opponents.
 
@@ -855,7 +855,7 @@ Jainism teaches a dualistic universe made of Jīva (conscious souls) and Ajīva 
 ---
 
 ## 10. Āgamas & Tantra — आगमाः · तन्त्रम्
-`agamas` · Practice · practice · Śaiva · Vaiṣṇava · Śākta
+`agamas` · Practice · Practice · Śaiva · Vaiṣṇava · Śākta
 
 Temple liturgy, mantra and the maps of inner physiology — texts that handed Indic ritual life its working manuals.
 
@@ -949,7 +949,7 @@ The tradition is deeply experiential, relying on the triad of Mantra (sacred sou
 ---
 
 ## 11. Tantra & Āgama Texts — तन्त्र-आगम-ग्रन्थाः
-`tantra-texts` · Tantra · practice · Śiva-sūtra → Kaula tantras
+`tantra-texts` · Tantra · Practice · Śiva-sūtra → Kaula tantras
 
 The actual books behind the tantric streams — the Śiva-sūtra and Spanda-kārikā, the Vijñāna Bhairava’s 112 meditations, the Pratyabhijñā philosophy and Tantrāloka, the Saundarya-laharī and the Kaula tantras.
 
@@ -1115,7 +1115,7 @@ The Kulārṇava Tantra is the classic exposition of Kaula doctrine: it dwells o
 ---
 
 ## 12. Yantra & Maṇḍala — यन्त्रम्
-`yantra` · Sacred geometry · practice · Śrī Yantra · maṇḍala
+`yantra` · Sacred geometry · Practice · Śrī Yantra · maṇḍala
 
 The Indic science of sacred geometry — the Śrī Yantra of nine triangles, the maṇḍala cosmogram, the vāstu-puruṣa grid beneath every temple, and the deity, planetary and protective yantras of daily ritual.
 
@@ -1267,7 +1267,7 @@ Smaller protective yantras (kavaca, “armour”) are drawn on metal foil or bir
 ---
 
 ## 13. Itihāsa — इतिहासः
-`itihasa` · Epic · literature · 2 epics
+`itihasa` · Epic · Literature · 2 epics
 
 The Rāmāyaṇa and the Mahābhārata — “thus it was” — narrative encyclopaedias of ethics, polity and the householder’s dilemmas.
 
@@ -1350,7 +1350,7 @@ The core theme of the Mahābhārata is the complexity of Dharma (ethics). Unlike
 ---
 
 ## 14. Purāṇas — पुराणानि
-`puranas` · Smṛti · literature · 18 Mahā-purāṇas
+`puranas` · Smṛti · Literature · 18 Mahā-purāṇas
 
 Eighteen great Purāṇas, sorted by guṇa into Vaiṣṇava, Brāhma and Śaiva groups — cosmogony, dynastic record and devotional theology in narrative form.
 
@@ -1466,7 +1466,7 @@ Unlike the destructive focus often associated with Tamas, these Purāṇas treat
 ---
 
 ## 17. Bhagavad Gītā — भगवद्गीता
-`gita` · Smṛti · philosophy · 700 verses · 18 chapters
+`gita` · Smṛti · Philosophy · 700 verses · 18 chapters
 
 The seven-hundred-verse dialogue between Kṛṣṇa and Arjuna on the battlefield of Kurukṣetra — eighteen chapters embedded in the Mahābhārata, the most-commented Indic text outside the Upaniṣads.
 
@@ -1583,7 +1583,7 @@ The vision is terrible as much as beautiful. Arjuna sees warriors of both armies
 ---
 
 ## 18. Dharma-śāstra — धर्मशास्त्र
-`dharmashastra` · Smṛti · applied · Manu · Yājñavalkya · Nārada
+`dharmashastra` · Smṛti · Applied science · Manu · Yājñavalkya · Nārada
 
 The codes — Manusmṛti, Yājñavalkya-smṛti, Nārada-smṛti, Bṛhaspati-smṛti. Texts that translate dharma into a working civil law for the householder, the king and the court.
 
@@ -1691,7 +1691,7 @@ Bṛhaspati’s lasting contribution is a hierarchy of evidence: written documen
 ---
 
 ## 19. Artha-śāstra — अर्थशास्त्र
-`arthashastra` · Śāstra · applied · 15 books · 6,000 sūtras
+`arthashastra` · Śāstra · Applied science · 15 books · 6,000 sūtras
 
 Kauṭilya’s manual on polity, intelligence, taxation and war — written for the Mauryan court, seventeen centuries before Machiavelli wrote his. The Indic theory of the state.
 
@@ -1795,7 +1795,7 @@ These chapters are the bridge between Indic ethical theory and Indic political p
 ---
 
 ## 20. Kāma-śāstra — कामशास्त्र
-`kamashastra` · Śāstra · applied · Vātsyāyana · 7 books · 36 chapters
+`kamashastra` · Śāstra · Applied science · Vātsyāyana · 7 books · 36 chapters
 
 The science of kāma — desire, pleasure and the art of cultivated living. Vātsyāyana’s Kāma-sūtra is the central text: far less a manual of sex than a treatise on the refined life of the citizen, relationships and the arts as one of the four legitimate human aims.
 
@@ -1855,7 +1855,7 @@ The Jayamaṅgalā is the single most important aid to the Kāma-sūtra and the 
 ---
 
 ## 21. Kāvya & Nāṭya — काव्य · नाट्य
-`kavya` · Literature · literature · Poetry & drama
+`kavya` · Literature · Literature · Poetry & drama
 
 Classical Sanskrit literature — Kālidāsa’s Śakuntalā and Meghadūta, Bhāsa’s plays, Bhāravi, Māgha, Śrīharṣa, the Pañcatantra and Hitopadeśa. Where Indic literary art reaches its self-aware peak.
 
@@ -1969,7 +1969,7 @@ The tradition also has a high-literary wing. Bāṇa’s Kādambarī and Daṇ�
 ---
 
 ## 22. The Kāvya Poets — महाकवयः
-`kavya-poets` · Literature · literature · Kālidāsa → Jayadeva
+`kavya-poets` · Literature · Literature · Kālidāsa → Jayadeva
 
 The makers behind the genres — Kālidāsa the supreme poet, the dramatists, Bāṇa’s prose, the mahākāvya masters Bhāravi, Māgha and Śrīharṣa, Daṇḍin’s romance, and Jayadeva’s Gīta-govinda.
 
@@ -2137,7 +2137,7 @@ The poem stands at a hinge in Indian literature: it is fully classical kāvya in
 ---
 
 ## 25. Indic Sciences & Mathematics — गणित · ज्योतिषम्
-`sciences` · Applied · applied · Śulba → Kerala school
+`sciences` · Applied · Applied science · Śulba → Kerala school
 
 The Śulba-sūtras (geometry), the decimal positional system with zero, Āryabhaṭa, Brahmagupta, Bhāskara, and the Kerala school’s infinite series — the history of Indic mathematics and astronomy is older, and longer, than the credit it usually receives.
 
@@ -2289,7 +2289,7 @@ The series converges slowly — reaching a good approximation from raw partial s
 ---
 
 ## 26. Subhāṣita & Nīti — सुभाषित · नीति
-`subhashita` · Wisdom · literature · Aphoristic literature
+`subhashita` · Wisdom · Literature · Aphoristic literature
 
 The aphoristic tradition — Bhartṛhari’s three śatakas, the niti-collections, the wit-literature that distils the rest of the canon into single verses you can quote across a table.
 

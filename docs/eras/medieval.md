@@ -1,14 +1,14 @@
-# The Medieval Era — मध्ययुगीन काल
+# The Medieval Era — मध्ययुगीन कालखंड
 *c. 800 – 1800 CE*
 
-The bhakti movements and vernacular sant traditions that carried the corpus into everyday devotional life.
+The shift toward personal devotion, vernacular poetry, and the integration of parallel spiritual lines — the bhakti movement and the parallel canons of Jainism, Buddhism, and Sikhism.
 
 > Auto-generated from `lib/data.ts` and the corresponding `lib/*-data.ts` files by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.
 
 ---
 
 ## 23. Bhakti Traditions — भक्ति-परम्परा
-`bhakti` · Devotional · practice · Pan-Indian, 6th c. on
+`bhakti` · Devotional · Practice · Pan-Indian, 6th c. on
 
 The devotional turn — Ālvārs and Nāyanārs in Tamil, the Vārkarīs of Maharashtra, Caitanya in Bengal, the Sants of the north. A poetry of personal devotion that re-made Indic religious life from ~600 CE onward.
 
@@ -118,7 +118,7 @@ The Vārkarī tradition is older and more textured. Its central deity is Viṭ�
 ---
 
 ## 24. Marathi Sants — मराठी संत
-`marathi-sants` · Devotional · practice · Jñāneśvar → Tukārām · 13th–17th c.
+`marathi-sants` · Devotional · Practice · Jñāneśvar → Tukārām · 13th–17th c.
 
 The Vārkarī tradition of Maharashtra — devotion to Viṭṭhal of Pandharpur in living Marathi. From Jñāneśvar’s Jñāneśvarī through Nāmdev, Eknāth and Tukārām to Rāmdās, and the wider sant circle of every caste and gender.
 

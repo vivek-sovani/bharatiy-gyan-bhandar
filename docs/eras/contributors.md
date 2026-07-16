@@ -7,6 +7,7 @@
 ---
 
 ## The Vedic Era
+The ṛṣis who heard the hymns and the brahmavādinīs who pressed them into dialogue — the seer-poets at the source of the canon.
 
 ### Vyāsa — व्यासः · Veda-Vyāsa
 
@@ -169,6 +170,7 @@ Agastya is the ṛṣi the tradition credits with carrying Vedic culture south a
 ---
 
 ## The Classical Era
+The sūtra-kāras of the six darśanas, the founders of the heterodox schools, the grammarians, mathematicians, vaidyas, dramatists and the first Vedānta ācārya.
 
 ### Mahāvīra — महावीरः · 24th Tīrthaṅkara
 
@@ -497,6 +499,7 @@ Bhāṣyas on the Upaniṣads, Brahma-Sūtra and Gītā (the prasthāna-trayī),
 ---
 
 ## The Medieval Era
+The Vedānta ācāryas after Śaṅkara, the bhakti poet-saints in every regional language, the Kerala mathematicians and the first Sikh gurus.
 
 ### Abhinavagupta — अभिनवगुप्तः
 
@@ -825,6 +828,7 @@ Samartha Rāmdās is the saint of activist Vedānta in the age of Śivājī — 
 ---
 
 ## The Modern Era
+The reformers, mystics, jurists and freedom-fighters who re-read the tradition in the languages of the colonial encounter and the republic.
 
 ### Rām Mohan Roy — राम मोहन रॉय
 

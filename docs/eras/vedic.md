@@ -1,14 +1,14 @@
-# The Vedic Era — वैदिक काल
-*c. 1500–500 BCE*
+# The Vedic Era — वैदिक कालखंड
+*c. 1500 – 500 BCE*
 
-The oldest stratum — the four Vedas, their applied Upaveda sciences, and the six Vedāṅga disciplines that make the Veda intelligible.
+The foundational era of revelation, oral chanting, and linguistic structure — the Vedas and the disciplines that make them intelligible.
 
 > Auto-generated from `lib/data.ts` and the corresponding `lib/*-data.ts` files by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.
 
 ---
 
 ## 01. The Four Vedas — चत्वारि वेदाः
-`vedas` · Śruti · foundational · 4 saṃhitās
+`vedas` · Śruti · Foundational · 4 saṃhitās
 
 Ṛg, Yajur, Sāma and Atharva — the oldest surviving stratum of Indic thought, preserved as living sound long before they were written.
 
@@ -805,7 +805,7 @@ so'yamātmā catuṣpāt ||” — MU 1.2
 ---
 
 ## 02. The Upavedas — उपवेदाः
-`upavedas` · Applied · applied · 4 sciences
+`upavedas` · Applied · Applied science · 4 sciences
 
 Ayurveda (life), Dhanurveda (arms), Gāndharvaveda (music), Sthāpatyaveda (architecture) — applied counterparts to each principal Veda.
 
@@ -952,7 +952,7 @@ Central to this discipline is the Vāstu-puruṣa-maṇḍala—a grid diagram t
 ---
 
 ## 03. The Six Vedāṅgas — षड्वेदाङ्गानि
-`vedangas` · Auxiliary · language · 6 limbs
+`vedangas` · Auxiliary · Language · 6 limbs
 
 The auxiliary disciplines that make the Veda intelligible — phonetics, ritual, grammar, etymology, prosody, astronomy.
 

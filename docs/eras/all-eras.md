@@ -1,14 +1,14 @@
-# Across All Eras — सर्वकालीन
-*spanning every period above*
+# Across All Eras — सर्व कालखंडात
+*Timeless · ongoing*
 
-Material that runs across every era rather than belonging to one: the śruti/smṛti frame itself, living practice, and the parallel canons standing alongside the Vedic line.
+Field guides, living disciplines, and traditions that span the full chronological arc — texts and practices that do not belong to one period alone.
 
 > Auto-generated from `lib/data.ts` and the corresponding `lib/*-data.ts` files by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.
 
 ---
 
 ## 09. Śruti & Smṛti — श्रुति · स्मृति
-`shruti-smriti` · Primer · philosophy · Field guide
+`shruti-smriti` · Primer · Philosophy · Field guide
 
 “That which is heard” versus “that which is remembered.” How tradition distinguishes revealed scripture from human composition.
 
@@ -21,7 +21,7 @@ A two-tier distinction that holds the entire Indic corpus together — and has n
 ---
 
 ## 15. Dinacaryā & Living — दिनचर्या
-`lifestyle` · Lifestyle · practice · Daily practice
+`lifestyle` · Lifestyle · Practice · Daily practice
 
 How the day is structured — from brāhma-muhūrta to nidrā — when the science of life is taken seriously at the scale of a single morning.
 
@@ -204,7 +204,7 @@ When the lifestyle is not enough, Āyurveda intervenes in three rising orders of
 ---
 
 ## 16. Rangoli & Ritual Art — रङ्गवल्ली
-`rangoli` · Folk art · practice · Rangoli · Kolam · Alpana
+`rangoli` · Folk art · Practice · Rangoli · Kolam · Alpana
 
 The living threshold arts — rangoli, kolam, alpana, mandana and the flower-carpets of Onam. A folk sacred geometry drawn each dawn and swept away by night, one of the sixty-four classical kalās.
 
@@ -352,7 +352,7 @@ In their symmetry, their centres and enclosures, their bounding lines, the floor
 ---
 
 ## 27. Parallel Canons — इतर परम्पराः
-`parallel` · Parallel · literature · Jain · Buddhist · Sikh
+`parallel` · Parallel · Literature · Jain · Buddhist · Sikh
 
 The Jain Āgamas in Prakrit, the Buddhist Tripiṭaka in Pali, the Gurū Granth Sāhib of the Sikhs — three vast bodies of text that share Indic ground while standing outside the Vedic line.
 
