@@ -4,9 +4,11 @@
 //
 //   node --experimental-strip-types scripts/export-eras-md.ts
 //
-// Reads: lib/data.ts, lib/section-data.ts, lib/intro-data.ts, and each
-// dedicated *-data.ts file.
-// Writes: docs/eras/{introduction,vedic,classical,medieval,modern,all-eras}.md
+// Reads: lib/data.ts, lib/section-data.ts, lib/intro-data.ts,
+// lib/concepts-data.ts, lib/contributors-data.ts, and each dedicated
+// *-data.ts file.
+// Writes: docs/eras/{introduction,vedic,classical,medieval,modern,all-eras,
+// concepts,contributors}.md
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -24,6 +26,8 @@ import { UPAVEDAS_DETAILS } from '../lib/upavedas-data.ts';
 import { VEDANGAS_DETAILS } from '../lib/vedangas-data.ts';
 import { SCIENCES } from '../lib/sciences-data.ts';
 import { INTRO } from '../lib/intro-data.ts';
+import { CONCEPTS, CONCEPT_DOMAINS } from '../lib/concepts-data.ts';
+import { CONTRIBUTORS } from '../lib/contributors-data.ts';
 import {
   SHAKHAS_DATA, SUKTAS_DATA,
   BRAHMANAS_DATA, BRAHMANAS_TEACHINGS_DATA,
@@ -304,6 +308,123 @@ const ERA_META: Record<string, { file: string; title: string; deva: string; rang
 
 const ERA_ORDER = ['vedic', 'classical', 'medieval', 'modern', 'all'];
 
+// ---- concepts rendering -------------------------------------------------------
+// Mirrors the domain metadata in components/Concepts.tsx (English half only;
+// that file also carries the Marathi gloss, kept out of this export).
+
+const DOMAIN_META: Record<string, { label: string; gloss: string }> = {
+  order: { label: 'Cosmic & metaphysical order', gloss: 'The structure of reality — from the cosmic order of ṛta to the ultimate ground of Brahman and the self.' },
+  ethics: { label: 'Action, ethics & society', gloss: 'How one ought to live — duty, the law of action, and the balanced aims of a human life.' },
+  liberation: { label: 'Bondage & liberation', gloss: 'The cycle of rebirth and the disciplines by which it is brought to an end.' },
+  mind: { label: 'Mind, matter & cosmos', gloss: 'The analysis of nature — consciousness and matter, the three strands, the elements, and cyclic time.' },
+  knowledge: { label: 'Knowledge & epistemology', gloss: 'How we know what we know — the valid means of knowledge shared across the schools.' },
+  heterodox: { label: 'Heterodox concepts — Bauddha & Jaina', gloss: 'Ideas from the schools that stand outside Vedic authority — suffering, no-self, emptiness, non-harm.' },
+  aesthetics: { label: 'Aesthetics & language', gloss: 'The theory of art and meaning — aesthetic flavour and the power of poetic suggestion.' },
+};
+
+function renderConceptEntry(c: any): string {
+  const out: string[] = [];
+  out.push(`### ${c.name} — ${c.deva}`);
+  out.push(`**Source:** ${c.source} · **Gloss:** ${c.gloss}`);
+  out.push(c.blurb);
+  if (c.tags?.length) out.push(`*${c.tags.join(' · ')}*`);
+
+  const d = c.detail;
+  if (d) {
+    out.push(d.intro);
+    if (d.aspects?.length) {
+      out.push(['#### Aspects', ...d.aspects.map((a: string) => `- ${a}`)].join('\n'));
+    }
+    out.push(`**Significance:** ${d.significance}`);
+    if (d.origin) {
+      out.push(`**Origin — ${d.origin.label}:** ${d.origin.explainer || ''}`.trim());
+    }
+    if (d.references?.length) {
+      out.push([
+        '#### References',
+        ...d.references.map((r: any) => `- **${r.label}:** ${r.explainer || ''}`.trim()),
+      ].join('\n'));
+    }
+  }
+
+  return out.join('\n\n');
+}
+
+function renderConcepts(): string {
+  const lines: string[] = [];
+  lines.push('# Core Concepts');
+  lines.push('');
+  lines.push('The philosophical vocabulary of the corpus, organised into seven domains.');
+  lines.push('');
+  lines.push('> Auto-generated from `lib/concepts-data.ts` by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.');
+
+  for (const domainId of CONCEPT_DOMAINS) {
+    const meta = DOMAIN_META[domainId];
+    const concepts = CONCEPTS.filter((c) => c.domain === domainId);
+    if (!concepts.length) continue;
+    lines.push('');
+    lines.push('---');
+    lines.push('');
+    lines.push(`## ${meta.label}`);
+    lines.push(meta.gloss);
+    for (const c of concepts) {
+      lines.push('');
+      lines.push(renderConceptEntry(c));
+    }
+  }
+
+  lines.push('');
+  return lines.join('\n');
+}
+
+// ---- contributors rendering ---------------------------------------------------
+
+function renderContributorEntry(c: any): string {
+  const out: string[] = [];
+  const epithet = c.epithet ? ` · ${c.epithet}` : '';
+  out.push(`### ${c.name} — ${c.deva}${epithet}`);
+  out.push(`**Dates:** ${c.dates} · **Tradition:** ${c.tradition}`);
+  out.push(c.blurb);
+  if (c.works?.length) out.push(`*${c.works.join(' · ')}*`);
+
+  const d = c.detail;
+  if (d) {
+    out.push(d.intro);
+    if (d.contributions?.length) {
+      out.push(['#### Contributions', ...d.contributions.map((x: string) => `- ${x}`)].join('\n'));
+    }
+    out.push(`**Legacy:** ${d.legacy}`);
+  }
+
+  return out.join('\n\n');
+}
+
+function renderContributors(): string {
+  const lines: string[] = [];
+  lines.push('# Contributors');
+  lines.push('');
+  lines.push('Ṛṣis, ācāryas, saints, poets and scientists across four eras — the people behind the corpus.');
+  lines.push('');
+  lines.push('> Auto-generated from `lib/contributors-data.ts` by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.');
+
+  for (const era of ['vedic', 'classical', 'medieval', 'modern']) {
+    const meta = ERA_META[era];
+    const contributors = CONTRIBUTORS.filter((c) => c.era === era);
+    if (!contributors.length) continue;
+    lines.push('');
+    lines.push('---');
+    lines.push('');
+    lines.push(`## ${meta.title}`);
+    for (const c of contributors) {
+      lines.push('');
+      lines.push(renderContributorEntry(c));
+    }
+  }
+
+  lines.push('');
+  return lines.join('\n');
+}
+
 function main() {
   mkdirSync(OUT_DIR, { recursive: true });
 
@@ -322,10 +443,18 @@ function main() {
     'English content only — the Marathi text lives in the matching `_mr` data file for each module.',
     '',
     '- [Introduction — The Living Tree](./introduction.md) — the narrative essay on how the corpus grew, era by era',
+    '- [Core Concepts](./concepts.md) — the philosophical vocabulary, by domain',
+    '- [Contributors](./contributors.md) — ṛṣis, ācāryas, saints, poets and scientists, by era',
   ];
 
   writeFileSync(join(OUT_DIR, 'introduction.md'), renderIntroduction() + '\n');
   console.log('Wrote docs/eras/introduction.md');
+
+  writeFileSync(join(OUT_DIR, 'concepts.md'), renderConcepts());
+  console.log(`Wrote docs/eras/concepts.md (${CONCEPTS.length} concepts)`);
+
+  writeFileSync(join(OUT_DIR, 'contributors.md'), renderContributors());
+  console.log(`Wrote docs/eras/contributors.md (${CONTRIBUTORS.length} contributors)`);
 
   for (const era of ERA_ORDER) {
     const meta = ERA_META[era];
