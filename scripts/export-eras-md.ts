@@ -10,9 +10,10 @@
 //
 // Reads: lib/data.ts (+ _mr), lib/section-data.ts (+ _mr), lib/intro-data.ts
 // (+ _mr), lib/concepts-data.ts (+ _mr), lib/contributors-data.ts (+ _mr),
-// and each dedicated *-data.ts file (+ its _mr counterpart).
-// Writes: docs/eras/{introduction,concepts,contributors,vedic,classical,
-// medieval,modern,all-eras,README}.md (English)
+// lib/living-knowledge-data.ts (+ _mr), and each dedicated *-data.ts file
+// (+ its _mr counterpart).
+// Writes: docs/eras/{introduction,concepts,contributors,living-knowledge,
+// vedic,classical,medieval,modern,all-eras,README}.md (English)
 // and the same set under docs/eras/mr/ (Marathi).
 
 import { writeFileSync, mkdirSync } from 'node:fs';
@@ -46,6 +47,8 @@ import { CONCEPTS, CONCEPT_DOMAINS } from '../lib/concepts-data';
 import { CONCEPTS as CONCEPTS_MR } from '../lib/concepts-data_mr';
 import { CONTRIBUTORS } from '../lib/contributors-data';
 import { CONTRIBUTORS as CONTRIBUTORS_MR } from '../lib/contributors-data_mr';
+import { LK_DOMAINS, LK_DOMAIN_META, LIVING_KNOWLEDGE, LK_NOTE } from '../lib/living-knowledge-data';
+import { LK_DOMAIN_META as LK_DOMAIN_META_MR, LIVING_KNOWLEDGE as LIVING_KNOWLEDGE_MR, LK_NOTE as LK_NOTE_MR } from '../lib/living-knowledge-data_mr';
 import {
   SHAKHAS_DATA, SUKTAS_DATA,
   BRAHMANAS_DATA, BRAHMANAS_TEACHINGS_DATA,
@@ -77,6 +80,10 @@ const STR: Record<Lang, Record<string, string>> = {
     conceptsIntro: 'The philosophical vocabulary of the corpus, organised into seven domains.',
     contributorsTitle: 'Contributors',
     contributorsIntro: 'Ṛṣis, ācāryas, saints, poets and scientists across four eras — the people behind the corpus.',
+    lkTitle: 'Gifts of Indian Knowledge Systems to the World',
+    lkMeta: '{count} contributions · nine domains',
+    lkWhat: 'What it is', lkWhen: 'When it emerged', lkHow: 'How it applies today',
+    lkDebated: 'Debated claim',
     regenNote: 'English content only — the Marathi text lives in the matching `_mr` data file for each module.',
     indexTitle: '# Corpus Content by Era',
     indexBlurb: 'Auto-generated export of the corpus data in `lib/*.ts`, grouped by era for content review.',
@@ -95,6 +102,10 @@ const STR: Record<Lang, Record<string, string>> = {
     conceptsIntro: 'ग्रंथसंपदेतील तात्त्विक शब्दसंपत्ती, सात क्षेत्रांत विभागलेली.',
     contributorsTitle: 'योगदाते',
     contributorsIntro: 'ऋषी, आचार्य, संत, कवी आणि शास्त्रज्ञ — चार कालखंडांत विखुरलेले, या ग्रंथसंपदेमागचे लोक.',
+    lkTitle: 'भारतीय ज्ञानप्रणालींची जगाला देणगी',
+    lkMeta: '{count} योगदाने · नऊ क्षेत्रे',
+    lkWhat: 'हे काय आहे', lkWhen: 'कधी उदयास आले', lkHow: 'आज कसे उपयुक्त आहे',
+    lkDebated: 'विवादित दावा',
     regenNote: 'केवळ मराठी मजकूर — इंग्रजी मजकुरासाठी `docs/eras/` मधील संबंधित फाइल पाहा.',
     indexTitle: '# कालखंडानुसार ग्रंथसंपदा',
     indexBlurb: '`lib/*.ts` मधील मराठी मजकुराचे, कालखंडानुसार गटबद्ध केलेले स्वयंचलित निर्यात.',
@@ -617,6 +628,59 @@ function renderContributors(lang: Lang, disclaimer: string): string {
   return lines.join('\n');
 }
 
+// ---- living knowledge rendering ------------------------------------------------
+// lib/living-knowledge-data.ts — 72 contributions across 9 domains, each with
+// a what/when/how structure and an optional "debated claim" editorial flag.
+
+function renderGiftEntry(g: any, lang: Lang): string {
+  const s = STR[lang];
+  const out: string[] = [];
+  out.push(`### ${withDeva(g.name, g.deva)}`);
+  if (g.debated) out.push(`*⚠ ${s.lkDebated}*`);
+  out.push(g.blurb);
+  out.push(`#### ${s.lkWhat}`);
+  out.push(g.what);
+  out.push(`#### ${s.lkWhen}`);
+  out.push(g.when);
+  out.push(`#### ${s.lkHow}`);
+  out.push(g.how);
+  return out.join('\n\n');
+}
+
+function renderLivingKnowledge(lang: Lang, disclaimer: string): string {
+  const s = STR[lang];
+  const domainMeta = lang === 'mr' ? LK_DOMAIN_META_MR : LK_DOMAIN_META;
+  const gifts = lang === 'mr' ? LIVING_KNOWLEDGE_MR : LIVING_KNOWLEDGE;
+  const note = lang === 'mr' ? LK_NOTE_MR : LK_NOTE;
+
+  const lines: string[] = [];
+  lines.push(`# ${s.lkTitle}`);
+  lines.push('');
+  lines.push(s.lkMeta.replace('{count}', String(gifts.length)));
+  lines.push('');
+  lines.push(`> ${note}`);
+  lines.push('');
+  lines.push(`> ${disclaimer}`);
+
+  for (const domainId of LK_DOMAINS) {
+    const meta = domainMeta.find((d: any) => d.id === domainId);
+    const inDomain = gifts.filter((g: any) => g.domain === domainId);
+    if (!meta || !inDomain.length) continue;
+    lines.push('');
+    lines.push('---');
+    lines.push('');
+    lines.push(`## ${meta.label}`);
+    lines.push(meta.gloss);
+    for (const g of inDomain) {
+      lines.push('');
+      lines.push(renderGiftEntry(g, lang));
+    }
+  }
+
+  lines.push('');
+  return lines.join('\n');
+}
+
 // ---- section-level rendering (the per-era files) -----------------------------
 
 function topicLabel(topicId: string, lang: Lang): string {
@@ -650,6 +714,9 @@ function run(lang: Lang) {
   const contributorsDisclaimer = lang === 'mr'
     ? '`lib/contributors-data_mr.ts` वरून `scripts/export-eras-md.ts` द्वारे स्वयंचलितपणे तयार केले. हाताने संपादन करू नका — पुन्हा तयार करा.'
     : 'Auto-generated from `lib/contributors-data.ts` by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.';
+  const livingKnowledgeDisclaimer = lang === 'mr'
+    ? '`lib/living-knowledge-data_mr.ts` वरून `scripts/export-eras-md.ts` द्वारे स्वयंचलितपणे तयार केले. हाताने संपादन करू नका — पुन्हा तयार करा.'
+    : 'Auto-generated from `lib/living-knowledge-data.ts` by `scripts/export-eras-md.ts`. Do not hand-edit — regenerate instead.';
 
   const introTitleLine = lang === 'mr'
     ? '- [प्रस्तावना — जिवंत वृक्ष](./introduction.md) — ग्रंथसंपदा कालखंडानुसार कशी वाढली, त्याचा कथात्मक निबंध'
@@ -660,6 +727,9 @@ function run(lang: Lang) {
   const contributorsLinkLine = lang === 'mr'
     ? '- [योगदाते](./contributors.md) — ऋषी, आचार्य, संत, कवी व शास्त्रज्ञ, कालखंडानुसार'
     : '- [Contributors](./contributors.md) — ṛṣis, ācāryas, saints, poets and scientists, by era';
+  const livingKnowledgeLinkLine = lang === 'mr'
+    ? '- [जिवंत ज्ञान](./living-knowledge.md) — भारतीय ज्ञानप्रणालींची जगाला देणगी, नऊ क्षेत्रांत'
+    : '- [Living Knowledge](./living-knowledge.md) — gifts of Indian knowledge systems to the world, by domain';
 
   const indexLines = [
     s.indexTitle,
@@ -673,6 +743,7 @@ function run(lang: Lang) {
     introTitleLine,
     conceptsLinkLine,
     contributorsLinkLine,
+    livingKnowledgeLinkLine,
   ];
 
   writeFileSync(join(outDir, 'introduction.md'), renderIntroduction(lang === 'mr' ? INTRO_MR : INTRO, lang, introDisclaimer) + '\n');
@@ -683,6 +754,9 @@ function run(lang: Lang) {
 
   writeFileSync(join(outDir, 'contributors.md'), renderContributors(lang, contributorsDisclaimer));
   console.log(`Wrote docs/eras/${lang === 'mr' ? 'mr/' : ''}contributors.md (${(lang === 'mr' ? CONTRIBUTORS_MR : CONTRIBUTORS).length} contributors)`);
+
+  writeFileSync(join(outDir, 'living-knowledge.md'), renderLivingKnowledge(lang, livingKnowledgeDisclaimer));
+  console.log(`Wrote docs/eras/${lang === 'mr' ? 'mr/' : ''}living-knowledge.md (${(lang === 'mr' ? LIVING_KNOWLEDGE_MR : LIVING_KNOWLEDGE).length} gifts)`);
 
   for (const era of ERA_ORDER) {
     const meta = ERA_META[era];
