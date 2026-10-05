@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Introduction from '@/components/Introduction';
 import JourneysRail from '@/components/JourneysRail';
+import MapTeaser from '@/components/MapTeaser';
 import SectionsGrid from '@/components/SectionsGrid';
 import Contributors from '@/components/Contributors';
 import Concepts from '@/components/Concepts';
@@ -21,6 +22,7 @@ export default function Home() {
       <Introduction />
       <DailyStrip />
       <JourneysRail />
+      <MapTeaser />
       <SectionsGrid />
       <Contributors />
       <Concepts />

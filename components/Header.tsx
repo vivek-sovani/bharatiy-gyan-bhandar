@@ -52,6 +52,7 @@ export default function Header() {
           >
             <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
             <Link href="/journeys/" onClick={close}>{t('nav.journeys')}</Link>
+            <Link href="/map/" onClick={close}>{t('nav.map')}</Link>
             <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
             <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
             <Link href="/#living-knowledge" onClick={close}>{t('nav.lk')}</Link>

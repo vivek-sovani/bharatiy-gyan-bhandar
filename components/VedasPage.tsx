@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import SectionExplorer from './SectionExplorer';
 import { CornerOrn, Glyph } from './Ornaments';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -2607,6 +2608,16 @@ const STRATA_MR = [
 
 function VedaTabs() {
   const [active, setActive] = useState('rig');
+
+  // The explorer cards above hand a Veda over to these in-depth tabs.
+  useEffect(() => {
+    const onSelect = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      if (id) setActive(id);
+    };
+    window.addEventListener('vedas:select', onSelect);
+    return () => window.removeEventListener('vedas:select', onSelect);
+  }, []);
   const [activeStratum, setActiveStratum] = useState<string | null>(null);
   const { lang, t } = useLanguage();
 
@@ -2786,6 +2797,11 @@ export default function VedasView() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { lang, t } = useLanguage();
 
+  const deepDive = (id: string) => {
+    window.dispatchEvent(new CustomEvent('vedas:select', { detail: id }));
+    document.getElementById('vedas-deep')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <>
       <section className="sec-hero">
@@ -2826,8 +2842,16 @@ export default function VedasView() {
         </div>
       </section>
 
-      <section className="frame">
+      <SectionExplorer embedded onDeepDive={deepDive} />
+
+      <section id="vedas-deep" className="frame">
         <div className="shell">
+          <div className="frame-hd">
+            <div className="title-block">
+              <div className="eyebrow"><Glyph /> {t('vx.deep_eyebrow')}</div>
+              <h2>{t('vx.deep_title')}</h2>
+            </div>
+          </div>
           <VedaTabs />
         </div>
       </section>

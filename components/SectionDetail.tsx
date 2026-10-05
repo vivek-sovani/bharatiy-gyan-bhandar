@@ -8,6 +8,10 @@ import type { SectionDetail, SectionItem } from '@/lib/section-data';
 import { SECTION_DETAILS as DETAILS_EN } from '@/lib/section-data';
 import { SECTION_DETAILS as DETAILS_MR } from '@/lib/section-data_mr';
 import SectionTabs from './SectionTabs';
+import UpanishadExplorer from './UpanishadExplorer';
+import GenericExplorer from './GenericExplorer';
+import SchoolsSection from './SchoolsSection';
+import { GENERIC_EXPLORERS } from '@/lib/generic-explorer-data';
 import { useLanguage } from '@/lib/LanguageContext';
 import { saveScroll, useScrollRestoration } from '@/lib/scroll';
 
@@ -248,6 +252,10 @@ export default function SectionDetailView({ id, data: fallbackData }: { id: stri
     <>
       <SecHero data={finalData} id={id} />
 
+      {id === 'upanishads' && <UpanishadExplorer />}
+      {GENERIC_EXPLORERS[id] && <GenericExplorer sectionId={id} />}
+      {id === 'darshanas' && <SchoolsSection />}
+
       <section className="frame">
         <div className="shell">
           {finalData.layout === 'tabs' && finalData.items && <SectionTabs items={finalData.items} sectionId={id} />}
@@ -255,6 +263,7 @@ export default function SectionDetailView({ id, data: fallbackData }: { id: stri
           {finalData.layout === 'primer' && <PrimerLayout />}
         </div>
       </section>
+
 
       <SeeAlso currentId={id} />
     </>
