@@ -3,6 +3,7 @@ import './globals.css';
 import { LanguageProvider } from '@/lib/LanguageContext';
 import { GuidedProvider } from '@/lib/guided';
 import { GuidedBar, GuidedIntro, GuidedNext, GuidedToast } from '@/components/Guided';
+import UpdateNotifier from '@/components/UpdateNotifier';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const siteUrl = `https://vivek-sovani.github.io${basePath}`;
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
             <GuidedNext />
             <GuidedToast />
+            <UpdateNotifier />
           </GuidedProvider>
         </LanguageProvider>
       </body>

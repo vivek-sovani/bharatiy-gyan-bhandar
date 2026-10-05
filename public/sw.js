@@ -1,7 +1,7 @@
 // Service worker for Indian Knowledge Bank PWA
 // Strategy: network-first for HTML, cache-first for static assets, cache Google Fonts.
 
-const CACHE = 'bgb-v5';
+const CACHE = 'bgb-v6';
 
 // Derive the base path from the SW's own URL so this works on both
 // localhost (served at /) and GitHub Pages (served at /bharatiy-gyan-bhandar/).
@@ -51,6 +51,9 @@ self.addEventListener('fetch', e => {
     url.hostname === 'fonts.gstatic.com';
 
   if (!isSameOrigin && !isGoogleFont) return;
+
+  // The update check must always reach the network.
+  if (url.pathname.endsWith('/version.json')) return;
 
   // HTML pages — network first, fall back to cached version or root
   if (e.request.headers.get('accept')?.includes('text/html')) {
