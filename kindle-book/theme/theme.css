@@ -1,0 +1,316 @@
+/* ============================================================
+   BHĀRATĪYA JÑĀNA BHAṇḍĀRA — "Tapta-tāla" (तप्ततळ, "warm parchment")
+   Kindle / EPUB book theme — warm manuscript style
+   Echoes the site's cream + saffron palette, re-tuned for e-ink
+   and reflowable e-reader typography. Works for both the English
+   and Marathi editions — see the [lang] rules at the bottom.
+   ============================================================ */
+
+@font-face{font-family:"Cormorant Garamond";src:url("fonts/CormorantGaramond-Regular.ttf");font-weight:400;}
+@font-face{font-family:"Cormorant Garamond";src:url("fonts/CormorantGaramond-SemiBold.ttf");font-weight:600;}
+@font-face{font-family:"Cormorant Garamond";src:url("fonts/CormorantGaramond-SemiBoldItalic.ttf");font-weight:600;font-style:italic;}
+@font-face{font-family:"Lora";src:url("fonts/Lora-Regular.ttf");font-weight:400;}
+@font-face{font-family:"Lora";src:url("fonts/Lora-Italic.ttf");font-weight:400;font-style:italic;}
+@font-face{font-family:"Lora";src:url("fonts/Lora-SemiBold.ttf");font-weight:600;}
+@font-face{font-family:"Noto Serif Devanagari";src:url("fonts/NotoSerifDevanagari-Regular.ttf");font-weight:400;}
+@font-face{font-family:"Noto Serif Devanagari";src:url("fonts/NotoSerifDevanagari-SemiBold.ttf");font-weight:600;}
+@font-face{font-family:"Noto Serif Devanagari";src:url("fonts/NotoSerifDevanagari-Bold.ttf");font-weight:700;}
+@font-face{font-family:"Tiro Devanagari Sanskrit";src:url("fonts/TiroDevanagariSanskrit-Regular.ttf");font-weight:400;}
+@font-face{font-family:"JetBrains Mono";src:url("fonts/JetBrainsMono-Regular.ttf");font-weight:400;}
+@font-face{font-family:"JetBrains Mono";src:url("fonts/JetBrainsMono-SemiBold.ttf");font-weight:600;}
+
+:root{
+  /* -- Parchment base (converted from the site's oklch paper tones) -- */
+  --page-bg:      #f6efe0;   /* paper-elev, slightly lighter for e-ink comfort */
+  --page-bg-deep: #e9dfc9;   /* paper-deep — used on divider / part-title pages */
+  --ink:          #211815;   /* body text */
+  --ink-soft:     #4b3f38;   /* secondary text, captions, meta */
+  --ink-faint:    #8a7c6d;   /* running heads, page furniture */
+  --rule:         #d8c9a8;   /* hairline rules, table borders */
+
+  /* -- Ornament colours -- */
+  --maroon:       #682321;   /* drop caps, initials, verse marks */
+  --gold:         #9f7932;   /* thin rules, small ornaments, footer divider */
+
+  /* -- Part / journey accents (from the site's --ac-* CSS vars) --
+     Each of the book's six Parts gets one, used for its divider
+     page, running header tint, and part-number medallion. */
+  --ac-first-steps:  #976712; /* ac-knowledge · ochre   */
+  --ac-philosophy:   #a34945; /* ac-order     · terracotta */
+  --ac-stories:       #a14876; /* ac-aesthetics· rose-mauve */
+  --ac-scientific:    #7a5da9; /* ac-mind      · violet   */
+  --ac-sant:          #1c7b5a; /* ac-liberation· leaf green*/
+  --ac-modern:        #00747a; /* ac-heterodox · teal      */
+
+  /* -- Type -- */
+  --font-display: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+  --font-body:    "Lora", "EB Garamond", Georgia, serif;
+  --font-deva:    "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif;
+  --font-deva-body: "Noto Serif Devanagari", "Tiro Devanagari Sanskrit", serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html{ margin:0; padding:0; }
+body{
+  margin:0; padding: 0 6%; box-sizing: border-box;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------------------
+   Running text
+   --------------------------------------------------------------- */
+p{ margin: 0 0 .75em; text-align: justify; text-indent: 1.4em; hyphens: auto; }
+p:first-of-type, .no-indent{ text-indent: 0; }
+
+h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 600; color: var(--ink); line-height: 1.2; }
+
+.deva{ font-family: var(--font-deva); line-height: 1.9; letter-spacing: 0.005em; }
+/* Multi-line śloka/verse blocks need a tighter line-height than running
+   Devanāgarī prose (1.9 leaves a visible gap between lines and above the
+   first line) — scoped to the two places verses are shown. */
+.opening-shloka .deva, .verse-footer .vf-deva{ line-height: 1.42; }
+.mono{ font-family: var(--font-mono); font-size: 0.7em; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
+
+a{ color: var(--maroon); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+
+hr.rule{
+  border: none; height: 1px; background: var(--rule); margin: 2em 10%;
+}
+
+/* ---------------------------------------------------------------
+   1. COVER PAGE
+   --------------------------------------------------------------- */
+.cover{
+  text-align:center; background: var(--page-bg-deep);
+  margin: 0 -6%; padding: 3em 6%; box-sizing:border-box; page-break-after: always;
+}
+.chapter .chapter-image{ width:100%; max-width:420px; display:block; margin: 0 auto 1.6em; border-radius:2px; }
+.appendix-entry .concept-image{ width:100%; max-width:260px; display:block; margin: 0 auto 1em; border-radius:2px; }
+.cover .ornament{ width: 120px; height:120px; color: var(--maroon); opacity:.85; margin-bottom: 1.2em; }
+.cover .deva-title{ font-family: var(--font-deva); font-size: 2.6rem; color: var(--maroon); margin: 0 0 .3em; }
+.cover .title{ font-family: var(--font-display); font-weight:600; font-size: 2.7rem; letter-spacing:.01em; margin:0 0 .35em; }
+.cover .subtitle{ font-family: var(--font-display); font-style: italic; font-size:1.25rem; color: var(--ink-soft); margin: 0 0 2.2em; max-width: 34em; }
+.cover .byline{ font-family: var(--font-mono); font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color: var(--ink-faint); }
+.cover .edition-badge{
+  margin-top: 2.4em; font-family: var(--font-mono); font-size:.68rem; letter-spacing:.16em;
+  text-transform:uppercase; color: var(--gold); border: 1px solid var(--gold); border-radius: 2px;
+  padding: .45em 1em;
+}
+
+/* -- e-reader-safe note --------------------------------------------------
+   The EPUB build ships the cover as a single bleed image (see
+   /assets/cover-en.jpg, 1600x2560) declared as the OPF cover-image —
+   NOT as this live HTML block. The markup above (and below, for the
+   part-divider) is kept for the DOCX/print path and for this browser
+   preview only. Neither uses vh units or flexbox centering: Kindle's
+   e-ink renderer (older Paperwhite/Oasis firmware) has unreliable
+   support for both, so every real "page" in the EPUB build uses plain
+   block flow + text-align:center + page-break-before, as below. */
+
+/* ---------------------------------------------------------------
+   2. PART / JOURNEY DIVIDER PAGE  (data-accent picks the Part colour)
+   --------------------------------------------------------------- */
+.part-divider{
+  text-align:center; background: var(--page-bg-deep);
+  margin: 0 -6%; padding: 3em 8%; box-sizing:border-box; page-break-before: always; page-break-after: always;
+  --accent: var(--ac-first-steps);
+}
+.part-divider .part-image{ width: 100%; max-width: 380px; display:block; margin: 0 auto 1.4em; border-radius: 2px; }
+.part-divider .part-no{
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing:.3em; text-transform:uppercase;
+  color: var(--accent); margin-bottom: .8em;
+}
+.part-divider .part-glyph{ width: 56px; height: 56px; color: var(--accent); margin-bottom: .9em; opacity: .9;}
+.part-divider .part-title{ font-family: var(--font-display); font-weight:600; font-size: 1.7rem; color: var(--ink); margin: 0 0 .2em; }
+.part-divider .part-deva{ font-family: var(--font-deva); font-size: 1.02rem; color: var(--accent); margin: 0 0 .9em; }
+.part-divider .part-tagline{ font-style: italic; font-family: var(--font-display); font-size: .95rem; color: var(--ink-soft); max-width: 30em; margin: 0 auto 1.1em; text-indent:0; }
+.part-divider .part-audience{ font-family: var(--font-mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color: var(--ink-faint); margin-bottom: 1.4em;}
+.part-divider .part-contents{
+  text-align:left; font-family: var(--font-body); font-size:.82rem; line-height:1.55;
+  color: var(--ink-soft); max-width: 28em; margin: 0 auto; text-indent:0;
+}
+.part-divider .part-contents .label{ font-family: var(--font-mono); font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color: var(--accent); display:block; margin-bottom:.5em; text-align:center; }
+.part-divider .part-contents-line{ margin:.3em 0; padding:.15em 0; text-align:left; }
+
+/* ---------------------------------------------------------------
+   3. PREFACE
+   --------------------------------------------------------------- */
+.preface{ page-break-before: always; }
+.preface .eyebrow{ font-family: var(--font-mono); font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color: var(--gold); text-align:center; margin-bottom:.5em; }
+.preface h1.title{ text-align:center; font-size: 2.3rem; font-weight:700; letter-spacing:.01em; margin: 0 0 .2em; }
+.preface .subtitle{ text-align:center; font-style:italic; font-size:1rem; color: var(--ink-soft); margin-bottom: 1.4em; }
+.preface .lede p{ text-indent: 0; }
+.preface .pull-quote{
+  font-family: var(--font-display); font-style: italic; font-size: 1.3rem; color: var(--maroon);
+  text-align:center; margin: 1.2em 6%; line-height:1.35; text-indent:0;
+}
+.preface .thread{ margin: .7em 0; }
+.preface .thread .label{ font-weight:600; color: var(--maroon); }
+/* Preface sub-sections read as a bold lead-in line, not a numbered heading —
+   no serial numbers, no separate heading-sized type. */
+.preface-section h3{
+  font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: var(--ink);
+  margin: 1.1em 0 .35em; text-align:left;
+}
+
+
+/* ---------------------------------------------------------------
+   4. CHAPTER (a corpus section, inside a Part)
+   --------------------------------------------------------------- */
+.chapter{ padding-top: .8em; page-break-before: always; }
+.chapter .running-head{
+  font-family: var(--font-mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase;
+  color: var(--accent, var(--ink-faint)); text-align:center; margin-bottom: 1.4em;
+}
+.chapter .chapter-no{ text-align:center; font-family: var(--font-mono); font-size:.8rem; letter-spacing:.25em; color: var(--accent, var(--gold)); margin-bottom:.3em;}
+.chapter h1.chapter-title{ text-align:center; font-size: 1.7rem; margin:0 0 .15em; }
+.chapter .chapter-deva{ text-align:center; font-family: var(--font-deva); font-size:1.05rem; color: var(--accent, var(--maroon)); margin-bottom: .4em; }
+.chapter .chapter-dateline{ text-align:center; font-family: var(--font-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color: var(--ink-faint); margin-bottom: .8em; }
+.chapter .chapter-lede{ font-style: italic; font-size:.95rem; color: var(--ink-soft); text-align:center; max-width: 34em; margin: 0 auto 1.3em; text-indent:0; }
+
+/* ---------------------------------------------------------------
+   4b. TIMELINE (front matter) & LIVING KNOWLEDGE (appendix C)
+   --------------------------------------------------------------- */
+#timeline{ page-break-before: always; }
+.timeline-era{ margin-bottom: 1em; padding-left: 1em; border-left: 3px solid var(--gold); }
+.timeline-era .era-name{ font-family: var(--font-display); font-weight:600; font-size:1.15rem; color: var(--maroon); }
+.timeline-era .era-range{ font-family: var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color: var(--ink-faint); margin-left:.6em; }
+.lk-domain-head{ text-align:center; margin: 1.3em 0 .7em; page-break-before: always; }
+.lk-domain-head.lk-domain-head-first{ page-break-before: auto; }
+.lk-domain-head .lk-name{ font-family:var(--font-display); font-weight:600; font-size:1.25rem; color:var(--maroon); }
+.lk-domain-head .lk-deva{ font-family:var(--font-deva); font-size:.95rem; color:var(--ink-faint); }
+.lk-item{ margin-bottom:.8em; }
+.lk-item .lk-title{ font-weight:600; color:var(--ink); text-align:left; }
+.lk-item .lk-debated{ font-family:var(--font-mono); font-size:.58rem; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold); border-radius:2px; padding:.1em .4em; margin-left:.5em; }
+.lk-item .lk-when{ font-family:var(--font-mono); font-size:.62rem; color:var(--ink-faint); }
+.lk-item p{ text-align: justify; }
+
+/* Vedas chapter — full-depth Śākhā / Brāhmaṇa / Āraṇyaka / Upaniṣad layers.
+   Each layer is its own visually separate block (a rule above, generous top
+   margin) with a title set noticeably larger than what's inside it. The
+   catalogue entries themselves reuse the book's one standard "aspect" list
+   style (bold name, plain justified line — see .aspects below) instead of a
+   Vedas-only bordered "card" treatment, so this chapter reads consistently
+   with every other chapter rather than as a one-off format. */
+.veda-layer{ margin-top: 1.6em; padding-top: 1.1em; border-top: 1px solid var(--rule); }
+.veda-layer:first-of-type{ margin-top: 1.1em; padding-top: 0; border-top: none; }
+/* Title-size hierarchy, strictly descending (applies the same way
+   everywhere in the book: a section's own title is always bigger than the
+   titles of the sub-parts inside it): item-title (1.55rem, e.g. "Ṛgveda")
+   > veda-layer-title (1.2rem, e.g. "Saṃhitā") > the catalogue names inside
+   each .aspect entry, which are plain weight, not bold — see the
+   .veda-layer .aspects override below; at this density (dozens of
+   recensions/hymns per chapter) bolding every single name reads as noise
+   rather than signal. "Key Hymns"/"Key Teachings" is a plain italic
+   caption (.veda-subhead), the exact same treatment as the "At a glance"
+   line used everywhere else in the book — not a separate heading style. */
+.veda-layer-title{
+  margin: 0 0 .6em; font-size: 1.2rem; color: var(--maroon); line-height: 1.25;
+}
+.veda-subhead{ font-style: italic; color: var(--ink-soft); font-size: .92rem; margin: .8em 0 .3em; }
+.veda-layer .opening-shloka{ margin: .5em 0 .8em; }
+.veda-layer .aspects{ margin: .5em 0; }
+.veda-layer .aspects .aspect{ margin-bottom: .35em; }
+.veda-layer .aspects .aspect .name{ font-weight: 400; font-family: var(--font-body); color: var(--ink); }
+
+/* Comparison table (Śruti / Smṛti primer) — rendered as stacked cards
+   rather than a real HTML table, for reliable e-reader reflow. */
+.compare-table{ margin: 1.1em 0; }
+.compare-title{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin-bottom:.5em; text-align:center; }
+.compare-row{ margin: .7em 0; padding-bottom: .6em; border-bottom: 1px solid var(--rule); }
+.compare-row .compare-label{ font-family: var(--font-display); font-weight:600; color: var(--maroon); font-size:.95rem; margin-bottom:.4em; }
+.compare-row .compare-val{ margin: .3em 0; line-height:1.55; font-size:.92rem; text-align:justify; }
+.compare-row .compare-tag{
+  font-family:var(--font-mono); font-size:.58rem; letter-spacing:.06em; text-transform:uppercase;
+  color: var(--ink-soft); border:1px solid var(--rule); border-radius:2px; padding:.1em .4em; margin-right:.5em;
+}
+
+/* Concept cross-references (Appendix A) */
+.concept-xref-head{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin:1em 0 .4em; }
+.concept-xref{ margin:.6em 0; }
+.concept-xref .label{ font-weight:600; color:var(--maroon); }
+
+/* Table of Contents — plain left-aligned lines, built from <div>s (not
+   <ul>/<li>) so no e-reader or pandoc default list-style can reintroduce
+   bullets or indentation. */
+.toc-part-head{ text-align:left; margin: 1.6em 0 .5em; font-size:1.05rem; color:var(--maroon); }
+.toc-list{ margin: 0 0 1.2em; text-align:left; }
+.toc-line{ margin: 0; padding: .3em 0; font-size:.92rem; text-align:left; border-bottom: 1px dotted var(--rule); }
+.toc-line a{ border-bottom:none; }
+
+/* Every item (a Veda, an Upaveda, a Vedāṅga, an Upaniṣad, a darśana, a
+   concept-bearing entry — every sub-section inside any of the 28 chapters)
+   starts on its own page. The chapter's own opening (title/lede/image)
+   already starts a fresh page, so the first item stays put beside it —
+   only the second item onward force a new page. */
+.item{ margin-top: 1.4em; page-break-before: always; }
+.item.dropcap{ page-break-before: auto; margin-top: 1em; }
+.item h2.item-title{ font-size:1.55rem; margin:0 0 .1em; }
+.item .item-epithet{ font-style: italic; color: var(--ink-soft); margin-bottom:.4em; font-family: var(--font-display); }
+.item .item-meta{ display:flex; flex-wrap:wrap; gap:.5em; margin-bottom:.7em; }
+.item .item-meta span{
+  font-family: var(--font-mono); font-size:.62rem; letter-spacing:.06em; text-transform:uppercase;
+  color: var(--ink-soft); border: 1px solid var(--rule); border-radius:2px; padding:.2em .55em;
+}
+.opening-shloka{
+  margin: .7em 0 .9em; padding: .6em 1em; border-left: 3px solid var(--gold);
+  background: color-mix(in srgb, var(--page-bg-deep) 55%, transparent);
+}
+.opening-shloka .deva{ font-size: 1.05rem; color: var(--maroon); margin-bottom:.2em; }
+.opening-shloka .trans{ font-style: italic; color: var(--ink-soft); font-size:.92rem; }
+.opening-shloka .cite{ font-family: var(--font-mono); font-size:.62rem; letter-spacing:.06em; text-transform:uppercase; color: var(--ink-faint); margin-top:.2em; }
+
+.aspects{ margin: .7em 0; }
+.aspects .aspect{ margin-bottom:.45em; }
+.aspects .aspect .name{ font-weight:600; color: var(--maroon); font-family: var(--font-display); }
+
+/* ---------------------------------------------------------------
+   5. FOOTER VERSE  — one per chapter page; links to the endnote
+   --------------------------------------------------------------- */
+.verse-footer{
+  margin-top: 1.8em; padding-top: .8em; border-top: 1px solid var(--gold);
+  text-align:center; font-size:.86rem; color: var(--ink-soft);
+}
+.verse-footer .vf-deva{ font-family: var(--font-deva); font-size:1.05rem; color: var(--maroon); margin-bottom:.25em; }
+.verse-footer .vf-trans{ font-style: italic; margin-bottom:.3em; }
+.verse-footer .vf-source{ font-family: var(--font-mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color: var(--ink-faint); }
+.verse-footer .vf-link{ display:inline-block; margin-top:.4em; font-family: var(--font-mono); font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; }
+
+/* ---------------------------------------------------------------
+   6. APPENDIX ENTRIES (Concepts / Contributors / Living Knowledge)
+   --------------------------------------------------------------- */
+#appendix-a, #appendix-b, #appendix-c{ page-break-before: always; }
+/* Each domain/era group inside an appendix starts its own page too — same
+   convention as a chapter inside a Part — except the first group, which
+   already sits right after the appendix's own title page. */
+.appendix-group{ page-break-before: always; }
+.appendix-group.appendix-group-first{ page-break-before: auto; }
+.appendix-entry{ margin-bottom: 1.5em; padding-bottom: 1em; border-bottom: 1px solid var(--rule); }
+.appendix-entry .seal{
+  display:inline-flex; align-items:center; justify-content:center; width:2.1em; height:2.1em;
+  border:1px solid var(--gold); border-radius:50%; font-family: var(--font-deva); color: var(--maroon);
+  float:left; margin-right:.6em; font-size:1.1rem;
+}
+.appendix-entry h3{ font-size:1.15rem; margin:0 0 .1em; text-align:left; }
+.appendix-entry .gloss{ font-style: italic; color: var(--ink-soft); margin-bottom:.5em; text-align:left; }
+.appendix-entry p{ text-align: justify; }
+.appendix-entry .tags span{
+  font-family: var(--font-mono); font-size:.58rem; text-transform:uppercase; letter-spacing:.05em;
+  color: var(--ink-faint); margin-right:.6em;
+}
+
+/* ---------------------------------------------------------------
+   Marathi-edition overrides — Devanāgarī becomes the reading type,
+   not the ornamental accent.
+   --------------------------------------------------------------- */
+html[lang="mr"], [lang="mr"]{
+  font-family: var(--font-deva-body);
+}
+[lang="mr"] h1,[lang="mr"] h2,[lang="mr"] h3,[lang="mr"] h4{ font-family: var(--font-deva-body); }
+[lang="mr"] p{ text-indent: 1.2em; line-height: 1.65; }
+[lang="mr"] .mono{ font-family: var(--font-mono); } /* metadata chips stay Latin/mono even in Marathi edition */
