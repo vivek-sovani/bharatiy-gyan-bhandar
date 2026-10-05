@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import PuranaDetailView from '@/components/PuranaDetail';
 import { PURANAS_DETAILS } from '@/lib/puranas-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const data = PURANAS_DETAILS[id];
   if (!data) return {};
-  return {
+  return withOg('puranas', {
     title: `${data.title} · ${data.deva} · Purāṇa`,
     description: data.explanation[0],
-  };
+  });
 }
 
 export default async function PuranaPage({

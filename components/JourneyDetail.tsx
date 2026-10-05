@@ -6,7 +6,8 @@ import { Glyph } from './Ornaments';
 import { JOURNEYS as JOURNEYS_EN } from '@/lib/journeys-data';
 import { JOURNEYS as JOURNEYS_MR } from '@/lib/journeys-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
-import { isStepVisited, journeyStats } from '@/lib/journey-progress';
+import { isStepVisited, journeyStats, resetJourney } from '@/lib/journey-progress';
+import RouteGlance from './RouteGlance';
 
 export default function JourneyDetail({ id }: { id: string }) {
   const { lang, t } = useLanguage();
@@ -15,6 +16,9 @@ export default function JourneyDetail({ id }: { id: string }) {
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
+  // Bumped to force a re-render after reset — journeyStats reads localStorage
+  // directly rather than through React state.
+  const [, forceRefresh] = useState(0);
 
   if (!journey) {
     return (
@@ -26,6 +30,12 @@ export default function JourneyDetail({ id }: { id: string }) {
 
   const totalMinutes = journey.steps.reduce((sum, s) => sum + s.minutes, 0);
   const stats = mounted ? journeyStats(journey) : null;
+
+  function handleReset() {
+    if (!window.confirm(t('jrn.reset_confirm').replace('{title}', journey!.title))) return;
+    resetJourney(journey!.id);
+    forceRefresh((n) => n + 1);
+  }
 
   const otherJourneys = JOURNEYS
     .filter((j) => j.id !== journey.id)
@@ -63,11 +73,18 @@ export default function JourneyDetail({ id }: { id: string }) {
                 .replace('{minutes}', String(totalMinutes))}
             </div>
             {stats && stats.isStarted && (
-              <div className="jrn-progress" style={{ marginTop: '1rem', maxWidth: '20rem' }} aria-hidden>
-                <span className="jrn-progress-fill" style={{ width: `${stats.percent}%` }} />
-              </div>
+              <>
+                <div className="jrn-progress" style={{ marginTop: '1rem', maxWidth: '20rem' }} aria-hidden>
+                  <span className="jrn-progress-fill" style={{ width: `${stats.percent}%` }} />
+                </div>
+                <button type="button" className="jrn-reset-btn" onClick={handleReset}>
+                  {t('jrn.reset')}
+                </button>
+              </>
             )}
           </div>
+
+          <RouteGlance journey={journey} startIndex={stats && stats.isStarted ? stats.nextIndex : 0} started={!!stats && stats.isStarted && !stats.isComplete} />
 
           <ol className="jrn-stepper" style={{ marginTop: '2.5rem' }}>
             {journey.steps.map((step, i) => {
@@ -81,6 +98,7 @@ export default function JourneyDetail({ id }: { id: string }) {
                       <span className="jrn-step-why">{step.why}</span>
                       <span className="jrn-step-min">{t('jrn.min_short').replace('{n}', String(step.minutes))}</span>
                     </span>
+                    <span className="jrn-step-arrow" aria-hidden>→</span>
                   </Link>
                 </li>
               );

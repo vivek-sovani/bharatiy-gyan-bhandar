@@ -2,8 +2,10 @@
 // title/tagline/audience/step.title/step.why translated.
 
 import type { Journey } from './journeys-data';
+import { COMPLETE_PATH_ID, chainedSteps } from './journeys-data';
+import { completePathSteps } from './complete-path';
 
-export const JOURNEYS: Journey[] = [
+const THEMED_JOURNEYS_MR: Journey[] = [
   {
     id: 'first-steps',
     title: 'पहिली पावले',
@@ -257,5 +259,18 @@ export const JOURNEYS: Journey[] = [
         minutes: 8,
       },
     ],
+  },
+];
+
+export const JOURNEYS: Journey[] = [
+  ...THEMED_JOURNEYS_MR,
+  {
+    id: COMPLETE_PATH_ID,
+    title: 'संपूर्ण मार्ग',
+    deva: 'संपूर्ण मार्गः',
+    tagline: 'संपूर्ण संग्रह एका क्रमात — नकाशापासून सुरुवात, मग प्रत्येक विभाग आणि त्यातील प्रत्येक ग्रंथ, मूलतत्त्वांपासून आधुनिक युगापर्यंत, एका वेळी एक छोटे वाचन.',
+    audience: 'संपूर्ण क्रम आरंभापासून शेवटपर्यंत वाचू इच्छिणाऱ्या वाचकांसाठी',
+    accent: 'ac-knowledge',
+    steps: completePathSteps(chainedSteps(THEMED_JOURNEYS_MR), 'mr'),
   },
 ];

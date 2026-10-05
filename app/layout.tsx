@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { LanguageProvider } from '@/lib/LanguageContext';
-import JourneyRibbon from '@/components/JourneyRibbon';
+import { GuidedProvider } from '@/lib/guided';
+import { GuidedBar, GuidedIntro, GuidedNext, GuidedToast } from '@/components/Guided';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const siteUrl = `https://vivek-sovani.github.io${basePath}`;
@@ -72,11 +73,17 @@ const themeInit = `(function(){try{
   r.setAttribute('data-theme',t);
 }catch(e){}})();`;
 
+// Hides the site chrome before first paint when a link opens inside a reading path (no flash of the full site).
+const guidedInit = `(function(){try{if(/\\/daily\\/?$/.test(location.pathname))return;var q=location.search;var on=/[?&]j=[^&]+/.test(q)&&/[?&]s=\\d+/.test(q);if(!on)on=!!sessionStorage.getItem('bgb-guided');if(on)document.documentElement.setAttribute('data-guided','step');}catch(e){}})();`;
+
+// A visitor who opted into the full library gets it straight away; everyone else starts path-first.
+const homeInit = `(function(){try{var r=document.documentElement;if(localStorage.getItem('bgb-home')==='library')r.setAttribute('data-home','library');if(localStorage.getItem('bgb-preface')==='read')r.setAttribute('data-preface','read');}catch(e){}})();`;
+
 const swInit = `(function(){if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${basePath}/sw.js').catch(function(e){console.warn('SW registration failed:',e)})})}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="cream" data-deva="on" data-card="stamp">
+    <html lang="en" data-theme="cream" data-deva="on" data-card="stamp" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/x-icon" href={`${basePath}/favicon.ico`} />
         <link rel="icon" type="image/svg+xml" href={`${basePath}/icon.svg`} />
@@ -88,12 +95,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script dangerouslySetInnerHTML={{ __html: guidedInit }} />
+        <script dangerouslySetInnerHTML={{ __html: homeInit }} />
         <script dangerouslySetInnerHTML={{ __html: swInit }} />
       </head>
       <body>
         <LanguageProvider>
-          {children}
-          <JourneyRibbon />
+          <GuidedProvider>
+            <GuidedBar />
+            <GuidedIntro />
+            {children}
+            <GuidedNext />
+            <GuidedToast />
+          </GuidedProvider>
         </LanguageProvider>
       </body>
     </html>

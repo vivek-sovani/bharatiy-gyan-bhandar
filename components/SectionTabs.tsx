@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import type { SectionItem } from '@/lib/section-data';
 import { transliterate } from '@/lib/transliterate';
@@ -14,6 +14,15 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
   // detail page). Falls back to the first item on a fresh visit.
   const [active, setActive] = useState(items[0].id);
   const { lang, t } = useLanguage();
+  const navRef = useRef<HTMLElement>(null);
+
+  // Tab-step next/prev jumps to a new panel — scroll back to the top of the
+  // tab strip so the reader starts the new tab from its beginning, not from
+  // wherever the click happened to be (usually the bottom of the last one).
+  function goTo(id: string) {
+    setActive(id);
+    navRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -26,10 +35,13 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
 
   const item = items.find((i) => i.id === active)!;
   const idx = items.findIndex((i) => i.id === active);
+  const prevItem = items[idx - 1];
+  const nextItem = items[idx + 1];
 
   return (
     <>
       <nav
+        ref={navRef}
         className="sec-tabs-nav"
         style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}
         role="tablist"
@@ -128,6 +140,23 @@ export default function SectionTabs({ items, sectionId }: { items: SectionItem[]
           )}
         </aside>
       </article>
+
+      {(prevItem || nextItem) && (
+        <div className="tab-step-nav">
+          {prevItem ? (
+            <button type="button" className="tab-step-btn tab-step-prev" onClick={() => goTo(prevItem.id)}>
+              <span className="tab-step-dir">← {t('tabnav.prev')}</span>
+              <span className="tab-step-title">{prevItem.title}</span>
+            </button>
+          ) : <span className="tab-step-btn is-empty" aria-hidden />}
+          {nextItem ? (
+            <button type="button" className="tab-step-btn tab-step-next" onClick={() => goTo(nextItem.id)}>
+              <span className="tab-step-dir">{t('tabnav.next')} →</span>
+              <span className="tab-step-title">{nextItem.title}</span>
+            </button>
+          ) : <span className="tab-step-btn is-empty" aria-hidden />}
+        </div>
+      )}
     </>
   );
 }

@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import SectionDetailView from '@/components/SectionDetail';
 import { SECTION_DETAILS } from '@/lib/section-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const data = SECTION_DETAILS[slug];
   if (!data) return {};
-  return {
+  return withOg(slug, {
     title: `${data.title} · ${data.deva}`,
     description: data.lede,
-  };
+  });
 }
 
 export default async function SectionPage({

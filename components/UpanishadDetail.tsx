@@ -178,6 +178,7 @@ export default function UpanishadDetail({ id }: { id: string }) {
         </div>
       </section>
 
+
       {/* See Also / Cross-Navigation */}
       <section className="see-also" style={{ background: 'var(--paper-deep)' }}>
         <div className="shell">

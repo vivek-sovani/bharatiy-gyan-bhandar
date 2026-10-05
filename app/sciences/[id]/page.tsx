@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import SciencesDetail from '@/components/SciencesDetail';
 import { SCIENCES } from '@/lib/sciences-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const item = SCIENCES.find((s) => s.id === id);
   if (!item) return {};
-  return {
+  return withOg('sciences', {
     title: `${item.title} · ${item.deva}`,
     description: item.tldr,
-  };
+  });
 }
 
 export default async function SciencePage({

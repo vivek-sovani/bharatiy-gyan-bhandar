@@ -11,6 +11,7 @@ import SectionTabs from './SectionTabs';
 import UpanishadExplorer from './UpanishadExplorer';
 import GenericExplorer from './GenericExplorer';
 import SchoolsSection from './SchoolsSection';
+import { GuidedDeeper } from './Guided';
 import { GENERIC_EXPLORERS } from '@/lib/generic-explorer-data';
 import { useLanguage } from '@/lib/LanguageContext';
 import { saveScroll, useScrollRestoration } from '@/lib/scroll';
@@ -256,13 +257,20 @@ export default function SectionDetailView({ id, data: fallbackData }: { id: stri
       {GENERIC_EXPLORERS[id] && <GenericExplorer sectionId={id} />}
       {id === 'darshanas' && <SchoolsSection />}
 
-      <section className="frame">
-        <div className="shell">
-          {finalData.layout === 'tabs' && finalData.items && <SectionTabs items={finalData.items} sectionId={id} />}
-          {finalData.layout === 'grid' && finalData.items && <GridLayout items={finalData.items} sectionId={id} />}
-          {finalData.layout === 'primer' && <PrimerLayout />}
-        </div>
-      </section>
+      {finalData.layout === 'primer' ? (
+        <section className="frame">
+          <div className="shell"><PrimerLayout /></div>
+        </section>
+      ) : (
+        <GuidedDeeper>
+          <section className="frame">
+            <div className="shell">
+              {finalData.layout === 'tabs' && finalData.items && <SectionTabs items={finalData.items} sectionId={id} />}
+              {finalData.layout === 'grid' && finalData.items && <GridLayout items={finalData.items} sectionId={id} />}
+            </div>
+          </section>
+        </GuidedDeeper>
+      )}
 
 
       <SeeAlso currentId={id} />

@@ -326,6 +326,7 @@ export default function ItemDetailView({
         </section>
       )}
 
+
       {/* ── Cross-nav within this section ────────────── */}
       {otherItems.length > 0 && (
         <section className="see-also">

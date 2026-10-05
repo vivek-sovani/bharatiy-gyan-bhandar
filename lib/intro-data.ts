@@ -166,6 +166,6 @@ export const INTRO: IntroContent = {
 
   closing: 'That is the invitation of this library. Not a museum of a finished past, but the living record of people who asked the largest questions they could, refused easy answers, and passed the conversation forward — to us.',
 
-  guideBridge: 'Here is how to explore it.',
-  guideEyebrow: 'How to explore',
+  guideBridge: 'The reading paths just below lead you through the texts in order. Here is everything else worth exploring along the way.',
+  guideEyebrow: 'Beyond the reading path',
 };

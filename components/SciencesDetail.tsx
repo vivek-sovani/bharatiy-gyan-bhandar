@@ -128,6 +128,7 @@ export default function SciencesDetail({ id }: { id: string }) {
         </div>
       </section>
 
+
       {otherItems.length > 0 && (
         <section className="see-also">
           <div className="shell">

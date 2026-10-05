@@ -1993,6 +1993,7 @@ body::after {
   display: grid;
   border-top: 1px solid var(--rule-strong);
   border-bottom: 1px solid var(--rule-strong);
+  scroll-margin-top: 90px;
 }
 .sec-tab {
   appearance: none; background: transparent; border: 0;
@@ -2106,6 +2107,51 @@ body::after {
   .sec-panel { grid-template-columns: 1fr; gap: 2rem; }
   .sec-aside { position: static; }
 }
+
+/* Tab-step nav — carries a reader from one tab to the next without having
+   to notice the tab strip above (used by SectionTabs and the Living Tree). */
+.tab-step-nav {
+  display: flex; gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.tab-step-btn {
+  display: flex; flex-direction: column; gap: 0.25rem;
+  flex: 1; max-width: 48%;
+  padding: 0.9rem 1.1rem;
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  cursor: pointer;
+  font: inherit; color: inherit; text-align: left;
+  transition: border-color 140ms, transform 140ms;
+}
+.tab-step-btn.is-empty { border: none; pointer-events: none; }
+.tab-step-prev { align-items: flex-start; }
+.tab-step-next { align-items: flex-end; text-align: right; margin-left: auto; }
+.tab-step-btn:not(.is-empty):hover { border-color: var(--maroon-soft); transform: translateY(-1px); }
+.tab-step-btn:not(.is-empty):hover .tab-step-title { color: var(--maroon); }
+.tab-step-dir {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.tab-step-title {
+  font-family: var(--font-display); font-weight: 600; font-size: 1.02rem;
+  color: var(--ink); transition: color 140ms;
+}
+
+@media (max-width: 640px) {
+  .tab-step-btn { max-width: none; }
+}
+
+/* Reset journey progress */
+.jrn-reset-btn {
+  display: inline-block; margin-top: 0.75rem;
+  font-size: 0.85rem; color: var(--ink-faint);
+  background: none; border: none; padding: 0; cursor: pointer;
+  text-decoration: none; border-bottom: 1px dotted var(--ink-faint);
+}
+.jrn-reset-btn:hover { color: var(--maroon); border-color: var(--maroon); }
 
 /* ---- Grid layout (used for >6 items) ---- */
 
@@ -2826,10 +2872,20 @@ body::after {
 
 .shakha-expand-hint {
   color: var(--maroon);
-  font-weight: 500;
-  display: flex;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.3rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.8rem;
+  transition: background 140ms, border-color 140ms;
+}
+.shakha-card:hover .shakha-expand-hint {
+  background: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--paper);
 }
 
 .shakha-expanded-details {
@@ -3846,6 +3902,15 @@ html[lang="mr"] .concept-ref-tag {
   color: var(--paper);
 }
 .jrn-step-body { display: flex; flex-direction: column; gap: 0.2rem; padding-top: 0.15rem; }
+.jrn-step-arrow {
+  margin-left: auto;
+  align-self: center;
+  color: var(--accent, var(--maroon));
+  font-size: 1.2rem;
+  opacity: 0.45;
+  transition: opacity 140ms, transform 140ms;
+}
+.jrn-step-link:hover .jrn-step-arrow { opacity: 1; transform: translateX(3px); }
 .jrn-step-title { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; transition: color 140ms; }
 .jrn-step-why { font-size: 0.92rem; color: var(--ink-soft); max-width: 56ch; }
 .jrn-step-min {
@@ -4028,6 +4093,136 @@ html[lang="mr"] .concept-ref-tag {
   background: transparent; color: var(--ink-faint); border: 1px solid var(--rule-strong);
 }
 .exit-confirm-leave:hover { color: var(--maroon); border-color: var(--maroon-soft); }
+
+/* ── Guided-first reading: hero CTAs, reading spine, sequential nav ─────── */
+
+/* Hero call-to-action row */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+.hero-cta-primary {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+  color: var(--paper); background: var(--maroon);
+  border: 1px solid var(--maroon); border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  transition: background 140ms, color 140ms, transform 140ms;
+}
+.hero-cta-primary:hover { background: var(--gold-deep); border-color: var(--gold-deep); color: var(--paper); transform: translateY(-1px); }
+.hero-cta-secondary {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+  color: var(--maroon); background: transparent;
+  border: 1px solid var(--rule-strong); border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  transition: border-color 140ms, color 140ms;
+}
+.hero-cta-secondary:hover { color: var(--gold-deep); border-color: var(--maroon-soft); }
+
+/* Living Tree → paths handoff */
+.intro-handoff {
+  margin-top: 1.1rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--maroon);
+  background: var(--paper-elev);
+}
+.intro-handoff p { margin: 0; font-size: 1rem; color: var(--ink-soft); }
+.intro-handoff a { color: var(--maroon); }
+
+/* Reading spine — the Complete Path, featured at the top of the journeys picker */
+.jrn-lede {
+  font-size: 1.02rem; color: var(--ink-soft);
+  margin: 0.6rem 0 0; max-width: 62ch;
+}
+.reading-spine-panel {
+  position: relative;
+  padding: 2rem 2.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+  background: var(--paper-elev);
+  border: 1px solid var(--rule-strong);
+  border-left: 4px solid var(--accent, var(--maroon));
+}
+.reading-spine-title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  margin: 0.5rem 0 0;
+}
+.reading-spine-lede {
+  font-size: 1.02rem; color: var(--ink-soft);
+  margin: 0.6rem 0 0; max-width: 62ch;
+}
+.reading-spine-progress {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-top: 1.1rem; max-width: 30rem;
+}
+.reading-spine-progress .jrn-progress { flex: 1; margin-top: 0; }
+.reading-spine-count {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-faint); white-space: nowrap;
+}
+.reading-spine-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem;
+  margin-top: 1.3rem;
+}
+.reading-spine-begin {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+  color: var(--paper); background: var(--accent, var(--maroon));
+  border: 1px solid var(--accent, var(--maroon)); border-radius: 999px;
+  padding: 0.6rem 1.5rem; text-decoration: none;
+  transition: transform 140ms, opacity 140ms;
+}
+.reading-spine-begin:hover { transform: translateY(-1px); opacity: 0.9; color: var(--paper); }
+.reading-spine-map {
+  font-size: 0.9rem; color: var(--ink-faint);
+  text-decoration: none; border-bottom: 1px dotted var(--ink-faint);
+}
+.reading-spine-map:hover { color: var(--ink); }
+
+.jrn-themed-label {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.jrn-themed-tag {
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* Library grid clarifying lede */
+.grid-lede {
+  font-size: 1rem; color: var(--ink-soft);
+  margin: 0.5rem 0 0; max-width: 60ch;
+}
+
+/* Reading spine feature card on the Journeys list page */
+.jrn-spine-feature {
+  position: relative;
+  display: flex; flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.8rem 1.8rem 1.5rem;
+  margin-bottom: 1.8rem;
+  background: var(--paper-elev);
+  border: 1px solid var(--rule-strong);
+  border-left: 4px solid var(--accent, var(--maroon));
+  text-decoration: none; color: inherit;
+  transition: transform 180ms ease, border-color 180ms;
+}
+.jrn-spine-feature:hover { transform: translateY(-2px); border-color: var(--accent, var(--maroon-soft)); }
+.jrn-spine-feature h2 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.5rem, 2.2vw, 2rem); margin: 0.3rem 0 0;
+}
+.jrn-spine-feature p { font-size: 0.98rem; color: var(--ink-soft); margin: 0.5rem 0 0; max-width: 62ch; }
+.jrn-spine-feature .jrn-card-cta { margin-top: 1rem; }
 
 /* ----------------------------------------------------------
    Map detail card
@@ -4362,3 +4557,248 @@ html[lang="mr"] .concept-ref-tag {
 .mt-card h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 2rem); margin: 0.3rem 0 0; }
 .mt-card p { font-size: 0.98rem; color: var(--ink-soft); margin: 0.5rem 0 0; max-width: 62ch; }
 .mt-cta { margin-top: 1rem; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; color: var(--maroon); }
+
+/* ----------------------------------------------------------
+   Guided reading — a path takes over the page
+   ---------------------------------------------------------- */
+html[data-guided] .hdr,
+html[data-guided] .see-also,
+html[data-guided] .ftr,
+html[data-guided] .jrn-ribbon { display: none !important; }
+html[data-guided] body { padding-top: var(--guided-h, 62px); }
+
+.guided-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 70;
+  background: oklch(from var(--paper) l c h / 0.96); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.guided-bar-inner { display: flex; align-items: center; gap: 0.8rem; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.guided-exit {
+  appearance: none; display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer; flex: none;
+  background: none; border: 1px solid var(--rule-strong); border-radius: 999px; padding: 0.25rem 0.75rem 0.25rem 0.6rem;
+  font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--ink-soft);
+}
+.guided-exit:hover { color: var(--maroon); border-color: var(--maroon); }
+.guided-title {
+  appearance: none; display: grid; text-align: left; background: none; border: 0; cursor: pointer; flex: 1; min-width: 0; padding: 0;
+}
+.guided-title-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--ink); line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.guided-title-step { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; color: var(--ink-soft); }
+.guided-nav { display: flex; gap: 0.3rem; flex: none; }
+.guided-arrow {
+  display: inline-grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--rule-strong); border-radius: 50%;
+  font-size: 1.3rem; line-height: 1; color: var(--ink); text-decoration: none;
+}
+.guided-arrow:hover { border-color: var(--accent, var(--maroon)); color: var(--accent, var(--maroon)); }
+.guided-prefs { display: flex; align-items: center; gap: 0.4rem; flex: none; }
+.guided-track { height: 3px; background: var(--rule); }
+.guided-track span { display: block; height: 100%; background: var(--accent, var(--maroon)); transition: width 300ms ease; }
+.guided-trip { background: oklch(0.92 0.07 85); color: oklch(0.32 0.07 70); border-bottom: 1px solid oklch(0.78 0.09 80); }
+html[data-theme="dark"] .guided-trip { background: oklch(0.32 0.06 80); color: oklch(0.9 0.06 85); border-color: oklch(0.45 0.07 80); }
+.guided-trip-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; font-size: 0.9rem; }
+.guided-return { font-family: var(--font-display); font-weight: 600; color: inherit; white-space: nowrap; }
+
+.guided-trail { max-height: 60vh; overflow-y: auto; background: var(--paper-elev); border-top: 1px solid var(--rule); box-shadow: 0 14px 30px -18px rgb(0 0 0 / 0.35); }
+.guided-trail ol { list-style: none; margin: 0; padding: 0.4rem 0; display: grid; }
+.guided-trail-item {
+  display: grid; grid-template-columns: 2rem 1fr auto; gap: 0.7rem; align-items: baseline; padding: 0.45rem 0.4rem;
+  text-decoration: none; color: var(--ink); border-bottom: 1px solid var(--rule);
+}
+.guided-trail-item:hover { background: color-mix(in oklab, var(--accent, var(--maroon)) 8%, transparent); }
+.guided-trail-item.is-current { background: color-mix(in oklab, var(--accent, var(--maroon)) 14%, transparent); font-weight: 600; }
+.guided-trail-item.is-locked { opacity: 0.5; cursor: not-allowed; }
+.guided-trail-n { font-family: var(--font-mono); font-size: 0.8rem; text-align: center; color: var(--accent, var(--maroon)); }
+.guided-trail-t { font-family: var(--font-display); font-size: 1.05rem; }
+.guided-trail-m { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-faint); }
+
+.guided-intro { padding: 1.1rem 0 0.2rem; }
+.guided-intro p { margin: 0.3rem 0 0; max-width: 62ch; padding-left: 0.9rem; border-left: 3px solid var(--accent, var(--maroon)); color: var(--ink-soft); font-size: 1.02rem; }
+.guided-intro strong { color: var(--ink); font-weight: 600; }
+
+.guided-next { padding: 2.2rem 0 3rem; }
+.guided-next-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.3rem 1.6rem; text-decoration: none; color: inherit;
+  background: var(--paper-elev); border: 2px solid var(--accent, var(--maroon)); transition: transform 160ms, background 160ms;
+}
+a.guided-next-card:hover { transform: translateY(-2px); background: color-mix(in oklab, var(--accent, var(--maroon)) 8%, var(--paper-elev)); }
+.guided-next-card > span:first-child { display: grid; gap: 0.2rem; }
+.guided-next-kicker { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.guided-next-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 600; color: var(--ink); }
+.guided-next-arrow { font-size: 1.8rem; color: var(--accent, var(--maroon)); }
+.guided-done-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.guided-prev-link { display: inline-block; margin-top: 0.9rem; font-size: 0.9rem; color: var(--ink-soft); text-decoration: none; }
+.guided-prev-link:hover { color: var(--maroon); }
+
+.guided-toast {
+  position: fixed; left: 50%; bottom: 1.4rem; transform: translateX(-50%); z-index: 80; max-width: min(90vw, 34rem);
+  background: var(--ink); color: var(--paper); padding: 0.7rem 1.1rem; font-size: 0.92rem; line-height: 1.45; box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.5);
+}
+
+/* "Go deeper": plain content on the normal site, a closed optional panel while guided */
+.gd-deeper-btn { display: none; }
+html[data-guided] .gd-deeper { margin: 1.6rem auto; max-width: var(--measure, 64rem); padding: 0 var(--gutter); }
+html[data-guided] .gd-deeper-btn {
+  display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer;
+  background: var(--paper-elev); border: 1px dashed var(--rule-strong); padding: 0.8rem 1.1rem;
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--ink-soft);
+}
+html[data-guided] .gd-deeper-btn:hover { color: var(--maroon); border-color: var(--maroon); }
+html[data-guided] .gd-deeper:not(.is-open) .gd-deeper-body { display: none; }
+
+@media (max-width: 700px) {
+  .guided-exit-label { display: none; }
+  .guided-exit { padding: 0.25rem 0.6rem; }
+  .guided-prefs { display: none; }
+  .guided-bar-inner { gap: 0.6rem; }
+  .guided-next-card { padding: 1.1rem 1.1rem; }
+}
+
+/* ----------------------------------------------------------
+   Daily WhatsApp post page
+   ---------------------------------------------------------- */
+.dp-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--ink-soft); margin-bottom: 1.2rem; }
+.dp-day { color: var(--maroon); font-weight: 600; }
+.dp-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.6rem; align-items: start; }
+.dp-bubble {
+  background: oklch(0.93 0.08 140); color: oklch(0.22 0.03 150); border-radius: 12px 12px 12px 2px; padding: 0.9rem 1.1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 0.95rem; line-height: 1.5; word-break: break-word;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.08);
+}
+html[data-theme="dark"] .dp-bubble { background: oklch(0.34 0.06 160); color: oklch(0.96 0.02 150); }
+.dp-bubble p { margin: 0; min-height: 0.7em; }
+.dp-actions { display: grid; gap: 0.7rem; }
+.dp-btn {
+  appearance: none; display: block; text-align: center; cursor: pointer; text-decoration: none;
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--ink);
+  background: var(--paper-elev); border: 1px solid var(--rule-strong); padding: 0.65rem 1rem;
+}
+.dp-btn:hover { border-color: var(--maroon); color: var(--maroon); }
+.dp-btn.is-primary { background: var(--maroon); border-color: var(--maroon); color: var(--paper); }
+.dp-btn.is-primary:hover { opacity: 0.92; color: var(--paper); }
+.dp-note { font-size: 0.8rem; color: var(--ink-faint); margin: 0.2rem 0 0; line-height: 1.5; }
+.dp-toggle {
+  appearance: none; margin-top: 2rem; cursor: pointer; background: none; border: 0; padding: 0;
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--maroon); text-decoration: underline; text-underline-offset: 3px;
+}
+.dp-schedule { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0; border: 1px solid var(--rule-strong); }
+.dp-schedule li { border-bottom: 1px solid var(--rule); }
+.dp-schedule li:last-child { border-bottom: 0; }
+.dp-schedule li.is-today { background: color-mix(in oklab, var(--maroon) 9%, var(--paper-elev)); }
+.dp-schedule button {
+  appearance: none; display: grid; grid-template-columns: 2.2rem 1fr auto 4rem; gap: 0.8rem; align-items: baseline; width: 100%;
+  text-align: left; background: none; border: 0; padding: 0.5rem 0.9rem; cursor: pointer; color: var(--ink);
+}
+.dp-schedule button:hover { background: color-mix(in oklab, var(--maroon) 6%, transparent); }
+.dp-s-n { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faint); }
+.dp-s-t { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; }
+.dp-s-d, .dp-s-m { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-soft); }
+@media (max-width: 800px) {
+  .dp-grid { grid-template-columns: 1fr; }
+  .dp-schedule button { grid-template-columns: 2rem 1fr auto; }
+  .dp-s-d { display: none; }
+}
+
+/* ----------------------------------------------------------
+   Path-first home: the library stays hidden until asked for
+   ---------------------------------------------------------- */
+html:not([data-home="library"]) .home-library { display: none; }
+html[data-home="library"] .home-gate { display: none; }
+.home-library { scroll-margin-top: calc(var(--hdr-h, 64px) + 8px); }
+
+.home-gate-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem 2rem; flex-wrap: wrap;
+  padding: 1.6rem 1.8rem; background: var(--paper-elev); border: 1px dashed var(--rule-strong);
+}
+.home-gate-card h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.2vw, 1.9rem); margin: 0.3rem 0 0; }
+.home-gate-card p { margin: 0.5rem 0 0; max-width: 56ch; color: var(--ink-soft); font-size: 0.98rem; }
+.home-gate-btn {
+  appearance: none; cursor: pointer; flex: none; background: none; color: var(--maroon);
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; border: 1px solid var(--maroon); border-radius: 999px; padding: 0.55rem 1.4rem;
+}
+.home-gate-btn:hover { background: var(--maroon); color: var(--paper); }
+
+.home-library-bar { background: color-mix(in oklab, var(--maroon) 7%, var(--paper-elev)); border-block: 1px solid var(--rule-strong); }
+.home-library-bar .shell { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.6rem; font-size: 0.9rem; color: var(--ink-soft); }
+.home-library-bar button {
+  appearance: none; cursor: pointer; background: none; border: 0; padding: 0;
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--maroon); text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* Preface: shown until read once, then folded to a single line */
+html[data-preface="read"] .home-preface { display: none; }
+html:not([data-preface="read"]) .preface-bar { display: none; }
+.preface-done { padding: 1.4rem 0 2.6rem; }
+.preface-done .shell { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; border-top: 1px solid var(--rule-strong); padding-top: 1.4rem; }
+.preface-done p { margin: 0; font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); }
+.preface-done button {
+  appearance: none; cursor: pointer; background: var(--maroon); color: var(--paper); border: 1px solid var(--maroon); border-radius: 999px;
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; padding: 0.5rem 1.3rem;
+}
+.preface-done button:hover { opacity: 0.92; }
+.preface-bar { background: var(--paper-elev); border-block: 1px solid var(--rule); }
+.preface-bar .shell { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.7rem; font-size: 0.92rem; color: var(--ink-soft); }
+.preface-bar button {
+  appearance: none; cursor: pointer; background: none; border: 0; padding: 0;
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--maroon); text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* ----------------------------------------------------------
+   Route at a glance — the preview on a path's trail page
+   ---------------------------------------------------------- */
+.rg {
+  margin-top: 2rem; max-width: 52rem; padding: 1.2rem 1.4rem 1.3rem;
+  background: var(--paper-elev); border: 1px solid var(--rule-strong); border-left: 4px solid var(--accent, var(--maroon));
+}
+.rg-hd { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.3rem 1.2rem; }
+.rg-facts { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.03em; color: var(--ink-soft); }
+.rg-eras { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; margin: 0.9rem 0 0; padding: 0; }
+.rg-eras li { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.9rem; color: var(--ink-soft); }
+.rg-era-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.rg-era-name { font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; color: var(--ink); }
+.rg-era-n { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-faint); }
+
+.rg-dots { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0 0; padding: 0; }
+.rg-dot {
+  appearance: none; display: block; width: 18px; height: 18px; border-radius: 50%; cursor: pointer; padding: 0;
+  background: color-mix(in oklab, var(--c) 55%, var(--paper-elev)); border: 2px solid var(--c);
+  transition: transform 120ms;
+}
+.rg-dot:hover, .rg-dot:focus-visible { transform: scale(1.25); }
+.rg-dot.is-sel { background: var(--c); transform: scale(1.3); box-shadow: 0 0 0 3px color-mix(in oklab, var(--c) 28%, transparent); }
+
+.rg-caption {
+  display: flex; flex-wrap: wrap; gap: 0.2rem 1.4rem; margin: 0.9rem 0 0; min-height: 1.6rem;
+  font-size: 0.95rem; color: var(--ink-soft);
+}
+.rg-caption strong { color: var(--ink); font-weight: 600; font-family: var(--font-display); font-size: 1.05rem; }
+.rg-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; margin-top: 1.1rem; }
+.rg-begin {
+  display: inline-block; text-decoration: none; background: var(--accent, var(--maroon)); color: var(--paper);
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; padding: 0.55rem 1.5rem; border-radius: 999px;
+}
+.rg-begin:hover { opacity: 0.92; }
+.rg-hint { font-size: 0.8rem; color: var(--ink-faint); }
+@media (max-width: 520px) {
+  .rg { padding: 1rem 1rem 1.1rem; }
+  .rg-dot { width: 20px; height: 20px; }
+}
+
+/* Themed path cards on the home page: begin directly, or see the whole route first */
+.jrn-card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 1.1rem; margin-top: auto; padding-top: 1.1rem; }
+.jrn-card-begin {
+  display: inline-block; text-decoration: none; background: var(--accent, var(--maroon)); color: var(--paper);
+  font-family: var(--font-display); font-size: 0.98rem; font-weight: 600; padding: 0.45rem 1.15rem; border-radius: 999px;
+  transition: opacity 140ms, transform 140ms;
+}
+.jrn-card-begin:hover { opacity: 0.9; transform: translateY(-1px); color: var(--paper); }
+.mini-route { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0.85rem 0 0; padding: 0; }
+.mini-route li { width: 9px; height: 9px; border-radius: 50%; background: color-mix(in oklab, var(--c) 60%, var(--paper-elev)); border: 1.5px solid var(--c); }
+
+.jrn-card p.mini-route-ends { margin: 0.5rem 0 0; font-size: 0.82rem; color: var(--ink-faint); line-height: 1.4; }
+
+.dp-link {
+  appearance: none; background: none; border: 0; padding: 0; cursor: pointer; font: inherit;
+  color: var(--maroon); text-decoration: underline; text-underline-offset: 3px;
+}
+.dp-preview-note { margin: -0.4rem 0 1rem; font-size: 0.9rem; color: oklch(0.45 0.1 60); }
+.dp-last { margin: 1.2rem 0 0; font-size: 0.92rem; color: var(--ink-soft); }

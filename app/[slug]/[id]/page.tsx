@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import ItemDetailView from '@/components/ItemDetailView';
 import { SECTION_DETAILS } from '@/lib/section-data';
+import { withOg } from '@/lib/og';
 
 // These sections have their own dedicated /app/[section]/[id]/ routes.
 // The generic handler below should NOT generate params for them.
@@ -48,10 +49,10 @@ export async function generateMetadata({
   if (!section) return {};
   const item = section.items?.find((i) => i.id === id);
   if (!item) return {};
-  return {
+  return withOg(slug, {
     title: `${item.title} · ${item.deva} · ${section.title}`,
     description: item.summary.slice(0, 160),
-  };
+  });
 }
 
 export default async function ItemPage({

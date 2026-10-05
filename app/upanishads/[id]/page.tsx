@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import UpanishadDetailView from '@/components/UpanishadDetail';
 import { UPANISHADS_DETAILS } from '@/lib/upanishads-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const data = UPANISHADS_DETAILS[id];
   if (!data) return {};
-  return {
+  return withOg('upanishads', {
     title: `${data.title} · ${data.deva} · Upaniṣad`,
     description: data.focus,
-  };
+  });
 }
 
 export default async function UpanishadPage({

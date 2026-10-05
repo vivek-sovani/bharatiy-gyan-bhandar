@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import VedangaDetailView from '@/components/VedangaDetail';
 import { VEDANGAS_DETAILS } from '@/lib/vedangas-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const data = VEDANGAS_DETAILS[id];
   if (!data) return {};
-  return {
+  return withOg('vedangas', {
     title: `${data.title} · ${data.deva} · Vedāṅga`,
     description: data.scope,
-  };
+  });
 }
 
 export default async function VedangaPage({

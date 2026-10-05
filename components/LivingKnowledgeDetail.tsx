@@ -5,6 +5,7 @@ import { CornerOrn, Glyph } from './Ornaments';
 import { LIVING_KNOWLEDGE, LK_DOMAIN_META, type Gift } from '@/lib/living-knowledge-data';
 import { LIVING_KNOWLEDGE as LIVING_KNOWLEDGE_MR, LK_DOMAIN_META as LK_DOMAIN_META_MR } from '@/lib/living-knowledge-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
+import { enterLibrary } from '@/lib/home-mode';
 
 export default function LivingKnowledgeDetail({ id }: { id: string }) {
   const { lang, t } = useLanguage();
@@ -28,7 +29,7 @@ export default function LivingKnowledgeDetail({ id }: { id: string }) {
             <div className="sec-crumb">
               <Link href="/">{t('detail.library')}</Link>
               <span className="sep">→</span>
-              <Link href={domainHref}>{t('lk.title_short')}</Link>
+              <Link href={domainHref} onClick={enterLibrary}>{t('lk.title_short')}</Link>
               <span className="sep">→</span>
               <span className="cur">{gift.name}</span>
             </div>
@@ -175,7 +176,7 @@ export default function LivingKnowledgeDetail({ id }: { id: string }) {
         <div className="shell">
           <h4>{lang === 'mr' ? 'नेव्हिगेशन' : 'Navigation'}</h4>
           <div className="see-grid">
-            <Link className="see-link" href={domainHref}>
+            <Link className="see-link" href={domainHref} onClick={enterLibrary}>
               <span>
                 <span className="ttl">
                   {lang === 'mr'

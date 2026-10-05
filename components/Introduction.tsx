@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Glyph } from './Ornaments';
 import { useLanguage } from '@/lib/LanguageContext';
 import { INTRO as INTRO_EN } from '@/lib/intro-data';
@@ -12,19 +12,30 @@ import { INTRO as INTRO_MR } from '@/lib/intro-data_mr';
 // so the takeaway and the navigation help are never hidden behind a tab.
 
 export default function Introduction() {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const isMr = lang === 'mr';
   const intro = isMr ? INTRO_MR : INTRO_EN;
 
   const [active, setActive] = useState(intro.sections[0].id);
-  const section = intro.sections.find((s) => s.id === active) ?? intro.sections[0];
+  const idx = intro.sections.findIndex((s) => s.id === active);
+  const section = intro.sections[idx] ?? intro.sections[0];
+  const prevSection = intro.sections[idx - 1];
+  const nextSection = intro.sections[idx + 1];
+  const navRef = useRef<HTMLElement>(null);
+
+  // Same as SectionTabs: jump back to the top of the tab strip on next/prev
+  // so the new part starts from its beginning, not mid-scroll.
+  function goTo(id: string) {
+    setActive(id);
+    navRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   return (
     <section id="introduction" className="frame intro-frame">
       <div className="shell">
         {/* Header — same cadence as About / the Collection */}
         <div className="title-block">
-          <div className="eyebrow"><Glyph /> {intro.eyebrow}</div>
+          <div className="eyebrow"><Glyph /> {isMr ? 'इथून सुरुवात करा' : 'Begin here'} · {intro.eyebrow}</div>
           <h2 className="intro-title">{intro.title}</h2>
           <p className="intro-subtitle">{intro.subtitle}</p>
         </div>
@@ -37,6 +48,7 @@ export default function Introduction() {
 
         {/* Tab strip — reuses the section-tabs styling */}
         <nav
+          ref={navRef}
           className="sec-tabs-nav intro-tabs"
           style={{ gridTemplateColumns: `repeat(${intro.sections.length}, 1fr)` }}
           role="tablist"
@@ -73,6 +85,23 @@ export default function Introduction() {
           )}
         </article>
 
+        {(prevSection || nextSection) && (
+          <div className="tab-step-nav">
+            {prevSection ? (
+              <button type="button" className="tab-step-btn tab-step-prev" onClick={() => goTo(prevSection.id)}>
+                <span className="tab-step-dir">← {t('tabnav.prev')}</span>
+                <span className="tab-step-title">{prevSection.tabLabel}</span>
+              </button>
+            ) : <span className="tab-step-btn is-empty" aria-hidden />}
+            {nextSection ? (
+              <button type="button" className="tab-step-btn tab-step-next" onClick={() => goTo(nextSection.id)}>
+                <span className="tab-step-dir">{t('tabnav.next')} →</span>
+                <span className="tab-step-title">{nextSection.tabLabel}</span>
+              </button>
+            ) : <span className="tab-step-btn is-empty" aria-hidden />}
+          </div>
+        )}
+
         {/* Conclusion — the four threads, always visible */}
         <div className="intro-threads">
           <div className="eyebrow"><Glyph /> {isMr ? 'समारोप' : 'In closing'}</div>
@@ -98,14 +127,14 @@ export default function Introduction() {
             {isMr ? (
               <>
                 <li>
-                  सर्वांत वर त्या दिवसाचे <a href="#hero"><strong>महावाक्य</strong></a> आणि{' '}
+                  त्या दिवसाचे <a href="#hero"><strong>महावाक्य</strong></a> आणि{' '}
                   <a href="#daily"><strong>सुभाषित</strong></a> — श्लोकाचा अर्थ उलगडण्यासाठी{' '}
                   <strong>“विवेचन पहा”</strong> निवडा, किंवा नवीन श्लोकासाठी{' '}
                   <strong>“↻ दुसरे वचन”</strong>.
                 </li>
                 <li>
-                  <a href="#sections"><strong>संग्रहणा</strong>पासून सुरुवात करा</a> — वैदिक ते
-                  आधुनिक, कालखंडानुसार मांडलेला संपूर्ण ग्रंथसंभार.
+                  संदर्भासाठी <a href="#sections"><strong>संपूर्ण संग्रह</strong> चाळा</a> — वैदिक ते
+                  आधुनिक, कालखंडानुसार मांडलेले सर्व २८ प्रवाह.
                 </li>
                 <li>
                   <a href="#contributors"><strong>योगदानकर्त्यांना</strong></a> भेटा — ग्रंथांमागील
@@ -132,15 +161,15 @@ export default function Introduction() {
             ) : (
               <>
                 <li>
-                  Right at the top, the day’s{' '}
+                  The day’s{' '}
                   <a href="#hero"><strong>Mahāvākya</strong></a> and{' '}
                   <a href="#daily"><strong>Subhāṣita</strong></a> — tap{' '}
                   <strong>“Show explanation”</strong> to unpack a verse, or{' '}
                   <strong>“↻ Another verse”</strong> for a new one.
                 </li>
                 <li>
-                  Start with <a href="#sections"><strong>the Collection</strong></a> — the
-                  corpus grouped era by era, Vedic to modern.
+                  Browse <a href="#sections"><strong>the full library</strong></a> for reference —
+                  all 28 streams, grouped era by era, Vedic to modern.
                 </li>
                 <li>
                   Meet <a href="#contributors"><strong>the Contributors</strong></a> — the
@@ -168,6 +197,20 @@ export default function Introduction() {
               </>
             )}
           </ol>
+          <div className="intro-handoff">
+            {isMr ? (
+              <p>
+                <strong>तयार आहात?</strong> खालील <a href="#journeys"><strong>वाचन-मार्गांपैकी</strong></a>{' '}
+                एक निवडा — मग एकही विषय चुकणार नाही. ↓
+              </p>
+            ) : (
+              <p>
+                <strong>Ready?</strong> Pick a{' '}
+                <a href="#journeys"><strong>reading path</strong></a> below — nothing gets missed
+                from here on. ↓
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </section>

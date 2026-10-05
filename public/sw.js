@@ -1,7 +1,7 @@
 // Service worker for Indian Knowledge Bank PWA
 // Strategy: network-first for HTML, cache-first for static assets, cache Google Fonts.
 
-const CACHE = 'bgb-v4';
+const CACHE = 'bgb-v5';
 
 // Derive the base path from the SW's own URL so this works on both
 // localhost (served at /) and GitHub Pages (served at /bharatiy-gyan-bhandar/).

@@ -2,6 +2,27 @@
 // Pure curation: every step.path must resolve to a real route. See
 // IMPLEMENTATION_PLAN.md Part 4 for the design this implements.
 
+// The complete-path spine chains the themed journeys in plan order,
+// de-duplicated by destination — the whole guided sequence woven into one
+// path, beginning with the map (Śruti & Smṛti) exactly as First Steps does.
+// Navigation is journey-based only, so this IS the "read everything" journey.
+import { completePathSteps } from './complete-path';
+
+export const COMPLETE_PATH_ID = 'complete-path';
+
+export function chainedSteps(journeys: Journey[]): JourneyStep[] {
+  const seen = new Set<string>();
+  const steps: JourneyStep[] = [];
+  for (const j of journeys) {
+    for (const step of j.steps) {
+      if (seen.has(step.path)) continue;
+      seen.add(step.path);
+      steps.push(step);
+    }
+  }
+  return steps;
+}
+
 export type JourneyStep = {
   path: string; // existing route, e.g. '/upanishads/isha/'
   title: string; // display name for the step (matches the destination page's title)
@@ -19,7 +40,7 @@ export type Journey = {
   steps: JourneyStep[];
 };
 
-export const JOURNEYS: Journey[] = [
+const THEMED_JOURNEYS: Journey[] = [
   {
     id: 'first-steps',
     title: 'First Steps',
@@ -273,5 +294,18 @@ export const JOURNEYS: Journey[] = [
         minutes: 8,
       },
     ],
+  },
+];
+
+export const JOURNEYS: Journey[] = [
+  ...THEMED_JOURNEYS,
+  {
+    id: COMPLETE_PATH_ID,
+    title: 'The Complete Path',
+    deva: 'संपूर्ण मार्गः',
+    tagline: 'The whole collection in one order — begins with the map, then every section and every text in it, from first principles to the modern age, one short reading at a time.',
+    audience: 'For the reader who wants the whole sequence, start to finish',
+    accent: 'ac-knowledge',
+    steps: completePathSteps(chainedSteps(THEMED_JOURNEYS), 'en'),
   },
 ];

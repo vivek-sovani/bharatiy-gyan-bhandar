@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import DarshanaDetailView from '@/components/DarshanaDetail';
 import { DARSHANAS_DETAILS } from '@/lib/darshanas-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const data = DARSHANAS_DETAILS[id];
   if (!data) return {};
-  return {
+  return withOg('darshanas', {
     title: `${data.title} · ${data.deva} · Darśana`,
     description: data.explanation[0],
-  };
+  });
 }
 
 export default async function DarshanaPage({

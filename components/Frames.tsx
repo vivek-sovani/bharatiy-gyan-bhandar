@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { enterLibrary } from '@/lib/home-mode';
 import { Mandala, Glyph } from './Ornaments';
 import { ESSAYS as ESSAYS_EN } from '@/lib/data';
 import { ESSAYS as ESSAYS_MR } from '@/lib/data_mr';
@@ -158,11 +159,11 @@ export function Footer() {
         <div>
           <h5>{lang === 'mr' ? 'मार्गदर्शन' : 'Navigate'}</h5>
           <ul>
-            <li><Link href="/#sections">{t('nav.library')}</Link></li>
+            <li><Link href="/#sections" onClick={enterLibrary}>{t('nav.library')}</Link></li>
             <li><Link href="/journeys/">{t('nav.journeys')}</Link></li>
-            <li><Link href="/#contributors">{t('nav.contrib')}</Link></li>
-            <li><Link href="/#concepts">{t('nav.concepts')}</Link></li>
-            <li><Link href="/#living-knowledge">{t('nav.lk')}</Link></li>
+            <li><Link href="/#contributors" onClick={enterLibrary}>{t('nav.contrib')}</Link></li>
+            <li><Link href="/#concepts" onClick={enterLibrary}>{t('nav.concepts')}</Link></li>
+            <li><Link href="/#living-knowledge" onClick={enterLibrary}>{t('nav.lk')}</Link></li>
             <li><Link href="/lifestyle/">{t('nav.lifestyle')}</Link></li>
             <li><Link href="/privacy/">{lang === 'mr' ? 'गोपनीयता धोरण' : 'Privacy Policy'}</Link></li>
           </ul>

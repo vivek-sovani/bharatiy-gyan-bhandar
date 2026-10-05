@@ -8,6 +8,7 @@ import LangControl from './LangControl';
 import SiteShareButton from './SiteShareButton';
 import NotifySettings from './NotifySettings';
 import BackButtonHandler from './BackButtonHandler';
+import { enterLibrary } from '@/lib/home-mode';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Header() {
@@ -50,12 +51,12 @@ export default function Header() {
             className={`hdr-nav${menuOpen ? ' is-open' : ''}`}
             aria-label="Primary"
           >
-            <Link href="/#sections" onClick={close}>{t('nav.library')}</Link>
+            <Link href="/#sections" onClick={() => { enterLibrary(); close(); }}>{t('nav.library')}</Link>
             <Link href="/journeys/" onClick={close}>{t('nav.journeys')}</Link>
             <Link href="/map/" onClick={close}>{t('nav.map')}</Link>
-            <Link href="/#concepts" onClick={close}>{t('nav.concepts')}</Link>
-            <Link href="/#contributors" onClick={close}>{t('nav.contrib')}</Link>
-            <Link href="/#living-knowledge" onClick={close}>{t('nav.lk')}</Link>
+            <Link href="/#concepts" onClick={() => { enterLibrary(); close(); }}>{t('nav.concepts')}</Link>
+            <Link href="/#contributors" onClick={() => { enterLibrary(); close(); }}>{t('nav.contrib')}</Link>
+            <Link href="/#living-knowledge" onClick={() => { enterLibrary(); close(); }}>{t('nav.lk')}</Link>
             <Link href="/lifestyle/" onClick={close}>{t('nav.lifestyle')}</Link>
 
             <div className="hdr-nav-prefs">

@@ -3,14 +3,16 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Glyph } from './Ornaments';
-import { JOURNEYS as JOURNEYS_EN } from '@/lib/journeys-data';
+import { JOURNEYS as JOURNEYS_EN, COMPLETE_PATH_ID } from '@/lib/journeys-data';
 import { JOURNEYS as JOURNEYS_MR } from '@/lib/journeys-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
 import { journeyStats } from '@/lib/journey-progress';
 
 export default function JourneysListView() {
   const { lang, t } = useLanguage();
-  const JOURNEYS = lang === 'mr' ? JOURNEYS_MR : JOURNEYS_EN;
+  const ALL = lang === 'mr' ? JOURNEYS_MR : JOURNEYS_EN;
+  const spine = ALL.find((j) => j.id === COMPLETE_PATH_ID);
+  const JOURNEYS = ALL.filter((j) => j.id !== COMPLETE_PATH_ID);
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -33,6 +35,39 @@ export default function JourneysListView() {
           </div>
           <div className="meta">{t('jrn.meta').replace('{count}', String(JOURNEYS.length))}</div>
         </div>
+
+        {spine && (() => {
+          const stats = mounted ? journeyStats(spine) : null;
+          const cta = !stats || !stats.isStarted
+            ? t('spine.begin')
+            : stats.isComplete
+              ? t('jrn.complete_badge')
+              : t('spine.continue').replace('{n}', String(stats.nextIndex + 1));
+          return (
+            <Link
+              className="jrn-spine-feature"
+              href={`/journeys/${spine.id}/`}
+              style={{ '--accent': `var(--${spine.accent})` } as React.CSSProperties}
+            >
+              <div className="jrn-spine-feature-body">
+                <div className="eyebrow"><Glyph /> {t('spine.eyebrow')}</div>
+                <h2>{spine.title}</h2>
+                <p>{spine.tagline}</p>
+                <div className="jrn-card-meta">
+                  {t('jrn.steps_min')
+                    .replace('{steps}', String(spine.steps.length))
+                    .replace('{minutes}', String(spine.steps.reduce((s, x) => s + x.minutes, 0)))}
+                </div>
+                {stats && stats.isStarted && (
+                  <div className="jrn-progress" aria-hidden>
+                    <span className="jrn-progress-fill" style={{ width: `${stats.percent}%` }} />
+                  </div>
+                )}
+              </div>
+              <div className="jrn-card-cta">{cta}</div>
+            </Link>
+          );
+        })()}
 
         <div className="jrn-cards">
           {JOURNEYS.map((j) => {

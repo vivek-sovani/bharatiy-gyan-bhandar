@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import AgamaDetailView from '@/components/AgamaDetail';
 import { AGAMAS_DETAILS } from '@/lib/agamas-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const data = AGAMAS_DETAILS[id];
   if (!data) return {};
-  return {
+  return withOg('agamas', {
     title: `${data.title} · ${data.deva} · Āgama`,
     description: data.focus,
-  };
+  });
 }
 
 export default async function AgamaPage({

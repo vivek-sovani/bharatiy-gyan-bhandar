@@ -231,7 +231,8 @@ export function useExplorerNav(firstId: string) {
   const jumping = useRef<number | null>(null);
 
   useEffect(() => {
-    const h = document.querySelector('.hdr')?.getBoundingClientRect().height;
+    const bar = document.querySelector('.guided-bar') ?? document.querySelector('.hdr');
+    const h = bar?.getBoundingClientRect().height;
     if (h) setHdrH(h);
   }, []);
 

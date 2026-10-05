@@ -44,6 +44,12 @@ export function isStepVisited(journeyId: string, stepPath: string): boolean {
   return getProgressMap()[journeyId]?.visited.includes(stepPath) ?? false;
 }
 
+export function resetJourney(journeyId: string) {
+  const map = getProgressMap();
+  delete map[journeyId];
+  saveProgressMap(map);
+}
+
 export function journeyStats(journey: Journey) {
   const entry = getProgressMap()[journey.id];
   const visitedCount = entry

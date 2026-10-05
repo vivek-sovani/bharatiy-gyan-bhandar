@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import { Footer } from '@/components/Frames';
 import ItihasaDetailView from '@/components/ItihasaDetail';
 import { ITIHASA_DETAILS } from '@/lib/itihasa-data';
+import { withOg } from '@/lib/og';
 
 export const dynamicParams = false;
 
@@ -19,10 +20,10 @@ export async function generateMetadata({
   const { id } = await params;
   const data = ITIHASA_DETAILS[id];
   if (!data) return {};
-  return {
+  return withOg('itihasa', {
     title: `${data.title} · ${data.deva} · Itihāsa`,
     description: data.explanation[0],
-  };
+  });
 }
 
 export default async function ItihasaPage({

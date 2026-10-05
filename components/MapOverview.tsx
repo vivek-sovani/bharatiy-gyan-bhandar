@@ -4,16 +4,10 @@ import Link from 'next/link';
 import { Glyph } from './Ornaments';
 import { SECTIONS as SECTIONS_EN } from '@/lib/data';
 import { SECTIONS as SECTIONS_MR } from '@/lib/data_mr';
+import { ERAS } from '@/lib/eras';
 import { sectionPath } from '@/lib/routes';
 import { useLanguage } from '@/lib/LanguageContext';
 
-const ERAS = [
-  { id: 'vedic', en: 'Vedic', mr: 'वैदिक', dates: { en: 'c. 1500–600 BCE', mr: 'इ.स.पू. १५००–६००' }, color: 'var(--ac-vedic)' },
-  { id: 'classical', en: 'Classical', mr: 'शास्त्रीय', dates: { en: '600 BCE – 900 CE', mr: 'इ.स.पू. ६०० – इ.स. ९००' }, color: 'var(--ac-classical)' },
-  { id: 'medieval', en: 'Medieval', mr: 'मध्ययुगीन', dates: { en: '900 – 1750 CE', mr: 'इ.स. ९०० – १७५०' }, color: 'var(--ac-medieval)' },
-  { id: 'modern', en: 'Modern', mr: 'आधुनिक', dates: { en: '1750 CE onward', mr: 'इ.स. १७५० पासून' }, color: 'var(--ac-modern)' },
-  { id: 'all', en: 'Across all eras', mr: 'सर्व कालखंडांत', dates: { en: 'Living traditions', mr: 'जिवंत परंपरा' }, color: 'var(--ac-mind)' },
-] as const;
 
 // An overview of the whole collection by era. Each section opens its own page, which carries
 // that section's timeline and knowledge cards.

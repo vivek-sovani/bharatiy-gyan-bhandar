@@ -1,10 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { CornerOrn, Glyph } from './Ornaments';
 import { MAHAVAKYAS } from '@/lib/mahavakya-data';
+import { JOURNEYS as JOURNEYS_EN, COMPLETE_PATH_ID } from '@/lib/journeys-data';
+import { JOURNEYS as JOURNEYS_MR } from '@/lib/journeys-data_mr';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useDailyVerse } from '@/lib/useRandomVerse';
+import { isPrefaceRead } from '@/lib/home-mode';
+import { journeyStats } from '@/lib/journey-progress';
 import { OPEN_VERSE_EVENT, consumePendingOpen } from '@/lib/notifications';
 import Panchanga from './Panchanga';
 import VerseModal from './VerseModal';
@@ -15,6 +20,11 @@ export default function Hero() {
   const { lang, t } = useLanguage();
   const { index, next, isToday } = useDailyVerse(MAHAVAKYAS.length);
 
+  // Progress reads localStorage — deferred to a post-mount effect so the
+  // server-rendered and first client render agree (no hydration mismatch).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // Notification tap (Android) → open today's verse explanation
   useEffect(() => {
     if (consumePendingOpen('daily-mahavakya')) setShowModal(true);
@@ -24,6 +34,28 @@ export default function Hero() {
     window.addEventListener(OPEN_VERSE_EVENT, onOpen);
     return () => window.removeEventListener(OPEN_VERSE_EVENT, onOpen);
   }, []);
+
+  const spine = (lang === 'mr' ? JOURNEYS_MR : JOURNEYS_EN).find((j) => j.id === COMPLETE_PATH_ID);
+  const stats = mounted && spine ? journeyStats(spine) : null;
+
+  // First-time readers go to the Living Tree (orientation) before any path;
+  // once a reading is in progress, the CTA jumps straight back into it.
+  let startLabel = t('hero.begin_here');
+  let startHref = '#introduction';
+  let startSuffix = '↓';
+  if (spine && stats && stats.isStarted && !stats.isComplete) {
+    startLabel = t('hero.continue_reading');
+    startHref = `${spine.steps[stats.nextIndex].path}?j=${COMPLETE_PATH_ID}&s=${stats.nextIndex}`;
+    startSuffix = '→';
+  } else if (stats && stats.isComplete) {
+    startLabel = t('hero.explore_paths');
+    startHref = '#journeys';
+    startSuffix = '→';
+  } else if (mounted && isPrefaceRead()) {
+    // The orientation has been read: go straight to choosing a path.
+    startLabel = t('home.choose_path');
+    startHref = '#journeys';
+  }
 
   const vakya = MAHAVAKYAS[index];
   const verseLabel = isToday
@@ -43,6 +75,14 @@ export default function Hero() {
           <h1>
             {t('hero.title')}
           </h1>
+          <div className="hero-cta">
+            <Link className="hero-cta-primary" href={startHref}>
+              {startLabel} {startSuffix}
+            </Link>
+            <Link className="hero-cta-secondary" href="#journeys">
+              {t('hero.choose_path')}
+            </Link>
+          </div>
           <div className="shloka">
             <div className="eyebrow verse-label"><Glyph /> {verseLabel}</div>
             <div className="deva-line deva-only">

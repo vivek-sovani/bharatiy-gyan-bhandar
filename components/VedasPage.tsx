@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import SectionExplorer from './SectionExplorer';
+import { GuidedDeeper } from './Guided';
 import { CornerOrn, Glyph } from './Ornaments';
 import { transliterate } from '@/lib/transliterate';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -2844,17 +2845,19 @@ export default function VedasView() {
 
       <SectionExplorer embedded onDeepDive={deepDive} />
 
-      <section id="vedas-deep" className="frame">
-        <div className="shell">
-          <div className="frame-hd">
-            <div className="title-block">
-              <div className="eyebrow"><Glyph /> {t('vx.deep_eyebrow')}</div>
-              <h2>{t('vx.deep_title')}</h2>
+      <GuidedDeeper>
+        <section id="vedas-deep" className="frame">
+          <div className="shell">
+            <div className="frame-hd">
+              <div className="title-block">
+                <div className="eyebrow"><Glyph /> {t('vx.deep_eyebrow')}</div>
+                <h2>{t('vx.deep_title')}</h2>
+              </div>
             </div>
+            <VedaTabs />
           </div>
-          <VedaTabs />
-        </div>
-      </section>
+        </section>
+      </GuidedDeeper>
     </>
   );
 }

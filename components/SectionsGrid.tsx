@@ -158,6 +158,7 @@ export default function SectionsGrid() {
           <div className="title-block">
             <div className="eyebrow"><Glyph /> {t('grid.eyebrow')}</div>
             <h2>{t('grid.title')}</h2>
+            <p className="grid-lede">{t('grid.lede')}</p>
           </div>
           <div className="meta">
             {t('grid.showing')
