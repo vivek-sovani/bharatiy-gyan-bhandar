@@ -2800,7 +2800,9 @@ export default function VedasView() {
 
   const deepDive = (id: string) => {
     window.dispatchEvent(new CustomEvent('vedas:select', { detail: id }));
-    document.getElementById('vedas-deep')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // While following a path the deeper material is folded away; open it before scrolling to it.
+    window.dispatchEvent(new Event('gd:open-deeper'));
+    window.setTimeout(() => document.getElementById('vedas-deep')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   };
 
   return (

@@ -173,6 +173,11 @@ export function GuidedToast() {
 export function GuidedDeeper({ children }: { children: React.ReactNode }) {
   const { t } = useLanguage();
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const show = () => setOpen(true);
+    window.addEventListener('gd:open-deeper', show);
+    return () => window.removeEventListener('gd:open-deeper', show);
+  }, []);
   return (
     <div className={`gd-deeper${open ? ' is-open' : ''}`}>
       <button type="button" className="gd-deeper-btn" aria-expanded={open} onClick={() => setOpen((v) => !v)}>

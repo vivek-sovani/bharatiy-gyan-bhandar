@@ -4822,3 +4822,5 @@ html:not([data-preface="read"]) .preface-bar { display: none; }
 }
 .upd-later { appearance: none; cursor: pointer; background: none; border: 0; color: inherit; opacity: 0.75; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .upd-later:hover { opacity: 1; }
+
+#vedas-deep { scroll-margin-top: calc(var(--guided-h, 64px) + 12px); }
