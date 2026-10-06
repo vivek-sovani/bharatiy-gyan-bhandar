@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {
   Timeline,
   SeerDetail,
+  DetailModal,
   fmtSpan,
   num,
   resolveSeers,
@@ -177,14 +178,13 @@ export default function UpanishadExplorer() {
                 </ul>
 
                 {selText && (
-                  <div className="vx-detail">
-                    <button type="button" className="vx-detail-x" aria-label={t('vx.close')} onClick={() => setSels((p) => ({ ...p, [g.id]: null }))}>×</button>
+                  <DetailModal onClose={() => setSels((p) => ({ ...p, [g.id]: null }))}>
                     <div className="eyebrow">{selText.vedaAssociation} · {selText.versesCount}</div>
                     <h3>{selText.title} {!mr && <span className="deva-only">{selText.deva}</span>}</h3>
                     <p>{selText.explanation[0]}</p>
                     <ul className="tl-tags">{selText.coreIdeas.map((c) => <li key={c.name}>{c.name}</li>)}</ul>
                     <Link className="chip" href={`/upanishads/${selText.id}/`}>{t('up.open')} →</Link>
-                  </div>
+                  </DetailModal>
                 )}
                 {selSeer && <SeerDetail seer={selSeer} onClose={() => setSels((p) => ({ ...p, [g.id]: null }))} />}
               </article>

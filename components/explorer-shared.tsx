@@ -201,11 +201,30 @@ export function Timeline({
   );
 }
 
+// A selection opens as a popup over the page, so it is seen wherever the card's links sit.
+export function DetailModal({ onClose, children }: { onClose: () => void; children: React.ReactNode }) {
+  const { t } = useLanguage();
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev; };
+  }, [onClose]);
+  return (
+    <div className="vx-modal" onClick={onClose}>
+      <div className="vx-detail" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="vx-detail-x" aria-label={t('vx.close')} onClick={onClose} autoFocus>×</button>
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export function SeerDetail({ seer, onClose }: { seer: Seer; onClose: () => void }) {
   const { t } = useLanguage();
   return (
-    <div className="vx-detail">
-      <button type="button" className="vx-detail-x" aria-label={t('vx.close')} onClick={onClose}>×</button>
+    <DetailModal onClose={onClose}>
       <div className="vx-detail-seer">
         <span className="vx-medal">{seer.seal}</span>
         <div>
@@ -216,7 +235,7 @@ export function SeerDetail({ seer, onClose }: { seer: Seer; onClose: () => void 
       <p>{seer.blurb}</p>
       {seer.works.length > 0 && <ul className="tl-tags">{seer.works.map((w) => <li key={w}>{w}</li>)}</ul>}
       {seer.href && <Link className="chip" href={seer.href}>{t('vx.open_related')} →</Link>}
-    </div>
+    </DetailModal>
   );
 }
 

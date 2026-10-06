@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
 
@@ -17,11 +18,19 @@ type Props = {
   children?: React.ReactNode;
 };
 
-// Shared detail card for the Schools and Tree views (the timeline keeps its own inline copy).
+// Detail popup for the Schools map.
 export default function MapNodePanel({ color, eyebrow, title, deva, blurb, tags, links, onClose, children }: Props) {
   const { t } = useLanguage();
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev; };
+  }, [onClose]);
   return (
-    <aside className="tl-panel" style={{ '--c': color } as React.CSSProperties} aria-live="polite">
+    <div className="vx-modal" onClick={onClose}>
+    <aside className="tl-panel" role="dialog" aria-modal="true" style={{ '--c': color } as React.CSSProperties} onClick={(e) => e.stopPropagation()}>
       <button type="button" className="tl-panel-x" aria-label={t('map.close')} onClick={onClose}>×</button>
       {eyebrow && <div className="eyebrow">{eyebrow}</div>}
       <h2>{title}</h2>
@@ -41,5 +50,6 @@ export default function MapNodePanel({ color, eyebrow, title, deva, blurb, tags,
         </div>
       )}
     </aside>
+    </div>
   );
 }

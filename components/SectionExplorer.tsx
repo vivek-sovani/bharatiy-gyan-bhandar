@@ -6,6 +6,7 @@ import { Glyph } from './Ornaments';
 import {
   Timeline as SharedTimeline,
   SeerDetail,
+  DetailModal,
   fmtSpan,
   num,
   resolveSeers,
@@ -99,26 +100,23 @@ function Timeline(props: {
 
 function Detail({ item, sel, mr, onClose }: { item: ExplorerItem; sel: NonNullable<Sel>; mr: boolean; onClose: () => void }) {
   const { t } = useLanguage();
-  const close = <button type="button" className="vx-detail-x" aria-label={t('vx.close')} onClick={onClose}>×</button>;
   if (sel.kind === 'stratum') {
     const st = item.strata.find((s) => s.key === sel.key)!;
     const L = stratumLabel(sel.key, mr);
     const texts = TEXTS[sel.key][item.id] ?? [];
     return (
-      <div className="vx-detail">
-        {close}
+      <DetailModal onClose={onClose}>
         <div className="eyebrow">{L.role} · {fmtSpan(st.a, st.b, mr)}</div>
         <h3>{L.en} {!mr && <span className="deva-only">{L.deva}</span>}</h3>
         <p>{texts.length ? texts.map((x) => (mr ? x.deva : x.name)).join(' · ') : t('vx.pending')}</p>
-      </div>
+      </DetailModal>
     );
   }
   if (sel.kind === 'text') {
     const x = (TEXTS[sel.key][item.id] ?? [])[sel.i];
     if (!x) return null;
     return (
-      <div className="vx-detail">
-        {close}
+      <DetailModal onClose={onClose}>
         <div className="eyebrow">{stratumLabel(sel.key, mr).en} · {mr ? x.statusDeva : x.status}</div>
         <h3>{mr ? x.deva : x.name} {!mr && <span className="deva-only">{x.deva}</span>}</h3>
         <p>{mr ? x.descDeva || x.desc : x.desc}</p>
@@ -126,7 +124,7 @@ function Detail({ item, sel, mr, onClose }: { item: ExplorerItem; sel: NonNullab
           <li>{mr ? x.structureDeva : x.structure}</li>
           {(mr ? x.regionDeva : x.region) && <li>{mr ? x.regionDeva : x.region}</li>}
         </ul>
-      </div>
+      </DetailModal>
     );
   }
   const s = resolveSeers(item.seers, mr, SEERS_MR).find((q) => q.id === sel.id);

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {
   Timeline,
   SeerDetail,
+  DetailModal,
   fmtSpan,
   resolveSeers,
   useExplorerNav,
@@ -217,8 +218,7 @@ export default function GenericExplorer({ sectionId }: { sectionId: string }) {
                 )}
 
                 {selItem && (
-                  <div className="vx-detail">
-                    <button type="button" className="vx-detail-x" aria-label={t('vx.close')} onClick={() => setSels((p) => ({ ...p, [g.id]: null }))}>×</button>
+                  <DetailModal onClose={() => setSels((p) => ({ ...p, [g.id]: null }))}>
                     <div className="eyebrow">{selItem.meta.slice(0, 2).join(' · ')}</div>
                     <h3>{selItem.title} {!mr && selItem.deva !== selItem.title && <span className="deva-only">{selItem.deva}</span>}</h3>
                     <p>{selItem.summary}</p>
@@ -231,7 +231,7 @@ export default function GenericExplorer({ sectionId }: { sectionId: string }) {
                     )}
                     {selItem.facets && <ul className="tl-tags">{selItem.facets.map((f) => <li key={f}>{f}</li>)}</ul>}
                     <Link className="chip" href={`${base}${selItem.id}/`}>{t('up.open')} →</Link>
-                  </div>
+                  </DetailModal>
                 )}
                 {selSeer && <SeerDetail seer={selSeer} onClose={() => setSels((p) => ({ ...p, [g.id]: null }))} />}
               </article>
