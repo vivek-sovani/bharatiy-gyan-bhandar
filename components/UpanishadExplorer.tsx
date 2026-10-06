@@ -6,6 +6,7 @@ import {
   Timeline,
   SeerDetail,
   DetailModal,
+  LaneFit,
   fmtSpan,
   num,
   resolveSeers,
@@ -137,7 +138,7 @@ export default function UpanishadExplorer() {
                 <p className="vx-blurb">{mr ? g.blurb.mr : g.blurb.en}</p>
 
                 <div className="vx-lane-m">
-                  <Timeline {...common} lanes={[lanes[gi]]} W={640} gutter={8} activeId={g.id} names={false} />
+                  <LaneFit>{(W) => <Timeline {...common} lanes={[lanes[gi]]} W={W} gutter={8} activeId={g.id} names={false} />}</LaneFit>
                 </div>
 
                 <h3 className="vx-sub">{t('up.texts')}</h3>

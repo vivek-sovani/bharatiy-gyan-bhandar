@@ -111,6 +111,11 @@ export function Timeline({
 }) {
   const x = (y: number) => gutter + ((y - range[0]) / (range[1] - range[0])) * (W - gutter - 14);
 
+  // On a narrow lane the fixed rows give way to automatic packing so every layer can carry its label
+  // beside its bar, and tick labels thin out so they do not overprint.
+  const narrow = W < 460;
+  const tickStep = ticks.length > 1 ? Math.max(1, Math.ceil(64 / Math.abs(x(ticks[1]) - x(ticks[0])))) : 1;
+
   // Bars are packed in pixel space so a label that has to sit beside a short bar
   // still reserves its width. Bars with a fixed row (the Vedas) keep that row and
   // draw their label inside only.
@@ -121,7 +126,7 @@ export function Timeline({
       const x1 = x(b.a);
       const w = Math.max(10, x(b.b) - x1);
       const tw = b.label.length * (mr ? 7.6 : 6) + 12;
-      const fixed = b.row !== undefined;
+      const fixed = b.row !== undefined && !narrow;
       const inside = fixed ? w > 62 : w >= tw;
       const right = x1 + (inside ? w : w + 4 + tw);
       let r: number;
@@ -143,12 +148,12 @@ export function Timeline({
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="vx-svg" role="group" aria-label={label}>
-      {ticks.map((y) => (
+      {ticks.map((y, ti) => (
         <g key={y}>
           <line className="vx-tick" x1={x(y)} x2={x(y)} y1={AXIS_H - 4} y2={H} />
-          <text className="vx-tick-label" x={x(y)} y={AXIS_H - 10} textAnchor="middle">
+          {ti % tickStep === 0 && <text className="vx-tick-label" x={x(y)} y={AXIS_H - 10} textAnchor={x(y) > W - 36 ? 'end' : 'middle'}>
             {y === 0 ? (mr ? 'इ.स. १' : '1 CE') : y > 0 ? (mr ? `${num(y, true)} इ.स.` : `${y} CE`) : mr ? `${num(-y, true)} इ.स.पू.` : `${-y} BCE`}
-          </text>
+          </text>}
         </g>
       ))}
       {laid.map(({ l, placed, h }) => {
@@ -182,7 +187,7 @@ export function Timeline({
                     style={{ fill: `color-mix(in oklab, var(--vc) ${b.shade}%, var(--paper-elev))` }} />
                   {inside
                     ? <text x={x1 + 7} y={y + 10.5} className="vx-strat-label">{b.label}</text>
-                    : b.row === undefined && <text x={x1 + w + 5} y={y + 10.5} className="vx-strat-label vx-strat-out">{b.label}</text>}
+                    : (b.row === undefined || narrow) && <text x={x1 + w + 5} y={y + 10.5} className="vx-strat-label vx-strat-out">{b.label}</text>}
                 </g>
               );
             })}
@@ -199,6 +204,21 @@ export function Timeline({
       })}
     </svg>
   );
+}
+
+// Draws a timeline at the pixel width it has been given, so text keeps its size on a narrow screen
+// and the labels re-pack to fit instead of the whole lane being shrunk or scrolled.
+export function LaneFit({ children }: { children: (W: number) => React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [w, setW] = useState(340);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([e]) => setW(Math.round(Math.min(640, Math.max(260, e.contentRect.width)))));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return <div ref={ref}>{children(w)}</div>;
 }
 
 // A selection opens as a popup over the page, so it is seen wherever the card's links sit.

@@ -7,6 +7,7 @@ import {
   Timeline as SharedTimeline,
   SeerDetail,
   DetailModal,
+  LaneFit,
   fmtSpan,
   num,
   resolveSeers,
@@ -214,7 +215,7 @@ export default function SectionExplorer({ embedded = false, onDeepDive }: { embe
               <p className="vx-blurb">{txt.blurb}</p>
 
               <div className="vx-lane-m">
-                <Timeline items={[it]} W={640} gutter={8} activeId={it.id} names={false} mr={mr} label={tlLabel} onPick={pick} />
+                <LaneFit>{(W) => <Timeline items={[it]} W={W} gutter={8} activeId={it.id} names={false} mr={mr} label={tlLabel} onPick={pick} />}</LaneFit>
               </div>
 
               <h3 className="vx-sub">{t('vx.layers')}</h3>

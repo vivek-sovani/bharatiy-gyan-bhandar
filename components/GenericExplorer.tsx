@@ -6,6 +6,7 @@ import {
   Timeline,
   SeerDetail,
   DetailModal,
+  LaneFit,
   fmtSpan,
   resolveSeers,
   useExplorerNav,
@@ -169,7 +170,7 @@ export default function GenericExplorer({ sectionId }: { sectionId: string }) {
 
                 {timeline && multi && (
                   <div className="vx-lane-m">
-                    <Timeline {...common} lanes={[lanes[gi]]} W={640} gutter={8} activeId={g.id} names={false} />
+                    <LaneFit>{(W) => <Timeline {...common} lanes={[lanes[gi]]} W={W} gutter={8} activeId={g.id} names={false} />}</LaneFit>
                   </div>
                 )}
 

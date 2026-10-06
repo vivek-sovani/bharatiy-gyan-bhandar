@@ -4379,7 +4379,7 @@ html[lang="mr"] .concept-ref-tag {
 .vx-pinned .vx-pill { font-size: 0.9rem; padding: 0.2rem 0.7rem; }
 .vx-frame { overflow: clip; }
 
-.vx-cards { display: grid; gap: 1.6rem; margin-top: 1.8rem; }
+.vx-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; margin-top: 1.8rem; }
 .vx-card {
   position: relative; padding: 1.5rem 1.7rem 1.6rem; scroll-margin-top: calc(var(--vx-top, 64px) + 150px);
   background: var(--paper-elev); border: 1px solid var(--rule-strong); border-left: 6px solid var(--vc);
@@ -4477,10 +4477,6 @@ html[lang="mr"] .concept-ref-tag {
   .vx-pinned .vx-chips { display: flex; overflow-x: auto; flex-wrap: nowrap; }
   .vx-card { padding: 1.2rem 1.1rem 1.3rem; }
   .vx-medal-lg { width: 50px; height: 50px; font-size: 1.4rem; }
-}
-@media (max-width: 700px) {
-  .vx-lane-m { overflow-x: auto; margin-right: -0.4rem; }
-  .vx-lane-m .vx-svg { min-width: 560px; }
 }
 
 .vx-deep {
