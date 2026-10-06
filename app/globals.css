@@ -2496,51 +2496,19 @@ body::after {
     padding: 2rem 0 1.5rem;
   }
 
-  /* Vedas tab navigation */
-  .veda-tab-nav {
-    display: flex !important;
-    grid-template-columns: none !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+  /* Vedas and section tab navigation: boxes laid out two across so every one is visible without swiping */
+  .veda-tab-nav, .sec-tabs-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     border-bottom: 1px solid var(--rule-strong);
   }
-  .veda-tab-nav::-webkit-scrollbar {
-    display: none;
-  }
-  .veda-tab {
-    flex: 0 0 160px;
-    scroll-snap-align: start;
+  .veda-tab, .sec-tab {
+    min-width: 0;
     border-right: 1px solid var(--rule);
-    border-bottom: 0 !important;
+    border-bottom: 1px solid var(--rule) !important;
     padding: 1rem;
   }
-  .veda-tab:last-child {
-    border-right: 0;
-  }
-
-  /* Section tab navigation */
-  .sec-tabs-nav {
-    display: flex !important;
-    grid-template-columns: none !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    border-bottom: 1px solid var(--rule-strong);
-  }
-  .sec-tabs-nav::-webkit-scrollbar {
-    display: none;
-  }
-  .sec-tab {
-    flex: 0 0 150px;
-    scroll-snap-align: start;
-    border-right: 1px solid var(--rule);
-    border-bottom: 0 !important;
-    padding: 1rem;
-  }
-  .sec-tab:last-child {
+  .veda-tab:nth-child(2n), .sec-tab:nth-child(2n) {
     border-right: 0;
   }
 
@@ -3736,13 +3704,7 @@ html[lang="mr"] .concept-ref-tag {
   .contrib-modal-close { width: 44px; height: 44px; justify-content: center; }
 }
 
-/* 4 · Tab strips — fade the right edge on mobile so hidden tabs are discoverable. */
-@media (max-width: 600px) {
-  .sec-tabs-nav, .veda-tab-nav {
-    -webkit-mask: linear-gradient(90deg, #000 86%, transparent);
-            mask: linear-gradient(90deg, #000 86%, transparent);
-  }
-}
+
 
 /* 5 · Vedas page — bring it back onto the design system:
        square folios (not 6px), OKLCH status badges that theme, explicit font. */
@@ -4824,3 +4786,7 @@ html:not([data-preface="read"]) .preface-bar { display: none; }
 .upd-later:hover { opacity: 1; }
 
 #vedas-deep { scroll-margin-top: calc(var(--guided-h, 64px) + 12px); }
+
+/* Grid columns may shrink below their content, and long words wrap, so nothing is cut off on a phone */
+.sec-panel > *, .veda-panel > *, .veda-strata, .stratum-details-panel { min-width: 0; }
+.sec-panel, .veda-panel, .stratum-details-panel { overflow-wrap: anywhere; }
