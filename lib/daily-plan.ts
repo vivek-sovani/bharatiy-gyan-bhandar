@@ -10,6 +10,7 @@ import { SECTION_DETAILS as DETAILS_EN } from './section-data';
 import { SECTION_DETAILS as DETAILS_MR } from './section-data_mr';
 import { LIVING_KNOWLEDGE as GIFTS_EN } from './living-knowledge-data';
 import { LIVING_KNOWLEDGE as GIFTS_MR } from './living-knowledge-data_mr';
+import { DAILY_POSTS } from './daily-posts';
 
 type Lang = 'en' | 'mr';
 
@@ -63,10 +64,43 @@ export function trimSummary(text: string, maxWords: number): string {
 const DEVA_DIGITS = '०१२३४५६७८९';
 const toDeva = (n: number) => String(n).replace(/\d/g, (d) => DEVA_DIGITS[+d]);
 
-// The ready-to-send WhatsApp message: Marathi then English, one link.
+// The ready-to-send WhatsApp message: Marathi then English. Each step has a hand-written post in
+// daily-posts; a step without one falls back to text assembled from the site's own data.
 export function buildWhatsAppMessage(index: number, siteUrl: string): string {
   const en = planSteps('en')[index];
   const mr = planSteps('mr')[index];
+  const post = DAILY_POSTS[en.path];
+  if (post) {
+    const link = `${siteUrl}${en.path}?j=${COMPLETE_PATH_ID}&s=${index}`;
+    const day = index + 1;
+    return [
+      `📖 *दिवस ${toDeva(day)} · Day ${day}*`,
+      '',
+      `*${post.mr.title}*`,
+      `_${post.mr.tagline}_`,
+      '',
+      post.mr.body,
+      '',
+      `💭 ${post.mr.thought}`,
+      '',
+      `⏱ ${toDeva(en.minutes)} मिनिटे`,
+      '👉 पुढे वाचा:',
+      link,
+      '',
+      `📖 *Day ${day}*`,
+      '',
+      `*${post.en.title}*`,
+      `_${post.en.tagline}_`,
+      '',
+      post.en.body,
+      '',
+      `💭 ${post.en.thought}`,
+      '',
+      `⏱ ${en.minutes} min read`,
+      '👉 Read more:',
+      link,
+    ].join('\n');
+  }
   const ce = stepContent(en.path, 'en');
   const cm = stepContent(mr.path, 'mr');
   const day = index + 1;
