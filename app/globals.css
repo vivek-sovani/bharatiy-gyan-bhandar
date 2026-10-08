@@ -4792,3 +4792,5 @@ html:not([data-preface="read"]) .preface-bar { display: none; }
 /* Grid columns may shrink below their content, and long words wrap, so nothing is cut off on a phone */
 .sec-panel > *, .veda-panel > *, .veda-strata, .stratum-details-panel { min-width: 0; }
 .sec-panel, .veda-panel, .stratum-details-panel { overflow-wrap: anywhere; }
+
+.dp-intro { margin-bottom: 2.4rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--rule-strong); }

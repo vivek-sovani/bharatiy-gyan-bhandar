@@ -5,11 +5,13 @@ import Link from 'next/link';
 import { Glyph } from './Ornaments';
 import { COMPLETE_PATH_ID } from '@/lib/journeys-data';
 import { DAILY_LENGTH, buildWhatsAppMessage, planSteps } from '@/lib/daily-plan';
+import { buildIntroMessage } from '@/lib/daily-intro';
 
 // Links in a posted message must always point at the live site, whatever the local base path is.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vivek-sovani.github.io/bharatiy-gyan-bhandar';
 
 const KEY = 'bgb-daily-progress';
+const INTRO_KEY = 'bgb-daily-intro';
 
 // `next` counts posts sent so far (it keeps growing past the end of the path, which wraps round).
 // The sequence moves only when a post is marked as sent, so a missed day changes nothing.
@@ -25,14 +27,16 @@ const isoToday = () => {
 const fmtDate = (iso: string) =>
   new Date(`${iso}T00:00:00`).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
 
-// WhatsApp formats *text* as bold; show the same in the preview.
+// WhatsApp formats *text* as bold and _text_ as italic; show the same in the preview.
 function Bubble({ text }: { text: string }) {
   return (
     <div className="dp-bubble">
       {text.split('\n').map((line, i) => (
         <p key={i}>
-          {line.split(/(\*[^*]+\*)/g).map((seg, j) =>
-            seg.startsWith('*') && seg.endsWith('*') ? <strong key={j}>{seg.slice(1, -1)}</strong> : seg,
+          {line.split(/(\*[^*]+\*|(?<![\w/])_[^_]+_(?![\w/]))/g).map((seg, j) =>
+            seg.startsWith('*') && seg.endsWith('*') && seg.length > 1 ? <strong key={j}>{seg.slice(1, -1)}</strong>
+              : seg.startsWith('_') && seg.endsWith('_') && seg.length > 1 ? <em key={j}>{seg.slice(1, -1)}</em>
+              : seg,
           )}
         </p>
       ))}
@@ -43,8 +47,10 @@ function Bubble({ text }: { text: string }) {
 export default function DailyPost() {
   const [prog, setProg] = useState<Progress | null>(null);
   const [view, setView] = useState<number | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<'day' | 'intro' | null>(null);
   const [showAll, setShowAll] = useState(false);
+  const [introDone, setIntroDone] = useState<string | null>(null);
+  const [introOpen, setIntroOpen] = useState(true);
 
   useEffect(() => {
     try {
@@ -53,6 +59,11 @@ export default function DailyPost() {
     } catch {
       setProg(EMPTY);
     }
+    try {
+      const posted = localStorage.getItem(INTRO_KEY);
+      setIntroDone(posted);
+      setIntroOpen(!posted);
+    } catch { /* the introduction then simply stays open */ }
   }, []);
 
   const save = useCallback((p: Progress) => {
@@ -69,20 +80,31 @@ export default function DailyPost() {
   const message = useMemo(() => buildWhatsAppMessage(index, SITE_URL), [index]);
   const link = `${step.path}?j=${COMPLETE_PATH_ID}&s=${index}`;
 
-  const copy = useCallback(async () => {
+  const introMessage = useMemo(() => buildIntroMessage(SITE_URL), []);
+
+  const copy = useCallback(async (text: string, which: 'day' | 'intro') => {
     try {
-      await navigator.clipboard.writeText(message);
+      await navigator.clipboard.writeText(text);
     } catch {
       const ta = document.createElement('textarea');
-      ta.value = message;
+      ta.value = text;
       document.body.appendChild(ta);
       ta.select();
       document.execCommand('copy');
       ta.remove();
     }
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 2200);
-  }, [message]);
+    setCopied(which);
+    window.setTimeout(() => setCopied(null), 2200);
+  }, []);
+
+  const markIntro = (iso: string | null) => {
+    setIntroDone(iso);
+    setIntroOpen(!iso);
+    try {
+      if (iso) localStorage.setItem(INTRO_KEY, iso);
+      else localStorage.removeItem(INTRO_KEY);
+    } catch { /* kept for this page view only */ }
+  };
 
   if (!prog) return <section className="frame"><div className="shell"><p className="vx-lede">Loading your next post…</p></div></section>;
 
@@ -120,6 +142,38 @@ export default function DailyPost() {
           The sequence moves on only when you mark a post as sent, so a missed day never skips a reading.
         </p>
 
+        <div className="dp-intro">
+          {introDone && !introOpen ? (
+            <p className="dp-last">
+              Day 0, the introduction, was posted on {fmtDate(introDone)}.{' '}
+              <button type="button" className="dp-link" onClick={() => setIntroOpen(true)}>View it again</button>
+            </p>
+          ) : (
+            <>
+              <div className="dp-meta">
+                <span className="dp-day">Day 0 · Introduction{introDone ? '' : ' · post this first'}</span>
+              </div>
+              <div className="dp-grid">
+                <Bubble text={introMessage} />
+                <div className="dp-actions">
+                  <button type="button" className="dp-btn" onClick={() => copy(introMessage, 'intro')}>{copied === 'intro' ? 'Copied ✓' : 'Copy introduction'}</button>
+                  <a className="dp-btn" href={`https://wa.me/?text=${encodeURIComponent(introMessage)}`} target="_blank" rel="noopener noreferrer">
+                    Send on WhatsApp ↗
+                  </a>
+                  {introDone ? (
+                    <button type="button" className="dp-btn" onClick={() => setIntroOpen(false)}>Hide the introduction</button>
+                  ) : (
+                    <button type="button" className="dp-btn is-primary" onClick={() => markIntro(isoToday())}>Mark introduction as posted ✓</button>
+                  )}
+                  <p className="dp-note">
+                    This goes out once, before Day 1. It does not count as one of the numbered posts.
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+
         <div className="dp-meta">
           <span className="dp-day">{isNext ? 'Your next post' : 'Previewing'} · Day {index + 1} of {DAILY_LENGTH}</span>
           {round > 1 && <span>Round {round}</span>}
@@ -134,7 +188,7 @@ export default function DailyPost() {
         <div className="dp-grid">
           <Bubble text={message} />
           <div className="dp-actions">
-            <button type="button" className="dp-btn" onClick={copy}>{copied ? 'Copied ✓' : 'Copy message'}</button>
+            <button type="button" className="dp-btn" onClick={() => copy(message, 'day')}>{copied === 'day' ? 'Copied ✓' : 'Copy message'}</button>
             <a className="dp-btn" href={`https://wa.me/?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer">
               Send on WhatsApp ↗
             </a>
