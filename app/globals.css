@@ -1016,10 +1016,12 @@ a:hover { color: var(--gold-deep); }
   text-transform: uppercase;
   color: var(--ink-faint);
 }
+.notify-time { display: flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
+.notify-time span { flex: 1; }
 .notify-opts input,
 .notify-opts select {
   font: inherit;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--ink);
   background: var(--paper);
   border: 1px solid var(--rule-strong);
