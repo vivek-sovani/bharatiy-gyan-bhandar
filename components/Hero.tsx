@@ -10,7 +10,6 @@ import { useLanguage } from '@/lib/LanguageContext';
 import { useDailyVerse } from '@/lib/useRandomVerse';
 import { isPrefaceRead } from '@/lib/home-mode';
 import { journeyStats } from '@/lib/journey-progress';
-import { OPEN_VERSE_EVENT, consumePendingOpen } from '@/lib/notifications';
 import Panchanga from './Panchanga';
 import VerseModal from './VerseModal';
 import ShareButton from './ShareButton';
@@ -24,16 +23,6 @@ export default function Hero() {
   // server-rendered and first client render agree (no hydration mismatch).
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-
-  // Notification tap (Android) → open today's verse explanation
-  useEffect(() => {
-    if (consumePendingOpen('daily-mahavakya')) setShowModal(true);
-    const onOpen = (e: Event) => {
-      if ((e as CustomEvent).detail === 'daily-mahavakya') setShowModal(true);
-    };
-    window.addEventListener(OPEN_VERSE_EVENT, onOpen);
-    return () => window.removeEventListener(OPEN_VERSE_EVENT, onOpen);
-  }, []);
 
   const spine = (lang === 'mr' ? JOURNEYS_MR : JOURNEYS_EN).find((j) => j.id === COMPLETE_PATH_ID);
   const stats = mounted && spine ? journeyStats(spine) : null;

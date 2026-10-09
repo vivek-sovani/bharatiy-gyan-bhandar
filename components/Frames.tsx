@@ -13,23 +13,12 @@ import { getPanchanga, type PanchangaInfo } from '@/lib/panchanga';
 import VerseModal from './VerseModal';
 import ShareButton from './ShareButton';
 import SiteShareButton from './SiteShareButton';
-import { OPEN_VERSE_EVENT, consumePendingOpen } from '@/lib/notifications';
 
 export function DailyStrip() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { lang, t } = useLanguage();
   const [showModal, setShowModal] = useState(false);
   const { index, next, isToday } = useDailyVerse(SUBHASHITS.length);
-
-  // Notification tap (Android) → open today's verse explanation
-  useEffect(() => {
-    if (consumePendingOpen('daily-subhashita')) setShowModal(true);
-    const onOpen = (e: Event) => {
-      if ((e as CustomEvent).detail === 'daily-subhashita') setShowModal(true);
-    };
-    window.addEventListener(OPEN_VERSE_EVENT, onOpen);
-    return () => window.removeEventListener(OPEN_VERSE_EVENT, onOpen);
-  }, []);
 
   const sub = SUBHASHITS[index];
   const meaning = lang === 'mr' ? sub.meaningMr : sub.meaningEn;
