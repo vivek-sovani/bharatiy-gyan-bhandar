@@ -4794,3 +4794,5 @@ html:not([data-preface="read"]) .preface-bar { display: none; }
 .sec-panel, .veda-panel, .stratum-details-panel { overflow-wrap: anywhere; }
 
 .dp-intro { margin-bottom: 2.4rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--rule-strong); }
+
+.ftr-version { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--ink-faint); margin-top: 0.6rem; }

@@ -143,6 +143,7 @@ export function Footer() {
           )}
           <p>{t('footer.colophon')}</p>
           <p className="ftr-credit">{t('footer.compiled_by')}</p>
+          <p className="ftr-version">{lang === 'mr' ? 'आवृत्ती' : 'Version'} {(process.env.NEXT_PUBLIC_BUILD_ID ?? 'dev').slice(0, 7)}</p>
           <SiteShareButton variant="footer" />
         </div>
         <div>
