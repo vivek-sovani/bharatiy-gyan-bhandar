@@ -1,14 +1,9 @@
 // Vikram Samvat panchanga computation, built on top of mhah-panchang.
 // Returns bilingual (EN + MR) labels for tithi, paksha, masa, vara, and samvat year.
 //
-// Uses Ujjain coordinates — the canonical reference point for Vikram Samvat
-// (Mahakaleshwar / Vikramaditya) — for the sunrise-anchored Masa calculation.
+// The lunar month follows the amānta reckoning (see amantaMasa).
 
 import { MhahPanchang } from 'mhah-panchang';
-
-// Ujjain (Mahakaleshwar) — canonical reference for Vikram era
-const UJJAIN_LAT = 23.1765;
-const UJJAIN_LNG = 75.7885;
 
 // Tithi names — keyed by mhah-panchang's name_en_IN, which uses Telugu-style
 // names (Padyami, Vidhiya, Thadiya, …) without a paksha prefix. We map each to
@@ -57,21 +52,98 @@ const VARA_NAMES: Record<string, { en: string; mr: string }> = {
   Saturday:  { en: 'Śanivāra',   mr: 'शनिवार' },
 };
 
-// Hindu lunar months — keyed by mhah-panchang's name_en_IN
-const MASA_NAMES: Record<string, { en: string; mr: string; gregorianStart: number }> = {
-  Chaitra:    { en: 'Caitra',     mr: 'चैत्र',     gregorianStart: 3 },  // ~March-April
-  Vaisakha:   { en: 'Vaiśākha',   mr: 'वैशाख',     gregorianStart: 4 },
-  Jyestha:    { en: 'Jyeṣṭha',    mr: 'ज्येष्ठ',    gregorianStart: 5 },
-  Ashadha:    { en: 'Āṣāḍha',     mr: 'आषाढ',     gregorianStart: 6 },
-  Sravana:    { en: 'Śrāvaṇa',    mr: 'श्रावण',    gregorianStart: 7 },
-  Bhadrapada: { en: 'Bhādrapada', mr: 'भाद्रपद',   gregorianStart: 8 },
-  Ashwina:    { en: 'Āśvina',     mr: 'आश्विन',    gregorianStart: 9 },
-  Karthika:   { en: 'Kārtika',    mr: 'कार्तिक',   gregorianStart: 10 },
-  Margasira:  { en: 'Mārgaśīrṣa', mr: 'मार्गशीर्ष', gregorianStart: 11 },
-  Pausha:     { en: 'Pauṣa',      mr: 'पौष',      gregorianStart: 12 },
-  Magha:      { en: 'Māgha',      mr: 'माघ',      gregorianStart: 1 },
-  Phalguna:   { en: 'Phālguna',   mr: 'फाल्गुन',   gregorianStart: 2 },
-};
+export type PanchangaPart = { en: string; mr: string };
+
+// The twelve lunar months in order from Caitra.
+const LUNAR_MONTHS: PanchangaPart[] = [
+  { en: 'Caitra',     mr: 'चैत्र' },
+  { en: 'Vaiśākha',   mr: 'वैशाख' },
+  { en: 'Jyeṣṭha',    mr: 'ज्येष्ठ' },
+  { en: 'Āṣāḍha',     mr: 'आषाढ' },
+  { en: 'Śrāvaṇa',    mr: 'श्रावण' },
+  { en: 'Bhādrapada', mr: 'भाद्रपद' },
+  { en: 'Āśvina',     mr: 'आश्विन' },
+  { en: 'Kārtika',    mr: 'कार्तिक' },
+  { en: 'Mārgaśīrṣa', mr: 'मार्गशीर्ष' },
+  { en: 'Pauṣa',      mr: 'पौष' },
+  { en: 'Māgha',      mr: 'माघ' },
+  { en: 'Phālguna',   mr: 'फाल्गुन' },
+];
+
+const RAD = Math.PI / 180;
+const norm360 = (x: number) => ((x % 360) + 360) % 360;
+const norm180 = (x: number) => norm360(x + 180) - 180;
+const centuries = (date: Date) => (date.getTime() / 86400000 + 2440587.5 - 2451545.0) / 36525;
+
+// Low-precision solar and lunar longitudes (Meeus' truncated series). They are good to a few arc-minutes
+// for the Sun and about 0.2° for the Moon, so a new moon is placed within roughly half an hour. That is
+// ample here: the month is decided by which day a new moon or a saṅkrānti falls on.
+function sunTropicalLongitude(date: Date): number {
+  const T = centuries(date);
+  const L0 = 280.46646 + 36000.76983 * T;
+  const M = (357.52911 + 35999.05029 * T) * RAD;
+  const C = (1.914602 - 0.004817 * T) * Math.sin(M) + 0.019993 * Math.sin(2 * M) + 0.000289 * Math.sin(3 * M);
+  return norm360(L0 + C);
+}
+
+function moonTropicalLongitude(date: Date): number {
+  const T = centuries(date);
+  const L = 218.3164477 + 481267.88123421 * T;
+  const D = (297.8501921 + 445267.1114034 * T) * RAD;
+  const M = (357.5291092 + 35999.0502909 * T) * RAD;
+  const Mp = (134.9633964 + 477198.8675055 * T) * RAD;
+  const F = (93.272095 + 483202.0175233 * T) * RAD;
+  const lon =
+    L +
+    6.288774 * Math.sin(Mp) +
+    1.274027 * Math.sin(2 * D - Mp) +
+    0.658314 * Math.sin(2 * D) +
+    0.213618 * Math.sin(2 * Mp) -
+    0.185116 * Math.sin(M) -
+    0.114332 * Math.sin(2 * F) +
+    0.058793 * Math.sin(2 * D - 2 * Mp) +
+    0.057066 * Math.sin(2 * D - M - Mp) +
+    0.053322 * Math.sin(2 * D + Mp) +
+    0.045758 * Math.sin(2 * D - M) -
+    0.040923 * Math.sin(M - Mp) -
+    0.034720 * Math.sin(D) -
+    0.030383 * Math.sin(M + Mp);
+  return norm360(lon);
+}
+
+// Lahiri ayanāṃśa (about 24.2° in 2026).
+const sunSiderealLongitude = (date: Date) => norm360(sunTropicalLongitude(date) - (23.853 + 0.013969 * centuries(date) * 100));
+
+// Moon minus Sun, in degrees (-180..180]; it passes through zero at a new moon.
+const elongation = (date: Date) => norm180(moonTropicalLongitude(date) - sunTropicalLongitude(date));
+
+// The new moon nearest to `guess`, refined by Newton steps on the elongation (the Moon gains about 12° a day).
+function newMoonNear(guess: Date): Date {
+  let ms = guess.getTime();
+  for (let i = 0; i < 6; i++) ms -= (elongation(new Date(ms)) / 12.19) * 86400000;
+  return new Date(ms);
+}
+
+// The lunar month by the amānta reckoning used in Maharashtra: a month runs from one new moon to the
+// next, and takes its name from the solar sign the Sun is in when it begins (Caitra begins with the Sun
+// in Mīna). A month that begins and ends in the same sign has no saṅkrānti and is the adhika (leap)
+// month. mhah-panchang's own month name does not follow this rule, so only its tithis are used here.
+function amantaMasa(date: Date): PanchangaPart & { isAdhik: boolean } {
+  const DAY = 86400000;
+  // Elongation measured forward from the last new moon says how long ago it was.
+  const sinceNew = (((elongation(date) % 360) + 360) % 360) / 12.19;
+  let start = newMoonNear(new Date(date.getTime() - sinceNew * DAY));
+  if (start.getTime() > date.getTime()) start = newMoonNear(new Date(start.getTime() - 29.53 * DAY));
+  let end = newMoonNear(new Date(start.getTime() + 29.53 * DAY));
+  if (end.getTime() <= date.getTime()) {
+    start = end;
+    end = newMoonNear(new Date(start.getTime() + 29.53 * DAY));
+  }
+
+  const r1 = Math.floor(sunSiderealLongitude(start) / 30);
+  const r2 = Math.floor(sunSiderealLongitude(end) / 30);
+  return { ...LUNAR_MONTHS[(r1 + 1) % 12], isAdhik: r1 === r2 };
+}
 
 function devNum(n: number): string {
   return String(n).replace(/[0-9]/g, (d) => '०१२३४५६७८९'[+d]);
@@ -90,8 +162,6 @@ function computeSamvatYear(date: Date): number {
   return y + 56;
 }
 
-export type PanchangaPart = { en: string; mr: string };
-
 export type PanchangaInfo = {
   tithi: PanchangaPart;
   paksha: PanchangaPart;
@@ -104,9 +174,7 @@ export function getPanchanga(date: Date = new Date()): PanchangaInfo {
   const p = new MhahPanchang();
 
   // calculate() is anchored to the actual moment — best for "what tithi is it RIGHT NOW".
-  // calendar(lat, lng) is sunrise-anchored at the given location — best for masa + leap-month detection.
   const c = p.calculate(date);
-  const cal = p.calendar(date, UJJAIN_LAT, UJJAIN_LNG);
 
   // Tithi
   const tithiRaw = (c.Tithi?.name_en_IN as string) || '';
@@ -123,14 +191,12 @@ export function getPanchanga(date: Date = new Date()): PanchangaInfo {
   const dayRaw = (c.Day?.name_en_UK as string) || '';
   const vara = VARA_NAMES[dayRaw] || { en: dayRaw, mr: dayRaw };
 
-  // Masa with leap (adhik) detection
-  const isAdhik = Boolean(cal.MoonMasa?.isLeapMonth);
-  const masaRaw = (cal.MoonMasa?.name_en_IN as string) || (cal.Masa?.name_en_IN as string) || '';
-  const masaBase = MASA_NAMES[masaRaw] || { en: masaRaw, mr: masaRaw };
+  // Masa (amānta) with leap (adhik) detection
+  const base = amantaMasa(date);
   const masa = {
-    en: isAdhik ? `Adhika ${masaBase.en}` : masaBase.en,
-    mr: isAdhik ? `अधिक ${masaBase.mr}` : masaBase.mr,
-    isAdhik,
+    en: base.isAdhik ? `Adhika ${base.en}` : base.en,
+    mr: base.isAdhik ? `अधिक ${base.mr}` : base.mr,
+    isAdhik: base.isAdhik,
   };
 
   // Vikram Samvat year
